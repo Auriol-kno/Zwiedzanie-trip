@@ -1,46 +1,40 @@
-ODKRYJ WARSZAWĘ 2.0 — PRZEWODNIK NA IPHONE
-Data aktualizacji: 5 listopada 2026
+ODKRYJ WARSZAWĘ 3.0 — APLIKACJA NA IPHONE / GITHUB PAGES
+Aktualizacja: 6 listopada 2026
+Repozytorium: https://github.com/Auriol-kno/Zwiedzanie-trip
+Aplikacja (po aktywacji GitHub Pages): https://auriol-kno.github.io/Zwiedzanie-trip/
 
-REPOZYTORIUM
-https://github.com/Auriol-kno/Zwiedzanie-trip
+NOWOŚCI 3.0
+- 184 atrakcje z 18 dzielnic, w tym więcej parków, pomników i terenów zielonych.
+- Redakcyjna wartość odwiedzenia 1–5 (oddzielna od ocen Google).
+- Zakładka Jedzenie: 36 rzeczywistych lokali, 11 rodzajów kuchni, 6 typów lokali, filtry dzielnic / budżetu / kuchni i zapisane lokale.
+- Opinie Google: link do aktualnej wizytówki w Google Maps; gwiazdki nie są pobierane ani kopiowane do aplikacji.
+- Planer z preferencjami wieku, trybem rodzinnym, trybem fotografa i tempem zwiedzania.
+- Automatyczna rezerwa czasu na odpoczynek / posiłek i wybrany lokal przy planie (bez automatycznej modyfikacji nawigacji).
+- Przybliżone godziny złotego światła fotograficznego i wskazówki kadrowania.
+- GPS: ustawienie startu ze swojej lokalizacji po wyrażeniu zgody.
+- Przewodnik głosowy: czytanie redakcyjnych opisów po polsku przez syntezę mowy przeglądarki.
+- Zapis planu TXT na iPhone.
+- Rozszerzony cache PWA: dane atrakcji i gastronomii, interfejs; zewnętrzne mapy wymagają internetu.
 
-CO NOWE W WERSJI 2.0
-- 118 atrakcji we wszystkich 18 dzielnicach Warszawy.
-- Lista dzielnic i szybki wybór dzielnicy oraz całej Warszawy.
-- Wyszukiwanie miejsc według nazwy, opisu i dzielnicy.
-- Ustawienie początku wycieczki na terenie wybranej dzielnicy.
-- Większy promień mapy do 25 km.
-- Oddzielny katalog JSON oraz plik JS dla działania PWA.
+FUNKCJE WYMAGAJĄCE DALSZEJ INTEGRACJI
+- WTP: precyzyjne numery linii, opóźnienia, odjazdy i połączenia na żywo (obecnie link do nawigacji i rozkładów).
+- Trasy rzeczywiście przebiegające ulicami; na mapie obecnie poglądowe połączenie punktów.
+- Prawdziwy przewodnik AI generujący opowieści (obecnie głosowe czytanie tekstów, bez modelu AI).
+- Kafelki mapy i routing offline: obecnie offline działają aplikacja, katalog i zapisane dane.
+- Oceny Google na żywo wymagają API Places, odpowiedniej licencji w EOG, rozliczeń i bezpiecznego backendu.
 
-NADAL DOSTĘPNE
-- Interaktywna mapa, okrąg i własny wielokąt.
-- Planer czasu i kolejności odwiedzania atrakcji.
-- Środki transportu: pieszo, rower, transport publiczny, samochód.
-- Karty miejsc z opisem i szacowanym czasem zwiedzania.
-- Ulubione, pieczątki, trzy motywy graficzne.
+JAK AKTUALIZOWAĆ BAZĘ
+1. Edytuj pliki data/atrakcje.json i/lub data/restauracje.json.
+2. Uruchom python tools/sync_database.py.
+3. Uruchom python tools/test_bundle.py.
+4. Zatwierdź oba pliki JSON i odpowiednie pliki JS.
+5. GitHub Actions uruchamia testy automatycznie.
 
-INSTALACJA NA IPHONIE
-1. GitHub → Settings → Pages → Deploy from a branch, main, /(root).
-2. Otwórz publiczny adres GitHub Pages w Safari.
-3. Udostępnij → Dodaj do ekranu początkowego.
-4. Po publikacji nowej wersji odśwież Safari; PWA aktualizuje pamięć podręczną.
+DANE
+Aplikacja używa autorskiego katalogu kuratorskiego.
+Współrzędne części parków/pomników są przybliżone; czas pobytu, ceny i budżety gastronomiczne to szacunki.
+Godziny, miejsca i rezerwacje sprawdź bezpośrednio w źródłach.
 
-STRUKTURA
-index.html — interfejs, mapa i planer
-data/atrakcje.json — źródłowa baza atrakcji
-data/atrakcje.js — kopia do przeglądarki, generowana z JSON
-tools/sync_database.py — kontrola i synchronizacja danych
-service-worker.js — cache aplikacji
-manifest.webmanifest — instalacja na iPhonie
-PLAN_ROZWOJU.md — kolejne etapy
-
-AKTUALIZOWANIE DANYCH
-Edytuj data/atrakcje.json i uruchom: python tools/sync_database.py.
-Następnie zatwierdź zmianę pliku JSON i automatycznie wygenerowanego JS.
-
-WAŻNE OGRANICZENIA
-To prototyp: 118 atrakcji tworzy katalog redakcyjny, nie pełny urzędowy spis.
-Godziny, ceny i lokalizacje części atrakcji trzeba zweryfikować.
-Czas pobytu i transportu jest szacowany. Rysowana trasa łączy punkty,
-ale nie jest routingiem drogowym. Konkretne linie WTP i przesiadki
-należy sprawdzić w nawigacji — połączenia na żywo wymagają integracji.
+INSTALACJA PWA
+Otwórz stronę GitHub Pages w Safari → Udostępnij → Do ekranu początkowego.
+Jeżeli PWA pokazuje poprzednią wersję, zamknij aplikację, otwórz adres w Safari i odśwież.
