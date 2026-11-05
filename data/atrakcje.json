@@ -1,7 +1,7 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.0",
   "updated": "2026-11-05",
-  "methodology": "Baza redakcyjna, nie rejestr urzędowy. Czas pobytu jest szacowany; pozycje części nowych punktów są orientacyjne. Ceny i godziny wymagają sprawdzenia u organizatora.",
+  "methodology": "Katalog redakcyjny: wizytówki atrakcji i oceny warto odwiedzić 1-5 są redakcyjne, a nie gwiazdkami Google. Współrzędne nowych punktów orientacyjne. Ceny, godziny, trasy WTP wymagają weryfikacji przed podróżą.",
   "districts": [
     "Bemowo",
     "Białołęka",
@@ -75,7 +75,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "market",
@@ -100,7 +102,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "barbican",
@@ -125,7 +129,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "gardens",
@@ -180,7 +186,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "uprisingmon",
@@ -204,7 +212,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "polin",
@@ -258,7 +268,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "uprising",
@@ -310,7 +322,9 @@
       "district": "Wola",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "pkin",
@@ -335,7 +349,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "saxon",
@@ -360,7 +376,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "chopin",
@@ -384,7 +402,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kopernik",
@@ -443,7 +463,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "bulwary",
@@ -468,7 +490,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "univlib",
@@ -493,7 +517,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "lazienki",
@@ -548,7 +574,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "palaceisle",
@@ -600,7 +628,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "chopinmon",
@@ -655,7 +685,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "wilanow",
@@ -708,7 +740,9 @@
       "district": "Wilanów",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "wilanowpark",
@@ -763,7 +797,9 @@
       "district": "Wilanów",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "praga",
@@ -788,7 +824,9 @@
       "district": "Praga-Północ",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "neon",
@@ -813,7 +851,9 @@
       "district": "Praga-Południe",
       "coordinateStatus": "do_weryfikacji",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "koneser",
@@ -838,7 +878,9 @@
       "district": "Praga-Północ",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "national",
@@ -862,7 +904,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "wilanowtemple",
@@ -887,7 +931,9 @@
       "district": "Wilanów",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "oficjalna_strona",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "pole",
@@ -912,7 +958,9 @@
       "district": "Mokotów",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "krasi",
@@ -937,7 +985,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "royalroute",
@@ -962,7 +1012,9 @@
       "district": "Śródmieście",
       "coordinateStatus": "redakcyjne",
       "sourceKind": "portal_turystyczny",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fort_bema",
@@ -987,7 +1039,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_gorczewska",
@@ -1011,7 +1065,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "amfiteatr_bemowo",
@@ -1035,7 +1091,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fort_chrzanow",
@@ -1059,7 +1117,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "aleja_sportow",
@@ -1084,7 +1144,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_henrykowski",
@@ -1108,7 +1170,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kanal_zeranski",
@@ -1133,7 +1197,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_picassa",
@@ -1157,7 +1223,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "port_zeranski",
@@ -1182,7 +1250,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "las_bialoleka",
@@ -1206,7 +1276,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "las_bielanski",
@@ -1230,7 +1302,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kameduli",
@@ -1255,7 +1329,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_mlocinski",
@@ -1279,7 +1355,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "palac_mlociny",
@@ -1304,7 +1382,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_herberta",
@@ -1328,7 +1408,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "awf",
@@ -1352,7 +1434,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "krolikarnia",
@@ -1377,7 +1461,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "morskie_oko",
@@ -1401,7 +1487,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fort_mokotow",
@@ -1426,7 +1514,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_dreszera",
@@ -1450,7 +1540,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kopiec_powstania",
@@ -1475,7 +1567,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "sadyba_fort",
@@ -1500,7 +1594,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "szczesliwice",
@@ -1525,7 +1621,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "filtry",
@@ -1550,7 +1648,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "narutowicza",
@@ -1574,7 +1674,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kolonia_staszica",
@@ -1598,7 +1700,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_zachodni",
@@ -1622,7 +1726,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "zabkowska",
@@ -1647,7 +1753,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "florian",
@@ -1671,7 +1779,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "zoo",
@@ -1696,7 +1806,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_praski",
@@ -1720,7 +1832,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "rozyckiego",
@@ -1744,7 +1858,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "skaryszewski",
@@ -1769,7 +1885,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "narodowy",
@@ -1794,7 +1912,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "francuska",
@@ -1818,7 +1938,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "olszynka",
@@ -1842,7 +1964,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "jezioro_kamion",
@@ -1866,7 +1990,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "soho",
@@ -1890,7 +2016,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "las_rembertowski",
@@ -1914,7 +2042,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "rezerwat_kaw",
@@ -1939,7 +2069,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "asw",
@@ -1964,7 +2096,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "plac_rembertow",
@@ -1989,7 +2123,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 3,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "grand_theatre",
@@ -2013,7 +2149,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fontanny",
@@ -2038,7 +2176,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "nowy_swiat",
@@ -2063,7 +2203,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "czapski",
@@ -2087,7 +2229,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "ujazdowski",
@@ -2112,7 +2256,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "powisle_elektrownia",
@@ -2137,7 +2283,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "pawiak",
@@ -2161,7 +2309,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_brodnowski",
@@ -2186,7 +2336,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "rzezby_brodno",
@@ -2211,7 +2363,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "las_brodnowski",
@@ -2235,7 +2389,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "cmentarz_brodnowski",
@@ -2259,7 +2415,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "zalew_brodno",
@@ -2283,7 +2441,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_czechowicki",
@@ -2307,7 +2467,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_achera",
@@ -2331,7 +2493,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "pomnik_1976",
@@ -2355,7 +2519,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fabryka_ursus",
@@ -2380,7 +2546,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "las_kabacki",
@@ -2405,7 +2573,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "gorka_kazurka",
@@ -2430,7 +2600,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "bazantarnia",
@@ -2454,7 +2626,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kosciol_katarzyny",
@@ -2479,7 +2653,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "dolinka_sluzewiecka",
@@ -2503,7 +2679,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "plaza_romantyczna",
@@ -2528,7 +2706,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "mazowiecki_park",
@@ -2553,7 +2733,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "rezerwat_sobieskiego",
@@ -2578,7 +2760,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "miedzeszyn",
@@ -2603,7 +2787,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "willa_swiderm",
@@ -2628,7 +2814,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "bagno_jacka",
@@ -2653,7 +2841,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "lasy_wesolej",
@@ -2678,7 +2868,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "plac_wesola",
@@ -2702,7 +2894,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kosciol_wesola",
@@ -2727,7 +2921,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "morysin",
@@ -2752,7 +2948,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "botaniczny_powsin",
@@ -2777,7 +2975,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "kosciol_anny",
@@ -2801,7 +3001,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_wysoka",
@@ -2825,7 +3027,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "stawy_cietrzewia",
@@ -2850,7 +3054,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_kombatantow",
@@ -2874,7 +3080,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "staw_koziorozca",
@@ -2899,7 +3107,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "fort_v",
@@ -2923,7 +3133,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "willa_wlochy",
@@ -2947,7 +3159,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "powazki",
@@ -2971,7 +3185,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "zydowski",
@@ -2995,7 +3211,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "norblin",
@@ -3020,7 +3238,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "browary",
@@ -3044,7 +3264,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "gazownictwo",
@@ -3069,7 +3291,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_szymanskiego",
@@ -3093,7 +3317,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "cytadela",
@@ -3118,7 +3344,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "mhpl",
@@ -3142,7 +3370,9 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "park_zeromskiego",
@@ -3167,7 +3397,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "wilson",
@@ -3191,7 +3423,9 @@
       "coordinateStatus": "orientacyjne",
       "price": 0,
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
-      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku"
+      "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
+      "visitValue": 4,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
     },
     {
       "id": "katyn",
@@ -3215,7 +3449,1725 @@
       "coordinateStatus": "orientacyjne",
       "price": null,
       "priceText": "Sprawdź aktualny cennik u organizatora",
-      "hours": "Sprawdź aktualne godziny na stronie organizatora"
+      "hours": "Sprawdź aktualne godziny na stronie organizatora",
+      "visitValue": 5,
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+    },
+    {
+      "id": "w3-pomnik-miko-aja-kopernika",
+      "district": "Śródmieście",
+      "name": "Pomnik Mikołaja Kopernika",
+      "lat": 52.24,
+      "lon": 21.0182,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Symbol tradycji naukowej Warszawy przy Krakowskim Przedmieściu.",
+      "story": "Pomnik w dzielnicy Śródmieście. Symbol tradycji naukowej Warszawy przy Krakowskim Przedmieściu. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-adama-mickiewicza",
+      "district": "Śródmieście",
+      "name": "Pomnik Adama Mickiewicza",
+      "lat": 52.2439,
+      "lon": 21.0146,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Pomnik narodowego poety na Trakcie Królewskim.",
+      "story": "Pomnik w dzielnicy Śródmieście. Pomnik narodowego poety na Trakcie Królewskim. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-ksiecia-jozefa-poniatowskiego",
+      "district": "Śródmieście",
+      "name": "Pomnik księcia Józefa Poniatowskiego",
+      "lat": 52.2431,
+      "lon": 21.0154,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Pomnik wodza z epoki napoleońskiej na dziedzińcu Pałacu Prezydenckiego.",
+      "story": "Pomnik w dzielnicy Śródmieście. Pomnik wodza z epoki napoleońskiej na dziedzińcu Pałacu Prezydenckiego. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-grob-nieznanego-zo-nierza",
+      "district": "Śródmieście",
+      "name": "Grób Nieznanego Żołnierza",
+      "lat": 52.2415,
+      "lon": 21.0125,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Miejsce pamięci i uroczystej zmiany warty na placu Piłsudskiego.",
+      "story": "Pomnik w dzielnicy Śródmieście. Miejsce pamięci i uroczystej zmiany warty na placu Piłsudskiego. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-ma-ego-powstanca",
+      "district": "Śródmieście",
+      "name": "Pomnik Małego Powstańca",
+      "lat": 52.2503,
+      "lon": 21.0086,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Poruszający symbol najmłodszych uczestników Powstania Warszawskiego.",
+      "story": "Pomnik w dzielnicy Śródmieście. Poruszający symbol najmłodszych uczestników Powstania Warszawskiego. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-syreny-nad-wis-a",
+      "district": "Śródmieście",
+      "name": "Pomnik Syreny nad Wisłą",
+      "lat": 52.2421,
+      "lon": 21.0334,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Jeden z najbardziej rozpoznawalnych wizerunków warszawskiej Syrenki.",
+      "story": "Pomnik w dzielnicy Śródmieście. Jeden z najbardziej rozpoznawalnych wizerunków warszawskiej Syrenki. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-jana-kilinskiego",
+      "district": "Śródmieście",
+      "name": "Pomnik Jana Kilińskiego",
+      "lat": 52.2479,
+      "lon": 21.0151,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Upamiętnienie warszawskiego szewca i przywódcy insurekcji.",
+      "story": "Pomnik w dzielnicy Śródmieście. Upamiętnienie warszawskiego szewca i przywódcy insurekcji. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-charles-a-de-gaulle-a",
+      "district": "Śródmieście",
+      "name": "Pomnik Charles’a de Gaulle’a",
+      "lat": 52.2308,
+      "lon": 21.0231,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🗿",
+      "desc": "Pamiątka związków francuskiego generała z Warszawą.",
+      "story": "Pomnik w dzielnicy Śródmieście. Pamiątka związków francuskiego generała z Warszawą. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-marii-sk-odowskiej-curie",
+      "district": "Śródmieście",
+      "name": "Pomnik Marii Skłodowskiej-Curie",
+      "lat": 52.2508,
+      "lon": 21.0069,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Pomnik noblistki w okolicy Nowego Miasta i nadwiślańskiego spaceru.",
+      "story": "Pomnik w dzielnicy Śródmieście. Pomnik noblistki w okolicy Nowego Miasta i nadwiślańskiego spaceru. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-ujazdowski",
+      "district": "Śródmieście",
+      "name": "Park Ujazdowski",
+      "lat": 52.2248,
+      "lon": 21.0279,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Historyczny, nastrojowy park z alejkami i stawem.",
+      "story": "Park lub teren zielony w dzielnicy Śródmieście. Historyczny, nastrojowy park z alejkami i stawem. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-kazimierzowski",
+      "district": "Śródmieście",
+      "name": "Park Kazimierzowski",
+      "lat": 52.2401,
+      "lon": 21.0222,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zielony stok Powiśla w pobliżu kampusu Uniwersytetu Warszawskiego.",
+      "story": "Park lub teren zielony w dzielnicy Śródmieście. Zielony stok Powiśla w pobliżu kampusu Uniwersytetu Warszawskiego. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-marsza-ka-edwarda-rydza-smig-ego",
+      "district": "Śródmieście",
+      "name": "Park Marszałka Edwarda Rydza-Śmigłego",
+      "lat": 52.2308,
+      "lon": 21.0336,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Rozległe tereny spacerowe między Powiślem a skarpą.",
+      "story": "Park lub teren zielony w dzielnicy Śródmieście. Rozległe tereny spacerowe między Powiślem a skarpą. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-mirowski",
+      "district": "Śródmieście",
+      "name": "Park Mirowski",
+      "lat": 52.2376,
+      "lon": 20.9976,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zieleń pośród historycznej zabudowy centrum.",
+      "story": "Park lub teren zielony w dzielnicy Śródmieście. Zieleń pośród historycznej zabudowy centrum. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-romualda-traugutta",
+      "district": "Śródmieście",
+      "name": "Park im. Romualda Traugutta",
+      "lat": 52.2638,
+      "lon": 21.0009,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Cichy park w sąsiedztwie Cytadeli Warszawskiej.",
+      "story": "Park lub teren zielony w dzielnicy Śródmieście. Cichy park w sąsiedztwie Cytadeli Warszawskiej. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-kepa-potocka",
+      "district": "Żoliborz",
+      "name": "Park Kępa Potocka",
+      "lat": 52.2845,
+      "lon": 20.9935,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🌳",
+      "desc": "Spacery wśród kanałów, mostków i zieleni przy Wiśle.",
+      "story": "Park lub teren zielony w dzielnicy Żoliborz. Spacery wśród kanałów, mostków i zieleni przy Wiśle. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-sad-zoliborski",
+      "district": "Żoliborz",
+      "name": "Sad Żoliborski",
+      "lat": 52.274,
+      "lon": 20.9656,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Kameralny park wśród charakterystycznych żoliborskich osiedli.",
+      "story": "Park lub teren zielony w dzielnicy Żoliborz. Kameralny park wśród charakterystycznych żoliborskich osiedli. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-fosa-i-stoki-cytadeli",
+      "district": "Żoliborz",
+      "name": "Park Fosa i Stoki Cytadeli",
+      "lat": 52.2675,
+      "lon": 20.9938,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Zieleń wokół historycznych fortyfikacji.",
+      "story": "Park lub teren zielony w dzielnicy Żoliborz. Zieleń wokół historycznych fortyfikacji. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-zo-nierzy-zywiciela",
+      "district": "Żoliborz",
+      "name": "Pomnik Żołnierzy Żywiciela",
+      "lat": 52.2706,
+      "lon": 20.9892,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Miejsce pamięci żoliborskich powstańców.",
+      "story": "Pomnik w dzielnicy Żoliborz. Miejsce pamięci żoliborskich powstańców. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-fort-sokolnickiego",
+      "district": "Żoliborz",
+      "name": "Fort Sokolnickiego",
+      "lat": 52.2724,
+      "lon": 20.9813,
+      "cats": [
+        "history",
+        "architecture"
+      ],
+      "time": 30,
+      "range": "20–45 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🏰",
+      "desc": "Zabytek fortyfikacyjny w pobliżu placu Wilsona.",
+      "story": "Zabytek w dzielnicy Żoliborz. Zabytek fortyfikacyjny w pobliżu placu Wilsona. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-moczyd-o",
+      "district": "Wola",
+      "name": "Park Moczydło",
+      "lat": 52.242,
+      "lon": 20.9466,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Wzgórza, stawy i rekreacja na zachód od centrum.",
+      "story": "Park lub teren zielony w dzielnicy Wola. Wzgórza, stawy i rekreacja na zachód od centrum. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-powstancow-warszawy",
+      "district": "Wola",
+      "name": "Park Powstańców Warszawy",
+      "lat": 52.2298,
+      "lon": 20.943,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🌳",
+      "desc": "Przestrzeń pamięci i spacerów w rejonie dawnych cmentarzy.",
+      "story": "Park lub teren zielony w dzielnicy Wola. Przestrzeń pamięci i spacerów w rejonie dawnych cmentarzy. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-gen-jozefa-sowinskiego",
+      "district": "Wola",
+      "name": "Park im. gen. Józefa Sowińskiego",
+      "lat": 52.2317,
+      "lon": 20.9513,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Historyczny park z letnią sceną i wysokimi drzewami.",
+      "story": "Park lub teren zielony w dzielnicy Wola. Historyczny park z letnią sceną i wysokimi drzewami. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-polegli-niepokonani",
+      "district": "Wola",
+      "name": "Pomnik Polegli Niepokonani",
+      "lat": 52.2307,
+      "lon": 20.9438,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Symbol pamięci cywilnych ofiar Powstania Warszawskiego.",
+      "story": "Pomnik w dzielnicy Wola. Symbol pamięci cywilnych ofiar Powstania Warszawskiego. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-ofiar-rzezi-woli",
+      "district": "Wola",
+      "name": "Pomnik Ofiar Rzezi Woli",
+      "lat": 52.2341,
+      "lon": 20.9511,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Ważne miejsce upamiętniające mieszkańców Woli zamordowanych w 1944 r.",
+      "story": "Pomnik w dzielnicy Wola. Ważne miejsce upamiętniające mieszkańców Woli zamordowanych w 1944 r. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-arkadia",
+      "district": "Mokotów",
+      "name": "Park Arkadia",
+      "lat": 52.1904,
+      "lon": 21.0273,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Park ze stawami i zielonymi alejami koło Królikarni.",
+      "story": "Park lub teren zielony w dzielnicy Mokotów. Park ze stawami i zielonymi alejami koło Królikarni. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-sielecki",
+      "district": "Mokotów",
+      "name": "Park Sielecki",
+      "lat": 52.2039,
+      "lon": 21.0499,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Ogród ze stawem w historycznym rejonie Sielc.",
+      "story": "Park lub teren zielony w dzielnicy Mokotów. Ogród ze stawem w historycznym rejonie Sielc. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-promenada",
+      "district": "Mokotów",
+      "name": "Park Promenada",
+      "lat": 52.1985,
+      "lon": 21.0307,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Kamienna skarpa i alejki na Górnym Mokotowie.",
+      "story": "Park lub teren zielony w dzielnicy Mokotów. Kamienna skarpa i alejki na Górnym Mokotowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-czarneckiego",
+      "district": "Mokotów",
+      "name": "Park Czarneckiego",
+      "lat": 52.2035,
+      "lon": 21.0253,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Niewielka enklawa zieleni przy mokotowskiej zabudowie.",
+      "story": "Park lub teren zielony w dzielnicy Mokotów. Niewielka enklawa zieleni przy mokotowskiej zabudowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-morskie-oko-po-udniowa-czesc",
+      "district": "Mokotów",
+      "name": "Park Morskie Oko – południowa część",
+      "lat": 52.204,
+      "lon": 21.0278,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Druga część historycznego zespołu parkowego ze ścieżkami przy skarpie.",
+      "story": "Park lub teren zielony w dzielnicy Mokotów. Druga część historycznego zespołu parkowego ze ścieżkami przy skarpie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-pieciu-siostr",
+      "district": "Ochota",
+      "name": "Park Pięciu Sióstr",
+      "lat": 52.2123,
+      "lon": 20.9714,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Zielony park w dzielnicy Ochota, dobry na rodzinny odpoczynek.",
+      "story": "Park lub teren zielony w dzielnicy Ochota. Zielony park w dzielnicy Ochota, dobry na rodzinny odpoczynek. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-zas-awa-malickiego",
+      "district": "Ochota",
+      "name": "Park im. Zasława Malickiego",
+      "lat": 52.2026,
+      "lon": 20.9851,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Spokojny lokalny park przy osiedlowej zabudowie Ochoty.",
+      "story": "Park lub teren zielony w dzielnicy Ochota. Spokojny lokalny park przy osiedlowej zabudowie Ochoty. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-lotnika",
+      "district": "Ochota",
+      "name": "Pomnik Lotnika",
+      "lat": 52.2124,
+      "lon": 20.9936,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Monument związany z historią polskiego lotnictwa.",
+      "story": "Pomnik w dzielnicy Ochota. Monument związany z historią polskiego lotnictwa. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-marii-sk-odowskiej-curie",
+      "district": "Ochota",
+      "name": "Park im. Marii Skłodowskiej-Curie",
+      "lat": 52.2163,
+      "lon": 20.9978,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zieleń wśród historycznych ulic Filtrów.",
+      "story": "Park lub teren zielony w dzielnicy Ochota. Zieleń wśród historycznych ulic Filtrów. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-praskiej-kapeli-podworkowej",
+      "district": "Praga-Północ",
+      "name": "Pomnik Praskiej Kapeli Podwórkowej",
+      "lat": 52.2534,
+      "lon": 21.0377,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Rzeźba upamiętniająca muzyczną tradycję praskich podwórek.",
+      "story": "Pomnik w dzielnicy Praga-Północ. Rzeźba upamiętniająca muzyczną tradycję praskich podwórek. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-kosciuszkowcow",
+      "district": "Praga-Północ",
+      "name": "Pomnik Kościuszkowców",
+      "lat": 52.253,
+      "lon": 21.0309,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🗿",
+      "desc": "Pomnik żołnierzy 1 Armii Wojska Polskiego nad Wisłą.",
+      "story": "Pomnik w dzielnicy Praga-Północ. Pomnik żołnierzy 1 Armii Wojska Polskiego nad Wisłą. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-micha-owski",
+      "district": "Praga-Północ",
+      "name": "Park Michałowski",
+      "lat": 52.2758,
+      "lon": 21.044,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Lokalny park na północno-wschodniej Pradze.",
+      "story": "Park lub teren zielony w dzielnicy Praga-Północ. Lokalny park na północno-wschodniej Pradze. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-skwer-zurowskiego",
+      "district": "Praga-Północ",
+      "name": "Skwer Żurowskiego",
+      "lat": 52.2518,
+      "lon": 21.0487,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Mała przestrzeń spacerowa w gęstej tkance miejskiej.",
+      "story": "Park lub teren zielony w dzielnicy Praga-Północ. Mała przestrzeń spacerowa w gęstej tkance miejskiej. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-agnieszki-osieckiej",
+      "district": "Praga-Południe",
+      "name": "Pomnik Agnieszki Osieckiej",
+      "lat": 52.2339,
+      "lon": 21.0531,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 88,
+      "visitValue": 5,
+      "icon": "🗿",
+      "desc": "Popularna rzeźba poetki w sercu Saskiej Kępy.",
+      "story": "Pomnik w dzielnicy Praga-Południe. Popularna rzeźba poetki w sercu Saskiej Kępy. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-p-k-jana-szypowskiego-lesnika",
+      "district": "Praga-Południe",
+      "name": "Park im. płk. Jana Szypowskiego „Leśnika”",
+      "lat": 52.2398,
+      "lon": 21.09,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Zabytkowa zieleń i alejki w Grochowie.",
+      "story": "Park lub teren zielony w dzielnicy Praga-Południe. Zabytkowa zieleń i alejki w Grochowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-znicza",
+      "district": "Praga-Południe",
+      "name": "Park Znicza",
+      "lat": 52.2456,
+      "lon": 21.087,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Sąsiedzki park z alejkami i miejscami wypoczynku.",
+      "story": "Park lub teren zielony w dzielnicy Praga-Południe. Sąsiedzki park z alejkami i miejscami wypoczynku. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-nad-balatonem",
+      "district": "Praga-Południe",
+      "name": "Park nad Balatonem",
+      "lat": 52.2339,
+      "lon": 21.0853,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Park nad wodą, bardzo dobry na spacer z dzieckiem.",
+      "story": "Park lub teren zielony w dzielnicy Praga-Południe. Park nad wodą, bardzo dobry na spacer z dzieckiem. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-olszyna",
+      "district": "Bielany",
+      "name": "Park Olszyna",
+      "lat": 52.2753,
+      "lon": 20.9471,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Leśne alejki pośród bielańskich osiedli.",
+      "story": "Park lub teren zielony w dzielnicy Bielany. Leśne alejki pośród bielańskich osiedli. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-stawy-brustmana",
+      "district": "Bielany",
+      "name": "Stawy Brustmana",
+      "lat": 52.2818,
+      "lon": 20.9306,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Spokojne otoczenie dwóch stawów na Wawrzyszewie.",
+      "story": "Park lub teren zielony w dzielnicy Bielany. Spokojne otoczenie dwóch stawów na Wawrzyszewie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-kellera",
+      "district": "Bielany",
+      "name": "Park Kellera",
+      "lat": 52.2872,
+      "lon": 20.9673,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Historyczna zielona dolina z alejami i stawem.",
+      "story": "Park lub teren zielony w dzielnicy Bielany. Historyczna zielona dolina z alejami i stawem. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-las-lindego",
+      "district": "Bielany",
+      "name": "Las Lindego",
+      "lat": 52.281,
+      "lon": 20.9392,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Leśny teren rekreacyjny w północnej części Bielan.",
+      "story": "Park lub teren zielony w dzielnicy Bielany. Leśny teren rekreacyjny w północnej części Bielan. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-romana-koz-owskiego",
+      "district": "Ursynów",
+      "name": "Park im. Romana Kozłowskiego",
+      "lat": 52.1494,
+      "lon": 21.0491,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Teren zielony między ursynowskimi osiedlami.",
+      "story": "Park lub teren zielony w dzielnicy Ursynów. Teren zielony między ursynowskimi osiedlami. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-polskich-wynalazcow",
+      "district": "Ursynów",
+      "name": "Park Polskich Wynalazców",
+      "lat": 52.145,
+      "lon": 21.0444,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Nowa przestrzeń odpoczynku i spacerów na Ursynowie.",
+      "story": "Park lub teren zielony w dzielnicy Ursynów. Nowa przestrzeń odpoczynku i spacerów na Ursynowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-cichociemnych-spadochroniarzy-ak",
+      "district": "Ursynów",
+      "name": "Park Cichociemnych Spadochroniarzy AK",
+      "lat": 52.1307,
+      "lon": 21.0507,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Obszar spacerowy i sportowy w południowej części Ursynowa.",
+      "story": "Park lub teren zielony w dzielnicy Ursynów. Obszar spacerowy i sportowy w południowej części Ursynowa. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-jana-paw-a-ii",
+      "district": "Ursynów",
+      "name": "Park Jana Pawła II",
+      "lat": 52.1516,
+      "lon": 21.0361,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Spacerowy park wśród zabudowy Ursynowa.",
+      "story": "Park lub teren zielony w dzielnicy Ursynów. Spacerowy park wśród zabudowy Ursynowa. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-ostoja-wilanow",
+      "district": "Wilanów",
+      "name": "Park Ostoja Wilanów",
+      "lat": 52.1688,
+      "lon": 21.0674,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zieleń rekreacyjna w zachodniej części Wilanowa.",
+      "story": "Park lub teren zielony w dzielnicy Wilanów. Zieleń rekreacyjna w zachodniej części Wilanowa. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-rezerwat-przyrody-skarpa-ursynowska-granica",
+      "district": "Wilanów",
+      "name": "Rezerwat przyrody Skarpa Ursynowska – granica",
+      "lat": 52.158,
+      "lon": 21.075,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Widoki na fragment chronionego krajobrazu; trzymaj się dostępnych ścieżek.",
+      "story": "Park lub teren zielony w dzielnicy Wilanów. Widoki na fragment chronionego krajobrazu; trzymaj się dostępnych ścieżek. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-magiczna",
+      "district": "Białołęka",
+      "name": "Park Magiczna",
+      "lat": 52.3299,
+      "lon": 21.0507,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Rodzinna przestrzeń zabaw i rekreacji na Zielonej Białołęce.",
+      "story": "Park lub teren zielony w dzielnicy Białołęka. Rodzinna przestrzeń zabaw i rekreacji na Zielonej Białołęce. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-przy-ul-strumykowej",
+      "district": "Białołęka",
+      "name": "Park przy ul. Strumykowej",
+      "lat": 52.3241,
+      "lon": 20.9847,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Kameralna zielona przestrzeń zachodniej Białołęki.",
+      "story": "Park lub teren zielony w dzielnicy Białołęka. Kameralna zielona przestrzeń zachodniej Białołęki. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-marka-kotanskiego",
+      "district": "Bemowo",
+      "name": "Park im. Marka Kotańskiego",
+      "lat": 52.2363,
+      "lon": 20.9248,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Miejsce odpoczynku i spacerów po Bemowie.",
+      "story": "Park lub teren zielony w dzielnicy Bemowo. Miejsce odpoczynku i spacerów po Bemowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-skwer-sportow-miejskich-na-bemowie",
+      "district": "Bemowo",
+      "name": "Skwer Sportów Miejskich na Bemowie",
+      "lat": 52.2371,
+      "lon": 20.9264,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Miejsca aktywności dla rodzin i miłośników sportu.",
+      "story": "Park lub teren zielony w dzielnicy Bemowo. Miejsca aktywności dla rodzin i miłośników sportu. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-wiecha",
+      "district": "Targówek",
+      "name": "Park Wiecha",
+      "lat": 52.2744,
+      "lon": 21.0585,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Park osiedlowy niedaleko Teatru Rampa.",
+      "story": "Park lub teren zielony w dzielnicy Targówek. Park osiedlowy niedaleko Teatru Rampa. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-gaj-na-brodnie",
+      "district": "Targówek",
+      "name": "Park Gaj na Bródnie",
+      "lat": 52.2924,
+      "lon": 21.0541,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zielone alejki w okolicy Bródna.",
+      "story": "Park lub teren zielony w dzielnicy Targówek. Zielone alejki w okolicy Bródna. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-hassow",
+      "district": "Ursus",
+      "name": "Park Hassów",
+      "lat": 52.1917,
+      "lon": 20.8937,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Zielony teren spacerowy w Ursusie.",
+      "story": "Park lub teren zielony w dzielnicy Ursus. Zielony teren spacerowy w Ursusie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-adama-mickiewicza-w-ursusie",
+      "district": "Ursus",
+      "name": "Park im. Adama Mickiewicza w Ursusie",
+      "lat": 52.1943,
+      "lon": 20.8852,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Niewielki park przy miejskiej zabudowie.",
+      "story": "Park lub teren zielony w dzielnicy Ursus. Niewielki park przy miejskiej zabudowie. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-im-marka-kotanskiego-we-w-ochach",
+      "district": "Włochy",
+      "name": "Park im. Marka Kotańskiego we Włochach",
+      "lat": 52.2007,
+      "lon": 20.915,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Zielony teren rekreacyjny we Włochach.",
+      "story": "Park lub teren zielony w dzielnicy Włochy. Zielony teren rekreacyjny we Włochach. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-stawy-cietrzewia-promenada",
+      "district": "Włochy",
+      "name": "Stawy Cietrzewia – promenada",
+      "lat": 52.2018,
+      "lon": 20.9152,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Alejki nad stawami; dobre miejsce na krótką przerwę fotograficzną.",
+      "story": "Park lub teren zielony w dzielnicy Włochy. Alejki nad stawami; dobre miejsce na krótką przerwę fotograficzną. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-plaza-przy-wale-miedzeszynskim",
+      "district": "Wawer",
+      "name": "Plaża przy Wale Miedzeszyńskim",
+      "lat": 52.1831,
+      "lon": 21.1282,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Nadwiślańskie krajobrazy i piaszczyste zakątki po stronie Wawra.",
+      "story": "Park lub teren zielony w dzielnicy Wawer. Nadwiślańskie krajobrazy i piaszczyste zakątki po stronie Wawra. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-park-aktywnosci-rodzinnej-w-wawrze",
+      "district": "Wawer",
+      "name": "Park Aktywności Rodzinnej w Wawrze",
+      "lat": 52.1946,
+      "lon": 21.1567,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Rekreacyjny teren do spędzenia czasu z rodziną.",
+      "story": "Park lub teren zielony w dzielnicy Wawer. Rekreacyjny teren do spędzenia czasu z rodziną. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-lesne-alejki-starego-rembertowa",
+      "district": "Rembertów",
+      "name": "Leśne alejki Starego Rembertowa",
+      "lat": 52.2569,
+      "lon": 21.1726,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 56,
+      "visitValue": 3,
+      "icon": "🌳",
+      "desc": "Cichy spacer przez zieloną część dzielnicy.",
+      "story": "Park lub teren zielony w dzielnicy Rembertów. Cichy spacer przez zieloną część dzielnicy. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-lesne-trasy-w-starej-mi-osnie",
+      "district": "Wesoła",
+      "name": "Leśne trasy w Starej Miłośnie",
+      "lat": 52.2226,
+      "lon": 21.2324,
+      "cats": [
+        "park",
+        "view"
+      ],
+      "time": 45,
+      "range": "30–75 min",
+      "score": 72,
+      "visitValue": 4,
+      "icon": "🌳",
+      "desc": "Zalesione otoczenie dobre do spokojnej wycieczki.",
+      "story": "Park lub teren zielony w dzielnicy Wesoła. Zalesione otoczenie dobre do spokojnej wycieczki. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+    },
+    {
+      "id": "w3-pomnik-tadeusza-kosciuszki-na-tarchominie",
+      "district": "Białołęka",
+      "name": "Pomnik Tadeusza Kościuszki na Tarchominie",
+      "lat": 52.3094,
+      "lon": 20.982,
+      "cats": [
+        "monument",
+        "history"
+      ],
+      "time": 15,
+      "range": "10–25 min",
+      "score": 40,
+      "visitValue": 2,
+      "icon": "🗿",
+      "desc": "Lokalny punkt związany z pamięcią historyczną dzielnicy.",
+      "story": "Pomnik w dzielnicy Białołęka. Lokalny punkt związany z pamięcią historyczną dzielnicy. Przed wizytą sprawdź szczegółową historię miejsca w oficjalnych materiałach miasta.",
+      "price": 0,
+      "priceText": "Teren zewnętrzny: zwykle bezpłatnie",
+      "hours": "Teren zewnętrzny: sprawdź zasady dostępności i ewentualne ograniczenia",
+      "url": "https://go2warsaw.pl/",
+      "updated": "2026-11-05",
+      "sourceKind": "redakcyjna_selekcja",
+      "coordinateStatus": "orientacyjne",
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
     }
   ]
 }
