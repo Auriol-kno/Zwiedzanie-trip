@@ -1,0 +1,41 @@
+/* Odkryj Warszawę 3.0 — panel odkrywcy i gastronomia */
+.bottom-nav{gap:0;padding-inline:3px}
+.bottom-nav button{min-width:0;flex:1;font-size:10px;padding-inline:2px;white-space:nowrap}
+.bottom-nav button span{font-size:21px}
+.waw3-panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:18px;margin:16px 0;box-shadow:var(--shadow)}
+.waw3-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+.waw3-head h2{font-size:21px;letter-spacing:-.03em;margin:0}
+.waw3-sub{font-size:12px;color:var(--sub);line-height:1.55;margin:6px 0 13px}
+.waw3-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.waw3-field{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--sub);font-weight:700}
+.waw3-field input:not([type=checkbox]),.waw3-field select{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:11px;width:100%;font-size:13px;min-height:44px}
+.waw3-field input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
+.waw3-toggle{display:flex;align-items:center;gap:8px;border-radius:13px;border:1px solid var(--line);background:var(--bg);padding:12px;font-size:12px;font-weight:700;color:var(--ink)}
+.waw3-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.waw3-tools button,.waw3-tools a{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:9px 11px;color:var(--ink);font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;min-height:39px}
+.waw3-note{font-size:11px;color:var(--sub);line-height:1.5;margin:9px 0 0}
+.waw3-title{display:flex;align-items:center;gap:10px}
+.waw3-counter{background:var(--glass);color:var(--primary);font-size:12px;border-radius:20px;padding:5px 10px;font-weight:800}
+.waw3-food-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.waw3-search{grid-column:1 / -1}
+.waw3-food-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.waw3-food-card{border:1px solid var(--line);border-radius:19px;background:var(--panel);padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.waw3-food-card h3{margin:0;font-size:18px;letter-spacing:-.02em}
+.waw3-food-card p{font-size:12px;line-height:1.48;margin:0;color:var(--sub)}
+.waw3-food-card small{color:var(--sub);font-size:11px}
+.waw3-food-card .waw3-ct{font-size:10px;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.waw3-rating{border-radius:999px;padding:4px 8px;border:1px solid var(--line);font-size:11px;display:inline-flex;align-items:center;gap:3px;font-weight:800;width:max-content;max-width:100%}
+.waw3-rating b{color:var(--accent)}
+.waw3-food-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
+.waw3-food-actions a,.waw3-food-actions button{border:1px solid var(--line);padding:8px 9px;border-radius:11px;font-size:11px;font-weight:800;background:var(--bg);color:var(--ink)}
+.waw3-food-actions button.selected{background:var(--primary);color:#fff}
+.waw3-break{border:1px dashed var(--accent);border-radius:15px;padding:13px;background:var(--panel);margin-top:12px;font-size:12px;line-height:1.5}
+.waw3-break b{display:block;margin-bottom:6px}
+.waw3-break a{color:var(--accent);text-decoration:underline}
+.waw3-places-rating{font-size:12px;color:var(--ink);font-weight:800;margin-top:6px}
+.waw3-places-rating span{color:var(--accent)}
+.waw3-offline{display:inline-flex;align-items:center;gap:5px;color:var(--ink);font-size:11px;font-weight:700}
+.waw3-section-jump{scroll-margin-top:24px}
+.waw3-map-warning{font-size:11px;color:var(--sub);margin-top:8px}
+@media(max-width:700px){.waw3-food-list{grid-template-columns:1fr}}
+@media(max-width:390px){.waw3-grid{grid-template-columns:1fr}.waw3-food-controls{grid-template-columns:1fr}.waw3-search{grid-column:1}.waw3-food-actions{gap:6px}}
