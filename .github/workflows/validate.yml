@@ -1,0 +1,18 @@
+name: Sprawdź bazę atrakcji
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  katalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sprawdź katalog i plik JS
+        run: |
+          python tools/sync_database.py
+          git diff --exit-code -- data/atrakcje.js
