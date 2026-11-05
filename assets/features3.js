@@ -112,5 +112,5 @@ $3('#waw3SavePlan').onclick=()=>{
  const u=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='plan-warszawa.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);
 };
 window.addEventListener('online',online);window.addEventListener('offline',online);
-showPrefs();foodList();addBreak();
+showPrefs();foodList();renderAll();
 })();
