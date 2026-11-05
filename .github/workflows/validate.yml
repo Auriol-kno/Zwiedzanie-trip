@@ -1,10 +1,10 @@
-name: Sprawdź bazę atrakcji
+name: Sprawdź aplikację Warszawa
 on:
   push:
     branches: [main]
   pull_request:
 jobs:
-  katalog:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,7 +12,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Sprawdź katalog i plik JS
+      - name: Zweryfikuj bazy danych
         run: |
           python tools/sync_database.py
-          git diff --exit-code -- data/atrakcje.js
+          git diff --exit-code -- data/atrakcje.js data/restauracje.js
+      - name: Test interfejsu i schematów
+        run: python tools/test_bundle.py
+      - name: Test składni JavaScript
+        run: |
+          node --check assets/features3.js
+          node --check data/atrakcje.js
+          node --check data/restauracje.js
+          node --check service-worker.js
