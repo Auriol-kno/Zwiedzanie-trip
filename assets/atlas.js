@@ -96,6 +96,14 @@ function localize(){
  $('#resetView').setAttribute('aria-label',t.reset);
  $('#fullscreen').setAttribute('aria-label',t.full);
  $('#fullscreen').title=t.full;
+ $('#searchClose').setAttribute('aria-label',lang==='en'?'Close search':'Zamknij wyszukiwarkę');
+ $('#polandSvg').setAttribute('aria-label',lang==='en'?'Interactive map of Poland with 13 cities':'Interaktywna mapa Polski z 13 miastami');
+ $('#zoomIn').setAttribute('aria-label',lang==='en'?'Zoom in':'Powiększ mapę');
+ $('#zoomOut').setAttribute('aria-label',lang==='en'?'Zoom out':'Pomniejsz mapę');
+ $('#langButton').setAttribute('aria-label',lang==='en'?'Switch to Polish':'Zmień język na angielski');
+ $('.brand').setAttribute('aria-label',lang==='en'?'Back to Poland Atlas':'Tu Byłem — mapa Polski');
+ $('.style-panel').setAttribute('aria-label',lang==='en'?'Map style':'Styl mapy');
+ $('.atlas-bottom').setAttribute('aria-label',lang==='en'?'Choose a city':'Wybór miasta');
  document.title=lang==='en'?'Tu Byłem — Explore Poland':'Tu Byłem — Atlas Polski';
  for(const mode of ['atlas','night','terrain']){$('#style'+mode[0].toUpperCase()+mode.slice(1)).classList.toggle('active',style===mode)}
  localStorage.setItem('tubylem_lang',lang);
