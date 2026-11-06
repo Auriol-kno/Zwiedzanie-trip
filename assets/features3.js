@@ -114,3 +114,6 @@ $3('#waw3SavePlan').onclick=()=>{
 window.addEventListener('online',online);window.addEventListener('offline',online);
 showPrefs();foodList();renderAll();
 })();
+
+/* Tu Byłem: load Poland explorer after Warsaw features */
+(function(){const script=document.createElement('script');script.src='assets/poland-explorer.js';script.defer=true;document.body.appendChild(script)})();
