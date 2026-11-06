@@ -1,40 +1,54 @@
-ODKRYJ WARSZAWĘ 3.0 — APLIKACJA NA IPHONE / GITHUB PAGES
-Aktualizacja: 6 listopada 2026
-Repozytorium: https://github.com/Auriol-kno/Zwiedzanie-trip
-Aplikacja (po aktywacji GitHub Pages): https://auriol-kno.github.io/Zwiedzanie-trip/
+TU BYŁEM — MIEJSCA I WSPOMNIENIA
+Wersja 4.0 / Atlas Polski • 6 listopada 2026
 
-NOWOŚCI 3.0
-- 184 atrakcje z 18 dzielnic, w tym więcej parków, pomników i terenów zielonych.
-- Redakcyjna wartość odwiedzenia 1–5 (oddzielna od ocen Google).
-- Zakładka Jedzenie: 36 rzeczywistych lokali, 11 rodzajów kuchni, 6 typów lokali, filtry dzielnic / budżetu / kuchni i zapisane lokale.
-- Opinie Google: link do aktualnej wizytówki w Google Maps; gwiazdki nie są pobierane ani kopiowane do aplikacji.
-- Planer z preferencjami wieku, trybem rodzinnym, trybem fotografa i tempem zwiedzania.
-- Automatyczna rezerwa czasu na odpoczynek / posiłek i wybrany lokal przy planie (bez automatycznej modyfikacji nawigacji).
-- Przybliżone godziny złotego światła fotograficznego i wskazówki kadrowania.
-- GPS: ustawienie startu ze swojej lokalizacji po wyrażeniu zgody.
-- Przewodnik głosowy: czytanie redakcyjnych opisów po polsku przez syntezę mowy przeglądarki.
-- Zapis planu TXT na iPhone.
-- Rozszerzony cache PWA: dane atrakcji i gastronomii, interfejs; zewnętrzne mapy wymagają internetu.
+ATLAS POLSKI
+https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+GŁÓWNY PRZEWODNIK WARSZAWY
+https://auriol-kno.github.io/Zwiedzanie-trip/
+GITHUB
+https://github.com/Auriol-kno/Zwiedzanie-trip
 
-FUNKCJE WYMAGAJĄCE DALSZEJ INTEGRACJI
-- WTP: precyzyjne numery linii, opóźnienia, odjazdy i połączenia na żywo (obecnie link do nawigacji i rozkładów).
-- Trasy rzeczywiście przebiegające ulicami; na mapie obecnie poglądowe połączenie punktów.
-- Prawdziwy przewodnik AI generujący opowieści (obecnie głosowe czytanie tekstów, bez modelu AI).
-- Kafelki mapy i routing offline: obecnie offline działają aplikacja, katalog i zapisane dane.
-- Oceny Google na żywo wymagają API Places, odpowiedniej licencji w EOG, rozliczeń i bezpiecznego backendu.
+NOWOŚCI WERSJI 4.0
+1. Prawdziwy ekran Atlasu Polski (13 miast) — dotykowa mapa ilustracyjna.
+2. Trzy działające style mapy: Atlas, Noc, Teren.
+3. Powiększanie, przesuwanie, wybór miast z mapy i listy, wyszukiwanie.
+4. Warszawa jako aktywny przewodnik. Pozostałe miasta oznaczone jako w przygotowaniu.
+5. Przycisk w nagłówku Warszawy i pływająca mini-mapa Polski do powrotu na Atlas.
+6. Przełącznik PL/EN z pamięcią wyboru pomiędzy ekranami.
+7. Angielskie opisy głównych miejsc, menu, karty i gastronomia; części mniej popularnych miejsc mają krótsze teksty EN.
+8. Przewodnik głosowy odczytuje opis w języku wybranym przez użytkownika.
+9. Ikona PWA na nowej instalacji otwiera od razu Atlas Polski.
+10. Test regresji Atlasu i tłumaczeń w GitHub Actions.
 
-JAK AKTUALIZOWAĆ BAZĘ
-1. Edytuj pliki data/atrakcje.json i/lub data/restauracje.json.
-2. Uruchom python tools/sync_database.py.
-3. Uruchom python tools/test_bundle.py.
-4. Zatwierdź oba pliki JSON i odpowiednie pliki JS.
-5. GitHub Actions uruchamia testy automatycznie.
+POZOSTAŁE FUNKCJE WARSZAWY
+- 184 miejsca w 18 dzielnicach, z redakcyjną oceną 1–5.
+- 36 lokali gastronomicznych w osobnej sekcji.
+- Mapa Warszawy z wyznaczaniem obszaru, planer czasu, GPS, tryb rodzinny, foto i ulubione.
+- Pieczątki oraz kopiowanie/eksport planu.
+- Linki do zewnętrznej nawigacji i aktualnych opinii Google Maps.
 
-DANE
-Aplikacja używa autorskiego katalogu kuratorskiego.
-Współrzędne części parków/pomników są przybliżone; czas pobytu, ceny i budżety gastronomiczne to szacunki.
-Godziny, miejsca i rezerwacje sprawdź bezpośrednio w źródłach.
+IPHONE — PIERWSZE URUCHOMIENIE
+1. W Safari otwórz /Zwiedzanie-trip/atlas.html.
+2. Użyj Udostępnij → Dodaj do ekranu początkowego.
+3. W Atlasie dotknij Warszawy, aby przejść do przewodnika.
+4. W przewodniku użyj pływającej mini-mapy do natychmiastowego powrotu.
+5. Używaj górnego przycisku PL/EN, aby zmieniać język.
+6. Jeśli starsza ikona nadal uruchamia stary adres, usuń tylko skrót z ekranu i dodaj go ponownie z Atlasu.
 
-INSTALACJA PWA
-Otwórz stronę GitHub Pages w Safari → Udostępnij → Do ekranu początkowego.
-Jeżeli PWA pokazuje poprzednią wersję, zamknij aplikację, otwórz adres w Safari i odśwież.
+PLIKI
+- atlas.html — ilustracyjny Atlas Polski (strona wejściowa PWA)
+- index.html — Warszawa
+- assets/atlas.js, assets/atlas.css — mapa, style, wyszukiwarka i miasta
+- assets/nav4.css, assets/poland-mark.svg — przycisk powrotu do Atlasu
+- assets/i18n4.js — tłumaczenia
+- data/atrakcje.json, data/restauracje.json — dane
+- service-worker.js — lokalny cache
+- ATLAS_4_0.md — dokładna dokumentacja wdrożenia
+- tools/test_atlas.py — test regresji
+
+CO JESZCZE WYMAGA ROZWOJU
+- W pełni redakcyjne i wierne tłumaczenia opisów wszystkich 184 miejsc.
+- Szczegółowe trasy i godziny rzeczywistej komunikacji WTP.
+- Interaktywna mapa MapLibre z warstwami ulic/terenu; obecnie Atlas jest piękną mapą wektorową kraju.
+- Kolejne miejskie przewodniki (12 miast jest oznaczonych jako planowane).
+- Test działania strony produkcyjnej na iPhonie.
