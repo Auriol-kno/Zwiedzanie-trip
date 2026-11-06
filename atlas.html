@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#d5e8e7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Tu Byłem">
+<meta name="description" content="Tu Byłem — interaktywny atlas Polski z 13 miastami i przewodnikiem po Warszawie.">
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="apple-touch-icon" href="./icon-180.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./assets/atlas.css">
+<title>Tu Byłem — Atlas Polski</title>
+</head>
+<body data-style="atlas">
+<main id="atlasApp">
+  <div class="atlas-map">
+    <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktywna mapa Polski z 13 miastami"></svg>
+  </div>
+  <header class="atlas-top">
+    <a class="brand" href="./atlas.html" aria-label="Tu Byłem — mapa Polski">
+      <span class="brand-logo" aria-hidden="true">🧭</span>
+      <span class="brand-name"><strong>Tu Byłem</strong><small id="atlasSubtitle">13 miast · tysiące historii</small></span>
+    </a>
+    <div class="atlas-actions">
+      <button class="pill search-toggle" id="searchButton" type="button" aria-label="Szukaj miasta">⌕</button>
+      <button class="pill language" id="langButton" type="button" aria-label="Zmień język">PL</button>
+      <button class="pill" id="fullscreen" type="button" aria-label="Pełny ekran">⛶</button>
+    </div>
+  </header>
+  <div class="searchbox" id="searchBox">
+    <input type="search" id="searchInput" placeholder="Szukaj miasta…" autocomplete="off">
+    <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+  </div>
+  <div class="atlas-hero">
+    <span class="eyebrow" id="atlasEyebrow">13 miast · tysiące historii</span>
+    <h1 id="atlasHeadline">Odkrywaj
+po swojemu.</h1>
+    <p id="atlasLead">Wybierz miasto i ruszaj na spotkanie z niezwykłymi miejscami.</p>
+  </div>
+  <div class="style-panel" role="group" aria-label="Styl mapy">
+    <button id="styleAtlas" type="button" class="active">Atlas</button>
+    <button id="styleNight" type="button">Noc</button>
+    <button id="styleTerrain" type="button">Teren</button>
+  </div>
+  <div class="map-controls">
+    <button class="round" id="zoomIn" aria-label="Powiększ mapę" type="button">+</button>
+    <button class="round" id="zoomOut" aria-label="Pomniejsz mapę" type="button">−</button>
+    <button class="round" id="resetView" aria-label="Pokaż całą Polskę" type="button">⌖</button>
+  </div>
+  <div class="attribution" id="atlasFooter">Kontur: Natural Earth (public domain)</div>
+  <section class="atlas-bottom" aria-label="Wybór miasta">
+    <div class="browse-title"><span id="citiesTitle">Wybierz miasto</span><span id="cityStatus">Przewodnik dostępny</span></div>
+    <div class="city-strip" id="cityStrip" role="list"></div>
+    <div class="city-card">
+      <div class="city-title"><strong id="cityName">Warszawa</strong><span id="cityDescription">184 atrakcje • 18 dzielnic • 36 lokali</span></div>
+      <button id="cityAction" class="city-action" type="button">Odkryj Warszawę</button>
+    </div>
+  </section>
+</main>
+<script src="./assets/atlas.js"></script>
+</body>
+</html>
