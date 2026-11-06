@@ -18,9 +18,13 @@ jobs:
           git diff --exit-code -- data/atrakcje.js data/restauracje.js
       - name: Test interfejsu i schematów
         run: python tools/test_bundle.py
+      - name: Test Atlasu Polski i PL/EN
+        run: python tools/test_atlas.py
       - name: Test składni JavaScript
         run: |
           node --check assets/features3.js
+          node --check assets/atlas.js
+          node --check assets/i18n4.js
           node --check data/atrakcje.js
           node --check data/restauracje.js
           node --check service-worker.js
