@@ -8,12 +8,12 @@ const $=s=>document.querySelector(s);
 const PREFIX='tubylem_lang';
 let lang=(new URLSearchParams(location.search).get('lang')||localStorage.getItem(PREFIX)||'pl')==='en'?'en':'pl';
 const PAIRS=[
-['Miejsca i Wspomnienia','Places & Memories'],
+['Miejsca i Wspomnienia','Places & Memories'],['Tu Byłem — Miejsca i Wspomnienia','Tu Byłem — Places & Memories'],
 ['TU BYŁEM','I WAS HERE'],
 ['Warszawa · 18 dzielnic · przewodnik 2.0','Warsaw · 18 districts · city guide'],
-['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],
+['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik 4.0','Warsaw · 18 districts · city guide 4.0'],
 ['Twoje miasto.','Your city.'],['Twoja trasa.','Your journey.'],
-['Zaznacz obszar lub wybierz dzielnicę. Odkryj ponad sto miejsc i ułóż własną trasę.','Choose an area or district. Discover local sights and design your own route.'],
+['Zaznacz obszar lub wybierz dzielnicę. Odkryj ponad sto miejsc i ułóż własną trasę.','Choose an area or district. Discover local sights and design your own route.'],['Zaznacz obszar lub wybierz dzielnicę. Odkryj 184 miejsca i ułóż własną trasę.','Choose an area or district. Explore 184 sights and plan your own route.'],
 ['W twoim obszarze','In your area'],['atrakcji do wyboru','places to explore'],['Czas wycieczki','Trip duration'],['z szacowanymi dojazdami','including estimated travel'],['Twój paszport','Your passport'],['zdobytych pieczątek','collected stamps'],
 ['✨ Inteligentny przewodnik','✨ Smart city guide'],['Dopasuj tempo, kategorię i czas zwiedzania. Ocena 1–5 to redakcyjna wartość odwiedzenia — nie ocena Google.','Set your pace, preferences and visiting time. Our 1–5 rating is editorial, not a Google score.'],
 ['Minimalna wartość miejsca','Minimum visit rating'],['Tempo zwiedzania','Sightseeing pace'],['Szybkie (80%)','Quick (80%)'],['Standardowe','Standard'],['Spokojne (125%)','Relaxed (125%)'],['📸 Tryb fotografa','📸 Photo mode'],['👨‍👩‍👧‍👦 Tryb rodzinny','👨‍👩‍👧‍👦 Family mode'],['Wiek dziecka','Child age'],['6–9 lat','6–9 years'],['10–13 lat','10–13 years'],['14+ lat','14+ years'],['Czas na odpoczynek','Break time'],['Bez przerwy','No break'],['20 min','20 min'],['30 min','30 min'],['45 min','45 min'],['60 min','60 min'],['90 min','90 min'],
@@ -27,7 +27,7 @@ const PAIRS=[
 ['Miejsca warte uwagi','Places worth exploring'],['Odkryj atrakcje w wybranym obszarze','Discover sights in your selected area'],['♡ Zapisane','♡ Saved'],['♥ Pokaż wszystkie','♥ Show all'],['🔎 Szukaj atrakcji w wybranym obszarze','🔎 Search sights in this area'],
 ['🍽️ Jedzenie i kawiarnie','🍽️ Food & cafés'],['Odkrywaj restauracje według kuchni, rodzaju lokalu, dzielnicy i budżetu. Oceny i dostępność sprawdzisz w Google Maps.','Find food by cuisine, venue type, district and budget. Check current reviews and opening status in Google Maps.'],['Wyszukaj lokal','Search places to eat'],['Dzielnica','District'],['Kuchnia','Cuisine'],['Typ lokalu','Venue type'],['Budżet','Budget'],['Niedrogo','Low budget'],['Do umiarkowanego','Moderate'],['Do wyższego','Higher budget'],['Wszystkie ceny','All budgets'],['Sortuj','Sort by'],['Wybór redakcji','Editorial picks'],['Nazwa A–Z','Name A–Z'],['Najpierw budżet','Lowest budget first'],
 ['✦ Polecenie redakcji i „Warto odwiedzić” 1–5 to niezależne oceny kuratorskie. Nie są ocenami Google. Nie zapisujemy historycznych gwiazdek Google ani nie zgadujemy aktualnych ocen.','✦ Editorial food picks and 1–5 visit ratings are our independent scores, not Google reviews. We do not store or invent Google star ratings.'],
-['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
+['Wersja demonstracyjna 3.0 • redakcyjna baza 184 miejsc + 36 lokali gastronomicznych we wszystkich dzielnicach, stan: listopad 2026. Czas zwiedzania i transportu to szacunki, a nowe współrzędne mogą być orientacyjne. Godziny i ceny należy potwierdzić.','Preview version 4.0 • 184 curated sights and 36 food venues across Warsaw. Travel and visiting times are estimates; some map coordinates are approximate. Check current hours and prices.'],['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
 ['Kolekcja wspomnień','Memories collection'],['Paszport odkrywcy','Explorer passport'],['Zbieraj wirtualne pieczątki po odwiedzeniu atrakcji. Są zapisywane na tym urządzeniu.','Collect digital stamps after visiting sights. They are saved on this device.'],
 ['Personalizacja','Personalisation'],['Styl aplikacji','App theme'],['Wybierz wygląd najbardziej odpowiadający sposobowi, w jaki lubisz odkrywać miasto.','Choose the look that best suits the way you explore.'],
 ['W przyszłości: fotografie wysokiej jakości, tryb offline, inteligentny asystent i integracja z transportem publicznym.','Coming next: richer photography, fuller offline maps, AI assistant and public transport integration.'],
@@ -46,7 +46,7 @@ const PAIRS=[
 ['Dopasuj','Customise'],['Pokaż wszystkie','Show all'],['Zapisano','Saved'],['Zapisz miejsce','Save place'],['Zdobądź pieczątkę','Collect stamp'],
 ['Miasto','City'],['Miejsce','Place'],['Śródmieście','City Centre'],['Praga-Północ','Praga North'],['Praga-Południe','Praga South'],
 ['Wszystkie dzielnice','All districts'],['Wszystkie kuchnie','All cuisines'],['Wszystkie typy lokali','All venue types'],['niedrogo','low budget'],['umiarkowanie','moderate'],['wyższy budżet','higher budget'],['premium','premium'],
-['Polska','Poland'],['Atlas Polski','Poland Atlas'],['13 miast','13 cities'],['Mapa Polski','Map of Poland']
+['Polska','Poland'],['Atlas Polski','Poland Atlas'],['13 miast','13 cities'],['Mapa Polski','Map of Poland'],['Kuchnia koreańska, kawa, ostre, mięso…','Korean food, coffee, spicy, meat…'],['Odkryj atrakcje...','Explore sights...']
 ];
 const DICT=new Map(PAIRS);
 const special={
