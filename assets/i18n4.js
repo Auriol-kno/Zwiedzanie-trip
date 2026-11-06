@@ -105,7 +105,7 @@ function translateData(next){
  if(!p.__originalI18n)p.__originalI18n=Object.fromEntries(placeFields.map(k=>[k,p[k]]));
  const o=p.__originalI18n;
  if(next==='pl'){placeFields.forEach(k=>{p[k]=o[k]});return}
- const sp=special[p.id];const fb=fallback(o);
+ const sp=special[p.id];const fb=fallback({...p,name:o.name});
  p.name=sp?sp[0]:properEnglish(o.name);p.desc=sp?sp[1]:fb[0];p.story=sp?sp[2]:fb[1];
  p.hours=o.schedule?'Check the current opening times with the venue.':'Outdoor area: check accessibility and seasonal restrictions.';
  p.priceText=p.price===0?'Free entry / outdoor access':p.price===null?'Check admission fees with the organiser':String(p.price)+' PLN (estimated; check current prices)';
