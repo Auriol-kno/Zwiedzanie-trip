@@ -1,0 +1,16 @@
+
+/* Tu Byłem 4.0: pływający powrót do Atlasu i przełącznik języka */
+.atlas-floating{position:fixed;right:13px;bottom:calc(102px + env(safe-area-inset-bottom,0px));z-index:1950;display:flex;align-items:center;gap:7px;min-height:52px;max-width:146px;padding:5px 11px 5px 5px;border-radius:19px;border:1px solid rgba(155,186,166,.68);background:color-mix(in srgb,var(--panel) 93%,transparent);color:var(--ink);box-shadow:0 10px 30px #0b273c38,0 2px 6px #0b273c18;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);text-decoration:none;transition:transform .2s ease,background .2s ease;overflow:hidden}
+.atlas-floating:hover,.atlas-floating:focus-visible{transform:translateY(-3px);background:var(--panel)}
+.atlas-floating img{width:45px;height:43px;object-fit:contain;flex:none;border-radius:14px;background:#244b4c}
+.atlas-floating span{display:flex;flex-direction:column;min-width:0;line-height:1.13}
+.atlas-floating b{font-size:12px;letter-spacing:-.02em;font-weight:850;white-space:nowrap}
+.atlas-floating small{font-size:9px;opacity:.68;white-space:nowrap;margin-top:3px}
+.atlas-top-link{display:grid;place-items:center;text-align:center;padding:0;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:-.04em}
+.atlas-lang{font-size:12px;font-weight:850;text-transform:uppercase}
+.atlas-lang[aria-pressed=true]{color:var(--accent);border-color:var(--accent)}
+body:has(.overlay.show) .atlas-floating{opacity:.62}
+body:has(.welcome.show) .atlas-floating{opacity:.35}
+@media(max-width:400px){.top{gap:5px}.top-actions{gap:5px}.brand{gap:7px}.brand b{font-size:15px}.brand small{font-size:8px}.mark{width:39px;height:39px}.top-actions>.icon-btn{width:37px;height:39px;border-radius:12px}.atlas-floating{right:10px;bottom:calc(103px + env(safe-area-inset-bottom,0px));padding:5px 8px 5px 5px;min-height:50px}.atlas-floating img{width:40px;height:40px}.atlas-floating b{font-size:11px}.atlas-floating small{font-size:8px}}
+@media(min-width:950px){.atlas-floating{right:max(22px,calc((100vw - 1180px)/2));bottom:25px}}
+@media(prefers-reduced-motion:reduce){.atlas-floating{transition:none}}
