@@ -1,11 +1,11 @@
 {
   "name": "Tu Byłem — Miejsca i Wspomnienia",
   "short_name": "Tu Byłem",
-  "description": "Odkrywaj miejsca, planuj wycieczki i zapisuj wspomnienia.",
-  "start_url": "./index.html",
+  "description": "Interaktywny atlas Polski i przewodnik po Warszawie z wyborem języka PL/EN.",
+  "start_url": "./atlas.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f5f0",
+  "background_color": "#d5e8e7",
   "theme_color": "#173c43",
   "icons": [
     {
@@ -19,6 +19,20 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Atlas Polski",
+      "short_name": "Polska",
+      "url": "./atlas.html",
+      "description": "Wróć na mapę Polski"
+    },
+    {
+      "name": "Zwiedzaj Warszawę",
+      "short_name": "Warszawa",
+      "url": "./index.html",
+      "description": "Przewodnik po Warszawie"
     }
   ]
 }
