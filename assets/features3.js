@@ -69,7 +69,7 @@ openDetail=function(id){
  const element=document.createElement('div');element.className='waw3-panel';
  element.innerHTML='<h3>✦ Warto odwiedzić: '+value(p)+'/5</h3><p class="waw3-sub">Ocena redakcyjna, nie opinie Google. Nowe lokalizacje mogą być orientacyjne.</p><p class="waw3-sub"><b>📸 Podpowiedź fotograficzna:</b> '+safe(hint)+'</p><div class="waw3-tools"><button id="waw3Speak">🔊 Posłuchaj opisu</button><button id="waw3StopSpeak">■ Zatrzymaj</button></div><p class="waw3-note">Przewodnik głosowy czyta przygotowany tekst, nie jest to generacja AI na żywo.</p>';
  $3('#detailContent').appendChild(element);
- $3('#waw3Speak').onclick=()=>{if(!window.speechSynthesis)return alert('Synteza mowy niedostępna.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(p.name+'. '+p.desc+' '+p.story);u.lang='pl-PL';u.rate=.94;speechSynthesis.speak(u)};
+ $3('#waw3Speak').onclick=()=>{if(!window.speechSynthesis)return alert('Synteza mowy niedostępna.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(p.name+'. '+p.desc+' '+p.story);u.lang=localStorage.getItem('tubylem_lang')==='en'?'en-US':'pl-PL';u.rate=.94;speechSynthesis.speak(u)};
  $3('#waw3StopSpeak').onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel()};
 };
 const priorAll=renderAll;
