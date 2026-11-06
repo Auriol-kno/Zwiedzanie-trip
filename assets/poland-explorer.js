@@ -66,7 +66,7 @@ document.querySelector('#routeSection')?.after(tripSection);
 const readTrips=()=>{try{const a=JSON.parse(localStorage.getItem('tb_saved_trips')||'[]');return Array.isArray(a)?a:[]}catch(e){return []}};
 const saveTrips=a=>localStorage.setItem('tb_saved_trips',JSON.stringify(a));
 function snapshot(){
-const st=window.state;
+const st=typeof state!=='undefined'?state:null;
 if(!st||!Array.isArray(st.route)||!st.route.length)return null;
 const date=st.date||new Date().toISOString().slice(0,10),clock=document.querySelector('#visitClock')?.value||'10:00';
 const duration=Number(st.duration)||4;
