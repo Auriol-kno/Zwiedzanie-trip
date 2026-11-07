@@ -18,10 +18,12 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - **Lewy górny róg każdej strony:** pinezka z pejzażem (`assets/brand-pin-landscape.svg`: słońce, ośnieżone góry, las, rzeka) **po lewej stronie** napisu „PLACES & MEMORIES / I WAS HERE”.
   - Napis jest tekstem HTML: małe kapitaliki u góry, pochylone szeryfowe „I WAS HERE” pod spodem.
   - Logo **nie jest linkiem**, żeby nie dublować przycisku mapy.
-- **Pływająca mapka Polski** (`assets/brand-mark.svg`, zielony kafelek ze złotą ramką, Polska z pejzażem, białą kropkowaną trasą i pomarańczową pinezką):
-  - stoi **na środku u góry**, tuż pod nagłówkiem, i jest **zawsze widoczna**: przy przewijaniu, nad zakładkami i oknami;
+- **Mapka Polski** (`assets/brand-mark.svg`, zielony kafelek ze złotą ramką, Polska z pejzażem, białą kropkowaną trasą i pomarańczową pinezką):
+  - stoi **w jednej linii z logo**, jako środkowy element nagłówka między logo a przyciskami (decyzja z 8.5.3: „nie może być opuszczona”);
+  - nagłówek jest zawsze widoczny (przyklejony u góry, a w Atlasie stały), więc mapka też;
   - **zawsze prowadzi do pełnej mapy Polski**. W Atlasie mapa płynnie oddala się bez przeładowania;
-  - element `#atlasFloat.poland-fab` musi stać **poza** nagłówkiem z rozmyciem tła, bo inaczej nie pływa;
+  - element to `#atlasFloat.poland-fab` (48 px, w Atlasie 44 px);
+  - na ekranach ≤370 px napis logo jest ukryty i zostaje sama pinezka, żeby mapka zmieściła się w linii;
   - **bez białej obwódki**, tylko cień. Właściciel odrzucił białe artefakty wokół logo.
 - **Ikona PWA** (`icon.svg`, `icon-180.png`, `icon-512.png`) to ten sam zielony kafelek. Wszystkie znaki generuje `tools/build_logo.py`; nie edytuj ich ręcznie.
 - Historia: 5.0 pinezka-ilustracja → 5.2 logo z miniaturą mapy → 8.3 pinezka w sylwetce Polski → 8.3.1 biało-czerwona Polska z pinezką (z JPG, potem wektor) → 8.4 kafelek → 8.5 pinezka + napis + pływająca mapka.
@@ -68,8 +70,9 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - **Liczniki są klikalne**: miasta X/14, miejsca w regionach X/207, Warszawa X/184 i wpisy w dzienniku. Każdy przewija do swojej listy.
 - 14 znaczków miast z przyciskiem **„Byłem tu”**, który odblokowuje pieczątkę i pozwala ją **odznaczyć**. Zablokowane znaczki są szare.
 - Wyszukiwarka miejsc w regionach i atrakcji Warszawy, z „Byłem tu” przy każdym wyniku.
+- **W szczegółach atrakcji** (Warszawa i regiony) główną akcją jest **„✣ Zdobądź pieczątkę”** (pomarańczowy przycisk), a po zdobyciu „✓ Pieczątka zdobyta”. Decyzja z 8.5.3: zamiast „Notatki i zdjęcia”.
 - **Dziennik podróży:** notatki i **do 5 zdjęć** na miejsce, także z biblioteki zdjęć. Zapis jest **tylko lokalnie**, w IndexedDB `iwh_journal`; nic nie jest wysyłane.
-  - Dostęp: przycisk „📝 Notatki i zdjęcia” w szczegółach atrakcji oraz lista w Pieczątkach.
+  - Przycisk „📝 Notatki i zdjęcia” pojawia się **dopiero po zdobyciu pieczątki**: w szczegółach atrakcji oraz jako 📝 przy zdobytych pieczątkach na liście Pieczątek.
 - Klucze zapisu: `iwh_visited` (`city:<id>`, `region:<id>`, `town:<region>:<nazwa>`), `iwh_region_visited` (id miejsc), `odkryjWarszawe_1.visited` (Warszawa).
 
 ## 8. Plany i zwiedzanie

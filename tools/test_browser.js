@@ -106,8 +106,9 @@ function check(ok, message) {
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
     const c = document.querySelector('#atlasFloat').getBoundingClientRect();
-    return c.top >= 0 && c.top < 140 && Math.abs(c.left + c.width / 2 - innerWidth / 2) < 2 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
-  }), 'Warszawa: pływająca mapka Polski na środku u góry, widoczna i klikalna po przewinięciu');
+    const b = document.querySelector('.brand').getBoundingClientRect(), a = document.querySelector('.top-actions').getBoundingClientRect();
+    return c.top >= 0 && c.top < 60 && Math.abs((c.top + c.bottom) / 2 - (b.top + b.bottom) / 2) < 6 && c.left > b.right && c.right < a.left && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+  }), 'Warszawa: mapka Polski w jednej linii z logo, widoczna i klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
   check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)
@@ -117,7 +118,7 @@ function check(ok, message) {
   check(await page.evaluate(() => { const a = document.querySelector('#detailContent .iwh-wiki[data-l="en"] a');
     return !!a && a.offsetParent !== null && /^https:\/\/(en|pl)\.wikipedia\.org\//.test(a.href) && !document.querySelector('#detailContent .iwh-wiki[data-l="pl"] a').offsetParent; }),
     'Warszawa EN: „More information — Wikipedia” przy opisie');
-  check(await page.evaluate(() => !!document.querySelector('#detailContent [data-journal="waw:castle"]')), 'Warszawa: przycisk notatek i zdjęć w szczegółach');
+  check(await page.evaluate(() => !document.querySelector('#detailContent [data-journal]') && /Collect|Zdobądź/.test(document.querySelector('#detailContent [data-visit]').textContent)), 'Warszawa: w szczegółach „Zdobądź pieczątkę” zamiast notatek');
   await page.evaluate(() => closeOverlay('detailOverlay'));
   check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Stamps,profile:Profile'
     && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');
@@ -250,6 +251,8 @@ function check(ok, message) {
   check(/^https:\/\/(pl|en)\.wikipedia\.org\//.test(wikiR), 'Przewodnik regionu: „Więcej informacji o miejscu — Wikipedia” (' + decodeURIComponent(wikiR).slice(0, 60) + ')');
   // Dziennik podróży: notatki + zdjęcia z biblioteki (limit 5), zapis w IndexedDB
   const png = await page.screenshot({ clip: { x: 0, y: 0, width: 60, height: 60 } });
+  check(await page.evaluate(() => !document.querySelector('#dBody [data-journal]') && /Zdobądź pieczątkę/.test(document.querySelector('#dBody [data-stamp]').textContent)), 'Przewodnik regionu: „Zdobądź pieczątkę” zamiast notatek przed zdobyciem');
+  await page.click('#dBody [data-stamp]');
   const jkey = await page.evaluate(() => document.querySelector('#dBody [data-journal]').dataset.journal);
   await page.click('#dBody [data-journal]');
   await page.waitForSelector('.iwh-journal:not([hidden]) #ijNotes');
@@ -266,7 +269,6 @@ function check(ok, message) {
   check(true, 'Dziennik: licznik zdjęć na przycisku');
   await page.click('#dBody [data-addplan="day"]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days') || '[]').some(p => p.items.some(i => i.t === 'place')) && /✓/.test(document.querySelector('#dBody [data-addplan="day"]').textContent)), 'Przewodnik regionu: punkt dodany do planu dnia');
-  await page.click('#dBody [data-stamp]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_region_visited') || '[]').length === 1), 'Przewodnik regionu: pieczątka „Byłem tu” zapisana');
   await page.click('#dClose');
   await page.click('#langRegion [data-lang="en"]');
@@ -286,7 +288,7 @@ function check(ok, message) {
   await page.click('#atlasFloat');
   await page.waitForTimeout(700);
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
-  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && getComputedStyle(document.querySelector('#atlasFloat')).position === 'fixed'), 'Atlas: logo z pinezką, mapka Polski pływa na środku u góry');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && !!document.querySelector('.atlas-top #atlasFloat')), 'Atlas: logo z pinezką, mapka Polski w jednej linii z logo');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

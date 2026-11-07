@@ -6,10 +6,6 @@
  * Etykiety PL i EN są w HTML naraz; widoczna jest ta zgodna z <html lang> (bez przebudowy przy zmianie języka). */
 (function(){
 'use strict';
-// Pływająca mapka Polski: tuż pod nagłówkiem, na środku (pozycja liczona z wysokości nagłówka danej strony).
-const fab=document.getElementById('atlasFloat');
-if(fab){const place=()=>{const h=document.querySelector('.atlas-top,.app > .top, header.top');if(h)document.documentElement.style.setProperty('--fab-top',Math.round(h.getBoundingClientRect().height+6)+'px')};
- place();addEventListener('resize',place);addEventListener('load',place);if(window.ResizeObserver){const h=document.querySelector('.atlas-top,header.top');if(h)new ResizeObserver(place).observe(h)}}
 const nav=document.getElementById('appNav');if(!nav)return;
 const page=nav.dataset.page||'atlas';
 const I={

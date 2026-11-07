@@ -18,7 +18,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  planNote:'Czasy przejazdu są szacowane z odległości (bez korków i rozkładów). Godziny otwarcia i ceny sprawdź na stronie obiektu przed wyjazdem.',
  planEmpty:'Brak miejsc pasujących do filtrów. Zmień kategorię lub wydłuż czas.',places:'Miejsca do zwiedzania',count:(n)=>n+' '+(n===1?'miejsce':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'miejsca':'miejsc'),
  empty:'Brak miejsc dla wybranych filtrów.',visit:'wizyta',drive:'dojazd',walk:'spacer',value:'Warto odwiedzić',valueNote:'ocena redakcyjna, nie Google',time:'Czas na miejscu',town:'Miejscowość',
- save:'♡ Zapisz',unsave:'♥ Zapisane',stamp:'✓ Byłem tu',unstamp:'✓ Odwiedzone',route:'🧭 Prowadź',site:'🌐 Strona obiektu',google:'🔎 Szukaj w Google Maps',listen:'🔊 Posłuchaj',
+ save:'♡ Zapisz',unsave:'♥ Zapisane',stamp:'✣ Zdobądź pieczątkę',unstamp:'✓ Pieczątka zdobyta',route:'🧭 Prowadź',site:'🌐 Strona obiektu',google:'🔎 Szukaj w Google Maps',listen:'🔊 Posłuchaj',
  approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
@@ -30,7 +30,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  planNote:'Travel times are estimated from distance (no traffic or timetables). Check opening hours and prices on the venue’s website before you go.',
  planEmpty:'No places match the filters. Change the category or allow more time.',places:'Places to visit',count:n=>n+' '+(n===1?'place':'places'),
  empty:'No places match the selected filters.',visit:'visit',drive:'drive',walk:'walk',value:'Worth visiting',valueNote:'editorial rating, not Google',time:'Time on site',town:'Town',
- save:'♡ Save',unsave:'♥ Saved',stamp:'✓ I was here',unstamp:'✓ Visited',route:'🧭 Directions',site:'🌐 Official website',google:'🔎 Search in Google Maps',listen:'🔊 Listen',
+ save:'♡ Save',unsave:'♥ Saved',stamp:'✣ Collect the stamp',unstamp:'✓ Stamp collected',route:'🧭 Directions',site:'🌐 Official website',google:'🔎 Search in Google Maps',listen:'🔊 Listen',
  approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
@@ -171,11 +171,12 @@ function openDetail(id){
  $('#dBody').innerHTML='<div class="big" aria-hidden="true">'+p.icon+'</div><div class="eyebrow" style="color:var(--accent)">'+esc(p.town)+' · '+esc(p.cats.map(catLabel).join(' · '))+'</div><h2 id="dTitle">'+esc(name(p))+'</h2>'+
   (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+(window.IWH_EXTRAS?IWH_EXTRAS.wikiHTML(p,lang):'')+
   '<div class="facts"><div><small>'+esc(x.time)+'</small><b>'+fmtDur(p.time)+'</b></div><div><small>'+esc(x.value)+'</small><b>'+p.visitValue+'/5</b> <small style="display:inline">('+esc(x.valueNote)+')</small></div></div>'+
-  '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn secondary" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
+  '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn '+(seen?'secondary':'accent')+'" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
   '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
   ('speechSynthesis' in window?'<button type="button" class="btn secondary" data-speak="'+id+'">'+esc(x.listen)+'</button>':'')+
   '<button type="button" class="btn secondary" data-addplan="day" data-id="'+id+'">'+esc(planLabel('day',id))+'</button><button type="button" class="btn secondary" data-addplan="trip" data-id="'+id+'">'+esc(planLabel('trip',id))+'</button>'+
-  (window.IWH_EXTRAS?IWH_EXTRAS.journal.button('reg:'+id,name(p)+' · '+p.town,p.icon,lang):'')+'</div>'+
+  // 8.5: notatki i zdjęcia dopiero po zdobyciu pieczątki (jak w Warszawie)
+  (seen&&window.IWH_EXTRAS?IWH_EXTRAS.journal.button('reg:'+id,name(p)+' · '+p.town,p.icon,lang):'')+'</div>'+
   '<div class="warn">'+esc(p.coordinateStatus==='osm'?x.osm:x.approx)+'</div>';
  $('#detail').classList.add('show');document.body.style.overflow='hidden';$('#dClose').focus();window.IWH_EXTRAS?.journal.counts($('#dBody'));
 }

@@ -5,9 +5,16 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-3-20261107`.
 
 ---
+
+## [Nieopublikowane] 8.5.3 — 2026-11-07 — gałąź `claude/fab-inline-stamps` (zawiera dokumentację przekazania)
+- **Mapka Polski w jednej linii z logo:** środkowy element nagłówka (logo · mapka · przyciski), już nie opuszczona pod
+  nagłówkiem. Zawsze widoczna, zawsze prowadzi do pełnej mapy Polski. Na ekranach ≤370 px napis logo ukryty (zostaje pinezka).
+- **„✣ Zdobądź pieczątkę” w szczegółach atrakcji** (regiony jak w Warszawie, pomarańczowy przycisk) zamiast „Notatki i zdjęcia”;
+  „📝 Notatki i zdjęcia” pojawia się dopiero po zdobyciu pieczątki, także jako 📝 przy zdobytych pieczątkach w Pieczątkach.
+- Cache `i-was-here-v8-5-3-20261107`; testy dostosowane.
 
 ## [Nieopublikowane] Dokumentacja przekazania — 2026-11-07 — gałąź `claude/handoff-docs`
 - Pełna aktualizacja `CLAUDE.md`, `PROJECT_STATUS.md`, `ROADMAP.md`, `CHANGELOG.md` oraz nowy rejestr ustaleń

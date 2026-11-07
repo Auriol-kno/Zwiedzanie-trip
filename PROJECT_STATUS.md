@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-07 · **Wersja:** 8.5 · **`main`:** `76d6aae` („Scal #14: 8.5 — znaczki pocztowe na mapie, Pieczątki, plany z mapy, pływająca mapka Polski”)
-**Cache PWA:** `i-was-here-v8-5-2-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
+**Cache PWA:** `i-was-here-v8-5-3-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
 > - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
@@ -10,7 +10,7 @@
 ---
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
-- **Otwarte PR:** brak, poza PR z tą dokumentacją (gałąź `claude/handoff-docs`), który czeka na „Scal”.
+- **Otwarte PR:** #15 (dokumentacja przekazania, gałąź `claude/handoff-docs`) i #16 (8.5.3: mapka w linii z logo, „Zdobądź pieczątkę”, gałąź `claude/fab-inline-stamps`, zawiera #15). Oba czekają na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -28,7 +28,7 @@
 ### Wspólne dla wszystkich stron
 - **Logo:**
   - pinezka z pejzażem po lewej stronie napisu „PLACES & MEMORIES / I WAS HERE” (logo nie jest linkiem);
-  - **pływająca mapka Polski** (`#atlasFloat.poland-fab`) na środku u góry, zawsze widoczna, zawsze prowadzi do pełnej mapy Polski.
+  - **mapka Polski** (`#atlasFloat.poland-fab`) w jednej linii z logo, między logo a przyciskami; zawsze widoczna, zawsze prowadzi do pełnej mapy Polski. Na ekranach ≤370 px zostaje sama pinezka bez napisu.
 - **Jedno dolne menu** (`assets/app-nav.js`): Mapa · Odkrywaj · Plany · Pieczątki · Profil (PL/EN).
 - **Pieczątki** (`IWH_EXTRAS.passport`):
   - klikalne liczniki;
@@ -67,7 +67,7 @@
   - „Byłem tu”;
   - „🗓️ Do planu dnia” i „🧳 Do podróży”;
   - nawigację, stronę obiektu i lektora;
-  - „📝 Notatki i zdjęcia”.
+  - główny przycisk „✣ Zdobądź pieczątkę”; „📝 Notatki i zdjęcia” pojawia się po zdobyciu pieczątki.
 - 166 z 207 pozycji jest zweryfikowanych w OSM, a 110 ma potwierdzony artykuł Wikipedii.
 
 ### Przewodnik Warszawy — `index.html`
@@ -101,7 +101,7 @@
 | # | Problem | Gdzie | Waga |
 |---|---------|-------|------|
 | 1 | Leaflet (CDN unpkg) i kafelki OSM nie są w cache: mapa regionu offline jest pusta, ale lista i plan działają | `region.html`, `service-worker.js` | średnia |
-| 2 | Pływająca mapka zasłania mały fragment mapy u góry Atlasu (np. okolice Gdańska) | `app-nav.css` | niska |
+| 2 | Na ekranach ≤370 px napis logo jest ukryty (zostaje pinezka), żeby mapka zmieściła się w linii | `app-nav.css` | niska |
 | 3 | Przy otwartej karcie miejsca paski miast i województw są ukryte (świadomy kompromis wysokości) | `atlas.js`/CSS | niska |
 | 4 | i18n Warszawy (`i18n4.js`) to słownik zdań: każdy nowy tekst w `index.html` trzeba dopisać | `assets/i18n4.js` | średnia |
 | 5 | Plik `assets/poland-explorer.js` ma mylącą nazwę; zostały w nim tylko biblioteka tras i eksport .ics | Warszawa | niska |

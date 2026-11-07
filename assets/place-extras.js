@@ -172,7 +172,9 @@ function toggleCity(id){const v=readLS('iwh_visited',[]),k='city:'+id;writeLS('i
 function togglePlace(id){const v=readLS('iwh_region_visited',[]);writeLS('iwh_region_visited',v.includes(id)?v.filter(x=>x!==id):[...v,id]);changed()}
 function toggleWaw(id){if(typeof window.toggleVisit==='function'){window.toggleVisit(id)}else{const w=readLS('odkryjWarszawe_1',{});const v=Array.isArray(w.visited)?w.visited:[];w.visited=v.includes(id)?v.filter(x=>x!==id):[...v,id];writeLS('odkryjWarszawe_1',w)}changed()}
 const norm=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
-function rowHTML(kind,id,icon,name,sub,on){const t=x();return '<li class="pp-row'+(on?' on':'')+'"><span class="pp-ic" aria-hidden="true">'+esc(icon||'📍')+'</span><span class="pp-text"><b>'+esc(name)+'</b><small>'+esc(sub||'')+'</small></span><button type="button" class="pp-toggle" data-pp-'+kind+'="'+esc(id)+'" aria-pressed="'+on+'">'+esc(on?t.unlocked:t.unlock)+'</button></li>'}
+const jKey=(kind,id)=>(kind==='place'?'reg:':kind==='waw'?'waw:':'atlas:city:')+id;
+const jBtn=(kind,id,title,icon)=>'<button type="button" class="pp-note" data-journal="'+esc(jKey(kind,id))+'" data-journal-title="'+esc(title)+'" data-journal-icon="'+esc(icon||'')+'" aria-label="'+esc(x().open.replace(/^\S+ /,'')+': '+title)+'">📝</button>';
+function rowHTML(kind,id,icon,name,sub,on){const t=x();return '<li class="pp-row'+(on?' on':'')+'"><span class="pp-ic" aria-hidden="true">'+esc(icon||'📍')+'</span><span class="pp-text"><b>'+esc(name)+'</b><small>'+esc(sub||'')+'</small></span>'+(on?jBtn(kind,id,name+(sub?' · '+sub:''),icon):'')+'<button type="button" class="pp-toggle" data-pp-'+kind+'="'+esc(id)+'" aria-pressed="'+on+'">'+esc(on?t.unlocked:t.unlock)+'</button></li>'}
 function listHTML(kind,q){
  const t=x(),L=lang(),Q=norm(q),MAX=40;let items=[],on=[];
  if(kind==='place'){const d=REG();if(!d)return '';on=readLS('iwh_region_visited',[]);items=d.places.map(p=>({id:p.id,icon:p.icon,name:p.name[L]||p.name.pl,sub:p.town,hay:p.name.pl+' '+p.name.en+' '+p.town}))}
@@ -185,7 +187,7 @@ function listHTML(kind,q){
 function citiesHTML(){
  const t=x(),on=visitedCities(),A=ART();
  return cityIds().map(id=>{const v=on.includes(id),name=A?A.cityName(id):id;
-  return '<li class="pp-stamp'+(v?' on':'')+'"><span class="pp-art" role="img" aria-label="'+esc((v?t.unlockedA:t.lockedA)+name)+'">'+(A?'<svg viewBox="0 -6 80 62">'+A.landmark(id,{visited:v})+'</svg>':'')+'</span><button type="button" class="pp-toggle" data-pp-city="'+id+'" aria-pressed="'+v+'">'+esc(v?t.unlocked:t.unlock)+'</button></li>'}).join('');
+  return '<li class="pp-stamp'+(v?' on':'')+'"><span class="pp-art" role="img" aria-label="'+esc((v?t.unlockedA:t.lockedA)+name)+'">'+(A?'<svg viewBox="0 -6 80 62">'+A.landmark(id,{visited:v})+'</svg>':'')+'</span><span class="pp-stamp-act"><button type="button" class="pp-toggle" data-pp-city="'+id+'" aria-pressed="'+v+'">'+esc(v?t.unlocked:t.unlock)+'</button>'+(v?jBtn('city',id,name,'🏙️'):'')+'</span></li>'}).join('');
 }
 function passportHTML(){
  const t=x(),st=stats(),L=lang(),q=s=>'./'+s+'?lang='+L;
