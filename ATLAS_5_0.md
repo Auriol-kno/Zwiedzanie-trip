@@ -43,3 +43,9 @@ Geometria 16 województw pochodzi z projektu Natural Earth udostępnionego w rep
 
 ## Otwórz aplikację
 https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+
+## Poprawka 5.1 — jeden przełącznik języka w Warszawie
+- Usunięto drugi przycisk języka (`#tbLanguage`, klucz `tb_lang`) dodawany przez `assets/poland-explorer.js`. Język w Warszawie zmienia wyłącznie `#langWarsaw`, wspólny z Atlasem (`tubylem_lang`).
+- Usunięto zdublowany blok „Tu Byłem” z drugą mapą Polski (Leaflet) na górze przewodnika. Tę rolę pełni `atlas.html` i pływający przycisk powrotu. Zachowano „Moje wycieczki”, eksport do kalendarza i inteligentną kolejność zwiedzania; teraz używają wspólnego języka.
+- Naprawiono start tłumaczenia: `#atlasFloat` znajduje się przed `i18n4.js`, a `refresh()` nie przerywa się przy braku elementu. Wejście z Atlasu EN otwiera Warszawę po angielsku.
+- `poland-explorer.js` dodano do cache offline (nowa wersja cache) i do sprawdzania składni w CI.

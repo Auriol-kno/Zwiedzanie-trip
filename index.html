@@ -149,7 +149,7 @@ $('#welcomeDurations').onclick=e=>{let b=e.target.closest('[data-hours]');if(!b)
 renderControls();initMap();renderAll();try{if(!localStorage.getItem('odkryjWarszawe_onboard')){$('#welcome').classList.add('show')}}catch(e){$('#welcome').classList.add('show')}
 if('serviceWorker'in navigator&&location.protocol==='https:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 </script>
+<a class="atlas-floating" id="atlasFloat" href="./atlas.html" aria-label="Wróć do mapy Polski" title="Atlas Polski"><img src="./assets/poland-mark.svg" alt="" width="45" height="43"><span><b>Atlas Polski</b><small>13 miast</small></span></a>
 <script src="assets/features3.js"></script>
 <script src="assets/i18n4.js"></script>
-<a class="atlas-floating" id="atlasFloat" href="./atlas.html" aria-label="Wróć do mapy Polski" title="Atlas Polski"><img src="./assets/poland-mark.svg" alt="" width="45" height="43"><span><b>Atlas Polski</b><small>13 miast</small></span></a>
 </body></html>

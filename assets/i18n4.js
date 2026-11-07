@@ -219,8 +219,8 @@ function refresh(){
  localStorage.setItem(PREFIX,lang);
  $('#langWarsaw').textContent=lang.toUpperCase();
  $('#langWarsaw').setAttribute('aria-label',lang==='pl'?'Zmień język na angielski':'Switch to Polish');
- $('#atlasTop').href='./atlas.html?lang='+lang;
- $('#atlasFloat').href='./atlas.html?lang='+lang;
+ // Linki powrotu do Atlasu przekazują język; brak elementu nie może zatrzymać tłumaczenia.
+ for(const id of ['#atlasTop','#atlasFloat']){const link=$(id);if(link)link.href='./atlas.html?lang='+lang}
  translateData(lang);
  try{renderAll()}catch(err){console.warn('UI refresh',err)}
  const select=document.querySelector('#waw3FoodSort');if(select)select.dispatchEvent(new Event('change',{bubbles:true}));
