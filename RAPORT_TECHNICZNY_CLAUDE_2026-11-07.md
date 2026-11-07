@@ -1,5 +1,5 @@
 # Raport techniczny — I Was Here — Places & Memories
-Autor: Claude Code · 7 listopada 2026 r. · stan `main` @ `46e0db8`
+Autor: Claude Code · 7 listopada 2026 r. · analiza: `main` @ `46e0db8`; ponowna weryfikacja: `main` @ `ea9dab2`
 
 To jest raport z analizy. **Nie zmieniono żadnego pliku aplikacji.** Proponowane poprawki trzeba przygotować na osobnych gałęziach i wysłać jako osobne Pull Requesty.
 
@@ -79,13 +79,13 @@ W trybie EN **158 ze 184** atrakcji dostaje szablonowy opis z `fallback()`, np.:
 ### B7 (niski) — drobne usterki Atlasu
 - `zoomTo()` liczy środek jako (450, 325), a viewBox ma 900×680 (środek 340). Powiększanie lekko „ucieka” w górę.
 - Brak gestu **pinch-zoom** na dotyku (jest tylko `wheel` i przyciski +/−). `touch-action:none` na SVG blokuje też natywny zoom, więc na iPhonie nie da się powiększyć mapy dwoma palcami.
-- Początkowy HTML ma `lang="en"`, ale polskie teksty (`cityStatus`, placeholder, aria-label). Przez chwilę przed uruchomieniem JS widać mieszankę języków.
+- ~~Początkowy HTML ma `lang="en"`, ale polskie teksty.~~ **Częściowo naprawione w `9c94786`** (widoczne napisy są już po angielsku). Po polsku zostały jeszcze aria-label: `searchButton`, `fullscreen`, `zoomIn`, `zoomOut`, `resetView`, `searchClose`, `.style-panel`, `.atlas-bottom` i `polandSvg`.
 - Etykiety regionów (POMERANIA, MASOVIA…) częściowo zasłaniają miniatury miast i lasy.
 - Nazwy w EN bez polskich znaków („Krakow”, „Gdansk”, „Lodz”). To akceptowalne, ale `CLAUDE.md` mówi o zachowaniu nazw własnych. Do decyzji: „Kraków”, „Gdańsk”, „Łódź” w obu językach.
 
 ### B8 (niski) — PWA/ikony
 - `icon-512.png` ma `"purpose": "any maskable"`. Zalecane są osobne ikony, bo maskowanie przycina ikonę „any”.
-- Pliki PNG (870 B / 2,7 KB) to prawdopodobnie stara, uproszczona grafika (co przyznaje `README.txt`). iOS używa `apple-touch-icon` PNG, nie SVG.
+- ~~Stare pliki PNG.~~ **Naprawione w `a774d07`/`7766a2c`**: workflow `sync-icons.yml` generuje `icon-180.png` (15 KB) i `icon-512.png` (53 KB) z `icon.svg`. Uwaga: ten workflow sam pushuje do `main` (`contents: write`). Warto o tym wiedzieć przy pracy kilku asystentów, bo po zmianie `icon.svg` na `main` pojawi się dodatkowy commit bota.
 
 ## 3. Luki w testach
 Obecne testy sprawdzają obecność tekstów i ID w plikach, a nie działanie aplikacji. Dlatego B1–B5 przechodzą CI na zielono. Brakuje:
@@ -114,3 +114,9 @@ Obecne testy sprawdzają obecność tekstów i ID w plikach, a nie działanie ap
 | 7 | `claude/ci-browser-tests` | Sekcja 3: testy Playwright i rozszerzenie `validate.yml` | niskie |
 
 Każdy PR: polski opis, `sync_database.py`, oba testy, `node --check`, przegląd diffu. Wymagany też ręczny test na iPhonie (Safari i PWA z ekranu początkowego), którego nie mogę wykonać.
+
+## 6. Ponowna weryfikacja na `main` @ `ea9dab2`
+Po scaleniu najnowszego `main` z gałęzią raportu:
+- `sync_database.py`, `test_bundle.py`, `test_atlas.py`, `node --check` dla wszystkich JS, `py_compile tools/render_icons.py`: **OK**.
+- Test w Chromium (iPhone 13): **B1 nadal występuje** (`Cannot set properties of null (setting 'href')`, Warszawa po polsku po wejściu z Atlasu EN). **B2 nadal występuje** (`#polandHome` jest na stronie). **B5 nadal występuje** (fokus przechodzi na `BODY`).
+- Pliki `index.html`, `assets/*`, `service-worker.js` nie zmieniły się od analizy, więc B3, B4 i B6 pozostają aktualne.
