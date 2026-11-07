@@ -19,7 +19,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-1-20261107`.
 - **Punkt na mapie regionu → plan:** w szczegółach miejsca przyciski „🗓️ Do planu dnia” i „🧳 Do podróży” (plany Atlasu).
 - **Podróż → plan dnia:** w Planach przycisk „🗓️ Dodaj do planu dnia” tworzy plan dnia z pozycji podróży.
 - **Logo:** pinezka z pejzażem wróciła obok napisu (kafelek · napis · pinezka) na wszystkich stronach, w pełnym rozmiarze
-  (wysokość kafelka, 56 px; mniejsza tylko na ekranach ≤380 px).
+  (wysokość kafelka: 56 px w Warszawie i regionach, 45 px w Atlasie; mniejsza tylko na ekranach ≤380 px).
 - **Porządki (duplikaty i nieużywane elementy):** usunięty pływający przycisk „Polska” (to samo robi logo); z Profilu usunięte
   wybór języka i stylu mapy (są w nagłówku i w panelu Warstwy); „Odkrywaj” w Atlasie otwiera wyszukiwarkę zamiast
   dublować listę miast i województw z paska; usunięte nieużywane pliki `brand-atlas.svg`, `brand-mark-flag.svg`,
