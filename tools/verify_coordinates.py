@@ -9,12 +9,13 @@ Wtedy: lat/lon z OSM, coordinateStatus = "osm", osm = {type, id, name}. W pozost
 zostaje „orientacyjne”, a skrypt wypisuje go do ręcznego sprawdzenia. Uruchom ponownie sync_database.py.
 Użycie: python tools/verify_coordinates.py --cache /ścieżka/cache.json [--apply]
 """
-import argparse, json, math, re, time, urllib.parse, urllib.request
+import argparse, json, math, re, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = "IWasHere-PlacesAndMemories-data-check/1.0 (+https://github.com/Auriol-kno/Zwiedzanie-trip)"
 MAX_KM = 12.0
+DELAY = 2.5   # sekund między zapytaniami
 VOIV = {"dolnoslaskie": "dolnośląskie", "kujawsko-pomorskie": "kujawsko-pomorskie", "lubelskie": "lubelskie", "lubuskie": "lubuskie",
         "lodzkie": "łódzkie", "malopolskie": "małopolskie", "mazowieckie": "mazowieckie", "opolskie": "opolskie", "podkarpackie": "podkarpackie",
         "podlaskie": "podlaskie", "pomorskie": "pomorskie", "slaskie": "śląskie", "swietokrzyskie": "świętokrzyskie",
@@ -41,14 +42,23 @@ def queries(p):
 def search(q, cache, last):
     if q in cache:
         return cache[q], last
-    wait = 1.1 - (time.time() - last)
-    if wait > 0:
-        time.sleep(wait)
     url = "https://nominatim.openstreetmap.org/search?" + urllib.parse.urlencode(
         {"q": q, "format": "jsonv2", "limit": 3, "countrycodes": "pl", "addressdetails": 1, "accept-language": "pl"})
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        res = json.loads(r.read().decode())
+    # Spokojne tempo (2,5 s) i ponawianie z narastającą przerwą przy 429/5xx — zgodnie z zasadami Nominatim.
+    for attempt in range(6):
+        wait = DELAY - (time.time() - last)
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                res = json.loads(r.read().decode())
+            break
+        except urllib.error.HTTPError as e:
+            last = time.time()
+            if e.code not in (429, 500, 502, 503, 504) or attempt == 5:
+                raise
+            time.sleep(30 * (attempt + 1))
     cache[q] = res
     return res, time.time()
 
