@@ -55,7 +55,7 @@ function check(ok, message) {
   await page.focus('[data-city="krakow"]');
   await page.keyboard.press('Enter');
   check(await page.evaluate(() => document.activeElement?.dataset?.city === 'krakow'), 'Atlas: fokus klawiatury zostaje na wybranym mieście');
-  check(await page.evaluate(() => document.querySelector('#cityAction').disabled), 'Atlas: miasto „Coming soon” nie otwiera przewodnika');
+  check(await page.evaluate(() => !document.querySelector('#cityAction').disabled && /Krak/.test(document.querySelector('#cityAction').textContent)), 'Atlas: Kraków otwiera atrakcje miasta w przewodniku Małopolski');
 
   const scaleNow = () => page.evaluate(() => Number(/scale\(([\d.]+)\)/.exec(document.querySelector('#world').getAttribute('transform'))[1]));
   await page.click('#resetView');

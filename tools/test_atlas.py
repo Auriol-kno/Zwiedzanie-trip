@@ -155,6 +155,15 @@ for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip
 plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
 assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
 assert 'data-tab="trips"' in atlas and 'data-tab="day"' in atlas and 'data-tab="memories"' in atlas and 'data-tab="profile"' in atlas
+# 8.0: przewodniki wszystkich województw; każde z 13 miast ma atrakcje w przewodniku swojego regionu
+for r in regdb["regions"]:
+    n = sum(p["region"] == r["id"] for p in regdb["places"])
+    assert n >= 8 and r["status"] in ("guide", "partial"), f"Za mało miejsc: {r['id']} ({n})"
+city_pl = {c[0]: c[1] for c in city_rows}
+for r in regdb["regions"]:
+    for cid in r["cities"]:
+        assert cid == "warsaw" or any(p["region"] == r["id"] and p["town"] == city_pl[cid] for p in regdb["places"]), "Brak atrakcji miasta: " + cid
+assert all(p["coordinateStatus"] == "orientacyjne" for p in regdb["places"]), "Współrzędne regionalne są orientacyjne"
 print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 13 miast w swoich województwach, relief, plany.")
 print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")

@@ -35,6 +35,9 @@ ATLAS 7.0 — NEW MAP
 - Bottom tabs: Map of Poland, Trip plan, My day plan, Memories, Profile (saved on this device).
 - The floating "Poland" button always returns to the whole country. See ATLAS_7_0.md.
 
+REGIONAL GUIDES (8.0)
+- All 16 provinces now have regional guides with 198 curated places; each of the 13 cities opens its sights from the Atlas card ("Explore <city>"). See REGIONY_8_0.md.
+
 PROVINCES (6.0)
 - Below the 13 cities the Atlas lists all 16 provinces.
 - Tap a province (list or map) to zoom in, see its outline and towns with places.

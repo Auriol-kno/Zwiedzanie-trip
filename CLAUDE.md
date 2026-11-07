@@ -17,7 +17,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 - `index.html`, `assets/features3.js`, `assets/upgrade3.css`, `assets/i18n4.js`, `assets/nav4.css`: Warsaw guide, planner, PL/EN translations, and permanent floating return-to-Poland control.
 - `data/atrakcje.json`: curated Warsaw attractions (184 entries in 18 districts as of current project records).
 - `data/restauracje.json`: curated Warsaw food venues (36 entries as of current project records).
-- `data/regiony.json`: 16 voivodeships (provinces) and curated regional places (Świętokrzyskie 31, Mazowieckie 8 outside Warsaw); generated to `data/regiony.js`.
+- `data/regiony.json`: 16 voivodeships (provinces) and 198 curated regional places — every province has a regional guide (Mazowieckie: Warsaw guide + 8 places); generated to `data/regiony.js`. See `REGIONY_8_0.md`.
 - `region.html`, `assets/region.js`, `assets/region.css`: regional guide (list, map, town/category filters, saved places, stamps, estimated day plan, PL/EN). The Atlas opens it from a province or town (`region.html?region=…&town=…`).
 - `data/atrakcje.js`, `data/restauracje.js` and `data/regiony.js` are browser-loaded **generated** copies; regenerate after changing JSON with `python tools/sync_database.py`.
 - `manifest.webmanifest`, `service-worker.js`: iPhone PWA and offline application cache. Bump the cache version whenever adding or changing cached files.
@@ -26,7 +26,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 
 ## Features and non-features
 - Poland Atlas with 13 pinned cities and correct geographic locations; **Warsaw is the only fully developed city**. Other city guides are planned, never present them as fully available.
-- Atlas provinces: selecting a voivodeship zooms in, outlines it and shows towns with places. **Świętokrzyskie** has a regional guide and **Mazowieckie** is partial (Warsaw + 8 places); the other 14 provinces are marked as coming soon. Regional coordinates are approximate.
+- Atlas provinces: selecting a voivodeship zooms in, outlines it and shows towns with places. All **16 provinces** have regional guides (Mazowieckie is partial: Warsaw + 8 places). Each of the 13 cities has its sights in its province guide; only Warsaw has a full city guide. Regional coordinates are approximate (editorial, not geocoded).
 - Warsaw: districts, sightseeing places, an itinerary planner, food section, editorial visit rating 1–5, favorites, virtual stamps, family and photography preferences, speech synthesis, GPS with permission.
 - The independent 1–5 **editorial** score is NOT a Google review score. Google reviews are linked out; do not invent live ratings or include private Places API keys.
 - Public transport and street routing are **estimates and external links**, not validated real-time WTP routing; do not claim otherwise.

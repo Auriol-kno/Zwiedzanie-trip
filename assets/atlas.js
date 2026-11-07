@@ -125,6 +125,7 @@ const cityText=c=>lang==='en'?c.en:c.pl;
 const regionName=r=>lang==='en'?r.en:r.pl;
 const regionOfCity=id=>REG.regions.find(r=>r.cities.includes(id));
 const placesOf=id=>REG.places.filter(p=>p.region===id);
+const cityTownPlaces=c=>{const r=regionOfCity(c.id);return r?placesOf(r.id).filter(p=>p.town===c.pl):[]};
 function townsOf(id){
  const map=new Map();placesOf(id).forEach(p=>{const x=map.get(p.town)||{name:p.town,region:id,places:[]};x.places.push(p);map.set(p.town,x)});
  return [...map.values()].map(x=>({...x,lat:x.places.reduce((a,p)=>a+p.lat,0)/x.places.length,lon:x.places.reduce((a,p)=>a+p.lon,0)/x.places.length}))
@@ -185,7 +186,7 @@ function setTransform(){
  dots.querySelectorAll('.city-landmark').forEach(l=>l.setAttribute('transform','translate(-37,-86) scale('+Math.min(1.35,.62+.18*z).toFixed(3)+') translate(0,0)'));
  labelLayer.querySelectorAll('.region-name').forEach(l=>l.setAttribute('transform','translate('+l.dataset.x+' '+l.dataset.y+') scale('+ks+')'));
  townLayer.querySelectorAll('.town-pin').forEach(p=>p.setAttribute('transform','translate('+p.dataset.x+' '+p.dataset.y+') scale('+ks+')'));
- layoutTownLabels(u);layoutCityLabels();
+ layoutTownLabels(u,layoutCityLabels());
  // Ilustracje miast: na telefonie dopiero po przybliżeniu (czytelność widoku całego kraju).
  svg.style.setProperty('--lm-o',(svg.getBoundingClientRect().width>=640?1:Math.min(1,Math.max(0,(z-1.45)/.35))).toFixed(2));
  updateScale(u);
@@ -193,7 +194,7 @@ function setTransform(){
 // Podpisy miast bez nakładania: wybrane i miasta z przewodnikiem mają pierwszeństwo. Podpis przechodzi na drugą
 // stronę pinezki, gdy wychodzi poza ekran albo trafia na przyciski; jeśli nigdzie się nie mieści — chowa się.
 function layoutCityLabels(){
- const m=svg.getScreenCTM();if(!m)return;
+ const m=svg.getScreenCTM();if(!m)return [];
  const sc=(x,y)=>({x:m.e+(x*zoom+tx)*m.a,y:m.f+(y*zoom+ty)*m.d});
  const W=innerWidth,top=$('.atlas-top').getBoundingClientRect().bottom-8,bottom=$('.atlas-bottom').getBoundingClientRect().top;
  const obstacles=['.map-controls','#resetView'].map(q=>$(q)).filter(Boolean).map(e=>e.getBoundingClientRect()).map(r=>({x0:r.left,x1:r.right,y0:r.top,y1:r.bottom}));
@@ -201,7 +202,7 @@ function layoutCityLabels(){
  const pins=ds.map(d=>{const c=sc(+d.dataset.x,+d.dataset.y);return{x0:c.x-10,x1:c.x+10,y0:c.y-27,y1:c.y+2,id:d.dataset.city}});
  const placed=[],over=(a,b)=>a.x0<b.x1&&a.x1>b.x0&&a.y0<b.y1&&a.y1>b.y0;
  ds.forEach(d=>{
-  const pill=d.querySelector('.city-label-pill');if(!pill||d.classList.contains('outside'))return;
+  const pill=d.querySelector('.city-label-pill');if(!pill||d.classList.contains('outside')||d.classList.contains('merged'))return;
   const r=pill.querySelector('rect'),txt=pill.querySelector('text'),w=+r.getAttribute('width'),c=sc(+d.dataset.x,+d.dataset.y);
   const pref=d.dataset.side||(d.dataset.city==='katowice'||d.dataset.city==='szczecin'?'left':'right');
   const fits=side=>{const box=side==='left'?{x0:c.x-12-w,x1:c.x-12,y0:c.y-19,y1:c.y-1}:side==='top'?{x0:c.x-w/2,x1:c.x+w/2,y0:c.y-50,y1:c.y-31}:side==='bottom'?{x0:c.x-w/2,x1:c.x+w/2,y0:c.y+4,y1:c.y+22}:{x0:c.x+12,x1:c.x+12+w,y0:c.y-19,y1:c.y-1};
@@ -209,8 +210,9 @@ function layoutCityLabels(){
   let side=pref,box=fits(pref);if(!box){side=pref==='left'?'right':'left';box=fits(side)}if(!box){side='bottom';box=fits('bottom')}if(!box){side='top';box=fits('top')}
   if(!box&&d.classList.contains('selected')){side=pref;box={x0:0,x1:0,y0:0,y1:0}}
   pill.style.display=box?'':'none';if(!box)return;placed.push(box);
-  pill.setAttribute('transform',side==='top'?'translate('+(-w/2)+' -40)':side==='bottom'?'translate('+(-w/2)+' 13)':'translate('+(side==='left'?-12:12)+' -10)');r.setAttribute('x',side==='left'?-w:0);txt.setAttribute('x',side==='left'?-w/2:w/2);
+  pill.dataset.side=side;pill.setAttribute('transform',side==='top'?'translate('+(-w/2)+' -40)':side==='bottom'?'translate('+(-w/2)+' 13)':'translate('+(side==='left'?-12:12)+' -10)');r.setAttribute('x',side==='left'?-w:0);txt.setAttribute('x',side==='left'?-w/2:w/2);
  });
+ return placed.concat(pins);
 }
 // Podziałka z prawdziwej skali projekcji (1 jednostka ≈ kmPerUnit km).
 function updateScale(u){
@@ -261,7 +263,12 @@ function renderFocus(){
   }
  }
  // Miejscowości: wybranego województwa, a przy dużym zbliżeniu — wszystkich województw z danymi.
- const list=(region&&mode!=='city')?townsOf(region.id):REG.regions.filter(r=>r.status!=='planned').flatMap(r=>townsOf(r.id));
+ const cityTown=tw=>{const r=REG.regions.find(x=>x.id===tw.region);return r?CITIES.find(c=>r.cities.includes(c.id)&&c.pl===tw.name):null};
+ // Miejscowość o nazwie miasta z Atlasu (np. Kraków) nie dubluje pinezki: w widoku kraju zostaje pinezka miasta,
+ // a w widoku województwa — pinezka miejscowości z liczbą atrakcji.
+ const inRegion=!!(region&&mode!=='city');
+ const list=inRegion?townsOf(region.id):REG.regions.filter(r=>r.status!=='planned').flatMap(r=>townsOf(r.id)).filter(tw=>!cityTown(tw));
+ dots.querySelectorAll('.city-dot').forEach(d=>d.classList.toggle('merged',inRegion&&townsOf(region.id).some(tw=>{const c=cityTown(tw);return c&&c.id===d.dataset.city})));
  const ordered=list.sort((a,b)=>(b.name===town)-(a.name===town)||b.places.length-a.places.length);
  ordered.forEach(tw=>{
   const reg=REG.regions.find(r=>r.id===tw.region),geo=reg&&geoOf(reg),midLon=geo?geo.coords.reduce((a,c)=>a+c[0],0)/geo.coords.length:tw.lon;
@@ -278,11 +285,13 @@ function renderFocus(){
  setTransform();
 }
 // Podpisy miejscowości bez nakładania: pierwszeństwo mają wybrana i te z większą liczbą atrakcji.
-function layoutTownLabels(u){
- const boxes=[];
+function layoutTownLabels(u,taken){
+ // Współrzędne ekranu (jak w podpisach miast); podpisy miast mają pierwszeństwo przed miejscowościami.
+ const m=svg.getScreenCTM();if(!m)return;
+ const boxes=[...(taken||[])];
  [...townLayer.querySelectorAll('.town-pin')].reverse().forEach(pin=>{
   const label=pin.querySelector('.town-label');if(!label)return;
-  const sx=(+pin.dataset.x*zoom+tx)*u,sy=(+pin.dataset.y*zoom+ty)*u,w=label.textContent.length*7.4+6,left=label.getAttribute('text-anchor')==='end';
+  const sx=m.e+(+pin.dataset.x*zoom+tx)*m.a,sy=m.f+(+pin.dataset.y*zoom+ty)*m.d,w=label.textContent.length*7.4+6,left=label.getAttribute('text-anchor')==='end';
   const box={x0:left?sx-13-w:sx-10,x1:left?sx+10:sx+13+w,y0:sy-11,y1:sy+11};
   const hit=boxes.some(b=>box.x0<b.x1&&box.x1>b.x0&&box.y0<b.y1&&box.y1>b.y0);
   const show=pin.classList.contains('selected')||!hit;
@@ -369,7 +378,7 @@ function renderCard(){
    renderPlaces([...places].sort((a,b)=>b.visitValue-a.visitValue),3);
   }
   box.hidden=false;
-  box.innerHTML=cities.map(c=>'<button type="button" class="town-chip city" data-card-city="'+c.id+'">'+esc(cityText(c))+(c.ready?' ✦':'')+'</button>').join('')+
+  box.innerHTML=cities.filter(c=>!towns.some(q=>q.name===c.pl)).map(c=>'<button type="button" class="town-chip city" data-card-city="'+c.id+'">'+esc(cityText(c))+(c.ready?' ✦':'')+'</button>').join('')+
    towns.map(q=>'<button type="button" class="town-chip'+(q.name===town?' active':'')+'" data-card-town="'+esc(q.name)+'">'+esc(q.name)+' <small>'+q.places.length+'</small></button>').join('');
   if(!box.innerHTML)box.hidden=true;
   badge(currentItem());return;
@@ -381,9 +390,10 @@ function renderCard(){
  $('#cityDescription').textContent=(info?info[lang==='en'?1:0]:'')+(current.ready?' '+x.pilotMessage+'.':'');
  const reg=regionOfCity(current.id);
  if(current.ready){$('#cityAction').textContent=x.explore;$('#cityAction').disabled=false}
+ else if(cityTownPlaces(current).length){$('#cityAction').textContent=x.exploreTown+' '+cityText(current);$('#cityAction').disabled=false;$('#cityStatus').textContent=x.guide}
  else if(reg&&reg.status!=='planned'){$('#cityAction').textContent=x.seeRegion;$('#cityAction').disabled=false}
  else{$('#cityAction').textContent=x.unavailable;$('#cityAction').disabled=true}
- $('#cityStatus').textContent=current.ready?x.pilot:x.planned;
+ if(!cityTownPlaces(current).length)$('#cityStatus').textContent=current.ready?x.pilot:x.planned;
  badge(currentItem());
 }
 function applyLayers(){
@@ -419,7 +429,10 @@ function openCity(){
  if(mode==='town'&&region){location.href=regionUrl('&town='+encodeURIComponent(town));return}
  if(mode==='region'&&region){if(placesOf(region.id).length)location.href=regionUrl();return}
  if(current.ready){location.href='./index.html?lang='+encodeURIComponent(lang)+'&from=atlas';return}
- const reg=regionOfCity(current.id);if(reg&&reg.status!=='planned')selectRegion(reg.id);
+ const reg=regionOfCity(current.id),own=cityTownPlaces(current);
+ // Miasto z atrakcjami w przewodniku regionu (np. Kraków → Małopolskie) otwiera przewodnik od razu dla tego miasta.
+ if(reg&&own.length){location.href='./region.html?region='+encodeURIComponent(reg.id)+'&lang='+encodeURIComponent(lang)+'&town='+encodeURIComponent(current.pl);return}
+ if(reg&&reg.status!=='planned')selectRegion(reg.id);
 }
 $('#cityAction').onclick=openCity;
 $('#sheetClose').onclick=()=>closeSheet();
