@@ -31,7 +31,7 @@ IPHONE
 1. Open the Poland Atlas link in Safari.
 2. Choose Share → Add to Home Screen.
 3. Choose Warsaw on the map to open its sightseeing guide.
-4. Tap the floating miniature Poland map (or the I Was Here logo) to return to the Atlas.
+4. Tap the I Was Here logo with the mini Poland map (top left, always visible) to return to the Atlas.
 5. Use the PL | EN switch (the active language is highlighted); the choice is remembered.
 6. If your older home-screen shortcut opens the old page, remove that shortcut and add it again from /atlas.html.
 

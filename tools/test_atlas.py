@@ -13,7 +13,7 @@ manifest = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"
 sw = (ROOT / "service-worker.js").read_text(encoding="utf-8")
 assert manifest["start_url"] == "./atlas.html", "Ikona PWA nie otwiera Atlasu."
 assert "./index.html" in atlas_js, "Brak wejścia do Warszawy."
-assert 'id="atlasFloat"' in home and 'id="atlasTop"' in home, "Brak powrotu do mapy Polski."
+assert 'id="atlasFloat"' in home and 'class="brand atlas-home"' in home, "Brak powrotu do mapy Polski przy logo."
 assert 'id="langWarsaw"' in home and 'id="langButton"' in atlas, "Brak przełącznika języka."
 assert home.index('assets/features3.js') < home.index('assets/i18n4.js'), "Niewłaściwa kolejność modułów."
 assert "tubylem_lang" in atlas_js and "tubylem_lang" in i18n, "Brak współdzielonego języka."
@@ -24,7 +24,7 @@ city_block = atlas_js.split('const CITIES=[',1)[1].split('];',1)[0]
 cities = re.findall(r"\bid:'([^']+)'",city_block)
 assert len(cities) == 13 and len(set(cities)) == 13, "Atlas ma mieć 13 unikalnych miast."
 assert "id:'warsaw'" in city_block and 'ready:true' in city_block, "Warszawa musi być aktywna."
-assert "right:13px" in nav and "position:fixed" in nav, "Przycisk nie jest pływający."
+assert ".top{position:sticky;top:0" in nav and "atlas-chip" in nav, "Logo z mapą Polski musi być zawsze widoczne u góry."
 for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg"):
     assert f in sw, "PWA nie buforuje: " + f
 for path in [atlas,home]:

@@ -56,3 +56,9 @@ https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 3. **Jeden sposób powrotu do Atlasu w nagłówku:** logo I Was Here prowadzi do `atlas.html` (zniknęła osobna ikona 🗺). Pływający przycisk Atlasu jest nadal zawsze widoczny; na telefonie ma postać kompaktowej ikony mapy z etykietą dostępności.
 4. **Usunięto zdublowane pole** „Inteligentna kolejność zwiedzania”. Kolejność ustawia jedno pole „Priorytet” w planerze.
 5. **Spójna marka i wersja:** nazwa „I Was Here” pod ikoną na iPhonie (`apple-mobile-web-app-title`), w etykietach i w plikach kalendarza (.ics); w przewodniku nie ma już „4.0” i „Wersja demonstracyjna 3.0”.
+
+## Poprawka 5.2 — mapa Polski przy logo, zawsze u góry
+- Pływający przycisk Atlasu z prawego dolnego rogu przeniesiono do **lewego górnego rogu**: logo I Was Here i miniatura mapy Polski tworzą jeden link `#atlasFloat` do `atlas.html?lang=…`.
+- Nagłówek Warszawy jest **przyklejony do góry** (`position:sticky`, z `env(safe-area-inset-top)`), więc powrót do Atlasu, przełącznik PL | EN, „Wygląd” i „Paszport” są widoczne cały czas: przy przewijaniu, nad otwartymi arkuszami i na ekranie powitalnym.
+- Sekcje przewijane z dolnej nawigacji zatrzymują się pod nagłówkiem (`scroll-padding-top`).
+- Na bardzo wąskich ekranach (≤370 px) napis „I WAS HERE” jest ukryty wizualnie (zostaje dla czytników ekranu); widoczne są znak marki i mapa.
