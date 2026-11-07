@@ -224,7 +224,7 @@ function refresh(){
  translateData(lang);
  try{renderAll()}catch(err){console.warn('UI refresh',err)}
  const select=document.querySelector('#waw3FoodSort');if(select)select.dispatchEvent(new Event('change',{bubbles:true}));
- document.title=lang==='en'?'Tu Byłem — Warsaw City Guide':'Tu Byłem — Warszawa';
+ document.title=lang==='en'?'I Was Here — Warsaw City Guide':'I Was Here — Warszawa';
  repaint();
 }
 $('#langWarsaw').addEventListener('click',()=>{lang=lang==='pl'?'en':'pl';refresh()});
