@@ -91,7 +91,7 @@ function renderTexts(){
  document.title='I Was Here — '+(region?(lang==='en'?region.en:region.pl):x.title);
  $('#langRegion').querySelectorAll('[data-lang]').forEach(s=>s.classList.toggle('on',s.dataset.lang===lang));
  $('#langRegion').setAttribute('aria-label',x.langLabel);
- const home=$('#atlasFloat');home.href='./atlas.html?lang='+lang+(region?'&region='+encodeURIComponent(region.id):'');home.setAttribute('aria-label',x.back);home.title=x.atlas;
+ const home=$('#atlasFloat');home.href='./atlas.html?lang='+lang; // logo zawsze pokazuje całą Polskęhome.setAttribute('aria-label',x.back);home.title=x.atlas;
  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
  set('savedLabel',x.saved);set('statPlacesLabel',x.sights);set('statTownsLabel',x.towns);set('statStampsLabel',x.stamps);set('mapTitle',x.map);set('fitMap',x.fit);
  set('searchLabel',x.search);$('#rSearch').placeholder=x.searchPh;set('planTitle',x.plan);set('planSub',x.planSub);set('planStartLabel',x.start);set('planClockLabel',x.clock);
@@ -102,7 +102,11 @@ function renderTexts(){
  set('rTitle',lang==='en'?region.en:region.pl);
  set('rLead',x.lead(all.length));
  set('statPlaces',all.length);set('statTowns',towns.length);
+ renderArt();
 }
+// 8.4 — malowany motyw głównego miasta województwa w nagłówku (te same ilustracje co w Atlasie)
+const ART_CITY={dolnoslaskie:'wroclaw','kujawsko-pomorskie':'torun',lubelskie:'lublin',lubuskie:'',lodzkie:'lodz',malopolskie:'krakow',mazowieckie:'warsaw',opolskie:'',podkarpackie:'rzeszow',podlaskie:'bialystok',pomorskie:'gdansk',slaskie:'katowice',swietokrzyskie:'kielce','warminsko-mazurskie':'olsztyn',wielkopolskie:'poznan',zachodniopomorskie:'szczecin'};
+function renderArt(){const box=$('#rArt'),A=window.IWH_ATLAS_ART,c=region&&ART_CITY[region.id];if(!box||!A||!c){if(box)box.hidden=true;return}A.paintDefs();box.innerHTML='<svg viewBox="0 -6 80 62">'+A.landmark(c)+'</svg>'}
 function renderStats(){$('#statStamps').textContent=all.filter(p=>visited.includes(p.id)).length+' / '+all.length}
 function renderCityLinks(){
  const box=$('#cityLinks');
@@ -210,7 +214,7 @@ if(!region||!all.length){
  renderTexts();
  const msg=region?t().noGuide:t().notFound;
  document.querySelector('.app').innerHTML=document.querySelector('.top').outerHTML+'<section class="hero"><h1>'+esc(region?(lang==='en'?region.en:region.pl):'I Was Here')+'</h1><p>'+esc(msg)+'</p></section><p style="text-align:center;margin:24px 0"><a class="btn" href="./atlas.html?lang='+lang+'">'+esc(t().backAtlas)+'</a></p>';
- document.querySelector('.bottom-nav')?.remove();
+ document.querySelector('#appNav')?.remove();
  return;
 }
 initMap();renderAll();

@@ -5,9 +5,28 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-3-1-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-4-20261107`.
 
 ---
+
+## 8.4 — 2026-11-07 — gałąź `claude/brand-nav-passport`
+- **Nowe logo (wariant właściciela):** zielony kafelek ze złotą ramką, Polska z pejzażem, białą trasą i pomarańczową pinezką —
+  wektorowy `assets/brand-mark.svg` z `tools/build_logo.py` (kontur Natural Earth). Ten sam znak jako ikona PWA (`icon.svg`,
+  `icon-180.png`, `icon-512.png`). Pinezka z pejzażem `assets/brand-pin-landscape.svg` = godło Paszportu odkrywcy.
+  Poprzednie logo zachowane jako `assets/brand-mark-flag.svg`.
+- **Logo zawsze widoczne** w lewym górnym rogu każdej strony; kliknięcie pokazuje **całą mapę Polski** (w Atlasie bez
+  przeładowania: zamyka kartę i zakładki; z regionu i Warszawy — Atlas z całym krajem).
+- **Jedno dolne menu wszędzie** (`assets/app-nav.js` + `.css`): Mapa · Odkrywaj · Plany · Paszport · Profil — te same ikony,
+  kolejność i podpisy PL/EN w Atlasie, przewodnikach regionów i Warszawie. Atlas: nowa zakładka „Odkrywaj” (miasta i województwa),
+  „Plany” łączą plany podróży i plany dnia (przełącznik), `atlas.html?tab=profile|passport|plans|explore`.
+  Region/Warszawa: Mapa → Atlas (to samo województwo), Odkrywaj → wybór atrakcji, Plany → plan dnia, Paszport → okno paszportu,
+  Profil → profil w Atlasie. W Warszawie „Jedzenie” przeniesione do nagłówka (w miejsce przycisku Paszportu).
+- **Paszport odkrywcy** bardziej widoczny: wspólne okno (pieczątki Warszawy, regionów, odwiedzone miasta, dziennik ze zdjęciami),
+  karta paszportu na górze Profilu, zakładka „Paszport” w Atlasie; w szczegółach atrakcji przycisk „📔 Paszport: notatki i zdjęcia”.
+- **Malowane motywy miast** (`assets/atlas-illustrated.js`): 14 osobnych, stylizowanych akwarelowo ilustracji (Pałac Kultury, Wawel,
+  Żuraw, ratusze, Spodek, pałace i zamki) — bez filtrów SVG (płynny zoom). Widoczne na mapie, w karcie miasta i w nagłówku
+  przewodnika regionu (Lubuskie i Opolskie bez motywu — brak miasta Atlasu).
+- Cache `i-was-here-v8-4-20261107`; testy statyczne i przeglądarkowe dla menu, logo, paszportu.
 
 ## 8.3.1 — 2026-11-07 — gałąź `claude/new-logo`
 - **Nowe logo właściciela** w lewym górnym rogu Atlasu, Warszawy i przewodników regionów: Polska w barwach biało-czerwonych

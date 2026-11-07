@@ -119,9 +119,14 @@ function check(ok, message) {
     'Warszawa EN: „More information — Wikipedia” przy opisie');
   check(await page.evaluate(() => !!document.querySelector('#detailContent [data-journal="waw:castle"]')), 'Warszawa: przycisk notatek i zdjęć w szczegółach');
   await page.evaluate(() => closeOverlay('detailOverlay'));
+  check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Passport,profile:Profile'
+    && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');
+  await page.click('#appNav [data-tab="passport"]');
+  check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Explorer passport/.test(b.textContent) && !!b.querySelector('[data-pp-warsaw]'); }), 'Warszawa: Paszport odkrywcy z dolnego menu (z pieczątkami Warszawy)');
+  await page.click('.iwh-passport .ij-done');
   await page.click('#langWarsaw [data-lang="pl"]');
   await page.waitForTimeout(400);
-  check(await page.evaluate(() => document.documentElement.lang === 'pl' && localStorage.getItem('tubylem_lang') === 'pl'), 'Warszawa: PL zapamiętany');
+  check(await page.evaluate(() => document.documentElement.lang === 'pl' && localStorage.getItem('tubylem_lang') === 'pl' && document.querySelector('#appNav [data-tab="plans"]').innerText.trim() === 'Plany'), 'Warszawa: PL zapamiętany, menu po polsku');
   await page.click('#atlasFloat');
   await page.waitForSelector('.city-dot');
   check(await page.evaluate(() => document.documentElement.lang) === 'pl', 'Powrót do Atlasu zachowuje język PL');
@@ -162,18 +167,18 @@ function check(ok, message) {
   check(saved.trips.length === 1 && saved.trips[0].name === 'Bałtyk 2027' && saved.trips[0].items[0].id === 'gdansk', 'Plan podróży: nowy plan zapisany i przetrwał odświeżenie');
   check(saved.days.length === 1 && saved.days[0].items.length === 1, 'Plan dnia: pozycja zapisana');
   check(saved.visited.includes('city:gdansk') && saved.pin.includes('st-visited'), 'Status „Byłem tu”: zapisany, pinezka odwiedzona');
-  await page.click('.tabbar [data-tab="trips"]');
+  await page.click('.tabbar [data-tab="plans"]');
   check(await page.evaluate(() => !document.querySelector('#tabPanel').hidden && [...document.querySelectorAll('#tabPanel input')].some(i => i.value === 'Bałtyk 2027') && document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Plan podróży” pokazuje zapisany plan');
-  await page.click('.tabbar [data-tab="day"]');
+  await page.click('#tabPanel [data-plan-view="day"]');
   check(await page.evaluate(() => /\d\d:\d\d–\d\d:\d\d/.test(document.querySelector('#tabPanel').textContent)), 'Zakładka „Mój plan dnia”: szacunkowy harmonogram');
   await page.click('#tabPanel [data-mode="walking"]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days'))[0].mode === 'walking' && document.querySelector('#tabPanel [data-mode="walking"]').getAttribute('aria-pressed') === 'true'
     && /travelmode=walking/.test(document.querySelector('#tabPanel .ghost-action')?.href || 'travelmode=walking')), 'Mój plan dnia: wycieczka piesza zapisana (Google Maps pieszo)');
-  await page.click('.tabbar [data-tab="memories"]');
+  await page.click('.tabbar [data-tab="passport"]');
   check(await page.evaluate(() => document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Wspomnienia”: odwiedzone miasto');
   await page.click('.tabbar [data-tab="profile"]');
   await page.click('[data-set-lang="en"]');
-  check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#tabPanel h2').textContent === 'Profile' && document.querySelector('#tabProfile').textContent === 'Profile'), 'Profil: zmiana języka na EN');
+  check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#tabPanel h2').textContent === 'Profile' && document.querySelector('.tabbar [data-tab="profile"]').innerText.trim() === 'Profile' && !!document.querySelector('#tabPanel .passport-card')), 'Profil: zmiana języka na EN');
   // W EN żadnych polskich fragmentów interfejsu (poza nazwami własnymi miejsc).
   const leftovers = async () => page.evaluate(() => {
     const allow = /Gdańsk|Kraków|Łódź|Wrocław|Poznań|Toruń|Białystok|Rzeszów|Świętokrzyskie|Śląskie|Łódzkie|Małopolskie|Dolnośląskie|Bałtyk 2027|Kujawsko|Warmińsko|Podkarpackie|Zachodniopomorskie|Pomorskie|Mazowieckie|Lubelskie|Lubuskie|Opolskie|Podlaskie|Wielkopolskie|Sandomierz|Chęciny|Kielce|Nowa Słupia/g;
@@ -194,7 +199,7 @@ function check(ok, message) {
   left = await leftovers();
   check(left.length === 0, 'EN: brak polskich fragmentów na mapie i w karcie miasta' + (left.length ? ': ' + left.join(' | ') : ''));
   await page.click('#langButton [data-lang="pl"]');
-  check(await page.evaluate(() => document.documentElement.lang === 'pl' && document.querySelector('#tabMap').textContent === 'Mapa Polski' && document.querySelector('#addTripLabel').textContent === 'Podróż'), 'PL: przełącznik wraca do polskiego');
+  check(await page.evaluate(() => document.documentElement.lang === 'pl' && document.querySelector('.tabbar [data-tab="map"]').innerText.trim() === 'Mapa' && document.querySelector('#addTripLabel').textContent === 'Podróż'), 'PL: przełącznik wraca do polskiego');
   await page.click('#sheetClose');
   await page.evaluate(() => { for (const k of ['iwh_trips', 'iwh_days', 'iwh_visited']) localStorage.removeItem(k); });
 
@@ -251,13 +256,21 @@ function check(ok, message) {
   await page.click('#dClose');
   await page.click('#langRegion [data-lang="en"]');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#planTitle').textContent === 'Day plan'), 'Przewodnik regionu: przełącznik EN');
-  await page.click('#atlasFloat');
+  check(await page.evaluate(() => document.querySelector('#atlasFloat').getAttribute('href') === './atlas.html?lang=en' && document.querySelectorAll('#appNav [data-tab]').length === 5), 'Przewodnik regionu: logo prowadzi do całej Polski, jednolite menu');
+  await page.click('#appNav [data-tab="passport"]');
+  await page.waitForFunction(() => document.querySelectorAll('.iwh-passport [data-pp-list] li [data-journal]').length === 1);
+  check(true, 'Przewodnik regionu: Paszport odkrywcy z dolnego menu pokazuje wpis z dziennika');
+  await page.click('.iwh-passport .ij-done');
+  await page.click('#appNav [data-tab="map"]');
   await page.waitForSelector('#provinceFocus .region-outline');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#cityName').textContent.startsWith('Świętokrzyskie')), 'Powrót z regionu do Atlasu: to samo województwo i język');
-  await page.click('.tabbar [data-tab="memories"]');
+  await page.click('.tabbar [data-tab="passport"]');
   await page.waitForSelector('#memJournal li.plan-item');
   check(await page.evaluate(() => document.querySelectorAll('#memJournal li.plan-item').length === 1 && /5 photos/.test(document.querySelector('#memJournal').textContent)
-    && !!document.querySelector('#memJournal .journal-thumb img')), 'Atlas → Wspomnienia: dziennik podróży z miniaturą i licznikiem zdjęć');
+    && !!document.querySelector('#memJournal .journal-thumb img')), 'Atlas → Paszport: dziennik podróży z miniaturą i licznikiem zdjęć');
+  await page.click('.atlas-top .brand');
+  await page.waitForTimeout(700);
+  check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
   check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-mark"]')), 'Atlas: logo z mapą Polski jako jeden znak');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));

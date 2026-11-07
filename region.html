@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="./assets/nav4.css">
 <link rel="stylesheet" href="./assets/brand-v5.css">
 <link rel="stylesheet" href="./assets/place-extras.css">
+<link rel="stylesheet" href="./assets/app-nav.css">
 <script src="./assets/brand-v5.js"></script>
 <title>I Was Here — Regional guide</title>
 </head>
 <body>
 <div class="app">
 <header class="top">
-  <a class="brand atlas-home" id="atlasFloat" href="./atlas.html" title="Poland Atlas" aria-label="I Was Here — back to the Poland Atlas"><div class="mark mark-atlas"><img src="./assets/brand-mark.svg" alt="" width="60" height="57"></div><div class="wordmark"><small>PLACES &amp; MEMORIES</small><b>I WAS HERE</b></div></a>
+  <a class="brand atlas-home" id="atlasFloat" href="./atlas.html" title="Poland Atlas" aria-label="I Was Here — back to the Poland Atlas"><div class="mark mark-atlas"><img src="./assets/brand-mark.svg" alt="" width="56" height="56"></div><div class="wordmark"><small>PLACES &amp; MEMORIES</small><b>I WAS HERE</b></div></a>
   <div class="top-actions">
     <button class="lang-switch" id="langRegion" type="button" aria-label="Language: English. Switch to Polish"><span data-lang="pl">PL</span><span data-lang="en" class="on">EN</span></button>
     <button class="icon-btn labeled" id="savedBtn" type="button" aria-pressed="false"><span aria-hidden="true">♡</span><small id="savedLabel">Saved</small></button>
@@ -34,6 +35,7 @@
   <div class="eyebrow" id="rEyebrow">Province · regional guide</div>
   <h1 id="rTitle">Region</h1>
   <p id="rLead"></p>
+  <div class="hero-art" id="rArt" aria-hidden="true"></div>
 </section>
 
 <section class="stats" aria-live="polite">
@@ -44,7 +46,7 @@
 
 <div id="cityLinks"></div>
 
-<section class="filters" aria-labelledby="filtersTitle">
+<section class="filters" id="filtersSection" aria-labelledby="filtersTitle">
   <div class="section-title"><div><h2 id="filtersTitle">What to show on the map</h2><p class="subheading" id="filtersSub">Pick a town and the types of places — the map and the list update together</p></div></div>
   <div class="chips" id="townChips"></div>
   <div class="chips" id="catChips"></div>
@@ -83,18 +85,16 @@
 <footer class="footer" id="rFooter"></footer>
 </div>
 
-<nav class="bottom-nav" aria-label="Sections">
-  <button type="button" data-jump="mapSection" class="active"><span aria-hidden="true">⌖</span><b id="navMap">Map</b></button>
-  <button type="button" data-jump="planSection"><span aria-hidden="true">↝</span><b id="navPlan">Day plan</b></button>
-  <button type="button" data-jump="placesSection"><span aria-hidden="true">♧</span><b id="navPlaces">Places</b></button>
-</nav>
+<nav class="app-nav" id="appNav" data-page="region"></nav>
 
 <div class="overlay" id="detail" role="dialog" aria-modal="true" aria-labelledby="dTitle"><div class="sheet"><button class="sheet-close" type="button" id="dClose" aria-label="Close">✕</button><div id="dBody"></div></div></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="./assets/poland-geography.js"></script>
 <script src="./data/regiony.js"></script>
+<script src="./assets/atlas-illustrated.js"></script>
 <script src="./assets/place-extras.js"></script>
 <script src="./assets/region.js"></script>
+<script src="./assets/app-nav.js"></script>
 </body>
 </html>

@@ -409,7 +409,6 @@ function localize(){
  set('atlasTagline',x.tagline);set('atlasFooter',x.footer);set('layersTitle',x.layers);set('layerBorders',x.layerBorders);set('layerNames',x.layerNames);set('layerRelief',x.layerRelief);
  set('layerTowns',x.layerTowns);set('layerLandmarks',x.layerLandmarks);set('styleTitle',x.styleTitle);set('styleAtlas',x.styleAtlas);set('styleLight',x.styleLight);set('styleNight',x.styleNight);set('styleTerrain',x.styleTerrain);
  set('homeLabel',x.home);set('addTripLabel',x.addTrip);set('addDayLabel',x.addDay);$('#addTrip').setAttribute('aria-label',x.addTripA);$('#addDay').setAttribute('aria-label',x.addDayA);
- ['tabMap','tabTrips','tabDay','tabMemories','tabProfile'].forEach((id,i)=>set(id,x.tabs[i]));
  $('#langButton').querySelectorAll('[data-lang]').forEach(s=>s.classList.toggle('on',s.dataset.lang===lang));
  $('#langButton').setAttribute('aria-label',x.langLabel);
  $('#searchInput').placeholder=x.search;$('#searchInput').setAttribute('aria-label',x.searchLabel);
@@ -508,6 +507,8 @@ window.IWH_ATLAS={
  home
 };
 if(PLANS)PLANS.init(window.IWH_ATLAS);
+// Logo zawsze widoczne: kliknięcie pokazuje całą Polskę (zamyka kartę i zakładki), bez przeładowania strony.
+$('.atlas-top .brand').addEventListener('click',e=>{e.preventDefault();home()});
 
 applyLayers();localize();reset();
 // Kontrolki mapy zawsze nad dolnym panelem (jego wysokość zależy od karty i języka).

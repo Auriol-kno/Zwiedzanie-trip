@@ -14,20 +14,26 @@ const lang=()=>{const l=document.documentElement.lang;if(l==='en'||l==='pl')retu
 const T={
  pl:{wiki:'📖 Więcej informacji o miejscu — Wikipedia',wikiOther:'📖 Więcej informacji — Wikipedia (po angielsku)',wikiSearch:'🔎 Więcej informacji — szukaj w Wikipedii',
   wikiNote:'Artykuł dopasowany przez OpenStreetMap i Wikidata.',wikiSearchNote:'Wyszukiwanie w Wikipedii — artykuł o tym miejscu nie został jeszcze potwierdzony.',
-  journal:'Dziennik podróży',open:'📝 Notatki i zdjęcia',notes:'Notatki',notesPh:'Co chcesz zapamiętać? Z kim byłeś, co zobaczyłeś, co polecasz…',
+  journal:'Paszport odkrywcy · dziennik',open:'📔 Paszport: notatki i zdjęcia',notes:'Notatki',notesPh:'Co chcesz zapamiętać? Z kim byłeś, co zobaczyłeś, co polecasz…',
   photos:n=>'Zdjęcia ('+n+'/'+MAX_PHOTOS+')',add:'＋ Dodaj zdjęcia z biblioteki',limit:'Możesz dodać najwyżej '+MAX_PHOTOS+' zdjęć do jednego miejsca.',
   saved:'Zapisano na tym urządzeniu',saving:'Zapisywanie…',processing:'Przygotowywanie zdjęć…',remove:'Usuń zdjęcie',view:'Powiększ zdjęcie',close:'Zamknij',done:'Gotowe',
   privacy:'Notatki i zdjęcia są zapisane tylko na tym urządzeniu (pamięć przeglądarki). Nie wysyłamy ich do internetu. Wyczyszczenie danych Safari usunie je.',
   err:'Nie udało się zapisać — pamięć przeglądarki jest niedostępna lub pełna (np. tryb prywatny).',badImg:'Nie udało się odczytać jednego ze zdjęć.',
-  confirmRemove:'Usunąć to zdjęcie z dziennika?',photoAlt:n=>'Zdjęcie '+n},
+  confirmRemove:'Usunąć to zdjęcie z dziennika?',photoAlt:n=>'Zdjęcie '+n,
+  passport:'Paszport odkrywcy',passportLead:'Twoje pieczątki, notatki i zdjęcia z podróży — w jednym miejscu.',stWarsaw:'pieczątki Warszawy',stRegions:'pieczątki z regionów',stCities:'odwiedzone miasta i regiony',stJournal:'wpisy w dzienniku',
+  entries:'Dziennik podróży',empty:'Nie masz jeszcze wpisów. Otwórz atrakcję i dotknij „📔 Paszport: notatki i zdjęcia”, aby dodać notatki i do 5 zdjęć.',openEntry:'Otwórz',photosN:n=>n+' '+(n===1?'zdjęcie':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'zdjęcia':'zdjęć'),withNotes:'notatki',
+  warsawStamps:'🏛️ Pieczątki Warszawy',toAtlas:'Profil w Atlasie'},
  en:{wiki:'📖 More information about this place — Wikipedia',wikiOther:'📖 More information — Wikipedia (in Polish)',wikiSearch:'🔎 More information — search Wikipedia',
   wikiNote:'Article matched via OpenStreetMap and Wikidata.',wikiSearchNote:'Wikipedia search — no article about this place has been confirmed yet.',
-  journal:'Travel journal',open:'📝 Notes & photos',notes:'Notes',notesPh:'What do you want to remember? Who you were with, what you saw, what you recommend…',
+  journal:'Explorer passport · journal',open:'📔 Passport: notes & photos',notes:'Notes',notesPh:'What do you want to remember? Who you were with, what you saw, what you recommend…',
   photos:n=>'Photos ('+n+'/'+MAX_PHOTOS+')',add:'＋ Add photos from your library',limit:'You can add up to '+MAX_PHOTOS+' photos per place.',
   saved:'Saved on this device',saving:'Saving…',processing:'Preparing photos…',remove:'Remove photo',view:'Enlarge photo',close:'Close',done:'Done',
   privacy:'Notes and photos are stored only on this device (browser storage). Nothing is uploaded. Clearing Safari website data deletes them.',
   err:'Could not save — browser storage is unavailable or full (e.g. private browsing).',badImg:'One of the photos could not be read.',
-  confirmRemove:'Remove this photo from the journal?',photoAlt:n=>'Photo '+n}
+  confirmRemove:'Remove this photo from the journal?',photoAlt:n=>'Photo '+n,
+  passport:'Explorer passport',passportLead:'Your stamps, notes and travel photos — all in one place.',stWarsaw:'Warsaw stamps',stRegions:'regional stamps',stCities:'visited cities and regions',stJournal:'journal entries',
+  entries:'Travel journal',empty:'No entries yet. Open a sight and tap „📔 Passport: notes & photos” to add notes and up to 5 photos.',openEntry:'Open',photosN:n=>n+' '+(n===1?'photo':'photos'),withNotes:'notes',
+  warsawStamps:'🏛️ Warsaw stamps',toAtlas:'Profile in the Atlas'}
 };
 const x=()=>T[lang()];
 
@@ -141,5 +147,48 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-journal]')
 document.addEventListener('iwh-journal-change',()=>counts());
 new MutationObserver(()=>{if(box&&!box.hidden){texts();draw()}}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
 
-window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,count,counts,button,MAX_PHOTOS}};
+// ---------- Paszport odkrywcy: pieczątki + dziennik (wspólny dla Atlasu, regionów i Warszawy)
+const readLS=(k,f)=>{try{const v=JSON.parse(localStorage.getItem(k)||'null');return v==null?f:v}catch(e){return f}};
+function stats(){
+ const w=readLS('odkryjWarszawe_1',{});return{warsaw:Array.isArray(w.visited)?w.visited.length:0,regions:readLS('iwh_region_visited',[]).length,cities:readLS('iwh_visited',[]).length};
+}
+let pthumbs=[];
+// HTML paszportu (bez listy wpisów — tę wypełnia fillEntries asynchronicznie)
+function passportHTML(){
+ const t=x(),st=stats();
+ return '<div class="pp-head"><img src="./assets/brand-pin-landscape.svg" alt="" width="54" height="73"><div><small class="ij-kicker">I Was Here</small><h2 class="pp-title">'+esc(t.passport)+'</h2><p>'+esc(t.passportLead)+'</p></div></div>'+
+  '<div class="pp-stats"><div><b>'+st.warsaw+'</b><small>'+esc(t.stWarsaw)+'</small></div><div><b>'+st.regions+'</b><small>'+esc(t.stRegions)+'</small></div><div><b>'+st.cities+'</b><small>'+esc(t.stCities)+'</small></div><div><b data-pp-count>–</b><small>'+esc(t.stJournal)+'</small></div></div>'+
+  (typeof window.passport==='function'&&document.getElementById('passportOverlay')?'<button type="button" class="pp-action" data-pp-warsaw>'+esc(t.warsawStamps)+'</button>':'')+
+  '<h3 class="pp-sub">'+esc(t.entries)+'</h3><ul class="pp-list" data-pp-list></ul>';
+}
+function fillEntries(root){
+ const box=root.querySelector('[data-pp-list]');if(!box)return Promise.resolve();
+ return all().then(list=>{
+  const t=x();pthumbs.forEach(u=>URL.revokeObjectURL(u));pthumbs=[];
+  list.sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
+  const c=root.querySelector('[data-pp-count]');if(c)c.textContent=list.length;
+  box.innerHTML=list.length?list.map(e=>{const ph=e.photos&&e.photos[0];let img=esc(e.icon||'📍');if(ph&&ph.blob){const u=URL.createObjectURL(ph.blob);pthumbs.push(u);img='<img src="'+u+'" alt="">'}
+   return '<li><span class="pp-thumb" aria-hidden="true">'+img+'</span><span class="pp-text"><b>'+esc(e.title||'')+'</b><small>'+esc([e.photos.length?t.photosN(e.photos.length):'',(e.notes||'').trim()?t.withNotes:''].filter(Boolean).join(' · '))+'</small></span><button type="button" data-journal="'+esc(e.key)+'" data-journal-title="'+esc(e.title||'')+'" data-journal-icon="'+esc(e.icon||'')+'">'+esc(t.openEntry)+'</button></li>'}).join(''):'<li class="pp-empty">'+esc(t.empty)+'</li>';
+ });
+}
+let pbox=null,pFocus=null;
+function passportOpen(){
+ if(!pbox){
+  pbox=document.createElement('div');pbox.className='iwh-journal iwh-passport';pbox.hidden=true;pbox.setAttribute('data-i18n-skip','');
+  pbox.innerHTML='<div class="ij-card" role="dialog" aria-modal="true" aria-label="Passport"><button type="button" class="ij-x pp-x"></button><div class="pp-body"></div><button type="button" class="ij-done"></button></div>';
+  document.body.appendChild(pbox);
+  const close=()=>{pbox.hidden=true;document.documentElement.classList.remove('ij-open');pFocus?.focus?.()};
+  pbox.querySelector('.pp-x').onclick=close;pbox.querySelector('.ij-done').onclick=close;
+  pbox.addEventListener('click',e=>{if(e.target===pbox)close();if(e.target.closest('[data-pp-warsaw]')){close();window.passport()}});
+  pbox.addEventListener('keydown',e=>{if(e.key==='Escape'&&(!box||box.hidden))close()});
+  document.addEventListener('iwh-journal-change',()=>{if(!pbox.hidden)fillEntries(pbox)});
+ }
+ pFocus=document.activeElement;const t=x();
+ pbox.querySelector('.pp-body').innerHTML=passportHTML();pbox.querySelector('.ij-done').textContent=t.done;
+ const xb=pbox.querySelector('.pp-x');xb.textContent='✕';xb.setAttribute('aria-label',t.close);
+ pbox.querySelector('.ij-card').setAttribute('aria-label',t.passport);
+ pbox.hidden=false;document.documentElement.classList.add('ij-open');fillEntries(pbox);xb.focus();
+}
+
+window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,count,counts,button,MAX_PHOTOS},passport:{open:passportOpen,html:passportHTML,fill:fillEntries,stats}};
 })();
