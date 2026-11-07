@@ -32,4 +32,47 @@ for path in [atlas,home]:
     assert len(ids)==len(set(ids)), "Powtórzone identyfikatory HTML."
 for text in ["Royal Castle","Places & Memories","Family mode","Photo mode","Worth visiting","Google reviews"]:
     assert text in i18n, "Niekompletna wersja EN: " + text
+
+# I Was Here 5.0 — English brand and accurate illustrated geographic atlas
+geo_path = ROOT / "assets/poland-geography.js"
+assert geo_path.exists(), "Missing accurate Poland geometry"
+geo_text = geo_path.read_text(encoding="utf-8")
+geo = json.loads(geo_text.split("window.POLAND_GEO=", 1)[1].rstrip().rstrip(";"))
+assert len(geo["border"]) >= 300, "Country border too coarse"
+assert len(geo["regions"]) == 16, "All 16 provinces must be included"
+assert {"Vistula", "Oder"} <= set(geo["rivers"]), "Geographic rivers missing"
+assert len(set(r["name"] for r in geo["regions"])) == 16
+art = (ROOT / "assets/atlas-illustrated.js").read_text(encoding="utf-8")
+assert "landmark:iconGroup" in art and "atlas-forest" in art
+assert (ROOT / "assets/atlas-light-v5.css").exists()
+assert (ROOT / "assets/brand-pin.svg").exists()
+assert (ROOT / "assets/logo-en.svg").exists()
+assert "I Was Here" in atlas and "Places &amp; Memories" in atlas
+assert "I WAS HERE" in home and "PLACES &amp; MEMORIES" in home
+assert "assets/poland-geography.js" in atlas
+assert "assets/atlas-illustrated.js" in atlas
+assert "assets/brand-v5.js" in atlas and "assets/brand-v5.js" in home
+assert manifest["name"] == "I Was Here — Places & Memories"
+assert manifest["short_name"] == "I Was Here"
+assert "icon.svg" in [i["src"] for i in manifest["icons"]]
+assert "const GEO=window.POLAND_GEO;" in atlas_js
+assert "IWH_ATLAS_ART.decorate" in atlas_js
+city_rows=re.findall(r"\{id:'([^']+)',pl:'([^']+)',en:'([^']+)',lat:([\d.]+),lon:([\d.]+),ready:(true|false)\}",atlas_js)
+assert len(city_rows)==13,"City count unexpectedly changed"
+def contains(lon,lat,poly):
+    inside=False
+    for k in range(len(poly)):
+        j=(k-1)%len(poly)
+        a,b=poly[k],poly[j]
+        if (a[1]>lat)!=(b[1]>lat) and lon < (b[0]-a[0])*(lat-a[1])/(b[1]-a[1])+a[0]:
+            inside=not inside
+    return inside
+for cid,pl,en,lat,lon,active in city_rows:
+    assert contains(float(lon),float(lat),geo["border"]),f"City outside country: {cid}"
+assert sum(x[-1]=="true" for x in city_rows)==1, "Only Warsaw is currently published"
+assert "tubylem_map_style','atlas'" in (ROOT/"assets/brand-v5.js").read_text(encoding="utf-8")
+for extra in ["assets/atlas-light-v5.css","assets/atlas-illustrated.js","assets/poland-geography.js","assets/brand-pin.svg","assets/logo-en.svg","assets/brand-v5.js","assets/brand-v5.css"]:
+    assert extra in sw, "New asset absent from offline cache: "+extra
+print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
+
 print("OK: Atlas 13 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")
