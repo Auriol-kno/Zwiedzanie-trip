@@ -30,6 +30,16 @@ for p in attractions:
     assert all(k in p for k in ("id", "district", "name", "lat", "lon", "cats", "time", "desc", "story", "url", "score", "visitValue")), p.get("id")
     assert 52.09 < p["lat"] < 52.40 and 20.80 < p["lon"] < 21.30, p["id"]
     assert p["time"] > 0 and 0 <= p["score"] <= 100 and 1 <= p["visitValue"] <= 5, p["id"]
+import re
+def check_wiki(p):
+    """Pole wiki (tools/wiki_links.py): QID Wikidata i co najmniej jeden tytuł artykułu PL/EN — bez zgadywania."""
+    w = p.get("wiki")
+    if w is None:
+        return
+    assert re.fullmatch(r"Q\d+", w.get("qid") or ""), "wiki.qid: " + p["id"]
+    assert (w.get("pl") or w.get("en")) and all(isinstance(w.get(k), (str, type(None))) for k in ("pl", "en")), "wiki: " + p["id"]
+for p in attractions:
+    check_wiki(p)
 js_obj = {k: places[k] for k in ("version", "updated", "districts", "attractions")}
 write("atrakcje.js", "// Wygenerowano z data/atrakcje.json przez tools/sync_database.py.\nwindow.WARSAW_DB=" + compact(js_obj) + ";\n")
 
@@ -58,6 +68,7 @@ for p in region_places:
     assert p["region"] in region_ids, p["id"]
     assert p["name"]["pl"] and p["name"]["en"] and p["desc"]["pl"] and p["desc"]["en"], "Brak PL/EN: " + p["id"]
     assert set(p["cats"]) <= set(categories), p["id"]
+    check_wiki(p)
     assert 49.0 < p["lat"] < 54.9 and 14.1 < p["lon"] < 24.2, p["id"]
     assert p["time"] > 0 and 1 <= p["visitValue"] <= 5, p["id"]
     assert p["coordinateStatus"] in ("orientacyjne", "redakcyjne", "zweryfikowane", "osm"), p["id"]

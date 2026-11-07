@@ -77,7 +77,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q756098",
+        "pl": "Zamek Królewski w Warszawie",
+        "en": "Royal Castle, Warsaw"
+      }
     },
     {
       "id": "market",
@@ -188,7 +193,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11796723",
+        "pl": "Ogrody Zamkowe w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "uprisingmon",
@@ -214,7 +224,12 @@
       "sourceKind": "portal_turystyczny",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q450966",
+        "pl": "Pomnik Powstania Warszawskiego",
+        "en": "Warsaw Uprising Monument"
+      }
     },
     {
       "id": "polin",
@@ -270,7 +285,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q429069",
+        "pl": "Muzeum Historii Żydów Polskich Polin",
+        "en": "POLIN Museum of the History of Polish Jews"
+      }
     },
     {
       "id": "uprising",
@@ -324,7 +344,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q574328",
+        "pl": "Muzeum Powstania Warszawskiego",
+        "en": "Warsaw Rising Museum"
+      }
     },
     {
       "id": "pkin",
@@ -378,7 +403,12 @@
       "sourceKind": "portal_turystyczny",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q2304363",
+        "pl": "Ogród Saski w Warszawie",
+        "en": "Saxon Garden"
+      }
     },
     {
       "id": "chopin",
@@ -465,7 +495,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1138064",
+        "pl": "Centrum Nauki Kopernik w Warszawie",
+        "en": "Copernicus Science Centre"
+      }
     },
     {
       "id": "bulwary",
@@ -630,7 +665,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q345276",
+        "pl": "Pałac Na Wyspie",
+        "en": "Palace on the Isle"
+      }
     },
     {
       "id": "chopinmon",
@@ -826,7 +866,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1954507",
+        "pl": "Muzeum Warszawskiej Pragi",
+        "en": "Museum of Praga"
+      }
     },
     {
       "id": "neon",
@@ -880,7 +925,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9186392",
+        "pl": "Centrum Praskie Koneser",
+        "en": "Praga Koneser Center"
+      }
     },
     {
       "id": "national",
@@ -933,7 +983,12 @@
       "sourceKind": "oficjalna_strona",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q975896",
+        "pl": "Świątynia Opatrzności Bożej w Warszawie",
+        "en": "Temple of Divine Providence"
+      }
     },
     {
       "id": "pole",
@@ -960,7 +1015,12 @@
       "sourceKind": "portal_turystyczny",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1136239",
+        "pl": "Pole Mokotowskie",
+        "en": "Mokotów Field"
+      }
     },
     {
       "id": "krasi",
@@ -987,7 +1047,12 @@
       "sourceKind": "portal_turystyczny",
       "updated": "2026-11-05",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11796756",
+        "pl": "Ogród Krasińskich w Warszawie",
+        "en": "Krasiński Garden"
+      }
     },
     {
       "id": "royalroute",
@@ -1014,7 +1079,12 @@
       "sourceKind": "portal_turystyczny",
       "updated": "2026-11-05",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1786375",
+        "pl": "Ulica Krakowskie Przedmieście w Warszawie",
+        "en": "Krakowskie Przedmieście"
+      }
     },
     {
       "id": "fort_bema",
@@ -1067,7 +1137,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811331",
+        "pl": "Park Górczewska",
+        "en": "Górczewska Park"
+      }
     },
     {
       "id": "amfiteatr_bemowo",
@@ -1119,7 +1194,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9261604",
+        "pl": "Fort IV Twierdzy Warszawa",
+        "en": null
+      }
     },
     {
       "id": "aleja_sportow",
@@ -1357,7 +1437,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811433",
+        "pl": "Park Młociński w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "palac_mlociny",
@@ -1489,7 +1574,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q2052548",
+        "pl": "Park Morskie Oko w Warszawie",
+        "en": "Eye of the Sea Park"
+      }
     },
     {
       "id": "fort_mokotow",
@@ -1542,7 +1632,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811316",
+        "pl": "Park gen. Gustawa Orlicz-Dreszera",
+        "en": "Dreszer Park"
+      }
     },
     {
       "id": "kopiec_powstania",
@@ -1569,7 +1664,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q782964",
+        "pl": "Kopiec Powstania Warszawskiego",
+        "en": null
+      }
     },
     {
       "id": "sadyba_fort",
@@ -1596,7 +1696,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1438773",
+        "pl": "Fort Cze Twierdzy Warszawa",
+        "en": null
+      }
     },
     {
       "id": "szczesliwice",
@@ -1623,7 +1728,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811516",
+        "pl": "Park Szczęśliwicki",
+        "en": null
+      }
     },
     {
       "id": "filtry",
@@ -1676,7 +1786,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q7200201",
+        "pl": "Plac Gabriela Narutowicza w Warszawie",
+        "en": "Narutowicz Square"
+      }
     },
     {
       "id": "kolonia_staszica",
@@ -1781,7 +1896,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q497026",
+        "pl": "Bazylika Katedralna św. Michała Archanioła i św. Floriana Męczennika w Warszawie",
+        "en": "St. Florian's Cathedral"
+      }
     },
     {
       "id": "zoo",
@@ -1834,7 +1954,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q3363890",
+        "pl": "Park Praski Żołnierzy 1 Armii Wojska Polskiego w Warszawie",
+        "en": "Praga Park"
+      }
     },
     {
       "id": "rozyckiego",
@@ -1860,7 +1985,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11687601",
+        "pl": "Bazar Różyckiego",
+        "en": null
+      }
     },
     {
       "id": "skaryszewski",
@@ -1887,7 +2017,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q2291658",
+        "pl": "Park Skaryszewski im. Ignacego Jana Paderewskiego w Warszawie",
+        "en": "Skaryszew Park"
+      }
     },
     {
       "id": "narodowy",
@@ -1992,7 +2127,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11726402",
+        "pl": "Jezioro Kamionkowskie (Warszawa)",
+        "en": null
+      }
     },
     {
       "id": "soho",
@@ -2071,7 +2211,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9308667",
+        "pl": "Rezerwat przyrody Kawęczyn",
+        "en": null
+      }
     },
     {
       "id": "asw",
@@ -2311,7 +2456,12 @@
       "priceText": "Sprawdź aktualny cennik u organizatora",
       "hours": "Sprawdź aktualne godziny na stronie organizatora",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q116366",
+        "pl": "Pawiak",
+        "en": "Pawiak"
+      }
     },
     {
       "id": "park_brodnowski",
@@ -2338,7 +2488,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811309",
+        "pl": "Park Bródnowski w Warszawie",
+        "en": "Bródno Park"
+      }
     },
     {
       "id": "rzezby_brodno",
@@ -2417,7 +2572,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q4981891",
+        "pl": "Cmentarz Bródnowski",
+        "en": "Bródno Cemetery"
+      }
     },
     {
       "id": "zalew_brodno",
@@ -2575,7 +2735,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9308795",
+        "pl": "Rezerwat przyrody Las Kabacki im. Stefana Starzyńskiego",
+        "en": "Kabaty Woods"
+      }
     },
     {
       "id": "gorka_kazurka",
@@ -2628,7 +2793,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q111024611",
+        "pl": "Park Przy Bażantarni",
+        "en": "Przy Bażantarni Park"
+      }
     },
     {
       "id": "kosciol_katarzyny",
@@ -2655,7 +2825,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1308483",
+        "pl": "Kościół św. Katarzyny w Warszawie",
+        "en": "St. Catherine's Church, Warsaw"
+      }
     },
     {
       "id": "dolinka_sluzewiecka",
@@ -2762,7 +2937,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9308819",
+        "pl": "Rezerwat im. Króla Jana Sobieskiego",
+        "en": null
+      }
     },
     {
       "id": "miedzeszyn",
@@ -2843,7 +3023,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q9307864",
+        "pl": "Bagno Jacka",
+        "en": null
+      }
     },
     {
       "id": "lasy_wesolej",
@@ -2977,7 +3162,12 @@
       "priceText": "Sprawdź aktualny cennik u organizatora",
       "hours": "Sprawdź aktualne godziny na stronie organizatora",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q8343771",
+        "pl": "Polska Akademia Nauk Ogród Botaniczny – Centrum Zachowania Różnorodności Biologicznej w Powsinie",
+        "en": null
+      }
     },
     {
       "id": "kosciol_anny",
@@ -3029,7 +3219,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811385",
+        "pl": "Park Kultury w Powsinie",
+        "en": "Powsin Culture Park"
+      }
     },
     {
       "id": "stawy_cietrzewia",
@@ -3082,7 +3277,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811367",
+        "pl": "Park Kombatantów w Warszawie",
+        "en": "Combatants Park"
+      }
     },
     {
       "id": "staw_koziorozca",
@@ -3135,7 +3335,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1438781",
+        "pl": "Fort V Twierdzy Warszawa",
+        "en": null
+      }
     },
     {
       "id": "willa_wlochy",
@@ -3187,7 +3392,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q168886",
+        "pl": "Cmentarz Powązkowski w Warszawie",
+        "en": "Powązki Cemetery"
+      }
     },
     {
       "id": "zydowski",
@@ -3319,7 +3529,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811578",
+        "pl": "Park im. Edwarda Szymańskiego w Warszawie",
+        "en": "Edward Szymański Park"
+      }
     },
     {
       "id": "cytadela",
@@ -3372,7 +3587,12 @@
       "priceText": "Sprawdź aktualny cennik u organizatora",
       "hours": "Sprawdź aktualne godziny na stronie organizatora",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q6940996",
+        "pl": "Muzeum Historii Polski w Warszawie",
+        "en": "Museum of Polish History"
+      }
     },
     {
       "id": "park_zeromskiego",
@@ -3399,7 +3619,12 @@
       "priceText": "Teren ogólnodostępny lub oglądanie z zewnątrz; dodatkowe atrakcje mogą być płatne",
       "hours": "Teren zewnętrzny: dostępność zależy od regulaminu i pory roku",
       "visitValue": 4,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q11811605",
+        "pl": "Park Stefana Żeromskiego w Warszawie",
+        "en": "Stefan Żeromski Park (Warsaw)"
+      }
     },
     {
       "id": "wilson",
@@ -3451,7 +3676,12 @@
       "priceText": "Sprawdź aktualny cennik u organizatora",
       "hours": "Sprawdź aktualne godziny na stronie organizatora",
       "visitValue": 5,
-      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników"
+      "ratingMethod": "Wartość odwiedzenia według redakcyjnego modelu 1–5; nie jest oceną użytkowników",
+      "wiki": {
+        "qid": "Q1143063",
+        "pl": "Muzeum Katyńskie",
+        "en": "Katyń Museum"
+      }
     },
     {
       "id": "w3-pomnik-miko-aja-kopernika",
@@ -3529,7 +3759,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q1683191",
+        "pl": "Pomnik księcia Józefa Poniatowskiego w Warszawie",
+        "en": "Prince Józef Poniatowski Monument"
+      }
     },
     {
       "id": "w3-grob-nieznanego-zo-nierza",
@@ -3555,7 +3790,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q1540926",
+        "pl": "Grób Nieznanego Żołnierza w Warszawie",
+        "en": "Tomb of the Unknown Soldier, Warsaw"
+      }
     },
     {
       "id": "w3-pomnik-ma-ego-powstanca",
@@ -3581,7 +3821,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q555792",
+        "pl": "Pomnik Małego Powstańca w Warszawie",
+        "en": "The Little Insurrectionist"
+      }
     },
     {
       "id": "w3-pomnik-syreny-nad-wis-a",
@@ -3711,7 +3956,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q3134741",
+        "pl": "Park Ujazdowski w Warszawie",
+        "en": "Ujazdów Park"
+      }
     },
     {
       "id": "w3-park-kazimierzowski",
@@ -3737,7 +3987,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811362",
+        "pl": "Park Kazimierzowski w Warszawie",
+        "en": "Casimir Park"
+      }
     },
     {
       "id": "w3-park-marsza-ka-edwarda-rydza-smig-ego",
@@ -3763,7 +4018,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811404",
+        "pl": "Park Marszałka Edwarda Rydza-Śmigłego w Warszawie",
+        "en": "Marshal Edward Rydz-Śmigły Park"
+      }
     },
     {
       "id": "w3-park-mirowski",
@@ -3789,7 +4049,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q86672111",
+        "pl": "Park Mirowski w Warszawie",
+        "en": "Mier Park"
+      }
     },
     {
       "id": "w3-park-im-romualda-traugutta",
@@ -3945,7 +4210,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q9261649",
+        "pl": "Fort Sokolnickiego",
+        "en": null
+      }
     },
     {
       "id": "w3-park-moczyd-o",
@@ -3971,7 +4241,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811430",
+        "pl": "Park Moczydło w Warszawie",
+        "en": "Moczydło Park"
+      }
     },
     {
       "id": "w3-park-powstancow-warszawy",
@@ -4049,7 +4324,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11823402",
+        "pl": "Pomnik Polegli Niepokonani w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "w3-pomnik-ofiar-rzezi-woli",
@@ -4101,7 +4381,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811299",
+        "pl": "Park Arkadia w Warszawie",
+        "en": "Arcadia Park (Warsaw)"
+      }
     },
     {
       "id": "w3-park-sielecki",
@@ -4127,7 +4412,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q28673092",
+        "pl": "Park Sielecki w Warszawie",
+        "en": "Sielce Park"
+      }
     },
     {
       "id": "w3-park-promenada",
@@ -4231,7 +4521,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811547",
+        "pl": "Park Pięciu Sióstr",
+        "en": "Five Sisters Park"
+      }
     },
     {
       "id": "w3-park-im-zas-awa-malickiego",
@@ -4283,7 +4578,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11823319",
+        "pl": "Pomnik Lotnika w Warszawie",
+        "en": "Aviator Memorial (Warsaw)"
+      }
     },
     {
       "id": "w3-park-im-marii-sk-odowskiej-curie",
@@ -4309,7 +4609,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q63959121",
+        "pl": null,
+        "en": "Maria Skłodowska-Curie Park"
+      }
     },
     {
       "id": "w3-pomnik-praskiej-kapeli-podworkowej",
@@ -4335,7 +4640,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11823424",
+        "pl": "Pomnik Praskiej Kapeli Podwórkowej",
+        "en": "Praga Backyard Band Memorial"
+      }
     },
     {
       "id": "w3-pomnik-kosciuszkowcow",
@@ -4465,7 +4775,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811621",
+        "pl": "Park im. płk. Jana Szypowskiego „Leśnika” w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "w3-park-znicza",
@@ -4517,7 +4832,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811436",
+        "pl": "Park Nad Balatonem w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "w3-park-olszyna",
@@ -4543,7 +4863,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11811466",
+        "pl": "Zespół przyrodniczo-krajobrazowy Olszyna",
+        "en": null
+      }
     },
     {
       "id": "w3-stawy-brustmana",
@@ -4595,7 +4920,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q24949121",
+        "pl": "Park Stawy Kellera w Warszawie",
+        "en": null
+      }
     },
     {
       "id": "w3-las-lindego",
@@ -4621,7 +4951,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q11752934",
+        "pl": "Las Lindego",
+        "en": null
+      }
     },
     {
       "id": "w3-park-im-romana-koz-owskiego",
@@ -4725,7 +5060,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q98835519",
+        "pl": "Park im. Jana Pawła II (Warszawa)",
+        "en": "John Paul II Park (Warsaw)"
+      }
     },
     {
       "id": "w3-park-ostoja-wilanow",
@@ -4907,7 +5247,12 @@
       "updated": "2026-11-05",
       "sourceKind": "redakcyjna_selekcja",
       "coordinateStatus": "orientacyjne",
-      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
+      "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google",
+      "wiki": {
+        "qid": "Q16586384",
+        "pl": "Park im. Stefana Wiecheckiego „Wiecha”",
+        "en": "Wiech Park"
+      }
     },
     {
       "id": "w3-park-gaj-na-brodnie",
@@ -5169,5 +5514,6 @@
       "coordinateStatus": "orientacyjne",
       "ratingMethod": "Redakcyjna wartość odwiedzenia 1–5, nie ocena Google"
     }
-  ]
+  ],
+  "wikiSource": "OpenStreetMap wikidata tag (© OpenStreetMap contributors, ODbL) + Wikidata sitelinks (CC0) — 2026-11-07"
 }

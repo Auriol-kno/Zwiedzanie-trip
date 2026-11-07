@@ -23,7 +23,7 @@ pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'
  emptyDays:'Nie masz jeszcze planu dnia. Wybierz miejsce na mapie i dotknij „＋ Plan dnia”.',emptyPlan:'Ten plan jest pusty.',
  show:'Pokaż',remove:'Usuń',up:'W górę',down:'W dół',rename:'Nazwa planu',delPlan:'Usuń plan',confirmDel:'Usunąć ten plan? Tej operacji nie można cofnąć.',
  items:n=>plural(n,['pozycja','pozycje','pozycji']),date:'Data',start:'Start',maps:'🧭 Trasa w Google Maps',
- dayNote:'Godziny są szacunkowe: przejazd z odległości (ok. 55 km/h), czas zwiedzania z bazy. Sprawdź godziny otwarcia.',
+ dayNote:'Godziny są szacunkowe: przejazd z odległości (ok. 55 km/h, pieszo ok. 4,5 km/h), czas zwiedzania z bazy. Sprawdź godziny otwarcia.',mode:'Jak się przemieszczasz?',walk:'🚶 Pieszo',car:'🚗 Samochód',
  warsawTrips:'Zapisane wycieczki po Warszawie',openWarsaw:'Otwórz w przewodniku Warszawy',
  visitedCities:'Odwiedzone miasta i regiony',visitedPlaces:'Pieczątki z przewodników regionów',warsawStamps:'Paszport Warszawy',stamps:n=>plural(n,['pieczątka','pieczątki','pieczątek']),
  openPassport:'Otwórz paszport',noMemories:'Oznacz miejsca przyciskiem „✓ Byłem tu”, a pojawią się tutaj.',
@@ -33,6 +33,7 @@ pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'
  clear:'Wyczyść moje plany',confirmClear:'Usunąć wszystkie plany podróży i plany dnia z tego urządzenia?',
  pickTrip:'Dodaj do planu podróży',pickDay:'Dodaj do planu dnia',choosePlan:'Wybierz plan',newPlan:'Nowy plan',planName:'Nazwa nowego planu',
  defTrip:'Moja podróż po Polsce',defDay:'Dzień zwiedzania',cancel:'Anuluj',add:'Dodaj',added:n=>'Dodano do planu „'+n+'”',already:n=>'To miejsce jest już w planie „'+n+'”',
+ journal:'Dziennik podróży',journalIntro:'Notatki i do 5 zdjęć z każdego miejsca (także z biblioteki zdjęć). Zapisane tylko na tym urządzeniu.',journalEmpty:'Brak wpisów. Dotknij 📝 przy odwiedzonym miejscu albo w paszporcie Warszawy, aby dodać notatki i zdjęcia.',notesPhotos:'Notatki i zdjęcia',openEntry:'Otwórz',photosN:n=>plural(n,['zdjęcie','zdjęcia','zdjęć']),withNotes:'notatki',
  visitedOn:'Oznaczono jako odwiedzone',visitedOff:'Usunięto z odwiedzonych',saveErr:'Nie udało się zapisać — pamięć przeglądarki jest pełna lub zablokowana.'},
 en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',close:'Back to the map',
  tripIntro:'Collect the cities, provinces and places you want to visit. Plans are saved on this device.',newTrip:'＋ New trip plan',newDay:'＋ New day plan',
@@ -40,7 +41,7 @@ en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',cl
  emptyDays:'You have no day plan yet. Pick a place on the map and tap “＋ Day plan”.',emptyPlan:'This plan is empty.',
  show:'Show',remove:'Remove',up:'Move up',down:'Move down',rename:'Plan name',delPlan:'Delete plan',confirmDel:'Delete this plan? This cannot be undone.',
  items:n=>n+' '+(n===1?'item':'items'),date:'Date',start:'Start',maps:'🧭 Route in Google Maps',
- dayNote:'Times are estimates: travel from distance (about 55 km/h), visit length from our data. Check opening hours.',
+ dayNote:'Times are estimates: travel from distance (about 55 km/h, on foot about 4.5 km/h), visit length from our data. Check opening hours.',mode:'How do you get around?',walk:'🚶 Walk',car:'🚗 Car',
  warsawTrips:'Saved Warsaw itineraries',openWarsaw:'Open in the Warsaw guide',
  visitedCities:'Visited cities and regions',visitedPlaces:'Stamps from regional guides',warsawStamps:'Warsaw passport',stamps:n=>n+' '+(n===1?'stamp':'stamps'),
  openPassport:'Open the passport',noMemories:'Mark places with “✓ I was here” and they will appear here.',
@@ -50,6 +51,7 @@ en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',cl
  clear:'Clear my plans',confirmClear:'Delete all trip plans and day plans from this device?',
  pickTrip:'Add to a trip plan',pickDay:'Add to a day plan',choosePlan:'Choose a plan',newPlan:'New plan',planName:'Name of the new plan',
  defTrip:'My trip around Poland',defDay:'Sightseeing day',cancel:'Cancel',add:'Add',added:n=>'Added to “'+n+'”',already:n=>'This is already in “'+n+'”',
+ journal:'Travel journal',journalIntro:'Notes and up to 5 photos for each place (also from your photo library). Stored only on this device.',journalEmpty:'No entries yet. Tap 📝 next to a visited place or in the Warsaw passport to add notes and photos.',notesPhotos:'Notes and photos',openEntry:'Open',photosN:n=>n+' '+(n===1?'photo':'photos'),withNotes:'notes',
  visitedOn:'Marked as visited',visitedOff:'Removed from visited',saveErr:'Could not save — browser storage is full or blocked.'}
 };
 let A=null,tab='map';
@@ -113,9 +115,21 @@ const km=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*
 const hhmm=m=>String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(Math.round(m%60)).padStart(2,'0');
 function schedule(plan){
  let [h,m]=(plan.start||'09:00').split(':').map(Number),clock=h*60+m,prev=null;
- return plan.items.map(it=>{const r=A.resolve(it);if(!r)return null;let drive=0,dist=0;if(prev){dist=km(prev,r)*1.3;drive=dist<1.5?Math.round(dist/4.5*60):Math.round(dist/55*60+8)}
+ return plan.items.map(it=>{const r=A.resolve(it);if(!r)return null;let drive=0,dist=0;if(prev){dist=km(prev,r)*1.3;drive=(dist<1.5||plan.mode==='walking')?Math.round(dist/4.5*60):Math.round(dist/55*60+8)}
   clock+=drive;const s={from:clock,to:clock+r.minutes,dist,drive};clock+=r.minutes;prev=r;return s});
 }
+// Dziennik podróży (IndexedDB, place-extras.js): wszystkie wpisy z Atlasu, regionów i Warszawy.
+let thumbs=[];
+function renderJournal(){
+ const box=$('#memJournal');if(!box)return;const t=x();
+ IWH_EXTRAS.journal.all().then(list=>{
+  if(!$('#memJournal'))return;thumbs.forEach(u=>URL.revokeObjectURL(u));thumbs=[];
+  list.sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
+  box.innerHTML=list.length?list.map(e=>{const ph=e.photos&&e.photos[0];let img='';if(ph&&ph.blob){const u=URL.createObjectURL(ph.blob);thumbs.push(u);img='<img src="'+u+'" alt="">'}
+   return '<li class="plan-item"><span class="pi-icon journal-thumb" aria-hidden="true">'+(img||esc(e.icon||'📍'))+'</span><span class="pi-text"><b>'+esc(e.title||'')+'</b><small>'+esc([e.photos.length?t.photosN(e.photos.length):'',(e.notes||'').trim()?t.withNotes:''].filter(Boolean).join(' · '))+'</small></span><span class="pi-actions"><button type="button" data-journal="'+esc(e.key)+'" data-journal-title="'+esc(e.title||'')+'" data-journal-icon="'+esc(e.icon||'')+'">'+esc(t.openEntry)+'</button></span></li>'}).join(''):'<li class="muted">'+esc(t.journalEmpty)+'</li>';
+ });
+}
+document.addEventListener('iwh-journal-change',()=>{if(tab==='memories')renderJournal()});
 function render(){
  const p=$('#tabPanel'),t=x();
  if(tab==='map'){p.hidden=true;p.innerHTML='';document.body.dataset.tab='map';return}
@@ -132,9 +146,10 @@ function render(){
   const list=days().sort((a,b)=>(a.date||'').localeCompare(b.date||''));
   p.innerHTML=head(t.day)+'<button type="button" class="city-action wide" data-new="day">'+esc(t.newDay)+'</button>'+
    (list.length?list.map(pl=>{const sc=schedule(pl);const pts=pl.items.map(i=>A.resolve(i)).filter(Boolean);
-    const maps=pts.length?'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(pts[0].lat.toFixed(5)+','+pts[0].lon.toFixed(5))+'&destination='+encodeURIComponent(pts[pts.length-1].lat.toFixed(5)+','+pts[pts.length-1].lon.toFixed(5))+(pts.length>2?'&waypoints='+encodeURIComponent(pts.slice(1,-1).map(r=>r.lat.toFixed(5)+','+r.lon.toFixed(5)).join('|')):'')+'&travelmode=driving':'';
+    const maps=pts.length?'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(pts[0].lat.toFixed(5)+','+pts[0].lon.toFixed(5))+'&destination='+encodeURIComponent(pts[pts.length-1].lat.toFixed(5)+','+pts[pts.length-1].lon.toFixed(5))+(pts.length>2?'&waypoints='+encodeURIComponent(pts.slice(1,-1).map(r=>r.lat.toFixed(5)+','+r.lon.toFixed(5)).join('|')):'')+'&travelmode='+(pl.mode==='walking'?'walking':'driving'):'';
     return '<article class="plan-card"><div class="plan-top"><label class="plan-name"><span class="sr-only">'+esc(t.rename)+'</span><input data-rename="'+pl.id+'" data-kind="day" value="'+esc(pl.name)+'" maxlength="60"></label></div>'+
     '<div class="plan-meta"><label>'+esc(t.date)+' <input type="date" data-date="'+pl.id+'" value="'+esc(pl.date||'')+'"></label><label>'+esc(t.start)+' <input type="time" data-start="'+pl.id+'" value="'+esc(pl.start||'09:00')+'"></label></div>'+
+    '<div class="seg plan-mode" role="group" aria-label="'+esc(t.mode)+'"><button type="button" data-mode-plan="'+pl.id+'" data-mode="walking" aria-pressed="'+(pl.mode==='walking')+'">'+esc(t.walk)+'</button><button type="button" data-mode-plan="'+pl.id+'" data-mode="driving" aria-pressed="'+(pl.mode!=='walking')+'">'+esc(t.car)+'</button></div>'+
     (pl.items.length?'<ol class="plan-items day">'+pl.items.map((it,i)=>{const s=sc[i];return itemRow(it,i,pl.items.length,pl.id,'day').replace('<small>','<small>'+(s?hhmm(s.from)+'–'+hhmm(s.to)+(s.dist?' · ~'+Math.round(s.dist)+' km':'')+' · ':''))}).join('')+'</ol>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
     (maps?'<a class="ghost-action" href="'+maps+'" target="_blank" rel="noopener">'+esc(t.maps)+'</a>':'')+
     '<p class="muted small">'+esc(t.dayNote)+'</p><button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="day">'+esc(t.delPlan)+'</button></article>'}).join(''):'<p class="empty">'+esc(t.emptyDays)+'</p>');
@@ -142,12 +157,17 @@ function render(){
   const v=visited().map(k=>{const [ty,a,b]=k.split(':');return ty==='town'?{t:'town',region:a,name:b}:{t:ty,id:a}}).map(it=>({it,r:A.resolve(it)})).filter(o=>o.r);
   const ps=placeStamps().map(id=>({it:{t:'place',id},r:A.resolve({t:'place',id})})).filter(o=>o.r);
   const w=read('odkryjWarszawe_1',{}),wn=Array.isArray(w.visited)?w.visited.length:0;
-  const row=o=>'<li class="plan-item"><span class="pi-icon" aria-hidden="true">'+o.r.icon+'</span><span class="pi-text"><b>'+esc(o.r.name)+'</b><small>'+esc(o.r.sub||'')+'</small></span><span class="pi-actions"><button type="button" data-show-item=\''+esc(JSON.stringify(o.it))+'\'>'+esc(t.show)+'</button></span></li>';
+  const jkey=it=>it.t==='place'?'reg:'+it.id:'atlas:'+key(it);
+  const row=o=>'<li class="plan-item"><span class="pi-icon" aria-hidden="true">'+o.r.icon+'</span><span class="pi-text"><b>'+esc(o.r.name)+'</b><small>'+esc(o.r.sub||'')+'<span class="ij-count" data-journal-count="'+esc(jkey(o.it))+'"></span></small></span><span class="pi-actions">'+
+   (window.IWH_EXTRAS?'<button type="button" data-journal="'+esc(jkey(o.it))+'" data-journal-title="'+esc(o.r.name)+'" data-journal-icon="'+esc(o.r.icon)+'" aria-label="'+esc(t.notesPhotos+': '+o.r.name)+'">📝</button>':'')+
+   '<button type="button" data-show-item=\''+esc(JSON.stringify(o.it))+'\'>'+esc(t.show)+'</button></span></li>';
   p.innerHTML=head(t.memories)+'<div class="stat-row"><div><b>'+v.length+'</b><small>'+esc(t.visitedCities)+'</small></div><div><b>'+ps.length+'</b><small>'+esc(t.visitedPlaces)+'</small></div><div><b>'+wn+'</b><small>'+esc(t.warsawStamps)+'</small></div></div>'+
    (v.length?'<h3>'+esc(t.visitedCities)+'</h3><ul class="plan-items">'+v.map(row).join('')+'</ul>':'')+
    (ps.length?'<h3>'+esc(t.visitedPlaces)+'</h3><ul class="plan-items">'+ps.map(row).join('')+'</ul>':'')+
    '<h3>'+esc(t.warsawStamps)+'</h3><p class="muted">'+esc(t.stamps(wn))+' · <a href="./index.html?lang='+lang()+'">'+esc(t.openPassport)+'</a></p>'+
-   (!v.length&&!ps.length?'<p class="empty">'+esc(t.noMemories)+'</p>':'');
+   (!v.length&&!ps.length?'<p class="empty">'+esc(t.noMemories)+'</p>':'')+
+   (window.IWH_EXTRAS?'<h3>📔 '+esc(t.journal)+'</h3><p class="muted small">'+esc(t.journalIntro)+'</p><ul class="plan-items journal-list" id="memJournal"></ul>':'');
+  if(window.IWH_EXTRAS){IWH_EXTRAS.journal.counts(p);renderJournal()}
  }else if(tab==='profile'){
   const st=A.style();
   p.innerHTML=head(t.profile)+'<h3>'+esc(t.language)+'</h3><div class="seg" role="group" aria-label="'+esc(t.language)+'"><button type="button" data-set-lang="pl" aria-pressed="'+(lang()==='pl')+'">Polski</button><button type="button" data-set-lang="en" aria-pressed="'+(lang()==='en')+'">English</button></div>'+
@@ -167,6 +187,7 @@ document.addEventListener('click',e=>{
  if((b=q('[data-show]'))){const {pl}=findPlan(b.dataset.show);if(pl){API.open('map');A.show(pl.items[+b.dataset.i])}return}
  if((b=q('[data-show-item]'))){API.open('map');A.show(JSON.parse(b.dataset.showItem));return}
  if((b=q('[data-delete]'))){if(confirm(x().confirmDel)){const k=b.dataset.kind==='trip'?'iwh_trips':'iwh_days';save(k,read(k,[]).filter(p=>p.id!==b.dataset.delete));A.changed();render()}return}
+ if((b=q('[data-mode-plan]'))){const all=days(),pl=all.find(p=>p.id===b.dataset.modePlan);if(pl){pl.mode=b.dataset.mode;save('iwh_days',all);render()}return}
  if((b=q('[data-set-lang]'))){A.setLang(b.dataset.setLang);return}
  if((b=q('[data-set-style]'))){A.setStyle(b.dataset.setStyle);render();return}
  if(q('[data-clear]')){if(confirm(x().confirmClear)){save('iwh_trips',[]);save('iwh_days',[]);A.changed();render()}return}

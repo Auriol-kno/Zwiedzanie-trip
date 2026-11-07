@@ -31,6 +31,7 @@ jobs:
           node --check assets/poland-explorer.js
           node --check assets/region.js
           node --check assets/atlas-plans.js
+          node --check assets/place-extras.js
           node --check data/regiony.js
           node --check data/atrakcje.js
           node --check data/restauracje.js

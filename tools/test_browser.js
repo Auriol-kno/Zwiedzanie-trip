@@ -105,10 +105,20 @@ function check(ok, message) {
   await page.evaluate(() => { document.scrollingElement.scrollTop = 3000; });
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
-    const c = document.querySelector('.atlas-chip').getBoundingClientRect();
+    const c = document.querySelector('#atlasFloat .mark-atlas').getBoundingClientRect();
     return c.top >= 0 && c.top < 60 && c.left < 200 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
   }), 'Warszawa: mapa Polski przy logo widoczna i klikalna po przewinięciu');
 
+  // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
+  check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)
+    && document.querySelectorAll('#categories .chip').length > 3), 'Warszawa: wybór rodzajów atrakcji jest przed mapą');
+  check(await page.evaluate(() => document.querySelector('#transport [data-mode="walking"]') !== null), 'Warszawa: tryb pieszy w planerze');
+  await page.evaluate(() => openDetail('castle'));
+  check(await page.evaluate(() => { const a = document.querySelector('#detailContent .iwh-wiki[data-l="en"] a');
+    return !!a && a.offsetParent !== null && /^https:\/\/(en|pl)\.wikipedia\.org\//.test(a.href) && !document.querySelector('#detailContent .iwh-wiki[data-l="pl"] a').offsetParent; }),
+    'Warszawa EN: „More information — Wikipedia” przy opisie');
+  check(await page.evaluate(() => !!document.querySelector('#detailContent [data-journal="waw:castle"]')), 'Warszawa: przycisk notatek i zdjęć w szczegółach');
+  await page.evaluate(() => closeOverlay('detailOverlay'));
   await page.click('#langWarsaw [data-lang="pl"]');
   await page.waitForTimeout(400);
   check(await page.evaluate(() => document.documentElement.lang === 'pl' && localStorage.getItem('tubylem_lang') === 'pl'), 'Warszawa: PL zapamiętany');
@@ -156,6 +166,9 @@ function check(ok, message) {
   check(await page.evaluate(() => !document.querySelector('#tabPanel').hidden && [...document.querySelectorAll('#tabPanel input')].some(i => i.value === 'Bałtyk 2027') && document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Plan podróży” pokazuje zapisany plan');
   await page.click('.tabbar [data-tab="day"]');
   check(await page.evaluate(() => /\d\d:\d\d–\d\d:\d\d/.test(document.querySelector('#tabPanel').textContent)), 'Zakładka „Mój plan dnia”: szacunkowy harmonogram');
+  await page.click('#tabPanel [data-mode="walking"]');
+  check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days'))[0].mode === 'walking' && document.querySelector('#tabPanel [data-mode="walking"]').getAttribute('aria-pressed') === 'true'
+    && /travelmode=walking/.test(document.querySelector('#tabPanel .ghost-action')?.href || 'travelmode=walking')), 'Mój plan dnia: wycieczka piesza zapisana (Google Maps pieszo)');
   await page.click('.tabbar [data-tab="memories"]');
   check(await page.evaluate(() => document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Wspomnienia”: odwiedzone miasto');
   await page.click('.tabbar [data-tab="profile"]');
@@ -210,7 +223,29 @@ function check(ok, message) {
   check(guide.url.includes('region=swietokrzyskie') && guide.url.includes('town=Sandomierz') && guide.lang === 'pl', 'Przewodnik regionu: otwiera się z miejscowością i językiem PL');
   check(guide.list >= 5 && guide.plan >= 3, 'Przewodnik regionu: lista Sandomierza i plan dnia (' + guide.list + ' miejsc, ' + guide.plan + ' przystanków)');
   check(guide.overflow === 0, 'Przewodnik regionu: brak poziomego przewijania');
+  check(await page.evaluate(() => !!(document.querySelector('.filters').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)),
+    'Przewodnik regionu: filtry (co pokazać na mapie) są przed mapą');
+  check(await page.evaluate(() => document.querySelector('#planMode [data-mode="walking"]').classList.contains('active') && /Pieszo/.test(document.querySelector('#modeWalk').textContent)),
+    'Przewodnik regionu: wycieczka piesza domyślna dla miejscowości');
   await page.click('#placeList [data-open]');
+  const wikiR = await page.evaluate(() => { const a = document.querySelector('#dBody .iwh-wiki[data-l="pl"] a'); return a && a.offsetParent !== null ? a.href : ''; });
+  check(/^https:\/\/(pl|en)\.wikipedia\.org\//.test(wikiR), 'Przewodnik regionu: „Więcej informacji o miejscu — Wikipedia” (' + decodeURIComponent(wikiR).slice(0, 60) + ')');
+  // Dziennik podróży: notatki + zdjęcia z biblioteki (limit 5), zapis w IndexedDB
+  const png = await page.screenshot({ clip: { x: 0, y: 0, width: 60, height: 60 } });
+  const jkey = await page.evaluate(() => document.querySelector('#dBody [data-journal]').dataset.journal);
+  await page.click('#dBody [data-journal]');
+  await page.waitForSelector('.iwh-journal:not([hidden]) #ijNotes');
+  await page.fill('#ijNotes', 'Piękny widok z Bramy Opatowskiej');
+  await page.setInputFiles('.ij-add input', [{ name: 'a.png', mimeType: 'image/png', buffer: png }]);
+  await page.waitForFunction(() => document.querySelectorAll('.ij-grid figure').length === 1);
+  await page.setInputFiles('.ij-add input', Array.from({ length: 6 }, (_, i) => ({ name: 'b' + i + '.png', mimeType: 'image/png', buffer: png })));
+  await page.waitForFunction(() => document.querySelectorAll('.ij-grid figure').length === 5);
+  check(await page.evaluate(() => document.querySelector('.ij-add input').disabled && /najwyżej 5/.test(document.querySelector('.ij-msg').textContent)), 'Dziennik: najwyżej 5 zdjęć, czytelny komunikat');
+  await page.click('.ij-done');
+  const jr = await page.evaluate(k => IWH_EXTRAS.journal.get(k).then(e => e && { notes: e.notes, photos: e.photos.length, jpeg: e.photos.every(p => p.blob && p.blob.type === 'image/jpeg') }), jkey);
+  check(jr && jr.notes.includes('Bramy') && jr.photos === 5 && jr.jpeg, 'Dziennik: notatka i 5 zdjęć zapisane w IndexedDB (' + JSON.stringify(jr) + ')');
+  await page.waitForFunction(() => /📷 5/.test(document.querySelector('#dBody [data-journal-count]').textContent));
+  check(true, 'Dziennik: licznik zdjęć na przycisku');
   await page.click('#dBody [data-stamp]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_region_visited') || '[]').length === 1), 'Przewodnik regionu: pieczątka „Byłem tu” zapisana');
   await page.click('#dClose');
@@ -219,6 +254,11 @@ function check(ok, message) {
   await page.click('#atlasFloat');
   await page.waitForSelector('#provinceFocus .region-outline');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#cityName').textContent.startsWith('Świętokrzyskie')), 'Powrót z regionu do Atlasu: to samo województwo i język');
+  await page.click('.tabbar [data-tab="memories"]');
+  await page.waitForSelector('#memJournal li.plan-item');
+  check(await page.evaluate(() => document.querySelectorAll('#memJournal li.plan-item').length === 1 && /5 photos/.test(document.querySelector('#memJournal').textContent)
+    && !!document.querySelector('#memJournal .journal-thumb img')), 'Atlas → Wspomnienia: dziennik podróży z miniaturą i licznikiem zdjęć');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-atlas"]')), 'Atlas: logo z mapą Polski jako jeden znak');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

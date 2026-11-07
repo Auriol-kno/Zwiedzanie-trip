@@ -41,6 +41,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .r-pin span{transform:rotate(45deg);font-size:13px}
 .r-pin.saved{background:var(--accent)}
 .filters{margin-top:12px}
+.filters .section-title{margin-top:18px}
+#mapSection .section-title{margin-top:10px}
 .chips{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:3px 0 7px}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex:none;white-space:nowrap;border-radius:40px;padding:10px 12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:11px;font-weight:750}
@@ -57,7 +59,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .range-head{display:flex;justify-content:space-between;margin:14px 0 4px;font-size:12px;font-weight:800}
 .range-head em{font-style:normal;color:var(--accent)}
 input[type=range]{width:100%;accent-color:var(--accent)}
-.modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
 .modes button{border:1px solid transparent;background:var(--glass);color:var(--primary);border-radius:13px;min-height:48px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px}
 .modes button.active{background:var(--primary);color:#fff}
 .plan-list{list-style:none;margin:14px 0 0;padding:0;counter-reset:stop}

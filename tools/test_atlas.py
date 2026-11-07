@@ -24,8 +24,9 @@ city_block = atlas_js.split('const CITIES=[',1)[1].split('];',1)[0]
 cities = re.findall(r"\bid:'([^']+)'",city_block)
 assert len(cities) == 14 and len(set(cities)) == 14 and "kielce" in cities, "Atlas ma mieć 14 unikalnych miast (z Kielcami)."
 assert "id:'warsaw'" in city_block and 'ready:true' in city_block, "Warszawa musi być aktywna."
-assert ".top{position:sticky;top:0" in nav and "atlas-chip" in nav, "Logo z mapą Polski musi być zawsze widoczne u góry."
-for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg"):
+assert ".top{position:sticky;top:0" in nav and "brand-atlas.svg" in home, "Logo z mapą Polski musi być zawsze widoczne u góry."
+assert "atlas-chip" not in home, "Mapa jest częścią logo (jeden znak), bez osobnej ikonki."
+for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg","assets/brand-atlas.svg"):
     assert f in sw, "PWA nie buforuje: " + f
 for path in [atlas,home]:
     ids=re.findall(r'\bid="([^"]+)"',path)
@@ -169,5 +170,22 @@ assert sum(p["coordinateStatus"] == "osm" for p in regdb["places"]) >= 150 and "
 print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 14 miast w swoich województwach, relief, plany.")
 print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 14 accurately placed cities.")
+
+# 8.3 — Wikipedia, dziennik podróży, filtry przed mapą, wycieczka piesza, jedno logo z mapą
+extras = (ROOT / "assets/place-extras.js").read_text(encoding="utf-8")
+for page in ("atlas.html", "index.html", "region.html"):
+    src = (ROOT / page).read_text(encoding="utf-8")
+    assert "place-extras.js" in src and "place-extras.css" in src and "brand-atlas.svg" in src, page
+for f in ("./assets/place-extras.js", "./assets/place-extras.css", "./assets/brand-atlas.svg"):
+    assert f in sw, "Brak w cache offline: " + f
+assert "MAX_PHOTOS=5" in extras and "indexedDB" in extras and 'accept="image/*" multiple' in extras, "Dziennik: do 5 zdjęć z biblioteki"
+assert "wikipedia.org/wiki/" in extras and "index.php?search=" in extras, "Wikipedia: artykuł lub uczciwe wyszukiwanie"
+for k in ("wiki", "wikiSearch", "journal", "notes", "add", "privacy", "limit"):
+    assert extras.count(k + ":") >= 2, "PL/EN: " + k
+regp = (ROOT / "region.html").read_text(encoding="utf-8")
+assert regp.index('class="filters"') < regp.index('id="mapSection"'), "Filtry przed mapą (region)"
+assert 'data-mode="walking"' in regp and "walkMode:" in (ROOT / "assets/region.js").read_text(encoding="utf-8"), "Wycieczka piesza (region)"
+assert home.index('id="interestSection"') < home.index('id="mapSection"'), "Wybór atrakcji przed mapą (Warszawa)"
+assert 'data-mode="walking"' in home, "Wycieczka piesza (Warszawa)"
 
 print("OK: Atlas 14 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")

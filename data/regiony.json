@@ -242,6 +242,11 @@
     "type": "way",
     "id": 201180429,
     "name": "Pałac Biskupów Krakowskich"
+   },
+   "wiki": {
+    "qid": "Q586771",
+    "pl": "Pałac Biskupów Krakowskich w Kielcach",
+    "en": "Kraków Bishops Palace, Kielce"
    }
   },
   {
@@ -273,6 +278,11 @@
     "type": "way",
     "id": 133727496,
     "name": "Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny"
+   },
+   "wiki": {
+    "qid": "Q9167763",
+    "pl": "Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny w Kielcach",
+    "en": "Kielce Cathedral"
    }
   },
   {
@@ -305,6 +315,11 @@
     "type": "way",
     "id": 158540909,
     "name": "Rezerwat Kadzielnia"
+   },
+   "wiki": {
+    "qid": "Q9308632",
+    "pl": "Rezerwat przyrody Kadzielnia",
+    "en": null
    }
   },
   {
@@ -399,6 +414,11 @@
     "type": "node",
     "id": 417927852,
     "name": "Dąb Bartek"
+   },
+   "wiki": {
+    "qid": "Q790880",
+    "pl": "Dąb Bartek",
+    "en": "Bartek (tree)"
    }
   },
   {
@@ -461,6 +481,11 @@
     "type": "way",
     "id": 623240258,
     "name": "Zamek Królewski w Chęcinach"
+   },
+   "wiki": {
+    "qid": "Q4497261",
+    "pl": "Zamek w Chęcinach",
+    "en": "Chęciny Castle"
    }
   },
   {
@@ -493,6 +518,11 @@
     "type": "node",
     "id": 3804383556,
     "name": "Jaskinia Raj"
+   },
+   "wiki": {
+    "qid": "Q2674737",
+    "pl": "Raj (jaskinia)",
+    "en": "Paradise Cave"
    }
   },
   {
@@ -525,6 +555,11 @@
     "type": "way",
     "id": 290569578,
     "name": "Park Etnograficzny w Tokarni"
+   },
+   "wiki": {
+    "qid": "Q98181474",
+    "pl": "Park Etnograficzny w Tokarni",
+    "en": null
    }
   },
   {
@@ -556,6 +591,11 @@
     "type": "way",
     "id": 1355818728,
     "name": "Sanktuarium Relikwii Drzewa Krzyża Świętego, zespół klasztorny"
+   },
+   "wiki": {
+    "qid": "Q64008736",
+    "pl": "Opactwo na Świętym Krzyżu",
+    "en": null
    }
   },
   {
@@ -639,6 +679,11 @@
     "type": "way",
     "id": 1565023171,
     "name": "Zamek w Bodzentynie"
+   },
+   "wiki": {
+    "qid": "Q4937040",
+    "pl": "Zamek w Bodzentynie",
+    "en": "Bodzentyn Castle"
    }
   },
   {
@@ -670,6 +715,11 @@
     "type": "way",
     "id": 254666612,
     "name": "Opactwo Cystersów"
+   },
+   "wiki": {
+    "qid": "Q251627",
+    "pl": "Opactwo Cystersów w Wąchocku",
+    "en": "Wąchock Abbey"
    }
   },
   {
@@ -702,6 +752,11 @@
     "type": "way",
     "id": 415353727,
     "name": "Krzemionkowski region prehistorycznego górnictwa krzemienia pasiastego"
+   },
+   "wiki": {
+    "qid": "Q1434086",
+    "pl": "Krzemionki",
+    "en": "Krzemionki"
    }
   },
   {
@@ -733,6 +788,11 @@
     "type": "way",
     "id": 1093782070,
     "name": "Park dinozaurów Jura Park"
+   },
+   "wiki": {
+    "qid": "Q11729461",
+    "pl": "JuraPark Bałtów",
+    "en": null
    }
   },
   {
@@ -764,6 +824,11 @@
     "type": "way",
     "id": 49885798,
     "name": "Ruiny zamku \"Krzyżtopór\""
+   },
+   "wiki": {
+    "qid": "Q1571728",
+    "pl": "Krzyżtopór",
+    "en": "Krzyżtopór"
    }
   },
   {
@@ -826,6 +891,11 @@
     "type": "way",
     "id": 234906475,
     "name": "Brama Opatowska"
+   },
+   "wiki": {
+    "qid": "Q9178799",
+    "pl": "Brama Opatowska",
+    "en": "Opatów Gate"
    }
   },
   {
@@ -857,6 +927,11 @@
     "type": "node",
     "id": 1340174175,
     "name": "Podziemna Trasa Turystyczna"
+   },
+   "wiki": {
+    "qid": "Q20032942",
+    "pl": "Podziemna Trasa Turystyczna w Sandomierzu",
+    "en": null
    }
   },
   {
@@ -888,6 +963,11 @@
     "type": "way",
     "id": 119156368,
     "name": "Zamek w Sandomierzu"
+   },
+   "wiki": {
+    "qid": "Q7416441",
+    "pl": "Zamek w Sandomierzu",
+    "en": "Sandomierz Castle"
    }
   },
   {
@@ -919,6 +999,11 @@
     "type": "way",
     "id": 176484999,
     "name": "Katedra pw. Narodzenia Najświętszej Maryi Panny w Sandomierzu"
+   },
+   "wiki": {
+    "qid": "Q3405312",
+    "pl": "Bazylika Katedralna Narodzenia Najświętszej Maryi Panny w Sandomierzu",
+    "en": "Sandomierz Cathedral"
    }
   },
   {
@@ -1070,6 +1155,11 @@
     "type": "way",
     "id": 167241827,
     "name": "Bazylika Kolegiacka Narodzenia Najświętszej Maryi Panny"
+   },
+   "wiki": {
+    "qid": "Q3405251",
+    "pl": "Bazylika kolegiacka Narodzenia Najświętszej Marii Panny w Wiślicy",
+    "en": "Collegiate Basilica of the Birth of the Blessed Virgin Mary, Wiślica"
    }
   },
   {
@@ -1128,6 +1218,11 @@
     "type": "way",
     "id": 411983978,
     "name": "Państwowe Muzeum im. Przypkowskich"
+   },
+   "wiki": {
+    "qid": "Q7253676",
+    "pl": "Muzeum im. Przypkowskich w Jędrzejowie",
+    "en": "Przypkowscy Clock Museum"
    }
   },
   {
@@ -1192,6 +1287,11 @@
     "type": "way",
     "id": 380045349,
     "name": "Muzeum Wsi Mazowieckiej w Sierpcu"
+   },
+   "wiki": {
+    "qid": "Q11787256",
+    "pl": "Muzeum Wsi Mazowieckiej w Sierpcu",
+    "en": null
    }
   },
   {
@@ -1255,6 +1355,11 @@
     "type": "way",
     "id": 238335336,
     "name": "Katedra pw. Wniebowzięcia Najświętszej Maryi Panny"
+   },
+   "wiki": {
+    "qid": "Q1434756",
+    "pl": "Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny w Płocku",
+    "en": "Płock Cathedral"
    }
   },
   {
@@ -1286,6 +1391,11 @@
     "type": "way",
     "id": 1329479279,
     "name": "Zamek Książąt Mazowieckich"
+   },
+   "wiki": {
+    "qid": "Q9386588",
+    "pl": "Zamek książąt mazowieckich w Czersku",
+    "en": "Czersk Castle"
    }
   },
   {
@@ -1343,6 +1453,11 @@
     "type": "way",
     "id": 1329709920,
     "name": "Zamek Książąt Mazowieckich w Ciechanowie"
+   },
+   "wiki": {
+    "qid": "Q1011352",
+    "pl": "Zamek w Ciechanowie",
+    "en": "Ciechanów Castle"
    }
   },
   {
@@ -1405,6 +1520,11 @@
     "type": "way",
     "id": 583319830,
     "name": "Muzeum Romantyzmu"
+   },
+   "wiki": {
+    "qid": "Q11787194",
+    "pl": "Muzeum Romantyzmu w Opinogórze",
+    "en": null
    }
   },
   {
@@ -1436,6 +1556,11 @@
     "type": "way",
     "id": 25708301,
     "name": "Rynek"
+   },
+   "wiki": {
+    "qid": "Q1548947",
+    "pl": "Rynek we Wrocławiu",
+    "en": "Market Square, Wrocław"
    }
   },
   {
@@ -1467,6 +1592,11 @@
     "type": "node",
     "id": 1184182207,
     "name": "Ostrów Tumski"
+   },
+   "wiki": {
+    "qid": "Q2657474",
+    "pl": "Ostrów Tumski (Wrocław)",
+    "en": "Cathedral Island, Wrocław"
    }
   },
   {
@@ -1498,6 +1628,11 @@
     "type": "way",
     "id": 476702262,
     "name": "Hala Stulecia"
+   },
+   "wiki": {
+    "qid": "Q155743",
+    "pl": "Hala Stulecia we Wrocławiu",
+    "en": "Centennial Hall (Wrocław)"
    }
   },
   {
@@ -1529,6 +1664,11 @@
     "type": "way",
     "id": 1072344584,
     "name": "Panorama Racławicka"
+   },
+   "wiki": {
+    "qid": "Q1753248",
+    "pl": "Panorama Racławicka",
+    "en": "Racławice Panorama"
    }
   },
   {
@@ -1560,6 +1700,11 @@
     "type": "relation",
     "id": 9821066,
     "name": "Zamek Książ"
+   },
+   "wiki": {
+    "qid": "Q738109",
+    "pl": "Zamek Książ",
+    "en": "Książ Castle"
    }
   },
   {
@@ -1591,6 +1736,11 @@
     "type": "way",
     "id": 257204676,
     "name": "Kościół Pokoju w Świdnicy"
+   },
+   "wiki": {
+    "qid": "Q1456840",
+    "pl": "Kościół Pokoju w Świdnicy",
+    "en": "Holy Trinity Church of Peace in Świdnica"
    }
   },
   {
@@ -1648,6 +1798,11 @@
     "type": "way",
     "id": 269213674,
     "name": "Świątynia Wang"
+   },
+   "wiki": {
+    "qid": "Q1893280",
+    "pl": "Świątynia Wang",
+    "en": "Vang Stave Church"
    }
   },
   {
@@ -1679,6 +1834,11 @@
     "type": "node",
     "id": 1924014326,
     "name": "Twierdza Kłodzko"
+   },
+   "wiki": {
+    "qid": "Q6454959",
+    "pl": "Twierdza Kłodzko",
+    "en": "Kłodzko Fortress"
    }
   },
   {
@@ -1710,6 +1870,11 @@
     "type": "way",
     "id": 292939943,
     "name": "Kaplica Czaszek"
+   },
+   "wiki": {
+    "qid": "Q2879740",
+    "pl": "Kaplica Czaszek w Kudowie-Zdroju",
+    "en": "Skull Chapel"
    }
   },
   {
@@ -1773,6 +1938,11 @@
     "type": "way",
     "id": 307347617,
     "name": "Opactwo pw. Wszystkich Świętych"
+   },
+   "wiki": {
+    "qid": "Q1457087",
+    "pl": "Pocysterskie opactwo w Krzeszowie",
+    "en": "Krzeszów Abbey"
    }
   },
   {
@@ -1835,6 +2005,11 @@
     "type": "node",
     "id": 633481436,
     "name": "Dom Mikołaja Kopernika"
+   },
+   "wiki": {
+    "qid": "Q4165354",
+    "pl": "Dom Kopernika w Toruniu",
+    "en": "Copernicus House"
    }
   },
   {
@@ -1897,6 +2072,11 @@
     "type": "way",
     "id": 81882855,
     "name": "Krzywa Wieża"
+   },
+   "wiki": {
+    "qid": "Q2234463",
+    "pl": "Krzywa Wieża w Toruniu",
+    "en": "Leaning Tower of Toruń"
    }
   },
   {
@@ -2046,6 +2226,11 @@
     "type": "relation",
     "id": 1584083,
     "name": "Zamek Golubski"
+   },
+   "wiki": {
+    "qid": "Q2379846",
+    "pl": "Zamek w Golubiu",
+    "en": "Golub Castle"
    }
   },
   {
@@ -2217,6 +2402,11 @@
     "type": "node",
     "id": 457391498,
     "name": "Państwowe Muzeum na Majdanku"
+   },
+   "wiki": {
+    "qid": "Q13060293",
+    "pl": "Państwowe Muzeum na Majdanku",
+    "en": "Majdanek State Museum"
    }
   },
   {
@@ -2249,6 +2439,11 @@
     "type": "relation",
     "id": 1333649,
     "name": "Rynek"
+   },
+   "wiki": {
+    "qid": "Q135496142",
+    "pl": "Rynek w Kazimierzu Dolnym",
+    "en": null
    }
   },
   {
@@ -2311,6 +2506,11 @@
     "type": "way",
     "id": 1436950851,
     "name": "Stare Miasto w Zamościu"
+   },
+   "wiki": {
+    "qid": "Q3678597",
+    "pl": "Stare Miasto (Zamość)",
+    "en": "Old City (Zamość)"
    }
   },
   {
@@ -2404,6 +2604,11 @@
     "type": "way",
     "id": 185009813,
     "name": "Zamek w Janowcu"
+   },
+   "wiki": {
+    "qid": "Q9386646",
+    "pl": "Zamek w Janowcu",
+    "en": "Janowiec Castle"
    }
   },
   {
@@ -2461,6 +2666,11 @@
     "type": "way",
     "id": 303328821,
     "name": "Chełmskie Podziemia Kredowe"
+   },
+   "wiki": {
+    "qid": "Q2916845",
+    "pl": "Podziemia kredowe w Chełmie",
+    "en": "Chełm Chalk Tunnels"
    }
   },
   {
@@ -2610,6 +2820,11 @@
     "type": "relation",
     "id": 3771014,
     "name": "Park Mużakowski"
+   },
+   "wiki": {
+    "qid": "Q156308",
+    "pl": "Park Mużakowski",
+    "en": "Muskau Park"
    }
   },
   {
@@ -2641,6 +2856,11 @@
     "type": "way",
     "id": 1329471940,
     "name": "Zamek Joannitów w Łagowie"
+   },
+   "wiki": {
+    "qid": "Q16618861",
+    "pl": "Zamek joannitów w Łagowie",
+    "en": "Łagów Castle"
    }
   },
   {
@@ -2724,6 +2944,11 @@
     "type": "way",
     "id": 737560081,
     "name": "Muzeum Etnograficzne w Zielonej Górze-Ochli"
+   },
+   "wiki": {
+    "qid": "Q1371365",
+    "pl": "Skansen etnograficzny w Ochli",
+    "en": null
    }
   },
   {
@@ -2782,6 +3007,11 @@
     "type": "way",
     "id": 27148381,
     "name": "Manufaktura"
+   },
+   "wiki": {
+    "qid": "Q26658",
+    "pl": "Manufaktura (Łódź)",
+    "en": "Manufaktura"
    }
   },
   {
@@ -2813,6 +3043,11 @@
     "type": "way",
     "id": 37550695,
     "name": "Pałac Izraela Poznańskiego w Łodzi"
+   },
+   "wiki": {
+    "qid": "Q4578195",
+    "pl": "Pałac Izraela Poznańskiego",
+    "en": "Izrael Poznański Palace"
    }
   },
   {
@@ -2906,6 +3141,11 @@
     "type": "relation",
     "id": 17367850,
     "name": "Księży Młyn"
+   },
+   "wiki": {
+    "qid": "Q684754",
+    "pl": "Księży Młyn",
+    "en": "Księży Młyn (Łódź)"
    }
   },
   {
@@ -2936,6 +3176,11 @@
     "type": "way",
     "id": 908503079,
     "name": "Zamek w Łęczycy"
+   },
+   "wiki": {
+    "qid": "Q4258675",
+    "pl": "Zamek Królewski w Łęczycy",
+    "en": "Łęczyca Castle"
    }
   },
   {
@@ -2967,6 +3212,11 @@
     "type": "way",
     "id": 293194871,
     "name": "Archikolegiata pw. Najświętszej Maryi Panny Królowej i św. Aleksego"
+   },
+   "wiki": {
+    "qid": "Q5146985",
+    "pl": "Archikolegiata w Tumie",
+    "en": "Tum Collegiate Church"
    }
   },
   {
@@ -3025,6 +3275,11 @@
     "type": "way",
     "id": 88672231,
     "name": "Pałac w Nieborowie"
+   },
+   "wiki": {
+    "qid": "Q4562906",
+    "pl": "Pałac w Nieborowie",
+    "en": "Nieborów Palace"
    }
   },
   {
@@ -3056,6 +3311,11 @@
     "type": "way",
     "id": 318827668,
     "name": "Muzeum w Łowiczu"
+   },
+   "wiki": {
+    "qid": "Q11787326",
+    "pl": "Muzeum w Łowiczu",
+    "en": null
    }
   },
   {
@@ -3118,6 +3378,11 @@
     "type": "relation",
     "id": 2270819,
     "name": "Zamek Królewski na Wawelu"
+   },
+   "wiki": {
+    "qid": "Q18820",
+    "pl": "Zamek Królewski na Wawelu",
+    "en": "Wawel Castle"
    }
   },
   {
@@ -3149,6 +3414,11 @@
     "type": "way",
     "id": 23256528,
     "name": "Sukiennice"
+   },
+   "wiki": {
+    "qid": "Q1072350",
+    "pl": "Sukiennice w Krakowie",
+    "en": "Kraków Cloth Hall"
    }
   },
   {
@@ -3180,6 +3450,11 @@
     "type": "way",
     "id": 26195267,
     "name": "Bazylika Wniebowzięcia Najświętszej Maryi Panny"
+   },
+   "wiki": {
+    "qid": "Q1143171",
+    "pl": "Kościół archiprezbiterialny Wniebowzięcia Najświętszej Marii Panny w Krakowie",
+    "en": "Basilica of the Assumption of the Blessed Virgin Mary, Kraków"
    }
   },
   {
@@ -3211,6 +3486,11 @@
     "type": "relation",
     "id": 3228454,
     "name": "Kazimierz"
+   },
+   "wiki": {
+    "qid": "Q93706",
+    "pl": "Kazimierz (Kraków)",
+    "en": "Kazimierz"
    }
   },
   {
@@ -3242,6 +3522,11 @@
     "type": "way",
     "id": 136648568,
     "name": "Fabryka Emalia Oskara Schindlera"
+   },
+   "wiki": {
+    "qid": "Q286522",
+    "pl": "Fabryka Emalia Oskara Schindlera",
+    "en": "Oskar Schindler's Enamel Factory"
    }
   },
   {
@@ -3274,6 +3559,11 @@
     "type": "way",
     "id": 1078429469,
     "name": "Kopalnia soli Wieliczka"
+   },
+   "wiki": {
+    "qid": "Q454019",
+    "pl": "Kopalnia Soli „Wieliczka”",
+    "en": "Wieliczka Salt Mine"
    }
   },
   {
@@ -3305,6 +3595,11 @@
     "type": "relation",
     "id": 16705965,
     "name": "Państwowe Muzeum Auschwitz-Birkenau"
+   },
+   "wiki": {
+    "qid": "Q819729",
+    "pl": "Państwowe Muzeum Auschwitz-Birkenau w Oświęcimiu",
+    "en": "Auschwitz-Birkenau State Museum"
    }
   },
   {
@@ -3393,6 +3688,11 @@
     "type": "node",
     "id": 3552158247,
     "name": "Kasprowy Wierch"
+   },
+   "wiki": {
+    "qid": "Q1735189",
+    "pl": "Kasprowy Wierch",
+    "en": "Kasprowy Wierch"
    }
   },
   {
@@ -3514,6 +3814,11 @@
     "type": "way",
     "id": 207032354,
     "name": "Wieża Piastowska"
+   },
+   "wiki": {
+    "qid": "Q30236729",
+    "pl": "Wieża Piastowska w Opolu",
+    "en": null
    }
   },
   {
@@ -3576,6 +3881,11 @@
     "type": "way",
     "id": 239470440,
     "name": "Muzeum Wsi Opolskiej"
+   },
+   "wiki": {
+    "qid": "Q212560",
+    "pl": "Muzeum Wsi Opolskiej w Opolu",
+    "en": null
    }
   },
   {
@@ -3607,6 +3917,11 @@
     "type": "way",
     "id": 73054209,
     "name": "Zamek Moszna"
+   },
+   "wiki": {
+    "qid": "Q1133188",
+    "pl": "Pałac w Mosznej",
+    "en": "Moszna Castle"
    }
   },
   {
@@ -3638,6 +3953,11 @@
     "type": "way",
     "id": 168000836,
     "name": "Jurapark Krasiejów"
+   },
+   "wiki": {
+    "qid": "Q15715809",
+    "pl": "JuraPark Krasiejów",
+    "en": null
    }
   },
   {
@@ -3757,6 +4077,11 @@
     "type": "way",
     "id": 230535120,
     "name": "Zamek Piastów Śląskich"
+   },
+   "wiki": {
+    "qid": "Q9386548",
+    "pl": "Zamek Piastów Śląskich w Brzegu",
+    "en": "Brzeg Castle"
    }
   },
   {
@@ -3787,6 +4112,11 @@
     "type": "way",
     "id": 149933479,
     "name": "Rynek"
+   },
+   "wiki": {
+    "qid": "Q9324508",
+    "pl": "Rynek w Rzeszowie",
+    "en": null
    }
   },
   {
@@ -3818,6 +4148,11 @@
     "type": "relation",
     "id": 3229503,
     "name": "Zamek w Łańcucie"
+   },
+   "wiki": {
+    "qid": "Q773316",
+    "pl": "Zamek w Łańcucie",
+    "en": "Łańcut Castle"
    }
   },
   {
@@ -3964,6 +4299,11 @@
     "type": "way",
     "id": 41714371,
     "name": "Muzeum Budownictwa Ludowego w Sanoku"
+   },
+   "wiki": {
+    "qid": "Q773526",
+    "pl": "Muzeum Budownictwa Ludowego w Sanoku",
+    "en": "Museum of Folk Architecture, Sanok"
    }
   },
   {
@@ -4020,6 +4360,11 @@
     "type": "relation",
     "id": 6178442,
     "name": "Zamek w Baranowie Sandomierskim"
+   },
+   "wiki": {
+    "qid": "Q614041",
+    "pl": "Zamek w Baranowie Sandomierskim",
+    "en": "Baranów Sandomierski Castle"
    }
   },
   {
@@ -4052,6 +4397,11 @@
     "type": "way",
     "id": 261763113,
     "name": "Kościół drewniany pw. Wniebowzięcia NMP i św. Michała Archanioła 1388"
+   },
+   "wiki": {
+    "qid": "Q11745863",
+    "pl": "Kościół Wniebowzięcia Najświętszej Maryi Panny w Haczowie",
+    "en": "Assumption of Holy Mary Church, Haczów"
    }
   },
   {
@@ -4116,6 +4466,11 @@
     "type": "way",
     "id": 242871669,
     "name": "Pałac Branickich"
+   },
+   "wiki": {
+    "qid": "Q2376970",
+    "pl": "Pałac Branickich w Białymstoku",
+    "en": "Branicki Palace, Białystok"
    }
   },
   {
@@ -4146,6 +4501,11 @@
     "type": "relation",
     "id": 3873588,
     "name": "Rynek Kościuszki"
+   },
+   "wiki": {
+    "qid": "Q9324457",
+    "pl": "Rynek Kościuszki w Białymstoku",
+    "en": "Kościuszko Market Square"
    }
   },
   {
@@ -4203,6 +4563,11 @@
     "type": "way",
     "id": 39135567,
     "name": "Rezerwat Pokazowy Żubrów"
+   },
+   "wiki": {
+    "qid": "Q9307818",
+    "pl": "Rezerwat Pokazowy Żubrów (Białowieski PN)",
+    "en": null
    }
   },
   {
@@ -4234,6 +4599,11 @@
     "type": "way",
     "id": 274446049,
     "name": "Wielka Synagoga"
+   },
+   "wiki": {
+    "qid": "Q5735403",
+    "pl": "Wielka Synagoga w Tykocinie",
+    "en": "Tykocin Synagogue"
    }
   },
   {
@@ -4266,6 +4636,11 @@
     "type": "way",
     "id": 239934712,
     "name": "Meczet w Kruszynianach"
+   },
+   "wiki": {
+    "qid": "Q11772931",
+    "pl": "Meczet w Kruszynianach",
+    "en": "Kruszyniany Mosque"
    }
   },
   {
@@ -4376,6 +4751,11 @@
     "type": "node",
     "id": 1747326748,
     "name": "Muzeum Ikon"
+   },
+   "wiki": {
+    "qid": "Q11787015",
+    "pl": "Muzeum Ikon w Supraślu",
+    "en": null
    }
   },
   {
@@ -4469,6 +4849,11 @@
     "type": "way",
     "id": 96702317,
     "name": "Brama Żuraw"
+   },
+   "wiki": {
+    "qid": "Q253930",
+    "pl": "Brama Żuraw w Gdańsku",
+    "en": "Gdańsk Crane"
    }
   },
   {
@@ -4500,6 +4885,11 @@
     "type": "way",
     "id": 179780270,
     "name": "Europejskie Centrum Solidarności"
+   },
+   "wiki": {
+    "qid": "Q534403",
+    "pl": "Europejskie Centrum Solidarności",
+    "en": "European Solidarity Centre"
    }
   },
   {
@@ -4531,6 +4921,11 @@
     "type": "relation",
     "id": 6808053,
     "name": "Muzeum II Wojny Światowej"
+   },
+   "wiki": {
+    "qid": "Q11129717",
+    "pl": "Muzeum II Wojny Światowej w Gdańsku",
+    "en": "Museum of the Second World War"
    }
   },
   {
@@ -4562,6 +4957,11 @@
     "type": "way",
     "id": 1334328771,
     "name": "Westerplatte"
+   },
+   "wiki": {
+    "qid": "Q517081",
+    "pl": "Westerplatte",
+    "en": "Westerplatte"
    }
   },
   {
@@ -4624,6 +5024,11 @@
     "type": "way",
     "id": 172671466,
     "name": "Molo w Sopocie"
+   },
+   "wiki": {
+    "qid": "Q3177824",
+    "pl": "Molo w Sopocie",
+    "en": "Sopot Pier"
    }
   },
   {
@@ -4687,6 +5092,11 @@
     "type": "relation",
     "id": 6436433,
     "name": "Zamek w Malborku"
+   },
+   "wiki": {
+    "qid": "Q71279",
+    "pl": "Zamek w Malborku",
+    "en": "Malbork Castle"
    }
   },
   {
@@ -4802,6 +5212,11 @@
     "type": "way",
     "id": 528710026,
     "name": "Katedra pw. Wniebowzięcia Najświętszej Maryi Panny"
+   },
+   "wiki": {
+    "qid": "Q641751",
+    "pl": "Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny w Pelplinie",
+    "en": "Cathedral Basilica of the Assumption, Pelplin"
    }
   },
   {
@@ -4860,6 +5275,11 @@
     "type": "node",
     "id": 31901028,
     "name": "Nikiszowiec"
+   },
+   "wiki": {
+    "qid": "Q1990266",
+    "pl": "Nikiszowiec",
+    "en": "Nikiszowiec"
    }
   },
   {
@@ -4890,6 +5310,11 @@
     "type": "way",
     "id": 306149015,
     "name": "Muzeum Śląskie"
+   },
+   "wiki": {
+    "qid": "Q2239241",
+    "pl": "Muzeum Śląskie w Katowicach",
+    "en": "Silesian Museum (Katowice)"
    }
   },
   {
@@ -4953,6 +5378,11 @@
     "type": "way",
     "id": 88383304,
     "name": "Zabytkowa Kopalnia Srebra"
+   },
+   "wiki": {
+    "qid": "Q9385508",
+    "pl": "Zabytkowa Kopalnia Srebra",
+    "en": "Historic Silver Mine in Tarnowskie Góry"
    }
   },
   {
@@ -4984,6 +5414,11 @@
     "type": "relation",
     "id": 13236692,
     "name": "Jasna Góra"
+   },
+   "wiki": {
+    "qid": "Q573920",
+    "pl": "Jasna Góra",
+    "en": "Jasna Góra Monastery"
    }
   },
   {
@@ -5015,6 +5450,11 @@
     "type": "way",
     "id": 14149043,
     "name": "Zamek Ogrodzieniec"
+   },
+   "wiki": {
+    "qid": "Q21155924",
+    "pl": "Zamek Ogrodzieniec",
+    "en": "Ogrodzieniec Castle"
    }
   },
   {
@@ -5046,6 +5486,11 @@
     "type": "way",
     "id": 172583260,
     "name": "Zamek w Pszczynie"
+   },
+   "wiki": {
+    "qid": "Q7221849",
+    "pl": "Zamek w Pszczynie",
+    "en": "Pszczyna Castle"
    }
   },
   {
@@ -5102,6 +5547,11 @@
     "type": "way",
     "id": 166848385,
     "name": "Kościół pw. Świętego Mikołaja"
+   },
+   "wiki": {
+    "qid": "Q11747289",
+    "pl": "Rotunda św. Mikołaja w Cieszynie",
+    "en": "Rotunda of Saint Nicolas in Cieszyn"
    }
   },
   {
@@ -5133,6 +5583,11 @@
     "type": "way",
     "id": 89954086,
     "name": "Radiostacja gliwicka"
+   },
+   "wiki": {
+    "qid": "Q597596",
+    "pl": "Radiostacja gliwicka",
+    "en": "Gliwice Radio Tower"
    }
   },
   {
@@ -5164,6 +5619,11 @@
     "type": "way",
     "id": 104285296,
     "name": "Zamek Kapituły Warmińskiej"
+   },
+   "wiki": {
+    "qid": "Q9386527",
+    "pl": "Zamek Kapituły Warmińskiej w Olsztynie",
+    "en": "Olsztyn Castle"
    }
   },
   {
@@ -5257,6 +5717,11 @@
     "type": "way",
     "id": 1332682138,
     "name": "Zamek Biskupów Warmińskich"
+   },
+   "wiki": {
+    "qid": "Q5420724",
+    "pl": "Zamek Biskupów Warmińskich w Lidzbarku Warmińskim",
+    "en": "Lidzbark Castle"
    }
   },
   {
@@ -5318,6 +5783,11 @@
     "type": "way",
     "id": 23554892,
     "name": "Wilczy Szaniec"
+   },
+   "wiki": {
+    "qid": "Q157153",
+    "pl": "Wilczy Szaniec",
+    "en": "Wolf's Lair"
    }
   },
   {
@@ -5350,6 +5820,11 @@
     "type": "way",
     "id": 175612582,
     "name": "Twierdza Boyen"
+   },
+   "wiki": {
+    "qid": "Q1408436",
+    "pl": "Twierdza Boyen",
+    "en": "Boyen Fortress"
    }
   },
   {
@@ -5434,6 +5909,11 @@
     "type": "way",
     "id": 352955376,
     "name": "Muzeum Budownictwa Ludowego - Park Etnograficzny w Olsztynku"
+   },
+   "wiki": {
+    "qid": "Q1454536",
+    "pl": "Muzeum Budownictwa Ludowego w Olsztynku",
+    "en": null
    }
   },
   {
@@ -5465,6 +5945,11 @@
     "type": "way",
     "id": 279411310,
     "name": "Zamek w Reszlu"
+   },
+   "wiki": {
+    "qid": "Q9386726",
+    "pl": "Zamek w Reszlu",
+    "en": "Reszel Castle"
    }
   },
   {
@@ -5554,6 +6039,11 @@
     "type": "way",
     "id": 28905259,
     "name": "Ostrów Tumski"
+   },
+   "wiki": {
+    "qid": "Q11837346",
+    "pl": "Ulica Ostrów Tumski w Poznaniu",
+    "en": null
    }
   },
   {
@@ -5616,6 +6106,11 @@
     "type": "way",
     "id": 35270118,
     "name": "Palmiarnia Poznańska"
+   },
+   "wiki": {
+    "qid": "Q11802396",
+    "pl": "Palmiarnia Poznańska",
+    "en": null
    }
   },
   {
@@ -5672,6 +6167,11 @@
     "type": "node",
     "id": 2082753545,
     "name": "Muzeum Pierwszych Piastów na Lednicy"
+   },
+   "wiki": {
+    "qid": "Q11787124",
+    "pl": "Muzeum Pierwszych Piastów na Lednicy",
+    "en": null
    }
   },
   {
@@ -5704,6 +6204,11 @@
     "type": "way",
     "id": 134633044,
     "name": "Zamek w Kórniku"
+   },
+   "wiki": {
+    "qid": "Q524338",
+    "pl": "Zamek w Kórniku",
+    "en": "Kórnik Castle"
    }
   },
   {
@@ -5793,6 +6298,11 @@
     "type": "way",
     "id": 263859879,
     "name": "Zamek w Gołuchowie"
+   },
+   "wiki": {
+    "qid": "Q9386639",
+    "pl": "Zamek w Gołuchowie",
+    "en": "Gołuchów Castle"
    }
   },
   {
@@ -5854,6 +6364,11 @@
     "type": "way",
     "id": 208331587,
     "name": "Sanktuarium Maryjne w Licheniu Starym"
+   },
+   "wiki": {
+    "qid": "Q16481841",
+    "pl": "Sanktuarium Matki Bożej Bolesnej Królowej Polski w Licheniu Starym",
+    "en": null
    }
   },
   {
@@ -5916,6 +6431,11 @@
     "type": "relation",
     "id": 12774910,
     "name": "Zamek Książąt Pomorskich"
+   },
+   "wiki": {
+    "qid": "Q442169",
+    "pl": "Zamek Książąt Pomorskich w Szczecinie",
+    "en": "Ducal Castle, Szczecin"
    }
   },
   {
@@ -6032,6 +6552,11 @@
     "type": "way",
     "id": 293604046,
     "name": "Ruiny kościoła w Trzęsaczu"
+   },
+   "wiki": {
+    "qid": "Q849917",
+    "pl": "Kościół św. Mikołaja w Trzęsaczu",
+    "en": "Church of Saint Nicholas, Trzęsacz"
    }
   },
   {
@@ -6183,6 +6708,11 @@
     "type": "relation",
     "id": 6986844,
     "name": "Zamek Książąt Pomorskich w Darłowie"
+   },
+   "wiki": {
+    "qid": "Q2243270",
+    "pl": "Zamek Książąt Pomorskich w Darłowie",
+    "en": "Darłowo Castle"
    }
   },
   {
@@ -6214,6 +6744,11 @@
     "type": "relation",
     "id": 13559121,
     "name": "Rynek"
+   },
+   "wiki": {
+    "qid": "Q9324497",
+    "pl": "Rynek w Kielcach",
+    "en": null
    }
   },
   {
@@ -6245,6 +6780,11 @@
     "type": "node",
     "id": 1904638174,
     "name": "Muzeum Zabawek i Zabawy"
+   },
+   "wiki": {
+    "qid": "Q11787262",
+    "pl": "Muzeum Zabawek i Zabawy w Kielcach",
+    "en": null
    }
   },
   {
@@ -6276,6 +6816,11 @@
     "type": "node",
     "id": 1904638169,
     "name": "Muzeum Historii Kielc"
+   },
+   "wiki": {
+    "qid": "Q11786995",
+    "pl": "Muzeum Historii Kielc",
+    "en": null
    }
   },
   {
@@ -6448,8 +6993,14 @@
     "type": "node",
     "id": 2514439430,
     "name": "Telegraf"
+   },
+   "wiki": {
+    "qid": "Q9356452",
+    "pl": "Telegraf (góra)",
+    "en": null
    }
   }
  ],
- "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07"
+ "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",
+ "wikiSource": "OpenStreetMap wikidata tag (© OpenStreetMap contributors, ODbL) + Wikidata sitelinks (CC0) — 2026-11-07"
 }
