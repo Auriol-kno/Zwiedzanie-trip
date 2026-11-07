@@ -38,7 +38,7 @@ Geometria 16 województw pochodzi z projektu Natural Earth udostępnionego w rep
 - Geografia i rozmieszczenie miast są oparte na danych mapowych. Miniatury zabytków oraz ukształtowanie krajobrazu to stylizacje.
 - Mapa jest **interaktywnym atlasem poglądowym**, nie nawigacją drogową i nie dokładnym modelem wysokości.
 - Polska i angielska wersja językowa nadal są dostępne. Pełne redakcyjne przekłady historii wszystkich 184 atrakcji to osobny etap.
-- Nowy `icon.svg` reprezentuje markę; pliki PNG `icon-180.png` i `icon-512.png` w starszych instalacjach iOS mogą wciąż pochodzić z poprzedniej wersji. W kolejnej iteracji należy zsynchronizować również ich wersje rastrowe.
+- Nowe ikony `icon-180.png` i `icon-512.png` zostały już wygenerowane z `icon.svg` przez GitHub Actions (commit `7766a2c2`). Starsze instalacje iPhone’a mogą przechowywać poprzednią ikonę w pamięci podręcznej; w takim przypadku należy dodać aplikację do ekranu początkowego ponownie.
 - Kod i geometrię sprawdzono testami automatycznymi. Pełne testy Safari na fizycznym iPhonie oraz potwierdzenie publikacji GitHub Pages wymagają jeszcze wykonania.
 
 ## Otwórz aplikację

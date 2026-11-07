@@ -47,5 +47,5 @@ IMPORTANT
 - The map border, province boundaries and city coordinates are geographic data.
 - Landmark vignettes and scenery are artistic representations, not a topographic survey.
 - Currently only Warsaw has the full guide; the other 12 cities are coming soon.
-- Older iPhone PNG icons may retain previous artwork until the raster assets are replaced.
+- The 180px and 512px PNG icons were regenerated from the SVG logo by GitHub Actions (commit 7766a2c2). Previously installed iPhone shortcuts may keep a cached old icon; add the app again if needed.
 - Final tests on a physical iPhone and live GitHub Pages deployment verification remain pending.
