@@ -83,8 +83,7 @@ body[data-style=light] .city-label-pill .city-label{fill:#23413a}
 .city-dot.outside{opacity:.5}
 .city-dot.outside .city-label-pill{display:none}
 .city-landmark{filter:drop-shadow(0 4px 4px rgba(0,0,0,.28));pointer-events:none;opacity:var(--lm-o,1)}
-body.no-landmarks .city-landmark,body[data-focus=region] .city-landmark{display:none}
-body[data-focus=region] .city-landmark{display:none}
+body.no-landmarks .city-landmark{display:none}
 #towns{opacity:var(--towns-o,0);transition:opacity .2s}
 body.no-towns #towns{display:none}
 body:not([data-style=light]) .town-ring{fill:#c8553a;stroke:var(--cream)}
@@ -129,10 +128,6 @@ body[data-style=light] .scale{text-shadow:none;color:#23413a}
 .attribution{left:14px!important;right:auto;bottom:calc(var(--bottom-h,170px) + var(--tabbar-h) + 3px)!important;background:none!important;color:var(--ui-sub);opacity:.7;font-size:8px;padding:0;max-width:52vw;pointer-events:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 body[data-focus=region] .attribution{opacity:.75}
 /* Stały przycisk powrotu do całej Polski — nad dolnym panelem, poza safe area. */
-.poland-home{position:absolute;z-index:26;right:12px;bottom:calc(var(--bottom-h,170px) + var(--tabbar-h) + 22px);display:flex;align-items:center;gap:6px;min-height:48px;padding:4px 12px 4px 4px;border-radius:24px;border:1px solid rgba(255,178,74,.55);background:linear-gradient(145deg,rgba(11,52,70,.96),rgba(6,31,44,.96));color:var(--cream);font:800 12px/1 Inter,sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,255,255,.06)}
-.poland-home img{width:40px;height:38px;border-radius:50%;background:radial-gradient(circle,#2f6f5b,#174a3c);padding:3px}
-.poland-home:active{transform:scale(.97)}
-body[data-style=light] .poland-home{background:#fffdf3;color:#23413a;border-color:#d6c9a6}
 
 /* ---------- dolny panel: miasta, województwa i karta (bottom sheet) */
 .atlas-bottom{bottom:var(--tabbar-h)!important;padding:18px 12px 10px!important}
@@ -263,7 +258,6 @@ body[data-style=light] .new-plan input{background:#fff;color-scheme:light}
 .picker .city-action{background:var(--ui-accent);color:var(--ui-accent-fg);border:0;border-radius:13px;min-height:44px;padding:10px 16px;font-weight:850}
 .toast{position:absolute;z-index:60;left:50%;bottom:calc(var(--tabbar-h) + 16px);transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100vw - 32px);padding:11px 16px;border-radius:14px;background:#10232c;color:#fff9e8;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
-body:not([data-tab=map]):not([data-tab=""]) .poland-home{display:none}
 body[data-tab=trips] .atlas-bottom,body[data-tab=day] .atlas-bottom,body[data-tab=memories] .atlas-bottom,body[data-tab=profile] .atlas-bottom,body[data-tab=explore] .atlas-bottom,body[data-tab=plans] .atlas-bottom,body[data-tab=passport] .atlas-bottom{visibility:hidden}
 @media(max-height:700px){.city-chip{min-height:36px;padding:6px 10px}.atlas-bottom{padding-top:12px!important}.place-sheet .city-title strong{font-size:18px}.sheet-places{max-height:22vh}}
 @media(prefers-reduced-motion:reduce){.place-sheet{animation:none}.toast{transition:none}.region-name,#towns{transition:none}}
@@ -292,3 +286,12 @@ body:not([data-style=light]) #atlasApp:before{display:none}
 .pi-actions a{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;border-radius:10px;border:1px solid var(--ui-line);color:var(--ui-fg);text-decoration:none;font-weight:700;font-size:12px}
 .tabbar svg{fill:currentColor}
 html[lang=en] .tabbar [data-l=pl],html:not([lang=en]) .tabbar [data-l=en]{display:none}
+
+/* 8.5 — pinezka z pejzażem obok napisu w nagłówku Atlasu */
+.atlas-top .brand{display:flex;align-items:center;gap:10px}
+.atlas-top .brand-pin-l{flex:none;width:26px;height:35px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+@media(max-width:400px){.atlas-top .brand-pin-l{width:20px;height:27px}}
+
+/* 8.5 — znaczek miasta widoczny także po wejściu w województwo; w zakładce Pieczątki bez zdublowanego tytułu */
+body[data-focus=region] .city-landmark{opacity:1}
+.pp-host .pp-title,.pp-host .ij-kicker{display:none}

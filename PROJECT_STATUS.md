@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-4-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Cache PWA:** `i-was-here-v8-5-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 
 > Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
 > dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.
@@ -48,8 +48,9 @@
 ### Wspólne
 - **Logo = jeden znak** (od 8.4 `assets/brand-mark.svg` — kafelek właściciela: zielone tło, złota ramka, Polska z trasą i pinezką; kliknięcie = cała Polska)
 - **Jedno dolne menu** (`assets/app-nav.js`): Mapa · Odkrywaj · Plany · Paszport · Profil na każdej stronie.
-- **Paszport odkrywcy**: wspólne okno z pieczątkami i dziennikiem, karta w Profilu, zakładka w Atlasie.
-- **Malowane motywy 14 miast** na mapie, w karcie miasta i w nagłówku przewodnika regionu.
+- **Pieczątki** (8.5, dawny Paszport): klikalne liczniki, 14 znaczków miast i listy miejsc z „Byłem tu” (odblokuj/odznacz), dziennik; karta w Profilu, zakładka w Atlasie.
+- **Plany**: punkt z mapy regionu → plan dnia/podróży; podróż → plan dnia.
+- **Znaczki pocztowe 14 miast** (8.5) na mapie (także w widoku województwa), w karcie miasta, w nagłówku przewodnika regionu i w Pieczątkach.
 - (8.3.1) poprzednie logo w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
 - **„Więcej informacji o miejscu — Wikipedia”** przy opisie każdej atrakcji (regiony + Warszawa), PL/EN; potwierdzony artykuł
   (OSM `wikidata` + Wikidata) albo uczciwe wyszukiwanie w Wikipedii — patrz liczby w §2.

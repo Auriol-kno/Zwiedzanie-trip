@@ -145,7 +145,7 @@ function pointCity(city){
  const p=project(city.lon,city.lat),st=cityStatus(city.id);
  const b=el('g',{class:'city-dot st-'+st+(!city.ready?' upcoming':'')+(current.id===city.id&&mode==='city'&&sheetOpen?' selected':''),tabindex:'0',role:'button',
   'aria-label':cityText(city)+', '+(st==='visited'?t().stVisited:st==='planned'?t().stPlanned:t().stNone),'data-city':city.id,'data-x':p.x.toFixed(1),'data-y':p.y.toFixed(1)});
- if(window.IWH_ATLAS_ART){const art=el('g',{class:'city-landmark',transform:'translate(-37,-86)'});art.innerHTML=window.IWH_ATLAS_ART.landmark(city.id);b.appendChild(art)}
+ if(window.IWH_ATLAS_ART){const art=el('g',{class:'city-landmark',transform:'translate(-37,-86)'});art.innerHTML=window.IWH_ATLAS_ART.landmark(city.id,{name:cityText(city),visited:!!(PLANS&&PLANS.isVisited({t:'city',id:city.id}))});b.appendChild(art)}
  b.appendChild(el('ellipse',{class:'pin-shadow',cx:0,cy:1,rx:7,ry:2.6}));
  b.appendChild(el('path',{class:'pin',d:'M0 0C-3-6-9-10-9-16a9 9 0 0 1 18 0c0 6-6 10-9 16Z'}));
  b.appendChild(el('circle',{class:'pin-dot',cx:0,cy:-16,r:3.6}));
@@ -386,7 +386,7 @@ function renderCard(){
   badge(currentItem());return;
  }
  box.hidden=true;box.textContent='';renderPlaces(null);
- thumb.innerHTML=window.IWH_ATLAS_ART?'<svg viewBox="0 -6 80 62" aria-hidden="true">'+window.IWH_ATLAS_ART.landmark(current.id)+'</svg>':'';
+ thumb.innerHTML=window.IWH_ATLAS_ART?'<svg viewBox="0 -6 80 62" aria-hidden="true">'+window.IWH_ATLAS_ART.landmark(current.id,{name:cityText(current),visited:!!(PLANS&&PLANS.isVisited({t:'city',id:current.id}))})+'</svg>':'';
  $('#cityName').textContent=cityText(current);
  const info=CITY_INFO[current.id];
  $('#cityDescription').textContent=(info?info[lang==='en'?1:0]:'')+(current.ready?' '+x.pilotMessage+'.':'');
@@ -408,12 +408,12 @@ function localize(){
  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
  set('atlasTagline',x.tagline);set('atlasFooter',x.footer);set('layersTitle',x.layers);set('layerBorders',x.layerBorders);set('layerNames',x.layerNames);set('layerRelief',x.layerRelief);
  set('layerTowns',x.layerTowns);set('layerLandmarks',x.layerLandmarks);set('styleTitle',x.styleTitle);set('styleAtlas',x.styleAtlas);set('styleLight',x.styleLight);set('styleNight',x.styleNight);set('styleTerrain',x.styleTerrain);
- set('homeLabel',x.home);set('addTripLabel',x.addTrip);set('addDayLabel',x.addDay);$('#addTrip').setAttribute('aria-label',x.addTripA);$('#addDay').setAttribute('aria-label',x.addDayA);
+ set('addTripLabel',x.addTrip);set('addDayLabel',x.addDay);$('#addTrip').setAttribute('aria-label',x.addTripA);$('#addDay').setAttribute('aria-label',x.addDayA);
  $('#langButton').querySelectorAll('[data-lang]').forEach(s=>s.classList.toggle('on',s.dataset.lang===lang));
  $('#langButton').setAttribute('aria-label',x.langLabel);
  $('#searchInput').placeholder=x.search;$('#searchInput').setAttribute('aria-label',x.searchLabel);
  $('#searchButton').setAttribute('aria-label',x.search);$('#searchClose').setAttribute('aria-label',x.closeSearch);
- $('#resetView').setAttribute('aria-label',x.reset);$('#resetView').title=x.reset;
+ $('.atlas-top .brand').title=x.reset;
  $('#zoomIn').setAttribute('aria-label',x.zoomIn);$('#zoomOut').setAttribute('aria-label',x.zoomOut);
  $('#layersButton').setAttribute('aria-label',x.layers);$('.map-controls').setAttribute('aria-label',x.mapControls);
  $('#sheetClose').setAttribute('aria-label',x.close);
@@ -447,7 +447,6 @@ $('#cityStrip').onclick=e=>{const b=e.target.closest('[data-city-chip]');if(b)se
 $('#langButton').onclick=e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;localize()};
 STYLES.forEach(m=>$('#style'+m[0].toUpperCase()+m.slice(1)).onclick=()=>{style=m;localize()});
 $('#zoomIn').onclick=()=>zoomTo(zoom*1.3);$('#zoomOut').onclick=()=>zoomTo(zoom/1.3);
-$('#resetView').onclick=()=>{if(mode!=='city')clearRegion();home()};
 $('#layersButton').onclick=()=>{const p=$('#layersPanel'),open=p.hidden;p.hidden=!open;$('#layersButton').setAttribute('aria-expanded',String(open))};
 $('#layersPanel').onchange=e=>{const i=e.target.closest('[data-layer]');if(!i)return;layers[i.dataset.layer]=i.checked;applyLayers()};
 document.addEventListener('click',e=>{const p=$('#layersPanel');if(!p.hidden&&!e.target.closest('#layersPanel,#layersButton')){p.hidden=true;$('#layersButton').setAttribute('aria-expanded','false')}});
@@ -508,7 +507,8 @@ window.IWH_ATLAS={
 };
 if(PLANS)PLANS.init(window.IWH_ATLAS);
 // Logo zawsze widoczne: kliknięcie pokazuje całą Polskę (zamyka kartę i zakładki), bez przeładowania strony.
-$('.atlas-top .brand').addEventListener('click',e=>{e.preventDefault();home()});
+// 8.5: logo zastępuje dawny pływający przycisk „Polska” (ta sama funkcja w dwóch miejscach).
+$('.atlas-top .brand').addEventListener('click',e=>{e.preventDefault();if(mode!=='city')clearRegion();home()});
 
 applyLayers();localize();reset();
 // Kontrolki mapy zawsze nad dolnym panelem (jego wysokość zależy od karty i języka).

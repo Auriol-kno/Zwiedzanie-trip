@@ -14,7 +14,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const T={
 pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo · częściowo dostępne',lead:n=>'Wybierz miejscowość lub temat, zapisuj miejsca i ułóż plan dnia. '+n+' starannie wybranych miejsc do zwiedzania.',
  sights:'Atrakcje',towns:'Miejscowości',stamps:'Twoje pieczątki',saved:'Zapisane',map:'Mapa',fit:'⌖ Cały region',all:'Wszystkie',search:'Szukaj w regionie',searchPh:'np. zamek, jaskinia, Sandomierz…',
- plan:'Plan dnia',planSub:'Szacunkowa trasa z wybranej miejscowości',start:'Start',clock:'Godzina startu',hours:'Czas zwiedzania',car:'Samochód',transit:'Komunikacja',walkMode:'Pieszo',filters:'Co pokazać na mapie?',filtersSub:'Wybierz miejscowość i rodzaje miejsc — mapa i lista zmienią się razem',walkNote:'Wycieczka piesza: tempo ok. 4,5 km/h, tylko miejsca do ok. 6 km od miejscowości startowej. ',
+ plan:'Plan dnia',planSub:'Szacunkowa trasa z wybranej miejscowości',start:'Start',clock:'Godzina startu',hours:'Czas zwiedzania',car:'Samochód',transit:'Komunikacja',walkMode:'Pieszo',addDay:'🗓️ Do planu dnia',addTrip:'🧳 Do podróży',inDay:n=>'✓ W planie dnia: '+n,inTrip:n=>'✓ W podróży: '+n,defDay:'Plan dnia',defTrip:'Moja podróż',filters:'Co pokazać na mapie?',filtersSub:'Wybierz miejscowość i rodzaje miejsc — mapa i lista zmienią się razem',walkNote:'Wycieczka piesza: tempo ok. 4,5 km/h, tylko miejsca do ok. 6 km od miejscowości startowej. ',
  planNote:'Czasy przejazdu są szacowane z odległości (bez korków i rozkładów). Godziny otwarcia i ceny sprawdź na stronie obiektu przed wyjazdem.',
  planEmpty:'Brak miejsc pasujących do filtrów. Zmień kategorię lub wydłuż czas.',places:'Miejsca do zwiedzania',count:(n)=>n+' '+(n===1?'miejsce':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'miejsca':'miejsc'),
  empty:'Brak miejsc dla wybranych filtrów.',visit:'wizyta',drive:'dojazd',walk:'spacer',value:'Warto odwiedzić',valueNote:'ocena redakcyjna, nie Google',time:'Czas na miejscu',town:'Miejscowość',
@@ -26,7 +26,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  title:'Przewodnik regionu',atlas:'Atlas Polski',back:'I Was Here — wróć do Atlasu Polski',langLabel:'Język: polski. Przełącz na angielski',min:'min',h:'godz.'},
 en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly available',lead:n=>'Pick a town or a theme, save places and build a day plan. '+n+' carefully selected places to visit.',
  sights:'Sights',towns:'Towns',stamps:'Your stamps',saved:'Saved',map:'Map',fit:'⌖ Whole region',all:'All',search:'Search this region',searchPh:'e.g. castle, cave, Sandomierz…',
- plan:'Day plan',planSub:'Estimated route from the chosen town',start:'Start',clock:'Start time',hours:'Sightseeing time',car:'Car',transit:'Public transport',walkMode:'Walk',filters:'What to show on the map',filtersSub:'Pick a town and the types of places — the map and the list update together',walkNote:'Walking tour: about 4.5 km/h, only places within about 6 km of the starting town. ',
+ plan:'Day plan',planSub:'Estimated route from the chosen town',start:'Start',clock:'Start time',hours:'Sightseeing time',car:'Car',transit:'Public transport',walkMode:'Walk',addDay:'🗓️ Add to day plan',addTrip:'🧳 Add to trip',inDay:n=>'✓ In day plan: '+n,inTrip:n=>'✓ In trip: '+n,defDay:'Day plan',defTrip:'My trip',filters:'What to show on the map',filtersSub:'Pick a town and the types of places — the map and the list update together',walkNote:'Walking tour: about 4.5 km/h, only places within about 6 km of the starting town. ',
  planNote:'Travel times are estimated from distance (no traffic or timetables). Check opening hours and prices on the venue’s website before you go.',
  planEmpty:'No places match the filters. Change the category or allow more time.',places:'Places to visit',count:n=>n+' '+(n===1?'place':'places'),
  empty:'No places match the selected filters.',visit:'visit',drive:'drive',walk:'walk',value:'Worth visiting',valueNote:'editorial rating, not Google',time:'Time on site',town:'Town',
@@ -174,9 +174,20 @@ function openDetail(id){
   '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn secondary" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
   '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
   ('speechSynthesis' in window?'<button type="button" class="btn secondary" data-speak="'+id+'">'+esc(x.listen)+'</button>':'')+
+  '<button type="button" class="btn secondary" data-addplan="day" data-id="'+id+'">'+esc(planLabel('day',id))+'</button><button type="button" class="btn secondary" data-addplan="trip" data-id="'+id+'">'+esc(planLabel('trip',id))+'</button>'+
   (window.IWH_EXTRAS?IWH_EXTRAS.journal.button('reg:'+id,name(p)+' · '+p.town,p.icon,lang):'')+'</div>'+
   '<div class="warn">'+esc(p.coordinateStatus==='osm'?x.osm:x.approx)+'</div>';
  $('#detail').classList.add('show');document.body.style.overflow='hidden';$('#dClose').focus();window.IWH_EXTRAS?.journal.counts($('#dBody'));
+}
+// 8.5 — dodanie punktu do planu dnia / podróży Atlasu (iwh_days / iwh_trips, ten sam format co atlas-plans.js)
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+function planWith(kind,id){return readStore(kind==='day'?'iwh_days':'iwh_trips',[]).find(pl=>Array.isArray(pl.items)&&pl.items.some(i=>i.t==='place'&&i.id===id))}
+function planLabel(kind,id){const pl=planWith(kind,id),x=t();return pl?(kind==='day'?x.inDay(pl.name):x.inTrip(pl.name)):(kind==='day'?x.addDay:x.addTrip)}
+function addToPlan(kind,id){
+ if(planWith(kind,id))return;const key=kind==='day'?'iwh_days':'iwh_trips',all=readStore(key,[]),x=t();
+ let pl=kind==='day'?all.filter(p=>!p.date||p.date>=today()).sort((a,b)=>(a.date||'').localeCompare(b.date||''))[0]:all[0];
+ if(!pl){pl={id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),name:kind==='day'?x.defDay:x.defTrip,created:new Date().toISOString(),items:[]};if(kind==='day'){pl.date=today();pl.start='09:00'}all.unshift(pl)}
+ pl.items.push({t:'place',id});writeStore(key,all);
 }
 function closeDetail(){$('#detail').classList.remove('show');document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel();lastFocus?.focus?.()}
 function toggle(listName,id){
@@ -190,6 +201,7 @@ document.addEventListener('click',e=>{
  const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return}
  const f=e.target.closest('[data-fav]');if(f){toggle('fav',f.dataset.fav);return}
  const s=e.target.closest('[data-stamp]');if(s){toggle('stamp',s.dataset.stamp);return}
+ const ap=e.target.closest('[data-addplan]');if(ap){addToPlan(ap.dataset.addplan,ap.dataset.id);ap.textContent=planLabel(ap.dataset.addplan,ap.dataset.id);return}
  const sp=e.target.closest('[data-speak]');if(sp&&window.speechSynthesis){const p=all.find(x=>x.id===sp.dataset.speak);speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(name(p)+'. '+desc(p));u.lang=lang==='en'?'en-GB':'pl-PL';u.rate=.95;speechSynthesis.speak(u);return}
  const tn=e.target.closest('[data-town]');if(tn){state.town=tn.dataset.town;if(state.town!=='all')state.start=state.town;renderChips();renderList();renderPlanStart();renderPlan();renderMap();return}
  const c=e.target.closest('[data-cat]');if(c){const k=c.dataset.cat;state.cats=state.cats.includes(k)?state.cats.filter(x=>x!==k):[...state.cats,k];renderChips();renderList();renderPlan();renderMap();return}
@@ -206,6 +218,7 @@ $('#planClock').onchange=e=>{state.clock=e.target.value||'10:00';renderPlan()};
 $('#planHours').oninput=e=>{state.hours=+e.target.value;renderPlan()};
 $('#planMode').onclick=e=>{const b=e.target.closest('[data-mode]');if(b){state.mode=b.dataset.mode;renderPlan()}};
 $('#langRegion').onclick=e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;try{localStorage.setItem('tubylem_lang',lang)}catch(_){}renderAll()};
+document.addEventListener('iwh-stamps-change',()=>{visited=readStore('iwh_region_visited',[]);renderStats();renderList();renderMap();renderPlan()});
 window.addEventListener('storage',e=>{if(e.key==='tubylem_lang'&&(e.newValue==='pl'||e.newValue==='en')&&e.newValue!==lang){lang=e.newValue;renderAll()}});
 
 // ---------- start

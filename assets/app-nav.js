@@ -15,7 +15,7 @@ const I={
  passport:'<path fill-rule="evenodd" d="M6 2h11a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 2v16h11V4H6Zm5.5 3a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7ZM8 16.5h7V18H8v-1.5Z"/>',
  profile:'<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/>'
 };
-const L={map:['Mapa','Map'],explore:['Odkrywaj','Explore'],plans:['Plany','Plans'],passport:['Paszport','Passport'],profile:['Profil','Profile']};
+const L={map:['Mapa','Map'],explore:['Odkrywaj','Explore'],plans:['Plany','Plans'],passport:['Pieczątki','Stamps'],profile:['Profil','Profile']};
 const ORDER=['map','explore','plans','passport','profile'];
 nav.setAttribute('aria-label','Menu');
 nav.innerHTML=ORDER.map(k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>').join('');

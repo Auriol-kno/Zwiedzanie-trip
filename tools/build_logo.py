@@ -3,7 +3,7 @@
 
 8.4: assets/brand-mark.svg — kafelek-ikona (zielone tło, złota ramka, Polska z pejzażem, trasa i pinezka),
      assets/brand-pin-landscape.svg — pinezka z pejzażem (godło paszportu odkrywcy), icon.svg — ikona PWA.
-8.3.1: assets/brand-mark-flag.svg — biało-czerwona Polska z pinezką (poprzednie logo, zachowane).
+8.3.1: wariant biało-czerwony (kod zostaje, plik nie jest już zapisywany).
 
 Kontur Polski NIE jest rysowany na oko: to granica z assets/poland-geography.js (Natural Earth 1:10m,
 public domain), w tym samym rzucie co Atlas, uproszczona algorytmem Douglasa–Peuckera do rozmiaru logo.
@@ -89,8 +89,8 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" role="img" aria
 </g>
 </svg>
 '''
-(ROOT / "assets/brand-mark-flag.svg").write_text(svg, encoding="utf-8")
-print(f"OK: assets/brand-mark-flag.svg — kontur {len(simple)} punktów (z {len(pts)}), viewBox {vb}, {len(svg)} B")
+# 8.5: wariant biało-czerwony (8.3.1) nie jest już zapisywany — nieużywany w aplikacji.
+print(f"(pominięto) brand-mark-flag — kontur {len(simple)} punktów (z {len(pts)}), viewBox {vb}, {len(svg)} B")
 
 
 # ---------- 8.4: kafelek (logo i ikona aplikacji) ----------

@@ -24,7 +24,7 @@ const PAINT_DEFS='<linearGradient id="lmWall" x1="0" y1="0" x2="1" y2="1"><stop 
 function paintDefs(svg){
  if(document.getElementById('lmWall'))return;
  const host=svg||(()=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('width','0');s.setAttribute('height','0');s.setAttribute('aria-hidden','true');s.style.position='absolute';document.body.appendChild(s);return s})();
- const d=document.createElementNS('http://www.w3.org/2000/svg','defs');d.innerHTML=PAINT_DEFS;host.insertBefore(d,host.firstChild);
+ const d=document.createElementNS('http://www.w3.org/2000/svg','defs');d.innerHTML=PAINT_DEFS+stampDefs();host.insertBefore(d,host.firstChild);
 }
 const INK=' stroke="#5A4535" stroke-opacity=".55" stroke-width=".9" stroke-linejoin="round"';
 const P=(d,f,extra)=>'<path d="'+d+'" fill="'+f+'"'+INK+(extra||'')+'/>';
@@ -73,7 +73,40 @@ const LM={
   P('M7 18C7 13 13 9 13 4C13 9 19 13 19 18Z','url(#lmSlate)')+P('M61 18C61 13 67 9 67 4C67 9 73 13 73 18Z','url(#lmSlate)')+P('M12.6 4h.8v-4h-.8ZM66.6 4h.8v-4h-.8Z','url(#lmGold)')+
   arches([24,31,38,45,52],36,5,10)+win([24,31,38,45,52],27,2,5)+win([11,15,65,69],24,1.6,4)+R(30,12,20,5,'url(#lmWall)')+P('M30 12 40 6 50 12Z','url(#lmSlate)')+hi('M13 25H40M9 19V36')
 };
-const iconGroup=(id)=>'<g class="landmark-drawing">'+WASH+GROUND+(LM[id]||LM.krakow)()+'</g>';
+// 8.5 — styl 5 „znaczek pocztowy”: ząbkowany znaczek, jednobarwny rytowany rysunek (kreskowanie), nazwa miasta.
+// Ten sam rysunek co w 8.4, przemalowany na tusz danego miasta; odwiedzone miasto dostaje stempel „✓”.
+const STAMP_INK=['#8E2F25','#1F4E6E','#2F5B3A','#5B3A78','#8A4B12','#1E5B5B'];
+const CITY_ORDER=['warsaw','krakow','gdansk','wroclaw','poznan','lodz','szczecin','torun','lublin','bialystok','katowice','rzeszow','kielce','olsztyn'];
+const CITY_NAME={warsaw:'Warszawa',krakow:'Kraków',gdansk:'Gdańsk',wroclaw:'Wrocław',poznan:'Poznań',lodz:'Łódź',szczecin:'Szczecin',torun:'Toruń',lublin:'Lublin',bialystok:'Białystok',katowice:'Katowice',rzeszow:'Rzeszów',kielce:'Kielce',olsztyn:'Olsztyn'};
+const STAMP_PAPER='#F6EEDA';
+const lum=h=>{const n=parseInt(h.slice(1),16);return(.299*(n>>16)+.587*((n>>8)&255)+.114*(n&255))/255};
+const PERF=(()=>{let c='';for(let x=10;x<=70;x+=4.3)c+='<circle cx="'+x.toFixed(1)+'" cy="-5" r="1.5"/><circle cx="'+x.toFixed(1)+'" cy="55" r="1.5"/>';for(let y=-1;y<=52;y+=4.3)c+='<circle cx="8" cy="'+y.toFixed(1)+'" r="1.5"/><circle cx="72" cy="'+y.toFixed(1)+'" r="1.5"/>';return c})();
+function stampDefs(){
+ return STAMP_INK.map((ink,i)=>'<pattern id="lmH'+i+'" width="1.7" height="1.7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.7" stroke="'+ink+'" stroke-width=".6"/></pattern>').join('')+
+  '<mask id="lmPerf" maskUnits="userSpaceOnUse" x="0" y="-8" width="80" height="66"><rect x="0" y="-8" width="80" height="66" fill="#fff"/><g fill="#000">'+PERF+'</g></mask>';
+}
+function stampify(svg,ink,hatch){
+ return svg
+  .replace(/fill="url\(#lm(Wall|Stone)\)"/g,'fill="'+STAMP_PAPER+'"')
+  .replace(/fill="url\(#lm(Shade|Brick|Ground|Water)\)"/g,'fill="url(#'+hatch+')"')
+  .replace(/fill="url\(#lm(Roof|Slate|Copper|Timber|Gold)\)"/g,'fill="'+ink+'"')
+  .replace(/fill="(#[0-9A-Fa-f]{6})"/g,(m,h)=>'fill="'+(lum(h)>.55?STAMP_PAPER:ink)+'"')
+  .replace(/stroke="#5A4535" stroke-opacity="\.55"/g,'stroke="'+ink+'" stroke-opacity=".95"')
+  .replace(/stroke="#4F7F45" stroke-opacity="\.45"/g,'stroke="'+ink+'" stroke-opacity=".8"')
+  .replace(/stroke="#FFFFFF" stroke-opacity="\.5"/g,'stroke="none"')
+  .replace(/stroke="#(B9B2A5|A2977F|6A7C88|9FD6EE|E6F6FC)"/g,'stroke="'+ink+'"');
+}
+// opts: {name, visited}
+const iconGroup=(id,opts)=>{
+ const o=opts||{},i=Math.max(0,CITY_ORDER.indexOf(id))%STAMP_INK.length,ink=STAMP_INK[i],name=o.name||CITY_NAME[id]||'';
+ const art=stampify(GROUND+(LM[id]||LM.krakow)(),ink,'lmH'+i);
+ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const post=o.visited?'<g class="stamp-postmark" opacity=".7" fill="none" stroke="#1C2940" stroke-width="1.1"><circle cx="61" cy="5" r="8"/><path d="M57 5.2l2.6 2.6 5-5.4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 1Q43-2 48 1T58 1M38 5Q43 2 48 5" stroke-width=".8"/></g>':'';
+ return '<g class="landmark-drawing stamp'+(o.visited?' visited':'')+'"><g filter="none"><rect x="8.6" y="-4.4" width="62.8" height="58.8" fill="#1C2940" opacity=".18" transform="translate(1.2 1.6)" mask="url(#lmPerf)"/><rect x="8" y="-5" width="64" height="60" fill="#FFFFFF" mask="url(#lmPerf)"/></g>'+
+  '<rect x="12" y="-1" width="56" height="43" fill="'+STAMP_PAPER+'" stroke="'+ink+'" stroke-width=".9"/>'+
+  '<svg x="12" y="-1" width="56" height="43" viewBox="0 -6 80 62" preserveAspectRatio="xMidYMid meet" overflow="hidden">'+art+'</svg>'+
+  '<text x="40" y="50.6" text-anchor="middle" font-family="Georgia,\'Playfair Display\',serif" font-style="italic" font-weight="700" font-size="6.6" fill="'+ink+'">'+esc(name)+'</text>'+post+'</g>';
+};
 function decorate({clipped,el,project,path,geo}){
  paintDefs(clipped.ownerSVGElement);
  if(!geo?.regions?.length)return;
@@ -111,5 +144,5 @@ function decorate({clipped,el,project,path,geo}){
  }
  clipped.appendChild(water);
 }
-window.IWH_ATLAS_ART={decorate,landmark:iconGroup,paintDefs};
+window.IWH_ATLAS_ART={decorate,landmark:iconGroup,paintDefs,cities:CITY_ORDER,cityName:id=>CITY_NAME[id]||id};
 })();
