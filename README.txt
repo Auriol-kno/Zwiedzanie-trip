@@ -1,54 +1,51 @@
-TU BYŁEM — MIEJSCA I WSPOMNIENIA
-Wersja 4.0 / Atlas Polski • 6 listopada 2026
+I WAS HERE — PLACES & MEMORIES
+Version 5.0 • 7 November 2026
 
-ATLAS POLSKI
+POLAND ATLAS / MAIN SCREEN
 https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
-GŁÓWNY PRZEWODNIK WARSZAWY
+WARSAW SIGHTSEEING GUIDE
 https://auriol-kno.github.io/Zwiedzanie-trip/
-GITHUB
+GITHUB REPOSITORY
 https://github.com/Auriol-kno/Zwiedzanie-trip
 
-NOWOŚCI WERSJI 4.0
-1. Prawdziwy ekran Atlasu Polski (13 miast) — dotykowa mapa ilustracyjna.
-2. Trzy działające style mapy: Atlas, Noc, Teren.
-3. Powiększanie, przesuwanie, wybór miast z mapy i listy, wyszukiwanie.
-4. Warszawa jako aktywny przewodnik. Pozostałe miasta oznaczone jako w przygotowaniu.
-5. Przycisk w nagłówku Warszawy i pływająca mini-mapa Polski do powrotu na Atlas.
-6. Przełącznik PL/EN z pamięcią wyboru pomiędzy ekranami.
-7. Angielskie opisy głównych miejsc, menu, karty i gastronomia; części mniej popularnych miejsc mają krótsze teksty EN.
-8. Przewodnik głosowy odczytuje opis w języku wybranym przez użytkownika.
-9. Ikona PWA na nowej instalacji otwiera od razu Atlas Polski.
-10. Test regresji Atlasu i tłumaczeń w GitHub Actions.
+WHAT'S NEW IN VERSION 5.0
+- Chosen visual concept #1: bright illustrated map of Poland with a cream and light-green palette.
+- Accurate Polish outline and boundaries of 16 provinces using geographical Natural Earth data.
+- The same 13 cities in their correct geographical locations.
+- Illustration-style landmarks, woods, blue rivers, lakes and mountains.
+- New English product name: I Was Here — Places & Memories.
+- New English brand mark in the main Atlas and Warsaw screens.
+- English interface and light Atlas selected on first launch of version 5.
+- Optional Polish language and Night/Terrain styles still available.
+- A floating return-to-Poland button remains available in Warsaw.
+- PWA manifest updated with the English name and new SVG icon.
 
-POZOSTAŁE FUNKCJE WARSZAWY
-- 184 miejsca w 18 dzielnicach, z redakcyjną oceną 1–5.
-- 36 lokali gastronomicznych w osobnej sekcji.
-- Mapa Warszawy z wyznaczaniem obszaru, planer czasu, GPS, tryb rodzinny, foto i ulubione.
-- Pieczątki oraz kopiowanie/eksport planu.
-- Linki do zewnętrznej nawigacji i aktualnych opinii Google Maps.
+WARSAW FUNCTIONS
+- 184 curated places across 18 districts, including parks, memorials and museums.
+- 36 selected places to eat, with cuisine, district and budget filters.
+- Planning by time and transport mode; photo and family preferences.
+- Saved places, digital stamps, spoken descriptions, GPS starting point.
+- Real travel times and Google ratings still require external integrations.
 
-IPHONE — PIERWSZE URUCHOMIENIE
-1. W Safari otwórz /Zwiedzanie-trip/atlas.html.
-2. Użyj Udostępnij → Dodaj do ekranu początkowego.
-3. W Atlasie dotknij Warszawy, aby przejść do przewodnika.
-4. W przewodniku użyj pływającej mini-mapy do natychmiastowego powrotu.
-5. Używaj górnego przycisku PL/EN, aby zmieniać język.
-6. Jeśli starsza ikona nadal uruchamia stary adres, usuń tylko skrót z ekranu i dodaj go ponownie z Atlasu.
+IPHONE
+1. Open the Poland Atlas link in Safari.
+2. Choose Share → Add to Home Screen.
+3. Choose Warsaw on the map to open its sightseeing guide.
+4. Tap the floating miniature Poland map to return to the Atlas.
+5. Use the PL/EN toggle; the language choice is remembered.
+6. If your older home-screen shortcut opens the old page, remove that shortcut and add it again from /atlas.html.
 
-PLIKI
-- atlas.html — ilustracyjny Atlas Polski (strona wejściowa PWA)
-- index.html — Warszawa
-- assets/atlas.js, assets/atlas.css — mapa, style, wyszukiwarka i miasta
-- assets/nav4.css, assets/poland-mark.svg — przycisk powrotu do Atlasu
-- assets/i18n4.js — tłumaczenia
-- data/atrakcje.json, data/restauracje.json — dane
-- service-worker.js — lokalny cache
-- ATLAS_4_0.md — dokładna dokumentacja wdrożenia
-- tools/test_atlas.py — test regresji
+MAINTENANCE
+- Map data: assets/poland-geography.js
+- Illustrated map artwork: assets/atlas-illustrated.js
+- Light Atlas style: assets/atlas-light-v5.css
+- Map controls: assets/atlas.js
+- Branding and logos: assets/brand-pin.svg, assets/logo-en.svg, icon.svg
+- Read ATLAS_5_0.md for geography sources, limitations and plans.
 
-CO JESZCZE WYMAGA ROZWOJU
-- W pełni redakcyjne i wierne tłumaczenia opisów wszystkich 184 miejsc.
-- Szczegółowe trasy i godziny rzeczywistej komunikacji WTP.
-- Interaktywna mapa MapLibre z warstwami ulic/terenu; obecnie Atlas jest piękną mapą wektorową kraju.
-- Kolejne miejskie przewodniki (12 miast jest oznaczonych jako planowane).
-- Test działania strony produkcyjnej na iPhonie.
+IMPORTANT
+- The map border, province boundaries and city coordinates are geographic data.
+- Landmark vignettes and scenery are artistic representations, not a topographic survey.
+- Currently only Warsaw has the full guide; the other 12 cities are coming soon.
+- Older iPhone PNG icons may retain previous artwork until the raster assets are replaced.
+- Final tests on a physical iPhone and live GitHub Pages deployment verification remain pending.
