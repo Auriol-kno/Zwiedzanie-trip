@@ -73,6 +73,21 @@ assert sum(x[-1]=="true" for x in city_rows)==1, "Only Warsaw is currently publi
 assert "tubylem_map_style','atlas'" in (ROOT/"assets/brand-v5.js").read_text(encoding="utf-8")
 for extra in ["assets/atlas-light-v5.css","assets/atlas-illustrated.js","assets/poland-geography.js","assets/brand-pin.svg","assets/logo-en.svg","assets/brand-v5.js","assets/brand-v5.css"]:
     assert extra in sw, "New asset absent from offline cache: "+extra
+# 5.1: jeden przełącznik języka i brak zdublowanej mapy Polski w Warszawie
+explorer = (ROOT / "assets/poland-explorer.js").read_text(encoding="utf-8")
+assert "tbLanguage" not in explorer and "tb_lang" not in explorer, "Drugi przełącznik języka w Warszawie"
+explorer_code = re.sub(r"/\*.*?\*/", "", explorer, flags=re.S)
+assert "polandHome" not in explorer_code, "Zdublowana mapa Polski w przewodniku Warszawy"
+assert "smartOptions" not in explorer_code, "Zdublowany wybór priorytetu"
+# 5.1: przełącznik PL | EN, podpisane ikony, spójna marka
+assert 'class="lang-switch"' in home and 'data-lang="en"' in home and 'data-lang="en"' in atlas
+assert 'id="themeBtn"' in home and "<small>Wygląd</small>" in home and "<small>Paszport</small>" in home
+assert 'content="I Was Here"' in atlas and "Tu Byłem" not in atlas_js
+assert "przewodnik 4.0" not in home and "Wersja demonstracyjna" not in home
+assert "tubylem_lang" in explorer, "Moduł wycieczek musi używać wspólnego języka"
+assert home.count('id="langWarsaw"') == 1
+assert home.index('id="atlasFloat"') < home.index('assets/i18n4.js'), "#atlasFloat musi istnieć przed i18n4.js"
+assert "./assets/poland-explorer.js" in sw, "PWA nie buforuje modułu wycieczek"
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
 
 print("OK: Atlas 13 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")

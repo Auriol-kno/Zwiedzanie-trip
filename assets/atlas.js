@@ -1,4 +1,4 @@
-/* Tu Byłem — Atlas Polski 4.0. Mapa wektorowa działa także bez sieci. */
+/* I Was Here — Atlas Polski 5.1. Mapa wektorowa działa także bez sieci. */
 (function(){
 'use strict';
 const $=s=>document.querySelector(s),NS='http://www.w3.org/2000/svg';
@@ -84,7 +84,7 @@ function localize(){
  const t=I[lang];
  [['atlasTitle',t.atlas],['atlasEyebrow',t.subtitle],['atlasHeadline',t.headline],['atlasLead',t.lead],['styleAtlas',t.styleAtlas],['styleNight',t.styleNight],['styleTerrain',t.styleTerrain],['citiesTitle',t.choose],['atlasFooter',t.footer]].forEach(([id,txt])=>{const e=$('#'+id);if(e)e.textContent=txt});
  $('#atlasHeadline').style.whiteSpace='pre-line';
- $('#langButton').textContent=lang.toUpperCase();
+ $('#langButton').querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('on',x.dataset.lang===lang));
  $('#searchInput').placeholder=t.search;
  $('#searchButton').setAttribute('aria-label',t.search);
  $('#resetView').setAttribute('aria-label',t.reset);
@@ -94,8 +94,8 @@ function localize(){
  $('#polandSvg').setAttribute('aria-label',lang==='en'?'Interactive map of Poland with 13 cities':'Interaktywna mapa Polski z 13 miastami');
  $('#zoomIn').setAttribute('aria-label',lang==='en'?'Zoom in':'Powiększ mapę');
  $('#zoomOut').setAttribute('aria-label',lang==='en'?'Zoom out':'Pomniejsz mapę');
- $('#langButton').setAttribute('aria-label',lang==='en'?'Switch to Polish':'Zmień język na angielski');
- $('.brand').setAttribute('aria-label',lang==='en'?'Back to Poland Atlas':'Tu Byłem — mapa Polski');
+ $('#langButton').setAttribute('aria-label',lang==='en'?'Language: English. Switch to Polish':'Język: polski. Przełącz na angielski');
+ $('.brand').setAttribute('aria-label',lang==='en'?'Back to Poland Atlas':'I Was Here — Atlas Polski');
  $('.style-panel').setAttribute('aria-label',lang==='en'?'Map style':'Styl mapy');
  $('.atlas-bottom').setAttribute('aria-label',lang==='en'?'Choose a city':'Wybór miasta');
  document.title='I Was Here — '+(lang==='en'?'Poland Atlas':'Atlas Polski');
@@ -107,7 +107,7 @@ function localize(){
 function openCity(){if(!current.ready)return;location.href='./index.html?lang='+encodeURIComponent(lang)+'&from=atlas'}
 $('#cityAction').onclick=openCity;
 $('#cityStrip').onclick=e=>{const b=e.target.closest('[data-city-chip]');if(b)select(b.dataset.cityChip)};
-$('#langButton').onclick=()=>{lang=lang==='pl'?'en':'pl';localize()};
+$('#langButton').onclick=e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;localize()};
 for(const mode of ['atlas','night','terrain'])$('#style'+mode[0].toUpperCase()+mode.slice(1)).onclick=()=>{style=mode;localize()};
 $('#zoomIn').onclick=()=>zoomTo(zoom*1.3);$('#zoomOut').onclick=()=>zoomTo(zoom/1.3);$('#resetView').onclick=reset;
 $('#searchButton').onclick=()=>{const sb=$('#searchBox');sb.classList.toggle('open');if(sb.classList.contains('open'))$('#searchInput').focus()};
