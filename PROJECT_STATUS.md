@@ -46,7 +46,7 @@
 - Logo w lewym górnym rogu zawsze wraca do Atlasu.
 
 ### Wspólne
-- **Logo = jeden znak** (od 8.3.1 `assets/brand-mark.webp` — logo właściciela: biało-czerwona Polska z pinezką z pejzażem) w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
+- **Logo = jeden znak** (od 8.3.1 `assets/brand-mark.svg` — logo właściciela: biało-czerwona Polska z pinezką z pejzażem) w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
 - **„Więcej informacji o miejscu — Wikipedia”** przy opisie każdej atrakcji (regiony + Warszawa), PL/EN; potwierdzony artykuł
   (OSM `wikidata` + Wikidata) albo uczciwe wyszukiwanie w Wikipedii — patrz liczby w §2.
 - **Dziennik podróży (paszport):** notatki + do 5 zdjęć z biblioteki na miejsce, lokalnie w IndexedDB `iwh_journal`;
