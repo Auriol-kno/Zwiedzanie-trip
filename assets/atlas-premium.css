@@ -264,7 +264,7 @@ body[data-style=light] .new-plan input{background:#fff;color-scheme:light}
 .toast{position:absolute;z-index:60;left:50%;bottom:calc(var(--tabbar-h) + 16px);transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100vw - 32px);padding:11px 16px;border-radius:14px;background:#10232c;color:#fff9e8;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 body:not([data-tab=map]):not([data-tab=""]) .poland-home{display:none}
-body[data-tab=trips] .atlas-bottom,body[data-tab=day] .atlas-bottom,body[data-tab=memories] .atlas-bottom,body[data-tab=profile] .atlas-bottom{visibility:hidden}
+body[data-tab=trips] .atlas-bottom,body[data-tab=day] .atlas-bottom,body[data-tab=memories] .atlas-bottom,body[data-tab=profile] .atlas-bottom,body[data-tab=explore] .atlas-bottom,body[data-tab=plans] .atlas-bottom,body[data-tab=passport] .atlas-bottom{visibility:hidden}
 @media(max-height:700px){.city-chip{min-height:36px;padding:6px 10px}.atlas-bottom{padding-top:12px!important}.place-sheet .city-title strong{font-size:18px}.sheet-places{max-height:22vh}}
 @media(prefers-reduced-motion:reduce){.place-sheet{animation:none}.toast{transition:none}.region-name,#towns{transition:none}}
 body:not([data-style=light]) #atlasApp:before{display:none}
@@ -279,3 +279,16 @@ body:not([data-style=light]) #atlasApp:before{display:none}
 .brand-name strong,body:not([data-style=light]) .brand-name strong{font-family:Georgia,Palatino,serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;font-size:25px;line-height:1.05}
 .brand-name small{margin:0 0 3px;letter-spacing:.14em}
 @media(max-width:420px){.brand-name strong,body:not([data-style=light]) .brand-name strong{font-size:20px}.brand-name small{font-size:8px}}
+
+/* 8.4 — Plany (przełącznik), Paszport odkrywcy w zakładce i w profilu, Odkrywaj */
+.plan-switch{margin:2px 0 12px}
+.passport-hero{display:flex;align-items:center;gap:12px;margin:0 0 10px;padding:10px 12px;border-radius:16px;background:var(--ui-chip);border:1px solid var(--ui-line)}
+.passport-hero img{flex:none}.passport-hero p{margin:0;font-size:13px;line-height:1.45;color:var(--ui-fg)}
+.passport-card{display:flex;align-items:center;gap:12px;width:100%;text-align:left;margin:4px 0 14px;padding:12px 14px;border-radius:18px;border:1px solid rgba(255,178,74,.55);background:linear-gradient(150deg,rgba(255,178,74,.18),rgba(255,178,74,.04));color:var(--ui-fg);cursor:pointer;font:inherit}
+.passport-card img{flex:none}.passport-card span{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.passport-card b{font-size:16px}.passport-card small{font-size:12px;color:var(--ui-sub)}.passport-card .pc-stats{color:var(--ui-fg);font-weight:700}
+.passport-card em{font-style:normal;font-weight:800;color:var(--amber,#F47C28);white-space:nowrap}
+.passport-card:focus-visible{outline:3px solid var(--ui-accent);outline-offset:2px}
+.pi-actions a{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;border-radius:10px;border:1px solid var(--ui-line);color:var(--ui-fg);text-decoration:none;font-weight:700;font-size:12px}
+.tabbar svg{fill:currentColor}
+html[lang=en] .tabbar [data-l=pl],html:not([lang=en]) .tabbar [data-l=en]{display:none}

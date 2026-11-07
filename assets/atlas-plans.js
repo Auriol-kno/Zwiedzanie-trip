@@ -33,6 +33,7 @@ pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'
  clear:'Wyczyść moje plany',confirmClear:'Usunąć wszystkie plany podróży i plany dnia z tego urządzenia?',
  pickTrip:'Dodaj do planu podróży',pickDay:'Dodaj do planu dnia',choosePlan:'Wybierz plan',newPlan:'Nowy plan',planName:'Nazwa nowego planu',
  defTrip:'Moja podróż po Polsce',defDay:'Dzień zwiedzania',cancel:'Anuluj',add:'Dodaj',added:n=>'Dodano do planu „'+n+'”',already:n=>'To miejsce jest już w planie „'+n+'”',
+ plans:'Plany',planTrips:'🧳 Podróże',planDays:'🗓️ Plan dnia',passport:'Paszport odkrywcy',explore:'Odkrywaj',exploreIntro:'Wybierz miasto lub województwo — pokażemy je na mapie, a województwo otworzy przewodnik z atrakcjami.',cities:'Miasta',provinces:'Województwa',guide:'Przewodnik',passportCard:'📔 Paszport odkrywcy',passportCardSub:'Pieczątki, notatki i do 5 zdjęć z każdego miejsca',openIt:'Otwórz',
  journal:'Dziennik podróży',journalIntro:'Notatki i do 5 zdjęć z każdego miejsca (także z biblioteki zdjęć). Zapisane tylko na tym urządzeniu.',journalEmpty:'Brak wpisów. Dotknij 📝 przy odwiedzonym miejscu albo w paszporcie Warszawy, aby dodać notatki i zdjęcia.',notesPhotos:'Notatki i zdjęcia',openEntry:'Otwórz',photosN:n=>plural(n,['zdjęcie','zdjęcia','zdjęć']),withNotes:'notatki',
  visitedOn:'Oznaczono jako odwiedzone',visitedOff:'Usunięto z odwiedzonych',saveErr:'Nie udało się zapisać — pamięć przeglądarki jest pełna lub zablokowana.'},
 en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',close:'Back to the map',
@@ -51,10 +52,12 @@ en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',cl
  clear:'Clear my plans',confirmClear:'Delete all trip plans and day plans from this device?',
  pickTrip:'Add to a trip plan',pickDay:'Add to a day plan',choosePlan:'Choose a plan',newPlan:'New plan',planName:'Name of the new plan',
  defTrip:'My trip around Poland',defDay:'Sightseeing day',cancel:'Cancel',add:'Add',added:n=>'Added to “'+n+'”',already:n=>'This is already in “'+n+'”',
+ plans:'Plans',planTrips:'🧳 Trips',planDays:'🗓️ Day plans',passport:'Explorer passport',explore:'Explore',exploreIntro:'Pick a city or a province — we show it on the map, and a province opens its guide with sights.',cities:'Cities',provinces:'Provinces',guide:'Guide',passportCard:'📔 Explorer passport',passportCardSub:'Stamps, notes and up to 5 photos from every place',openIt:'Open',
  journal:'Travel journal',journalIntro:'Notes and up to 5 photos for each place (also from your photo library). Stored only on this device.',journalEmpty:'No entries yet. Tap 📝 next to a visited place or in the Warsaw passport to add notes and photos.',notesPhotos:'Notes and photos',openEntry:'Open',photosN:n=>n+' '+(n===1?'photo':'photos'),withNotes:'notes',
  visitedOn:'Marked as visited',visitedOff:'Removed from visited',saveErr:'Could not save — browser storage is full or blocked.'}
 };
-let A=null,tab='map';
+let A=null,tab='map',planView='trips';
+const TABS=['map','explore','plans','passport','profile','trips','day','memories'];
 const lang=()=>A?A.lang():'pl',x=()=>L[lang()];
 const trips=()=>read('iwh_trips',[]),days=()=>read('iwh_days',[]);
 const visited=()=>read('iwh_visited',[]),placeStamps=()=>read('iwh_region_visited',[]);
@@ -62,7 +65,7 @@ function toast(msg){const tEl=$('#toast');tEl.textContent=msg;tEl.classList.add(
 function save(k,v){if(!write(k,v)){toast(x().saveErr);return false}return true}
 
 const API={
- init(atlas){A=atlas;document.querySelector('.tabbar').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b)API.open(b.dataset.tab)})},
+ init(atlas){A=atlas;const want=new URLSearchParams(location.search).get('tab');if(want&&TABS.includes(want)&&want!=='map')setTimeout(()=>API.open(want),0);document.querySelector('.tabbar').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b)API.open(b.dataset.tab)})},
  isVisited(it){if(it.t==='place')return placeStamps().includes(it.id);return visited().includes(key(it))},
  isPlanned(it){const k=key(it);return trips().some(p=>p.items.some(i=>key(i)===k))||days().some(p=>p.items.some(i=>key(i)===k))},
  toggleVisited(it){
@@ -129,20 +132,21 @@ function renderJournal(){
    return '<li class="plan-item"><span class="pi-icon journal-thumb" aria-hidden="true">'+(img||esc(e.icon||'📍'))+'</span><span class="pi-text"><b>'+esc(e.title||'')+'</b><small>'+esc([e.photos.length?t.photosN(e.photos.length):'',(e.notes||'').trim()?t.withNotes:''].filter(Boolean).join(' · '))+'</small></span><span class="pi-actions"><button type="button" data-journal="'+esc(e.key)+'" data-journal-title="'+esc(e.title||'')+'" data-journal-icon="'+esc(e.icon||'')+'">'+esc(t.openEntry)+'</button></span></li>'}).join(''):'<li class="muted">'+esc(t.journalEmpty)+'</li>';
  });
 }
-document.addEventListener('iwh-journal-change',()=>{if(tab==='memories')renderJournal()});
+document.addEventListener('iwh-journal-change',()=>{if(tab==='memories'||tab==='passport')renderJournal()});
 function render(){
  const p=$('#tabPanel'),t=x();
  if(tab==='map'){p.hidden=true;p.innerHTML='';document.body.dataset.tab='map';return}
  p.hidden=false;
  const head=title=>'<div class="panel-head"><h2 tabindex="-1">'+esc(title)+'</h2><button type="button" class="sheet-x" data-close-panel aria-label="'+esc(t.close)+'">✕</button></div>';
- if(tab==='trips'){
+ const view=tab==='plans'?planView:tab==='passport'?'memories':tab;
+ if(view==='trips'){
   const list=trips(),legacy=read('tb_saved_trips',[]);
   p.innerHTML=head(t.trips)+'<p class="panel-intro">'+esc(t.tripIntro)+'</p><button type="button" class="city-action wide" data-new="trip">'+esc(t.newTrip)+'</button>'+
    (list.length?list.map(pl=>'<article class="plan-card"><div class="plan-top"><label class="plan-name"><span class="sr-only">'+esc(t.rename)+'</span><input data-rename="'+pl.id+'" data-kind="trip" value="'+esc(pl.name)+'" maxlength="60"></label><small>'+esc(t.items(pl.items.length))+'</small></div>'+
     (pl.items.length?'<ul class="plan-items">'+pl.items.map((it,i)=>itemRow(it,i,pl.items.length,pl.id,'trip')).join('')+'</ul>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
     '<button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="trip">'+esc(t.delPlan)+'</button></article>').join(''):'<p class="empty">'+esc(t.emptyTrips)+'</p>')+
    (Array.isArray(legacy)&&legacy.length?'<h3>'+esc(t.warsawTrips)+'</h3><ul class="plan-items">'+legacy.map(tr=>'<li class="plan-item"><span class="pi-icon" aria-hidden="true">🏛️</span><span class="pi-text"><b>'+esc(tr.name||'')+'</b><small>'+esc((tr.date||'')+' · '+(tr.clock||'')+' · '+t.items((tr.stops||[]).length))+'</small></span><span class="pi-actions"><a href="./index.html?lang='+lang()+'#tbTrips">'+esc(t.openWarsaw)+'</a></span></li>').join('')+'</ul>':'');
- }else if(tab==='day'){
+ }else if(view==='day'){
   const list=days().sort((a,b)=>(a.date||'').localeCompare(b.date||''));
   p.innerHTML=head(t.day)+'<button type="button" class="city-action wide" data-new="day">'+esc(t.newDay)+'</button>'+
    (list.length?list.map(pl=>{const sc=schedule(pl);const pts=pl.items.map(i=>A.resolve(i)).filter(Boolean);
@@ -153,7 +157,7 @@ function render(){
     (pl.items.length?'<ol class="plan-items day">'+pl.items.map((it,i)=>{const s=sc[i];return itemRow(it,i,pl.items.length,pl.id,'day').replace('<small>','<small>'+(s?hhmm(s.from)+'–'+hhmm(s.to)+(s.dist?' · ~'+Math.round(s.dist)+' km':'')+' · ':''))}).join('')+'</ol>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
     (maps?'<a class="ghost-action" href="'+maps+'" target="_blank" rel="noopener">'+esc(t.maps)+'</a>':'')+
     '<p class="muted small">'+esc(t.dayNote)+'</p><button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="day">'+esc(t.delPlan)+'</button></article>'}).join(''):'<p class="empty">'+esc(t.emptyDays)+'</p>');
- }else if(tab==='memories'){
+ }else if(view==='memories'){
   const v=visited().map(k=>{const [ty,a,b]=k.split(':');return ty==='town'?{t:'town',region:a,name:b}:{t:ty,id:a}}).map(it=>({it,r:A.resolve(it)})).filter(o=>o.r);
   const ps=placeStamps().map(id=>({it:{t:'place',id},r:A.resolve({t:'place',id})})).filter(o=>o.r);
   const w=read('odkryjWarszawe_1',{}),wn=Array.isArray(w.visited)?w.visited.length:0;
@@ -168,13 +172,22 @@ function render(){
    (!v.length&&!ps.length?'<p class="empty">'+esc(t.noMemories)+'</p>':'')+
    (window.IWH_EXTRAS?'<h3>📔 '+esc(t.journal)+'</h3><p class="muted small">'+esc(t.journalIntro)+'</p><ul class="plan-items journal-list" id="memJournal"></ul>':'');
   if(window.IWH_EXTRAS){IWH_EXTRAS.journal.counts(p);renderJournal()}
- }else if(tab==='profile'){
-  const st=A.style();
-  p.innerHTML=head(t.profile)+'<h3>'+esc(t.language)+'</h3><div class="seg" role="group" aria-label="'+esc(t.language)+'"><button type="button" data-set-lang="pl" aria-pressed="'+(lang()==='pl')+'">Polski</button><button type="button" data-set-lang="en" aria-pressed="'+(lang()==='en')+'">English</button></div>'+
+ }else if(view==='explore'){
+  const REGS=(window.IWH_REGIONS&&window.IWH_REGIONS.regions)||[];
+  const crow=c=>{const r=A.resolve({t:'city',id:c.id});return r?'<li class="plan-item"><span class="pi-icon" aria-hidden="true">📍</span><span class="pi-text"><b>'+esc(r.name)+'</b><small>'+esc(r.sub||'')+'</small></span><span class="pi-actions"><button type="button" data-show-item=\''+esc(JSON.stringify({t:'city',id:c.id}))+'\'>'+esc(t.show)+'</button></span></li>':''};
+  const rrow=g=>{const r=A.resolve({t:'region',id:g.id});return r?'<li class="plan-item"><span class="pi-icon" aria-hidden="true">🗺️</span><span class="pi-text"><b>'+esc(r.name)+'</b><small>'+esc(r.sub||'')+'</small></span><span class="pi-actions"><button type="button" data-show-item=\''+esc(JSON.stringify({t:'region',id:g.id}))+'\'>'+esc(t.show)+'</button><a href="./region.html?region='+encodeURIComponent(g.id)+'&lang='+lang()+'">'+esc(t.guide)+'</a></span></li>':''};
+  p.innerHTML=head(t.explore)+'<p class="panel-intro">'+esc(t.exploreIntro)+'</p><h3>'+esc(t.cities)+'</h3><ul class="plan-items">'+A.cities().map(crow).join('')+'</ul><h3>'+esc(t.provinces)+'</h3><ul class="plan-items">'+REGS.map(rrow).join('')+'</ul>';
+ }else if(view==='profile'){
+  const st=A.style(),pst=window.IWH_EXTRAS?IWH_EXTRAS.passport.stats():null;
+  p.innerHTML=head(t.profile)+(pst?'<button type="button" class="passport-card" data-open-tab="passport"><img src="./assets/brand-pin-landscape.svg" alt="" width="40" height="54"><span><b>'+esc(t.passportCard)+'</b><small>'+esc(t.passportCardSub)+'</small><small class="pc-stats">🏛️ '+pst.warsaw+' · 🗺️ '+pst.regions+' · ✓ '+pst.cities+'</small></span><em>'+esc(t.openIt)+' →</em></button>':'')+'<h3>'+esc(t.language)+'</h3><div class="seg" role="group" aria-label="'+esc(t.language)+'"><button type="button" data-set-lang="pl" aria-pressed="'+(lang()==='pl')+'">Polski</button><button type="button" data-set-lang="en" aria-pressed="'+(lang()==='en')+'">English</button></div>'+
    '<h3>'+esc(t.mapStyle)+'</h3><div class="seg" role="group" aria-label="'+esc(t.mapStyle)+'">'+A.styles.map(s=>'<button type="button" data-set-style="'+s+'" aria-pressed="'+(st===s)+'">'+esc(t.styles[s])+'</button>').join('')+'</div>'+
    '<h3>'+esc(t.stats)+'</h3><div class="stat-row"><div><b>'+trips().length+'</b><small>'+esc(t.statTrips)+'</small></div><div><b>'+days().length+'</b><small>'+esc(t.statDays)+'</small></div><div><b>'+(visited().length+placeStamps().length)+'</b><small>'+esc(t.statVisited)+'</small></div></div>'+
    '<h3>'+esc(t.data)+'</h3><p class="muted small">'+esc(t.dataText)+'</p><button type="button" class="link-danger" data-clear>'+esc(t.clear)+'</button>';
  }
+ if(tab==='plans'){const h=p.querySelector('.panel-head h2');if(h)h.textContent=t.plans;
+  p.querySelector('.panel-head')?.insertAdjacentHTML('afterend','<div class="seg plan-switch" role="group" aria-label="'+esc(t.plans)+'"><button type="button" data-plan-view="trips" aria-pressed="'+(planView==='trips')+'">'+esc(t.planTrips)+'</button><button type="button" data-plan-view="day" aria-pressed="'+(planView==='day')+'">'+esc(t.planDays)+'</button></div>')}
+ if(tab==='passport'){const h=p.querySelector('.panel-head h2');if(h)h.textContent=t.passport;
+  p.querySelector('.panel-head')?.insertAdjacentHTML('afterend','<div class="passport-hero"><img src="./assets/brand-pin-landscape.svg" alt="" width="44" height="60"><p>'+esc(t.passportCardSub)+'</p></div>')}
 }
 document.addEventListener('click',e=>{
  const pnl=e.target.closest('#tabPanel');if(!pnl||!A)return;
@@ -185,6 +198,8 @@ document.addEventListener('click',e=>{
  if((b=q('[data-remove]'))){const {all,k,pl}=findPlan(b.dataset.remove);if(pl){pl.items.splice(+b.dataset.i,1);save(k,all);A.changed();render()}return}
  if((b=q('[data-move]'))){const {all,k,pl}=findPlan(b.dataset.plan);if(pl){const i=+b.dataset.i,j=i+ +b.dataset.move;if(j>=0&&j<pl.items.length){[pl.items[i],pl.items[j]]=[pl.items[j],pl.items[i]];save(k,all);render()}}return}
  if((b=q('[data-show]'))){const {pl}=findPlan(b.dataset.show);if(pl){API.open('map');A.show(pl.items[+b.dataset.i])}return}
+ if((b=q('[data-plan-view]'))){planView=b.dataset.planView;render();return}
+ if((b=q('[data-open-tab]'))){API.open(b.dataset.openTab);return}
  if((b=q('[data-show-item]'))){API.open('map');A.show(JSON.parse(b.dataset.showItem));return}
  if((b=q('[data-delete]'))){if(confirm(x().confirmDel)){const k=b.dataset.kind==='trip'?'iwh_trips':'iwh_days';save(k,read(k,[]).filter(p=>p.id!==b.dataset.delete));A.changed();render()}return}
  if((b=q('[data-mode-plan]'))){const all=days(),pl=all.find(p=>p.id===b.dataset.modePlan);if(pl){pl.mode=b.dataset.mode;save('iwh_days',all);render()}return}

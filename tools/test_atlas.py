@@ -26,7 +26,7 @@ assert len(cities) == 14 and len(set(cities)) == 14 and "kielce" in cities, "Atl
 assert "id:'warsaw'" in city_block and 'ready:true' in city_block, "Warszawa musi być aktywna."
 assert ".top{position:sticky;top:0" in nav and "brand-mark.svg" in home, "Logo z mapą Polski musi być zawsze widoczne u góry."
 assert "atlas-chip" not in home, "Mapa jest częścią logo (jeden znak), bez osobnej ikonki."
-for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg","assets/brand-mark.svg"):
+for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg","assets/brand-mark.svg","assets/brand-pin-landscape.svg","assets/app-nav.js","assets/app-nav.css"):
     assert f in sw, "PWA nie buforuje: " + f
 for path in [atlas,home]:
     ids=re.findall(r'\bid="([^"]+)"',path)
@@ -82,7 +82,7 @@ assert "polandHome" not in explorer_code, "Zdublowana mapa Polski w przewodniku 
 assert "smartOptions" not in explorer_code, "Zdublowany wybór priorytetu"
 # 5.1: przełącznik PL | EN, podpisane ikony, spójna marka
 assert 'class="lang-switch"' in home and 'data-lang="en"' in home and 'data-lang="en"' in atlas
-assert 'id="themeBtn"' in home and "<small>Wygląd</small>" in home and "<small>Paszport</small>" in home
+assert 'id="themeBtn"' in home and "<small>Wygląd</small>" in home and "<small>Jedzenie</small>" in home
 assert 'content="I Was Here"' in atlas and "Tu Byłem" not in atlas_js
 assert "przewodnik 4.0" not in home and "Wersja demonstracyjna" not in home
 assert "tubylem_lang" in explorer, "Moduł wycieczek musi używać wspólnego języka"
@@ -156,7 +156,11 @@ for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip
     assert 'id="' + token + '"' in atlas, "atlas.html: " + token
 plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
 assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
-assert 'data-tab="trips"' in atlas and 'data-tab="day"' in atlas and 'data-tab="memories"' in atlas and 'data-tab="profile"' in atlas
+appnav = (ROOT / "assets/app-nav.js").read_text(encoding="utf-8")
+assert "ORDER=['map','explore','plans','passport','profile']" in appnav, "Jednolite dolne menu"
+for page in ("atlas.html", "index.html", "region.html"):
+    assert 'id="appNav"' in (ROOT / page).read_text(encoding="utf-8") and "app-nav.js" in (ROOT / page).read_text(encoding="utf-8"), page
+assert '<nav class="bottom-nav"' not in home, "Warszawa: stare dolne menu zastąpione wspólnym"
 # 8.0: przewodniki wszystkich województw; każde z 14 miast ma atrakcje w przewodniku swojego regionu
 for r in regdb["regions"]:
     n = sum(p["region"] == r["id"] for p in regdb["places"])

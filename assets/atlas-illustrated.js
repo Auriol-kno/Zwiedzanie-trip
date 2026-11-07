@@ -7,33 +7,75 @@ const pointIn=(lon,lat,polygon)=>{let hit=false;for(let i=0,j=polygon.length-1;i
 const svgpath=(points,project)=>points.map((p,i)=>{const q=project(p[0],p[1]);return(i?'L':'M')+q.x.toFixed(1)+','+q.y.toFixed(1)}).join(' ');
 const tree=(x,y,size,idx)=>'<g transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') scale('+size.toFixed(2)+')" opacity="'+(0.58+pick(idx)*.28).toFixed(2)+'"><path d="M-1 0V-9H1V0Z" fill="#6a6845"/><path d="M0-29 -8-15H-4L-11-7H-6L-14-2H14L6-7H11L4-15H8Z" fill="'+(idx%5===0?'#397d63':idx%3===0?'#568c66':'#6b9f6a')+'"/><path d="M0-27 -4-18H-1L-6-9H-3L-8-4" stroke="#b9cda2" stroke-width=".9" fill="none" opacity=".75"/></g>';
 const farmland=(x,y,theta,i)=>'<g transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+theta+')" opacity=".18"><rect x="-15" y="-7" width="30" height="16" fill="'+(i%2?'#cda45d':'#b8a26f')+'" rx="3"/><path d="M-14-2H14M-14 4H14M-4-6V9M6-6V9" stroke="#fdf1d8" stroke-width="2"/></g>';
-const iconGroup=(id)=>{
- const wall='#fcdfb5',shadow='#c69b69',roof='#bb6846',brick='#d18155',line='#435e54';
- const trim='<path d="M9 49Q40 44 72 49" stroke="#6f9663" stroke-width="3" stroke-linecap="round" fill="none"/>';
- const windows=(xs,y,w=3,h=5)=>xs.map(x=>'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx=".6" fill="#5e897b"/>').join('');
- const tower='<rect x="35" y="12" width="11" height="37" fill="'+wall+'" stroke="'+line+'" stroke-width="1.3"/><path d="M33 12 40 1 48 12Z" fill="'+roof+'"/>'+windows([38,43],22,2,4)+'<rect x="39" y="35" width="4" height="9" rx="2" fill="#678d7c"/>';
- const roofPair='<path d="M10 25 24 11 39 25ZM43 26 58 11 72 26Z" fill="'+roof+'" stroke="'+line+'" stroke-width="1"/>';
- let item='';
- if(id==='warsaw'){
- item='<rect x="5" y="33" width="12" height="17" fill="#9db6ad"/><rect x="62" y="30" width="13" height="20" fill="#a7c6bd"/><path d="M28 47V17L35 12V7L40 2L45 7V12L51 17V47Z" fill="'+wall+'" stroke="'+line+'" stroke-width="1.5"/><path d="M25 19 40 9 55 19" fill="none" stroke="'+roof+'" stroke-width="3"/><path d="M40 2V-4" stroke="'+line+'" stroke-width="2"/>'+windows([31,38,45],22,3,6)+windows([31,38,45],33,3,6)+'<rect x="37" y="13" width="6" height="5" fill="#e9b66f"/>';
- }else if(id==='lodz'){
- item='<rect x="7" y="26" width="64" height="23" fill="'+brick+'" stroke="'+line+'" stroke-width="1.5"/><path d="M6 26 19 17 30 23 40 17 51 23 66 16 72 26Z" fill="'+roof+'"/><rect x="54" y="1" width="8" height="27" fill="'+brick+'" stroke="'+line+'" stroke-width="1.2"/>'+windows([14,24,34,44,54,64],31,5,8)+'<rect x="37" y="40" width="9" height="9" fill="#496b68"/>';
- }else if(id==='katowice'){
- item='<path d="M16 48 20 12 30 12 34 48M15 21H35M19 30H31M17 42H33" stroke="'+line+'" stroke-width="3" fill="none"/><path d="M13 18 36 18" stroke="'+roof+'" stroke-width="2"/><path d="M40 39Q55 21 77 37L70 44H47Z" fill="#819b8a" stroke="'+line+'" stroke-width="2"/><ellipse cx="59" cy="38" rx="22" ry="5" fill="#bed0c5" stroke="'+line+'" stroke-width="1.5"/>';
- }else if(id==='gdansk'){
- item='<path d="M12 49V23L22 15 32 23V49ZM32 49V18L42 7 53 18V49ZM53 49V25L63 14 73 25V49Z" fill="'+wall+'" stroke="'+line+'" stroke-width="1.2"/><path d="M12 23 22 15 32 23M32 18 42 7 53 18M53 25 63 14 73 25" stroke="'+roof+'" stroke-width="3" fill="none"/><path d="M70 7V33M65 12H77M65 13 72 28" stroke="#805b46" stroke-width="2"/>'+windows([18,39,60],28,4,8);
- }else if(id==='krakow'||id==='szczecin'||id==='olsztyn'||id==='lublin'||id==='rzeszow'){
- item='<rect x="9" y="27" width="63" height="22" fill="'+wall+'" stroke="'+line+'" stroke-width="1.2"/><rect x="11" y="14" width="13" height="35" fill="'+shadow+'" stroke="'+line+'" stroke-width="1"/><rect x="56" y="14" width="13" height="35" fill="'+shadow+'" stroke="'+line+'" stroke-width="1"/><path d="M8 14 17 4 27 14ZM54 14 62 4 72 14Z" fill="'+roof+'"/><path d="M26 27 40 10 55 27Z" fill="'+roof+'"/>'+windows([16,30,39,48,61],31,3,6)+'<path d="M37 49V39Q40 33 44 39V49" fill="#638b79"/>';
- }else if(id==='bialystok'){
- item='<rect x="7" y="31" width="66" height="18" fill="'+wall+'" stroke="'+line+'" stroke-width="1.2"/><rect x="30" y="18" width="20" height="31" fill="'+shadow+'" stroke="'+line+'" stroke-width="1"/><path d="M26 18 40 8 54 18Z" fill="'+roof+'"/><path d="M10 31 17 23 26 31M54 31 64 23 72 31" fill="'+roof+'"/>'+windows([15,23,34,43,55,63],35,3,6);
- }else if(id==='torun'||id==='wroclaw'||id==='poznan'||id==='bydgoszcz'){
- item='<rect x="10" y="28" width="62" height="21" fill="'+wall+'" stroke="'+line+'" stroke-width="1.2"/>'+roofPair+'<rect x="34" y="15" width="12" height="34" fill="'+shadow+'" stroke="'+line+'" stroke-width="1"/><path d="M33 15 40 3 47 15Z" fill="'+roof+'"/>'+windows([16,24,38,54,62],31,3,6);
- }else{
- item='<rect x="13" y="27" width="54" height="22" fill="'+wall+'" stroke="'+line+'"/><path d="M11 27 40 10 69 27Z" fill="'+roof+'"/>'+tower+windows([17,25,54,62],32,3,5);
- }
- return '<g class="landmark-drawing"><ellipse cx="40" cy="49" rx="39" ry="6" fill="#7d9f64" opacity=".26"/>'+item+'<path d="M5 49H75" stroke="#78996d" stroke-width="2" fill="none"/>'+trim+'</g>';
+// 8.4 — malowane (akwarelowe) motywy miast: plama farby, światło z lewej góry, miękki „pędzlowy” kontur.
+// Bez filtrów SVG (płynny zoom na iPhonie). Gradienty: wspólne <defs> (paintDefs), wstrzykiwane raz na stronę.
+const PAINT_DEFS='<linearGradient id="lmWall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6E2"/><stop offset="1" stop-color="#E9C796"/></linearGradient>'+
+ '<linearGradient id="lmShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EBCB9C"/><stop offset="1" stop-color="#C79763"/></linearGradient>'+
+ '<linearGradient id="lmRoof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EE9566"/><stop offset="1" stop-color="#A9472C"/></linearGradient>'+
+ '<linearGradient id="lmBrick" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E59B6E"/><stop offset="1" stop-color="#A2523A"/></linearGradient>'+
+ '<linearGradient id="lmCopper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B4E2CC"/><stop offset="1" stop-color="#4A917B"/></linearGradient>'+
+ '<linearGradient id="lmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE6A0"/><stop offset="1" stop-color="#D49A2A"/></linearGradient>'+
+ '<linearGradient id="lmStone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6F2E8"/><stop offset="1" stop-color="#BDB4A0"/></linearGradient>'+
+ '<linearGradient id="lmSlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9AAAB8"/><stop offset="1" stop-color="#55677A"/></linearGradient>'+
+ '<linearGradient id="lmTimber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9A7154"/><stop offset="1" stop-color="#5A3B28"/></linearGradient>'+
+ '<linearGradient id="lmWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9DCEC"/><stop offset="1" stop-color="#4F98B6"/></linearGradient>'+
+ '<linearGradient id="lmGround" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B5DA88"/><stop offset="1" stop-color="#6FA65A"/></linearGradient>'+
+ '<radialGradient id="lmWash" cx=".45" cy=".45" r=".6"><stop offset="0" stop-color="#FFF1CF" stop-opacity=".95"/><stop offset=".7" stop-color="#FBE3B4" stop-opacity=".55"/><stop offset="1" stop-color="#FBE3B4" stop-opacity="0"/></radialGradient>';
+function paintDefs(svg){
+ if(document.getElementById('lmWall'))return;
+ const host=svg||(()=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('width','0');s.setAttribute('height','0');s.setAttribute('aria-hidden','true');s.style.position='absolute';document.body.appendChild(s);return s})();
+ const d=document.createElementNS('http://www.w3.org/2000/svg','defs');d.innerHTML=PAINT_DEFS;host.insertBefore(d,host.firstChild);
+}
+const INK=' stroke="#5A4535" stroke-opacity=".55" stroke-width=".9" stroke-linejoin="round"';
+const P=(d,f,extra)=>'<path d="'+d+'" fill="'+f+'"'+INK+(extra||'')+'/>';
+const R=(x,y,w,h,f)=>P('M'+x+' '+y+'h'+w+'v'+h+'h-'+w+'Z',f);
+const win=(xs,y,w,h,f)=>xs.map(x=>'<rect x="'+x+'" y="'+y+'" width="'+(w||2.4)+'" height="'+(h||4)+'" rx="1" fill="'+(f||'#5F8FA0')+'" opacity=".85"/>').join('');
+const arches=(xs,y,w,h)=>xs.map(x=>'<path d="M'+x+' '+(y+h)+'v-'+(h-w/2)+'a'+(w/2)+' '+(w/2)+' 0 0 1 '+w+' 0v'+(h-w/2)+'Z" fill="#7A9AA2" opacity=".8"/>').join('');
+const hi=d=>'<path d="'+d+'" fill="none" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="1.1" stroke-linecap="round"/>';
+const WASH='<path d="M5 45C1 30 15 11 35 10C55 7 76 17 78 33C80 46 66 53 40 53C19 53 8 51 5 45Z" fill="url(#lmWash)"/>';
+const GROUND='<path d="M1 48Q21 43 40 46T79 47V53Q40 57 1 53Z" fill="url(#lmGround)"/><path d="M6 49Q27 45 49 48T76 48" fill="none" stroke="#4F7F45" stroke-opacity=".45" stroke-width="1.1" stroke-linecap="round"/>';
+const lmTree=(x,y,s)=>'<g transform="translate('+x+' '+y+') scale('+(s||1)+')"><path d="M0-12C-5-8-6-3-4 0H4C6-3 5-8 0-12Z" fill="#4E8E55"'+INK+'/><path d="M0-12C2-8 3-4 2 0H4C6-3 5-8 0-12Z" fill="#2F6B45" opacity=".6"/></g>';
+const LM={
+ warsaw:()=>R(12,36,56,12,'url(#lmStone)')+R(22,26,36,10,'url(#lmStone)')+R(30,15,20,11,'url(#lmStone)')+R(34,8,12,7,'url(#lmStone)')+P('M38 8 40 0 42 8Z','url(#lmGold)')+
+  '<path d="M46 15v11M58 26v10M68 36v12" stroke="#A2977F" stroke-width="2.2" opacity=".6"/>'+win([15,19,23,57,61,65],39,2,6,'#6E8C96')+win([25,29,47,51],29,2,5,'#6E8C96')+win([33,37,41,45],18,1.8,6,'#6E8C96')+hi('M14 37H40M24 27H40M32 16H40'),
+ krakow:()=>P('M3 48C10 38 24 34 40 34S70 38 77 48Z','url(#lmGround)')+R(10,30,58,12,'url(#lmWall)')+P('M10 30v-3h4v3h4v-3h4v3h4v-3h4v3h4v-3h4v3h4v-3h4v3h4v-3h4v3h4v-3h4v3','none')+
+  R(16,14,9,16,'url(#lmShade)')+P('M15 14 20.5 4 26 14Z','url(#lmCopper)')+R(38,21,20,10,'url(#lmWall)')+P('M37 21 48 13 59 21Z','url(#lmRoof)')+P('M43 13a5 5 0 0 1 10 0Z','url(#lmGold)')+P('M47.6 8h.8v-3h-.8Z','url(#lmGold)')+
+  R(61,17,7,13,'url(#lmBrick)')+P('M60 17 64.5 9 69 17Z','url(#lmRoof)')+win([18,22],19,1.8,4)+win([41,45,51,55],24,1.8,4)+win([14,24,34,46,56],34,2.2,4)+hi('M11 31H40M39 22H50'),
+ gdansk:()=>'<path d="M0 45Q20 42 40 45T80 45V53H0Z" fill="url(#lmWater)"/><path d="M4 48Q14 46 24 48M34 49Q46 47 58 49" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1" fill="none"/>'+
+  R(8,24,13,21,'url(#lmBrick)')+R(30,24,13,21,'url(#lmBrick)')+P('M16 22H36V8H16Z','url(#lmTimber)')+P('M14 9 26 2 38 9Z','url(#lmTimber)')+P('M36 12h8v3h-8Z','url(#lmTimber)')+
+  P('M21 45V34a4.5 4.5 0 0 1 9 0V45Z','#5A3B28')+win([11,16,33,38],29,2,4,'#3E5E68')+R(50,26,8,19,'url(#lmWall)')+P('M50 26 54 19 58 26Z','url(#lmRoof)')+R(58,24,8,21,'#F2C46F')+P('M58 24 62 17 66 24Z','url(#lmRoof)')+R(66,27,9,18,'#C9E0D3')+P('M66 27 70.5 20 75 27Z','url(#lmRoof)')+win([52,60,68,71],31,1.8,3.6)+hi('M17 9H34'),
+ wroclaw:()=>R(8,27,50,19,'url(#lmWall)')+P('M7 27 18 15H48L59 27Z','url(#lmRoof)')+P('M26 27 33 11 40 27Z','url(#lmWall)')+P('M33 11v-4','none')+P('M24 15l2-5 2 5M38 15l2-5 2 5','none')+
+  R(58,12,10,34,'url(#lmShade)')+P('M57 12 63 6 69 12Z','url(#lmCopper)')+P('M60 6a3 3 0 0 1 6 0Z','url(#lmCopper)')+P('M62.6 3h.8v-3h-.8Z','url(#lmGold)')+
+  arches([12,20,42,50],34,5,9)+win([31,35],19,1.6,5)+win([60,64],18,1.8,4)+hi('M9 28H30M27 26 33 12'),
+ poznan:()=>R(4,30,12,16,'#E7745B')+P('M4 30 10 23 16 30Z','url(#lmRoof)')+R(56,28,10,18,'#F3C65E')+P('M56 28 61 21 66 28Z','url(#lmRoof)')+R(66,31,10,15,'#9ECBA8')+P('M66 31 71 24 76 31Z','url(#lmRoof)')+
+  R(16,20,40,26,'url(#lmStone)')+R(16,16,40,4,'url(#lmWall)')+arches([19,25,31,37,43,49],22,4,6)+arches([19,25,31,37,43,49],30,4,6)+arches([19,25,31,37,43,49],38,4,7)+
+  R(32,7,8,9,'url(#lmWall)')+P('M31 7 36 0 41 7Z','url(#lmCopper)')+win([7,11,59,62,69,72],34,1.8,4)+hi('M17 21H40'),
+ lodz:()=>R(6,24,58,22,'url(#lmBrick)')+P('M6 24l6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 4 6Z','url(#lmShade)')+R(65,2,7,44,'url(#lmBrick)')+P('M64 2h9v3h-9Z','#5A3B28')+
+  arches([9,16,23,30,37,44,51,58],29,4,7)+arches([9,16,23,30,37,44,51,58],38,4,6)+'<path d="M68 2C64-3 70-6 66-10" stroke="#B9B2A5" stroke-width="2.4" fill="none" opacity=".6" stroke-linecap="round"/>'+hi('M7 25H40M66 4V30'),
+ szczecin:()=>R(10,24,42,22,'url(#lmWall)')+P('M9 24 15 16H47L53 24Z','url(#lmRoof)')+R(52,10,12,36,'url(#lmShade)')+P('M51 10 58 3 65 10Z','url(#lmCopper)')+P('M55 3a3 3 0 0 1 6 0Z','url(#lmCopper)')+P('M57.6 0h.8v-3h-.8Z','url(#lmGold)')+
+  arches([13,20,27,34,41],34,5,9)+win([14,21,28,35,42],27,2,4)+win([55,60],16,1.8,4)+win([55,60],26,1.8,4)+'<path d="M0 47Q20 44 40 47T80 46V53H0Z" fill="url(#lmWater)" opacity=".75"/>'+hi('M11 25H30M53 11V30'),
+ lublin:()=>R(6,32,22,14,'url(#lmWall)')+P('M6 32 17 25 28 32Z','url(#lmRoof)')+R(52,30,22,16,'url(#lmWall)')+P('M52 30 63 23 74 30Z','url(#lmRoof)')+
+  R(28,22,24,25,'url(#lmBrick)')+R(31,11,18,11,'url(#lmWall)')+P('M30 11 40 4 50 11Z','url(#lmSlate)')+P('M36 4a4 4 0 0 1 8 0Z','url(#lmSlate)')+P('M39.6 0h.8v-4h-.8Z','url(#lmGold)')+
+  P('M35 47V37a5 5 0 0 1 10 0V47Z','#5A3B28')+win([34,38,42,46],14,1.6,5,'#3E5E68')+win([10,15,20,56,62,68],36,1.8,4)+'<circle cx="40" cy="28" r="3" fill="#FFF6E2"'+INK+'/>'+hi('M29 23H40M32 12H40'),
+ katowice:()=>P('M8 46 12 14H20L24 46','none')+P('M12 14 24 46M20 14 8 46M10 30H22','none')+'<circle cx="16" cy="11" r="5" fill="none"'+INK+' stroke-width="1.6"/>'+P('M14 6h4v2h-4Z','#C94B33')+
+  P('M24 34C30 24 64 24 74 34C64 39 30 39 24 34Z','url(#lmStone)')+P('M28 34C34 30 64 30 70 34','none')+'<path d="M30 36.5C38 38.5 60 38.5 68 36.5" stroke="#6A7C88" stroke-width="1.4" fill="none" opacity=".7"/>'+
+  P('M34 37 30 46M49 38V46M64 37 68 46','none')+P('M24 46H74V48H24Z','url(#lmShade)')+hi('M30 31C40 27 58 27 66 30'),
+ bialystok:()=>R(6,28,68,18,'url(#lmWall)')+P('M5 28 12 22H68L75 28Z','url(#lmSlate)')+R(30,18,20,28,'url(#lmWall)')+P('M28 18 40 9 52 18Z','url(#lmWall)')+P('M36 9a4 4 0 0 1 8 0Z','url(#lmGold)')+P('M39.6 1h.8v-4h-.8Z','url(#lmGold)')+
+  R(6,22,8,24,'url(#lmShade)')+P('M5 22a5 5 0 0 1 10 0Z','url(#lmSlate)')+R(66,22,8,24,'url(#lmShade)')+P('M65 22a5 5 0 0 1 10 0Z','url(#lmSlate)')+
+  win([17,22,27,53,58,63],32,2,6)+arches([33,38,43],34,4,12)+'<circle cx="40" cy="14" r="2" fill="#D49A2A"/>'+hi('M7 29H30M31 19H40'),
+ rzeszow:()=>R(14,24,48,22,'url(#lmWall)')+P('M13 24 20 17H56L63 24Z','url(#lmRoof)')+R(10,18,8,28,'url(#lmShade)')+P('M9 18 14 10 19 18Z','url(#lmCopper)')+R(58,18,8,28,'url(#lmShade)')+P('M57 18 62 10 67 18Z','url(#lmCopper)')+
+  R(34,8,8,16,'url(#lmWall)')+P('M33 8 38 1 43 8Z','url(#lmGold)')+arches([20,27,45,52],34,5,10)+win([36],12,2,5)+win([20,27,45,52],27,2,4)+P('M35 46V36a3 3 0 0 1 6 0V46Z','#5A3B28')+hi('M15 25H36'),
+ torun:()=>R(8,22,48,24,'url(#lmBrick)')+P('M8 22h4v-5h4v5h8v-5h4v5h8v-5h4v5h8v-5h4v5','none')+R(46,2,10,44,'url(#lmBrick)')+P('M45 2 51-4 57 2Z','url(#lmRoof)')+
+  arches([12,19,26,33,40],27,4,9)+arches([12,19,26,33,40],37,4,8)+win([48.5,52.5],8,1.6,6,'#3E5E68')+win([48.5,52.5],20,1.6,6,'#3E5E68')+R(60,30,14,16,'#EBC79B')+P('M60 30 67 21 74 30Z','url(#lmRoof)')+win([63,68],35,2,4)+hi('M9 23H30M47 3V24'),
+ olsztyn:()=>R(8,24,40,22,'url(#lmBrick)')+P('M7 24 14 15H42L49 24Z','url(#lmRoof)')+R(48,6,14,40,'url(#lmBrick)')+P('M48 6v-3h3v3h3v-3h3v3h3v-3h2v3','none')+R(62,28,10,18,'url(#lmShade)')+P('M61 28 67 21 73 28Z','url(#lmRoof)')+
+  win([12,19,26,33,40],29,2,5,'#3E5E68')+arches([52,57],12,3,8)+win([52,56],26,1.8,5,'#3E5E68')+P('M24 46V38a3.5 3.5 0 0 1 7 0V46Z','#5A3B28')+lmTree(4,47,1)+lmTree(76,47,.9)+hi('M9 25H28M49 7V30'),
+ kielce:()=>R(12,24,56,22,'url(#lmWall)')+P('M11 24 18 17H62L69 24Z','url(#lmSlate)')+R(8,18,10,28,'url(#lmShade)')+R(62,18,10,28,'url(#lmShade)')+
+  P('M7 18C7 13 13 9 13 4C13 9 19 13 19 18Z','url(#lmSlate)')+P('M61 18C61 13 67 9 67 4C67 9 73 13 73 18Z','url(#lmSlate)')+P('M12.6 4h.8v-4h-.8ZM66.6 4h.8v-4h-.8Z','url(#lmGold)')+
+  arches([24,31,38,45,52],36,5,10)+win([24,31,38,45,52],27,2,5)+win([11,15,65,69],24,1.6,4)+R(30,12,20,5,'url(#lmWall)')+P('M30 12 40 6 50 12Z','url(#lmSlate)')+hi('M13 25H40M9 19V36')
 };
+const iconGroup=(id)=>'<g class="landmark-drawing">'+WASH+GROUND+(LM[id]||LM.krakow)()+'</g>';
 function decorate({clipped,el,project,path,geo}){
+ paintDefs(clipped.ownerSVGElement);
  if(!geo?.regions?.length)return;
  const regional=el('g',{class:'province-layer'});
  geo.regions.forEach((r,i)=>{const q=el('path',{class:'atlas-province',d:path(r.coords),fill:palette[i%palette.length]});regional.appendChild(q)});
@@ -69,5 +111,5 @@ function decorate({clipped,el,project,path,geo}){
  }
  clipped.appendChild(water);
 }
-window.IWH_ATLAS_ART={decorate,landmark:iconGroup};
+window.IWH_ATLAS_ART={decorate,landmark:iconGroup,paintDefs};
 })();

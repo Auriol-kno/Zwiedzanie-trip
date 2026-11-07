@@ -107,3 +107,11 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 @media(min-width:820px){.app{padding:0 28px 60px}.places{grid-template-columns:repeat(2,minmax(0,1fr))}#rMap{height:420px}.bottom-nav{max-width:460px;left:50%;transform:translateX(-50%);border:1px solid var(--line);border-radius:22px 22px 0 0}}
 @media(max-width:380px){.app{padding-inline:11px}.stat{padding:11px 9px}.stat strong{font-size:17px}.plan-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* 8.4 — malowany motyw miasta w nagłówku przewodnika regionu */
+.hero{position:relative;overflow:hidden}
+.hero-art{position:absolute;right:-6px;bottom:-8px;width:min(46%,230px);pointer-events:none;opacity:.95;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25))}
+.hero-art svg{display:block;width:100%;height:auto}
+.hero h1,.hero p,.hero .eyebrow{position:relative;z-index:1}
+.hero p{max-width:58%}
+@media(max-width:420px){.hero-art{width:44%}.hero p{max-width:60%}}

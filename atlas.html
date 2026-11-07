@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./assets/atlas-light-v5.css">
 <link rel="stylesheet" href="./assets/atlas-premium.css">
 <link rel="stylesheet" href="./assets/place-extras.css">
+<link rel="stylesheet" href="./assets/app-nav.css">
 <title>I Was Here — Poland Atlas</title>
 </head>
 <body data-style="atlas">
@@ -25,7 +26,7 @@
 
   <header class="atlas-top">
     <a class="brand" href="./atlas.html" aria-label="I Was Here — Poland Atlas">
-      <span class="brand-logo" aria-hidden="true"><img src="./assets/brand-mark.svg" alt="" width="60" height="57"></span>
+      <span class="brand-logo" aria-hidden="true"><img src="./assets/brand-mark.svg" alt="" width="56" height="56"></span>
       <span class="brand-name"><strong>I Was Here</strong><small id="atlasSubtitle">Places &amp; Memories</small></span>
     </a>
     <p class="tagline" id="atlasTagline">Explore Poland · Collect places · Create memories</p>
@@ -91,19 +92,14 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog class="picker" id="planPicker" aria-labelledby="pickerTitle"></dialog>
 
-  <nav class="tabbar" aria-label="Main">
-    <button type="button" data-tab="map" class="active" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 2 6 2v10l-6-2V6Z"/></svg><b id="tabMap">Map of Poland</b></button>
-    <button type="button" data-tab="trips"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg><b id="tabTrips">Trip plan</b></button>
-    <button type="button" data-tab="day"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 7h14v11H5V9Zm2 2v2h2v-2H7Zm4 0v2h2v-2h-2Z"/></svg><b id="tabDay">My day plan</b></button>
-    <button type="button" data-tab="memories"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1 12.5V18h14v-3l-4-4-4 4-2-2-4 3.5ZM8.5 7A1.5 1.5 0 1 0 8.5 10 1.5 1.5 0 0 0 8.5 7Z"/></svg><b id="tabMemories">Memories</b></button>
-    <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/></svg><b id="tabProfile">Profile</b></button>
-  </nav>
+  <nav class="tabbar app-nav" id="appNav" data-page="atlas" aria-label="Main"></nav>
 </main>
 <script src="./assets/brand-v5.js"></script>
 <script src="./assets/poland-geography.js"></script>
 <script src="./data/regiony.js"></script>
 <script src="./assets/atlas-illustrated.js"></script>
 <script src="./assets/place-extras.js"></script>
+<script src="./assets/app-nav.js"></script>
 <script src="./assets/atlas-plans.js"></script>
 <script src="./assets/atlas.js"></script>
 </body>
