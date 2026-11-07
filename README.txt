@@ -39,7 +39,8 @@ MAINTENANCE
 - Map data: assets/poland-geography.js
 - Illustrated map artwork: assets/atlas-illustrated.js
 - Light Atlas style: assets/atlas-light-v5.css
-- Map controls: assets/atlas.js
+- Map controls: assets/atlas.js (pan, pinch-zoom, keyboard)
+- Browser test: node tools/test_browser.js (Playwright, Chromium)
 - Branding and logos: assets/brand-pin.svg, assets/logo-en.svg, icon.svg
 - Read ATLAS_5_0.md for geography sources, limitations and plans.
 

@@ -36,7 +36,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 6. When changing visible copy, update PL and EN together. English must not leave Polish UI fragments; preserve place names when they are proper nouns. Avoid misleading automatically fabricated history.
 7. Prefer real, source-backed geography and city coordinates. Decorative drawings/landmarks must not move pins or change real borders.
 8. Test keyboard/mobile accessibility, iPhone Safari PWA behaviour, selected map style and localStorage persistence when possible. State explicitly if you could not test on a real iPhone.
-9. Run: `python tools/sync_database.py`, `python tools/test_bundle.py`, `python tools/test_atlas.py`, and `node --check` on every changed JS file. Review git diff for unintended changes.
+9. Run: `python tools/sync_database.py`, `python tools/test_bundle.py`, `python tools/test_atlas.py`, `node tools/test_browser.js` (Playwright + Chromium; also runs in CI), and `node --check` on every changed JS file. Review git diff for unintended changes.
 10. Prefer GitHub Issues / Pull Requests for coordination. Leave a PR ready for review rather than self-merging when another assistant may be working simultaneously.
 11. Do not commit credentials, service tokens, personal user data, or generated high-resolution binary assets unless authorised.
 12. Update relevant documentation (`README.txt`, `ATLAS_4_0.md`, or a new release notes file) when implementation changes.

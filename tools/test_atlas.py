@@ -88,6 +88,16 @@ assert "tubylem_lang" in explorer, "Moduł wycieczek musi używać wspólnego j�
 assert home.count('id="langWarsaw"') == 1
 assert home.index('id="atlasFloat"') < home.index('assets/i18n4.js'), "#atlasFloat musi istnieć przed i18n4.js"
 assert "./assets/poland-explorer.js" in sw, "PWA nie buforuje modułu wycieczek"
+# 5.3: każdy lokalny plik ładowany przez strony musi być w cache offline; Atlas rejestruje SW
+core = set(re.findall(r"'\./([^']+)'", sw.split("CORE=", 1)[1].split("];", 1)[0]))
+for page in (atlas, home):
+    for ref in re.findall(r'(?:src|href)="(?:\./)?((?:assets|data)/[^"?#]+)"', page):
+        assert ref in core, "PWA nie buforuje: " + ref
+assert "assets/poland-explorer.js" in core
+assert "serviceWorker.register" in atlas_js, "Atlas (start_url) musi rejestrować Service Workera"
+assert "ignoreSearch" in sw and "navigate" in sw, "Offline: nawigacja z ?lang musi trafiać w cache"
+assert all(i["purpose"] == "any" for i in manifest["icons"]), "Ikona any nie może być jednocześnie maskable"
+assert "offers a worthwhile stop" not in i18n, "Szablonowe opisy EN"
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
 
 print("OK: Atlas 13 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")

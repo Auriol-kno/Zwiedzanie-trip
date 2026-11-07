@@ -32,3 +32,13 @@ jobs:
           node --check data/atrakcje.js
           node --check data/restauracje.js
           node --check service-worker.js
+          node --check tools/test_browser.js
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test w przeglądarce (Chromium, iPhone 13)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.63.0
+          npx playwright install --with-deps chromium
+          node tools/test_browser.js

@@ -80,21 +80,16 @@ royalroute:['Krakowskie Przedmieście','A ceremonial section of the Royal Route,
 };
 const cuisineNames={polska:'Polish',koreańska:'Korean',chińska:'Chinese',tajska:'Thai',japońska:'Japanese',włoska:'Italian',roślinna:'plant-based',indyjska:'Indian',śniadania:'breakfast',kawa:'specialty coffee',koktajle:'cocktails'};
 const kindLabel={monument:'monument and memorial',park:'park or green space',museum:'museum',history:'historical site',architecture:'architectural landmark',view:'viewpoint',science:'science attraction',family:'family attraction',hidden:'local hidden gem'};
-function properEnglish(name){
- if(special[name])return special[name][0];
- if(name==='Kolumna Zygmunta III Wazy')return 'Sigismund’s Column';
- if(name==='Pomnik Tadeusza Kościuszki')return 'Tadeusz Kościuszko Monument';
- if(name.startsWith('Pomnik '))return name.replace(/^Pomnik /,'Monument to ');
- if(name.startsWith('Muzeum '))return name.replace(/^Muzeum /,'Museum of ');
- if(name.startsWith('Park '))return name.replace(/^Park /,'Park ');
- if(name.startsWith('Ogród '))return name.replace(/^Ogród /,'Garden ');
- if(name.startsWith('Las '))return name.replace(/^Las /,'Forest ');
- return name;
-}
+// Nazwy własne bez redakcyjnego przekładu zostają po polsku (np. „Pomnik Małego Powstańca”).
+// Mechaniczne zamiany typu „Monument to Małego Powstańca” dawały błędną angielszczyznę.
+const nameEN={'Kolumna Zygmunta III Wazy':'Sigismund’s Column','Pomnik Tadeusza Kościuszki':'Tadeusz Kościuszko Monument'};
+function properEnglish(name){return nameEN[name]||name}
 function fallback(p){
- const kind=(p.cats||[]).map(c=>kindLabel[c]).find(Boolean)||'interesting place';
+ const kinds=(p.cats||[]).map(c=>kindLabel[c]).filter(Boolean);
+ const kind=kinds[0]||'place of interest';
  const area=p.district||'Warsaw';
- return ['Explore '+kind+' in '+area+'. '+p.name+' offers a worthwhile stop while discovering the city.','This place is part of the local character of '+area+'. Consider it for a thematic walk or a sightseeing route, and check current access conditions before your visit.'];
+ const article=/^[aeiou]/i.test(kind)?'An ':'A ';
+ return [article+kind+' in '+area+', Warsaw. An editorial English description is not available yet.','Switch to PL for the full curated description, or open the official website for current visitor information.'];
 }
 const placeFields=['name','desc','story','hours','priceText','range','metro'];
 const foodFields=['name','description'];
