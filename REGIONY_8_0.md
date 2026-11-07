@@ -39,3 +39,22 @@ Data: 7 listopada 2026 r.
 ## Dalszy rozwój
 - Weryfikacja współrzędnych geokoderem lub na miejscu; status `zweryfikowane` nadawać dopiero po sprawdzeniu.
 - Rozszerzenie Mazowieckiego i dłuższe opisy EN dla Warszawy.
+
+## Aktualizacja 8.1 — weryfikacja położenia w OpenStreetMap
+- Narzędzie `tools/verify_coordinates.py` wyszukuje każde miejsce w **Nominatim** (OpenStreetMap). Działa w tempie 1 zapytania na 2,5 s, z pamięcią podręczną i ponawianiem przy 429.
+- Wynik jest przyjmowany tylko wtedy, gdy obiekt leży w **tym samym województwie**, jego **nazwa się zgadza** (odpornie na odmianę, bez liczenia nazwy miejscowości) i jest **≤ 12 km** od dotychczasowego punktu.
+- **160 ze 198 miejsc** ma teraz `coordinateStatus: "osm"` oraz identyfikator obiektu OSM (`osm.type`, `osm.id`).
+- Największe poprawki: Grabarka 8,9 km, Krzyżtopór 6,6 km, Kozłówka 5,4 km, start spływu Dunajcem 5,3 km, Muzeum Sienkiewicza 5,1 km, MRU 4,8 km, skansen w Sierpcu 3,5 km, Jaskinia Raj 2,8 km.
+- **38 miejsc zostaje „orientacyjnych”:**
+  - 18 to rozległe obiekty i ulice (parki narodowe, Kanał Augustowski, Morskie Oko, Śnieżka, ul. Piotrkowska). Ich punkt wskazuje miejsce zwiedzania, a nie środek obszaru czy siedzibę dyrekcji, więc nie jest przesuwany;
+  - dla 20 Nominatim nie dał pewnego trafienia (lista: `python tools/verify_coordinates.py --cache …`).
+- Przewodnik regionu pokazuje przy zweryfikowanym miejscu: „Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL)”. Atrybucja jest też w stopce i w Profilu Atlasu.
+
+## Aktualizacja 8.2 — Kielce w Atlasie
+- **Kielce** są **14. miastem** Atlasu (centrum miasta WGS84 50,8661° N, 20,6286° E), z opisem PL/EN i przypisaniem do województwa świętokrzyskiego.
+- Karta miasta ma przycisk **„Zwiedzaj Kielce”**, który otwiera przewodnik Świętokrzyskiego z filtrem miejscowości Kielce.
+- **14 atrakcji w Kielcach:**
+  - dotychczasowe 5: Pałac Biskupów Krakowskich, katedra, Kadzielnia, Geopark Wietrznia, Karczówka;
+  - 9 nowych: Rynek i ul. Sienkiewicza, Muzeum Zabawek i Zabawy, Muzeum Historii Kielc, rezerwat Ślichowice (Fałd Czarnockiego), Park Staszica, Dworek Laszczyków, Muzeum Lat Szkolnych Stefana Żeromskiego, Ogród Botaniczny, Wzgórze Telegraf.
+- **Położenie:** 11 z 14 atrakcji Kielc potwierdzono w OpenStreetMap. Największa poprawka to Wzgórze Telegraf (3,1 km, szczyt `natural=peak`). Ślichowice, Dworek Laszczyków i Muzeum Żeromskiego zostają orientacyjne.
+- Łącznie w bazie jest 207 miejsc, z czego 166 ma położenie z OSM.

@@ -177,7 +177,9 @@
    "pl": "Świętokrzyskie",
    "en": "Świętokrzyskie (Holy Cross)",
    "status": "guide",
-   "cities": []
+   "cities": [
+    "kielce"
+   ]
   },
   {
    "id": "warminsko-mazurskie",
@@ -225,17 +227,22 @@
    ],
    "time": 90,
    "visitValue": 5,
-   "lat": 50.8708,
-   "lon": 20.6285,
+   "lat": 50.86915,
+   "lon": 20.62746,
    "icon": "🏰",
    "url": "https://mnki.pl",
    "desc": {
     "pl": "Wczesnobarokowa rezydencja z XVII w. z zachowanymi wnętrzami; dziś siedziba Muzeum Narodowego w Kielcach.",
     "en": "An early Baroque 17th-century residence with preserved interiors, now home to the National Museum in Kielce."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 201180429,
+    "name": "Pałac Biskupów Krakowskich"
+   }
   },
   {
    "id": "ki-katedra",
@@ -251,17 +258,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.8699,
-   "lon": 20.6271,
+   "lat": 50.86887,
+   "lon": 20.62887,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Główna świątynia Kielc na Wzgórzu Zamkowym, tuż obok Pałacu Biskupów.",
     "en": "Kielce’s main church on Castle Hill, right next to the Bishops’ Palace."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 133727496,
+    "name": "Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny"
+   }
   },
   {
    "id": "ki-kadzielnia",
@@ -278,17 +290,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 50.861,
-   "lon": 20.633,
+   "lat": 50.86125,
+   "lon": 20.61685,
    "icon": "🪨",
    "url": null,
    "desc": {
     "pl": "Dawny kamieniołom wapienia w centrum miasta: skalne ściany, punkty widokowe i amfiteatr.",
     "en": "A former limestone quarry in the city centre with rock walls, viewpoints and an amphitheatre."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 158540909,
+    "name": "Rezerwat Kadzielnia"
+   }
   },
   {
    "id": "ki-wietrznia",
@@ -305,17 +322,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 50.8565,
-   "lon": 20.646,
+   "lat": 50.8522,
+   "lon": 20.64861,
    "icon": "🦕",
    "url": "https://geopark-kielce.pl",
    "desc": {
     "pl": "Rezerwat geologiczny w dawnym kamieniołomie z centrum edukacyjnym o historii Ziemi.",
     "en": "A geological reserve in a former quarry with an education centre about Earth’s history."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 13970155161,
+    "name": "Geopark Wietrznia"
+   }
   },
   {
    "id": "ki-karczowka",
@@ -331,17 +353,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 50.8585,
-   "lon": 20.5975,
+   "lat": 50.86801,
+   "lon": 20.58947,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Barokowy zespół klasztorny z XVII w. na zalesionym wzgórzu z widokiem na Kielce.",
     "en": "A 17th-century Baroque monastery on a wooded hill overlooking Kielce."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 9104348271,
+    "name": "Klasztor na Karczówce"
+   }
   },
   {
    "id": "za-dab-bartek",
@@ -357,17 +384,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.979,
-   "lon": 20.642,
+   "lat": 50.98757,
+   "lon": 20.65004,
    "icon": "🌳",
    "url": null,
    "desc": {
     "pl": "Jeden z najstarszych i najbardziej znanych dębów w Polsce, pomnik przyrody.",
     "en": "One of Poland’s oldest and best-known oak trees, a protected natural monument."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 417927852,
+    "name": "Dąb Bartek"
+   }
   },
   {
    "id": "ob-sienkiewicz",
@@ -383,17 +415,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.936,
-   "lon": 20.54,
+   "lat": 50.95743,
+   "lon": 20.47574,
    "icon": "📚",
    "url": "https://mnki.pl",
    "desc": {
     "pl": "Pałacyk podarowany pisarzowi przez społeczeństwo w 1900 r.; dziś muzeum noblisty.",
     "en": "A small manor given to the writer by the nation in 1900; now a museum of the Nobel laureate."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 166556999,
+    "name": "Muzeum Henryka Sienkiewicza"
+   }
   },
   {
    "id": "ch-zamek",
@@ -409,17 +446,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 50.798,
-   "lon": 20.461,
+   "lat": 50.79744,
+   "lon": 20.46027,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Ruiny gotyckiego zamku na wzgórzu nad miasteczkiem; z wież rozległa panorama okolicy.",
     "en": "Gothic castle ruins on a hill above the town, with wide views from its towers."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 623240258,
+    "name": "Zamek Królewski w Chęcinach"
+   }
   },
   {
    "id": "ch-jaskinia-raj",
@@ -436,17 +478,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 50.8015,
-   "lon": 20.5105,
+   "lat": 50.82516,
+   "lon": 20.49901,
    "icon": "🦇",
    "url": "https://jaskiniaraj.pl",
    "desc": {
     "pl": "Jedna z najpiękniej udekorowanych naciekami jaskiń w Polsce; zwiedzanie z przewodnikiem, bilety warto rezerwować.",
     "en": "One of Poland’s most richly decorated show caves; guided tours only, booking is recommended."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 3804383556,
+    "name": "Jaskinia Raj"
+   }
   },
   {
    "id": "to-skansen",
@@ -463,17 +510,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 50.77,
-   "lon": 20.43,
+   "lat": 50.76409,
+   "lon": 20.43465,
    "icon": "🏡",
    "url": "https://mwk.com.pl",
    "desc": {
     "pl": "Duży skansen z dawną zabudową wiejską i małomiasteczkową regionu kieleckiego.",
     "en": "A large open-air museum of rural and small-town buildings from the Kielce region."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 290569578,
+    "name": "Park Etnograficzny w Tokarni"
+   }
   },
   {
    "id": "ns-swiety-krzyz",
@@ -489,17 +541,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 50.86,
-   "lon": 21.048,
+   "lat": 50.8592,
+   "lon": 21.05329,
    "icon": "✝️",
    "url": null,
    "desc": {
     "pl": "Klasztor na Łysej Górze z relikwiami Drzewa Krzyża Świętego; obok taras widokowy na gołoborze.",
     "en": "A monastery on Łysa Góra holding relics of the Holy Cross, next to a viewing terrace over a scree field."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1355818728,
+    "name": "Sanktuarium Relikwii Drzewa Krzyża Świętego, zespół klasztorny"
+   }
   },
   {
    "id": "ns-hutnictwo",
@@ -567,17 +624,22 @@
    ],
    "time": 40,
    "visitValue": 3,
-   "lat": 50.941,
-   "lon": 20.958,
+   "lat": 50.94213,
+   "lon": 20.95177,
    "icon": "🏚️",
    "url": null,
    "desc": {
     "pl": "Malownicze ruiny dawnej rezydencji biskupów krakowskich nad doliną Psarki.",
     "en": "Picturesque ruins of a former residence of the Kraków bishops above the Psarka valley."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1565023171,
+    "name": "Zamek w Bodzentynie"
+   }
   },
   {
    "id": "wa-opactwo",
@@ -593,17 +655,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 51.073,
-   "lon": 21.013,
+   "lat": 51.07516,
+   "lon": 21.01569,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Romański zespół klasztorny z XIII w., jeden z najcenniejszych w Polsce.",
     "en": "A 13th-century Romanesque Cistercian abbey, one of the most valuable in Poland."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 254666612,
+    "name": "Opactwo Cystersów"
+   }
   },
   {
    "id": "kr-krzemionki",
@@ -620,17 +687,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.969,
-   "lon": 21.497,
+   "lat": 50.96762,
+   "lon": 21.501,
    "icon": "⛏️",
    "url": "https://krzemionki.pl",
    "desc": {
     "pl": "Neolityczne kopalnie krzemienia pasiastego, wpisane na Listę UNESCO w 2019 r.; podziemna trasa turystyczna.",
     "en": "Neolithic striped-flint mines inscribed on the UNESCO World Heritage List in 2019, with an underground tourist route."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 415353727,
+    "name": "Krzemionkowski region prehistorycznego górnictwa krzemienia pasiastego"
+   }
   },
   {
    "id": "ba-jurapark",
@@ -646,17 +718,22 @@
    ],
    "time": 180,
    "visitValue": 4,
-   "lat": 51.02,
-   "lon": 21.54,
+   "lat": 51.01641,
+   "lon": 21.55046,
    "icon": "🦖",
    "url": null,
    "desc": {
     "pl": "Park rozrywki z modelami dinozaurów w dolinie Kamiennej, popularny wśród rodzin.",
     "en": "A family theme park with dinosaur models in the Kamienna valley."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1093782070,
+    "name": "Park dinozaurów Jura Park"
+   }
   },
   {
    "id": "uj-krzyztopor",
@@ -672,17 +749,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 50.74,
-   "lon": 21.395,
+   "lat": 50.71399,
+   "lon": 21.31036,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Monumentalne ruiny XVII-wiecznej rezydencji Krzysztofa Ossolińskiego.",
     "en": "Monumental ruins of a 17th-century palace-fortress built for Krzysztof Ossoliński."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 49885798,
+    "name": "Ruiny zamku \"Krzyżtopór\""
+   }
   },
   {
    "id": "sa-rynek",
@@ -698,17 +780,22 @@
    ],
    "time": 45,
    "visitValue": 5,
-   "lat": 50.6797,
-   "lon": 21.7494,
+   "lat": 50.67934,
+   "lon": 21.74907,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Pochyły rynek z renesansowym ratuszem, serce zabytkowego Starego Miasta.",
     "en": "A sloping square with a Renaissance town hall at the heart of the historic Old Town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 379783931,
+    "name": "Rynek"
+   }
   },
   {
    "id": "sa-brama",
@@ -724,17 +811,22 @@
    ],
    "time": 20,
    "visitValue": 4,
-   "lat": 50.6803,
-   "lon": 21.752,
+   "lat": 50.68151,
+   "lon": 21.74947,
    "icon": "🧱",
    "url": null,
    "desc": {
     "pl": "Gotycka brama miejska z XIV w. z tarasem widokowym na Stare Miasto i dolinę Wisły.",
     "en": "A 14th-century Gothic town gate with a viewing terrace over the Old Town and the Vistula valley."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 234906475,
+    "name": "Brama Opatowska"
+   }
   },
   {
    "id": "sa-trasa",
@@ -750,17 +842,22 @@
    ],
    "time": 40,
    "visitValue": 4,
-   "lat": 50.6796,
-   "lon": 21.7485,
+   "lat": 50.67981,
+   "lon": 21.74862,
    "icon": "🕯️",
    "url": null,
    "desc": {
     "pl": "Trasa przez dawne piwnice kupieckie pod kamienicami Starego Miasta.",
     "en": "A route through old merchant cellars beneath the Old Town houses."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1340174175,
+    "name": "Podziemna Trasa Turystyczna"
+   }
   },
   {
    "id": "sa-zamek",
@@ -776,17 +873,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.677,
-   "lon": 21.7455,
+   "lat": 50.67592,
+   "lon": 21.74719,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Zamek na skarpie nad Wisłą, dziś siedziba muzeum okręgowego.",
     "en": "A castle on the escarpment above the Vistula, now the seat of the regional museum."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 119156368,
+    "name": "Zamek w Sandomierzu"
+   }
   },
   {
    "id": "sa-katedra",
@@ -802,17 +904,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.678,
-   "lon": 21.747,
+   "lat": 50.67666,
+   "lon": 21.7495,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Gotycka katedra z cennymi malowidłami bizantyjsko-ruskimi z XV w.",
     "en": "A Gothic cathedral with valuable 15th-century Byzantine-Ruthenian wall paintings."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 176484999,
+    "name": "Katedra pw. Narodzenia Najświętszej Maryi Panny w Sandomierzu"
+   }
   },
   {
    "id": "sa-wawoz",
@@ -828,17 +935,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.6765,
-   "lon": 21.756,
+   "lat": 50.67581,
+   "lon": 21.74348,
    "icon": "🌿",
    "url": null,
    "desc": {
     "pl": "Lessowy wąwóz o stromych ścianach i odsłoniętych korzeniach drzew, blisko Starego Miasta.",
     "en": "A loess gorge with steep walls and exposed tree roots, close to the Old Town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 14085879401,
+    "name": "Wąwóz Królowej Jadwigi"
+   }
   },
   {
    "id": "sa-gory-pieprzowe",
@@ -855,17 +967,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.688,
-   "lon": 21.783,
+   "lat": 50.68962,
+   "lon": 21.7914,
    "icon": "🌄",
    "url": null,
    "desc": {
     "pl": "Rezerwat z kambryjskimi łupkami nad Wisłą i szlakiem widokowym.",
     "en": "A nature reserve of Cambrian shales above the Vistula with a scenic trail."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 7563460316,
+    "name": "Góry Pieprzowe"
+   }
   },
   {
    "id": "sz-mury",
@@ -881,17 +998,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 50.59,
-   "lon": 21.006,
+   "lat": 50.59002,
+   "lon": 21.00133,
    "icon": "🧱",
    "url": null,
    "desc": {
     "pl": "Średniowieczne mury miejskie z Bramą Krakowską; Szydłów nazywany jest też stolicą śliwki.",
     "en": "Medieval town walls with the Kraków Gate; Szydłów is also known as Poland’s plum capital."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1089027792,
+    "name": "Brama Krakowska"
+   }
   },
   {
    "id": "ku-palac",
@@ -933,17 +1055,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 50.349,
-   "lon": 20.673,
+   "lat": 50.34884,
+   "lon": 20.67383,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Gotycka kolegiata z XIV w.; w podziemiach romańska Płyta Orantów z XII w.",
     "en": "A 14th-century Gothic collegiate church; its crypt holds the 12th-century Romanesque Orants’ Slab."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 167241827,
+    "name": "Bazylika Kolegiacka Narodzenia Najświętszej Maryi Panny"
+   }
   },
   {
    "id": "bz-park-zdrojowy",
@@ -986,17 +1113,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.643,
-   "lon": 20.304,
+   "lat": 50.63898,
+   "lon": 20.30419,
    "icon": "🕰️",
    "url": null,
    "desc": {
     "pl": "Jedna z największych kolekcji zegarów słonecznych na świecie, przy rynku w Jędrzejowie.",
     "en": "One of the world’s largest collections of sundials, on the market square in Jędrzejów."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 411983978,
+    "name": "Państwowe Muzeum im. Przypkowskich"
+   }
   },
   {
    "id": "pi-kaplica",
@@ -1013,17 +1145,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 50.521,
-   "lon": 20.53,
+   "lat": 50.52196,
+   "lon": 20.53114,
    "icon": "✡️",
    "url": null,
    "desc": {
     "pl": "Renesansowa kaplica na wzgórzu nad miastem oraz jedna z najstarszych zachowanych synagog w regionie.",
     "en": "A Renaissance chapel on a hill above the town and one of the oldest surviving synagogues in the region."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 335892906,
+    "name": "Kaplica św. Anny"
+   }
   },
   {
    "id": "si-skansen",
@@ -1040,17 +1177,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 52.867,
-   "lon": 19.688,
+   "lat": 52.86535,
+   "lon": 19.63622,
    "icon": "🏡",
    "url": "https://mwmskansen.pl",
    "desc": {
     "pl": "Skansen nad Sierpienicą z zagrodami, wiatrakami i odtworzonym mazowieckim miasteczkiem.",
     "en": "An open-air museum on the Sierpienica river with farmsteads, windmills and a recreated Masovian small town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 380045349,
+    "name": "Muzeum Wsi Mazowieckiej w Sierpcu"
+   }
   },
   {
    "id": "zw-chopin",
@@ -1067,17 +1209,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 52.2565,
-   "lon": 20.306,
+   "lat": 52.25707,
+   "lon": 20.31167,
    "icon": "🎹",
    "url": "https://nifc.pl",
    "desc": {
     "pl": "Dworek, w którym w 1810 r. urodził się Fryderyk Chopin, otoczony parkiem; latem koncerty.",
     "en": "The manor where Frédéric Chopin was born in 1810, surrounded by a park; concerts in summer."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 330960996,
+    "name": "Dom Urodzenia Fryderyka Chopina"
+   }
   },
   {
    "id": "pl-wzgorze-tumskie",
@@ -1093,17 +1240,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 52.547,
-   "lon": 19.686,
+   "lat": 52.54096,
+   "lon": 19.6896,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Wzgórze nad Wisłą z romańską katedrą i Zamkiem Książąt Mazowieckich; w katedrze spoczywają dawni władcy Polski.",
     "en": "A hill above the Vistula with a Romanesque cathedral and the Masovian Dukes’ Castle; early Polish rulers are buried in the cathedral."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 238335336,
+    "name": "Katedra pw. Wniebowzięcia Najświętszej Maryi Panny"
+   }
   },
   {
    "id": "cz-zamek",
@@ -1119,17 +1271,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 51.958,
-   "lon": 21.234,
+   "lat": 51.95804,
+   "lon": 21.23392,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Gotyckie ruiny zamku na skarpie nad doliną Wisły.",
     "en": "Gothic castle ruins on an escarpment above the Vistula valley."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1329479279,
+    "name": "Zamek Książąt Mazowieckich"
+   }
   },
   {
    "id": "kp-granica",
@@ -1171,17 +1328,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 52.881,
-   "lon": 20.628,
+   "lat": 52.8847,
+   "lon": 20.6192,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Gotycki zamek nad Łydynią, dziś udostępniony jako muzeum.",
     "en": "A Gothic castle on the Łydynia river, now open as a museum."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1329709920,
+    "name": "Zamek Książąt Mazowieckich w Ciechanowie"
+   }
   },
   {
    "id": "pu-rynek",
@@ -1197,17 +1359,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 52.703,
-   "lon": 21.083,
+   "lat": 52.70543,
+   "lon": 21.09145,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Jeden z najdłuższych rynków w Polsce, z gotycką wieżą ratuszową i zamkiem nad Narwią.",
     "en": "One of the longest market squares in Poland, with a Gothic town-hall tower and a castle on the Narew."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 751218018,
+    "name": "Rynek"
+   }
   },
   {
    "id": "op-romantyzm",
@@ -1223,17 +1390,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 52.918,
-   "lon": 20.725,
+   "lat": 52.90676,
+   "lon": 20.71635,
    "icon": "📜",
    "url": null,
    "desc": {
     "pl": "Neogotycki zameczek w parku, związany z rodem Krasińskich i poetą Zygmuntem Krasińskim.",
     "en": "A Neo-Gothic manor in a park linked to the Krasiński family and the poet Zygmunt Krasiński."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 583319830,
+    "name": "Muzeum Romantyzmu"
+   }
   },
   {
    "id": "wr-rynek",
@@ -1249,17 +1421,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 51.1099,
-   "lon": 17.0322,
+   "lat": 51.11004,
+   "lon": 17.03184,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Jeden z największych rynków w Europie z gotyckim ratuszem i kolorowymi kamienicami.",
     "en": "One of Europe’s largest market squares, with a Gothic town hall and colourful townhouses."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 25708301,
+    "name": "Rynek"
+   }
   },
   {
    "id": "wr-ostrow-tumski",
@@ -1275,17 +1452,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 51.1145,
-   "lon": 17.0465,
+   "lat": 51.11501,
+   "lon": 17.04649,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Najstarsza część miasta z katedrą św. Jana Chrzciciela i gazowymi latarniami zapalanymi ręcznie.",
     "en": "The oldest part of the city, with St John the Baptist Cathedral and gas lamps still lit by hand."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1184182207,
+    "name": "Ostrów Tumski"
+   }
   },
   {
    "id": "wr-hala-stulecia",
@@ -1301,17 +1483,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 51.1069,
-   "lon": 17.0773,
+   "lat": 51.10689,
+   "lon": 17.07732,
    "icon": "🏟️",
    "url": null,
    "desc": {
     "pl": "Żelbetowa hala Maxa Berga z 1913 r. na Liście UNESCO; obok pergola z fontanną i Ogród Japoński.",
     "en": "Max Berg’s 1913 reinforced-concrete hall on the UNESCO list, next to a pergola with a fountain and the Japanese Garden."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 476702262,
+    "name": "Hala Stulecia"
+   }
   },
   {
    "id": "wr-panorama",
@@ -1327,17 +1514,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 51.11,
-   "lon": 17.0445,
+   "lat": 51.11025,
+   "lon": 17.04461,
    "icon": "🖼️",
    "url": null,
    "desc": {
     "pl": "Monumentalny obraz bitwy pod Racławicami z 1794 r. oglądany z wnętrza rotundy.",
     "en": "A monumental panoramic painting of the 1794 Battle of Racławice, viewed from inside a rotunda."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1072344584,
+    "name": "Panorama Racławicka"
+   }
   },
   {
    "id": "wb-ksiaz",
@@ -1353,17 +1545,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.8425,
-   "lon": 16.2915,
+   "lat": 50.84222,
+   "lon": 16.29185,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Jeden z największych zamków w Polsce, położony nad przełomem Pełcznicy.",
     "en": "One of the largest castles in Poland, set above the Pełcznica gorge."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 9821066,
+    "name": "Zamek Książ"
+   }
   },
   {
    "id": "sw-kosciol-pokoju",
@@ -1379,17 +1576,22 @@
    ],
    "time": 45,
    "visitValue": 5,
-   "lat": 50.8475,
-   "lon": 16.4775,
+   "lat": 50.84649,
+   "lon": 16.49169,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Ogromny drewniany kościół z XVII w., wpisany na Listę UNESCO razem z kościołem w Jaworze.",
     "en": "A huge 17th-century timber church, inscribed on the UNESCO list together with the church in Jawor."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 257204676,
+    "name": "Kościół Pokoju w Świdnicy"
+   }
   },
   {
    "id": "kp-sniezka",
@@ -1431,17 +1633,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.7766,
-   "lon": 15.738,
+   "lat": 50.77739,
+   "lon": 15.72415,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Średniowieczny norweski kościół klepkowy przeniesiony do Karpacza w XIX w.",
     "en": "A medieval Norwegian stave church moved to Karpacz in the 19th century."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 269213674,
+    "name": "Świątynia Wang"
+   }
   },
   {
    "id": "kl-twierdza",
@@ -1457,17 +1664,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 50.44,
-   "lon": 16.656,
+   "lat": 50.44032,
+   "lon": 16.65276,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Potężna twierdza nad miastem z labiryntem podziemnych korytarzy.",
     "en": "A mighty fortress above the town with a labyrinth of underground passages."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1924014326,
+    "name": "Twierdza Kłodzko"
+   }
   },
   {
    "id": "ku-kaplica-czaszek",
@@ -1483,17 +1695,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.4505,
-   "lon": 16.247,
+   "lat": 50.45153,
+   "lon": 16.24194,
    "icon": "💀",
    "url": null,
    "desc": {
     "pl": "Osiemnastowieczna kaplica, której wnętrze wyłożono tysiącami czaszek i kości.",
     "en": "An 18th-century chapel whose interior is lined with thousands of skulls and bones."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 292939943,
+    "name": "Kaplica Czaszek"
+   }
   },
   {
    "id": "ka-szczeliniec",
@@ -1518,9 +1735,14 @@
     "pl": "Najwyższy szczyt Gór Stołowych z labiryntem skalnym i tarasami widokowymi.",
     "en": "The highest peak of the Table Mountains, with a rock labyrinth and viewing terraces."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 715039536,
+    "name": "Szczeliniec Wielki"
+   }
   },
   {
    "id": "kr-opactwo",
@@ -1536,17 +1758,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.733,
-   "lon": 16.064,
+   "lat": 50.73219,
+   "lon": 16.06978,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Barokowy zespół pocysterski nazywany perłą europejskiego baroku.",
     "en": "A former Cistercian Baroque complex known as a pearl of European Baroque."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 307347617,
+    "name": "Opactwo pw. Wszystkich Świętych"
+   }
   },
   {
    "id": "to-stare-miasto",
@@ -1562,17 +1789,22 @@
    ],
    "time": 90,
    "visitValue": 5,
-   "lat": 53.0103,
-   "lon": 18.6046,
+   "lat": 53.00927,
+   "lon": 18.61086,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Gotyckie Stare i Nowe Miasto z ratuszem, kościołami i spichrzami, wpisane na Listę UNESCO.",
     "en": "The Gothic Old and New Town with its town hall, churches and granaries, inscribed on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 80579965,
+    "name": "Zamek Krzyżacki w Toruniu"
+   }
   },
   {
    "id": "to-dom-kopernika",
@@ -1588,17 +1820,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.0093,
-   "lon": 18.6036,
+   "lat": 53.00931,
+   "lon": 18.60388,
    "icon": "🔭",
    "url": null,
    "desc": {
     "pl": "Muzeum w gotyckich kamienicach, w których według tradycji urodził się astronom.",
     "en": "A museum in Gothic townhouses where, according to tradition, the astronomer was born."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 633481436,
+    "name": "Dom Mikołaja Kopernika"
+   }
   },
   {
    "id": "to-piernik",
@@ -1614,17 +1851,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.0095,
-   "lon": 18.6119,
+   "lat": 53.01116,
+   "lon": 18.60857,
    "icon": "🍪",
    "url": null,
    "desc": {
     "pl": "Interaktywne muzeum, w którym można samodzielnie upiec toruński piernik.",
     "en": "An interactive museum where you can bake your own Toruń gingerbread."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 99001618,
+    "name": "Muzeum Toruńskiego Piernika"
+   }
   },
   {
    "id": "to-krzywa-wieza",
@@ -1640,17 +1882,22 @@
    ],
    "time": 15,
    "visitValue": 3,
-   "lat": 53.0084,
-   "lon": 18.6068,
+   "lat": 53.00838,
+   "lon": 18.60207,
    "icon": "🗼",
    "url": null,
    "desc": {
     "pl": "Średniowieczna baszta murów miejskich wyraźnie odchylona od pionu.",
     "en": "A medieval tower of the town walls that leans visibly from the vertical."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 81882855,
+    "name": "Krzywa Wieża"
+   }
   },
   {
    "id": "by-wyspa-mlynska",
@@ -1666,17 +1913,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.123,
-   "lon": 18.0,
+   "lat": 53.12345,
+   "lon": 17.99632,
    "icon": "🌉",
    "url": null,
    "desc": {
     "pl": "Zielona wyspa w centrum miasta z muzeami i widokiem na historyczne spichrze.",
     "en": "A green island in the city centre with museums and views of the historic granaries."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 194791923,
+    "name": "Wyspa Młyńska"
+   }
   },
   {
    "id": "by-exploseum",
@@ -1718,17 +1970,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 52.793,
-   "lon": 17.736,
+   "lat": 52.78908,
+   "lon": 17.73114,
    "icon": "🛖",
    "url": null,
    "desc": {
     "pl": "Rekonstrukcja osady obronnej sprzed ok. 2700 lat na półwyspie Jeziora Biskupińskiego.",
     "en": "A reconstructed fortified settlement from about 2,700 years ago on a peninsula of Lake Biskupin."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 621581379,
+    "name": "Muzeum Archeologiczne w Biskupinie"
+   }
   },
   {
    "id": "ch-stare-miasto",
@@ -1744,17 +2001,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.3485,
-   "lon": 18.425,
+   "lat": 53.34911,
+   "lon": 18.42287,
    "icon": "💘",
    "url": null,
    "desc": {
     "pl": "Miasto zakochanych z gotyckimi kościołami, renesansowym ratuszem i niemal kompletnymi murami.",
     "en": "The “town of lovers”, with Gothic churches, a Renaissance town hall and almost complete walls."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 79692097,
+    "name": "Ratusz w Chełmnie"
+   }
   },
   {
    "id": "go-zamek",
@@ -1769,17 +2031,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.1115,
-   "lon": 19.0515,
+   "lat": 53.11539,
+   "lon": 19.05001,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Krzyżacki zamek z renesansową attyką; latem odbywają się tu turnieje rycerskie.",
     "en": "A Teutonic castle with a Renaissance attic, hosting knights’ tournaments in summer."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 1584083,
+    "name": "Zamek Golubski"
+   }
   },
   {
    "id": "ci-teznie",
@@ -1795,17 +2062,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 52.879,
-   "lon": 18.782,
+   "lat": 52.88809,
+   "lon": 18.7817,
    "icon": "♨️",
    "url": null,
    "desc": {
     "pl": "Drewniane tężnie solankowe z XIX w., największe w Europie.",
     "en": "19th-century wooden brine graduation towers, the largest in Europe."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 531164254,
+    "name": "Ciechocinek Tężnie"
+   }
   },
   {
    "id": "tu-bory",
@@ -1899,17 +2171,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 51.2508,
-   "lon": 22.5725,
+   "lat": 51.25068,
+   "lon": 22.57011,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Kaplica z bizantyjsko-ruskimi freskami z 1418 r. na wzgórzu zamkowym.",
     "en": "A chapel with Byzantine-Ruthenian frescoes from 1418 on the castle hill."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 294103450,
+    "name": "Parking Zamek Lubelski"
+   }
   },
   {
    "id": "lu-majdanek",
@@ -1925,17 +2202,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 51.222,
-   "lon": 22.601,
+   "lat": 51.22532,
+   "lon": 22.60626,
    "icon": "🕯️",
    "url": null,
    "desc": {
     "pl": "Miejsce pamięci na terenie dawnego niemieckiego obozu koncentracyjnego.",
     "en": "A memorial on the site of a former German concentration camp."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 457391498,
+    "name": "Państwowe Muzeum na Majdanku"
+   }
   },
   {
    "id": "kd-rynek",
@@ -1952,17 +2234,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 51.322,
-   "lon": 21.948,
+   "lat": 51.32208,
+   "lon": 21.94737,
    "icon": "🏘️",
    "url": null,
    "desc": {
     "pl": "Renesansowe miasteczko nad Wisłą z kamienicami Przybyłów i ruinami zamku.",
     "en": "A Renaissance town on the Vistula with the Przybyła townhouses and castle ruins."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 1333649,
+    "name": "Rynek"
+   }
   },
   {
    "id": "kd-korzeniowy-dol",
@@ -1978,17 +2265,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 51.317,
-   "lon": 21.956,
+   "lat": 51.32055,
+   "lon": 21.98013,
    "icon": "🌿",
    "url": null,
    "desc": {
     "pl": "Lessowy wąwóz z odsłoniętymi korzeniami drzew tuż za miasteczkiem.",
     "en": "A loess gorge with exposed tree roots just outside the town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 40049922,
+    "name": "Korzeniowy Dół"
+   }
   },
   {
    "id": "za-stare-miasto",
@@ -2012,9 +2304,14 @@
     "pl": "Renesansowe „miasto idealne” zaprojektowane przez Bernarda Morando, na Liście UNESCO.",
     "en": "A Renaissance “ideal town” designed by Bernardo Morando, on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1436950851,
+    "name": "Stare Miasto w Zamościu"
+   }
   },
   {
    "id": "ko-muzeum-zamoyskich",
@@ -2030,17 +2327,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 51.487,
-   "lon": 22.553,
+   "lat": 51.45962,
+   "lon": 22.48948,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Pałac z bogatymi wnętrzami i galerią sztuki socrealizmu.",
     "en": "A palace with rich interiors and a gallery of socialist-realist art."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 178553376,
+    "name": "Pałac Zamoyskich"
+   }
   },
   {
    "id": "na-park-zdrojowy",
@@ -2056,17 +2358,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 51.286,
-   "lon": 22.214,
+   "lat": 51.28688,
+   "lon": 22.20861,
    "icon": "♨️",
    "url": null,
    "desc": {
     "pl": "Uzdrowiskowy park z Pałacem Małachowskich, w którym bywał Bolesław Prus.",
     "en": "A spa park with the Małachowski Palace, once frequented by Bolesław Prus."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 40114461,
+    "name": "Park Zdrojowy"
+   }
   },
   {
    "id": "ja-zamek",
@@ -2082,17 +2389,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 51.3255,
-   "lon": 21.8935,
+   "lat": 51.32455,
+   "lon": 21.89339,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Ruiny renesansowego zamku na skarpie nad Wisłą, naprzeciw Kazimierza Dolnego.",
     "en": "Ruins of a Renaissance castle on the Vistula escarpment, opposite Kazimierz Dolny."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 185009813,
+    "name": "Zamek w Janowcu"
+   }
   },
   {
    "id": "zw-roztocze",
@@ -2134,17 +2446,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 51.1325,
-   "lon": 23.4745,
+   "lat": 51.13303,
+   "lon": 23.47128,
    "icon": "🕯️",
    "url": null,
    "desc": {
     "pl": "Labirynt korytarzy dawnej kopalni kredy pod Starym Miastem.",
     "en": "A labyrinth of former chalk-mine tunnels beneath the Old Town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 303328821,
+    "name": "Chełmskie Podziemia Kredowe"
+   }
   },
   {
    "id": "zg-stare-miasto",
@@ -2185,17 +2502,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 51.939,
-   "lon": 15.5,
+   "lat": 51.93835,
+   "lon": 15.51022,
    "icon": "🌴",
    "url": null,
    "desc": {
     "pl": "Przeszklona palmiarnia z egzotyczną roślinnością i widokiem na miasto.",
     "en": "A glass palm house with exotic plants and views over the town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 6045116900,
+    "name": "Palmiarnia"
+   }
   },
   {
    "id": "gw-katedra",
@@ -2211,17 +2533,22 @@
    ],
    "time": 30,
    "visitValue": 3,
-   "lat": 52.731,
-   "lon": 15.24,
+   "lat": 52.73142,
+   "lon": 15.23794,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Najstarsza budowla miasta — gotycka katedra z ceglaną wieżą.",
     "en": "The town’s oldest building — a Gothic cathedral with a brick tower."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 9936122774,
+    "name": "Katedra"
+   }
   },
   {
    "id": "mr-mru",
@@ -2237,17 +2564,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 52.4095,
-   "lon": 15.524,
+   "lat": 52.37171,
+   "lon": 15.49002,
    "icon": "🦇",
    "url": null,
    "desc": {
     "pl": "Podziemne korytarze niemieckich fortyfikacji z lat 30. XX w., zimowisko nietoperzy.",
     "en": "Underground tunnels of 1930s German fortifications, also a winter refuge for bats."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1553660576,
+    "name": "Międzyrzecki Rejon Umocniony"
+   }
   },
   {
    "id": "le-park-muzakowski",
@@ -2271,9 +2603,14 @@
     "pl": "Krajobrazowy park księcia Pücklera po obu stronach Nysy Łużyckiej, na Liście UNESCO.",
     "en": "Prince Pückler’s landscape park on both banks of the Lusatian Neisse, on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 3771014,
+    "name": "Park Mużakowski"
+   }
   },
   {
    "id": "la-zamek",
@@ -2289,17 +2626,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 52.336,
-   "lon": 15.293,
+   "lat": 52.3347,
+   "lon": 15.29279,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Zamek między dwoma jeziorami w miasteczku nazywanym „Perłą Ziemi Lubuskiej”.",
     "en": "A castle between two lakes in a village known as the “Pearl of the Lubusz Land”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1329471940,
+    "name": "Zamek Joannitów w Łagowie"
+   }
   },
   {
    "id": "go-paradyz",
@@ -2367,17 +2709,22 @@
    ],
    "time": 90,
    "visitValue": 3,
-   "lat": 51.885,
-   "lon": 15.44,
+   "lat": 51.89071,
+   "lon": 15.47316,
    "icon": "🏡",
    "url": null,
    "desc": {
     "pl": "Skansen z dawną zabudową wiejską Ziemi Lubuskiej.",
     "en": "An open-air museum of traditional rural buildings of the Lubusz Land."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 737560081,
+    "name": "Muzeum Etnograficzne w Zielonej Górze-Ochli"
+   }
   },
   {
    "id": "lo-piotrkowska",
@@ -2420,17 +2767,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 51.7795,
-   "lon": 19.4475,
+   "lat": 51.77946,
+   "lon": 19.44446,
    "icon": "🏭",
    "url": null,
    "desc": {
     "pl": "Dawna fabryka Izraela Poznańskiego zamieniona w centrum kultury, handlu i muzeów.",
     "en": "Izrael Poznański’s former factory, turned into a centre of culture, shopping and museums."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 27148381,
+    "name": "Manufaktura"
+   }
   },
   {
    "id": "lo-palac-poznanskiego",
@@ -2446,17 +2798,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 51.7775,
-   "lon": 19.451,
+   "lat": 51.7793,
+   "lon": 19.45118,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Eklektyczny pałac fabrykanta z bogatymi wnętrzami i historią przemysłowej Łodzi.",
     "en": "A factory owner’s eclectic palace with rich interiors and the story of industrial Łódź."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 37550695,
+    "name": "Pałac Izraela Poznańskiego w Łodzi"
+   }
   },
   {
    "id": "lo-ec1",
@@ -2472,17 +2829,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 51.7685,
-   "lon": 19.4685,
+   "lat": 51.76754,
+   "lon": 19.46808,
    "icon": "🔬",
    "url": null,
    "desc": {
     "pl": "Dawna elektrociepłownia z interaktywnym centrum nauki i planetarium.",
     "en": "A former power plant with an interactive science centre and a planetarium."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 16510680,
+    "name": "Centrum Nauki i Techniki EC1"
+   }
   },
   {
    "id": "lo-ms2",
@@ -2497,17 +2859,22 @@
    ],
    "time": 75,
    "visitValue": 4,
-   "lat": 51.779,
-   "lon": 19.4495,
+   "lat": 51.77882,
+   "lon": 19.44651,
    "icon": "🎨",
    "url": null,
    "desc": {
     "pl": "Jedna z najstarszych kolekcji sztuki nowoczesnej na świecie, w dawnej przędzalni.",
     "en": "One of the world’s oldest collections of modern art, housed in a former spinning mill."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 36894063,
+    "name": "Muzeum Sztuki MS2"
+   }
   },
   {
    "id": "lo-ksiezy-mlyn",
@@ -2524,17 +2891,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 51.757,
-   "lon": 19.479,
+   "lat": 51.7552,
+   "lon": 19.47889,
    "icon": "🧱",
    "url": null,
    "desc": {
     "pl": "Robotnicze osiedle i fabryki Scheiblera z czerwonej cegły.",
     "en": "Scheibler’s red-brick workers’ housing and factories."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 17367850,
+    "name": "Księży Młyn"
+   }
   },
   {
    "id": "le-zamek",
@@ -2549,17 +2921,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 52.059,
-   "lon": 19.2,
+   "lat": 52.05885,
+   "lon": 19.20392,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Gotycki zamek związany z legendą o diable Borucie.",
     "en": "A Gothic castle linked to the legend of the devil Boruta."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 908503079,
+    "name": "Zamek w Łęczycy"
+   }
   },
   {
    "id": "tu-archikolegiata",
@@ -2575,17 +2952,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 52.0515,
-   "lon": 19.252,
+   "lat": 52.05611,
+   "lon": 19.23261,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Romańska kolegiata z XII w., jedna z najcenniejszych budowli romańskich w Polsce.",
     "en": "A 12th-century Romanesque collegiate church, one of the finest in Poland."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 293194871,
+    "name": "Archikolegiata pw. Najświętszej Maryi Panny Królowej i św. Aleksego"
+   }
   },
   {
    "id": "ar-park",
@@ -2628,17 +3010,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 52.07,
-   "lon": 20.059,
+   "lat": 52.06663,
+   "lon": 20.07012,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Barokowy pałac Radziwiłłów z historycznymi wnętrzami i parkiem.",
     "en": "The Radziwiłłs’ Baroque palace with historic interiors and a park."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 88672231,
+    "name": "Pałac w Nieborowie"
+   }
   },
   {
    "id": "lw-muzeum",
@@ -2654,17 +3041,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 52.1065,
-   "lon": 19.944,
+   "lat": 52.1078,
+   "lon": 19.94612,
    "icon": "🎨",
    "url": null,
    "desc": {
     "pl": "Kolekcja słynnej łowickiej sztuki ludowej i wycinanek.",
     "en": "A collection of the famous Łowicz folk art and paper cut-outs."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 318827668,
+    "name": "Muzeum w Łowiczu"
+   }
   },
   {
    "id": "pt-stare-miasto",
@@ -2679,17 +3071,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 51.4055,
-   "lon": 19.701,
+   "lat": 51.40911,
+   "lon": 19.70076,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Dawne miasto Trybunału Koronnego z zamkiem królewskim i rynkiem.",
     "en": "The former seat of the Crown Tribunal, with a royal castle and a market square."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 367519685,
+    "name": "Zamek Królewski w Piotrkowie Trybunalskim"
+   }
   },
   {
    "id": "kr-wawel",
@@ -2706,17 +3103,22 @@
    ],
    "time": 180,
    "visitValue": 5,
-   "lat": 50.054,
-   "lon": 19.9355,
+   "lat": 50.05441,
+   "lon": 19.93602,
    "icon": "🏰",
    "url": "https://wawel.krakow.pl",
    "desc": {
     "pl": "Zamek Królewski i katedra — miejsce koronacji i pochówku polskich królów.",
     "en": "The Royal Castle and Cathedral — where Polish kings were crowned and buried."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 2270819,
+    "name": "Zamek Królewski na Wawelu"
+   }
   },
   {
    "id": "kr-rynek",
@@ -2733,16 +3135,21 @@
    "time": 90,
    "visitValue": 5,
    "lat": 50.0617,
-   "lon": 19.9373,
+   "lon": 19.93735,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Jeden z największych średniowiecznych placów Europy z Sukiennicami i Wieżą Ratuszową.",
     "en": "One of Europe’s largest medieval squares, with the Cloth Hall and the Town Hall Tower."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 23256528,
+    "name": "Sukiennice"
+   }
   },
   {
    "id": "kr-mariacki",
@@ -2758,17 +3165,22 @@
    ],
    "time": 45,
    "visitValue": 5,
-   "lat": 50.0616,
-   "lon": 19.9395,
+   "lat": 50.06165,
+   "lon": 19.93945,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Gotycki kościół z ołtarzem Wita Stwosza i hejnałem granym co godzinę z wieży.",
     "en": "A Gothic church with Veit Stoss’s altarpiece and a bugle call played from the tower every hour."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 26195267,
+    "name": "Bazylika Wniebowzięcia Najświętszej Maryi Panny"
+   }
   },
   {
    "id": "kr-kazimierz",
@@ -2784,17 +3196,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.051,
-   "lon": 19.945,
+   "lat": 50.05186,
+   "lon": 19.94495,
    "icon": "✡️",
    "url": null,
    "desc": {
     "pl": "Dawna dzielnica żydowska z synagogami, placem Nowym i klimatycznymi kawiarniami.",
     "en": "The former Jewish quarter, with synagogues, Plac Nowy and atmospheric cafés."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 3228454,
+    "name": "Kazimierz"
+   }
   },
   {
    "id": "kr-schindler",
@@ -2810,17 +3227,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.0475,
-   "lon": 19.9615,
+   "lat": 50.04746,
+   "lon": 19.96171,
    "icon": "🏭",
    "url": null,
    "desc": {
     "pl": "Muzeum o okupacji Krakowa w latach 1939–1945 w budynku dawnej fabryki.",
     "en": "A museum of Kraków under occupation in 1939–1945, in the former factory building."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 136648568,
+    "name": "Fabryka Emalia Oskara Schindlera"
+   }
   },
   {
    "id": "wi-kopalnia",
@@ -2845,9 +3267,14 @@
     "pl": "Podziemna trasa z komorami i kaplicą św. Kingi wyrzeźbioną w soli.",
     "en": "An underground route through chambers and St Kinga’s Chapel, carved entirely in salt."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1078429469,
+    "name": "Kopalnia soli Wieliczka"
+   }
   },
   {
    "id": "os-auschwitz",
@@ -2863,17 +3290,22 @@
    ],
    "time": 210,
    "visitValue": 5,
-   "lat": 50.027,
-   "lon": 19.204,
+   "lat": 50.02934,
+   "lon": 19.20558,
    "icon": "🕯️",
    "url": "https://www.auschwitz.org",
    "desc": {
     "pl": "Muzeum i miejsce pamięci na terenie niemieckiego nazistowskiego obozu; rezerwacja wejścia zalecana.",
     "en": "Museum and memorial on the site of the German Nazi camp; booking an entry time is recommended."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 16705965,
+    "name": "Państwowe Muzeum Auschwitz-Birkenau"
+   }
   },
   {
    "id": "za-krupowki",
@@ -2889,17 +3321,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 49.2965,
-   "lon": 19.95,
+   "lat": 49.29604,
+   "lon": 19.94971,
    "icon": "🏔️",
    "url": null,
    "desc": {
     "pl": "Główny deptak Zakopanego i kolejka na Gubałówkę z panoramą Tatr.",
     "en": "Zakopane’s main promenade and the funicular up Gubałówka with a Tatra panorama."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 174669353,
+    "name": "Krupówki"
+   }
   },
   {
    "id": "ta-morskie-oko",
@@ -2941,17 +3378,22 @@
    ],
    "time": 180,
    "visitValue": 5,
-   "lat": 49.232,
-   "lon": 19.9815,
+   "lat": 49.2318,
+   "lon": 19.98156,
    "icon": "🚡",
    "url": null,
    "desc": {
     "pl": "Szczyt (1987 m n.p.m.) z kolejką linową z Kuźnic i widokiem na Tatry.",
     "en": "A 1,987 m summit reached by cable car from Kuźnice, with views across the Tatras."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 3552158247,
+    "name": "Kasprowy Wierch"
+   }
   },
   {
    "id": "oj-park",
@@ -2994,17 +3436,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 49.4215,
-   "lon": 20.3195,
+   "lat": 49.42251,
+   "lon": 20.31962,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Zamek nad Jeziorem Czorsztyńskim, naprzeciw ruin zamku w Czorsztynie.",
     "en": "A castle above Lake Czorsztyn, facing the ruins of Czorsztyn Castle."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 3409104492,
+    "name": "Zamek Dunajec"
+   }
   },
   {
    "id": "pi-splyw",
@@ -3021,17 +3468,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 49.411,
-   "lon": 20.342,
+   "lat": 49.39901,
+   "lon": 20.41276,
    "icon": "🛶",
    "url": null,
    "desc": {
     "pl": "Tradycyjny spływ flisackimi tratwami przełomem Dunajca w Pieninach.",
     "en": "A traditional raft trip through the Dunajec gorge in the Pieniny."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1500654456,
+    "name": "Sromowce - Spływ Dunajcem, Małopolska"
+   }
   },
   {
    "id": "op-wieza-piastowska",
@@ -3047,17 +3499,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 50.667,
-   "lon": 17.92,
+   "lat": 50.66731,
+   "lon": 17.91943,
    "icon": "🗼",
    "url": null,
    "desc": {
     "pl": "Pozostałość zamku piastowskiego z tarasem widokowym nad Odrą.",
     "en": "The remains of a Piast castle, with a viewing terrace above the Oder."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 207032354,
+    "name": "Wieża Piastowska"
+   }
   },
   {
    "id": "op-wenecja",
@@ -3073,17 +3530,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.668,
-   "lon": 17.923,
+   "lat": 50.66832,
+   "lon": 17.92011,
    "icon": "🌉",
    "url": null,
    "desc": {
     "pl": "Domy nad kanałem Młynówka i rynek z ratuszem wzorowanym na florenckim Palazzo Vecchio.",
     "en": "Houses along the Młynówka canal and a square whose town hall is modelled on Florence’s Palazzo Vecchio."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 11758966426,
+    "name": "Opolska Wenecja"
+   }
   },
   {
    "id": "op-skansen",
@@ -3099,17 +3561,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 50.676,
-   "lon": 17.863,
+   "lat": 50.68394,
+   "lon": 17.86102,
    "icon": "🏡",
    "url": null,
    "desc": {
     "pl": "Skansen z drewnianymi chałupami, kościołem i wiatrakami Śląska Opolskiego.",
     "en": "An open-air museum with timber cottages, a church and windmills of Opole Silesia."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 239470440,
+    "name": "Muzeum Wsi Opolskiej"
+   }
   },
   {
    "id": "mo-zamek",
@@ -3125,17 +3592,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 50.44,
-   "lon": 17.765,
+   "lat": 50.44079,
+   "lon": 17.76755,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Bajkowa rezydencja z 99 wieżami i wieżyczkami, otoczona parkiem słynącym z azalii.",
     "en": "A fairy-tale residence with 99 towers and turrets, in a park famous for its azaleas."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 73054209,
+    "name": "Zamek Moszna"
+   }
   },
   {
    "id": "kr-jurapark",
@@ -3152,16 +3624,21 @@
    "time": 180,
    "visitValue": 4,
    "lat": 50.664,
-   "lon": 18.269,
+   "lon": 18.27118,
    "icon": "🦖",
    "url": null,
    "desc": {
     "pl": "Park dinozaurów w miejscu odkrycia skamieniałości sprzed ponad 200 mln lat.",
     "en": "A dinosaur park at the site where fossils over 200 million years old were discovered."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 168000836,
+    "name": "Jurapark Krasiejów"
+   }
   },
   {
    "id": "ga-gora-sw-anny",
@@ -3203,17 +3680,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 50.474,
-   "lon": 17.334,
+   "lat": 50.4744,
+   "lon": 17.3339,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Gotycka bazylika i barokowa Fontanna Trytona — Nysę nazywano „śląskim Rzymem”.",
     "en": "A Gothic basilica and the Baroque Triton Fountain — Nysa was once called the “Silesian Rome”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 7024499696,
+    "name": "Bazylika św. Jakuba i św. Agnieszki i Dzwonnica w Nysie"
+   }
   },
   {
    "id": "pa-mury",
@@ -3229,17 +3711,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 50.464,
-   "lon": 17.007,
+   "lat": 50.46446,
+   "lon": 17.00616,
    "icon": "🧱",
    "url": null,
    "desc": {
     "pl": "Niemal kompletne średniowieczne mury miejskie — Paczków nazywany jest „polskim Carcassonne”.",
     "en": "Almost complete medieval town walls — Paczków is called the “Polish Carcassonne”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 9071971830,
+    "name": "Mury obronne"
+   }
   },
   {
    "id": "br-zamek",
@@ -3255,17 +3742,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.8615,
-   "lon": 17.4705,
+   "lat": 50.86387,
+   "lon": 17.46703,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Renesansowy zamek z bramą zdobioną galerią władców, zwany „śląskim Wawelem”.",
     "en": "A Renaissance castle with a gate adorned by a gallery of rulers, known as the “Silesian Wawel”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 230535120,
+    "name": "Zamek Piastów Śląskich"
+   }
   },
   {
    "id": "rz-rynek",
@@ -3280,17 +3772,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.0375,
-   "lon": 22.005,
+   "lat": 50.03749,
+   "lon": 22.00496,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Kameralny rynek z ratuszem i trasą przez dawne piwnice kupieckie.",
     "en": "A compact market square with a town hall and a route through old merchant cellars."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 149933479,
+    "name": "Rynek"
+   }
   },
   {
    "id": "lc-zamek",
@@ -3306,17 +3803,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 50.0685,
-   "lon": 22.231,
+   "lat": 50.06847,
+   "lon": 22.23432,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Magnacka rezydencja z historycznymi wnętrzami i słynną kolekcją powozów.",
     "en": "A magnates’ residence with historic interiors and a famous carriage collection."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 3229503,
+    "name": "Zamek w Łańcucie"
+   }
   },
   {
    "id": "kr-zamek",
@@ -3332,17 +3834,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 49.774,
-   "lon": 22.653,
+   "lat": 49.77605,
+   "lon": 22.65165,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Renesansowy zamek z attykami i bogatymi sgraffitami.",
     "en": "A Renaissance castle with attics and rich sgraffito decoration."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 906297566,
+    "name": "Zamek w Krasiczynie"
+   }
   },
   {
    "id": "pr-stare-miasto",
@@ -3411,17 +3918,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 49.394,
-   "lon": 22.453,
+   "lat": 49.39532,
+   "lon": 22.45393,
    "icon": "🌊",
    "url": null,
    "desc": {
     "pl": "Największy sztuczny zbiornik w Polsce z ponad 80-metrową zaporą.",
     "en": "Poland’s largest artificial reservoir, held back by a dam over 80 m high."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 126713197,
+    "name": "Zapora w Solinie"
+   }
   },
   {
    "id": "sa-skansen",
@@ -3437,17 +3949,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 49.572,
-   "lon": 22.214,
+   "lat": 49.57325,
+   "lon": 22.21632,
    "icon": "🏡",
    "url": null,
    "desc": {
     "pl": "Jeden z największych skansenów w Polsce z cerkwiami i odtworzonym rynkiem galicyjskim.",
     "en": "One of Poland’s largest open-air museums, with Orthodox churches and a recreated Galician market square."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 41714371,
+    "name": "Muzeum Budownictwa Ludowego w Sanoku"
+   }
   },
   {
    "id": "sa-beksinski",
@@ -3488,17 +4005,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 50.4975,
-   "lon": 21.539,
+   "lat": 50.50195,
+   "lon": 21.53523,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Renesansowy zamek z arkadowym dziedzińcem, nazywany „małym Wawelem”.",
     "en": "A Renaissance castle with an arcaded courtyard, known as the “little Wawel”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 6178442,
+    "name": "Zamek w Baranowie Sandomierskim"
+   }
   },
   {
    "id": "ha-kosciol",
@@ -3515,17 +4037,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 49.663,
-   "lon": 21.897,
+   "lat": 49.67036,
+   "lon": 21.88996,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Jeden z największych gotyckich kościołów drewnianych w Europie, na Liście UNESCO.",
     "en": "One of the largest Gothic wooden churches in Europe, on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 261763113,
+    "name": "Kościół drewniany pw. Wniebowzięcia NMP i św. Michała Archanioła 1388"
+   }
   },
   {
    "id": "bo-naftowe",
@@ -3542,17 +4069,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 49.6372,
-   "lon": 21.7244,
+   "lat": 49.61934,
+   "lon": 21.70371,
    "icon": "🛢️",
    "url": null,
    "desc": {
     "pl": "Najstarsza kopalnia ropy naftowej na świecie, założona w 1854 r. z udziałem Ignacego Łukasiewicza.",
     "en": "The world’s oldest oil mine, founded in 1854 with the participation of Ignacy Łukasiewicz."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 13631174947,
+    "name": "Kasa biletowa Muzeum Przemysłu Naftowego i Gazowniczego"
+   }
   },
   {
    "id": "bi-palac-branickich",
@@ -3569,17 +4101,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 53.1315,
-   "lon": 23.1625,
+   "lat": 53.13079,
+   "lon": 23.16486,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Barokowa rezydencja z ogrodem, nazywana „Wersalem Podlasia”.",
     "en": "A Baroque residence with gardens, known as the “Versailles of Podlasie”."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 242871669,
+    "name": "Pałac Branickich"
+   }
   },
   {
    "id": "bi-rynek",
@@ -3594,17 +4131,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 53.132,
-   "lon": 23.159,
+   "lat": 53.13226,
+   "lon": 23.16095,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Centralny plac miasta z odbudowanym ratuszem i Muzeum Podlaskim.",
     "en": "The city’s central square with the rebuilt town hall and the Podlasie Museum."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 3873588,
+    "name": "Rynek Kościuszki"
+   }
   },
   {
    "id": "bw-park",
@@ -3646,17 +4188,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 52.7203,
-   "lon": 23.802,
+   "lat": 52.7062,
+   "lon": 23.79949,
    "icon": "🦬",
    "url": null,
    "desc": {
     "pl": "Zagrody z żubrami, żubroniami, konikami i innymi zwierzętami puszczy.",
     "en": "Enclosures with European bison and other animals of the forest."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 39135567,
+    "name": "Rezerwat Pokazowy Żubrów"
+   }
   },
   {
    "id": "ty-synagoga",
@@ -3672,17 +4219,22 @@
    ],
    "time": 60,
    "visitValue": 5,
-   "lat": 53.2055,
-   "lon": 22.7745,
+   "lat": 53.2067,
+   "lon": 22.76721,
    "icon": "✡️",
    "url": null,
    "desc": {
     "pl": "Barokowa synagoga z XVII w. w miasteczku o zachowanym dawnym układzie.",
     "en": "A 17th-century Baroque synagogue in a town with its historic layout intact."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 274446049,
+    "name": "Wielka Synagoga"
+   }
   },
   {
    "id": "kr-meczet",
@@ -3699,17 +4251,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 53.1795,
-   "lon": 23.8075,
+   "lat": 53.17776,
+   "lon": 23.81375,
    "icon": "🕌",
    "url": null,
    "desc": {
     "pl": "Drewniany meczet Tatarów polskich z XVIII w.",
     "en": "An 18th-century wooden mosque of the Polish Tatars."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 239934712,
+    "name": "Meczet w Kruszynianach"
+   }
   },
   {
    "id": "au-kanal",
@@ -3804,17 +4361,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.2085,
-   "lon": 23.3425,
+   "lat": 53.21119,
+   "lon": 23.3379,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Kolekcja ikon w zespole monasteru w Supraślu.",
     "en": "A collection of icons in the Supraśl monastery complex."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1747326748,
+    "name": "Muzeum Ikon"
+   }
   },
   {
    "id": "gr-grabarka",
@@ -3830,17 +4392,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 52.482,
-   "lon": 22.932,
+   "lat": 52.4161,
+   "lon": 23.00638,
    "icon": "✝️",
    "url": null,
    "desc": {
     "pl": "Najważniejsze prawosławne sanktuarium w Polsce z tysiącami krzyży.",
     "en": "The most important Orthodox sanctuary in Poland, with thousands of crosses."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 14005401249,
+    "name": "Święta Góra Grabarka"
+   }
   },
   {
    "id": "gd-dlugi-targ",
@@ -3856,17 +4423,22 @@
    ],
    "time": 90,
    "visitValue": 5,
-   "lat": 54.3485,
-   "lon": 18.653,
+   "lat": 54.34842,
+   "lon": 18.65341,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Reprezentacyjna ulica z Fontanną Neptuna, Dworem Artusa i Ratuszem Głównego Miasta.",
     "en": "The grand street with the Neptune Fountain, Artus Court and the Main Town Hall."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 206657610,
+    "name": "Długi Targ"
+   }
   },
   {
    "id": "gd-zuraw",
@@ -3882,17 +4454,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 54.3505,
-   "lon": 18.6575,
+   "lat": 54.35056,
+   "lon": 18.65748,
    "icon": "⚓",
    "url": null,
    "desc": {
     "pl": "Średniowieczny dźwig portowy nad Motławą, symbol Gdańska.",
     "en": "A medieval port crane on the Motława, the symbol of Gdańsk."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 96702317,
+    "name": "Brama Żuraw"
+   }
   },
   {
    "id": "gd-ecs",
@@ -3908,17 +4485,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 54.361,
-   "lon": 18.649,
+   "lat": 54.36136,
+   "lon": 18.64942,
    "icon": "✊",
    "url": null,
    "desc": {
     "pl": "Muzeum ruchu Solidarność przy historycznej bramie Stoczni Gdańskiej.",
     "en": "A museum of the Solidarity movement by the historic gate of the Gdańsk Shipyard."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 179780270,
+    "name": "Europejskie Centrum Solidarności"
+   }
   },
   {
    "id": "gd-muzeum-ii-ws",
@@ -3934,17 +4516,22 @@
    ],
    "time": 180,
    "visitValue": 5,
-   "lat": 54.356,
-   "lon": 18.66,
+   "lat": 54.35594,
+   "lon": 18.66112,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Rozległa wystawa o losach ludności cywilnej i przebiegu II wojny światowej.",
     "en": "An extensive exhibition on civilians and the course of the Second World War."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 6808053,
+    "name": "Muzeum II Wojny Światowej"
+   }
   },
   {
    "id": "gd-westerplatte",
@@ -3968,9 +4555,14 @@
     "pl": "Miejsce pierwszych walk II wojny światowej 1 września 1939 r.",
     "en": "The site of the first battle of the Second World War on 1 September 1939."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1334328771,
+    "name": "Westerplatte"
+   }
   },
   {
    "id": "gd-oliwa",
@@ -3986,17 +4578,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 54.411,
-   "lon": 18.56,
+   "lat": 54.41076,
+   "lon": 18.557,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Katedra ze słynnymi rokokowymi organami i park z palmiarnią.",
     "en": "A cathedral with famous Rococo organs and a park with a palm house."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 3799308531,
+    "name": "Archikatedra Oliwska 01"
+   }
   },
   {
    "id": "so-molo",
@@ -4012,17 +4609,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 54.447,
-   "lon": 18.573,
+   "lat": 54.44741,
+   "lon": 18.57473,
    "icon": "🌊",
    "url": null,
    "desc": {
     "pl": "Najdłuższe drewniane molo w Europie (ponad 500 m).",
     "en": "The longest wooden pier in Europe (over 500 m)."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 172671466,
+    "name": "Molo w Sopocie"
+   }
   },
   {
    "id": "gy-nabrzeze",
@@ -4039,17 +4641,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 54.5185,
-   "lon": 18.553,
+   "lat": 54.51918,
+   "lon": 18.54266,
    "icon": "⚓",
    "url": null,
    "desc": {
     "pl": "Nabrzeże z niszczycielem-muzeum ORP Błyskawica i żaglowcem Dar Pomorza.",
     "en": "A waterfront with the museum destroyer ORP Błyskawica and the tall ship Dar Pomorza."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 11368962210,
+    "name": "Skwer Kościuszki"
+   }
   },
   {
    "id": "ma-zamek",
@@ -4065,17 +4672,22 @@
    ],
    "time": 180,
    "visitValue": 5,
-   "lat": 54.0395,
-   "lon": 19.028,
+   "lat": 54.04002,
+   "lon": 19.02782,
    "icon": "🏰",
    "url": "https://zamek.malbork.pl",
    "desc": {
     "pl": "Największy ceglany zamek świata, dawna stolica zakonu krzyżackiego, na Liście UNESCO.",
     "en": "The world’s largest brick castle, the former capital of the Teutonic Order, on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 6436433,
+    "name": "Zamek w Malborku"
+   }
   },
   {
    "id": "he-mierzeja",
@@ -4144,17 +4756,22 @@
    ],
    "time": 90,
    "visitValue": 3,
-   "lat": 54.2195,
-   "lon": 18.1015,
+   "lat": 54.20484,
+   "lon": 18.10602,
    "icon": "🏠",
    "url": null,
    "desc": {
     "pl": "Kaszubska atrakcja z domem postawionym na dachu i bardzo długą deską.",
     "en": "A Kashubian attraction with a house standing on its roof and a very long board."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 292485346,
+    "name": "Dom do góry nogami"
+   }
   },
   {
    "id": "pe-katedra",
@@ -4170,17 +4787,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.93,
-   "lon": 18.697,
+   "lat": 53.92739,
+   "lon": 18.69429,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Monumentalna gotycka bazylika pocysterska; w muzeum diecezjalnym egzemplarz Biblii Gutenberga.",
     "en": "A monumental Gothic former Cistercian basilica; the diocesan museum holds a Gutenberg Bible."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 528710026,
+    "name": "Katedra pw. Wniebowzięcia Najświętszej Maryi Panny"
+   }
   },
   {
    "id": "ka-strefa-kultury",
@@ -4223,17 +4845,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 50.242,
-   "lon": 19.084,
+   "lat": 50.24277,
+   "lon": 19.081,
    "icon": "🧱",
    "url": null,
    "desc": {
     "pl": "Robotnicze osiedle z czerwonej cegły z początku XX w.",
     "en": "An early 20th-century red-brick miners’ estate."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 31901028,
+    "name": "Nikiszowiec"
+   }
   },
   {
    "id": "ka-muzeum-slaskie",
@@ -4248,17 +4875,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 50.2635,
-   "lon": 19.034,
+   "lat": 50.26401,
+   "lon": 19.03398,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Podziemne galerie sztuki i historii Górnego Śląska na terenie dawnej kopalni Katowice.",
     "en": "Underground galleries of Upper Silesian art and history on the site of the former Katowice mine."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 306149015,
+    "name": "Muzeum Śląskie"
+   }
   },
   {
    "id": "za-guido",
@@ -4275,17 +4907,22 @@
    ],
    "time": 150,
    "visitValue": 5,
-   "lat": 50.3045,
-   "lon": 18.76,
+   "lat": 50.29089,
+   "lon": 18.79182,
    "icon": "⛏️",
    "url": null,
    "desc": {
     "pl": "Podziemna trasa po wyrobiskach na głębokości 170 i 320 m.",
     "en": "An underground route through workings at depths of 170 and 320 m."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1834371810,
+    "name": "Guido Kopalnia Zabytkowa"
+   }
   },
   {
    "id": "tg-kopalnia-srebra",
@@ -4301,17 +4938,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.431,
-   "lon": 18.846,
+   "lat": 50.42611,
+   "lon": 18.84989,
    "icon": "⛏️",
    "url": null,
    "desc": {
     "pl": "Dawne kopalnie kruszców z podziemnym spływem łodziami, na Liście UNESCO.",
     "en": "Former ore mines with an underground boat trip, on the UNESCO list."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 88383304,
+    "name": "Zabytkowa Kopalnia Srebra"
+   }
   },
   {
    "id": "cz-jasna-gora",
@@ -4327,17 +4969,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 50.8125,
-   "lon": 19.097,
+   "lat": 50.81276,
+   "lon": 19.09712,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Sanktuarium z obrazem Matki Bożej Częstochowskiej, najważniejsze miejsce pielgrzymkowe w Polsce.",
     "en": "The sanctuary of the Black Madonna, Poland’s most important pilgrimage site."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 13236692,
+    "name": "Jasna Góra"
+   }
   },
   {
    "id": "og-zamek",
@@ -4353,17 +5000,22 @@
    ],
    "time": 90,
    "visitValue": 5,
-   "lat": 50.4535,
-   "lon": 19.553,
+   "lat": 50.45317,
+   "lon": 19.55289,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Malownicze ruiny zamku na Szlaku Orlich Gniazd na Jurze Krakowsko-Częstochowskiej.",
     "en": "Picturesque castle ruins on the Trail of the Eagles’ Nests in the Kraków-Częstochowa Upland."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 14149043,
+    "name": "Zamek Ogrodzieniec"
+   }
   },
   {
    "id": "ps-zamek",
@@ -4379,17 +5031,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 49.979,
-   "lon": 18.944,
+   "lat": 49.97816,
+   "lon": 18.94045,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Rezydencja z wnętrzami z czasów księżnej Daisy i pokazową zagrodą żubrów w pobliżu.",
     "en": "A residence with interiors from Princess Daisy’s time and a bison enclosure nearby."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 172583260,
+    "name": "Zamek w Pszczynie"
+   }
   },
   {
    "id": "wi-wisla",
@@ -4430,17 +5087,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 49.749,
-   "lon": 18.628,
+   "lat": 49.75117,
+   "lon": 18.62572,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Romańska rotunda z XI w., której wizerunek widnieje na banknocie 20 zł.",
     "en": "An 11th-century Romanesque rotunda, pictured on the 20-złoty banknote."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 166848385,
+    "name": "Kościół pw. Świętego Mikołaja"
+   }
   },
   {
    "id": "gl-radiostacja",
@@ -4456,17 +5118,22 @@
    ],
    "time": 45,
    "visitValue": 4,
-   "lat": 50.3135,
-   "lon": 18.689,
+   "lat": 50.31334,
+   "lon": 18.68876,
    "icon": "📡",
    "url": null,
    "desc": {
     "pl": "Najwyższa drewniana konstrukcja w Europie (ok. 111 m), związana z prowokacją z 1939 r.",
     "en": "Europe’s tallest wooden structure (about 111 m), linked to the 1939 staged incident."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 89954086,
+    "name": "Radiostacja gliwicka"
+   }
   },
   {
    "id": "ol-zamek",
@@ -4482,17 +5149,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 53.7775,
-   "lon": 20.473,
+   "lat": 53.77773,
+   "lon": 20.47471,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Gotycki zamek, w którym mieszkał i prowadził obserwacje Mikołaj Kopernik.",
     "en": "A Gothic castle where Nicolaus Copernicus lived and made observations."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 104285296,
+    "name": "Zamek Kapituły Warmińskiej"
+   }
   },
   {
    "id": "ol-stare-miasto",
@@ -4507,17 +5179,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 53.778,
-   "lon": 20.479,
+   "lat": 53.77611,
+   "lon": 20.47764,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Rynek z ratuszem i Wysoka Brama w historycznym centrum stolicy Warmii.",
     "en": "A market square with the town hall and the High Gate in the historic centre of Warmia’s capital."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 104359092,
+    "name": "Bazylika konkatedralna świętego Jakuba Apostoła w Olsztynie"
+   }
   },
   {
    "id": "fr-wzgorze",
@@ -4534,17 +5211,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 54.3575,
-   "lon": 19.683,
+   "lat": 54.357,
+   "lon": 19.68214,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Katedra, w której pochowano Mikołaja Kopernika, i wieża z widokiem na Zalew Wiślany.",
     "en": "The cathedral where Copernicus is buried and a tower overlooking the Vistula Lagoon."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 23608283,
+    "name": "Bazylika archikatedralna pw. Wniebowzięcia Najświętszej Maryi Panny i Świętego Andrzeja"
+   }
   },
   {
    "id": "lw-zamek",
@@ -4560,17 +5242,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 54.1255,
-   "lon": 20.58,
+   "lat": 54.12571,
+   "lon": 20.58306,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Jeden z najlepiej zachowanych zamków gotyckich w Polsce.",
     "en": "One of the best-preserved Gothic castles in Poland."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1332682138,
+    "name": "Zamek Biskupów Warmińskich"
+   }
   },
   {
    "id": "sl-sanktuarium",
@@ -4586,17 +5273,22 @@
    ],
    "time": 45,
    "visitValue": 5,
-   "lat": 54.027,
-   "lon": 21.221,
+   "lat": 54.02434,
+   "lon": 21.21754,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Barokowa bazylika z organami, w których poruszają się figury.",
     "en": "A Baroque basilica with an organ featuring moving figures."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 972355340,
+    "name": "Sanktuarium Matki Bożej"
+   }
   },
   {
    "id": "gi-wilczy-szaniec",
@@ -4611,17 +5303,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 54.079,
-   "lon": 21.495,
+   "lat": 54.08047,
+   "lon": 21.49835,
    "icon": "🕯️",
    "url": null,
    "desc": {
     "pl": "Ruiny bunkrów kwatery Hitlera z czasów II wojny światowej.",
     "en": "The ruined bunkers of Hitler’s wartime headquarters."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 23554892,
+    "name": "Wilczy Szaniec"
+   }
   },
   {
    "id": "gz-boyen",
@@ -4638,17 +5335,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 54.039,
-   "lon": 21.762,
+   "lat": 54.03194,
+   "lon": 21.74919,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Dziewiętnastowieczna twierdza na przesmyku między jeziorami Szlaku Wielkich Jezior.",
     "en": "A 19th-century fortress on an isthmus between lakes of the Great Masurian Lakes."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 175612582,
+    "name": "Twierdza Boyen"
+   }
   },
   {
    "id": "kr-krutynia",
@@ -4717,17 +5419,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 53.5965,
-   "lon": 20.293,
+   "lat": 53.59397,
+   "lon": 20.28413,
    "icon": "🏡",
    "url": null,
    "desc": {
     "pl": "Skansen z dawną zabudową wiejską Warmii, Mazur i Prus.",
     "en": "An open-air museum of rural buildings from Warmia, Masuria and Prussia."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 352955376,
+    "name": "Muzeum Budownictwa Ludowego - Park Etnograficzny w Olsztynku"
+   }
   },
   {
    "id": "re-zamek",
@@ -4743,17 +5450,22 @@
    ],
    "time": 45,
    "visitValue": 3,
-   "lat": 54.0505,
-   "lon": 21.145,
+   "lat": 54.04838,
+   "lon": 21.14817,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Gotycki zamek biskupi w malowniczym miasteczku na Warmii.",
     "en": "A Gothic bishops’ castle in a picturesque Warmian town."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 279411310,
+    "name": "Zamek w Reszlu"
+   }
   },
   {
    "id": "mi-sniardwy",
@@ -4796,17 +5508,22 @@
    ],
    "time": 75,
    "visitValue": 5,
-   "lat": 52.4085,
-   "lon": 16.934,
+   "lat": 52.40867,
+   "lon": 16.93439,
    "icon": "🐐",
    "url": null,
    "desc": {
     "pl": "Renesansowy ratusz, na którym w południe trykają się koziołki.",
     "en": "A Renaissance town hall where mechanical goats butt heads at noon."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 847760080,
+    "name": "Stary Rynek"
+   }
   },
   {
    "id": "po-ostrow-tumski",
@@ -4822,17 +5539,22 @@
    ],
    "time": 120,
    "visitValue": 5,
-   "lat": 52.4115,
-   "lon": 16.948,
+   "lat": 52.41128,
+   "lon": 16.94843,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Katedra z grobami pierwszych władców Polski i interaktywne centrum historii.",
     "en": "The cathedral with tombs of Poland’s first rulers and an interactive heritage centre."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 28905259,
+    "name": "Ostrów Tumski"
+   }
   },
   {
    "id": "po-rogalowe",
@@ -4848,17 +5570,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 52.408,
-   "lon": 16.933,
+   "lat": 52.40838,
+   "lon": 16.93501,
    "icon": "🥐",
    "url": null,
    "desc": {
     "pl": "Pokaz wypieku świętomarcińskich rogali tuż przy Starym Rynku.",
     "en": "A show on baking St Martin’s croissants, right by the Old Market Square."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 4355305570,
+    "name": "Rogalowe Muzeum Poznania"
+   }
   },
   {
    "id": "po-palmiarnia",
@@ -4874,17 +5601,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 52.401,
-   "lon": 16.897,
+   "lat": 52.40189,
+   "lon": 16.90075,
    "icon": "🌴",
    "url": null,
    "desc": {
     "pl": "Jedna z największych palmiarni w Polsce w Parku Wilsona.",
     "en": "One of Poland’s largest palm houses, in Wilson Park."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 35270118,
+    "name": "Palmiarnia Poznańska"
+   }
   },
   {
    "id": "gn-katedra",
@@ -4925,17 +5657,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 52.537,
-   "lon": 17.378,
+   "lat": 52.52701,
+   "lon": 17.37763,
    "icon": "🛖",
    "url": null,
    "desc": {
     "pl": "Wyspa z reliktami palatium z czasów Mieszka I i skansen wielkopolski.",
     "en": "An island with remains of a palace from Mieszko I’s time and an open-air museum."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 2082753545,
+    "name": "Muzeum Pierwszych Piastów na Lednicy"
+   }
   },
   {
    "id": "ko-zamek",
@@ -4952,17 +5689,22 @@
    ],
    "time": 90,
    "visitValue": 5,
-   "lat": 52.244,
-   "lon": 17.086,
+   "lat": 52.24389,
+   "lon": 17.0909,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Neogotycki zamek z cenną biblioteką i arboretum nad jeziorem.",
     "en": "A Neo-Gothic castle with a valuable library and an arboretum by the lake."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 134633044,
+    "name": "Zamek w Kórniku"
+   }
   },
   {
    "id": "ro-palac",
@@ -4978,17 +5720,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 52.234,
-   "lon": 16.933,
+   "lat": 52.23376,
+   "lon": 16.93369,
    "icon": "🌳",
    "url": null,
    "desc": {
     "pl": "Pałac Raczyńskich z galerią malarstwa i słynnymi dębami Lechem, Czechem i Rusem.",
     "en": "The Raczyński palace with a painting gallery and the famous Lech, Czech and Rus oaks."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 6554880231,
+    "name": "Muzeum Pałac w Rogalinie Oddział Muzeum Narodowego w Poznaniu"
+   }
   },
   {
    "id": "wi-park",
@@ -5031,17 +5778,22 @@
    ],
    "time": 90,
    "visitValue": 4,
-   "lat": 51.853,
-   "lon": 17.929,
+   "lat": 51.85259,
+   "lon": 17.93386,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Zamek Izabeli Działyńskiej z kolekcją waz antycznych i rozległym parkiem.",
     "en": "Izabela Działyńska’s castle with a collection of ancient vases and a large park."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 263859879,
+    "name": "Zamek w Gołuchowie"
+   }
   },
   {
    "id": "ka-stare-miasto",
@@ -5056,17 +5808,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 51.762,
-   "lon": 18.089,
+   "lat": 51.75134,
+   "lon": 18.10205,
    "icon": "🏛️",
    "url": null,
    "desc": {
     "pl": "Jedno z najstarszych miast Polski, utożsamiane z Calisią wspomnianą przez Ptolemeusza.",
     "en": "One of Poland’s oldest towns, identified with Calisia mentioned by Ptolemy."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 172520304,
+    "name": "Stare Miasto"
+   }
   },
   {
    "id": "li-sanktuarium",
@@ -5082,17 +5839,22 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 52.322,
-   "lon": 18.357,
+   "lat": 52.32103,
+   "lon": 18.3562,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Największa świątynia w Polsce.",
     "en": "The largest church in Poland."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 208331587,
+    "name": "Sanktuarium Maryjne w Licheniu Starym"
+   }
   },
   {
    "id": "sz-waly",
@@ -5108,17 +5870,22 @@
    ],
    "time": 45,
    "visitValue": 5,
-   "lat": 53.4285,
-   "lon": 14.563,
+   "lat": 53.42872,
+   "lon": 14.56423,
    "icon": "🌉",
    "url": null,
    "desc": {
     "pl": "Reprezentacyjne tarasy nad Odrą z widokiem na port.",
     "en": "Grand terraces above the Oder overlooking the port."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 151091827,
+    "name": "Wały Chrobrego"
+   }
   },
   {
    "id": "sz-zamek",
@@ -5134,17 +5901,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.426,
-   "lon": 14.561,
+   "lat": 53.42619,
+   "lon": 14.56103,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Renesansowa siedziba książąt pomorskich, dziś centrum kultury.",
     "en": "The Renaissance seat of the Pomeranian dukes, now a cultural centre."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 12774910,
+    "name": "Zamek Książąt Pomorskich"
+   }
   },
   {
    "id": "sz-filharmonia",
@@ -5160,17 +5932,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.431,
-   "lon": 14.556,
+   "lat": 53.4306,
+   "lon": 14.55752,
    "icon": "🎼",
    "url": null,
    "desc": {
     "pl": "Nagradzany budynek filharmonii i podziemne muzeum najnowszej historii miasta.",
     "en": "An award-winning philharmonic hall and an underground museum of the city’s recent history."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 916177664,
+    "name": "Filharmonia"
+   }
   },
   {
    "id": "mi-wolinski-pn",
@@ -5240,17 +6017,22 @@
    ],
    "time": 30,
    "visitValue": 4,
-   "lat": 54.0815,
-   "lon": 15.011,
+   "lat": 54.07778,
+   "lon": 14.99282,
    "icon": "🌊",
    "url": null,
    "desc": {
     "pl": "Fragment ściany gotyckiego kościoła na krawędzi klifu, który zabrało morze.",
     "en": "A surviving wall of a Gothic church on a cliff edge claimed by the sea."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 293604046,
+    "name": "Ruiny kościoła w Trzęsaczu"
+   }
   },
   {
    "id": "ko-molo",
@@ -5267,17 +6049,22 @@
    ],
    "time": 120,
    "visitValue": 4,
-   "lat": 54.1825,
-   "lon": 15.576,
+   "lat": 54.18552,
+   "lon": 15.56162,
    "icon": "🗼",
    "url": null,
    "desc": {
     "pl": "Nadmorskie uzdrowisko z molo, latarnią morską i gotycką bazyliką.",
     "en": "A seaside spa with a pier, a lighthouse and a Gothic basilica."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 218340922,
+    "name": "Galeria MOLO"
+   }
   },
   {
    "id": "sw-latarnia",
@@ -5293,17 +6080,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.9165,
-   "lon": 14.286,
+   "lat": 53.91604,
+   "lon": 14.28412,
    "icon": "🗼",
    "url": null,
    "desc": {
     "pl": "Najwyższa latarnia morska w Polsce (ok. 65 m).",
     "en": "The tallest lighthouse in Poland (about 65 m)."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 10046085813,
+    "name": "Latarnia Morska"
+   }
   },
   {
    "id": "st-kolegiata",
@@ -5319,17 +6111,22 @@
    ],
    "time": 60,
    "visitValue": 4,
-   "lat": 53.337,
-   "lon": 15.038,
+   "lat": 53.33602,
+   "lon": 15.04629,
    "icon": "⛪",
    "url": null,
    "desc": {
     "pl": "Monumentalny gotycki kościół i dobrze zachowane mury obronne.",
     "en": "A monumental Gothic church and well-preserved town walls."
    },
-   "coordinateStatus": "orientacyjne",
+   "coordinateStatus": "osm",
    "sourceKind": "redakcyjna_selekcja",
-   "updated": "2026-11"
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 5209263327,
+    "name": "Bolesława Krzywoustego - Kolegiata"
+   }
   },
   {
    "id": "dr-park",
@@ -5371,17 +6168,288 @@
    ],
    "time": 60,
    "visitValue": 3,
-   "lat": 54.424,
-   "lon": 16.411,
+   "lat": 54.41977,
+   "lon": 16.41165,
    "icon": "🏰",
    "url": null,
    "desc": {
     "pl": "Zamek związany z królem Erykiem Pomorskim.",
     "en": "A castle associated with King Eric of Pomerania."
    },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 6986844,
+    "name": "Zamek Książąt Pomorskich w Darłowie"
+   }
+  },
+  {
+   "id": "ki-rynek",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Rynek i ulica Sienkiewicza w Kielcach",
+    "en": "Kielce Market Square and Sienkiewicza Street"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.87156,
+   "lon": 20.63212,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Kameralny rynek z ratuszem i główny deptak miasta z kamienicami i kawiarniami.",
+    "en": "A compact market square with the town hall and the city’s main promenade lined with townhouses and cafés."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 13559121,
+    "name": "Rynek"
+   }
+  },
+  {
+   "id": "ki-muzeum-zabawek",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Zabawek i Zabawy",
+    "en": "Museum of Toys and Play"
+   },
+   "cats": [
+    "museum",
+    "family"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 50.86812,
+   "lon": 20.63482,
+   "icon": "🧸",
+   "url": null,
+   "desc": {
+    "pl": "Jedno z największych muzeów zabawek w Polsce, z lalkami, kolejkami i zabawkami z wielu krajów.",
+    "en": "One of the largest toy museums in Poland, with dolls, model railways and toys from many countries."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1904638174,
+    "name": "Muzeum Zabawek i Zabawy"
+   }
+  },
+  {
+   "id": "ki-muzeum-historii",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Historii Kielc",
+    "en": "Museum of the History of Kielce"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 3,
+   "lat": 50.86974,
+   "lon": 20.63465,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Wystawa o dziejach miasta od średniowiecza do czasów współczesnych.",
+    "en": "An exhibition on the city’s history from the Middle Ages to modern times."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1904638169,
+    "name": "Muzeum Historii Kielc"
+   }
+  },
+  {
+   "id": "ki-slichowice",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Rezerwat geologiczny Ślichowice",
+    "en": "Ślichowice Geological Reserve"
+   },
+   "cats": [
+    "geology",
+    "park",
+    "science"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.872,
+   "lon": 20.6005,
+   "icon": "🪨",
+   "url": null,
+   "desc": {
+    "pl": "Dawny kamieniołom z wyraźnym fałdem skał dewońskich, zwanym Fałdem Czarnockiego.",
+    "en": "A former quarry with a clearly visible fold of Devonian rocks known as Czarnocki’s Fold."
+   },
    "coordinateStatus": "orientacyjne",
    "sourceKind": "redakcyjna_selekcja",
    "updated": "2026-11"
+  },
+  {
+   "id": "ki-park-staszica",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Park Miejski im. Stanisława Staszica",
+    "en": "Stanisław Staszic City Park"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 40,
+   "visitValue": 3,
+   "lat": 50.8678,
+   "lon": 20.6255,
+   "icon": "🌳",
+   "url": null,
+   "desc": {
+    "pl": "Zabytkowy park w centrum miasta z XIX-wiecznym układem alejek i stawem.",
+    "en": "A historic park in the city centre with a 19th-century layout of paths and a pond."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 9869728,
+    "name": "Park im. Stanisława Staszica"
+   }
+  },
+  {
+   "id": "ki-dworek-laszczykow",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Dworek Laszczyków",
+    "en": "Laszczyk Manor House"
+   },
+   "cats": [
+    "history",
+    "museum"
+   ],
+   "time": 30,
+   "visitValue": 3,
+   "lat": 50.8708,
+   "lon": 20.6247,
+   "icon": "🏡",
+   "url": null,
+   "desc": {
+    "pl": "Drewniany dworek z XVIII w. przy Wzgórzu Zamkowym, oddział Muzeum Wsi Kieleckiej.",
+    "en": "An 18th-century wooden manor house by Castle Hill, a branch of the Museum of the Kielce Countryside."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ki-muzeum-zeromskiego",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Lat Szkolnych Stefana Żeromskiego",
+    "en": "Stefan Żeromski School Years Museum"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 40,
+   "visitValue": 3,
+   "lat": 50.872,
+   "lon": 20.6265,
+   "icon": "📚",
+   "url": null,
+   "desc": {
+    "pl": "Muzeum w dawnym gimnazjum, do którego uczęszczał pisarz Stefan Żeromski.",
+    "en": "A museum in the former grammar school attended by the writer Stefan Żeromski."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ki-ogrod-botaniczny",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Ogród Botaniczny w Kielcach",
+    "en": "Kielce Botanical Garden"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 50.86881,
+   "lon": 20.59964,
+   "icon": "🌿",
+   "url": null,
+   "desc": {
+    "pl": "Ogród z kolekcjami roślin regionu świętokrzyskiego, położony na zboczu wzgórza.",
+    "en": "A garden with plant collections of the Świętokrzyskie region, on a hillside."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 10218680713,
+    "name": "Ogród Botaniczny"
+   }
+  },
+  {
+   "id": "ki-telegraf",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Wzgórze Telegraf",
+    "en": "Telegraf Hill"
+   },
+   "cats": [
+    "view",
+    "family"
+   ],
+   "time": 60,
+   "visitValue": 3,
+   "lat": 50.83822,
+   "lon": 20.64282,
+   "icon": "🎿",
+   "url": null,
+   "desc": {
+    "pl": "Wzgórze na wschodzie Kielc ze stokiem narciarskim i widokiem na miasto.",
+    "en": "A hill in eastern Kielce with a ski slope and views over the city."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 2514439430,
+    "name": "Telegraf"
+   }
   }
- ]
+ ],
+ "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07"
 }

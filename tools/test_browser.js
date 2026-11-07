@@ -47,7 +47,7 @@ function check(ok, message) {
   await page.goto(base + 'atlas.html');
   await page.waitForSelector('.city-dot');
   check(await page.evaluate(() => document.documentElement.lang) === 'en', 'Atlas: pierwsze uruchomienie po angielsku');
-  check(await page.locator('.city-dot').count() === 13, 'Atlas: 13 miast');
+  check(await page.locator('.city-dot').count() === 14, 'Atlas: 14 miast (z Kielcami)');
   await page.click('#langButton [data-lang="pl"]');
   check(await page.evaluate(() => document.documentElement.lang === 'pl' && document.querySelector('#cityAction').textContent === 'Odkryj Warszawę'), 'Atlas: przełącznik PL');
   await page.click('#langButton [data-lang="en"]');

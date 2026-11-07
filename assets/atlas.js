@@ -18,6 +18,7 @@ const CITIES=[
 {id:'bialystok',pl:'Białystok',en:'Bialystok',lat:53.1325,lon:23.1688,ready:false},
 {id:'katowice',pl:'Katowice',en:'Katowice',lat:50.2649,lon:19.0238,ready:false},
 {id:'rzeszow',pl:'Rzeszów',en:'Rzeszow',lat:50.0412,lon:21.9991,ready:false},
+{id:'kielce',pl:'Kielce',en:'Kielce',lat:50.8661,lon:20.6286,ready:false},
 {id:'olsztyn',pl:'Olsztyn',en:'Olsztyn',lat:53.7784,lon:20.4801,ready:false}
 ];
 // Krótkie, redakcyjne opisy miast (fakty powszechnie znane). Ilustracja miasta pełni rolę zdjęcia.
@@ -34,6 +35,7 @@ lublin:['Stare Miasto z Bramą Krakowską i zamek z kaplicą Świętej Trójcy p
 bialystok:['Pałac Branickich, zwany „Wersalem Podlasia”, i brama do Puszczy Białowieskiej.','The Branicki Palace, known as the “Versailles of Podlasie”, and a gateway to Białowieża Forest.'],
 katowice:['Stolica Górnego Śląska: Spodek, Strefa Kultury i robotniczy Nikiszowiec.','The capital of Upper Silesia: the Spodek arena, the Culture Zone and historic Nikiszowiec.'],
 rzeszow:['Kameralny Rynek z podziemną trasą turystyczną i baza wypadowa w Bieszczady.','A compact Market Square with an underground tourist route and a base for the Bieszczady.'],
+kielce:['Stolica regionu świętokrzyskiego: Pałac Biskupów Krakowskich, rezerwaty geologiczne Kadzielnia i Wietrznia oraz bliskość Gór Świętokrzyskich.','The capital of the Świętokrzyskie region: the Kraków Bishops’ Palace, the Kadzielnia and Wietrznia geological reserves and the nearby Holy Cross Mountains.'],
 olsztyn:['Stolica Warmii: gotycki zamek związany z Kopernikiem i jeziora w granicach miasta.','The capital of Warmia: a Gothic castle linked to Copernicus and lakes within the city.']
 };
 const GEO=window.POLAND_GEO;
@@ -52,7 +54,7 @@ pl:{atlas:'Atlas Polski',tagline:'Odkrywaj Polskę · Zbieraj miejsca · Twórz 
  styleTitle:'Styl mapy',styleAtlas:'Atlas',styleLight:'Jasny',styleNight:'Noc',styleTerrain:'Teren',mapControls:'Sterowanie mapą',
  addTrip:'Podróż',addDay:'Plan dnia',addTripA:'Dodaj do planu podróży',addDayA:'Dodaj do planu dnia',visited:'Byłem tu',unvisit:'Odwiedzone',close:'Zamknij',morePlaces:n=>'i '+n+' więcej w przewodniku regionu',
  stVisited:'Odwiedzone',stPlanned:'W planie',stNone:'Nieodwiedzone',
- svg:'Interaktywna mapa Polski z 13 miastami i 16 województwami',bottom:'Wybór miasta lub województwa',brand:'I Was Here — Atlas Polski',langLabel:'Język: polski. Przełącz na angielski',
+ svg:'Interaktywna mapa Polski z 14 miastami i 16 województwami',bottom:'Wybór miasta lub województwa',brand:'I Was Here — Atlas Polski',langLabel:'Język: polski. Przełącz na angielski',
  footer:'Natural Earth · Terrain Tiles (SRTM, EU-DEM © Copernicus)',tabs:['Mapa Polski','Plan podróży','Mój plan dnia','Wspomnienia','Profil'],nav:'Menu główne',km:'km',addPlace:'Dodaj do planu dnia'},
 en:{atlas:'Poland Atlas',tagline:'Explore Poland · Collect places · Create memories',choose:'Choose a city',province:'Province',provinces:'Provinces',town:'Town',
  pilot:'Guide available',planned:'Coming soon',guide:'Regional guide',partial:'Partly available',explore:'Explore Warsaw',unavailable:'Guide coming soon',seeRegion:'View the province',
@@ -63,7 +65,7 @@ en:{atlas:'Poland Atlas',tagline:'Explore Poland · Collect places · Create mem
  styleTitle:'Map style',styleAtlas:'Atlas',styleLight:'Light',styleNight:'Night',styleTerrain:'Terrain',mapControls:'Map controls',
  addTrip:'Trip',addDay:'Day plan',addTripA:'Add to a trip plan',addDayA:'Add to a day plan',visited:'I was here',unvisit:'Visited',close:'Close',morePlaces:n=>'and '+n+' more in the regional guide',
  stVisited:'Visited',stPlanned:'Planned',stNone:'Not visited',
- svg:'Interactive map of Poland with 13 cities and 16 provinces',bottom:'Choose a city or province',brand:'I Was Here — Poland Atlas',langLabel:'Language: English. Switch to Polish',
+ svg:'Interactive map of Poland with 14 cities and 16 provinces',bottom:'Choose a city or province',brand:'I Was Here — Poland Atlas',langLabel:'Language: English. Switch to Polish',
  footer:'Natural Earth · Terrain Tiles (SRTM, EU-DEM © Copernicus)',tabs:['Map of Poland','Trip plan','My day plan','Memories','Profile'],nav:'Main menu',km:'km',addPlace:'Add to day plan'}
 };
 const STYLES=['atlas','light','night','terrain'];
@@ -73,7 +75,7 @@ let style=(()=>{try{const v=localStorage.getItem('tubylem_map_style');return STY
 const qs=new URLSearchParams(location.search);if(qs.get('lang')==='en'||qs.get('lang')==='pl')lang=qs.get('lang');
 const layers=Object.assign({borders:true,names:true,relief:true,towns:true,landmarks:true},store.get('iwh_layers',{}));
 let current=CITIES[0],zoom=1,tx=0,ty=0,drag=null,moved=false,sheetOpen=false;
-// mode: 'city' (13 miast), 'region' (województwo) lub 'town' (miejscowość z atrakcjami w województwie)
+// mode: 'city' (14 miast), 'region' (województwo) lub 'town' (miejscowość z atrakcjami w województwie)
 let mode='city',region=null,town=null;
 const MAXZ=6,MINZ=.45;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
