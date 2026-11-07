@@ -26,7 +26,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 
 ## Features and non-features
 - Poland Atlas with 13 pinned cities and correct geographic locations; **Warsaw is the only fully developed city**. Other city guides are planned, never present them as fully available.
-- Atlas provinces: selecting a voivodeship zooms in, outlines it and shows towns with places. All **16 provinces** have regional guides (Mazowieckie is partial: Warsaw + 8 places). Each of the 13 cities has its sights in its province guide; only Warsaw has a full city guide. Regional coordinates are approximate (editorial, not geocoded).
+- Atlas provinces: selecting a voivodeship zooms in, outlines it and shows towns with places. All **16 provinces** have regional guides (Mazowieckie is partial: Warsaw + 8 places). Each of the 13 cities has its sights in its province guide; only Warsaw has a full city guide. 160 of 198 regional positions are verified in OpenStreetMap via `tools/verify_coordinates.py` (`coordinateStatus: "osm"` + OSM id; © OpenStreetMap contributors, ODbL — keep the attribution); the rest stay `orientacyjne` (approximate).
 - Warsaw: districts, sightseeing places, an itinerary planner, food section, editorial visit rating 1–5, favorites, virtual stamps, family and photography preferences, speech synthesis, GPS with permission.
 - The independent 1–5 **editorial** score is NOT a Google review score. Google reviews are linked out; do not invent live ratings or include private Places API keys.
 - Public transport and street routing are **estimates and external links**, not validated real-time WTP routing; do not claim otherwise.
