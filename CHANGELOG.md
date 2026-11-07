@@ -5,9 +5,16 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-3-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-3-1-20261107`.
 
 ---
+
+## 8.3.1 — 2026-11-07 — gałąź `claude/new-logo`
+- **Nowe logo właściciela** w lewym górnym rogu Atlasu, Warszawy i przewodników regionów: Polska w barwach biało-czerwonych
+  z pinezką z górskim pejzażem (`assets/brand-mark.webp`, 240×228 px, 20 KB, przezroczyste tło wycięte z dostarczonego obrazu).
+  Napis „PLACES & MEMORIES / I WAS HERE” zostaje tekstem HTML (ostry na iPhonie); w Atlasie ułożony jak w logo.
+  Poprzedni znak `assets/brand-atlas.svg` zostaje w repozytorium (nieużywany). Ikony PWA bez zmian.
+- Cache `i-was-here-v8-3-1-20261107`.
 
 ## 8.3 — 2026-11-07 — gałąź `claude/guide-wiki-passport` (zawiera dokumentację z PR #10)
 - **Jedno logo z mapą:** nowy znak `assets/brand-atlas.svg` — pinezka I Was Here wbita w sylwetkę Polski (w miejscu

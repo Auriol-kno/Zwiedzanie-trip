@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-3-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Cache PWA:** `i-was-here-v8-3-1-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 
 > Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
 > dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.
@@ -46,7 +46,7 @@
 - Logo w lewym górnym rogu zawsze wraca do Atlasu.
 
 ### Wspólne
-- **Logo = jeden znak** (`assets/brand-atlas.svg`, pinezka w sylwetce Polski) w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
+- **Logo = jeden znak** (od 8.3.1 `assets/brand-mark.webp` — logo właściciela: biało-czerwona Polska z pinezką z pejzażem) w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
 - **„Więcej informacji o miejscu — Wikipedia”** przy opisie każdej atrakcji (regiony + Warszawa), PL/EN; potwierdzony artykuł
   (OSM `wikidata` + Wikidata) albo uczciwe wyszukiwanie w Wikipedii — patrz liczby w §2.
 - **Dziennik podróży (paszport):** notatki + do 5 zdjęć z biblioteki na miejsce, lokalnie w IndexedDB `iwh_journal`;

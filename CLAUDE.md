@@ -30,7 +30,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 - `data/atrakcje.js`, `data/restauracje.js` and `data/regiony.js` are browser-loaded **generated** copies; regenerate after changing JSON with `python tools/sync_database.py`.
 - `manifest.webmanifest`, `service-worker.js`: iPhone PWA and offline application cache. Bump the cache version whenever adding or changing cached files.
 - `assets/place-extras.js` + `.css` (8.3, loaded by all three pages): „More information — Wikipedia” links (verified article from the `wiki` field, otherwise an honest Wikipedia *search* link) and the **travel journal** (notes + up to 5 photos per place, stored only on the device in IndexedDB `iwh_journal`; keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<item key>`). Never upload or delete journal data without the owner's consent.
-- `assets/brand-atlas.svg`: the single logo symbol (pin inside the Poland silhouette) used top-left on every page; it always links back to the Atlas.
+- `assets/brand-mark.webp` (8.3.1, the owner's logo: white-red Poland with a landscape pin): the single logo symbol used top-left on every page, next to the HTML wordmark „PLACES & MEMORIES / I WAS HERE”; it always links back to the Atlas. `assets/brand-atlas.svg` is the previous symbol (kept, unused).
 - `tools/test_bundle.py` and `tools/test_atlas.py`: regression tests.
 - `.github/workflows/validate.yml`: GitHub Actions validation.
 
