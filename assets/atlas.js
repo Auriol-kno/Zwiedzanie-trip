@@ -62,11 +62,16 @@ function renderMarkers(){
  labelLayer.textContent='';labels.forEach(([t,lon,lat])=>{const p=project(lon,lat);const txt=lang==='en'?({'POMORZE':'POMERANIA','MAZURY':'MASURIA','WIELKOPOLSKA':'GREATER POLAND','MAZOWSZE':'MASOVIA','MAŁOPOLSKA':'LESSER POLAND'}[t]):t;labelLayer.appendChild(el('text',{class:'map-regional',x:p.x,y:p.y},txt))});
 }
 function setTransform(){g.setAttribute('transform','translate('+tx+' '+ty+') scale('+zoom+')')}
-function zoomTo(v){const old=zoom;zoom=Math.min(2.6,Math.max(.83,v));tx=450-(450-tx)*zoom/old;ty=325-(325-ty)*zoom/old;setTransform()}
+// Powiększenie wokół punktu (domyślnie środek viewBox 900×680).
+function zoomTo(v,cx=450,cy=340){const old=zoom;zoom=Math.min(2.6,Math.max(.83,v));tx=cx-(cx-tx)*zoom/old;ty=cy-(cy-ty)*zoom/old;setTransform()}
+function svgPoint(x,y){const m=svg.getScreenCTM();if(!m)return{x:450,y:340};const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(m.inverse());return{x:q.x,y:q.y}}
 function reset(){zoom=1;tx=0;ty=0;setTransform()}
 function select(id){
  const hit=CITIES.find(c=>c.id===id);if(!hit)return;current=hit;
+ const refocus=document.activeElement?.closest?.('.city-dot');
  renderMarkers();renderCard();renderStrip();
+ // Przebudowa pinezek usuwa element z fokusem — przywróć go dla klawiatury i VoiceOver.
+ if(refocus)dots.querySelector('[data-city="'+id+'"]')?.focus({preventScroll:true});
 }
 function renderStrip(){
  const strip=$('#cityStrip');strip.innerHTML=CITIES.map(c=>'<button type="button" class="city-chip '+(current.id===c.id?'active':'')+'" data-city-chip="'+c.id+'"><span>'+esc(cityText(c))+'</span><span class="city-state">'+(c.ready?'✦':'·')+'</span></button>').join('');
@@ -82,7 +87,7 @@ function renderCard(){
 function localize(){
  document.documentElement.lang=lang;document.body.dataset.style=style;
  const t=I[lang];
- [['atlasTitle',t.atlas],['atlasEyebrow',t.subtitle],['atlasHeadline',t.headline],['atlasLead',t.lead],['styleAtlas',t.styleAtlas],['styleNight',t.styleNight],['styleTerrain',t.styleTerrain],['citiesTitle',t.choose],['atlasFooter',t.footer]].forEach(([id,txt])=>{const e=$('#'+id);if(e)e.textContent=txt});
+ [['atlasEyebrow',t.subtitle],['atlasHeadline',t.headline],['atlasLead',t.lead],['styleAtlas',t.styleAtlas],['styleNight',t.styleNight],['styleTerrain',t.styleTerrain],['citiesTitle',t.choose],['atlasFooter',t.footer]].forEach(([id,txt])=>{const e=$('#'+id);if(e)e.textContent=txt});
  $('#atlasHeadline').style.whiteSpace='pre-line';
  $('#langButton').querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('on',x.dataset.lang===lang));
  $('#searchInput').placeholder=t.search;
@@ -117,11 +122,27 @@ $('#searchInput').oninput=e=>{
  document.querySelectorAll('.city-chip').forEach(b=>{const c=CITIES.find(x=>x.id===b.dataset.cityChip);b.hidden=!c||!([c.pl,c.en].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(term))});
 };
 $('#fullscreen').onclick=()=>{if(document.fullscreenElement){document.exitFullscreen?.();return}if(document.documentElement.requestFullscreen){document.documentElement.requestFullscreen().catch(()=>alert(lang==='en'?'On iPhone, add this page to your Home Screen for an app-like full screen.':'Na iPhonie dodaj stronę do ekranu początkowego, aby korzystać z pełnoekranowej aplikacji.'))}else{alert(lang==='en'?'On iPhone, add this page to your Home Screen for an app-like full screen.':'Na iPhonie dodaj stronę do ekranu początkowego, aby korzystać z pełnoekranowej aplikacji.')}}
-svg.addEventListener('pointerdown',e=>{if(e.target.closest('.city-dot'))return;drag={x:e.clientX,y:e.clientY,tx,ty};moved=false;svg.setPointerCapture?.(e.pointerId)});
-svg.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)moved=true;const rect=svg.getBoundingClientRect();tx=drag.tx+dx*900/rect.width;ty=drag.ty+dy*680/rect.height;setTransform()});
-svg.addEventListener('pointerup',()=>{drag=null;setTimeout(()=>{moved=false},30)});
-svg.addEventListener('pointercancel',()=>{drag=null});
-svg.addEventListener('wheel',e=>{e.preventDefault();zoomTo(zoom*(e.deltaY<0?1.1:.9))},{passive:false});
+// Przesuwanie jednym palcem / myszą oraz powiększanie dwoma palcami (pinch) na iPhonie.
+const touches=new Map();let pinch=null;
+const gap=()=>{const [a,b]=[...touches.values()];return Math.hypot(a.x-b.x,a.y-b.y)};
+const middle=()=>{const [a,b]=[...touches.values()];return svgPoint((a.x+b.x)/2,(a.y+b.y)/2)};
+svg.addEventListener('pointerdown',e=>{
+ touches.set(e.pointerId,{x:e.clientX,y:e.clientY});
+ if(touches.size===2){pinch={d:gap()||1,z:zoom};drag=null;moved=true;return}
+ if(e.target.closest('.city-dot'))return;
+ drag={x:e.clientX,y:e.clientY,tx,ty};moved=false;try{svg.setPointerCapture(e.pointerId)}catch(_){}});
+svg.addEventListener('pointermove',e=>{
+ if(touches.has(e.pointerId))touches.set(e.pointerId,{x:e.clientX,y:e.clientY});
+ if(pinch&&touches.size===2){const c=middle();zoomTo(pinch.z*gap()/pinch.d,c.x,c.y);return}
+ if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)moved=true;const rect=svg.getBoundingClientRect();tx=drag.tx+dx*900/rect.width;ty=drag.ty+dy*680/rect.height;setTransform()});
+const release=e=>{touches.delete(e.pointerId);if(touches.size<2)pinch=null;drag=null;setTimeout(()=>{moved=false},30)};
+svg.addEventListener('pointerup',release);
+svg.addEventListener('pointercancel',release);
+svg.addEventListener('wheel',e=>{e.preventDefault();const c=svgPoint(e.clientX,e.clientY);zoomTo(zoom*(e.deltaY<0?1.1:.9),c.x,c.y)},{passive:false});
+// Safari na iOS wysyła też własne gesty — blokujemy powiększanie całej strony nad mapą.
+svg.addEventListener('gesturestart',e=>e.preventDefault());
 window.addEventListener('pageshow',()=>{const val=localStorage.getItem('tubylem_lang');if(val&&val!==lang){lang=val;localize()}});
 localize();reset();
+// Tryb offline działa także dla osób, które otwierają tylko Atlas (start_url PWA).
+if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();

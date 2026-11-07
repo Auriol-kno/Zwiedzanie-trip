@@ -1,19 +1,10 @@
 
-/* Tu Byłem 4.0: pływający powrót do Atlasu i przełącznik języka */
-.atlas-floating{position:fixed;right:13px;bottom:calc(102px + env(safe-area-inset-bottom,0px));z-index:1950;display:flex;align-items:center;gap:7px;min-height:52px;max-width:146px;padding:5px 11px 5px 5px;border-radius:19px;border:1px solid rgba(155,186,166,.68);background:color-mix(in srgb,var(--panel) 93%,transparent);color:var(--ink);box-shadow:0 10px 30px #0b273c38,0 2px 6px #0b273c18;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);text-decoration:none;transition:transform .2s ease,background .2s ease;overflow:hidden}
-.atlas-floating:hover,.atlas-floating:focus-visible{transform:translateY(-3px);background:var(--panel)}
-.atlas-floating img{width:45px;height:43px;object-fit:contain;flex:none;border-radius:14px;background:#244b4c}
-.atlas-floating span{display:flex;flex-direction:column;min-width:0;line-height:1.13}
-.atlas-floating b{font-size:12px;letter-spacing:-.02em;font-weight:850;white-space:nowrap}
-.atlas-floating small{font-size:9px;opacity:.68;white-space:nowrap;margin-top:3px}
+/* I Was Here: nagłówek Warszawy, powrót do Atlasu i przełącznik języka */
 .atlas-top-link{display:grid;place-items:center;text-align:center;padding:0;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:-.04em}
 .atlas-lang{font-size:12px;font-weight:850;text-transform:uppercase}
 .atlas-lang[aria-pressed=true]{color:var(--accent);border-color:var(--accent)}
-body:has(.overlay.show) .atlas-floating{opacity:1;z-index:2250;top:calc(12px + env(safe-area-inset-top,0px));bottom:auto;right:74px;min-height:45px;max-width:133px}
-body:has(.welcome.show) .atlas-floating{opacity:1;z-index:3200;top:calc(14px + env(safe-area-inset-top,0px));bottom:auto;right:12px;min-height:45px;max-width:133px}
-@media(max-width:400px){.top{gap:5px}.top-actions{gap:5px}.brand{gap:7px}.brand b{font-size:15px}.brand small{font-size:8px}.mark{width:39px;height:39px}.top-actions>.icon-btn{width:37px;height:39px;border-radius:12px}.atlas-floating{right:10px;bottom:calc(103px + env(safe-area-inset-bottom,0px));padding:5px 8px 5px 5px;min-height:50px}.atlas-floating img{width:40px;height:40px}.atlas-floating b{font-size:11px}.atlas-floating small{font-size:8px}}
-@media(min-width:950px){.atlas-floating{right:max(22px,calc((100vw - 1180px)/2));bottom:25px}}
-@media(prefers-reduced-motion:reduce){.atlas-floating{transition:none}}
+
+@media(max-width:400px){.top{gap:5px}.top-actions{gap:5px}.brand{gap:7px}.brand b{font-size:15px}.brand small{font-size:8px}.mark{width:39px;height:39px}.top-actions>.icon-btn{width:37px;height:39px;border-radius:12px}}
 
 /* I Was Here 5.1 — czytelny przełącznik PL | EN, podpisane ikony, kompaktowy powrót do Atlasu. */
 .top .brand{color:inherit;text-decoration:none;border-radius:14px;min-width:0}
@@ -24,9 +15,21 @@ body:has(.welcome.show) .atlas-floating{opacity:1;z-index:3200;top:calc(14px + e
 .top-actions{align-items:center}
 .top-actions>.icon-btn.labeled{width:auto;min-width:48px;height:auto;min-height:44px;padding:5px 6px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:17px;line-height:1}
 .icon-btn.labeled small{font-size:9px;font-weight:800;color:var(--sub);letter-spacing:0;white-space:nowrap}
-@media(max-width:560px){
- .atlas-floating{padding:4px;min-height:0;border-radius:18px;max-width:none}
- .atlas-floating span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
- .atlas-floating img{width:42px;height:40px}
-}
+
 @media(max-width:400px){.top-actions>.icon-btn.labeled{min-width:44px;padding:5px 4px 4px}.lang-switch span{min-width:24px;padding:8px 4px}}
+
+/* I Was Here 5.2 — logo + miniatura mapy Polski w lewym górnym rogu; nagłówek zawsze widoczny. */
+.top{position:sticky;top:0;z-index:1600;padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:10px;background:color-mix(in srgb,var(--bg) 97%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 0 0 100vmax color-mix(in srgb,var(--bg) 97%,transparent);clip-path:inset(0 -100vmax)}
+.atlas-home{display:flex;align-items:center;gap:8px}
+.atlas-home .wordmark{min-width:0}
+.atlas-chip{position:relative;display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#244f4b,#356e55);box-shadow:inset 0 0 0 1px #ffffff55,0 3px 10px #0b273c26}
+.atlas-chip img{width:32px;height:30px;object-fit:contain}
+.atlas-home:hover .atlas-chip,.atlas-home:focus-visible .atlas-chip{transform:translateY(-1px)}
+html{scroll-padding-top:calc(86px + env(safe-area-inset-top,0px))}
+body:has(.welcome.show) .top{position:fixed;left:0;right:0;z-index:3100;padding-inline:max(18px,calc((100% - 500px)/2));background:#163942;box-shadow:none;clip-path:none;color:#fff}
+body:has(.welcome.show) .welcome{padding-top:calc(96px + env(safe-area-inset-top,0px))}
+body:has(.welcome.show) .brand small{color:#b9d6ce}
+body:has(.overlay.show) .top{z-index:2250}
+.overlay .sheet{max-height:calc(100dvh - 92px - env(safe-area-inset-top,0px))}
+@media(max-width:370px){.atlas-home .wordmark{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){.atlas-chip{transition:none}}

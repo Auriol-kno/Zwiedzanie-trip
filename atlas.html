@@ -18,7 +18,7 @@
 <body data-style="atlas">
 <main id="atlasApp">
   <div class="atlas-map">
-    <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktywna mapa Polski z 13 miastami"></svg>
+    <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive map of Poland with 13 cities"></svg>
   </div>
   <header class="atlas-top">
     <a class="brand" href="./atlas.html" aria-label="I Was Here — Poland Atlas">
@@ -26,14 +26,14 @@
       <span class="brand-name"><strong>I Was Here</strong><small id="atlasSubtitle">Places &amp; Memories</small></span>
     </a>
     <div class="atlas-actions">
-      <button class="pill search-toggle" id="searchButton" type="button" aria-label="Szukaj miasta">⌕</button>
+      <button class="pill search-toggle" id="searchButton" type="button" aria-label="Search cities">⌕</button>
       <button class="pill language lang-switch" id="langButton" type="button" aria-label="Language: English. Switch to Polish"><span data-lang="pl">PL</span><span data-lang="en" class="on">EN</span></button>
-      <button class="pill" id="fullscreen" type="button" aria-label="Pełny ekran">⛶</button>
+      <button class="pill" id="fullscreen" type="button" aria-label="Full screen">⛶</button>
     </div>
   </header>
   <div class="searchbox" id="searchBox">
     <input type="search" id="searchInput" placeholder="Search cities…" autocomplete="off">
-    <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+    <button type="button" id="searchClose" aria-label="Close search">✕</button>
   </div>
   <div class="atlas-hero">
     <span class="eyebrow" id="atlasEyebrow">13 cities · countless stories</span>
@@ -41,18 +41,18 @@
 own way.</h1>
     <p id="atlasLead">Pick a city and discover memorable places.</p>
   </div>
-  <div class="style-panel" role="group" aria-label="Styl mapy">
+  <div class="style-panel" role="group" aria-label="Map style">
     <button id="styleAtlas" type="button" class="active">Atlas</button>
     <button id="styleNight" type="button">Night</button>
     <button id="styleTerrain" type="button">Terrain</button>
   </div>
   <div class="map-controls">
-    <button class="round" id="zoomIn" aria-label="Powiększ mapę" type="button">+</button>
-    <button class="round" id="zoomOut" aria-label="Pomniejsz mapę" type="button">−</button>
-    <button class="round" id="resetView" aria-label="Pokaż całą Polskę" type="button">⌖</button>
+    <button class="round" id="zoomIn" aria-label="Zoom in" type="button">+</button>
+    <button class="round" id="zoomOut" aria-label="Zoom out" type="button">−</button>
+    <button class="round" id="resetView" aria-label="Show all of Poland" type="button">⌖</button>
   </div>
   <div class="attribution" id="atlasFooter">Geography: Natural Earth · Illustrated Atlas</div>
-  <section class="atlas-bottom" aria-label="Wybór miasta">
+  <section class="atlas-bottom" aria-label="Choose a city">
     <div class="browse-title"><span id="citiesTitle">Choose a city</span><span id="cityStatus">Guide available</span></div>
     <div class="city-strip" id="cityStrip" role="list"></div>
     <div class="city-card">

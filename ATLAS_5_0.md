@@ -56,3 +56,17 @@ https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 3. **Jeden sposób powrotu do Atlasu w nagłówku:** logo I Was Here prowadzi do `atlas.html` (zniknęła osobna ikona 🗺). Pływający przycisk Atlasu jest nadal zawsze widoczny; na telefonie ma postać kompaktowej ikony mapy z etykietą dostępności.
 4. **Usunięto zdublowane pole** „Inteligentna kolejność zwiedzania”. Kolejność ustawia jedno pole „Priorytet” w planerze.
 5. **Spójna marka i wersja:** nazwa „I Was Here” pod ikoną na iPhonie (`apple-mobile-web-app-title`), w etykietach i w plikach kalendarza (.ics); w przewodniku nie ma już „4.0” i „Wersja demonstracyjna 3.0”.
+
+## Poprawka 5.2 — mapa Polski przy logo, zawsze u góry
+- Pływający przycisk Atlasu z prawego dolnego rogu przeniesiono do **lewego górnego rogu**: logo I Was Here i miniatura mapy Polski tworzą jeden link `#atlasFloat` do `atlas.html?lang=…`.
+- Nagłówek Warszawy jest **przyklejony do góry** (`position:sticky`, z `env(safe-area-inset-top)`), więc powrót do Atlasu, przełącznik PL | EN, „Wygląd” i „Paszport” są widoczne cały czas: przy przewijaniu, nad otwartymi arkuszami i na ekranie powitalnym.
+- Sekcje przewijane z dolnej nawigacji zatrzymują się pod nagłówkiem (`scroll-padding-top`).
+- Na bardzo wąskich ekranach (≤370 px) napis „I WAS HERE” jest ukryty wizualnie (zostaje dla czytników ekranu); widoczne są znak marki i mapa.
+
+## Poprawka 5.3 — usterki z raportu technicznego
+- **Offline:** Atlas (start_url PWA) też rejestruje Service Workera. Strony HTML są zapisywane bez parametrów (`?lang=…&from=atlas`), więc Warszawa otwarta z Atlasu działa bez sieci. Zapasowy `atlas.html` dostają tylko nawigacje, a brakujące obrazki i skrypty kończą się zwykłym błędem.
+- **EN bez zmyślonych treści:** zamiast szablonu „…offers a worthwhile stop…” i półprzetłumaczonych nazw („Museum of Katyńskie”) miejsca bez redakcyjnego przekładu zachowują polską nazwę własną i uczciwą informację, że angielski opis jest w przygotowaniu.
+- **Mapa Polski:** powiększanie dwoma palcami (pinch) na iPhonie, kółko myszy powiększa w miejscu kursora, przyciski +/− wokół prawdziwego środka mapy. Wybór miasta klawiaturą nie gubi fokusu.
+- **Dostępność:** początkowe etykiety `aria-label` w `atlas.html` po angielsku, zgodnie z językiem pierwszego uruchomienia.
+- **PWA:** ikona 512 px ma `purpose: any` (bez przycinania „maskable”).
+- **Testy:** `tools/test_browser.js` (Chromium, emulacja iPhone 13) w GitHub Actions oraz kontrola, że każdy lokalny plik stron jest w cache offline.
