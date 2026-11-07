@@ -268,3 +268,5 @@ body[data-tab=trips] .atlas-bottom,body[data-tab=day] .atlas-bottom,body[data-ta
 @media(max-height:700px){.city-chip{min-height:36px;padding:6px 10px}.atlas-bottom{padding-top:12px!important}.place-sheet .city-title strong{font-size:18px}.sheet-places{max-height:22vh}}
 @media(prefers-reduced-motion:reduce){.place-sheet{animation:none}.toast{transition:none}.region-name,#towns{transition:none}}
 body:not([data-style=light]) #atlasApp:before{display:none}
+
+.city-dot.merged{display:none}
