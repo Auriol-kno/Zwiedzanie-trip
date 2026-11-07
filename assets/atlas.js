@@ -17,17 +17,20 @@ const CITIES=[
 {id:'rzeszow',pl:'Rzeszów',en:'Rzeszow',lat:50.0412,lon:21.9991,ready:false},
 {id:'olsztyn',pl:'Olsztyn',en:'Olsztyn',lat:53.7784,lon:20.4801,ready:false}
 ];
-const BORDER=[[15.016996,51.106674],[14.607098,51.745188],[14.685026,52.089947],[14.4376,52.62485],[14.074521,52.981263],[14.353315,53.248171],[14.119686,53.757029],[14.8029,54.050706],[16.363477,54.513159],[17.622832,54.851536],[18.620859,54.682606],[18.696255,54.438719],[19.66064,54.426084],[20.892245,54.312525],[22.731099,54.327537],[23.243987,54.220567],[23.484128,53.912498],[23.527536,53.470122],[23.804935,53.089731],[23.799199,52.691099],[23.199494,52.486977],[23.508002,52.023647],[23.527071,51.578454],[24.029986,50.705407],[23.922757,50.424881],[23.426508,50.308506],[22.51845,49.476774],[22.776419,49.027395],[22.558138,49.085738],[21.607808,49.470107],[20.887955,49.328772],[20.415839,49.431453],[19.825023,49.217125],[19.320713,49.571574],[18.909575,49.435846],[18.853144,49.49623],[18.392914,49.988629],[17.649445,50.049038],[17.554567,50.362146],[16.868769,50.473974],[16.719476,50.215747],[16.176253,50.422607],[16.238627,50.697733],[15.490972,50.78473],[15.016996,51.106674]];
+const GEO=window.POLAND_GEO;
+if(!GEO||GEO.regions.length!==16||GEO.border.length<200)throw new Error('Geografia Polski nie została załadowana');
+const BORDER=GEO.border;
 const I={
 pl:{atlas:'Atlas Polski',subtitle:'13 miast · tysiące historii',headline:'Odkrywaj\npo swojemu.',lead:'Wybierz miasto i ruszaj na spotkanie z niezwykłymi miejscami.',styleAtlas:'Atlas',styleNight:'Noc',styleTerrain:'Teren',choose:'Wybierz miasto',pilot:'Przewodnik dostępny',planned:'W przygotowaniu',explore:'Odkryj Warszawę',unavailable:'Wkrótce',pilotMessage:'184 atrakcje • 18 dzielnic • 36 lokali',plannedMessage:'Ten przewodnik jest w przygotowaniu. Warszawę możesz zwiedzać już teraz.',search:'Szukaj miasta...',zero:'Nie znaleziono miasta',tooltip:'Wróć do mapy Polski',reset:'Pokaż całą Polskę',full:'Pełny ekran',entry:'Mapa Polski',land:'Polska',footer:'Kontur: Natural Earth (public domain)'},
 en:{atlas:'Poland Atlas',subtitle:'13 cities · countless stories',headline:'Explore your\nown way.',lead:'Pick a city and discover memorable places and fascinating stories.',styleAtlas:'Atlas',styleNight:'Night',styleTerrain:'Terrain',choose:'Choose a city',pilot:'Guide available',planned:'Coming soon',explore:'Explore Warsaw',unavailable:'Coming soon',pilotMessage:'184 sights • 18 districts • 36 places to eat',plannedMessage:'This city guide is being prepared. You can explore Warsaw today.',search:'Search cities...',zero:'No matching city',tooltip:'Back to Poland map',reset:'Show all of Poland',full:'Full screen',entry:'Map of Poland',land:'Poland',footer:'Outline: Natural Earth (public domain)'}
 };
 let lang=localStorage.getItem('tubylem_lang')==='en'?'en':'pl';
 let style=['atlas','night','terrain'].includes(localStorage.getItem('tubylem_map_style'))?localStorage.getItem('tubylem_map_style'):'atlas';
+// Główna mapa w nowej instalacji: wybrany jasny atlas ilustracyjny.
 const qs=new URLSearchParams(location.search);if(qs.get('lang')==='en'||qs.get('lang')==='pl')lang=qs.get('lang');
 let current=CITIES[0],zoom=1,tx=0,ty=0,drag=null,moved=false;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const project=(lon,lat)=>({x:(lon-13.3)*75,y:(55.5-lat)*95});
+const project=(lon,lat)=>({x:(lon-12.5)*69,y:(55.25-lat)*104});
 const path=a=>a.map((p,i)=>{const c=project(p[0],p[1]);return(i?'L':'M')+c.x.toFixed(2)+' '+c.y.toFixed(2)}).join(' ')+' Z';
 const el=(name,attrs,text)=>{const o=document.createElementNS(NS,name);Object.entries(attrs||{}).forEach(([k,v])=>o.setAttribute(k,v));if(text!=null)o.textContent=text;return o};
 const svg=$('#polandSvg'),g=el('g',{id:'world'});
@@ -38,16 +41,7 @@ g.appendChild(el('path',{class:'country-base',d:path(BORDER)}));
 const clipped=el('g',{'clip-path':'url(#polandClip)'});g.appendChild(clipped);
 clipped.appendChild(el('rect',{x:50,y:35,width:825,height:620,fill:'url(#mapDots)'}));
 clipped.appendChild(el('path',{class:'atlas-wash',d:path(BORDER)}));
-const forests=[[[14.5,53.6],[17.9,54],[18.2,52.6],[15.1,52.3]],[[21.6,54.1],[23.3,54],[23.6,52.1],[22.1,52.9]],[[21.4,51.3],[23.6,51.5],[22.3,49.7],[20.8,50]],[[16.3,51.3],[19.2,51.9],[18.9,50.6],[16.8,50.5]]];
-forests.forEach(f=>clipped.appendChild(el('path',{class:'forest',d:path(f)})));
-for(let i=0;i<16;i++){let y=85+i*36;clipped.appendChild(el('path',{class:'contour',d:'M 70 '+y+' C 180 '+(y-44)+' 280 '+(y+39)+' 390 '+(y+8)+' S 610 '+(y+45)+' 800 '+(y-8)}))}
-clipped.appendChild(el('path',{class:'mountain',d:'M 260 535 C 360 515 425 576 515 560 S 655 535 760 566'}));
-clipped.appendChild(el('path',{class:'mountain',d:'M 260 556 C 390 535 470 596 600 578 S 670 580 760 597'}));
-const v=[[19.95,50.05],[20.3,50.45],[21.1,50.95],[21.5,51.45],[21.0,52.23],[20.5,52.85],[19.9,53.25],[18.7,53.75],[18.65,54.34]];
-const coords=v.map(a=>project(a[0],a[1]));const rivD='M'+coords[0].x+' '+coords[0].y+coords.slice(1).map(c=>' L'+c.x.toFixed(1)+' '+c.y.toFixed(1)).join('');
-clipped.appendChild(el('path',{class:'river',d:rivD}));
-clipped.appendChild(el('path',{class:'river-detail',d:rivD}));
-[[20.6,53.8],[21.2,53.9],[21.7,53.95],[20.9,54.0],[22.1,54.07]].forEach(p=>{const c=project(...p);clipped.appendChild(el('ellipse',{class:'lake',cx:c.x,cy:c.y,rx:14,ry:4,transform:'rotate(-20 '+c.x+' '+c.y+')'}))});
+if(window.IWH_ATLAS_ART)window.IWH_ATLAS_ART.decorate({clipped,el,project,path,geo:GEO});
 g.appendChild(el('path',{class:'country-border',d:path(BORDER)}));
 const labels=[['POMORZE',17.8,54.13],['MAZURY',21.3,53.65],['WIELKOPOLSKA',16.45,52.05],['MAZOWSZE',21.35,52.85],['MAŁOPOLSKA',20.95,49.86]];
 const labelLayer=el('g',{id:'regions'});g.appendChild(labelLayer);
@@ -55,10 +49,10 @@ const dots=el('g',{id:'cities'});g.appendChild(dots);
 function cityText(c){return lang==='en'?c.en:c.pl}
 function pointCity(city){
  const p=project(city.lon,city.lat),b=el('g',{class:'city-dot'+(!city.ready?' upcoming':'')+(current.id===city.id?' selected':''),tabindex:'0',role:'button','aria-label':cityText(city),'data-city':city.id,transform:'translate('+p.x.toFixed(1)+' '+p.y.toFixed(1)+')'});
+ if(window.IWH_ATLAS_ART){const art=el('g',{class:'city-landmark',transform:'translate(-37,-69)'});art.innerHTML=window.IWH_ATLAS_ART.landmark(city.id);b.appendChild(art)}
  b.appendChild(el('circle',{class:'city-spotlight',r:28}));b.appendChild(el('circle',{class:'city-ring',r:9.8}));b.appendChild(el('circle',{class:'city-core',r:4.5}));b.appendChild(el('circle',{class:'city-hit',r:23}));
- let dx=(city.id==='szczecin'||city.id==='poznan'||city.id==='gdansk'||city.id==='wroclaw')?12:12,dy=(city.id==='gdansk'||city.id==='olsztyn'||city.id==='bialystok')?25:-15;
- if(city.id==='lodz'||city.id==='torun')dy=25;
- b.appendChild(el('text',{class:'city-label',x:dx,y:dy},cityText(city)));
+ const labelPos={gdansk:[11,23,'start'],szczecin:[12,25,'start'],olsztyn:[12,25,'start'],bialystok:[12,27,'start'],torun:[11,26,'start'],poznan:[12,25,'start'],warsaw:[12,27,'start'],lodz:[11,25,'start'],wroclaw:[12,25,'start'],katowice:[-13,27,'end'],krakow:[13,28,'start'],lublin:[12,27,'start'],rzeszow:[12,27,'start']}[city.id]||[11,25,'start'];
+ b.appendChild(el('text',{class:'city-label',x:labelPos[0],y:labelPos[1],'text-anchor':labelPos[2]},cityText(city)));
  b.addEventListener('click',ev=>{ev.stopPropagation();if(!moved)select(city.id)});
  b.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(city.id)}});
  return b;
@@ -88,7 +82,7 @@ function renderCard(){
 function localize(){
  document.documentElement.lang=lang;document.body.dataset.style=style;
  const t=I[lang];
- [['atlasTitle',t.atlas],['atlasSubtitle',t.subtitle],['atlasEyebrow',t.subtitle],['atlasHeadline',t.headline],['atlasLead',t.lead],['styleAtlas',t.styleAtlas],['styleNight',t.styleNight],['styleTerrain',t.styleTerrain],['citiesTitle',t.choose],['atlasFooter',t.footer]].forEach(([id,txt])=>{const e=$('#'+id);if(e)e.textContent=txt});
+ [['atlasTitle',t.atlas],['atlasEyebrow',t.subtitle],['atlasHeadline',t.headline],['atlasLead',t.lead],['styleAtlas',t.styleAtlas],['styleNight',t.styleNight],['styleTerrain',t.styleTerrain],['citiesTitle',t.choose],['atlasFooter',t.footer]].forEach(([id,txt])=>{const e=$('#'+id);if(e)e.textContent=txt});
  $('#atlasHeadline').style.whiteSpace='pre-line';
  $('#langButton').textContent=lang.toUpperCase();
  $('#searchInput').placeholder=t.search;
@@ -104,7 +98,7 @@ function localize(){
  $('.brand').setAttribute('aria-label',lang==='en'?'Back to Poland Atlas':'Tu Byłem — mapa Polski');
  $('.style-panel').setAttribute('aria-label',lang==='en'?'Map style':'Styl mapy');
  $('.atlas-bottom').setAttribute('aria-label',lang==='en'?'Choose a city':'Wybór miasta');
- document.title=lang==='en'?'Tu Byłem — Explore Poland':'Tu Byłem — Atlas Polski';
+ document.title='I Was Here — '+(lang==='en'?'Poland Atlas':'Atlas Polski');
  for(const mode of ['atlas','night','terrain']){$('#style'+mode[0].toUpperCase()+mode.slice(1)).classList.toggle('active',style===mode)}
  localStorage.setItem('tubylem_lang',lang);
  localStorage.setItem('tubylem_map_style',style);
