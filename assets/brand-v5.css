@@ -1,0 +1,9 @@
+/* I Was Here v5 — identity refresh, Warsaw header and floating Poland map. */
+.brand .mark{background:transparent;color:inherit;box-shadow:none;border:0;border-radius:0;width:45px;height:51px;display:flex;align-items:center;justify-content:center;padding:0;overflow:visible}
+.brand .mark img{width:43px;height:52px;object-fit:contain;filter:drop-shadow(0 3px 4px #09262e22)}
+.brand small{font-size:9px;letter-spacing:.16em;font-weight:850}
+.brand b{font-family:Georgia,Palatino,serif;font-size:20px;font-style:italic;font-weight:800;letter-spacing:-.05em;white-space:nowrap}
+.atlas-floating img{padding:3px;background:linear-gradient(145deg,#244f4b,#356e55);box-shadow:inset 0 0 0 1px #ffffff55}
+.atlas-floating b{letter-spacing:0}
+.atlas-top-link{font-size:19px}
+@media(max-width:420px){.brand .mark{width:36px;height:42px}.brand .mark img{width:36px;height:44px}.brand small{font-size:7px;letter-spacing:.06em}.brand b{font-size:16px}.top-actions{gap:3px}}
