@@ -49,3 +49,12 @@ Data: 7 listopada 2026 r.
   - 18 to rozległe obiekty i ulice (parki narodowe, Kanał Augustowski, Morskie Oko, Śnieżka, ul. Piotrkowska). Ich punkt wskazuje miejsce zwiedzania, a nie środek obszaru czy siedzibę dyrekcji, więc nie jest przesuwany;
   - dla 20 Nominatim nie dał pewnego trafienia (lista: `python tools/verify_coordinates.py --cache …`).
 - Przewodnik regionu pokazuje przy zweryfikowanym miejscu: „Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL)”. Atrybucja jest też w stopce i w Profilu Atlasu.
+
+## Aktualizacja 8.2 — Kielce w Atlasie
+- **Kielce** są **14. miastem** Atlasu (centrum miasta WGS84 50,8661° N, 20,6286° E), z opisem PL/EN i przypisaniem do województwa świętokrzyskiego.
+- Karta miasta ma przycisk **„Zwiedzaj Kielce”**, który otwiera przewodnik Świętokrzyskiego z filtrem miejscowości Kielce.
+- **14 atrakcji w Kielcach:**
+  - dotychczasowe 5: Pałac Biskupów Krakowskich, katedra, Kadzielnia, Geopark Wietrznia, Karczówka;
+  - 9 nowych: Rynek i ul. Sienkiewicza, Muzeum Zabawek i Zabawy, Muzeum Historii Kielc, rezerwat Ślichowice (Fałd Czarnockiego), Park Staszica, Dworek Laszczyków, Muzeum Lat Szkolnych Stefana Żeromskiego, Ogród Botaniczny, Wzgórze Telegraf.
+- **Położenie:** 11 z 14 atrakcji Kielc potwierdzono w OpenStreetMap. Największa poprawka to Wzgórze Telegraf (3,1 km, szczyt `natural=peak`). Ślichowice, Dworek Laszczyków i Muzeum Żeromskiego zostają orientacyjne.
+- Łącznie w bazie jest 207 miejsc, z czego 166 ma położenie z OSM.

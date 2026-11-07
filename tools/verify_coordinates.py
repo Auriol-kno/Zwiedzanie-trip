@@ -43,7 +43,9 @@ OVERRIDES = {
  "bu-pochylnie": ["Pochylnia Buczyniec", "Buczyniec"], "gn-katedra": ["Bazylika Prymasowska, Gniezno", "Katedra Gnieźnieńska"],
  "ka-katedra": ["Katedra, Kamień Pomorski", "Konkatedra, Kamień Pomorski"], "tr-ruina": ["Ruina kościoła, Trzęsacz", "Ruiny kościoła w Trzęsaczu"],
  "ko-molo": ["Molo, Kołobrzeg"], "st-kolegiata": ["Kolegiata, Stargard", "Kolegiata Najświętszej Maryi Panny, Stargard"],
- "kd-rynek": ["Rynek, Kazimierz Dolny"], "gd-dlugi-targ": ["Długi Targ, Gdańsk"], "dr-park": ["Drawieński Park Narodowy"], "tu-bory": ["Bory Tucholskie"],
+ "kd-rynek": ["Rynek, Kazimierz Dolny"],
+ "ki-slichowice": ["Rezerwat przyrody Ślichowice", "Ślichowice, Kielce"], "ki-park-staszica": ["Park Miejski im. Stanisława Staszica, Kielce", "Park Staszica, Kielce"],
+ "ki-dworek-laszczykow": ["Dworek Laszczyków, Kielce", "Dworek Laszczyków"], "ki-muzeum-zeromskiego": ["Muzeum Lat Szkolnych Stefana Żeromskiego"], "ki-telegraf": ["Telegraf, Kielce", "Stok Telegraf"], "gd-dlugi-targ": ["Długi Targ, Gdańsk"], "dr-park": ["Drawieński Park Narodowy"], "tu-bory": ["Bory Tucholskie"],
 }
 GENERIC = {"zamek", "zamku", "muzeum", "park", "parku", "kosciol", "kosciola", "rynek", "rynku", "stare", "miasto", "miasta", "ulica", "bazylika",
            "katedra", "katedralna", "klasztor", "palac", "pomnik", "narodowy", "narodowe", "ruiny", "ruina", "opactwo", "wzgorze", "trasa",

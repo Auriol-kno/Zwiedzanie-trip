@@ -177,7 +177,9 @@
    "pl": "Świętokrzyskie",
    "en": "Świętokrzyskie (Holy Cross)",
    "status": "guide",
-   "cities": []
+   "cities": [
+    "kielce"
+   ]
   },
   {
    "id": "warminsko-mazurskie",
@@ -1923,8 +1925,8 @@
    "sourceKind": "redakcyjna_selekcja",
    "updated": "2026-11",
    "osm": {
-    "type": "node",
-    "id": 1530369296,
+    "type": "way",
+    "id": 194791923,
     "name": "Wyspa Młyńska"
    }
   },
@@ -6181,6 +6183,271 @@
     "type": "relation",
     "id": 6986844,
     "name": "Zamek Książąt Pomorskich w Darłowie"
+   }
+  },
+  {
+   "id": "ki-rynek",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Rynek i ulica Sienkiewicza w Kielcach",
+    "en": "Kielce Market Square and Sienkiewicza Street"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.87156,
+   "lon": 20.63212,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Kameralny rynek z ratuszem i główny deptak miasta z kamienicami i kawiarniami.",
+    "en": "A compact market square with the town hall and the city’s main promenade lined with townhouses and cafés."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 13559121,
+    "name": "Rynek"
+   }
+  },
+  {
+   "id": "ki-muzeum-zabawek",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Zabawek i Zabawy",
+    "en": "Museum of Toys and Play"
+   },
+   "cats": [
+    "museum",
+    "family"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 50.86812,
+   "lon": 20.63482,
+   "icon": "🧸",
+   "url": null,
+   "desc": {
+    "pl": "Jedno z największych muzeów zabawek w Polsce, z lalkami, kolejkami i zabawkami z wielu krajów.",
+    "en": "One of the largest toy museums in Poland, with dolls, model railways and toys from many countries."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1904638174,
+    "name": "Muzeum Zabawek i Zabawy"
+   }
+  },
+  {
+   "id": "ki-muzeum-historii",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Historii Kielc",
+    "en": "Museum of the History of Kielce"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 3,
+   "lat": 50.86974,
+   "lon": 20.63465,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Wystawa o dziejach miasta od średniowiecza do czasów współczesnych.",
+    "en": "An exhibition on the city’s history from the Middle Ages to modern times."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 1904638169,
+    "name": "Muzeum Historii Kielc"
+   }
+  },
+  {
+   "id": "ki-slichowice",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Rezerwat geologiczny Ślichowice",
+    "en": "Ślichowice Geological Reserve"
+   },
+   "cats": [
+    "geology",
+    "park",
+    "science"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.872,
+   "lon": 20.6005,
+   "icon": "🪨",
+   "url": null,
+   "desc": {
+    "pl": "Dawny kamieniołom z wyraźnym fałdem skał dewońskich, zwanym Fałdem Czarnockiego.",
+    "en": "A former quarry with a clearly visible fold of Devonian rocks known as Czarnocki’s Fold."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ki-park-staszica",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Park Miejski im. Stanisława Staszica",
+    "en": "Stanisław Staszic City Park"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 40,
+   "visitValue": 3,
+   "lat": 50.8678,
+   "lon": 20.6255,
+   "icon": "🌳",
+   "url": null,
+   "desc": {
+    "pl": "Zabytkowy park w centrum miasta z XIX-wiecznym układem alejek i stawem.",
+    "en": "A historic park in the city centre with a 19th-century layout of paths and a pond."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "relation",
+    "id": 9869728,
+    "name": "Park im. Stanisława Staszica"
+   }
+  },
+  {
+   "id": "ki-dworek-laszczykow",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Dworek Laszczyków",
+    "en": "Laszczyk Manor House"
+   },
+   "cats": [
+    "history",
+    "museum"
+   ],
+   "time": 30,
+   "visitValue": 3,
+   "lat": 50.8708,
+   "lon": 20.6247,
+   "icon": "🏡",
+   "url": null,
+   "desc": {
+    "pl": "Drewniany dworek z XVIII w. przy Wzgórzu Zamkowym, oddział Muzeum Wsi Kieleckiej.",
+    "en": "An 18th-century wooden manor house by Castle Hill, a branch of the Museum of the Kielce Countryside."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ki-muzeum-zeromskiego",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Muzeum Lat Szkolnych Stefana Żeromskiego",
+    "en": "Stefan Żeromski School Years Museum"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 40,
+   "visitValue": 3,
+   "lat": 50.872,
+   "lon": 20.6265,
+   "icon": "📚",
+   "url": null,
+   "desc": {
+    "pl": "Muzeum w dawnym gimnazjum, do którego uczęszczał pisarz Stefan Żeromski.",
+    "en": "A museum in the former grammar school attended by the writer Stefan Żeromski."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ki-ogrod-botaniczny",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Ogród Botaniczny w Kielcach",
+    "en": "Kielce Botanical Garden"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 50.86881,
+   "lon": 20.59964,
+   "icon": "🌿",
+   "url": null,
+   "desc": {
+    "pl": "Ogród z kolekcjami roślin regionu świętokrzyskiego, położony na zboczu wzgórza.",
+    "en": "A garden with plant collections of the Świętokrzyskie region, on a hillside."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 10218680713,
+    "name": "Ogród Botaniczny"
+   }
+  },
+  {
+   "id": "ki-telegraf",
+   "region": "swietokrzyskie",
+   "town": "Kielce",
+   "name": {
+    "pl": "Wzgórze Telegraf",
+    "en": "Telegraf Hill"
+   },
+   "cats": [
+    "view",
+    "family"
+   ],
+   "time": 60,
+   "visitValue": 3,
+   "lat": 50.83822,
+   "lon": 20.64282,
+   "icon": "🎿",
+   "url": null,
+   "desc": {
+    "pl": "Wzgórze na wschodzie Kielc ze stokiem narciarskim i widokiem na miasto.",
+    "en": "A hill in eastern Kielce with a ski slope and views over the city."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "node",
+    "id": 2514439430,
+    "name": "Telegraf"
    }
   }
  ],

@@ -22,7 +22,7 @@ for token in ['styleAtlas','styleNight','styleTerrain','cityStrip','polandSvg','
     assert ('id="' + token + '"') in atlas, token
 city_block = atlas_js.split('const CITIES=[',1)[1].split('];',1)[0]
 cities = re.findall(r"\bid:'([^']+)'",city_block)
-assert len(cities) == 13 and len(set(cities)) == 13, "Atlas ma mieć 13 unikalnych miast."
+assert len(cities) == 14 and len(set(cities)) == 14 and "kielce" in cities, "Atlas ma mieć 14 unikalnych miast (z Kielcami)."
 assert "id:'warsaw'" in city_block and 'ready:true' in city_block, "Warszawa musi być aktywna."
 assert ".top{position:sticky;top:0" in nav and "atlas-chip" in nav, "Logo z mapą Polski musi być zawsze widoczne u góry."
 for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg"):
@@ -58,7 +58,7 @@ assert "icon.svg" in [i["src"] for i in manifest["icons"]]
 assert "const GEO=window.POLAND_GEO;" in atlas_js
 assert "IWH_ATLAS_ART.decorate" in atlas_js
 city_rows=re.findall(r"\{id:'([^']+)',pl:'([^']+)',en:'([^']+)',lat:([\d.]+),lon:([\d.]+),ready:(true|false)\}",atlas_js)
-assert len(city_rows)==13,"City count unexpectedly changed"
+assert len(city_rows)==14,"City count unexpectedly changed"
 def contains(lon,lat,poly):
     inside=False
     for k in range(len(poly)):
@@ -106,7 +106,7 @@ geo_regions = {r["name"]: r["coords"] for r in geo["regions"]}
 assert len(regdb["regions"]) == 16 and {r["geo"] for r in regdb["regions"]} == set(geo_regions), "Województwa muszą odpowiadać granicom Natural Earth"
 city_ids = {c[0] for c in city_rows}
 assert all(set(r["cities"]) <= city_ids for r in regdb["regions"]), "Nieznane miasto w województwie"
-assert sorted(c for r in regdb["regions"] for c in r["cities"]) == sorted(city_ids), "Każde z 13 miast należy do jednego województwa"
+assert sorted(c for r in regdb["regions"] for c in r["cities"]) == sorted(city_ids), "Każde z 14 miast należy do jednego województwa"
 def edge_km(lon, lat, poly):
     k = math.cos(math.radians(lat)) * 111.3
     best = 1e9
@@ -156,7 +156,7 @@ for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip
 plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
 assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
 assert 'data-tab="trips"' in atlas and 'data-tab="day"' in atlas and 'data-tab="memories"' in atlas and 'data-tab="profile"' in atlas
-# 8.0: przewodniki wszystkich województw; każde z 13 miast ma atrakcje w przewodniku swojego regionu
+# 8.0: przewodniki wszystkich województw; każde z 14 miast ma atrakcje w przewodniku swojego regionu
 for r in regdb["regions"]:
     n = sum(p["region"] == r["id"] for p in regdb["places"])
     assert n >= 8 and r["status"] in ("guide", "partial"), f"Za mało miejsc: {r['id']} ({n})"
@@ -166,8 +166,8 @@ for r in regdb["regions"]:
         assert cid == "warsaw" or any(p["region"] == r["id"] and p["town"] == city_pl[cid] for p in regdb["places"]), "Brak atrakcji miasta: " + cid
 assert all(p["coordinateStatus"] in ("orientacyjne", "osm") for p in regdb["places"]), "Status współrzędnych"
 assert sum(p["coordinateStatus"] == "osm" for p in regdb["places"]) >= 150 and "OpenStreetMap" in regdb.get("coordinateSource", ""), "Weryfikacja OSM"
-print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 13 miast w swoich województwach, relief, plany.")
+print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 14 miast w swoich województwach, relief, plany.")
 print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
-print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
+print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 14 accurately placed cities.")
 
-print("OK: Atlas 13 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")
+print("OK: Atlas 14 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")
