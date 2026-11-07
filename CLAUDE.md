@@ -1,75 +1,95 @@
 # CLAUDE.md — I Was Here / Places & Memories
 
 ## Start of every session (read first)
-1. `git fetch origin main` and inspect `git log origin/main -10` — other agents/the owner may have pushed.
-2. Read, in order: this file → `PROJECT_STATUS.md` (current state, known bugs, **next task**) → `ROADMAP.md` (priorities) → `CHANGELOG.md` (history, latest version and PWA cache key).
-3. Check open PRs/branches (`git branch -r`); never redo or overwrite unmerged work.
-4. Branch from the latest `origin/main` (`claude/<topic>`), implement, test (see *Commands*), open a PR.
-5. **Never merge yourself.** The owner merges by writing „Scal”; only then merge the PR and confirm the Pages deployment.
-6. Before finishing: update `PROJECT_STATUS.md` + `CHANGELOG.md` (and the release notes file) in the same PR.
+1. `git fetch origin` and inspect `git log origin/main -10`; other agents or the owner may have pushed.
+2. Read, in this order:
+   1. this file;
+   2. `PROJECT_STATUS.md`: current state, open PRs and branches, known bugs, **next task**;
+   3. `DECYZJE_PROJEKTOWE.md`: binding owner decisions on logo, colours, map, navigation, PL/EN, stamps and plans;
+   4. `ROADMAP.md`: priorities;
+   5. `CHANGELOG.md`: history, latest version and PWA cache key.
+3. Check open PRs and branches (`git branch -r`; `git rev-list --count origin/main..<branch>`). Never redo or overwrite unmerged work.
+4. Branch from the latest `origin/main` (`claude/<topic>`), implement, test (see *Commands*), commit with the session attribution lines, push and open a PR with a **Polish** description.
+5. **Never merge yourself.** The owner merges by writing „Scal”. Only then merge the PR (merge commit) and confirm the GitHub Actions runs „pages build and deployment” and „Sprawdź aplikację Warszawa”.
+6. Before finishing a PR: update `PROJECT_STATUS.md` and `CHANGELOG.md`, plus `DECYZJE_PROJEKTOWE.md` if the owner decided something new, in the same PR.
+7. Talk to the owner in **Polish**. Always say whether you could test on a real iPhone; normally you can't, only Chromium iPhone 13 emulation.
 
 ## Project and source of truth
-This repository is the **single shared source of truth** for the travel web app **I Was Here — Places & Memories** (Polish working name: "Tu Byłem — Miejsca i Wspomnienia").
-- Repo: https://github.com/Auriol-kno/Zwiedzanie-trip
-- Published PWA: https://auriol-kno.github.io/Zwiedzanie-trip/
-- Poland atlas entry: `atlas.html`
-- Warsaw guide: `index.html`
-- User-facing explanations and feature discussions are in **Polish** unless the owner explicitly requests another language.
-- The application UI supports **English and Polish**, preserving the selected language across the atlas and Warsaw guide.
+This repository is the **single shared source of truth** for the travel web app **I Was Here — Places & Memories** (Polish working name: "Tu Byłem — Miejsca i Wspomnienia"). Current version: **8.5**.
+- Repo: https://github.com/Auriol-kno/Zwiedzanie-trip (owner merges, `main` deploys to GitHub Pages).
+- Published PWA: https://auriol-kno.github.io/Zwiedzanie-trip/. The start page is `atlas.html`.
+- Pages: `atlas.html` (Poland Atlas), `region.html?region=…&town=…` (regional guides), `index.html` (Warsaw guide, the only full city guide).
+- The UI is bilingual **PL/EN**; the language is kept across all pages (`tubylem_lang`, `?lang=`).
 
-## Existing architecture
-A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub Pages; do not assume a React/Vite/backend build. No secrets belong in public web code.
-- `atlas.html`, `assets/atlas.js`, `assets/atlas-premium.css` (+ `atlas.css`, `atlas-light-v5.css`): interactive map of Poland. Since 7.0 the default style **„Atlas”** is the premium cartographic map chosen by the owner (navy Baltic, olive land, real relief, amber pins); the former *light illustrated atlas* (concept 1) remains as style **„Jasny/Light”**. See `ATLAS_7_0.md`.
-- `assets/poland-geography.js` and `assets/poland-relief.webp` are **generated** by `tools/build_geography.py` from Natural Earth 1:10m (public domain) and Terrain Tiles (SRTM/EU-DEM © Copernicus). Do not edit them by hand; never draw geography by eye.
-- `assets/atlas-plans.js`: bottom tabs (Map, Trip plan, My day plan, Memories, Profile) with trip plans and day plans stored in `localStorage` (`iwh_trips`, `iwh_days`, `iwh_visited`).
-- `index.html`, `assets/features3.js`, `assets/upgrade3.css`, `assets/i18n4.js`, `assets/nav4.css`: Warsaw guide, planner, PL/EN translations, and permanent floating return-to-Poland control.
-- `data/atrakcje.json`: curated Warsaw attractions (184 entries in 18 districts as of current project records).
-- `data/restauracje.json`: curated Warsaw food venues (36 entries as of current project records).
-- `data/regiony.json`: 16 voivodeships (provinces) and 207 curated regional places (Kielce: 14) — every province has a regional guide (Mazowieckie: Warsaw guide + 8 places); generated to `data/regiony.js`. See `REGIONY_8_0.md`.
-- `region.html`, `assets/region.js`, `assets/region.css`: regional guide (list, map, town/category filters, saved places, stamps, estimated day plan, PL/EN). The Atlas opens it from a province or town (`region.html?region=…&town=…`).
-- `data/atrakcje.js`, `data/restauracje.js` and `data/regiony.js` are browser-loaded **generated** copies; regenerate after changing JSON with `python tools/sync_database.py`.
-- `manifest.webmanifest`, `service-worker.js`: iPhone PWA and offline application cache. Bump the cache version whenever adding or changing cached files.
-- `assets/place-extras.js` + `.css` (8.3, loaded by all three pages): „More information — Wikipedia” links (verified article from the `wiki` field, otherwise an honest Wikipedia *search* link) and the **travel journal** (notes + up to 5 photos per place, stored only on the device in IndexedDB `iwh_journal`; keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<item key>`). Never upload or delete journal data without the owner's consent.
-- Logo (8.5, owner's decision): top-left = `assets/brand-pin-landscape.svg` (landscape pin) **left of** the HTML wordmark „PLACES & MEMORIES / I WAS HERE” (not a link). The green tile `assets/brand-mark.svg` (gold frame, Poland with route and orange pin) is a separate **floating button `#atlasFloat.poland-fab` at the top centre**, fixed just below the header on every page, always visible, always leading to the whole map of Poland (Atlas: `home()` without reload). Keep it outside sticky/blurred headers. `icon.svg` = the tile as PWA icon. All generated by `tools/build_logo.py`.
-- `assets/app-nav.js` + `.css` (8.4): the single bottom menu on every page — Mapa · Odkrywaj · Plany · Pieczątki · Profil / Map · Explore · Plans · Stamps · Profile (same order, icons and labels). In the Atlas the tabs are handled by `atlas-plans.js` (`explore` = map + search, `plans` = trips + day plans with „add trip to a day plan”, `passport` = Stamps, `profile`; `atlas.html?tab=…`). Keep it identical across pages; do not duplicate the same control twice on one screen.
-- **Pieczątki / Stamps** (8.5, `place-extras.js` → `IWH_EXTRAS.passport.mount/open`): clickable counters, 14 city stamps (`iwh_visited` `city:<id>`), regional places (`iwh_region_visited`) and Warsaw (`odkryjWarszawe_1.visited`) with „Byłem tu” toggles (unlock/undo), and the travel journal. Changes fire `iwh-stamps-change`.
-- `assets/atlas-illustrated.js`: decorative geography and the 14 city motifs drawn as **postage stamps** (owner's choice, style 5: perforated stamp, one-colour engraved drawing, city name, „✓” postmark when visited; no SVG filters). Used on the map (also in province focus), the city card, the regional guide hero and the Stamps view.
-- `tools/test_bundle.py` and `tools/test_atlas.py`: regression tests.
-- `.github/workflows/validate.yml`: GitHub Actions validation.
+## Architecture (static, no build step)
+Lightweight **HTML/CSS/vanilla JavaScript** PWA on GitHub Pages. Do not assume React/Vite/a backend. No secrets or API keys in public code.
+
+| Area | Files | Notes |
+|---|---|---|
+| Atlas map | `atlas.html`, `assets/atlas.js`, `assets/atlas-premium.css` (+ `atlas.css`, `atlas-light-v5.css`) | SVG map 900×680, equirectangular projection at 52°. Styles Atlas (default) / Jasny / Noc / Teren, chosen in the **Layers** panel. API `window.IWH_ATLAS` (`lang, setLang, style, setStyle, resolve, show, cities, changed, home`). |
+| Geography | `assets/poland-geography.js`, `assets/poland-relief.webp` | **Generated** by `tools/build_geography.py` (Natural Earth 1:10m, Terrain Tiles). Never edit by hand or draw geography by eye. |
+| City motifs | `assets/atlas-illustrated.js` | Decorative layers plus the 14 city motifs as **postage stamps** (`IWH_ATLAS_ART.landmark(id,{name,visited})`, `paintDefs`, `cities`, `cityName`). No SVG filters. |
+| Atlas tabs | `assets/atlas-plans.js` | `window.IWH_PLANS`. Tabs `map`, `explore` (map + search), `plans` (trips ⇄ day plans, „add trip to a day plan”), `passport` (= Stamps), `profile`. `atlas.html?tab=…`. Stores `iwh_trips`, `iwh_days`, `iwh_visited`. |
+| Bottom menu | `assets/app-nav.js`, `assets/app-nav.css` | One menu on every page: **Mapa · Odkrywaj · Plany · Pieczątki · Profil**. The Poland map button `#atlasFloat.poland-fab` lives in each page's header markup; its styles are in `app-nav.css`. |
+| Shared extras | `assets/place-extras.js`, `.css` | `window.IWH_EXTRAS`: Wikipedia links (`wikiHTML`), travel journal (`journal.*`, IndexedDB `iwh_journal`, ≤5 photos, local only), **Stamps** (`passport.mount/open/stats`; toggles fire `iwh-stamps-change`). |
+| Regional guide | `region.html`, `assets/region.js`, `assets/region.css` | Filters before the map, Leaflet map (CDN), day plan (walk/car/transit), details with Wikipedia, ♡, „Byłem tu”, „Do planu dnia/Do podróży”, journal. City stamp in the hero. |
+| Warsaw guide | `index.html` (inline app), `assets/features3.js`, `assets/i18n4.js` (PL→EN sentence dictionary; skips `[data-i18n-skip]`), `assets/nav4.css`, `assets/upgrade3.css`, `assets/brand-v5.css/js`, `assets/poland-explorer.js` (trip library + .ics only) | Planner, food, editorial 1–5 score, Warsaw stamps (`odkryjWarszawe_1`), speech, GPS. |
+| Brand | `assets/brand-mark.svg` (green tile = floating Poland map), `assets/brand-pin-landscape.svg` (landscape pin, logo left of the wordmark), `icon.svg` + `icon-180/512.png` (PWA) | All generated by `tools/build_logo.py`; PNGs by `tools/render_icons.py` (workflow `sync-icons.yml`). |
+| Data | `data/atrakcje.json` (184 Warsaw / 18 districts), `data/restauracje.json` (36), `data/regiony.json` (16 provinces, 207 places) | Browser copies `data/*.js` are **generated** by `tools/sync_database.py`. Fields `coordinateStatus` (`osm`/`orientacyjne`), `osm`, `wiki {qid,pl,en}`. |
+| PWA | `manifest.webmanifest`, `service-worker.js` | Network-first; `CORE` list of cached files; **bump `KEY`** (`i-was-here-v<ver>-<yyyymmdd>`, now `v8-5-3`) whenever cached files change. |
+| Tests / CI | `tools/test_bundle.py`, `tools/test_atlas.py`, `tools/test_browser.js` (Playwright, 67 checks), `.github/workflows/validate.yml` | CI runs everything on each push/PR to `main`. |
+
+localStorage keys:
+- `tubylem_lang`, `tubylem_map_style`, `iwh_layers`;
+- `iwh_trips`, `iwh_days`;
+- `iwh_visited` (`city:<id>`, `region:<id>`, `town:<region>:<name>`), `iwh_region_visited`, `iwh_region_favs`;
+- `odkryjWarszawe_1` (Warsaw state incl. `visited`), `waw3_*`;
+- legacy, read-only: `tb_saved_trips`.
+
+IndexedDB: `iwh_journal` (keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<item key>`). **Never delete or upload user data.**
+
+## Binding UI decisions (details in `DECYZJE_PROJEKTOWE.md`)
+- **Logo:** landscape pin **left of** the wordmark „PLACES & MEMORIES / I WAS HERE”, top-left; the logo is not a link.
+- **Poland map button:** the green tile **in the same row as the logo**, the middle item of the header between the logo and the buttons (`#atlasFloat.poland-fab`, 48 px; 44 px in the Atlas). The header is always visible, so the button is too. It always leads to the whole map of Poland; in the Atlas it calls `home()` without a reload. On screens ≤370 px the wordmark hides and only the pin stays. No white halo.
+- **Palette:** navy `#0B3446`, amber `#F47C28` / `#FFB24A`, olive land, cream `#F6F1E4`. Serif italic brand wordmark.
+- **City motifs:** postage stamps (owner's choice, style 5), with a „✓” postmark when the city is visited.
+- **One bottom menu**, identical everywhere. **No duplicate controls on one screen:** the language switch lives in the header, the map style in the Layers panel, and there is no corner „Polska” button.
+- **Pieczątki / Stamps:** the former „Paszport”. Clickable counters, „Byłem tu” toggles that can be undone, journal with up to 5 photos. In attraction details the main action is **„✣ Zdobądź pieczątkę”**; „📝 Notatki i zdjęcia” appears only after the stamp is collected (also as 📝 next to collected stamps).
 
 ## Features and non-features
-- Poland Atlas with 14 pinned cities (Kielce added in 8.2) and correct geographic locations; **Warsaw is the only fully developed city**. Other city guides are planned, never present them as fully available.
-- Atlas provinces: selecting a voivodeship zooms in, outlines it and shows towns with places. All **16 provinces** have regional guides (Mazowieckie is partial: Warsaw + 8 places). Each of the 14 cities has its sights in its province guide; only Warsaw has a full city guide. 166 of 207 regional positions are verified in OpenStreetMap via `tools/verify_coordinates.py` (`coordinateStatus: "osm"` + OSM id; © OpenStreetMap contributors, ODbL — keep the attribution); the rest stay `orientacyjne` (approximate).
-- Warsaw: districts, sightseeing places, an itinerary planner, food section, editorial visit rating 1–5, favorites, virtual stamps, family and photography preferences, speech synthesis, GPS with permission.
-- The independent 1–5 **editorial** score is NOT a Google review score. Google reviews are linked out; do not invent live ratings or include private Places API keys.
-- Public transport and street routing are **estimates and external links**, not validated real-time WTP routing; do not claim otherwise.
-- Some new attraction coordinates and editorial notes are approximate; do not silently label them verified.
+- 14 pinned cities at correct locations; **Warsaw is the only full city guide**. Never present the other cities as full guides; their sights live in the province guides.
+- All 16 provinces have guides (Mazowieckie partial: Warsaw + 8 places).
+- 166 of 207 regional positions are OSM-verified (`tools/verify_coordinates.py`, © OpenStreetMap ODbL — keep the attribution).
+- 110 of 207 regional places and 69 of 184 Warsaw sights have confirmed Wikipedia articles; the rest get an honest search link.
+- The 1–5 score is **editorial**, not Google's. No live ratings, no Places API keys.
+- Transit and routing are **estimates plus Google Maps links**, not real-time WTP routing.
+- Approximate coordinates and missing EN texts stay honestly labelled.
 
 ## Rules for cooperating with ChatGPT and other AI coding agents
-1. **Fetch/pull the latest `main` first.** Other assistants and the owner may have changed the repository.
-2. Do not directly edit/push `main` for nontrivial tasks. Start a clearly named feature branch, e.g. `claude/atlas-mobile-navigation`, and open a Pull Request for user approval.
-3. Never overwrite another agent's work without inspecting the latest code and diff. Do not force-push, rebase or delete unrelated work.
-4. Keep PRs small, focused, and include a concise Polish description of what changed, tests performed, known limitations and any screenshot-based testing still needed.
-5. Before editing UI: inspect both `atlas.html` and `index.html` plus their CSS/JS dependencies. Preserve navigation **Warsaw ⇄ Poland Atlas**, iPhone safe areas, floating return button, and both languages.
-6. When changing visible copy, update PL and EN together. English must not leave Polish UI fragments; preserve place names when they are proper nouns. Avoid misleading automatically fabricated history.
-7. Prefer real, source-backed geography and city coordinates. Decorative drawings/landmarks must not move pins or change real borders.
-8. Test keyboard/mobile accessibility, iPhone Safari PWA behaviour, selected map style and localStorage persistence when possible. State explicitly if you could not test on a real iPhone.
-9. Run: `python tools/sync_database.py`, `python tools/test_bundle.py`, `python tools/test_atlas.py`, `node tools/test_browser.js` (Playwright + Chromium; also runs in CI), and `node --check` on every changed JS file. Review git diff for unintended changes.
-10. Prefer GitHub Issues / Pull Requests for coordination. Leave a PR ready for review rather than self-merging when another assistant may be working simultaneously.
-11. Do not commit credentials, service tokens, personal user data, or generated high-resolution binary assets unless authorised.
-12. Update relevant documentation (`README.txt`, `ATLAS_4_0.md`, or a new release notes file) when implementation changes.
+1. Fetch the latest `main` first.
+2. Do not push nontrivial changes to `main`; use a `claude/<topic>` branch and a PR.
+3. Never overwrite another agent's work. No force-push, rebase or deletion of unrelated work.
+4. Keep PRs focused, with a concise **Polish** description: what changed, tests, limitations, and what still needs a real iPhone.
+5. Before editing UI, inspect `atlas.html`, `index.html` and `region.html` plus their CSS/JS. Preserve the floating Poland map, the bottom menu, iPhone safe areas and both languages.
+6. Update PL and EN together; English must not contain Polish UI fragments (the browser test checks this). Never fabricate history.
+7. Real, source-backed geography only. Decorations must not move pins or borders.
+8. Run all tests (see Commands) and `node --check` on changed JS. Review `git diff`.
+9. No credentials, tokens or personal data in the repo; no high-resolution binaries unless authorised.
+10. Update the docs (`PROJECT_STATUS.md`, `CHANGELOG.md`, `DECYZJE_PROJEKTOWE.md`, `ROADMAP.md`, release notes) with implementation changes.
+11. For big visual changes, offer the owner **variants first**: Design canvases in claude.ai, e.g. logo board https://claude.ai/artifact/3vK2N3k66menpSRVZwnjkY and city-style board https://claude.ai/artifact/61rgJrriroFaGWZBLLHWae.
 
 ## Documentation index
 | File | Purpose |
 |---|---|
-| `PROJECT_STATUS.md` | Current state: working/partial features, known bugs, environment, next task |
-| `ROADMAP.md` | Development plan (stages A–D) and out-of-scope items |
-| `CHANGELOG.md` | Version history 3.x → 8.5 with PR numbers |
+| `PROJECT_STATUS.md` | Current state: features, partial work, known and solved bugs, repo/PR state, environment, next task |
+| `DECYZJE_PROJEKTOWE.md` | Binding owner decisions: logo, colours, map, navigation, PL/EN, stamps, plans, content |
+| `ROADMAP.md` | Plan: stages A–E, out-of-scope items |
+| `CHANGELOG.md` | Version history 3.x → 8.5 with PR numbers and merge commits |
 | `README.txt` | User-facing description (EN), iPhone installation |
-| `ATLAS_4_0.md`, `ATLAS_5_0.md`, `ATLAS_7_0.md` | Atlas release notes (7.0 = current map design) |
-| `REGIONY_6_0.md`, `REGIONY_8_0.md` | Regional guides, data model, OSM verification (8.1/8.2) |
+| `ATLAS_4_0.md`, `ATLAS_5_0.md`, `ATLAS_7_0.md` | Atlas release notes (7.0 = map design) |
+| `REGIONY_6_0.md`, `REGIONY_8_0.md` | Regional guides, data model, OSM verification |
 | `INTEGRACJE_3_0.md` | Warsaw data model, Google/WTP limits |
-| `PLAN_ROZWOJU.md`, `data/SCHEMA.md` | **Historical/outdated** (old React/MapLibre vision; 118-record schema) — do not follow blindly |
+| `PLAN_ROZWOJU.md`, `data/SCHEMA.md` | **Historical/outdated**; do not follow blindly |
 
 ## Commands
 ```bash
@@ -77,31 +97,25 @@ python3 -m http.server 8000          # then http://localhost:8000/atlas.html
 python tools/sync_database.py        # regenerate data/*.js from data/*.json (must leave no git diff)
 python tools/test_bundle.py && python tools/test_atlas.py
 for f in assets/*.js data/*.js service-worker.js tools/*.js; do node --check "$f"; done
-NODE_PATH=$(npm root -g) node tools/test_browser.js   # Playwright/Chromium (preinstalled in Claude sandbox)
+NODE_PATH=$(npm root -g) node tools/test_browser.js   # Playwright/Chromium (preinstalled in the Claude sandbox)
+python tools/build_logo.py           # logo tile, landscape pin, icon.svg (then python tools/render_icons.py, needs cairosvg)
 python tools/verify_coordinates.py --cache .geo-cache/osm.json [--apply]   # needs nominatim.openstreetmap.org
 python tools/build_geography.py --cache .geo-cache [--no-relief]           # needs numpy, Pillow, shapely + network
-python tools/wiki_links.py --cache .geo-cache/wiki.json [--apply]          # Wikipedia links via OSM wikidata tag + Wikidata
+python tools/wiki_links.py --cache .geo-cache/wiki.json [--apply]          # Wikipedia via OSM wikidata tag + Wikidata
 ```
 
 ## Data pipelines
-- Warsaw: edit `data/atrakcje.json` / `data/restauracje.json` → `sync_database.py` → `data/*.js`.
-- Regions: edit `data/regiony.json` (unique ids, `coordinateStatus` `osm`|`orientacyjne`) → `sync_database.py` → `data/regiony.js`; optionally `verify_coordinates.py --apply`.
-- Geography: only via `tools/build_geography.py` → `assets/poland-geography.js`, `assets/poland-relief.webp`.
-- Icons: `tools/render_icons.py` (cairosvg) run by `.github/workflows/sync-icons.yml`, which pushes PNGs to `main` (known exception).
-- Wikipedia: `tools/wiki_links.py --apply` writes `wiki: {qid, pl, en}` into `data/regiony.json` and `data/atrakcje.json` (only confirmed matches; Warsaw coordinates are not changed) → `sync_database.py`.
-- Any change to cached files → bump `KEY` in `service-worker.js` (format `i-was-here-v<ver>-<yyyymmdd>`).
+- **Warsaw:** edit `data/atrakcje.json` / `data/restauracje.json` → `sync_database.py` → `data/*.js`.
+- **Regions:** edit `data/regiony.json` (unique ids, `coordinateStatus`) → `sync_database.py`; optionally `verify_coordinates.py --apply`.
+- **Wikipedia:** `wiki_links.py --apply` writes only confirmed matches; the manual `REJECT` list holds wrong matches → `sync_database.py`.
+- **Geography:** only via `build_geography.py`.
+- **Brand and icons:** `build_logo.py` → `render_icons.py`. The `sync-icons.yml` workflow may push PNGs to `main` (known exception).
+- **Any change to cached files:** bump `KEY` in `service-worker.js`.
 
 ## Environment (Claude Code cloud sandbox)
-- No secrets/API keys anywhere. Allowed extra hosts: `nominatim.openstreetmap.org` (tools only; 2.5 s delay, honour 429) and `www.wikidata.org` (tools only). `*.wikipedia.org` is not reachable from the sandbox.
-- `*.github.io` is not reachable from the sandbox: verify deployment via the GitHub Actions run „pages build and deployment”.
-- GitHub via MCP tools (no `gh` CLI except search); push to the session's `claude/...` branch.
-
-## Suggested workflow
-- User assigns issue to Claude Code or ChatGPT.
-- Working AI reads current `main` and creates its own named branch.
-- Implement and test; publish Pull Request.
-- User reviews; optionally requests the *other* AI to review the PR/diff.
-- Only after acceptance („Scal” from the owner), merge to `main`; verify GitHub Pages deployment.
+- Allowed extra hosts (tools only): `nominatim.openstreetmap.org` (2.5 s delay, honour 429) and `www.wikidata.org` (on 429 wait and retry).
+- `*.wikipedia.org`, `*.github.io` and `chatgpt.com` are **not** reachable. Verify deployment via GitHub Actions. Images from the owner arrive as chat attachments.
+- GitHub via MCP tools (`mcp__github__*`); `gh` only for search. Merge with `merge_method: merge` and `expectedHeadSha` (full 40-char SHA).
 
 ## Priority design notes
-Version 7.0 (owner's brief `PROMPT_DLA_CLAUDE_I_WAS_HERE_MAPA.md`): premium cartographic atlas — deep navy sea, warm olive land with real shaded relief, cream province borders that strengthen with zoom, amber pins, the always-visible floating map of Poland at the top centre that animates back to the whole country (since 8.5 it replaces the corner „Polska/Poland” button), and a consistent navy/amber palette on all screens. Concept 1 (light illustrated atlas) stays available as the „Jasny/Light” style. Correct geography always wins over decoration. Keep the map responsive on iPhone and navigation back to it always accessible.
+Version 7.0 brief (`PROMPT_DLA_CLAUDE_I_WAS_HERE_MAPA.md`, owner's document): premium cartographic atlas with deep navy sea, warm olive land with real shaded relief, cream province borders that strengthen with zoom, amber pins and a consistent navy/amber palette. Since 8.5 the always-visible **Poland map button in the header row, next to the logo,** is the way back to the whole country (it replaced the corner „Polska/Poland” button). The light illustrated atlas stays as the „Jasny/Light” style. Correct geography always wins over decoration. Keep the map responsive on iPhone and the way back to it always accessible.

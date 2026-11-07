@@ -99,3 +99,8 @@ html.ij-open,html.ij-open body{overflow:hidden}
 .pp-host{color:#102a35}
 .pp-host .pp-head p{color:var(--ui-sub,#4d6169)}
 .pp-host .pp-title,.pp-host .pp-sub{color:var(--ui-fg,#102a35)}
+
+/* 8.5 — 📝 notatki i zdjęcia przy zdobytych pieczątkach */
+.pp-note{flex:none;width:36px;height:36px;border:1px solid #d6dfdc;border-radius:12px;background:#fff;font-size:16px;cursor:pointer}
+.pp-note:focus-visible{outline:3px solid #F47C28;outline-offset:2px}
+.pp-stamp-act{display:flex;gap:6px;align-items:center;justify-content:center}

@@ -9,9 +9,12 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 @media(min-width:700px){.app-nav:not(.tabbar){left:50%;right:auto;transform:translateX(-50%);width:min(640px,100%);border-radius:22px 22px 0 0;border:1px solid rgba(236,220,181,.22)}.app-nav:not(.tabbar) button{font-size:11px}}
 @media(max-width:360px){.app-nav:not(.tabbar) button{font-size:9px}.app-nav:not(.tabbar) svg{width:19px;height:19px}}
 
-/* 8.5 — pływająca mapka Polski: na środku u góry, zawsze widoczna, zawsze prowadzi do całej mapy Polski */
-.poland-fab{position:fixed;z-index:4950;left:50%;top:var(--fab-top,calc(env(safe-area-inset-top,0px) + 74px));transform:translateX(-50%);width:58px;height:58px;display:grid;place-items:center;border-radius:17px;pointer-events:auto;box-shadow:0 8px 20px rgba(6,22,32,.42);background:transparent;transition:transform .15s ease}
-.poland-fab img{width:58px;height:58px;display:block}
-.poland-fab:active{transform:translateX(-50%) scale(.94)}
+/* 8.5 — mapka Polski w jednej linii z logo: środkowy element nagłówka (nagłówek jest zawsze widoczny), prowadzi do całej mapy Polski */
+.poland-fab{position:relative;z-index:2;flex:none;width:48px;height:48px;margin:0 auto;display:grid;place-items:center;border-radius:14px;pointer-events:auto;box-shadow:0 6px 16px rgba(6,22,32,.4);transition:transform .15s ease}
+.poland-fab img{width:48px;height:48px;display:block}
+.poland-fab:active{transform:scale(.94)}
 .poland-fab:focus-visible{outline:3px solid #F47C28;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.poland-fab{transition:none}}
+/* Wąskie ekrany (iPhone SE/mini): sama pinezka bez napisu, żeby mapka zmieściła się w jednej linii */
+@media(max-width:370px){.top .brand .wordmark,.atlas-top .brand-name{display:none}.poland-fab,.poland-fab img{width:44px;height:44px}}
+.atlas-top .poland-fab,.atlas-top .poland-fab img{width:44px;height:44px}

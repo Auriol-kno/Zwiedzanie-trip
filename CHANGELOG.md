@@ -5,11 +5,23 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-3-20261107`.
 
 ---
 
-## 8.5 — 2026-11-07 — gałąź `claude/stamps`
+## [Nieopublikowane] 8.5.3 — 2026-11-07 — gałąź `claude/fab-inline-stamps` (zawiera dokumentację przekazania)
+- **Mapka Polski w jednej linii z logo:** środkowy element nagłówka (logo · mapka · przyciski), już nie opuszczona pod
+  nagłówkiem. Zawsze widoczna, zawsze prowadzi do pełnej mapy Polski. Na ekranach ≤370 px napis logo ukryty (zostaje pinezka).
+- **„✣ Zdobądź pieczątkę” w szczegółach atrakcji** (regiony jak w Warszawie, pomarańczowy przycisk) zamiast „Notatki i zdjęcia”;
+  „📝 Notatki i zdjęcia” pojawia się dopiero po zdobyciu pieczątki, także jako 📝 przy zdobytych pieczątkach w Pieczątkach.
+- Cache `i-was-here-v8-5-3-20261107`; testy dostosowane.
+
+## [Nieopublikowane] Dokumentacja przekazania — 2026-11-07 — gałąź `claude/handoff-docs`
+- Pełna aktualizacja `CLAUDE.md`, `PROJECT_STATUS.md`, `ROADMAP.md`, `CHANGELOG.md` oraz nowy rejestr ustaleń
+  `DECYZJE_PROJEKTOWE.md` (interfejs, mapa, kolorystyka, logo, nawigacja, PL/EN, plany) — przed wyczyszczeniem
+  kontekstu sesji. Bez zmian w kodzie aplikacji.
+
+## 8.5 — 2026-11-07 — PR #14 (gałąź `claude/stamps`, scalone 76d6aae)
 - **Znaczki pocztowe na mapie** (wybrany styl 5): 14 miast jako ząbkowane znaczki z jednobarwnym rytowanym rysunkiem
   i nazwą miasta; odwiedzone miasto ma stempel „✓”. Widoczne na mapie (także po wejściu w województwo), w karcie miasta,
   w nagłówku przewodnika regionu i w Pieczątkach.
@@ -27,7 +39,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
   dublować listę miast i województw z paska; usunięte nieużywane pliki `brand-atlas.svg`, `brand-mark-flag.svg`,
   `brand-pin.svg`, `logo-en.svg`. Dane użytkownika bez zmian. Cache `i-was-here-v8-5-2-20261107`.
 
-## 8.4 — 2026-11-07 — gałąź `claude/brand-nav-passport`
+## 8.4 — 2026-11-07 — PR #13 (gałąź `claude/brand-nav-passport`, scalone ed7fc79)
 - **Nowe logo (wariant właściciela):** zielony kafelek ze złotą ramką, Polska z pejzażem, białą trasą i pomarańczową pinezką —
   wektorowy `assets/brand-mark.svg` z `tools/build_logo.py` (kontur Natural Earth). Ten sam znak jako ikona PWA (`icon.svg`,
   `icon-180.png`, `icon-512.png`). Pinezka z pejzażem `assets/brand-pin-landscape.svg` = godło Paszportu odkrywcy.
@@ -46,7 +58,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
   przewodnika regionu (Lubuskie i Opolskie bez motywu — brak miasta Atlasu).
 - Cache `i-was-here-v8-4-20261107`; testy statyczne i przeglądarkowe dla menu, logo, paszportu.
 
-## 8.3.1 — 2026-11-07 — gałąź `claude/new-logo`
+## 8.3.1 — 2026-11-07 — PR #12 (gałąź `claude/new-logo`, scalone b56976b)
 - **Nowe logo właściciela** w lewym górnym rogu Atlasu, Warszawy i przewodników regionów: Polska w barwach biało-czerwonych
   z pinezką z górskim pejzażem — **wektorowy** `assets/brand-mark.svg` (≈10 KB) budowany przez `tools/build_logo.py`
   na podstawie logo właściciela: kontur Polski z Natural Earth (ten sam co w Atlasie), bez białej poświaty wokół konturu.
@@ -54,7 +66,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
   Poprzedni znak `assets/brand-atlas.svg` zostaje w repozytorium (nieużywany). Ikony PWA bez zmian.
 - Cache `i-was-here-v8-3-1-20261107`.
 
-## 8.3 — 2026-11-07 — gałąź `claude/guide-wiki-passport` (zawiera dokumentację z PR #10)
+## 8.3 — 2026-11-07 — PR #11 (gałąź `claude/guide-wiki-passport`, scalone 4688a13; zawiera PR #10)
 - **Jedno logo z mapą:** nowy znak `assets/brand-atlas.svg` — pinezka I Was Here wbita w sylwetkę Polski (w miejscu
   Warszawy) jako jeden symbol w lewym górnym rogu Atlasu, Warszawy i przewodników regionów; osobna ikonka mapy usunięta.
   Logo nadal zawsze wraca do Atlasu w tym samym języku.
@@ -75,7 +87,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
 - Testy: statyczne (`test_atlas.py`, walidacja `wiki` w `sync_database.py`) i przeglądarkowe (filtry przed mapą, tryb pieszy,
   Wikipedia PL/EN, dziennik z limitem 5 zdjęć i zapisem w IndexedDB, Wspomnienia). Cache `i-was-here-v8-3-20261107`.
 
-## [Nieopublikowane] — dokumentacja długoterminowa
+## Dokumentacja długoterminowa — 2026-11-07 — PR #10 (gałąź `claude/project-docs`, scalone razem z #11)
 - Dodano `PROJECT_STATUS.md`, `ROADMAP.md`, `CHANGELOG.md`; rozszerzono `CLAUDE.md`
   o procedurę startu sesji, indeks dokumentów, komendy, środowisko i potoki danych.
 - Bez zmian w kodzie aplikacji.

@@ -1,148 +1,156 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-5-2-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Stan na:** 2026-11-07 · **Wersja:** 8.5 · **`main`:** `76d6aae` („Scal #14: 8.5 — znaczki pocztowe na mapie, Pieczątki, plany z mapy, pływająca mapka Polski”)
+**Cache PWA:** `i-was-here-v8-5-3-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
-> Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
-> dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.
+> Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
+> - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
+> - Historia zmian jest w `CHANGELOG.md`, a plan w `ROADMAP.md`.
 
 ---
 
-## 1. Działające funkcje (zweryfikowane testami 2026-11-07)
+## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
+- **Otwarte PR:** #15 (dokumentacja przekazania, gałąź `claude/handoff-docs`) i #16 (8.5.3: mapka w linii z logo, „Zdobądź pieczątkę”, gałąź `claude/fab-inline-stamps`, zawiera #15). Oba czekają na „Scal”.
+- **Scalone do `main`:**
+  - #1–#4: UX 5.1b–5.3;
+  - #5–#6: Atlas 6.0/7.0;
+  - #7: 16 przewodników regionów;
+  - #8–#9: OSM i Kielce, 8.2;
+  - #10–#11: dokumentacja i 8.3;
+  - #12: 8.3.1;
+  - #13: 8.4;
+  - #14: 8.5.
+- **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone, z jednym wyjątkiem: `claude/i-was-here-analysis-augprr` ma 3 niescalone commity, w tym `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`. To pierwszy raport techniczny; jego zalecenia wdrożono w PR #2–#4. Gałęzi nie usuwamy.
+- Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
-### Atlas Polski — `atlas.html` (ekran startowy PWA)
-- Mapa SVG 900×680, rzut równoodległościowy z równoleżnikiem 52° (`GEO.projection`).
-- Granice, rzeki, jeziora i sąsiedzi z Natural Earth 1:10m; relief z Terrain Tiles.
-- 4 style: **Atlas** (domyślny, premium), **Jasny/Light** (ilustrowany), **Noc**, **Teren**;
-  wybór pamiętany w `tubylem_map_style`.
-- 14 miast z pinami w poprawnych miejscach (Kielce od 8.2), 16 województw:
-  wybór przybliża, obrysowuje i pokazuje miejscowości z miejscami.
-- Wyszukiwarka miast, województw i miejscowości, zoom +/−, pinch-zoom, przesuwanie.
-- Panel warstw (`iwh_layers`), skala km, kompas.
-- Przycisk „Polska/Poland” animuje powrót do całego kraju.
-- Karta miejsca zawiera cztery akcje: przewodnik, plan podróży, plan dnia i „Byłem tu”.
-- Dolne zakładki: Mapa, Plan podróży (`iwh_trips`), Mój plan dnia (`iwh_days`),
-  Wspomnienia (`iwh_visited`), Profil.
+## 1. Działające funkcje (zweryfikowane testami 2026-11-07, emulacja iPhone 13 w Chromium)
 
-### Przewodniki regionalne — `region.html?region=…&town=…`
-- 16 województw, 207 miejsc (Kielce: 14). Mazowieckie jest częściowe: Warszawa ma osobny
-  pełny przewodnik, a w przewodniku regionu jest 8 miejsc.
-- Funkcje:
-  - lista i mapa Leaflet;
-  - filtry miejscowości i kategorii;
-  - zapisane miejsca (`iwh_region_favs`) i stemple (`iwh_region_visited`);
-  - szacunkowy plan dnia;
-  - PL/EN;
-  - powrót do Atlasu na to samo województwo.
-- 166 z 207 współrzędnych zweryfikowano w OSM (`coordinateStatus:"osm"` + `osm.id`).
-  Pozostałe są oznaczone jako orientacyjne. Atrybucja ODbL jest widoczna w aplikacji.
+### Wspólne dla wszystkich stron
+- **Logo:**
+  - pinezka z pejzażem po lewej stronie napisu „PLACES & MEMORIES / I WAS HERE” (logo nie jest linkiem);
+  - **mapka Polski** (`#atlasFloat.poland-fab`) w jednej linii z logo, między logo a przyciskami; zawsze widoczna, zawsze prowadzi do pełnej mapy Polski. Na ekranach ≤370 px zostaje sama pinezka bez napisu.
+- **Jedno dolne menu** (`assets/app-nav.js`): Mapa · Odkrywaj · Plany · Pieczątki · Profil (PL/EN).
+- **Pieczątki** (`IWH_EXTRAS.passport`):
+  - klikalne liczniki;
+  - 14 znaczków miast z „Byłem tu” (odblokuj i odznacz);
+  - wyszukiwarka miejsc w regionach i atrakcji Warszawy z „Byłem tu”;
+  - dziennik podróży (notatki + do 5 zdjęć z biblioteki, IndexedDB `iwh_journal`, tylko lokalnie).
+- **„Więcej informacji o miejscu — Wikipedia”** przy każdej atrakcji: potwierdzony artykuł albo uczciwe wyszukiwanie, PL/EN.
+- **PL/EN:** przełącznik w nagłówku, wspólny klucz `tubylem_lang`, przekazywany parametrem `?lang=`.
+- **PWA:**
+  - manifest z `start_url ./atlas.html`;
+  - ikona = zielony kafelek;
+  - safe-area dla iPhone'a;
+  - service worker network-first z cache plików aplikacji (`ignoreSearch` dla nawigacji).
+
+### Atlas Polski — `atlas.html` (ekran startowy)
+- Mapa SVG 900×680 w rzucie równoodległościowym (52°), oparta na Natural Earth 1:10m i reliefie Terrain Tiles.
+- 4 style: Atlas (domyślny), Jasny, Noc i Teren. Styl wybiera się w panelu Warstwy (`tubylem_map_style`, `iwh_layers`).
+- 14 miast i 16 województw: wybór przybliża, obrysowuje i pokazuje miejscowości. Działa wyszukiwarka, zoom, pinch-zoom i przesuwanie.
+- **Znaczki pocztowe miast** na mapie (także po wejściu w województwo) i w karcie miasta. Odwiedzone miasto ma stempel „✓”.
+- Karta miejsca ma akcje: przewodnik, „Podróż”, „Plan dnia” i „Byłem tu”.
+- Zakładki:
+  - **Odkrywaj** otwiera wyszukiwarkę;
+  - **Plany** pokazują podróże i plany dnia z przełącznikiem; z podróży można zrobić plan dnia; plan dnia ma tryb pieszo/samochód;
+  - **Pieczątki**;
+  - **Profil**: karta Pieczątek, statystyki, dane i licencje.
+- Adres `atlas.html?tab=explore|plans|passport|profile` otwiera wskazaną zakładkę, a `?region=<id>` otwiera województwo.
+
+### Przewodniki regionów — `region.html?region=…&town=…`
+- 16 województw i 207 miejsc. Mazowieckie jest częściowe: Warszawa ma własny przewodnik, a w regionie jest 8 miejsc.
+- W nagłówku jest znaczek głównego miasta województwa. Lubuskie i Opolskie go nie mają.
+- Kolejność sekcji: „Co pokazać na mapie?” (miejscowości i kategorie) → mapa Leaflet → plan dnia → lista.
+- Plan dnia ma tryby Pieszo (domyślny przy wejściu z miejscowości), Samochód i Komunikacja.
+- Szczegóły miejsca zawierają:
+  - opis i link do Wikipedii;
+  - ♡ (zapisz);
+  - „Byłem tu”;
+  - „🗓️ Do planu dnia” i „🧳 Do podróży”;
+  - nawigację, stronę obiektu i lektora;
+  - główny przycisk „✣ Zdobądź pieczątkę”; „📝 Notatki i zdjęcia” pojawia się po zdobyciu pieczątki.
+- 166 z 207 pozycji jest zweryfikowanych w OSM, a 110 ma potwierdzony artykuł Wikipedii.
 
 ### Przewodnik Warszawy — `index.html`
-- Dane: 184 atrakcje w 18 dzielnicach i 36 lokali gastronomicznych.
-- Planer trasy i ocena redakcyjna 1–5 (to nie jest ocena Google).
-- Ulubione, wirtualne stemple, preferencje rodzinne i fotograficzne.
-- Synteza mowy i GPS (za zgodą użytkownika).
-- Biblioteka tras i eksport .ics.
-- Logo w lewym górnym rogu zawsze wraca do Atlasu.
+- 184 atrakcje w 18 dzielnicach i 36 lokali gastronomicznych.
+- Planer trasy (pieszo, komunikacją, rowerem, samochodem); wybór rodzajów atrakcji stoi przed mapą.
+- Ocena redakcyjna 1–5 (to nie jest ocena Google), ulubione i pieczątki Warszawy.
+- Lektor (synteza mowy) i GPS za zgodą użytkownika; eksport .ics.
+- W nagłówku są „Wygląd” i „Jedzenie”. Wikipedia ma potwierdzone artykuły dla 69 ze 184 atrakcji.
 
-### Wspólne
-- **Logo** (8.5): pinezka z pejzażem po lewej stronie napisu; **pływająca mapka Polski** (kafelek) na środku u góry każdej strony — zawsze widoczna, prowadzi do całej mapy Polski
-- **Jedno dolne menu** (`assets/app-nav.js`): Mapa · Odkrywaj · Plany · Paszport · Profil na każdej stronie.
-- **Pieczątki** (8.5, dawny Paszport): klikalne liczniki, 14 znaczków miast i listy miejsc z „Byłem tu” (odblokuj/odznacz), dziennik; karta w Profilu, zakładka w Atlasie.
-- **Plany**: punkt z mapy regionu → plan dnia/podróży; podróż → plan dnia.
-- **Znaczki pocztowe 14 miast** (8.5) na mapie (także w widoku województwa), w karcie miasta, w nagłówku przewodnika regionu i w Pieczątkach.
-- (8.3.1) poprzednie logo w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
-- **„Więcej informacji o miejscu — Wikipedia”** przy opisie każdej atrakcji (regiony + Warszawa), PL/EN; potwierdzony artykuł
-  (OSM `wikidata` + Wikidata) albo uczciwe wyszukiwanie w Wikipedii — patrz liczby w §2.
-- **Dziennik podróży (paszport):** notatki + do 5 zdjęć z biblioteki na miejsce, lokalnie w IndexedDB `iwh_journal`;
-  w szczegółach atrakcji, paszporcie Warszawy (📝) i w Atlasie → Wspomnienia.
-- **Wycieczka piesza:** Warszawa (planer), przewodnik regionu (domyślnie przy wejściu z miejscowości), Atlas → Mój plan dnia.
-- **Wybór rodzajów atrakcji przed mapą** w regionie i w Warszawie.
-- Język PL/EN (`tubylem_lang`) jest wspólny dla Atlasu, regionów i Warszawy.
-- PWA na iPhone'a: manifest, `start_url ./atlas.html`, skróty, safe-area,
-  service worker network-first z cache offline plików aplikacji.
-- CI (`.github/workflows/validate.yml`) przy każdym push/PR na `main`:
-  - sync danych + `git diff`;
-  - testy Python;
+### Jakość i CI
+- Testy:
+  - `tools/test_bundle.py` i `tools/test_atlas.py` (statyczne);
+  - `tools/test_browser.js` (Playwright, 67 kontroli: PL/EN bez polskich resztek, menu, Pieczątki, dziennik z 5 zdjęciami, plany, logo i mapka, Wikipedia);
   - `node --check`;
-  - Playwright (`tools/test_browser.js`).
+  - `tools/sync_database.py` (walidacja danych i pola `wiki`).
+- CI (`.github/workflows/validate.yml`) uruchamia całość przy każdym push i PR na `main`.
 
 ## 2. Funkcje niedokończone / częściowe
-- **Wikipedia:** potwierdzone artykuły ma 110 z 207 miejsc regionalnych i 69 ze 184 atrakcji Warszawy
-  (OSM `wikidata` + Wikidata, 9 dopasowań odrzuconych ręcznie — lista `REJECT` w `tools/wiki_links.py`). Pozostałe mają
-  uczciwy link „szukaj w Wikipedii”. Kolejne artykuły: ROADMAP etap B.
-- Spośród 14 miast tylko **Warszawa** ma pełny przewodnik miejski. Pozostałe 13 miast ma
-  swoje atrakcje w przewodniku województwa i nie wolno ich przedstawiać jako pełnych przewodników.
-- **Mazowieckie** poza Warszawą ma tylko 8 miejsc.
-- **Opisy EN w Warszawie**: ok. 158 atrakcji pokazuje „English description not available yet”
-  (uczciwy placeholder, bez maszynowego tłumaczenia).
-- **Współrzędne**:
-  - 41 z 207 miejsc regionalnych jest orientacyjnych, bo nie ma pewnego dopasowania w OSM
-    (np. Exploseum, Ostrów Tumski, Dworek Laszczyków, Muzeum Żeromskiego);
-  - ok. 158 współrzędnych atrakcji Warszawy jest orientacyjnych.
-- **Komunikacja i trasy** to szacunki i linki zewnętrzne (Google Maps),
-  bez walidowanego routingu WTP w czasie rzeczywistym.
-- **Oceny Google** są tylko linkiem zewnętrznym; `googleRating` ma wartość `null` (bez klucza Places API).
-- **Wspomnienia/Profil/Dziennik** działają tylko lokalnie (`localStorage` + IndexedDB): nie ma kont, synchronizacji
-  ani kopii zapasowej — wyczyszczenie danych Safari usuwa notatki i zdjęcia (eksport/import: ROADMAP etap D).
+- Pełny przewodnik miejski ma **tylko Warszawa**. Pozostałe 13 miast ma atrakcje w przewodnikach regionów.
+- **Opisy EN Warszawy:** ok. 158 atrakcji ma uczciwy komunikat zamiast tłumaczenia.
+- **Wikipedia:** 97 miejsc regionalnych i 115 atrakcji Warszawy ma tylko link do wyszukiwania.
+- **Współrzędne:** 41 z 207 miejsc regionalnych i ok. 158 atrakcji Warszawy jest orientacyjnych.
+- **Brak kopii zapasowej** danych użytkownika. Wyczyszczenie danych Safari usuwa plany, pieczątki i dziennik.
+- **Pieczątki poza „swoją” stroną:**
+  - na stronie Warszawy lista pieczątek regionów odsyła do Atlasu, bo nie ładujemy tam `regiony.js`;
+  - poza Warszawą lista atrakcji Warszawy odsyła do jej przewodnika.
+- Plany dnia Atlasu nie przyjmują atrakcji Warszawy, bo Warszawa ma własny planer.
+- Trasy to szacunki i linki do Google Maps. Nie ma routingu WTP na żywo ani ocen Google.
 
 ## 3. Znane błędy i ryzyka
 | # | Problem | Gdzie | Waga |
 |---|---------|-------|------|
-| 1 | Leaflet (CDN unpkg) i kafelki OSM nie są cache'owane: mapa regionu offline jest pusta (lista działa) | `region.html`, `service-worker.js` | średnia |
-| 2 | Na małych ekranach przycisk „Polska” może zasłaniać piny i etykiety na południowym wschodzie (np. Rzeszów) lub wybraną etykietę | `atlas-premium.css` | niska |
-| 3 | Przy otwartej karcie miejsca paski miast i województw są ukryte (świadomy kompromis wysokości) | `atlas.js` / CSS | niska |
-| 4 | i18n Warszawy (`i18n4.js`) to kruchy „DOM-walker” na tekstach: nowe teksty w `index.html` wymagają dopisania tłumaczeń | `assets/i18n4.js` | średnia |
-| 5 | `assets/poland-explorer.js` ma mylącą nazwę historyczną: zostały w nim tylko biblioteka tras i .ics | Warszawa | niska |
-| 6 | Workflow `sync-icons.yml` pushuje bezpośrednio na `main` (wyjątek od zasady PR) | `.github/workflows` | niska |
-| 7 | Brak testu na fizycznym iPhonie / Safari: testowano wyłącznie emulację Chromium iPhone 13 | — | średnia |
-| 8 | `data/SCHEMA.md` (118 rekordów) i `PLAN_ROZWOJU.md` (React/MapLibre) są nieaktualne: to dokumenty historyczne | docs | niska |
-| 9 | `github.io` jest niedostępne z sandboxa Claude: wdrożenie sprawdza się przez status GitHub Actions „pages build and deployment” | środowisko | info |
+| 1 | Leaflet (CDN unpkg) i kafelki OSM nie są w cache: mapa regionu offline jest pusta, ale lista i plan działają | `region.html`, `service-worker.js` | średnia |
+| 2 | Na ekranach ≤370 px napis logo jest ukryty (zostaje pinezka), żeby mapka zmieściła się w linii | `app-nav.css` | niska |
+| 3 | Przy otwartej karcie miejsca paski miast i województw są ukryte (świadomy kompromis wysokości) | `atlas.js`/CSS | niska |
+| 4 | i18n Warszawy (`i18n4.js`) to słownik zdań: każdy nowy tekst w `index.html` trzeba dopisać | `assets/i18n4.js` | średnia |
+| 5 | Plik `assets/poland-explorer.js` ma mylącą nazwę; zostały w nim tylko biblioteka tras i eksport .ics | Warszawa | niska |
+| 6 | Workflow `sync-icons.yml` pushuje bezpośrednio na `main` | CI | niska |
+| 7 | **Brak testu na fizycznym iPhonie/Safari** (wybór zdjęć z biblioteki, PWA, safe-area) | — | średnia |
+| 8 | `data/SCHEMA.md` i `PLAN_ROZWOJU.md` są historyczne i nieaktualne | docs | niska |
+| 9 | `*.github.io` i `*.wikipedia.org` są niedostępne z sandboxa Claude; wdrożenie sprawdza się w GitHub Actions | środowisko | info |
+
+### Rozwiązane problemy (dla kontekstu)
+- **Warszawa EN otwierała się po polsku** (`#atlasFloat` za skryptem i18n): przeniesiono element i dodano sprawdzanie `null` (5.3).
+- **Offline z Atlasu:** `ignoreSearch`, fallback tylko dla nawigacji, rejestracja SW w Atlasie (5.3).
+- **Zdublowane przełączniki języka i mapy:** jeden przełącznik PL | EN (5.1b).
+- **Błędne dopasowania Nominatim:** dopasowanie po rdzeniu nazwy, listy KEEP i OVERRIDES, ponawianie przy 429 (8.1/8.2).
+- **Biała obwódka wokół logo z JPG:** zastąpiona wektorem z `tools/build_logo.py` (8.3.1).
+- **Mapka nie pływała w Warszawie:** nagłówek z `backdrop-filter` tworzy własny kontekst dla `position:fixed`, więc mapkę przeniesiono poza nagłówek (8.5).
+- **Wyższy nagłówek Atlasu zmniejszał przybliżenie województwa:** pinezka w Atlasie dostała wysokość kafelka (8.5).
+- **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
 
 ## 4. Ostatnio wykonane prace
-- PR #9 (8.2): Kielce w Atlasie, 14 atrakcji kieleckich, weryfikacja OSM 166/207.
-- PR #7 (8.0/8.1): przewodniki wszystkich 16 województw.
-- PR #6 (6.0 + 7.0): województwa z obrysem, przewodnik regionu, premium mapa z reliefem, plany.
-- PR #4 (5.2/5.3): logo jako stały powrót, poprawki z raportu, test przeglądarkowy.
-- PR #2 (5.1b): jeden przełącznik PL | EN.
-- 8.3 (gałąź `claude/guide-wiki-passport`, zawiera PR #10 z dokumentacją): logo z mapą jako jeden znak, Wikipedia przy
-  atrakcjach, filtry przed mapą, wycieczka piesza w regionach i planie dnia, dziennik podróży (notatki + 5 zdjęć).
-- PR #10 (gałąź `claude/project-docs`): dokumentacja długoterminowa (ten plik, `ROADMAP.md`, `CHANGELOG.md`, `CLAUDE.md`).
-- Raport techniczny `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md` leży tylko na gałęzi
-  `claude/i-was-here-analysis-augprr` (niescalonej). Jego zalecenia wdrożono w PR #2–#4.
+- **8.5 (PR #14):**
+  - znaczki pocztowe miast na mapie;
+  - Pieczątki z „Byłem tu” i klikalnymi licznikami;
+  - punkt z mapy regionu → plan; podróż → plan dnia;
+  - logo: pinezka z lewej strony napisu i pływająca mapka Polski na środku u góry;
+  - usunięte duplikaty (przycisk „Polska”, język i styl w Profilu, lista w „Odkrywaj”) oraz 4 nieużywane pliki SVG.
+- **8.4 (PR #13):** kafelek-logo i ikona PWA, jedno dolne menu, Paszport (dziś Pieczątki), malowane motywy miast (w 8.5 zastąpione znaczkami).
+- **8.3.1 (PR #12):** wektorowe biało-czerwone logo (później zastąpione).
+- **8.3 (PR #11 + #10):** Wikipedia, filtry przed mapą, wycieczka piesza, dziennik podróży, dokumentacja długoterminowa.
+- **Projekty wizualne do wyboru** (prywatne tablice w claude.ai):
+  - 10 wersji logo: https://claude.ai/artifact/3vK2N3k66menpSRVZwnjkY
+  - 5 stylów ilustracji miast (wybrany styl 5): https://claude.ai/artifact/61rgJrriroFaGWZBLLHWae
 
-## 5. Zależności i konfiguracja środowiska
-- **Runtime aplikacji:** brak builda. Statyczne HTML/CSS/JS na GitHub Pages
-  (Settings → Pages → `main`, root).
-- **Zewnętrzne zasoby w runtime:**
-  - Leaflet 1.9 z `unpkg.com` i kafelki `tile.openstreetmap.org` (tylko `region.html`);
-  - linki zewnętrzne (Google Maps).
-  - Brak kluczy API i sekretów.
-- **Narzędzia deweloperskie:**
-  - Python 3.12+: `sync_database.py`, testy i `verify_coordinates.py` używają tylko
-    biblioteki standardowej; `build_geography.py` wymaga `numpy`, `Pillow`, `shapely`,
-    a `render_icons.py` wymaga `cairosvg` (uruchamiane w workflow `sync-icons.yml`);
+## 5. Zależności i środowisko
+- **Aplikacja:** statyczne HTML/CSS/vanilla JS, bez kroku budowania. Publikacja przez GitHub Pages z `main` (root).
+- **Zasoby zewnętrzne w działającej aplikacji:** Leaflet 1.9.4 z unpkg i kafelki OSM, tylko w `region.html`. Linki do Google Maps i Wikipedii. Brak kluczy API.
+- **Narzędzia:**
+  - Python 3.12+;
+  - `build_geography.py`: numpy, Pillow, shapely;
+  - `render_icons.py`: cairosvg;
   - Node 20+;
-  - Playwright 1.63 + Chromium (w CI instalowane przez workflow; w sandboxie Claude
-    jest preinstalowany globalnie, więc uruchamiaj z `NODE_PATH=$(npm root -g)`).
-- **Sieć potrzebna tylko narzędziom:**
-  - `nominatim.openstreetmap.org` dla `verify_coordinates.py` i `wiki_links.py`, `www.wikidata.org` dla `wiki_links.py`
-    (oba na allowliście środowiska Claude; `*.wikipedia.org` z sandboxa niedostępne); host jest na allowliście
-    środowiska Claude, a narzędzie trzyma tempo 2.5 s i ponawia przy 429;
-  - `raw.githubusercontent.com` (Natural Earth) i `s3.amazonaws.com` (Terrain Tiles) dla `build_geography.py`
-    (pliki wynikowe są w repo, więc zwykle nie trzeba).
-- **Uruchomienie lokalne:** `python3 -m http.server 8000` → http://localhost:8000/atlas.html.
-- **Sprawdzone 2026-11-07 na świeżym klonie z GitHuba:**
-  - sync bez różnic;
-  - `test_bundle`, `test_atlas`: OK;
-  - `node --check` wszystkich JS: OK;
-  - `py_compile` narzędzi: OK;
-  - `test_browser`: OK, bez błędów JS;
-  - wszystkie lokalne zasoby z HTML/SW istnieją.
+  - Playwright 1.63 + Chromium. W sandboxie Claude uruchamiaj z `NODE_PATH=$(npm root -g)`.
+- **Sieć dla narzędzi** (allowlista środowiska Claude): `nominatim.openstreetmap.org` (tempo 2,5 s, ponawianie przy 429) oraz `www.wikidata.org` (przy 429 odczekać).
+- **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
-## 6. Najbliższe zadanie do realizacji
-**Najpierw:** ręczny test 8.3 na iPhonie (wybór zdjęć z biblioteki w Safari/PWA, dziennik, logo). Potem:
-**Offline dla przewodnika regionu (błąd #1):** wkleić Leaflet lokalnie
-(`assets/vendor/leaflet/`), dodać go do cache SW i pokazywać czytelny komunikat
-„Mapa niedostępna offline / Map unavailable offline” zamiast pustego kafla. Bump cache.
-Następne w kolejce: patrz `ROADMAP.md` → „Etap A”.
+## 6. Najbliższe zadanie
+1. **Ręczny test 8.5 na iPhonie** (właściciel):
+   - pływająca mapka i logo;
+   - Pieczątki i „Byłem tu”;
+   - dziennik ze zdjęciami z biblioteki;
+   - nowa ikona: usuń skrót z ekranu początkowego i dodaj go ponownie.
+2. **Kopia zapasowa danych** (ROADMAP A1): eksport/import planów, pieczątek i dziennika do pliku.
+3. **Mapa regionu offline** (ROADMAP A2): Leaflet lokalnie w `assets/vendor/leaflet/` i komunikat PL/EN, gdy kafelków brak.

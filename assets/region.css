@@ -115,3 +115,4 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .hero h1,.hero p,.hero .eyebrow{position:relative;z-index:1}
 .hero p{max-width:58%}
 @media(max-width:420px){.hero-art{width:44%}.hero p{max-width:60%}}
+.btn.accent{background:#F47C28;color:#fff}

@@ -1,50 +1,76 @@
 # ROADMAP — I Was Here / Places & Memories
 
-Plan dalszego rozwoju na 2026-11-07, po wersji 8.2. Priorytety może zmieniać wyłącznie właściciel.
+Plan dalszego rozwoju po wersji **8.5** (stan 2026-11-07). Priorytety może zmieniać wyłącznie właściciel.
 Każdy punkt realizujemy jako osobny, mały PR z opisem po polsku. Scalenie do `main` następuje dopiero na polecenie właściciela („Scal”).
+Wiążące ustalenia wyglądu i nawigacji są w `DECYZJE_PROJEKTOWE.md`.
 
 Zasady nadrzędne, ważne na każdym etapie:
 - prawdziwa geografia wygrywa z dekoracją;
 - PL i EN zmieniamy zawsze razem;
 - nie wymyślamy ocen, historii ani współrzędnych;
 - przybliżone dane oznaczamy uczciwie;
-- nawigacja do Atlasu musi być zawsze dostępna;
-- nie używamy kluczy API w publicznym kodzie.
+- pływająca mapka Polski musi zostać zawsze dostępna;
+- na jednym ekranie nie dublujemy przycisków;
+- nie używamy kluczy API w publicznym kodzie;
+- dane użytkownika nigdy nie wychodzą z urządzenia bez jego zgody.
 
 ---
 
-## Etap A — stabilność i offline (najbliższe, wersja 8.3)
-1. **Offline mapy regionu.** Wkleić Leaflet lokalnie do `assets/vendor/leaflet/` i dodać go do cache SW. Gdy kafelki OSM są niedostępne, pokazać komunikat PL/EN.
-2. **Przycisk „Polska” na małych ekranach.** Nie może zasłaniać pinów ani etykiet na południowym wschodzie. Do zrobienia: kolizja z układem etykiet albo przesunięcie przycisku w trybie fokusu.
-3. **Paski przy otwartej karcie.** Rozważyć kompaktowy pasek miast nad kartą na wyższych ekranach.
-4. **Porządki nazw.** `assets/poland-explorer.js` zmienić na `trips-ics.js`. Zaktualizować odwołania, testy i cache.
-5. **Odświeżenie dokumentów historycznych.** Zaktualizować `data/SCHEMA.md` (stan: 184/36/207) albo oznaczyć `PLAN_ROZWOJU.md` jako archiwalny.
-6. **Ręczny test na iPhonie (właściciel).** Sekcja IPHONE w `README.txt` jako punkt wyjścia:
-   - instalacja PWA;
+## Zrobione (skrót)
+- 7.0: premium Atlas z reliefem.
+- 8.0–8.2: 16 przewodników regionów i Kielce; OSM 166/207.
+- 8.3: Wikipedia, dziennik ze zdjęciami, wycieczka piesza, filtry przed mapą.
+- 8.4: jedno dolne menu, kafelek-logo i ikona PWA.
+- 8.5:
+  - znaczki pocztowe miast;
+  - Pieczątki z „Byłem tu”;
+  - plany z mapy i podróż → plan dnia;
+  - logo z pinezką i pływająca mapka Polski;
+  - porządki.
+
+Szczegóły są w `CHANGELOG.md`.
+
+## Etap A — dane użytkownika i offline (najbliższe, 8.6)
+1. **Kopia zapasowa:** „Eksportuj / Importuj moje dane” w Profilu.
+   - Zakres: plik JSON z planami (`iwh_trips`, `iwh_days`), pieczątkami (`iwh_visited`, `iwh_region_visited`, `odkryjWarszawe_1.visited`) i dziennikiem; zdjęcia zakodowane w base64 albo w pliku .zip.
+   - Import scala dane, niczego nie kasuje.
+   - Na iPhonie eksport idzie przez arkusz „Udostępnij” lub pobieranie pliku.
+2. **Offline mapy regionu:**
+   - Leaflet lokalnie w `assets/vendor/leaflet/` i w cache SW;
+   - bez kafelków OSM czytelny komunikat PL/EN, a lista i plan działają dalej.
+3. **Pływająca mapka na małych ekranach:** nie może zasłaniać etykiet u góry mapy Atlasu (np. Gdańsk). Rozwiązania do rozważenia: mniejsza mapka na mapie Atlasu albo automatyczne przesunięcie widoku.
+4. **Porządki:** zmienić nazwę `assets/poland-explorer.js` na `trips-ics.js` (z odwołaniami, testami i cache); zaktualizować `data/SCHEMA.md` albo oznaczyć go jako archiwalny razem z `PLAN_ROZWOJU.md`.
+5. **Ręczny test na iPhonie** (właściciel):
+   - instalacja PWA i nowa ikona;
+   - pływająca mapka;
+   - Pieczątki;
+   - dziennik ze zdjęciami z biblioteki;
    - offline;
-   - safe area;
-   - przełącznik języka;
-   - powrót do Atlasu.
+   - safe-area.
 
-## Etap B — jakość treści (8.4–8.6)
-0. **Wikipedia:** rozszerzyć potwierdzone artykuły (ręczne QID Wikidata dla miejsc bez tagu w OSM, np. Wawel) — dziś reszta ma uczciwy link wyszukiwania.
-1. **Opisy EN dla Warszawy.** Ok. 158 atrakcji ma placeholder. Tłumaczymy partiami po dzielnicach, ręcznie lub z weryfikacją. Przy faktach historycznych nie stosujemy tłumaczenia maszynowego bez kontroli.
-2. **Weryfikacja współrzędnych Warszawy.** Rozszerzyć `verify_coordinates.py` na `data/atrakcje.json`. Dodać `coordinateStatus` i atrybucję ODbL.
-3. **Pozostałe 41 miejsc regionalnych.** Dopasować je ręcznie do obiektów OSM (OVERRIDES z identyfikatorem OSM) albo zostawić z oznaczeniem „orientacyjne”.
-4. **Mazowieckie.** Rozbudować bazę poza Warszawą, np. Płock, Pułtusk, Czersk, Kampinos, Żelazowa Wola, Liw. Przy każdym wpisie podać źródło.
+## Etap B — Pieczątki i plany 2.0 (8.7)
+1. Pieczątki regionów i Warszawy jako **znaczki** w siatce, a nie tylko lista. Znaczek województwa za komplet miejsc w regionie, jak odznaki.
+2. Data zdobycia pieczątki („Byłem tu: 12.08.2027”) oraz podpis i data przy zdjęciach w dzienniku.
+3. Atrakcje Warszawy w planach dnia Atlasu (nowy typ pozycji `{t:'waw',id}` obsługiwany przez `A.resolve`).
+4. Wspólne dane regionów i Warszawy w Pieczątkach na każdej stronie (lekki indeks nazw zamiast pełnego `regiony.js`).
 
-## Etap C — kolejne pełne przewodniki miejskie (9.x)
-1. Wybrać drugie miasto z pełnym przewodnikiem: Kraków albo Gdańsk (decyzja właściciela).
-2. Wydzielić wspólny silnik przewodnika miasta z `index.html`, żeby nie kopiować 58 KB HTML. Do tego wprowadzić dane `data/miasta/<id>.json` i jeden szablon `city.html?city=…`.
-3. Zastąpić DOM-walker `i18n4.js` słownikiem kluczy, tak jak w `atlas.js` i `region.js`.
-4. W Atlasie oznaczyć różnicę statusów: „Pełny przewodnik” / „Atrakcje w przewodniku regionu”.
+## Etap C — jakość treści (8.8–8.9)
+1. **Wikipedia:** ręczne QID Wikidata dla miejsc bez tagu w OSM (dziś 97 regionów i 115 atrakcji Warszawy ma tylko wyszukiwanie).
+2. **Opisy EN Warszawy:** ok. 158 do przetłumaczenia redakcyjnie, partiami po dzielnicach, bez zmyślania historii.
+3. **Współrzędne Warszawy** w OSM (rozszerzyć `verify_coordinates.py`); pozostałe 41 miejsc regionalnych.
+4. **Mazowieckie poza Warszawą:** Płock, Pułtusk, Czersk, Kampinos, Żelazowa Wola, Liw; przy każdym wpisie źródło.
+5. Motywy-znaczki dla **Lubuskiego i Opolskiego** (np. Zielona Góra lub Świebodzin, Opole), jeśli właściciel doda te miasta do Atlasu.
 
-## Etap D — wspomnienia i konto (10.x, wymaga decyzji)
-1. ~~Rozbudować wspomnienia: notatki i zdjęcia lokalnie (IndexedDB).~~ **Zrobione w 8.3** (dziennik: notatki + do 5 zdjęć). Dalej: data wizyty i podpisy zdjęć.
-2. **Priorytet po 8.3:** eksport i import danych użytkownika (plany, pieczątki, dziennik ze zdjęciami — plik .zip/JSON) jako kopia zapasowa bez backendu, bo wyczyszczenie danych Safari usuwa dziennik.
-3. Synchronizacja między urządzeniami: jest możliwa tylko z backendem i polityką prywatności, więc wymaga osobnej decyzji właściciela. Nie dodajemy jej bez zgody.
+## Etap D — kolejne pełne przewodniki miejskie (9.x)
+1. Drugie miasto z pełnym przewodnikiem: Kraków albo Gdańsk. Wybór należy do właściciela.
+2. Wspólny silnik przewodnika miasta: `city.html?city=…` z danymi w `data/miasta/<id>.json` zamiast kopiowania `index.html`.
+3. Słownik kluczy i18n zamiast słownika zdań w `i18n4.js`.
+4. W Atlasie wyraźny status: „Pełny przewodnik” / „Atrakcje w przewodniku regionu”.
+
+## Etap E — konto i synchronizacja (10.x, wymaga decyzji właściciela)
+- Synchronizacja między urządzeniami wymaga backendu i polityki prywatności. Nie dodajemy jej bez zgody właściciela.
 
 ## Poza zakresem bez wyraźnej zgody właściciela
-- Migracja do React, Vite, MapLibre lub backendu (dawny plan `PLAN_ROZWOJU.md`).
+- Migracja do React, Vite, MapLibre lub backendu (dawny `PLAN_ROZWOJU.md`).
 - Live oceny Google, klucz Places API i routing WTP w czasie rzeczywistym.
 - Automatycznie generowane opisy historyczne bez weryfikacji.
