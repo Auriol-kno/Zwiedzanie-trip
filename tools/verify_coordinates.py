@@ -51,11 +51,24 @@ GENERIC = {"zamek", "zamku", "muzeum", "park", "parku", "kosciol", "kosciola", "
 norm = lambda t: re.sub(r"[^a-z0-9 ]", " ", t.lower().translate(str.maketrans("ąćęłńóśźż", "acelnoszz")))
 def stems(text):
     return {w[:5] for w in norm(text).split() if len(w) >= 4}
-def name_ok(p, r):
-    """Wspólne znaczące słowo (pierwsze 5 liter — odporne na odmianę) albo nazwa ogólna przy bardzo małej odległości."""
-    ours = stems(p["name"]["pl"] + " " + p["name"]["en"]) - {g[:5] for g in GENERIC}
+# Rozległe obiekty i ulice: punkt redakcyjny wskazuje miejsce zwiedzania (np. wydmy w Łebie), a nie środek parku
+# czy siedzibę dyrekcji — nie przesuwamy go na podstawie wyszukiwania tekstowego.
+KEEP = {"au-kanal", "go-biebrza", "le-wydmy", "mi-wolinski-pn", "wi-park", "lo-piotrkowska", "bw-park", "zw-roztocze", "oj-park",
+        "kp-granica", "he-mierzeja", "tu-bory", "dr-park", "bi-poloniny", "kr-krutynia", "ta-morskie-oko", "kp-sniezka", "sk-lysica"}
+AREA_TYPES = {"national_park", "protected_area", "nature_reserve", "park", "canal", "peninsula", "river", "forest", "wood", "ridge", "valley"}
+PLACE_TYPES = {"village", "hamlet", "town", "city", "suburb", "neighbourhood", "quarter", "administrative", "isolated_dwelling", "locality"}
+def name_ok(p, r, d):
+    """Wspólne znaczące słowo (pierwsze 5 liter — odporne na odmianę); nazwa miejscowości się nie liczy.
+    Nazwa ogólna (np. „Rynek”) — tylko blisko dotychczasowego punktu i w tej samej miejscowości."""
+    town = stems(p["town"])
+    ours = stems(p["name"]["pl"] + " " + p["name"]["en"]) - {g[:5] for g in GENERIC} - town
     theirs = stems((r.get("name") or "") + " " + r["display_name"].split(",")[0])
-    return bool(ours & theirs)
+    if r.get("type") in PLACE_TYPES and not norm(p["name"]["pl"]).startswith(norm(p["town"])) \
+            and norm(r.get("name") or "").strip() != norm(p["name"]["pl"]).strip():
+        return False
+    if ours & theirs:
+        return True
+    return d <= 1.5 and bool(theirs & {g[:5] for g in GENERIC}) and bool(town & stems(r["display_name"]))
 def area_km(r):
     b = [float(x) for x in r["boundingbox"]]
     return max((b[1] - b[0]) * 111.2, (b[3] - b[2]) * 111.2 * math.cos(math.radians(b[0])))
@@ -108,18 +121,23 @@ def main():
     last, ok, review = 0.0, [], []
     for i, p in enumerate(db["places"]):
         best = None
+        if p["id"] in KEEP:
+            review.append(p["id"]); print(f"[{i + 1}/{len(db['places'])}] {p['id']}: punkt redakcyjny (obszar/ulica)", flush=True); continue
         for q in queries(p):
             res, last = search(q, cache, last)
             cpath.write_text(json.dumps(cache, ensure_ascii=False))
             for r in res:
                 state = (r.get("address") or {}).get("state", "").lower()
-                if VOIV[p["region"]] not in state or not name_ok(p, r):
-                    continue
                 d = km((p["lat"], p["lon"]), (float(r["lat"]), float(r["lon"])))
-                # Duży obszar (park narodowy, półwysep, kanał): środek obszaru nie jest miejscem zwiedzania —
-                # jeśli nasz punkt leży w obrysie obiektu, potwierdzamy go bez przesuwania.
-                if area_km(r) > 2.5 and inside_bbox(p, r):
-                    d, r = 0.0, dict(r, lat=str(p["lat"]), lon=str(p["lon"]), _area=True)
+                if VOIV[p["region"]] not in state or not name_ok(p, r, d):
+                    continue
+                # Duży obszar (park narodowy, półwysep, kanał): środek obszaru ani siedziba dyrekcji nie są miejscem
+                # zwiedzania. Punkt w obrysie obiektu potwierdzamy bez przesuwania; inaczej zostaje do sprawdzenia.
+                if r.get("type") in AREA_TYPES or area_km(r) > 2.5:
+                    if inside_bbox(p, r):
+                        d, r = 0.0, dict(r, lat=str(p["lat"]), lon=str(p["lon"]), _area=True)
+                    elif d > 1.5:
+                        continue
                 if d <= MAX_KM and (best is None or d < best[0]):
                     best = (d, r, q)
             if best:

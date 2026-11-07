@@ -60,7 +60,8 @@ for p in region_places:
     assert set(p["cats"]) <= set(categories), p["id"]
     assert 49.0 < p["lat"] < 54.9 and 14.1 < p["lon"] < 24.2, p["id"]
     assert p["time"] > 0 and 1 <= p["visitValue"] <= 5, p["id"]
-    assert p["coordinateStatus"] in ("orientacyjne", "redakcyjne", "zweryfikowane"), p["id"]
+    assert p["coordinateStatus"] in ("orientacyjne", "redakcyjne", "zweryfikowane", "osm"), p["id"]
+    assert p["coordinateStatus"] != "osm" or (p.get("osm", {}).get("type") and p["osm"].get("id")), "Brak identyfikatora OSM: " + p["id"]
     assert p["url"] is None or p["url"].startswith("https://"), p["id"]
 write("regiony.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
 guided = sum(r["status"] != "planned" for r in regions)

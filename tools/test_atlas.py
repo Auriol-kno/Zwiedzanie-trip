@@ -122,7 +122,8 @@ for p in regdb["places"]:
     poly = geo_regions[by_id[p["region"]]["geo"]]
     # Granice Natural Earth są uproszczone (np. Wisła przy Sandomierzu) — dopuszczamy 3 km od krawędzi.
     assert contains(p["lon"], p["lat"], poly) or edge_km(p["lon"], p["lat"], poly) < 3, "Miejsce poza województwem: " + p["id"]
-    assert p["coordinateStatus"] == "orientacyjne" or p["sourceKind"] != "redakcyjna_selekcja", "Nie oznaczaj szacunkowych współrzędnych jako zweryfikowanych: " + p["id"]
+    # Zweryfikowane tylko z identyfikatorem obiektu OpenStreetMap; pozostałe uczciwie „orientacyjne”.
+    assert p["coordinateStatus"] == "orientacyjne" or (p["coordinateStatus"] == "osm" and p["osm"]["id"]), "Nie oznaczaj szacunkowych współrzędnych jako zweryfikowanych: " + p["id"]
 for r in regdb["regions"]:
     has = any(p["region"] == r["id"] for p in regdb["places"])
     assert has == (r["status"] != "planned"), "Status województwa niezgodny z danymi: " + r["id"]
@@ -163,7 +164,8 @@ city_pl = {c[0]: c[1] for c in city_rows}
 for r in regdb["regions"]:
     for cid in r["cities"]:
         assert cid == "warsaw" or any(p["region"] == r["id"] and p["town"] == city_pl[cid] for p in regdb["places"]), "Brak atrakcji miasta: " + cid
-assert all(p["coordinateStatus"] == "orientacyjne" for p in regdb["places"]), "Współrzędne regionalne są orientacyjne"
+assert all(p["coordinateStatus"] in ("orientacyjne", "osm") for p in regdb["places"]), "Status współrzędnych"
+assert sum(p["coordinateStatus"] == "osm" for p in regdb["places"]) >= 150 and "OpenStreetMap" in regdb.get("coordinateSource", ""), "Weryfikacja OSM"
 print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 13 miast w swoich województwach, relief, plany.")
 print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
