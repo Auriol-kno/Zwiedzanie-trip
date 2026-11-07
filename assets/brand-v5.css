@@ -14,5 +14,6 @@
 @media(max-width:420px){.brand .mark.mark-atlas{width:48px;height:48px}.brand .mark.mark-atlas img{width:48px;height:48px}}
 
 /* 8.5 — pinezka z pejzażem obok napisu, jak w logo właściciela (kafelek · napis · pinezka) */
-.brand-pin-l{flex:none;width:24px;height:33px;margin-left:2px;filter:drop-shadow(0 2px 3px #09262e33)}
-@media(max-width:400px){.brand-pin-l{width:18px;height:25px;margin-left:0}}
+.brand-pin-l{flex:none;width:41px;height:56px;margin-left:2px;filter:drop-shadow(0 3px 4px #09262e40)}
+@media(max-width:380px){.brand-pin-l{width:35px;height:48px;margin-left:0}}
+@media(max-width:360px){.brand-pin-l{width:29px;height:40px}}

@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-5-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Cache PWA:** `i-was-here-v8-5-1-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 
 > Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
 > dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.

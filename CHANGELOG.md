@@ -5,7 +5,7 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-1-20261107`.
 
 ---
 
@@ -18,11 +18,12 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-20261107`.
   (odblokuj/odznacz); wyszukiwarka miejsc w regionach i atrakcji Warszawy z „Byłem tu”; dziennik ze zdjęciami.
 - **Punkt na mapie regionu → plan:** w szczegółach miejsca przyciski „🗓️ Do planu dnia” i „🧳 Do podróży” (plany Atlasu).
 - **Podróż → plan dnia:** w Planach przycisk „🗓️ Dodaj do planu dnia” tworzy plan dnia z pozycji podróży.
-- **Logo:** pinezka z pejzażem wróciła obok napisu (kafelek · napis · pinezka) na wszystkich stronach.
+- **Logo:** pinezka z pejzażem wróciła obok napisu (kafelek · napis · pinezka) na wszystkich stronach, w pełnym rozmiarze
+  (wysokość kafelka, 56 px; mniejsza tylko na ekranach ≤380 px).
 - **Porządki (duplikaty i nieużywane elementy):** usunięty pływający przycisk „Polska” (to samo robi logo); z Profilu usunięte
   wybór języka i stylu mapy (są w nagłówku i w panelu Warstwy); „Odkrywaj” w Atlasie otwiera wyszukiwarkę zamiast
   dublować listę miast i województw z paska; usunięte nieużywane pliki `brand-atlas.svg`, `brand-mark-flag.svg`,
-  `brand-pin.svg`, `logo-en.svg`. Dane użytkownika bez zmian. Cache `i-was-here-v8-5-20261107`.
+  `brand-pin.svg`, `logo-en.svg`. Dane użytkownika bez zmian. Cache `i-was-here-v8-5-1-20261107`.
 
 ## 8.4 — 2026-11-07 — gałąź `claude/brand-nav-passport`
 - **Nowe logo (wariant właściciela):** zielony kafelek ze złotą ramką, Polska z pejzażem, białą trasą i pomarańczową pinezką —
