@@ -10,7 +10,7 @@ const { chromium, devices } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
-  '.svg': 'image/svg+xml', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
+  '.svg': 'image/svg+xml', '.webp': 'image/webp', '.png': 'image/png', '.webmanifest': 'application/manifest+json' };
 
 function serve() {
   return new Promise(resolve => {
@@ -258,7 +258,7 @@ function check(ok, message) {
   await page.waitForSelector('#memJournal li.plan-item');
   check(await page.evaluate(() => document.querySelectorAll('#memJournal li.plan-item').length === 1 && /5 photos/.test(document.querySelector('#memJournal').textContent)
     && !!document.querySelector('#memJournal .journal-thumb img')), 'Atlas → Wspomnienia: dziennik podróży z miniaturą i licznikiem zdjęć');
-  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-atlas"]')), 'Atlas: logo z mapą Polski jako jeden znak');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-mark"]')), 'Atlas: logo z mapą Polski jako jeden znak');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

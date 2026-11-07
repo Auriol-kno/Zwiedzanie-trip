@@ -7,8 +7,8 @@
 .atlas-top-link{font-size:19px}
 @media(max-width:420px){.brand .mark{width:36px;height:42px}.brand .mark img{width:36px;height:44px}.brand small{font-size:7px;letter-spacing:.06em}.brand b{font-size:16px}.top-actions{gap:3px}}
 
-/* 8.3 — jeden znak: pinezka I Was Here wbita w mapę Polski (logo = powrót do Atlasu) */
-.brand .mark.mark-atlas{width:54px;height:56px}
-.brand .mark.mark-atlas img{width:54px;height:56px;filter:drop-shadow(0 3px 5px #09262e33)}
+/* 8.3.1 — logo właściciela (Polska biało-czerwona + pinezka z pejzażem, assets/brand-mark.svg); 8.3 — jeden znak: pinezka I Was Here wbita w mapę Polski (logo = powrót do Atlasu) */
+.brand .mark.mark-atlas{width:60px;height:57px}
+.brand .mark.mark-atlas img{width:60px;height:57px;object-fit:contain;filter:drop-shadow(0 3px 5px #09262e33)}
 .atlas-home:hover .mark-atlas img,.atlas-home:focus-visible .mark-atlas img{transform:translateY(-1px)}
-@media(max-width:420px){.brand .mark.mark-atlas{width:46px;height:48px}.brand .mark.mark-atlas img{width:46px;height:48px}}
+@media(max-width:420px){.brand .mark.mark-atlas{width:50px;height:48px}.brand .mark.mark-atlas img{width:50px;height:48px}}
