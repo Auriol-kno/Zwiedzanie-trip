@@ -29,6 +29,8 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 - `region.html`, `assets/region.js`, `assets/region.css`: regional guide (list, map, town/category filters, saved places, stamps, estimated day plan, PL/EN). The Atlas opens it from a province or town (`region.html?region=…&town=…`).
 - `data/atrakcje.js`, `data/restauracje.js` and `data/regiony.js` are browser-loaded **generated** copies; regenerate after changing JSON with `python tools/sync_database.py`.
 - `manifest.webmanifest`, `service-worker.js`: iPhone PWA and offline application cache. Bump the cache version whenever adding or changing cached files.
+- `assets/place-extras.js` + `.css` (8.3, loaded by all three pages): „More information — Wikipedia” links (verified article from the `wiki` field, otherwise an honest Wikipedia *search* link) and the **travel journal** (notes + up to 5 photos per place, stored only on the device in IndexedDB `iwh_journal`; keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<item key>`). Never upload or delete journal data without the owner's consent.
+- `assets/brand-atlas.svg`: the single logo symbol (pin inside the Poland silhouette) used top-left on every page; it always links back to the Atlas.
 - `tools/test_bundle.py` and `tools/test_atlas.py`: regression tests.
 - `.github/workflows/validate.yml`: GitHub Actions validation.
 
@@ -59,7 +61,7 @@ A lightweight static **HTML/CSS/vanilla JavaScript** PWA deployed through GitHub
 |---|---|
 | `PROJECT_STATUS.md` | Current state: working/partial features, known bugs, environment, next task |
 | `ROADMAP.md` | Development plan (stages A–D) and out-of-scope items |
-| `CHANGELOG.md` | Version history 3.x → 8.2 with PR numbers |
+| `CHANGELOG.md` | Version history 3.x → 8.3 with PR numbers |
 | `README.txt` | User-facing description (EN), iPhone installation |
 | `ATLAS_4_0.md`, `ATLAS_5_0.md`, `ATLAS_7_0.md` | Atlas release notes (7.0 = current map design) |
 | `REGIONY_6_0.md`, `REGIONY_8_0.md` | Regional guides, data model, OSM verification (8.1/8.2) |
@@ -75,6 +77,7 @@ for f in assets/*.js data/*.js service-worker.js tools/*.js; do node --check "$f
 NODE_PATH=$(npm root -g) node tools/test_browser.js   # Playwright/Chromium (preinstalled in Claude sandbox)
 python tools/verify_coordinates.py --cache .geo-cache/osm.json [--apply]   # needs nominatim.openstreetmap.org
 python tools/build_geography.py --cache .geo-cache [--no-relief]           # needs numpy, Pillow, shapely + network
+python tools/wiki_links.py --cache .geo-cache/wiki.json [--apply]          # Wikipedia links via OSM wikidata tag + Wikidata
 ```
 
 ## Data pipelines
@@ -82,10 +85,11 @@ python tools/build_geography.py --cache .geo-cache [--no-relief]           # nee
 - Regions: edit `data/regiony.json` (unique ids, `coordinateStatus` `osm`|`orientacyjne`) → `sync_database.py` → `data/regiony.js`; optionally `verify_coordinates.py --apply`.
 - Geography: only via `tools/build_geography.py` → `assets/poland-geography.js`, `assets/poland-relief.webp`.
 - Icons: `tools/render_icons.py` (cairosvg) run by `.github/workflows/sync-icons.yml`, which pushes PNGs to `main` (known exception).
+- Wikipedia: `tools/wiki_links.py --apply` writes `wiki: {qid, pl, en}` into `data/regiony.json` and `data/atrakcje.json` (only confirmed matches; Warsaw coordinates are not changed) → `sync_database.py`.
 - Any change to cached files → bump `KEY` in `service-worker.js` (format `i-was-here-v<ver>-<yyyymmdd>`).
 
 ## Environment (Claude Code cloud sandbox)
-- No secrets/API keys anywhere. Allowed extra host: `nominatim.openstreetmap.org` (tools only; 2.5 s delay, honour 429).
+- No secrets/API keys anywhere. Allowed extra hosts: `nominatim.openstreetmap.org` (tools only; 2.5 s delay, honour 429) and `www.wikidata.org` (tools only). `*.wikipedia.org` is not reachable from the sandbox.
 - `*.github.io` is not reachable from the sandbox: verify deployment via the GitHub Actions run „pages build and deployment”.
 - GitHub via MCP tools (no `gh` CLI except search); push to the session's `claude/...` branch.
 

@@ -14,7 +14,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const T={
 pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo · częściowo dostępne',lead:n=>'Wybierz miejscowość lub temat, zapisuj miejsca i ułóż plan dnia. '+n+' starannie wybranych miejsc do zwiedzania.',
  sights:'Atrakcje',towns:'Miejscowości',stamps:'Twoje pieczątki',saved:'Zapisane',map:'Mapa',fit:'⌖ Cały region',all:'Wszystkie',search:'Szukaj w regionie',searchPh:'np. zamek, jaskinia, Sandomierz…',
- plan:'Plan dnia',planSub:'Szacunkowa trasa z wybranej miejscowości',start:'Start',clock:'Godzina startu',hours:'Czas zwiedzania',car:'Samochód',transit:'Komunikacja',
+ plan:'Plan dnia',planSub:'Szacunkowa trasa z wybranej miejscowości',start:'Start',clock:'Godzina startu',hours:'Czas zwiedzania',car:'Samochód',transit:'Komunikacja',walkMode:'Pieszo',filters:'Co pokazać na mapie?',filtersSub:'Wybierz miejscowość i rodzaje miejsc — mapa i lista zmienią się razem',walkNote:'Wycieczka piesza: tempo ok. 4,5 km/h, tylko miejsca do ok. 6 km od miejscowości startowej. ',
  planNote:'Czasy przejazdu są szacowane z odległości (bez korków i rozkładów). Godziny otwarcia i ceny sprawdź na stronie obiektu przed wyjazdem.',
  planEmpty:'Brak miejsc pasujących do filtrów. Zmień kategorię lub wydłuż czas.',places:'Miejsca do zwiedzania',count:(n)=>n+' '+(n===1?'miejsce':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'miejsca':'miejsc'),
  empty:'Brak miejsc dla wybranych filtrów.',visit:'wizyta',drive:'dojazd',walk:'spacer',value:'Warto odwiedzić',valueNote:'ocena redakcyjna, nie Google',time:'Czas na miejscu',town:'Miejscowość',
@@ -22,11 +22,11 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
- footer:'I Was Here 8.1 • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
+ footer:'I Was Here 8.3 • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
  title:'Przewodnik regionu',atlas:'Atlas Polski',back:'I Was Here — wróć do Atlasu Polski',langLabel:'Język: polski. Przełącz na angielski',min:'min',h:'godz.'},
 en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly available',lead:n=>'Pick a town or a theme, save places and build a day plan. '+n+' carefully selected places to visit.',
  sights:'Sights',towns:'Towns',stamps:'Your stamps',saved:'Saved',map:'Map',fit:'⌖ Whole region',all:'All',search:'Search this region',searchPh:'e.g. castle, cave, Sandomierz…',
- plan:'Day plan',planSub:'Estimated route from the chosen town',start:'Start',clock:'Start time',hours:'Sightseeing time',car:'Car',transit:'Public transport',
+ plan:'Day plan',planSub:'Estimated route from the chosen town',start:'Start',clock:'Start time',hours:'Sightseeing time',car:'Car',transit:'Public transport',walkMode:'Walk',filters:'What to show on the map',filtersSub:'Pick a town and the types of places — the map and the list update together',walkNote:'Walking tour: about 4.5 km/h, only places within about 6 km of the starting town. ',
  planNote:'Travel times are estimated from distance (no traffic or timetables). Check opening hours and prices on the venue’s website before you go.',
  planEmpty:'No places match the filters. Change the category or allow more time.',places:'Places to visit',count:n=>n+' '+(n===1?'place':'places'),
  empty:'No places match the selected filters.',visit:'visit',drive:'drive',walk:'walk',value:'Worth visiting',valueNote:'editorial rating, not Google',time:'Time on site',town:'Town',
@@ -34,7 +34,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
- footer:'I Was Here 8.1 • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
+ footer:'I Was Here 8.3 • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
  title:'Regional guide',atlas:'Poland Atlas',back:'I Was Here — back to the Poland Atlas',langLabel:'Language: English. Switch to Polish',min:'min',h:'h'}
 };
 const CITY={warsaw:{pl:'Warszawa',en:'Warsaw',url:'./index.html',icon:'🏛️',pl2:'184 atrakcje · 18 dzielnic',en2:'184 sights · 18 districts'}};
@@ -43,7 +43,7 @@ const region=DB&&DB.regions.find(r=>r.id===(qs.get('region')||'swietokrzyskie'))
 const all=region?DB.places.filter(p=>p.region===region.id):[];
 const CATS=DB?DB.categories:{};
 const towns=[...new Set(all.map(p=>p.town))].sort((a,b)=>all.filter(p=>p.town===b).length-all.filter(p=>p.town===a).length||a.localeCompare(b,'pl'));
-const state={town:towns.includes(qs.get('town'))?qs.get('town'):'all',cats:[],search:'',onlyFav:false,mode:'driving',hours:6,clock:'10:00',start:null};
+const state={town:towns.includes(qs.get('town'))?qs.get('town'):'all',cats:[],search:'',onlyFav:false,mode:qs.get('town')?'walking':'driving',hours:6,clock:'10:00',start:null};
 let favs=readStore('iwh_region_favs',[]),visited=readStore('iwh_region_visited',[]);
 const t=()=>T[lang];
 const name=p=>p.name[lang]||p.name.pl;
@@ -52,7 +52,7 @@ const catLabel=c=>CATS[c]?CATS[c][0]+' '+(lang==='en'?CATS[c][2]:CATS[c][1]):c;
 
 const km=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*r,q=Math.sin(dl/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(q))};
 // Szacunek: droga ≈ 1,3 × odległość w linii prostej; krótkie odcinki pieszo.
-function leg(a,b){const d=km(a,b)*1.3;if(d<1.6)return{mins:Math.max(3,Math.round(d/4.5*60)),kind:'walk',km:d};
+function leg(a,b){const d=km(a,b)*1.3;if(d<1.6||state.mode==='walking')return{mins:Math.max(3,Math.round(d/4.5*60)),kind:'walk',km:d};
  return state.mode==='transit'?{mins:Math.round(d/35*60+12),kind:'drive',km:d}:{mins:Math.round(d/55*60+6),kind:'drive',km:d}}
 const townCenter=tn=>{const ps=all.filter(p=>p.town===tn);return{lat:ps.reduce((a,p)=>a+p.lat,0)/ps.length,lon:ps.reduce((a,p)=>a+p.lon,0)/ps.length}};
 const fmtClock=m=>String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(Math.round(m%60)).padStart(2,'0');
@@ -95,7 +95,7 @@ function renderTexts(){
  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
  set('savedLabel',x.saved);set('statPlacesLabel',x.sights);set('statTownsLabel',x.towns);set('statStampsLabel',x.stamps);set('mapTitle',x.map);set('fitMap',x.fit);
  set('searchLabel',x.search);$('#rSearch').placeholder=x.searchPh;set('planTitle',x.plan);set('planSub',x.planSub);set('planStartLabel',x.start);set('planClockLabel',x.clock);
- set('planHoursLabel',x.hours);set('modeCar',x.car);set('modeTransit',x.transit);set('planNote',x.planNote);set('placesTitle',x.places);set('rFooter',x.footer);
+ set('planHoursLabel',x.hours);set('modeCar',x.car);set('modeTransit',x.transit);set('modeWalk',x.walkMode);set('filtersTitle',x.filters);set('filtersSub',x.filtersSub);set('placesTitle',x.places);set('rFooter',x.footer);
  set('navMap',x.navMap);set('navPlan',x.navPlan);set('navPlaces',x.navPlaces);$('#dClose').setAttribute('aria-label',x.close);
  if(!region)return;
  set('rEyebrow',region.status==='partial'?x.eyebrowPartial:x.eyebrow);
@@ -133,7 +133,8 @@ function renderPlanStart(){
 }
 // Zachłanny plan: najbliższe ciekawe miejsce, dopóki mieści się w czasie. Wybór premiuje ocenę redakcyjną.
 function buildPlan(){
- const cand=all.filter(p=>(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id)));
+ const c0=townCenter(state.start);
+ const cand=all.filter(p=>(state.mode!=='walking'||km(c0,p)<=6)&&(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id)));
  const limit=state.hours*60,[hh,mm]=state.clock.split(':').map(Number);let clock=hh*60+mm,used=0,at=townCenter(state.start),out=[];const left=new Set(cand.map(p=>p.id));
  while(left.size&&out.length<10){
   let best=null;
@@ -147,11 +148,12 @@ function buildPlan(){
 function renderPlan(){
  const x=t(),{out,used}=buildPlan();
  $('#planHoursValue').textContent=state.hours+' '+x.h;
+ $('#planNote').textContent=(state.mode==='walking'?x.walkNote:'')+x.planNote;
  $$('#planMode button').forEach(b=>b.classList.toggle('active',b.dataset.mode===state.mode));
  $('#planList').innerHTML=out.length?out.map((s,i)=>'<li><span class="n">'+(i+1)+'</span><button type="button" data-open="'+s.p.id+'"><b>'+esc(name(s.p))+'</b><small>'+esc(s.p.town)+' · '+fmtClock(s.arrive)+'–'+fmtClock(s.arrive+s.p.time)+' · '+x.visit+' '+fmtDur(s.p.time)+'</small><small>'+(s.leg.kind==='walk'?'🚶 '+x.walk:(state.mode==='transit'?'🚌 ':'🚗 ')+x.drive)+' ~'+fmtDur(s.leg.mins)+' · '+s.leg.km.toFixed(1)+' km</small></button></li>').join(''):'<li class="empty">'+esc(x.planEmpty)+'</li>';
  const a=$('#planMaps');
  if(out.length){const o=townCenter(state.start),pts=out.map(s=>s.p.lat+','+s.p.lon),dest=pts.pop();
-  a.href='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o.lat.toFixed(5)+','+o.lon.toFixed(5))+'&destination='+encodeURIComponent(dest)+(pts.length?'&waypoints='+encodeURIComponent(pts.join('|')):'')+'&travelmode='+(state.mode==='transit'?'transit':'driving');
+  a.href='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o.lat.toFixed(5)+','+o.lon.toFixed(5))+'&destination='+encodeURIComponent(dest)+(pts.length?'&waypoints='+encodeURIComponent(pts.join('|')):'')+'&travelmode='+(state.mode==='transit'?'transit':state.mode==='walking'?'walking':'driving');
   a.removeAttribute('aria-disabled');a.textContent='🧭 Google Maps · '+fmtDur(used)}else{a.href='#';a.setAttribute('aria-disabled','true');a.textContent='🧭 Google Maps'}
 }
 function renderAll(){renderTexts();renderStats();renderCityLinks();renderChips();renderList();renderPlanStart();renderPlan();renderMap()}
@@ -163,13 +165,14 @@ function openDetail(id){
  const dir='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(p.lat+','+p.lon);
  const search='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.name.pl+', '+p.town);
  $('#dBody').innerHTML='<div class="big" aria-hidden="true">'+p.icon+'</div><div class="eyebrow" style="color:var(--accent)">'+esc(p.town)+' · '+esc(p.cats.map(catLabel).join(' · '))+'</div><h2 id="dTitle">'+esc(name(p))+'</h2>'+
-  (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+
+  (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+(window.IWH_EXTRAS?IWH_EXTRAS.wikiHTML(p,lang):'')+
   '<div class="facts"><div><small>'+esc(x.time)+'</small><b>'+fmtDur(p.time)+'</b></div><div><small>'+esc(x.value)+'</small><b>'+p.visitValue+'/5</b> <small style="display:inline">('+esc(x.valueNote)+')</small></div></div>'+
   '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn secondary" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
   '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
-  ('speechSynthesis' in window?'<button type="button" class="btn secondary" data-speak="'+id+'">'+esc(x.listen)+'</button>':'')+'</div>'+
+  ('speechSynthesis' in window?'<button type="button" class="btn secondary" data-speak="'+id+'">'+esc(x.listen)+'</button>':'')+
+  (window.IWH_EXTRAS?IWH_EXTRAS.journal.button('reg:'+id,name(p)+' · '+p.town,p.icon,lang):'')+'</div>'+
   '<div class="warn">'+esc(p.coordinateStatus==='osm'?x.osm:x.approx)+'</div>';
- $('#detail').classList.add('show');document.body.style.overflow='hidden';$('#dClose').focus();
+ $('#detail').classList.add('show');document.body.style.overflow='hidden';$('#dClose').focus();window.IWH_EXTRAS?.journal.counts($('#dBody'));
 }
 function closeDetail(){$('#detail').classList.remove('show');document.body.style.overflow='';if(window.speechSynthesis)speechSynthesis.cancel();lastFocus?.focus?.()}
 function toggle(listName,id){

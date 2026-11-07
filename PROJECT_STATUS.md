@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-07 · **Wersja:** 8.2 · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-2-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
+**Cache PWA:** `i-was-here-v8-3-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 
 > Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
 > dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.
@@ -46,6 +46,13 @@
 - Logo w lewym górnym rogu zawsze wraca do Atlasu.
 
 ### Wspólne
+- **Logo = jeden znak** (`assets/brand-atlas.svg`, pinezka w sylwetce Polski) w lewym górnym rogu każdej strony; zawsze wraca do Atlasu.
+- **„Więcej informacji o miejscu — Wikipedia”** przy opisie każdej atrakcji (regiony + Warszawa), PL/EN; potwierdzony artykuł
+  (OSM `wikidata` + Wikidata) albo uczciwe wyszukiwanie w Wikipedii — patrz liczby w §2.
+- **Dziennik podróży (paszport):** notatki + do 5 zdjęć z biblioteki na miejsce, lokalnie w IndexedDB `iwh_journal`;
+  w szczegółach atrakcji, paszporcie Warszawy (📝) i w Atlasie → Wspomnienia.
+- **Wycieczka piesza:** Warszawa (planer), przewodnik regionu (domyślnie przy wejściu z miejscowości), Atlas → Mój plan dnia.
+- **Wybór rodzajów atrakcji przed mapą** w regionie i w Warszawie.
 - Język PL/EN (`tubylem_lang`) jest wspólny dla Atlasu, regionów i Warszawy.
 - PWA na iPhone'a: manifest, `start_url ./atlas.html`, skróty, safe-area,
   service worker network-first z cache offline plików aplikacji.
@@ -56,6 +63,9 @@
   - Playwright (`tools/test_browser.js`).
 
 ## 2. Funkcje niedokończone / częściowe
+- **Wikipedia:** potwierdzone artykuły ma 110 z 207 miejsc regionalnych i 69 ze 184 atrakcji Warszawy
+  (OSM `wikidata` + Wikidata, 9 dopasowań odrzuconych ręcznie — lista `REJECT` w `tools/wiki_links.py`). Pozostałe mają
+  uczciwy link „szukaj w Wikipedii”. Kolejne artykuły: ROADMAP etap B.
 - Spośród 14 miast tylko **Warszawa** ma pełny przewodnik miejski. Pozostałe 13 miast ma
   swoje atrakcje w przewodniku województwa i nie wolno ich przedstawiać jako pełnych przewodników.
 - **Mazowieckie** poza Warszawą ma tylko 8 miejsc.
@@ -68,8 +78,8 @@
 - **Komunikacja i trasy** to szacunki i linki zewnętrzne (Google Maps),
   bez walidowanego routingu WTP w czasie rzeczywistym.
 - **Oceny Google** są tylko linkiem zewnętrznym; `googleRating` ma wartość `null` (bez klucza Places API).
-- **Wspomnienia/Profil** działają tylko lokalnie (`localStorage`): nie ma kont,
-  synchronizacji ani zdjęć.
+- **Wspomnienia/Profil/Dziennik** działają tylko lokalnie (`localStorage` + IndexedDB): nie ma kont, synchronizacji
+  ani kopii zapasowej — wyczyszczenie danych Safari usuwa notatki i zdjęcia (eksport/import: ROADMAP etap D).
 
 ## 3. Znane błędy i ryzyka
 | # | Problem | Gdzie | Waga |
@@ -90,8 +100,9 @@
 - PR #6 (6.0 + 7.0): województwa z obrysem, przewodnik regionu, premium mapa z reliefem, plany.
 - PR #4 (5.2/5.3): logo jako stały powrót, poprawki z raportu, test przeglądarkowy.
 - PR #2 (5.1b): jeden przełącznik PL | EN.
-- Bieżący PR (gałąź `claude/project-docs`): dokumentacja długoterminowa (ten plik,
-  `ROADMAP.md`, `CHANGELOG.md`, rozszerzony `CLAUDE.md`).
+- 8.3 (gałąź `claude/guide-wiki-passport`, zawiera PR #10 z dokumentacją): logo z mapą jako jeden znak, Wikipedia przy
+  atrakcjach, filtry przed mapą, wycieczka piesza w regionach i planie dnia, dziennik podróży (notatki + 5 zdjęć).
+- PR #10 (gałąź `claude/project-docs`): dokumentacja długoterminowa (ten plik, `ROADMAP.md`, `CHANGELOG.md`, `CLAUDE.md`).
 - Raport techniczny `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md` leży tylko na gałęzi
   `claude/i-was-here-analysis-augprr` (niescalonej). Jego zalecenia wdrożono w PR #2–#4.
 
@@ -110,7 +121,8 @@
   - Playwright 1.63 + Chromium (w CI instalowane przez workflow; w sandboxie Claude
     jest preinstalowany globalnie, więc uruchamiaj z `NODE_PATH=$(npm root -g)`).
 - **Sieć potrzebna tylko narzędziom:**
-  - `nominatim.openstreetmap.org` dla `verify_coordinates.py`; host jest na allowliście
+  - `nominatim.openstreetmap.org` dla `verify_coordinates.py` i `wiki_links.py`, `www.wikidata.org` dla `wiki_links.py`
+    (oba na allowliście środowiska Claude; `*.wikipedia.org` z sandboxa niedostępne); host jest na allowliście
     środowiska Claude, a narzędzie trzyma tempo 2.5 s i ponawia przy 429;
   - `raw.githubusercontent.com` (Natural Earth) i `s3.amazonaws.com` (Terrain Tiles) dla `build_geography.py`
     (pliki wynikowe są w repo, więc zwykle nie trzeba).
@@ -124,6 +136,7 @@
   - wszystkie lokalne zasoby z HTML/SW istnieją.
 
 ## 6. Najbliższe zadanie do realizacji
+**Najpierw:** ręczny test 8.3 na iPhonie (wybór zdjęć z biblioteki w Safari/PWA, dziennik, logo). Potem:
 **Offline dla przewodnika regionu (błąd #1):** wkleić Leaflet lokalnie
 (`assets/vendor/leaflet/`), dodać go do cache SW i pokazywać czytelny komunikat
 „Mapa niedostępna offline / Map unavailable offline” zamiast pustego kafla. Bump cache.

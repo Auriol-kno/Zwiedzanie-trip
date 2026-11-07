@@ -1,0 +1,54 @@
+html[lang=en] [data-l=pl],html:not([lang=en]) [data-l=en]{display:none!important}
+/* I Was Here 8.3 — Wikipedia „Więcej informacji” i dziennik podróży (notatki + do 5 zdjęć). Granat/bursztyn jak Atlas. */
+.iwh-wiki{margin:12px 0 4px;display:flex;flex-direction:column;gap:4px}
+.iwh-wiki-link{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;min-height:44px;padding:10px 14px;border-radius:14px;background:#0B3446;color:#fff!important;font-weight:800;font-size:13px;text-decoration:none!important;line-height:1.3}
+.iwh-wiki-link:not(.verified){background:#e9eef0;color:#0B3446!important}
+.iwh-wiki-link:focus-visible{outline:3px solid #F47C28;outline-offset:2px}
+.iwh-wiki small{font-size:10.5px;color:#6a7d84;line-height:1.4}
+.iwh-journal-btn .ij-count{font-weight:700;opacity:.85}
+
+html.ij-open,html.ij-open body{overflow:hidden}
+.iwh-journal{position:fixed;inset:0;z-index:5000;background:rgba(6,22,32,.62);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);display:flex;align-items:flex-end;justify-content:center;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.iwh-journal[hidden]{display:none}
+.ij-card{background:#FFFDF8;color:#102a35;width:100%;max-width:560px;max-height:calc(100dvh - 24px - env(safe-area-inset-top,0px));overflow:auto;border-radius:24px 24px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));box-shadow:0 -18px 40px #04121b55}
+@media(min-width:640px){.iwh-journal{align-items:center}.ij-card{border-radius:24px}}
+.ij-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.ij-head>div{flex:1;min-width:0}
+.ij-icon{font-size:34px;line-height:1}
+.ij-kicker{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c4621c}
+.ij-head h2{margin:2px 0 0;font-size:19px;letter-spacing:-.03em;line-height:1.25;overflow-wrap:anywhere}
+.ij-x{flex:none;width:44px;height:44px;border:0;border-radius:14px;background:#eef2f1;color:#0B3446;font-size:17px;font-weight:800;cursor:pointer}
+.ij-label{display:block;font-size:12px;font-weight:800;margin:4px 0 6px}
+#ijNotes{width:100%;box-sizing:border-box;border:1px solid #d6dfdc;border-radius:14px;padding:12px;font:inherit;font-size:16px;line-height:1.5;resize:vertical;min-height:110px;background:#fff;color:inherit}
+#ijNotes:focus-visible{outline:3px solid #F47C28;outline-offset:1px}
+.ij-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:14px 0 8px}
+.ij-row h3{margin:0;font-size:13px}
+.ij-status{font-size:11px;color:#3f6b5c;font-weight:700}
+.ij-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.ij-grid figure{margin:0;position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;background:#e7ecea}
+.ij-thumb{all:unset;cursor:pointer;display:block;width:100%;height:100%}
+.ij-thumb:focus-visible{outline:3px solid #F47C28;outline-offset:-3px}
+.ij-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ij-rm{position:absolute;top:5px;right:5px;width:32px;height:32px;border:0;border-radius:50%;background:rgba(6,22,32,.72);color:#fff;font-weight:800;cursor:pointer}
+.ij-add{display:flex;align-items:center;justify-content:center;min-height:48px;margin-top:10px;border:2px dashed #F47C28;border-radius:14px;color:#a8500f;font-weight:800;font-size:13px;cursor:pointer;position:relative}
+.ij-add input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.ij-add:focus-within{outline:3px solid #F47C28;outline-offset:2px}
+.ij-add.disabled{opacity:.45;cursor:not-allowed}
+.ij-msg{color:#b3261e;font-size:12px;margin:8px 0 0;min-height:0}
+.ij-msg:empty{display:none}
+.ij-privacy{font-size:11px;line-height:1.5;color:#5d7178;margin:10px 0 12px}
+.ij-done{width:100%;min-height:48px;border:0;border-radius:14px;background:#0B3446;color:#fff;font-weight:800;font-size:14px;cursor:pointer}
+.ij-viewer{position:fixed;inset:0;background:#000e;display:flex;align-items:center;justify-content:center;padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.ij-viewer[hidden]{display:none}
+.ij-viewer img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.ij-viewer .ij-x{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;background:#ffffffe6}
+
+/* Paszport Warszawy: pieczątka + przycisk dziennika */
+.stamp-wrap{position:relative;display:flex;min-width:0}
+.stamp-wrap>.stamp{flex:1;min-width:0}
+.stamp .ij-count{font-size:10px;color:#a8500f;font-weight:800}
+.stamp-journal{position:absolute;top:5px;right:5px;width:34px;height:34px;border:0;border-radius:50%;background:#0B3446;color:#fff;font-size:15px;display:grid;place-items:center;box-shadow:0 2px 6px #0b273c33;cursor:pointer}
+.stamp-journal:focus-visible{outline:3px solid #F47C28;outline-offset:2px}
+.interest-first .section-title{margin-top:18px}
+.journal-thumb img{width:44px;height:44px;object-fit:cover;border-radius:10px;display:block}
+.plan-item .ij-count{margin-left:4px;color:#FFB24A;font-weight:700}

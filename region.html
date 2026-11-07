@@ -16,13 +16,14 @@
 <link rel="stylesheet" href="./assets/region.css">
 <link rel="stylesheet" href="./assets/nav4.css">
 <link rel="stylesheet" href="./assets/brand-v5.css">
+<link rel="stylesheet" href="./assets/place-extras.css">
 <script src="./assets/brand-v5.js"></script>
 <title>I Was Here — Regional guide</title>
 </head>
 <body>
 <div class="app">
 <header class="top">
-  <a class="brand atlas-home" id="atlasFloat" href="./atlas.html" title="Poland Atlas" aria-label="I Was Here — back to the Poland Atlas"><div class="mark"><img src="./assets/brand-pin.svg" alt="" width="43" height="52"></div><div class="wordmark"><small>PLACES &amp; MEMORIES</small><b>I WAS HERE</b></div><span class="atlas-chip" aria-hidden="true"><img src="./assets/poland-mark.svg" alt="" width="34" height="32"></span></a>
+  <a class="brand atlas-home" id="atlasFloat" href="./atlas.html" title="Poland Atlas" aria-label="I Was Here — back to the Poland Atlas"><div class="mark mark-atlas"><img src="./assets/brand-atlas.svg" alt="" width="54" height="56"></div><div class="wordmark"><small>PLACES &amp; MEMORIES</small><b>I WAS HERE</b></div></a>
   <div class="top-actions">
     <button class="lang-switch" id="langRegion" type="button" aria-label="Language: English. Switch to Polish"><span data-lang="pl">PL</span><span data-lang="en" class="on">EN</span></button>
     <button class="icon-btn labeled" id="savedBtn" type="button" aria-pressed="false"><span aria-hidden="true">♡</span><small id="savedLabel">Saved</small></button>
@@ -43,17 +44,18 @@
 
 <div id="cityLinks"></div>
 
+<section class="filters" aria-labelledby="filtersTitle">
+  <div class="section-title"><div><h2 id="filtersTitle">What to show on the map</h2><p class="subheading" id="filtersSub">Pick a town and the types of places — the map and the list update together</p></div></div>
+  <div class="chips" id="townChips"></div>
+  <div class="chips" id="catChips"></div>
+  <label class="search"><span id="searchLabel">Search</span><input id="rSearch" type="search" autocomplete="off"></label>
+</section>
+
 <section id="mapSection">
   <div class="section-title"><h2 id="mapTitle">Map</h2><button class="textbtn" id="fitMap" type="button">⌖ Fit</button></div>
   <div class="map-wrap"><div id="rMap" role="application" aria-label="Map"></div></div>
 </section>
 
-<section class="filters" aria-labelledby="filtersTitle">
-  <h2 class="sr-only" id="filtersTitle">Filters</h2>
-  <div class="chips" id="townChips"></div>
-  <div class="chips" id="catChips"></div>
-  <label class="search"><span id="searchLabel">Search</span><input id="rSearch" type="search" autocomplete="off"></label>
-</section>
 
 <section id="planSection" class="card">
   <div class="section-title"><div><h2 id="planTitle">Day plan</h2><p class="subheading" id="planSub"></p></div></div>
@@ -64,6 +66,7 @@
   <div class="range-head"><span id="planHoursLabel">Time</span><em id="planHoursValue">6 h</em></div>
   <input id="planHours" type="range" min="2" max="12" step="1" value="6" aria-labelledby="planHoursLabel">
   <div class="modes" id="planMode">
+    <button type="button" data-mode="walking"><span aria-hidden="true">🚶</span><b id="modeWalk">Walk</b></button>
     <button type="button" data-mode="driving" class="active"><span aria-hidden="true">🚗</span><b id="modeCar">Car</b></button>
     <button type="button" data-mode="transit"><span aria-hidden="true">🚌</span><b id="modeTransit">Public transport</b></button>
   </div>
@@ -91,6 +94,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="./assets/poland-geography.js"></script>
 <script src="./data/regiony.js"></script>
+<script src="./assets/place-extras.js"></script>
 <script src="./assets/region.js"></script>
 </body>
 </html>

@@ -270,3 +270,6 @@ body[data-tab=trips] .atlas-bottom,body[data-tab=day] .atlas-bottom,body[data-ta
 body:not([data-style=light]) #atlasApp:before{display:none}
 
 .city-dot.merged{display:none}
+
+/* 8.3 — plan dnia: pieszo / samochód */
+.plan-mode{margin:4px 0 8px}

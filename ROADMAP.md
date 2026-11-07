@@ -27,6 +27,7 @@ Zasady nadrzędne, ważne na każdym etapie:
    - powrót do Atlasu.
 
 ## Etap B — jakość treści (8.4–8.6)
+0. **Wikipedia:** rozszerzyć potwierdzone artykuły (ręczne QID Wikidata dla miejsc bez tagu w OSM, np. Wawel) — dziś reszta ma uczciwy link wyszukiwania.
 1. **Opisy EN dla Warszawy.** Ok. 158 atrakcji ma placeholder. Tłumaczymy partiami po dzielnicach, ręcznie lub z weryfikacją. Przy faktach historycznych nie stosujemy tłumaczenia maszynowego bez kontroli.
 2. **Weryfikacja współrzędnych Warszawy.** Rozszerzyć `verify_coordinates.py` na `data/atrakcje.json`. Dodać `coordinateStatus` i atrybucję ODbL.
 3. **Pozostałe 41 miejsc regionalnych.** Dopasować je ręcznie do obiektów OSM (OVERRIDES z identyfikatorem OSM) albo zostawić z oznaczeniem „orientacyjne”.
@@ -39,8 +40,8 @@ Zasady nadrzędne, ważne na każdym etapie:
 4. W Atlasie oznaczyć różnicę statusów: „Pełny przewodnik” / „Atrakcje w przewodniku regionu”.
 
 ## Etap D — wspomnienia i konto (10.x, wymaga decyzji)
-1. Rozbudować wspomnienia: notatki, data wizyty, opcjonalne zdjęcia lokalnie (IndexedDB).
-2. Eksport i import danych użytkownika (JSON) jako kopia zapasowa bez backendu.
+1. ~~Rozbudować wspomnienia: notatki i zdjęcia lokalnie (IndexedDB).~~ **Zrobione w 8.3** (dziennik: notatki + do 5 zdjęć). Dalej: data wizyty i podpisy zdjęć.
+2. **Priorytet po 8.3:** eksport i import danych użytkownika (plany, pieczątki, dziennik ze zdjęciami — plik .zip/JSON) jako kopia zapasowa bez backendu, bo wyczyszczenie danych Safari usuwa dziennik.
 3. Synchronizacja między urządzeniami: jest możliwa tylko z backendem i polityką prywatności, więc wymaga osobnej decyzji właściciela. Nie dodajemy jej bez zgody.
 
 ## Poza zakresem bez wyraźnej zgody właściciela
