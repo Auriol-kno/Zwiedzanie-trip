@@ -58,13 +58,13 @@ function check(ok, message) {
   check(await page.evaluate(() => !document.querySelector('#cityAction').disabled && /Krak/.test(document.querySelector('#cityAction').textContent)), 'Atlas: Kraków otwiera atrakcje miasta w przewodniku Małopolski');
 
   const scaleNow = () => page.evaluate(() => Number(/scale\(([\d.]+)\)/.exec(document.querySelector('#world').getAttribute('transform'))[1]));
-  await page.click('.atlas-top .brand');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(650);
   const homeZoom = await scaleNow();
   check(homeZoom > 0.9 && homeZoom < 1.7, 'Atlas: logo pokazuje cały kraj (skala ' + homeZoom.toFixed(2) + ')');
   await page.click('#zoomIn');
   check(Math.abs(await scaleNow() - homeZoom * 1.3) < 0.01, 'Atlas: przycisk + powiększa mapę ×1,3');
-  await page.click('.atlas-top .brand');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(650);
   const pinched = (await page.evaluate(() => {
     const svg = document.querySelector('#polandSvg'), r = svg.getBoundingClientRect();
@@ -78,7 +78,7 @@ function check(ok, message) {
   check(pinched > 1.5, 'Atlas: gest pinch powiększa mapę (×' + pinched.toFixed(2) + ')');
 
   // --- Warszawa z Atlasu EN
-  await page.click('.atlas-top .brand');
+  await page.click('#atlasFloat');
   await page.click('#cityStrip [data-city-chip="warsaw"]');
   await page.click('#cityAction');
   await page.waitForSelector('#langWarsaw');
@@ -105,9 +105,9 @@ function check(ok, message) {
   await page.evaluate(() => { document.scrollingElement.scrollTop = 3000; });
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
-    const c = document.querySelector('#atlasFloat .mark-atlas').getBoundingClientRect();
-    return c.top >= 0 && c.top < 60 && c.left < 200 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
-  }), 'Warszawa: mapa Polski przy logo widoczna i klikalna po przewinięciu');
+    const c = document.querySelector('#atlasFloat').getBoundingClientRect();
+    return c.top >= 0 && c.top < 140 && Math.abs(c.left + c.width / 2 - innerWidth / 2) < 2 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+  }), 'Warszawa: pływająca mapka Polski na środku u góry, widoczna i klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
   check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)
@@ -150,7 +150,7 @@ function check(ok, message) {
   await page.click('#styleAtlas');
   check(await page.evaluate(() => document.body.dataset.style === 'atlas' && getComputedStyle(document.querySelector('.relief')).display !== 'none'), 'Styl „Atlas”: mapa z reliefem terenu');
   await page.keyboard.press('Escape');
-  await page.click('.atlas-top .brand'); await page.waitForTimeout(600);
+  await page.click('#atlasFloat'); await page.waitForTimeout(600);
   await page.click('#cityStrip [data-city-chip="gdansk"]');
   check(await page.evaluate(() => !document.querySelector('#placeSheet').hidden && document.querySelector('#cityName').textContent === 'Gdańsk' && document.querySelector('#cityDescription').textContent.length > 30), 'Karta miasta: nazwa, opis i status');
   await page.click('#addTrip');
@@ -217,7 +217,7 @@ function check(ok, message) {
   await page.evaluate(() => { for (const k of ['iwh_trips', 'iwh_days', 'iwh_visited']) localStorage.removeItem(k); });
 
   // --- Województwa: Atlas → Świętokrzyskie → Sandomierz → przewodnik regionu → powrót
-  await page.click('.atlas-top .brand');
+  await page.click('#atlasFloat');
   await page.click('[data-region-chip="swietokrzyskie"]');
   await page.waitForTimeout(700);
   const reg = await page.evaluate(() => ({
@@ -283,10 +283,10 @@ function check(ok, message) {
   await page.waitForSelector('#tabPanel [data-pp-list] .pp-row');
   check(await page.evaluate(() => document.querySelectorAll('#tabPanel [data-pp-list] .pp-row').length === 1 && /5 photos/.test(document.querySelector('#tabPanel [data-pp-list]').textContent)
     && !!document.querySelector('#tabPanel [data-pp-list] .pp-thumb img')), 'Atlas → Pieczątki: dziennik podróży z miniaturą i licznikiem zdjęć');
-  await page.click('.atlas-top .brand');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(700);
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
-  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-mark"]')), 'Atlas: logo z mapą Polski jako jeden znak');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && getComputedStyle(document.querySelector('#atlasFloat')).position === 'fixed'), 'Atlas: logo z pinezką, mapka Polski pływa na środku u góry');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

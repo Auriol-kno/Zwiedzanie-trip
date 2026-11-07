@@ -13,7 +13,7 @@ manifest = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"
 sw = (ROOT / "service-worker.js").read_text(encoding="utf-8")
 assert manifest["start_url"] == "./atlas.html", "Ikona PWA nie otwiera Atlasu."
 assert "./index.html" in atlas_js, "Brak wejścia do Warszawy."
-assert 'id="atlasFloat"' in home and 'class="brand atlas-home"' in home, "Brak powrotu do mapy Polski przy logo."
+assert 'id="atlasFloat"' in home and 'class="poland-fab"' in home, "Brak powrotu do mapy Polski przy logo."
 assert 'id="langWarsaw"' in home and 'id="langButton"' in atlas, "Brak przełącznika języka."
 assert home.index('assets/features3.js') < home.index('assets/i18n4.js'), "Niewłaściwa kolejność modułów."
 assert "tubylem_lang" in atlas_js and "tubylem_lang" in i18n, "Brak współdzielonego języka."

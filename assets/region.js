@@ -23,7 +23,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
  footer:'I Was Here 8.3 • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
- title:'Przewodnik regionu',atlas:'Atlas Polski',back:'I Was Here — wróć do Atlasu Polski',langLabel:'Język: polski. Przełącz na angielski',min:'min',h:'godz.'},
+ title:'Przewodnik regionu',atlas:'Cała mapa Polski',back:'Pokaż całą mapę Polski',langLabel:'Język: polski. Przełącz na angielski',min:'min',h:'godz.'},
 en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly available',lead:n=>'Pick a town or a theme, save places and build a day plan. '+n+' carefully selected places to visit.',
  sights:'Sights',towns:'Towns',stamps:'Your stamps',saved:'Saved',map:'Map',fit:'⌖ Whole region',all:'All',search:'Search this region',searchPh:'e.g. castle, cave, Sandomierz…',
  plan:'Day plan',planSub:'Estimated route from the chosen town',start:'Start',clock:'Start time',hours:'Sightseeing time',car:'Car',transit:'Public transport',walkMode:'Walk',addDay:'🗓️ Add to day plan',addTrip:'🧳 Add to trip',inDay:n=>'✓ In day plan: '+n,inTrip:n=>'✓ In trip: '+n,defDay:'Day plan',defTrip:'My trip',filters:'What to show on the map',filtersSub:'Pick a town and the types of places — the map and the list update together',walkNote:'Walking tour: about 4.5 km/h, only places within about 6 km of the starting town. ',
@@ -35,7 +35,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
  footer:'I Was Here 8.3 • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
- title:'Regional guide',atlas:'Poland Atlas',back:'I Was Here — back to the Poland Atlas',langLabel:'Language: English. Switch to Polish',min:'min',h:'h'}
+ title:'Regional guide',atlas:'Whole map of Poland',back:'Show the whole map of Poland',langLabel:'Language: English. Switch to Polish',min:'min',h:'h'}
 };
 const CITY={warsaw:{pl:'Warszawa',en:'Warsaw',url:'./index.html',icon:'🏛️',pl2:'184 atrakcje · 18 dzielnic',en2:'184 sights · 18 districts'}};
 

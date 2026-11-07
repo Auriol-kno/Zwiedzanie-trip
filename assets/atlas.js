@@ -413,7 +413,7 @@ function localize(){
  $('#langButton').setAttribute('aria-label',x.langLabel);
  $('#searchInput').placeholder=x.search;$('#searchInput').setAttribute('aria-label',x.searchLabel);
  $('#searchButton').setAttribute('aria-label',x.search);$('#searchClose').setAttribute('aria-label',x.closeSearch);
- $('.atlas-top .brand').title=x.reset;
+ {const f=$('#atlasFloat');if(f){f.title=x.reset;f.setAttribute('aria-label',x.reset);f.href='./atlas.html?lang='+lang}}
  $('#zoomIn').setAttribute('aria-label',x.zoomIn);$('#zoomOut').setAttribute('aria-label',x.zoomOut);
  $('#layersButton').setAttribute('aria-label',x.layers);$('.map-controls').setAttribute('aria-label',x.mapControls);
  $('#sheetClose').setAttribute('aria-label',x.close);
@@ -507,8 +507,8 @@ window.IWH_ATLAS={
 };
 if(PLANS)PLANS.init(window.IWH_ATLAS);
 // Logo zawsze widoczne: kliknięcie pokazuje całą Polskę (zamyka kartę i zakładki), bez przeładowania strony.
-// 8.5: logo zastępuje dawny pływający przycisk „Polska” (ta sama funkcja w dwóch miejscach).
-$('.atlas-top .brand').addEventListener('click',e=>{e.preventDefault();if(mode!=='city')clearRegion();home()});
+// 8.5: pływająca mapka Polski (na środku u góry, zawsze widoczna) — jedyny przycisk powrotu do całego kraju.
+$('#atlasFloat').addEventListener('click',e=>{e.preventDefault();if(mode!=='city')clearRegion();home()});
 
 applyLayers();localize();reset();
 // Kontrolki mapy zawsze nad dolnym panelem (jego wysokość zależy od karty i języka).

@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-07 · **Wersja:** 8.3 (gałąź `claude/guide-wiki-passport`, PR do scalenia) · **`main`:** 8c1c27d („Scal #9: Kielce w Atlasie…”)
-**Cache PWA:** `i-was-here-v8-5-1-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
+**Cache PWA:** `i-was-here-v8-5-2-20261107` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 
 > Ten plik opisuje *bieżący* stan. Aktualizuj go przy każdym PR, który zmienia funkcje,
 > dane, znane błędy albo następne zadanie. Historia jest w `CHANGELOG.md`, plan w `ROADMAP.md`.
@@ -46,7 +46,7 @@
 - Logo w lewym górnym rogu zawsze wraca do Atlasu.
 
 ### Wspólne
-- **Logo = jeden znak** (od 8.4 `assets/brand-mark.svg` — kafelek właściciela: zielone tło, złota ramka, Polska z trasą i pinezką; kliknięcie = cała Polska)
+- **Logo** (8.5): pinezka z pejzażem po lewej stronie napisu; **pływająca mapka Polski** (kafelek) na środku u góry każdej strony — zawsze widoczna, prowadzi do całej mapy Polski
 - **Jedno dolne menu** (`assets/app-nav.js`): Mapa · Odkrywaj · Plany · Paszport · Profil na każdej stronie.
 - **Pieczątki** (8.5, dawny Paszport): klikalne liczniki, 14 znaczków miast i listy miejsc z „Byłem tu” (odblokuj/odznacz), dziennik; karta w Profilu, zakładka w Atlasie.
 - **Plany**: punkt z mapy regionu → plan dnia/podróży; podróż → plan dnia.
