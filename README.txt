@@ -27,6 +27,14 @@ WARSAW FUNCTIONS
 - Saved places, digital stamps, spoken descriptions, GPS starting point.
 - Real travel times and Google ratings still require external integrations.
 
+ATLAS 7.0 — NEW MAP
+- Default style "Atlas": navy Baltic, olive land with real terrain relief, cream province borders, amber pins.
+- Real geography: Natural Earth 1:10m borders of Poland and all 16 provinces, rivers and lakes; relief from Terrain Tiles.
+- Zoom in: borders get stronger, province names and then towns appear. Layers button: borders, names, relief, towns, illustrations; styles Atlas / Light / Night / Terrain.
+- Tap a city: card with description, status and actions (View, Trip plan, Day plan, I was here).
+- Bottom tabs: Map of Poland, Trip plan, My day plan, Memories, Profile (saved on this device).
+- The floating "Poland" button always returns to the whole country. See ATLAS_7_0.md.
+
 PROVINCES (6.0)
 - Below the 13 cities the Atlas lists all 16 provinces.
 - Tap a province (list or map) to zoom in, see its outline and towns with places.

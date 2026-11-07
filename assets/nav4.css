@@ -33,3 +33,9 @@ body:has(.overlay.show) .top{z-index:2250}
 .overlay .sheet{max-height:calc(100dvh - 92px - env(safe-area-inset-top,0px))}
 @media(max-width:370px){.atlas-home .wordmark{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.atlas-chip{transition:none}}
+
+/* I Was Here 7.0 — spójna paleta z Atlasem: granat Bałtyku i bursztynowe akcenty (motyw jasny; Midnight i Explorer bez zmian). */
+:root{--primary:#0B3446;--accent:#F47C28}
+body:not(.theme-dark):not(.theme-forest) .hero{background:linear-gradient(140deg,#0B3446 0%,#12485e 60%,#1d5a4f 100%)}
+body:not(.theme-dark):not(.theme-forest) .eyebrow{color:#FFB24A}
+.atlas-chip{background:linear-gradient(145deg,#0B3446,#1d5a4f);box-shadow:inset 0 0 0 1px rgba(255,178,74,.45),0 3px 10px #0b273c26}

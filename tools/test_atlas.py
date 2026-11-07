@@ -135,6 +135,27 @@ for token in ["langRegion", "townChips", "catChips", "planList", "placeList", "a
 assert "IWH_REGIONS" in (ROOT / "assets/region.js").read_text(encoding="utf-8")
 for f in ("./region.html", "./assets/region.js", "./assets/region.css", "./data/regiony.js"):
     assert f in sw, "PWA nie buforuje: " + f
+# 7.0: prawdziwa geometria (Natural Earth 1:10m), projekcja bez rozciągania, relief, plany
+assert "Natural Earth 1:10m" in geo["source"]["vectors"] and "Terrain Tiles" in geo["source"]["relief"], "Brak źródeł danych"
+proj = geo["projection"]
+assert proj["standardParallel"] == 52 and abs(proj["kx"] / proj["ky"] - math.cos(math.radians(52))) < 1e-3, "Projekcja rozciąga kraj"
+assert len(geo["border"]) >= 600 and sum(len(r["coords"]) for r in geo["regions"]) >= 2000, "Granice zbyt uproszczone"
+assert {r["id"] for r in geo["regions"]} == {r["id"] for r in regdb["regions"]}, "Identyfikatory województw"
+assert all(len(r["label"]) == 2 for r in geo["regions"]), "Brak punktów nazw województw"
+cities_xy = {c[0]: (float(c[4]), float(c[3])) for c in city_rows}
+for r in regdb["regions"]:
+    for cid in r["cities"]:
+        lon, lat = cities_xy[cid]
+        assert contains(lon, lat, geo_regions[r["geo"]]), f"Miasto {cid} poza województwem {r['id']}"
+relief = ROOT / "assets/poland-relief.webp"
+assert relief.exists() and relief.read_bytes()[8:12] == b"WEBP" and relief.stat().st_size < 400_000, "Relief WebP"
+assert "./assets/poland-relief.webp" in sw and "./assets/atlas-plans.js" in sw and "./assets/atlas-premium.css" in sw
+for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip", "addDay", "toggleVisited", "tabPanel", "planPicker", "scaleBar", "styleLight"]:
+    assert 'id="' + token + '"' in atlas, "atlas.html: " + token
+plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
+assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
+assert 'data-tab="trips"' in atlas and 'data-tab="day"' in atlas and 'data-tab="memories"' in atlas and 'data-tab="profile"' in atlas
+print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 13 miast w swoich województwach, relief, plany.")
 print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
 

@@ -30,6 +30,7 @@ jobs:
           node --check assets/i18n4.js
           node --check assets/poland-explorer.js
           node --check assets/region.js
+          node --check assets/atlas-plans.js
           node --check data/regiony.js
           node --check data/atrakcje.js
           node --check data/restauracje.js

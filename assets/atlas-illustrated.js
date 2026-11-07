@@ -1,4 +1,4 @@
-/* Interactive illustrated geography in the Light Atlas style, no external image tiles. */
+/* Interactive illustrated geography (Light and Atlas styles), no external image tiles. Decorations never move pins or borders. */
 (function atlasArt(){
 'use strict';
 const palette=['#e8e9bb','#dee8bf','#e4e4b4','#d6e4b7','#efe3b9','#e7ebc8','#deefc7','#dfe6ab','#e7ecbc','#d9e6bb','#e9e6bb','#dfeec1','#eceac4','#d9e5b1','#e8e4b6','#dbe9bd'];
@@ -56,11 +56,17 @@ function decorate({clipped,el,project,path,geo}){
  }
  clipped.appendChild(greenery);
  const water=el('g',{class:'atlas-water'});
+ // Rzeki i jeziora z Natural Earth 1:10m (geo.rivers, geo.lakes); grubość według rangi rzeki.
+ const rank=geo.riverRank||{Vistula:3,Oder:3};
  for(const [river,sets] of Object.entries(geo.rivers||{})){
-   sets.forEach(line=>{water.appendChild(el('path',{class:'atlas-geo-river',d:svgpath(line,project),stroke:river==='Vistula'?'#70b5cf':'#84bec9','stroke-width':river==='Vistula'?3.1:2.4}))});
+   const rk=rank[river]||1;
+   sets.forEach(line=>{water.appendChild(el('path',{class:'atlas-geo-river rank-'+rk,'data-river':river,d:svgpath(line,project),stroke:rk===3?'#5fb0d2':rk===2?'#6db8d4':'#84c2d6','stroke-width':rk===3?3.1:rk===2?2.2:1.4}))});
  }
- const lakeCoords=[[21.65,53.83,13,5],[21.92,53.86,12,4],[21.50,53.74,16,4],[22.00,53.68,14,4],[20.55,54.05,9,3],[21.28,53.71,11,3]];
- lakeCoords.forEach(([lon,lat,rx,ry],i)=>{const p=project(lon,lat);water.appendChild(el('ellipse',{class:'atlas-geo-lake',cx:p.x,cy:p.y,rx,ry,transform:'rotate('+((i%3-1)*17)+' '+p.x+' '+p.y+')'}))});
+ if(geo.lakes&&geo.lakes.length){geo.lakes.forEach(l=>water.appendChild(el('path',{class:'atlas-geo-lake',d:path(l.coords)})))}
+ else{
+  const lakeCoords=[[21.65,53.83,13,5],[21.92,53.86,12,4],[21.50,53.74,16,4],[22.00,53.68,14,4],[20.55,54.05,9,3],[21.28,53.71,11,3]];
+  lakeCoords.forEach(([lon,lat,rx,ry],i)=>{const p=project(lon,lat);water.appendChild(el('ellipse',{class:'atlas-geo-lake',cx:p.x,cy:p.y,rx,ry,transform:'rotate('+((i%3-1)*17)+' '+p.x+' '+p.y+')'}))});
+ }
  clipped.appendChild(water);
 }
 window.IWH_ATLAS_ART={decorate,landmark:iconGroup};

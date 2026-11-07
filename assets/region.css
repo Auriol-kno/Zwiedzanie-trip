@@ -1,5 +1,5 @@
 /* I Was Here 6.0 — przewodnik regionu (region.html). Kolory i rytm zgodne z przewodnikiem Warszawy. */
-:root{--bg:#f7f5f0;--panel:#fffdf8;--ink:#172636;--sub:#6d7c84;--line:#e6e5df;--primary:#173c43;--accent:#e86e4a;--glass:#f0f2ec;--shadow:0 10px 35px rgba(23,38,54,.08);--safe:env(safe-area-inset-bottom,0px)}
+:root{--bg:#f7f5f0;--panel:#fffdf8;--ink:#172636;--sub:#6d7c84;--line:#e6e5df;--primary:#0B3446;--accent:#F47C28;--glass:#f0f2ec;--shadow:0 10px 35px rgba(23,38,54,.08);--safe:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 html{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);margin:0;min-height:100vh}
@@ -17,9 +17,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .icon-btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:14px;width:44px;height:44px;font-size:20px;display:grid;place-items:center}
 .icon-btn[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
 .icon-btn[aria-pressed=true] small{color:var(--accent)}
-.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(135deg,#1d4a45,#2f6a55);color:#fff;padding:24px 24px 26px;margin-top:4px}
+.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(140deg,#0B3446 0%,#12485e 60%,#1d5a4f 100%);color:#fff;padding:24px 24px 26px;margin-top:4px}
 .hero:after{content:"";position:absolute;right:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,255,255,.14)}
-.eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;color:#f3c3a8;text-transform:uppercase}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;color:#FFB24A;text-transform:uppercase}
 .hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,7vw,48px);letter-spacing:-.035em;line-height:1.08;margin:10px 0 8px}
 .hero p{margin:0;color:#d9e7e1;font-size:13px;line-height:1.55;max-width:560px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 6px}

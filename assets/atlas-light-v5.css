@@ -1,7 +1,7 @@
 
 /* I Was Here — Illustrated Light Atlas 5.0 (the selected concept 1). */
 :root{--cream:#faf5e7;--sea:#bfe5f1;--country:#dfebbf;--edge:#49735b;--paper:rgba(255,252,238,.95);--chip:#fffdf5;--tone:#627c6a;--accent:#bd6f40;--ink:#25453d}
-body[data-style=atlas]{--cream:#fbf5e6;--sea:#c2eaf5;--country:#dfe9b9;--edge:#4a805e;--paper:rgba(255,252,239,.95);--chip:rgba(255,255,247,.97);--tone:#617b69;--accent:#c77742;--ink:#23413a}
+body[data-style=light]{--cream:#fbf5e6;--sea:#c2eaf5;--country:#dfe9b9;--edge:#4a805e;--paper:rgba(255,252,239,.95);--chip:rgba(255,255,247,.97);--tone:#617b69;--accent:#c77742;--ink:#23413a}
 body[data-style=terrain]{--country:#c6dea9;--edge:#487955;--paper:rgba(250,252,229,.97);--chip:#f9fbe9}
 #atlasApp{background:radial-gradient(ellipse at 48% 39%,#fdf6df 4%,#d7f0eb 56%,#9edcf1 112%)}
 body[data-style=night] #atlasApp{background:radial-gradient(ellipse at 55% 42%,#234959 0%,#101e2e 88%)}
