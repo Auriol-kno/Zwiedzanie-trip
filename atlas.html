@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="I Was Here">
-<meta name="description" content="I Was Here — Places & Memories: an illustrated interactive atlas of Poland with 13 cities.">
+<meta name="description" content="I Was Here — Places & Memories: an illustrated interactive atlas of Poland with 13 cities and 16 provinces.">
 <link rel="icon" type="image/svg+xml" href="./icon.svg">
 <link rel="apple-touch-icon" href="./icon-180.png">
 <link rel="manifest" href="./manifest.webmanifest">
@@ -18,7 +18,7 @@
 <body data-style="atlas">
 <main id="atlasApp">
   <div class="atlas-map">
-    <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive map of Poland with 13 cities"></svg>
+    <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive map of Poland with 13 cities and 16 provinces"></svg>
   </div>
   <header class="atlas-top">
     <a class="brand" href="./atlas.html" aria-label="I Was Here — Poland Atlas">
@@ -36,10 +36,10 @@
     <button type="button" id="searchClose" aria-label="Close search">✕</button>
   </div>
   <div class="atlas-hero">
-    <span class="eyebrow" id="atlasEyebrow">13 cities · countless stories</span>
+    <span class="eyebrow" id="atlasEyebrow">13 cities · 16 provinces</span>
     <h1 id="atlasHeadline">Explore your
 own way.</h1>
-    <p id="atlasLead">Pick a city and discover memorable places.</p>
+    <p id="atlasLead">Pick a city or a province and discover memorable places.</p>
   </div>
   <div class="style-panel" role="group" aria-label="Map style">
     <button id="styleAtlas" type="button" class="active">Atlas</button>
@@ -55,14 +55,17 @@ own way.</h1>
   <section class="atlas-bottom" aria-label="Choose a city">
     <div class="browse-title"><span id="citiesTitle">Choose a city</span><span id="cityStatus">Guide available</span></div>
     <div class="city-strip" id="cityStrip" role="list"></div>
+    <div class="city-strip region-strip" id="regionStrip" role="list" aria-label="Provinces"></div>
     <div class="city-card">
       <div class="city-title"><strong id="cityName">Warsaw</strong><span id="cityDescription">184 sights • 18 districts • 36 places to eat</span></div>
       <button id="cityAction" class="city-action" type="button">Explore Warsaw</button>
+      <div class="card-towns" id="cardTowns" hidden></div>
     </div>
   </section>
 </main>
 <script src="./assets/brand-v5.js"></script>
 <script src="./assets/poland-geography.js"></script>
+<script src="./data/regiony.js"></script>
 <script src="./assets/atlas-illustrated.js"></script>
 <script src="./assets/atlas.js"></script>
 </body>

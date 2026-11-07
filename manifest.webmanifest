@@ -39,6 +39,12 @@
       "short_name": "Warsaw",
       "url": "./index.html",
       "description": "Plan your Warsaw sightseeing itinerary"
+    },
+    {
+      "name": "Świętokrzyskie — regional guide",
+      "short_name": "Świętokrzyskie",
+      "url": "./region.html?region=swietokrzyskie",
+      "description": "Castles, caves and Sandomierz: the Holy Cross region"
     }
   ]
 }

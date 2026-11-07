@@ -27,6 +27,13 @@ WARSAW FUNCTIONS
 - Saved places, digital stamps, spoken descriptions, GPS starting point.
 - Real travel times and Google ratings still require external integrations.
 
+PROVINCES (6.0)
+- Below the 13 cities the Atlas lists all 16 provinces.
+- Tap a province (list or map) to zoom in, see its outline and towns with places.
+- Pick a town (e.g. Sandomierz, Sierpc) and tap Explore to open the regional guide.
+- Świętokrzyskie: 31 places in 19 towns; Mazowieckie: Warsaw guide + 8 places. Others: coming soon.
+- Regional guide: map, filters, saved places, stamps and an estimated day plan. See REGIONY_6_0.md.
+
 IPHONE
 1. Open the Poland Atlas link in Safari.
 2. Choose Share → Add to Home Screen.

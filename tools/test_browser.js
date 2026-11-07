@@ -112,6 +112,41 @@ function check(ok, message) {
   await page.waitForSelector('.city-dot');
   check(await page.evaluate(() => document.documentElement.lang) === 'pl', 'Powrót do Atlasu zachowuje język PL');
 
+  // --- Województwa: Atlas → Świętokrzyskie → Sandomierz → przewodnik regionu → powrót
+  await page.click('#resetView');
+  await page.click('[data-region-chip="swietokrzyskie"]');
+  await page.waitForTimeout(700);
+  const reg = await page.evaluate(() => ({
+    name: document.querySelector('#cityName').textContent,
+    outline: !!document.querySelector('#provinceFocus .region-outline'),
+    pins: document.querySelectorAll('#towns .town-pin').length,
+    zoom: Number(/scale\(([\d.]+)\)/.exec(document.querySelector('#world').getAttribute('transform'))[1]),
+    focus: document.body.dataset.focus
+  }));
+  check(reg.name === 'Świętokrzyskie' && reg.outline && reg.focus === 'region', 'Atlas: wybór województwa pokazuje jego obrys');
+  check(reg.pins >= 15 && reg.zoom > 2.5, 'Atlas: przybliżenie do województwa i pinezki miejscowości (' + reg.pins + ')');
+  await page.click('[data-card-town="Sandomierz"]');
+  check(await page.evaluate(() => document.querySelector('#cityAction').textContent.includes('Sandomierz')), 'Atlas: wybór miejscowości w województwie');
+  await page.click('#cityAction');
+  await page.waitForSelector('#placeList .place');
+  const guide = await page.evaluate(() => ({
+    url: location.search, lang: document.documentElement.lang, title: document.querySelector('#rTitle').textContent,
+    list: document.querySelectorAll('#placeList .place').length, plan: document.querySelectorAll('#planList li .n').length,
+    overflow: document.documentElement.scrollWidth - innerWidth
+  }));
+  check(guide.url.includes('region=swietokrzyskie') && guide.url.includes('town=Sandomierz') && guide.lang === 'pl', 'Przewodnik regionu: otwiera się z miejscowością i językiem PL');
+  check(guide.list >= 5 && guide.plan >= 3, 'Przewodnik regionu: lista Sandomierza i plan dnia (' + guide.list + ' miejsc, ' + guide.plan + ' przystanków)');
+  check(guide.overflow === 0, 'Przewodnik regionu: brak poziomego przewijania');
+  await page.click('#placeList [data-open]');
+  await page.click('#dBody [data-stamp]');
+  check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_region_visited') || '[]').length === 1), 'Przewodnik regionu: pieczątka „Byłem tu” zapisana');
+  await page.click('#dClose');
+  await page.click('#langRegion [data-lang="en"]');
+  check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#planTitle').textContent === 'Day plan'), 'Przewodnik regionu: przełącznik EN');
+  await page.click('#atlasFloat');
+  await page.waitForSelector('#provinceFocus .region-outline');
+  check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#cityName').textContent.startsWith('Świętokrzyskie')), 'Powrót z regionu do Atlasu: to samo województwo i język');
+
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();
   server.close();
