@@ -131,7 +131,6 @@ body[data-style=night] .region-strip .strip-label{color:#a9c4b5}
 .atlas-bottom .browse-title{padding-bottom:9px}
 .city-strip{padding-bottom:9px}
 body[data-focus=region] .style-panel{opacity:0;pointer-events:none}
-body[data-focus=region] .city-landmark{display:none}
 body[data-focus=region] .city-spotlight{display:none}
 .city-dot.outside{opacity:.45}
 .city-dot.outside .city-label{display:none}

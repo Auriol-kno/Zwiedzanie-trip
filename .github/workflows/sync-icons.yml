@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - "icon.svg"
-      - "assets/brand-pin.svg"
+      - "tools/build_logo.py"
       - "tools/render_icons.py"
       - ".github/workflows/sync-icons.yml"
   workflow_dispatch:

@@ -12,3 +12,9 @@
 .brand .mark.mark-atlas img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 5px #09262e33)}
 .atlas-home:hover .mark-atlas img,.atlas-home:focus-visible .mark-atlas img{transform:translateY(-1px)}
 @media(max-width:420px){.brand .mark.mark-atlas{width:48px;height:48px}.brand .mark.mark-atlas img{width:48px;height:48px}}
+
+
+/* 8.5 — logo: pinezka z pejzażem po lewej stronie napisu (mapka Polski to osobny pływający przycisk) */
+.brand .mark.mark-pin{width:41px;height:56px;background:none;box-shadow:none}
+.brand .mark.mark-pin img{width:41px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 4px #09262e40)}
+@media(max-width:420px){.brand .mark.mark-pin{width:35px;height:48px}.brand .mark.mark-pin img{width:35px;height:48px}}

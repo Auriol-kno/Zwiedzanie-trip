@@ -5,9 +5,27 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-4-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-2-20261107`.
 
 ---
+
+## 8.5 — 2026-11-07 — gałąź `claude/stamps`
+- **Znaczki pocztowe na mapie** (wybrany styl 5): 14 miast jako ząbkowane znaczki z jednobarwnym rytowanym rysunkiem
+  i nazwą miasta; odwiedzone miasto ma stempel „✓”. Widoczne na mapie (także po wejściu w województwo), w karcie miasta,
+  w nagłówku przewodnika regionu i w Pieczątkach.
+- **„Paszport” → „Pieczątki”** w menu, oknach i opisach (PL/EN: Pieczątki/Stamps). Nowe Pieczątki: klikalne liczniki
+  (miasta, miejsca w regionach, Warszawa, dziennik) przewijają do listy; 14 znaczków miast z przyciskiem „Byłem tu”
+  (odblokuj/odznacz); wyszukiwarka miejsc w regionach i atrakcji Warszawy z „Byłem tu”; dziennik ze zdjęciami.
+- **Punkt na mapie regionu → plan:** w szczegółach miejsca przyciski „🗓️ Do planu dnia” i „🧳 Do podróży” (plany Atlasu).
+- **Podróż → plan dnia:** w Planach przycisk „🗓️ Dodaj do planu dnia” tworzy plan dnia z pozycji podróży.
+- **Logo i mapka (jak wcześniej):** w lewym górnym rogu logo = pinezka z pejzażem po lewej stronie napisu „PLACES & MEMORIES /
+  I WAS HERE”. Zielona **mapka Polski** to osobny, pływający przycisk na środku u góry (tuż pod nagłówkiem): zawsze
+  widoczna — przy przewijaniu, nad zakładkami i oknami — i zawsze prowadzi do pełnej mapy Polski (w Atlasie bez
+  przeładowania). Samo logo nie jest już linkiem (bez dwóch przycisków do tego samego).
+- **Porządki (duplikaty i nieużywane elementy):** usunięty dawny przycisk „Polska” w rogu mapy (zastępuje go pływająca mapka u góry); z Profilu usunięte
+  wybór języka i stylu mapy (są w nagłówku i w panelu Warstwy); „Odkrywaj” w Atlasie otwiera wyszukiwarkę zamiast
+  dublować listę miast i województw z paska; usunięte nieużywane pliki `brand-atlas.svg`, `brand-mark-flag.svg`,
+  `brand-pin.svg`, `logo-en.svg`. Dane użytkownika bez zmian. Cache `i-was-here-v8-5-2-20261107`.
 
 ## 8.4 — 2026-11-07 — gałąź `claude/brand-nav-passport`
 - **Nowe logo (wariant właściciela):** zielony kafelek ze złotą ramką, Polska z pejzażem, białą trasą i pomarańczową pinezką —

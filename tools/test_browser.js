@@ -58,13 +58,13 @@ function check(ok, message) {
   check(await page.evaluate(() => !document.querySelector('#cityAction').disabled && /Krak/.test(document.querySelector('#cityAction').textContent)), 'Atlas: Kraków otwiera atrakcje miasta w przewodniku Małopolski');
 
   const scaleNow = () => page.evaluate(() => Number(/scale\(([\d.]+)\)/.exec(document.querySelector('#world').getAttribute('transform'))[1]));
-  await page.click('#resetView');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(650);
   const homeZoom = await scaleNow();
-  check(homeZoom > 0.9 && homeZoom < 1.7, 'Atlas: przycisk z zarysem Polski pokazuje cały kraj (skala ' + homeZoom.toFixed(2) + ')');
+  check(homeZoom > 0.9 && homeZoom < 1.7, 'Atlas: logo pokazuje cały kraj (skala ' + homeZoom.toFixed(2) + ')');
   await page.click('#zoomIn');
   check(Math.abs(await scaleNow() - homeZoom * 1.3) < 0.01, 'Atlas: przycisk + powiększa mapę ×1,3');
-  await page.click('#resetView');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(650);
   const pinched = (await page.evaluate(() => {
     const svg = document.querySelector('#polandSvg'), r = svg.getBoundingClientRect();
@@ -78,7 +78,7 @@ function check(ok, message) {
   check(pinched > 1.5, 'Atlas: gest pinch powiększa mapę (×' + pinched.toFixed(2) + ')');
 
   // --- Warszawa z Atlasu EN
-  await page.click('#resetView');
+  await page.click('#atlasFloat');
   await page.click('#cityStrip [data-city-chip="warsaw"]');
   await page.click('#cityAction');
   await page.waitForSelector('#langWarsaw');
@@ -105,9 +105,9 @@ function check(ok, message) {
   await page.evaluate(() => { document.scrollingElement.scrollTop = 3000; });
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
-    const c = document.querySelector('#atlasFloat .mark-atlas').getBoundingClientRect();
-    return c.top >= 0 && c.top < 60 && c.left < 200 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
-  }), 'Warszawa: mapa Polski przy logo widoczna i klikalna po przewinięciu');
+    const c = document.querySelector('#atlasFloat').getBoundingClientRect();
+    return c.top >= 0 && c.top < 140 && Math.abs(c.left + c.width / 2 - innerWidth / 2) < 2 && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+  }), 'Warszawa: pływająca mapka Polski na środku u góry, widoczna i klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
   check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)
@@ -119,10 +119,10 @@ function check(ok, message) {
     'Warszawa EN: „More information — Wikipedia” przy opisie');
   check(await page.evaluate(() => !!document.querySelector('#detailContent [data-journal="waw:castle"]')), 'Warszawa: przycisk notatek i zdjęć w szczegółach');
   await page.evaluate(() => closeOverlay('detailOverlay'));
-  check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Passport,profile:Profile'
+  check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Stamps,profile:Profile'
     && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');
   await page.click('#appNav [data-tab="passport"]');
-  check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Explorer passport/.test(b.textContent) && !!b.querySelector('[data-pp-warsaw]'); }), 'Warszawa: Paszport odkrywcy z dolnego menu (z pieczątkami Warszawy)');
+  check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Stamps/.test(b.textContent) && !!b.querySelector('[data-pp-list-waw]') && b.querySelectorAll('.pp-stamp').length === 14; }), 'Warszawa: Pieczątki (14 znaczków miast + lista Warszawy) z dolnego menu (z pieczątkami Warszawy)');
   await page.click('.iwh-passport .ij-done');
   await page.click('#langWarsaw [data-lang="pl"]');
   await page.waitForTimeout(400);
@@ -150,7 +150,7 @@ function check(ok, message) {
   await page.click('#styleAtlas');
   check(await page.evaluate(() => document.body.dataset.style === 'atlas' && getComputedStyle(document.querySelector('.relief')).display !== 'none'), 'Styl „Atlas”: mapa z reliefem terenu');
   await page.keyboard.press('Escape');
-  await page.click('#resetView'); await page.waitForTimeout(600);
+  await page.click('#atlasFloat'); await page.waitForTimeout(600);
   await page.click('#cityStrip [data-city-chip="gdansk"]');
   check(await page.evaluate(() => !document.querySelector('#placeSheet').hidden && document.querySelector('#cityName').textContent === 'Gdańsk' && document.querySelector('#cityDescription').textContent.length > 30), 'Karta miasta: nazwa, opis i status');
   await page.click('#addTrip');
@@ -169,15 +169,28 @@ function check(ok, message) {
   check(saved.visited.includes('city:gdansk') && saved.pin.includes('st-visited'), 'Status „Byłem tu”: zapisany, pinezka odwiedzona');
   await page.click('.tabbar [data-tab="plans"]');
   check(await page.evaluate(() => !document.querySelector('#tabPanel').hidden && [...document.querySelectorAll('#tabPanel input')].some(i => i.value === 'Bałtyk 2027') && document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Plan podróży” pokazuje zapisany plan');
+  const daysBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days') || '[]').length);
+  await page.click('#tabPanel [data-trip-to-day]');
+  check(await page.evaluate(n => { const d = JSON.parse(localStorage.getItem('iwh_days') || '[]'); return d.length === n + 1 && d[0].items[0].id === 'gdansk'; }, daysBefore), 'Plany: podróż dodana do planu dnia');
+  await page.click('.tabbar [data-tab="plans"]');
   await page.click('#tabPanel [data-plan-view="day"]');
   check(await page.evaluate(() => /\d\d:\d\d–\d\d:\d\d/.test(document.querySelector('#tabPanel').textContent)), 'Zakładka „Mój plan dnia”: szacunkowy harmonogram');
   await page.click('#tabPanel [data-mode="walking"]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days'))[0].mode === 'walking' && document.querySelector('#tabPanel [data-mode="walking"]').getAttribute('aria-pressed') === 'true'
     && /travelmode=walking/.test(document.querySelector('#tabPanel .ghost-action')?.href || 'travelmode=walking')), 'Mój plan dnia: wycieczka piesza zapisana (Google Maps pieszo)');
   await page.click('.tabbar [data-tab="passport"]');
-  check(await page.evaluate(() => document.querySelector('#tabPanel').textContent.includes('Gdańsk')), 'Zakładka „Wspomnienia”: odwiedzone miasto');
+  check(await page.evaluate(() => document.querySelector('#tabPanel [data-pp-city="gdansk"]').getAttribute('aria-pressed') === 'true' && document.querySelectorAll('#tabPanel .pp-stamp').length === 14), 'Pieczątki: znaczek Gdańska odblokowany');
+  await page.click('#tabPanel [data-pp-city="krakow"]');
+  check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_visited')).includes('city:krakow') && document.querySelector('#tabPanel [data-pp-city="krakow"]').getAttribute('aria-pressed') === 'true'), 'Pieczątki: „Byłem tu” odblokowuje pieczątkę miasta');
+  await page.click('#tabPanel [data-pp-city="krakow"]');
+  check(await page.evaluate(() => !JSON.parse(localStorage.getItem('iwh_visited')).includes('city:krakow')), 'Pieczątki: można odznaczyć');
+  await page.click('#tabPanel [data-pp-jump="ppPlaces"]');
+  await page.fill('#tabPanel [data-pp-search="place"]', 'Wawel');
+  await page.click('#tabPanel [data-pp-place]');
+  check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_region_visited') || '[]').length === 1), 'Pieczątki: wyszukanie miejsca i odblokowanie pieczątki regionu');
+  await page.click('#tabPanel [data-pp-place]');
   await page.click('.tabbar [data-tab="profile"]');
-  await page.click('[data-set-lang="en"]');
+  await page.click('#langButton [data-lang="en"]');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#tabPanel h2').textContent === 'Profile' && document.querySelector('.tabbar [data-tab="profile"]').innerText.trim() === 'Profile' && !!document.querySelector('#tabPanel .passport-card')), 'Profil: zmiana języka na EN');
   // W EN żadnych polskich fragmentów interfejsu (poza nazwami własnymi miejsc).
   const leftovers = async () => page.evaluate(() => {
@@ -204,7 +217,7 @@ function check(ok, message) {
   await page.evaluate(() => { for (const k of ['iwh_trips', 'iwh_days', 'iwh_visited']) localStorage.removeItem(k); });
 
   // --- Województwa: Atlas → Świętokrzyskie → Sandomierz → przewodnik regionu → powrót
-  await page.click('#resetView');
+  await page.click('#atlasFloat');
   await page.click('[data-region-chip="swietokrzyskie"]');
   await page.waitForTimeout(700);
   const reg = await page.evaluate(() => ({
@@ -251,6 +264,8 @@ function check(ok, message) {
   check(jr && jr.notes.includes('Bramy') && jr.photos === 5 && jr.jpeg, 'Dziennik: notatka i 5 zdjęć zapisane w IndexedDB (' + JSON.stringify(jr) + ')');
   await page.waitForFunction(() => /📷 5/.test(document.querySelector('#dBody [data-journal-count]').textContent));
   check(true, 'Dziennik: licznik zdjęć na przycisku');
+  await page.click('#dBody [data-addplan="day"]');
+  check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days') || '[]').some(p => p.items.some(i => i.t === 'place')) && /✓/.test(document.querySelector('#dBody [data-addplan="day"]').textContent)), 'Przewodnik regionu: punkt dodany do planu dnia');
   await page.click('#dBody [data-stamp]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_region_visited') || '[]').length === 1), 'Przewodnik regionu: pieczątka „Byłem tu” zapisana');
   await page.click('#dClose');
@@ -265,13 +280,13 @@ function check(ok, message) {
   await page.waitForSelector('#provinceFocus .region-outline');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#cityName').textContent.startsWith('Świętokrzyskie')), 'Powrót z regionu do Atlasu: to samo województwo i język');
   await page.click('.tabbar [data-tab="passport"]');
-  await page.waitForSelector('#memJournal li.plan-item');
-  check(await page.evaluate(() => document.querySelectorAll('#memJournal li.plan-item').length === 1 && /5 photos/.test(document.querySelector('#memJournal').textContent)
-    && !!document.querySelector('#memJournal .journal-thumb img')), 'Atlas → Paszport: dziennik podróży z miniaturą i licznikiem zdjęć');
-  await page.click('.atlas-top .brand');
+  await page.waitForSelector('#tabPanel [data-pp-list] .pp-row');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel [data-pp-list] .pp-row').length === 1 && /5 photos/.test(document.querySelector('#tabPanel [data-pp-list]').textContent)
+    && !!document.querySelector('#tabPanel [data-pp-list] .pp-thumb img')), 'Atlas → Pieczątki: dziennik podróży z miniaturą i licznikiem zdjęć');
+  await page.click('#atlasFloat');
   await page.waitForTimeout(700);
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
-  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-mark"]')), 'Atlas: logo z mapą Polski jako jeden znak');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && getComputedStyle(document.querySelector('#atlasFloat')).position === 'fixed'), 'Atlas: logo z pinezką, mapka Polski pływa na środku u góry');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

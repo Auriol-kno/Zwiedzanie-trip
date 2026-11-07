@@ -13,7 +13,7 @@ manifest = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"
 sw = (ROOT / "service-worker.js").read_text(encoding="utf-8")
 assert manifest["start_url"] == "./atlas.html", "Ikona PWA nie otwiera Atlasu."
 assert "./index.html" in atlas_js, "Brak wejścia do Warszawy."
-assert 'id="atlasFloat"' in home and 'class="brand atlas-home"' in home, "Brak powrotu do mapy Polski przy logo."
+assert 'id="atlasFloat"' in home and 'class="poland-fab"' in home, "Brak powrotu do mapy Polski przy logo."
 assert 'id="langWarsaw"' in home and 'id="langButton"' in atlas, "Brak przełącznika języka."
 assert home.index('assets/features3.js') < home.index('assets/i18n4.js'), "Niewłaściwa kolejność modułów."
 assert "tubylem_lang" in atlas_js and "tubylem_lang" in i18n, "Brak współdzielonego języka."
@@ -46,8 +46,7 @@ assert len(set(r["name"] for r in geo["regions"])) == 16
 art = (ROOT / "assets/atlas-illustrated.js").read_text(encoding="utf-8")
 assert "landmark:iconGroup" in art and "atlas-forest" in art
 assert (ROOT / "assets/atlas-light-v5.css").exists()
-assert (ROOT / "assets/brand-pin.svg").exists()
-assert (ROOT / "assets/logo-en.svg").exists()
+assert (ROOT / "assets/brand-mark.svg").exists()
 assert "I Was Here" in atlas and "Places &amp; Memories" in atlas
 assert "I WAS HERE" in home and "PLACES &amp; MEMORIES" in home
 assert "assets/poland-geography.js" in atlas
@@ -72,7 +71,7 @@ for cid,pl,en,lat,lon,active in city_rows:
     assert contains(float(lon),float(lat),geo["border"]),f"City outside country: {cid}"
 assert sum(x[-1]=="true" for x in city_rows)==1, "Only Warsaw is currently published"
 assert "tubylem_map_style','atlas'" in (ROOT/"assets/brand-v5.js").read_text(encoding="utf-8")
-for extra in ["assets/atlas-light-v5.css","assets/atlas-illustrated.js","assets/poland-geography.js","assets/brand-pin.svg","assets/logo-en.svg","assets/brand-v5.js","assets/brand-v5.css"]:
+for extra in ["assets/atlas-light-v5.css","assets/atlas-illustrated.js","assets/poland-geography.js","assets/brand-v5.js","assets/brand-v5.css"]:
     assert extra in sw, "New asset absent from offline cache: "+extra
 # 5.1: jeden przełącznik języka i brak zdublowanej mapy Polski w Warszawie
 explorer = (ROOT / "assets/poland-explorer.js").read_text(encoding="utf-8")
@@ -152,7 +151,7 @@ for r in regdb["regions"]:
 relief = ROOT / "assets/poland-relief.webp"
 assert relief.exists() and relief.read_bytes()[8:12] == b"WEBP" and relief.stat().st_size < 400_000, "Relief WebP"
 assert "./assets/poland-relief.webp" in sw and "./assets/atlas-plans.js" in sw and "./assets/atlas-premium.css" in sw
-for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip", "addDay", "toggleVisited", "tabPanel", "planPicker", "scaleBar", "styleLight"]:
+for token in ["layersButton", "layersPanel", "placeSheet", "addTrip", "addDay", "toggleVisited", "tabPanel", "planPicker", "scaleBar", "styleLight"]:
     assert 'id="' + token + '"' in atlas, "atlas.html: " + token
 plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
 assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
