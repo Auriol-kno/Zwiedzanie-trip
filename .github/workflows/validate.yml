@@ -24,6 +24,9 @@ jobs:
         run: |
           node --check assets/features3.js
           node --check assets/atlas.js
+          node --check assets/atlas-illustrated.js
+          node --check assets/poland-geography.js
+          node --check assets/brand-v5.js
           node --check assets/i18n4.js
           node --check data/atrakcje.js
           node --check data/restauracje.js
