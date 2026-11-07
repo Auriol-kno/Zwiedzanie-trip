@@ -77,3 +77,8 @@ body[data-style=night] .attribution{background:rgba(17,37,52,.68)}
  .atlas-hero h1{font-size:27px}
  .style-panel{top:calc(142px + env(safe-area-inset-top,0px))}
 }
+
+/* I Was Here 5.1 — przełącznik PL | EN z wyróżnionym aktywnym językiem */
+.pill.lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px}
+.pill.lang-switch span{min-width:28px;padding:9px 6px;border-radius:10px;line-height:1;text-align:center;opacity:.6}
+.pill.lang-switch span.on{background:var(--ink,#23483e);color:var(--paper,#fffdf2);opacity:1}

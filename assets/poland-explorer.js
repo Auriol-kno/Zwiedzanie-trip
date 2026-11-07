@@ -1,11 +1,4 @@
-(function(){
-const style=document.createElement('style');style.textContent=`#smartOptions{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:15px;margin:12px 0}#smartOptions label{font-size:12px;font-weight:750;display:block;margin-bottom:8px}#smartOptions select{width:100%;padding:11px;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--ink)}#smartOptions p{font-size:11px;color:var(--sub);line-height:1.5}`;document.head.appendChild(style);
-/* I Was Here 5.0: dawny blok #polandHome (druga mapa Polski na Leaflet, marka „Tu Byłem”, własny
- * przełącznik stylu) usunięto. Mapę Polski zapewnia atlas.html oraz pływający przycisk #atlasFloat. */
-const opt=document.createElement('section');opt.id='smartOptions';opt.innerHTML='<label for="smartPriority">🧠 Inteligentna kolejność zwiedzania</label><select id="smartPriority"><option value="best">Najciekawsze dostępne w godzinach zwiedzania</option><option value="hidden">Najpierw mniej znane miejsca</option><option value="close">Najkrótsze dojazdy</option></select><p>Planer uwzględnia znane harmonogramy i szacowany czas przejazdu. Sprawdź aktualne godziny i ostatnie wejście na stronie obiektu. To algorytm planowania, nie usługa AI na żywo.</p>';
-document.querySelector('#routeSection')?.before(opt);
-const s=document.querySelector('#smartPriority');s.value=localStorage.getItem('tubylem_priority')||'best';const existing=document.querySelector('#priority');if(existing){existing.value=s.value;existing.dispatchEvent(new Event('change',{bubbles:true}));}s.addEventListener('change',()=>{localStorage.setItem('tubylem_priority',s.value);const existing=document.querySelector('#priority');if(existing){existing.value=s.value;existing.dispatchEvent(new Event('change',{bubbles:true}));}});
-})();
+/* I Was Here 5.1: dawne pole #smartOptions dublowało „Priorytet” w planerze — usunięte. */
 
 /* I Was Here — trip library and calendar export (language follows tubylem_lang) */
 (function(){
@@ -30,9 +23,6 @@ window.addEventListener('storage',e=>{if(e.key==='tubylem_lang')syncLanguage()})
 window.addEventListener('pageshow',syncLanguage);
 function setText(q,v){const el=document.querySelector(q);if(el)el.textContent=v}
 function applyLanguage(){
-setText('#smartOptions label','🧠 '+t('priority'));
-setText('#smartOptions p',t('caution'));
-const opts=document.querySelectorAll('#smartPriority option');if(opts.length>=3){opts[0].textContent=t('best');opts[1].textContent=t('hidden');opts[2].textContent=t('closeby')}
 setText('#tbTrips h2','📚 '+t('title'));setText('#tbSaveTrip',t('save'));setText('#tbCalendarNow',t('calendar'));setText('#tbCalendarHint',t('calendarHint'));renderTrips();
 }
 const tripSection=document.createElement('section');tripSection.id='tbTrips';
@@ -45,7 +35,7 @@ const st=typeof state!=='undefined'?state:null;
 if(!st||!Array.isArray(st.route)||!st.route.length)return null;
 const date=st.date||new Date().toISOString().slice(0,10),clock=document.querySelector('#visitClock')?.value||'10:00';
 const duration=Number(st.duration)||4;
-return {id:String(Date.now()),name:document.querySelector('#routeTitle')?.textContent||'Tu Byłem',date,clock,duration,mode:st.mode||'walking',stops:st.route.map(p=>({id:p.id,name:p.name,lat:p.lat,lon:p.lon})),savedAt:new Date().toISOString()};
+return {id:String(Date.now()),name:document.querySelector('#routeTitle')?.textContent||'I Was Here',date,clock,duration,mode:st.mode||'walking',stops:st.route.map(p=>({id:p.id,name:p.name,lat:p.lat,lon:p.lon})),savedAt:new Date().toISOString()};
 }
 function calendarFile(trip){
 const esc=x=>String(x||'').replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
@@ -53,9 +43,9 @@ const start=new Date(trip.date+'T'+trip.clock+':00');if(isNaN(start))return;
 const end=new Date(start.getTime()+trip.duration*3600000);
 const fmt=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('')+'T'+[d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join('');
 const desc=trip.stops.map((p,i)=>(i+1)+'. '+p.name).join('\n')+'\nTimes are estimates; verify opening hours.';
-const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Tu Bylem//Trips//EN','CALSCALE:GREGORIAN','BEGIN:VEVENT','UID:'+trip.id+'@tubylem.local','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'').replace(/Z$/,'Z'),'DTSTART;TZID=Europe/Warsaw:'+fmt(start),'DTEND;TZID=Europe/Warsaw:'+fmt(end),'SUMMARY:'+esc(trip.name),'DESCRIPTION:'+esc(desc),'END:VEVENT','END:VCALENDAR'].join('\r\n');
+const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//I Was Here//Trips//EN','CALSCALE:GREGORIAN','BEGIN:VEVENT','UID:'+trip.id+'@iwashere.local','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'').replace(/Z$/,'Z'),'DTSTART;TZID=Europe/Warsaw:'+fmt(start),'DTEND;TZID=Europe/Warsaw:'+fmt(end),'SUMMARY:'+esc(trip.name),'DESCRIPTION:'+esc(desc),'END:VEVENT','END:VCALENDAR'].join('\r\n');
 const url=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
-const a=document.createElement('a');a.href=url;a.download='tu-bylem-'+trip.date+'.ics';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);
+const a=document.createElement('a');a.href=url;a.download='i-was-here-'+trip.date+'.ics';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);
 }
 function renderTrips(){
 const list=document.querySelector('#tbTripList');if(!list)return;

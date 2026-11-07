@@ -49,3 +49,10 @@ https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html
 - Usunięto zdublowany blok „Tu Byłem” z drugą mapą Polski (Leaflet) na górze przewodnika. Tę rolę pełni `atlas.html` i pływający przycisk powrotu. Zachowano „Moje wycieczki”, eksport do kalendarza i inteligentną kolejność zwiedzania; teraz używają wspólnego języka.
 - Naprawiono start tłumaczenia: `#atlasFloat` znajduje się przed `i18n4.js`, a `refresh()` nie przerywa się przy braku elementu. Wejście z Atlasu EN otwiera Warszawę po angielsku.
 - `poland-explorer.js` dodano do cache offline (nowa wersja cache) i do sprawdzania składni w CI.
+
+## Poprawka 5.1b — łatwiejsza obsługa (szybkie poprawki 1–5)
+1. **Przełącznik „PL | EN”** w Atlasie i w Warszawie pokazuje oba języki i wyróżnia aktywny. Dotknięcie wybranego języka go ustawia, dotknięcie aktywnego niczego nie zmienia. Etykiety dla czytników ekranu mówią, jaki jest bieżący język i co zrobi przycisk.
+2. **Podpisane ikony** w nagłówku Warszawy: „Wygląd / Theme” i „Paszport / Passport”.
+3. **Jeden sposób powrotu do Atlasu w nagłówku:** logo I Was Here prowadzi do `atlas.html` (zniknęła osobna ikona 🗺). Pływający przycisk Atlasu jest nadal zawsze widoczny; na telefonie ma postać kompaktowej ikony mapy z etykietą dostępności.
+4. **Usunięto zdublowane pole** „Inteligentna kolejność zwiedzania”. Kolejność ustawia jedno pole „Priorytet” w planerze.
+5. **Spójna marka i wersja:** nazwa „I Was Here” pod ikoną na iPhonie (`apple-mobile-web-app-title`), w etykietach i w plikach kalendarza (.ics); w przewodniku nie ma już „4.0” i „Wersja demonstracyjna 3.0”.

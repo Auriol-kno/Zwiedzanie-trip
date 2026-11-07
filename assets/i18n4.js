@@ -11,7 +11,7 @@ const PAIRS=[
 ['Miejsca i Wspomnienia','Places & Memories'],['Tu Byłem — Miejsca i Wspomnienia','Tu Byłem — Places & Memories'],
 ['TU BYŁEM','I WAS HERE'],
 ['Warszawa · 18 dzielnic · przewodnik 2.0','Warsaw · 18 districts · city guide'],
-['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik 4.0','Warsaw · 18 districts · city guide 4.0'],
+['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik 4.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik miejski','Warsaw · 18 districts · city guide'],['Wygląd','Theme'],['Zmień wygląd','Change appearance'],['I Was Here — Atlas Polski','I Was Here — Poland Atlas'],['Wróć do mapy Polski','Back to the Poland Atlas'],
 ['Twoje miasto.','Your city.'],['Twoja trasa.','Your journey.'],
 ['Zaznacz obszar lub wybierz dzielnicę. Odkryj ponad sto miejsc i ułóż własną trasę.','Choose an area or district. Discover local sights and design your own route.'],['Zaznacz obszar lub wybierz dzielnicę. Odkryj 184 miejsca i ułóż własną trasę.','Choose an area or district. Explore 184 sights and plan your own route.'],
 ['W twoim obszarze','In your area'],['atrakcji do wyboru','places to explore'],['Czas wycieczki','Trip duration'],['z szacowanymi dojazdami','including estimated travel'],['Twój paszport','Your passport'],['zdobytych pieczątek','collected stamps'],
@@ -27,7 +27,7 @@ const PAIRS=[
 ['Miejsca warte uwagi','Places worth exploring'],['Odkryj atrakcje w wybranym obszarze','Discover sights in your selected area'],['♡ Zapisane','♡ Saved'],['♥ Pokaż wszystkie','♥ Show all'],['🔎 Szukaj atrakcji w wybranym obszarze','🔎 Search sights in this area'],
 ['🍽️ Jedzenie i kawiarnie','🍽️ Food & cafés'],['Odkrywaj restauracje według kuchni, rodzaju lokalu, dzielnicy i budżetu. Oceny i dostępność sprawdzisz w Google Maps.','Find food by cuisine, venue type, district and budget. Check current reviews and opening status in Google Maps.'],['Wyszukaj lokal','Search places to eat'],['Dzielnica','District'],['Kuchnia','Cuisine'],['Typ lokalu','Venue type'],['Budżet','Budget'],['Niedrogo','Low budget'],['Do umiarkowanego','Moderate'],['Do wyższego','Higher budget'],['Wszystkie ceny','All budgets'],['Sortuj','Sort by'],['Wybór redakcji','Editorial picks'],['Nazwa A–Z','Name A–Z'],['Najpierw budżet','Lowest budget first'],
 ['✦ Polecenie redakcji i „Warto odwiedzić” 1–5 to niezależne oceny kuratorskie. Nie są ocenami Google. Nie zapisujemy historycznych gwiazdek Google ani nie zgadujemy aktualnych ocen.','✦ Editorial food picks and 1–5 visit ratings are our independent scores, not Google reviews. We do not store or invent Google star ratings.'],
-['Wersja demonstracyjna 3.0 • redakcyjna baza 184 miejsc + 36 lokali gastronomicznych we wszystkich dzielnicach, stan: listopad 2026. Czas zwiedzania i transportu to szacunki, a nowe współrzędne mogą być orientacyjne. Godziny i ceny należy potwierdzić.','Preview version 4.0 • 184 curated sights and 36 food venues across Warsaw. Travel and visiting times are estimates; some map coordinates are approximate. Check current hours and prices.'],['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
+['I Was Here 5.1 • redakcyjna baza 184 miejsc + 36 lokali gastronomicznych we wszystkich dzielnicach, stan: listopad 2026. Czas zwiedzania i transportu to szacunki, a nowe współrzędne mogą być orientacyjne. Godziny i ceny należy potwierdzić.','I Was Here 5.1 • 184 curated sights and 36 food venues across Warsaw. Travel and visiting times are estimates; some map coordinates are approximate. Check current hours and prices.'],['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
 ['Kolekcja wspomnień','Memories collection'],['Paszport odkrywcy','Explorer passport'],['Zbieraj wirtualne pieczątki po odwiedzeniu atrakcji. Są zapisywane na tym urządzeniu.','Collect digital stamps after visiting sights. They are saved on this device.'],
 ['Personalizacja','Personalisation'],['Styl aplikacji','App theme'],['Wybierz wygląd najbardziej odpowiadający sposobowi, w jaki lubisz odkrywać miasto.','Choose the look that best suits the way you explore.'],
 ['W przyszłości: fotografie wysokiej jakości, tryb offline, inteligentny asystent i integracja z transportem publicznym.','Coming next: richer photography, fuller offline maps, AI assistant and public transport integration.'],
@@ -175,7 +175,6 @@ function words(s){
  if(trim.startsWith('✦ Mniej znane'))return '✦ Hidden gems';
  if(trim.startsWith('✦ Oszczędna'))return '✦ Budget-friendly route';
  if(trim.startsWith('Brak potwierdzonych'))return 'No confirmed paid entries';
- if(trim.startsWith('Wersja demonstracyjna'))return 'Version 4.0 preview • 184 curated sights and 36 food places in Warsaw. Opening hours, prices and some coordinates need checking. Times and travel are estimates.';
  return s;
 }
 const originalNodes=new WeakMap();
@@ -191,7 +190,7 @@ function translateNode(n){
  if(n.nodeValue!==converted)n.nodeValue=converted;
 }
 function translateAttrs(el){
- if(el.nodeType!==1)return;
+ if(el.nodeType!==1||el.hasAttribute('data-i18n-skip'))return;
  for(const a of attrs){
  if(!el.hasAttribute(a))continue;
  const v=el.getAttribute(a);
@@ -217,8 +216,9 @@ observer=new MutationObserver(schedule);
 function refresh(){
  document.documentElement.lang=lang;
  localStorage.setItem(PREFIX,lang);
- $('#langWarsaw').textContent=lang.toUpperCase();
- $('#langWarsaw').setAttribute('aria-label',lang==='pl'?'Zmień język na angielski':'Switch to Polish');
+ // Przełącznik PL | EN pokazuje oba języki; aktywny jest wyróżniony.
+ const sw=$('#langWarsaw');sw.querySelectorAll('[data-lang]').forEach(x=>{x.classList.toggle('on',x.dataset.lang===lang)});
+ sw.setAttribute('aria-label',lang==='pl'?'Język: polski. Przełącz na angielski':'Language: English. Switch to Polish');
  // Linki powrotu do Atlasu przekazują język; brak elementu nie może zatrzymać tłumaczenia.
  for(const id of ['#atlasTop','#atlasFloat']){const link=$(id);if(link)link.href='./atlas.html?lang='+lang}
  translateData(lang);
@@ -227,7 +227,7 @@ function refresh(){
  document.title=lang==='en'?'I Was Here — Warsaw City Guide':'I Was Here — Warszawa';
  repaint();
 }
-$('#langWarsaw').addEventListener('click',()=>{lang=lang==='pl'?'en':'pl';refresh()});
+$('#langWarsaw').addEventListener('click',e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;refresh()});
 window.addEventListener('storage',e=>{if(e.key===PREFIX&&['pl','en'].includes(e.newValue)&&e.newValue!==lang){lang=e.newValue;refresh()}});
 refresh();
 })();
