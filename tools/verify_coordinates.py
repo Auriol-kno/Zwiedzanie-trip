@@ -29,10 +29,44 @@ def km(a, b):
     return 2 * 6371 * math.asin(math.sqrt(q))
 
 
+# Nazwy w formie używanej w OpenStreetMap dla miejsc, których opisowa nazwa nie daje trafienia.
+OVERRIDES = {
+ "ns-hutnictwo": ["Muzeum Starożytnego Hutnictwa Świętokrzyskiego"], "bo-zamek": ["Zamek w Bodzentynie", "Ruiny zamku, Bodzentyn"],
+ "kr-krzemionki": ["Krzemionki Opatowskie", "Rezerwat archeologiczny Krzemionki"], "sz-mury": ["Brama Krakowska, Szydłów"],
+ "wi-kolegiata": ["Bazylika kolegiacka, Wiślica", "Kolegiata, Wiślica"], "pl-wzgorze-tumskie": ["Wzgórze Tumskie, Płock", "Bazylika katedralna, Płock"],
+ "by-exploseum": ["Exploseum"], "ch-stare-miasto": ["Ratusz, Chełmno"], "gr-spichrze": ["Spichrze, Grudziądz", "Spichlerze, Grudziądz"],
+ "ko-muzeum-zamoyskich": ["Muzeum Zamoyskich w Kozłówce", "Pałac Zamoyskich, Kozłówka"], "go-paradyz": ["Paradyż", "Opactwo, Gościkowo"],
+ "sw-chrystus-krol": ["Pomnik Chrystusa Króla, Świebodzin"], "kr-wawel": ["Zamek Królewski na Wawelu"],
+ "os-auschwitz": ["Państwowe Muzeum Auschwitz-Birkenau", "Muzeum Auschwitz-Birkenau, Oświęcim"], "bi-poloniny": ["Połonina Caryńska"],
+ "wi-klasztor": ["Pokamedulski klasztor w Wigrach", "Klasztor, Wigry"], "gd-oliwa": ["Archikatedra Oliwska", "Katedra Oliwska, Gdańsk"],
+ "ci-rotunda": ["Rotunda św. Mikołaja, Cieszyn", "Rotunda, Cieszyn"], "fr-wzgorze": ["Bazylika archikatedralna, Frombork", "Wzgórze Katedralne, Frombork"],
+ "bu-pochylnie": ["Pochylnia Buczyniec", "Buczyniec"], "gn-katedra": ["Bazylika Prymasowska, Gniezno", "Katedra Gnieźnieńska"],
+ "ka-katedra": ["Katedra, Kamień Pomorski", "Konkatedra, Kamień Pomorski"], "tr-ruina": ["Ruina kościoła, Trzęsacz", "Ruiny kościoła w Trzęsaczu"],
+ "ko-molo": ["Molo, Kołobrzeg"], "st-kolegiata": ["Kolegiata, Stargard", "Kolegiata Najświętszej Maryi Panny, Stargard"],
+ "kd-rynek": ["Rynek, Kazimierz Dolny"], "gd-dlugi-targ": ["Długi Targ, Gdańsk"], "dr-park": ["Drawieński Park Narodowy"], "tu-bory": ["Bory Tucholskie"],
+}
+GENERIC = {"zamek", "zamku", "muzeum", "park", "parku", "kosciol", "kosciola", "rynek", "rynku", "stare", "miasto", "miasta", "ulica", "bazylika",
+           "katedra", "katedralna", "klasztor", "palac", "pomnik", "narodowy", "narodowe", "ruiny", "ruina", "opactwo", "wzgorze", "trasa",
+           "turystyczna", "centrum", "sanktuarium", "rezerwat", "kopalnia", "zabytkowa", "brama", "galeria", "kaplica", "synagoga", "ratusz"}
+norm = lambda t: re.sub(r"[^a-z0-9 ]", " ", t.lower().translate(str.maketrans("ąćęłńóśźż", "acelnoszz")))
+def stems(text):
+    return {w[:5] for w in norm(text).split() if len(w) >= 4}
+def name_ok(p, r):
+    """Wspólne znaczące słowo (pierwsze 5 liter — odporne na odmianę) albo nazwa ogólna przy bardzo małej odległości."""
+    ours = stems(p["name"]["pl"] + " " + p["name"]["en"]) - {g[:5] for g in GENERIC}
+    theirs = stems((r.get("name") or "") + " " + r["display_name"].split(",")[0])
+    return bool(ours & theirs)
+def area_km(r):
+    b = [float(x) for x in r["boundingbox"]]
+    return max((b[1] - b[0]) * 111.2, (b[3] - b[2]) * 111.2 * math.cos(math.radians(b[0])))
+def inside_bbox(p, r):
+    b = [float(x) for x in r["boundingbox"]]
+    return b[0] <= p["lat"] <= b[1] and b[2] <= p["lon"] <= b[3]
+
 def queries(p):
     name = re.sub(r"\s*\(.*?\)", "", p["name"]["pl"]).strip()
     town = p["town"]
-    out = [f"{name}, {town}", name]
+    out = OVERRIDES.get(p["id"], []) + [f"{name}, {town}", name]
     for sep in (" — ", " – ", " i ", " w ", " we ", " na "):
         if sep in name:
             out.append(f"{name.split(sep)[0]}, {town}")
@@ -79,23 +113,27 @@ def main():
             cpath.write_text(json.dumps(cache, ensure_ascii=False))
             for r in res:
                 state = (r.get("address") or {}).get("state", "").lower()
-                if VOIV[p["region"]] not in state:
+                if VOIV[p["region"]] not in state or not name_ok(p, r):
                     continue
                 d = km((p["lat"], p["lon"]), (float(r["lat"]), float(r["lon"])))
+                # Duży obszar (park narodowy, półwysep, kanał): środek obszaru nie jest miejscem zwiedzania —
+                # jeśli nasz punkt leży w obrysie obiektu, potwierdzamy go bez przesuwania.
+                if area_km(r) > 2.5 and inside_bbox(p, r):
+                    d, r = 0.0, dict(r, lat=str(p["lat"]), lon=str(p["lon"]), _area=True)
                 if d <= MAX_KM and (best is None or d < best[0]):
                     best = (d, r, q)
             if best:
                 break
         if best:
             d, r, q = best
-            ok.append((p["id"], round(d, 2), r.get("name") or r["display_name"].split(",")[0]))
+            ok.append((p["id"], round(d, 2), (r.get("name") or r["display_name"].split(",")[0]) + (" [obszar]" if r.get("_area") else "")))
             if a.apply:
                 p["lat"], p["lon"] = round(float(r["lat"]), 5), round(float(r["lon"]), 5)
                 p["coordinateStatus"] = "osm"
                 p["osm"] = {"type": r["osm_type"], "id": r["osm_id"], "name": r.get("name") or ""}
         else:
             review.append(p["id"])
-        print(f"[{i + 1}/{len(db['places'])}] {p['id']}: " + (f"OSM {best[2]!r} Δ{best[0]:.2f} km" if best else "DO SPRAWDZENIA"), flush=True)
+        print(f"[{i + 1}/{len(db['places'])}] {p['id']}: " + (f"OSM {ok[-1][2]!r} Δ{best[0]:.2f} km" if best else "DO SPRAWDZENIA"), flush=True)
     if a.apply:
         db["coordinateSource"] = "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone " + time.strftime("%Y-%m-%d")
         (ROOT / "data/regiony.json").write_text(json.dumps(db, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
