@@ -43,3 +43,25 @@ for r in restaurants:
     assert r["googleRating"] is None, "Nie wpisuj nieaktualnych ocen Google do katalogu"
 write("restauracje.js", "window.WARSAW_FOOD=" + compact(food) + ";\n")
 print(f"OK: {len(attractions)} atrakcji, {len(districts)} dzielnic, {len(restaurants)} lokali; pliki JS zsynchronizowane.")
+
+# I Was Here 6.0 — województwa i atrakcje regionalne (Atlas → region → miejscowość)
+regions_db = load("regiony.json")
+regions = regions_db["regions"]
+region_ids = {r["id"] for r in regions}
+assert len(regions) == 16 and len(region_ids) == 16, "Atlas ma 16 województw"
+assert all(r["status"] in ("guide", "partial", "planned") for r in regions)
+categories = regions_db["categories"]
+region_places = regions_db["places"]
+assert len({p["id"] for p in region_places}) == len(region_places), "Powtórzone ID miejsc regionalnych"
+for p in region_places:
+    assert all(k in p for k in ("id", "region", "town", "name", "cats", "time", "visitValue", "lat", "lon", "icon", "url", "desc", "coordinateStatus")), p.get("id")
+    assert p["region"] in region_ids, p["id"]
+    assert p["name"]["pl"] and p["name"]["en"] and p["desc"]["pl"] and p["desc"]["en"], "Brak PL/EN: " + p["id"]
+    assert set(p["cats"]) <= set(categories), p["id"]
+    assert 49.0 < p["lat"] < 54.9 and 14.1 < p["lon"] < 24.2, p["id"]
+    assert p["time"] > 0 and 1 <= p["visitValue"] <= 5, p["id"]
+    assert p["coordinateStatus"] in ("orientacyjne", "redakcyjne", "zweryfikowane"), p["id"]
+    assert p["url"] is None or p["url"].startswith("https://"), p["id"]
+write("regiony.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
+guided = sum(r["status"] != "planned" for r in regions)
+print(f"OK: 16 województw ({guided} z atrakcjami), {len(region_places)} miejsc regionalnych; data/regiony.js zsynchronizowane.")

@@ -90,7 +90,8 @@ assert home.index('id="atlasFloat"') < home.index('assets/i18n4.js'), "#atlasFlo
 assert "./assets/poland-explorer.js" in sw, "PWA nie buforuje modułu wycieczek"
 # 5.3: każdy lokalny plik ładowany przez strony musi być w cache offline; Atlas rejestruje SW
 core = set(re.findall(r"'\./([^']+)'", sw.split("CORE=", 1)[1].split("];", 1)[0]))
-for page in (atlas, home):
+region_page = (ROOT / "region.html").read_text(encoding="utf-8")
+for page in (atlas, home, region_page):
     for ref in re.findall(r'(?:src|href)="(?:\./)?((?:assets|data)/[^"?#]+)"', page):
         assert ref in core, "PWA nie buforuje: " + ref
 assert "assets/poland-explorer.js" in core
@@ -98,6 +99,64 @@ assert "serviceWorker.register" in atlas_js, "Atlas (start_url) musi rejestrowa�
 assert "ignoreSearch" in sw and "navigate" in sw, "Offline: nawigacja z ?lang musi trafiać w cache"
 assert all(i["purpose"] == "any" for i in manifest["icons"]), "Ikona any nie może być jednocześnie maskable"
 assert "offers a worthwhile stop" not in i18n, "Szablonowe opisy EN"
+# 6.0: województwa w Atlasie i przewodnik regionu
+import math
+regdb = json.loads((ROOT / "data/regiony.json").read_text(encoding="utf-8"))
+geo_regions = {r["name"]: r["coords"] for r in geo["regions"]}
+assert len(regdb["regions"]) == 16 and {r["geo"] for r in regdb["regions"]} == set(geo_regions), "Województwa muszą odpowiadać granicom Natural Earth"
+city_ids = {c[0] for c in city_rows}
+assert all(set(r["cities"]) <= city_ids for r in regdb["regions"]), "Nieznane miasto w województwie"
+assert sorted(c for r in regdb["regions"] for c in r["cities"]) == sorted(city_ids), "Każde z 13 miast należy do jednego województwa"
+def edge_km(lon, lat, poly):
+    k = math.cos(math.radians(lat)) * 111.3
+    best = 1e9
+    for i in range(len(poly)):
+        (x1, y1), (x2, y2) = poly[i - 1], poly[i]
+        ax, ay, bx, by = (x1 - lon) * k, (y1 - lat) * 111.3, (x2 - lon) * k, (y2 - lat) * 111.3
+        dx, dy = bx - ax, by - ay
+        t = max(0, min(1, -(ax * dx + ay * dy) / ((dx * dx + dy * dy) or 1)))
+        best = min(best, math.hypot(ax + t * dx, ay + t * dy))
+    return best
+by_id = {r["id"]: r for r in regdb["regions"]}
+for p in regdb["places"]:
+    poly = geo_regions[by_id[p["region"]]["geo"]]
+    # Granice Natural Earth są uproszczone (np. Wisła przy Sandomierzu) — dopuszczamy 3 km od krawędzi.
+    assert contains(p["lon"], p["lat"], poly) or edge_km(p["lon"], p["lat"], poly) < 3, "Miejsce poza województwem: " + p["id"]
+    assert p["coordinateStatus"] == "orientacyjne" or p["sourceKind"] != "redakcyjna_selekcja", "Nie oznaczaj szacunkowych współrzędnych jako zweryfikowanych: " + p["id"]
+for r in regdb["regions"]:
+    has = any(p["region"] == r["id"] for p in regdb["places"])
+    assert has == (r["status"] != "planned"), "Status województwa niezgodny z danymi: " + r["id"]
+swk = [p for p in regdb["places"] if p["region"] == "swietokrzyskie"]
+assert len(swk) >= 25 and {"Kielce", "Sandomierz", "Chęciny"} <= {p["town"] for p in swk}, "Baza świętokrzyska"
+assert any(p["town"] == "Sierpc" for p in regdb["places"] if p["region"] == "mazowieckie"), "Mazowieckie: Sierpc"
+assert "data/regiony.js" in atlas and 'id="regionStrip"' in atlas and 'id="cardTowns"' in atlas
+for token in ["langRegion", "townChips", "catChips", "planList", "placeList", "atlasFloat", "rMap"]:
+    assert 'id="' + token + '"' in region_page, "region.html: " + token
+assert "IWH_REGIONS" in (ROOT / "assets/region.js").read_text(encoding="utf-8")
+for f in ("./region.html", "./assets/region.js", "./assets/region.css", "./data/regiony.js"):
+    assert f in sw, "PWA nie buforuje: " + f
+# 7.0: prawdziwa geometria (Natural Earth 1:10m), projekcja bez rozciągania, relief, plany
+assert "Natural Earth 1:10m" in geo["source"]["vectors"] and "Terrain Tiles" in geo["source"]["relief"], "Brak źródeł danych"
+proj = geo["projection"]
+assert proj["standardParallel"] == 52 and abs(proj["kx"] / proj["ky"] - math.cos(math.radians(52))) < 1e-3, "Projekcja rozciąga kraj"
+assert len(geo["border"]) >= 600 and sum(len(r["coords"]) for r in geo["regions"]) >= 2000, "Granice zbyt uproszczone"
+assert {r["id"] for r in geo["regions"]} == {r["id"] for r in regdb["regions"]}, "Identyfikatory województw"
+assert all(len(r["label"]) == 2 for r in geo["regions"]), "Brak punktów nazw województw"
+cities_xy = {c[0]: (float(c[4]), float(c[3])) for c in city_rows}
+for r in regdb["regions"]:
+    for cid in r["cities"]:
+        lon, lat = cities_xy[cid]
+        assert contains(lon, lat, geo_regions[r["geo"]]), f"Miasto {cid} poza województwem {r['id']}"
+relief = ROOT / "assets/poland-relief.webp"
+assert relief.exists() and relief.read_bytes()[8:12] == b"WEBP" and relief.stat().st_size < 400_000, "Relief WebP"
+assert "./assets/poland-relief.webp" in sw and "./assets/atlas-plans.js" in sw and "./assets/atlas-premium.css" in sw
+for token in ["layersButton", "layersPanel", "resetView", "placeSheet", "addTrip", "addDay", "toggleVisited", "tabPanel", "planPicker", "scaleBar", "styleLight"]:
+    assert 'id="' + token + '"' in atlas, "atlas.html: " + token
+plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
+assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
+assert 'data-tab="trips"' in atlas and 'data-tab="day"' in atlas and 'data-tab="memories"' in atlas and 'data-tab="profile"' in atlas
+print("OK: I Was Here 7.0 — granice Natural Earth 1:10m, 13 miast w swoich województwach, relief, plany.")
+print("OK: I Was Here 6.0 — 16 województw, " + str(len(regdb["places"])) + " miejsc regionalnych w granicach województw.")
 print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 13 accurately placed cities.")
 
 print("OK: Atlas 13 miast, trzy style, PL/EN, mini-mapa, przejście Polska/Warszawa, PWA.")
