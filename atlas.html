@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,12 +7,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Tu Byłem">
-<meta name="description" content="Tu Byłem — interaktywny atlas Polski z 13 miastami i przewodnikiem po Warszawie.">
+<meta name="description" content="I Was Here — Places & Memories: an illustrated interactive atlas of Poland with 13 cities.">
 <link rel="icon" type="image/svg+xml" href="./icon.svg">
 <link rel="apple-touch-icon" href="./icon-180.png">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./assets/atlas.css">
-<title>Tu Byłem — Atlas Polski</title>
+<link rel="stylesheet" href="./assets/atlas-light-v5.css">
+<title>I Was Here — Poland Atlas</title>
 </head>
 <body data-style="atlas">
 <main id="atlasApp">
@@ -20,9 +21,9 @@
     <svg id="polandSvg" viewBox="0 0 900 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktywna mapa Polski z 13 miastami"></svg>
   </div>
   <header class="atlas-top">
-    <a class="brand" href="./atlas.html" aria-label="Tu Byłem — mapa Polski">
-      <span class="brand-logo" aria-hidden="true">🧭</span>
-      <span class="brand-name"><strong>Tu Byłem</strong><small id="atlasSubtitle">13 miast · tysiące historii</small></span>
+    <a class="brand" href="./atlas.html" aria-label="I Was Here — Poland Atlas">
+      <span class="brand-logo" aria-hidden="true"><img src="./assets/brand-pin.svg" alt="" width="50" height="56"></span>
+      <span class="brand-name"><strong>I Was Here</strong><small id="atlasSubtitle">Places &amp; Memories</small></span>
     </a>
     <div class="atlas-actions">
       <button class="pill search-toggle" id="searchButton" type="button" aria-label="Szukaj miasta">⌕</button>
@@ -35,10 +36,10 @@
     <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
   </div>
   <div class="atlas-hero">
-    <span class="eyebrow" id="atlasEyebrow">13 miast · tysiące historii</span>
-    <h1 id="atlasHeadline">Odkrywaj
-po swojemu.</h1>
-    <p id="atlasLead">Wybierz miasto i ruszaj na spotkanie z niezwykłymi miejscami.</p>
+    <span class="eyebrow" id="atlasEyebrow">13 cities · countless stories</span>
+    <h1 id="atlasHeadline">Explore your
+own way.</h1>
+    <p id="atlasLead">Pick a city and discover memorable places.</p>
   </div>
   <div class="style-panel" role="group" aria-label="Styl mapy">
     <button id="styleAtlas" type="button" class="active">Atlas</button>
@@ -60,6 +61,9 @@ po swojemu.</h1>
     </div>
   </section>
 </main>
+<script src="./assets/brand-v5.js"></script>
+<script src="./assets/poland-geography.js"></script>
+<script src="./assets/atlas-illustrated.js"></script>
 <script src="./assets/atlas.js"></script>
 </body>
 </html>
