@@ -5,18 +5,29 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-5-3-20261107`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-0-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.5.3 — 2026-11-07 — gałąź `claude/fab-inline-stamps` (zawiera dokumentację przekazania)
+## [Nieopublikowane] 8.6 — 2026-11-08 — gałąź `claude/odkrywaj-szlaki`
+- **Odkrywaj = szlaki tematyczne** (`assets/explore-themes.js`, `.css`, dane `data/szlaki.json`):
+  - 14 motywów z ilustrowanymi, wektorowymi kafelkami w stylu logo (kolor motywu, złota ramka): Historia i królowie, Zamki i rycerze, Baśnie i legendy, Czarownice, diabły i duchy, II wojna światowa i pamięć, Nauka i Kopernik, Technika i przemysł, Podziemia i jaskinie, Dzika przyroda, Wiele kultur i wyznań, Skarby UNESCO, Pałace i ogrody, Morze i latarnie, Dinozaury i rodzinne przygody;
+  - 30 szlaków (m.in. Szlak Orlich Gniazd, Łysa Góra — sabat czarownic, Duchy i diabeł Boruta, Wrzesień 1939, Szlak Kopernikowski, Szlak Piastowski, Szlak Zabytków Techniki);
+  - każdy szlak: wstęp PL/EN, przystanki z notatkami, dystans i czas (szacunek), „Zapisz jako podróż”, „Utwórz plan dnia”, trasa w Google Maps, głęboki link `atlas.html?tab=explore&route=<id>`.
+- **Rozszerzona historia miejsc** (≥10 zdań PL i EN, `data/historia/<region>.json`, wczytywane dynamicznie w szczegółach miejsca, czytane też przez lektora): 30 miejsc — całe Małopolskie i Śląskie. Legendy oznaczone jako legendy, status „redakcyjne”.
+- **6 nowych zamków Szlaku Orlich Gniazd** z pozycjami z OSM: Pieskowa Skała, Rabsztyn, Olsztyn k. Częstochowy, Mirów, Bobolice, Smoleń (213 miejsc regionalnych). Wikipedia PL z tagów OSM; Bobolice bez potwierdzonego artykułu (wyszukiwanie).
+- W szczegółach miejsca regionu: „Na szlakach tematycznych” z linkami do szlaków.
+- **Propozycja bazy danych** dla setek obiektów, zdjęć i restauracji: `BAZA_DANYCH.md` (etap 1 static-first w repozytorium, etap 2 PostgreSQL/PostGIS w Supabase z nocnym eksportem — decyzja właściciela).
+- `sync_database.py` waliduje historie (≥10 zdań) i szlaki; testy przeglądarkowe +7 kontroli; cache `i-was-here-v8-6-0-20261108`.
+
+## 8.5.3 — 2026-11-07 — PR #16 (scalone 62cc8af, zawiera #15) — 2026-11-07 — gałąź `claude/fab-inline-stamps` (zawiera dokumentację przekazania)
 - **Mapka Polski w jednej linii z logo:** środkowy element nagłówka (logo · mapka · przyciski), już nie opuszczona pod
   nagłówkiem. Zawsze widoczna, zawsze prowadzi do pełnej mapy Polski. Na ekranach ≤370 px napis logo ukryty (zostaje pinezka).
 - **„✣ Zdobądź pieczątkę” w szczegółach atrakcji** (regiony jak w Warszawie, pomarańczowy przycisk) zamiast „Notatki i zdjęcia”;
   „📝 Notatki i zdjęcia” pojawia się dopiero po zdobyciu pieczątki, także jako 📝 przy zdobytych pieczątkach w Pieczątkach.
 - Cache `i-was-here-v8-5-3-20261107`; testy dostosowane.
 
-## [Nieopublikowane] Dokumentacja przekazania — 2026-11-07 — gałąź `claude/handoff-docs`
+## Dokumentacja przekazania — 2026-11-07 — PR #15 (scalone w 62cc8af)
 - Pełna aktualizacja `CLAUDE.md`, `PROJECT_STATUS.md`, `ROADMAP.md`, `CHANGELOG.md` oraz nowy rejestr ustaleń
   `DECYZJE_PROJEKTOWE.md` (interfejs, mapa, kolorystyka, logo, nawigacja, PL/EN, plany) — przed wyczyszczeniem
   kontekstu sesji. Bez zmian w kodzie aplikacji.

@@ -1,6 +1,6 @@
 # DECYZJE PROJEKTOWE — I Was Here / Places & Memories
 
-Rejestr ustaleń właściciela (stan na 2026-11-07, wersja 8.5). To są **wiążące decyzje**. Nie zmieniaj ich bez wyraźnej prośby właściciela.
+Rejestr ustaleń właściciela (stan na 2026-11-08, wersja 8.6). To są **wiążące decyzje**. Nie zmieniaj ich bez wyraźnej prośby właściciela.
 Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właściciela. Zaktualizuj wtedy ten plik w tym samym PR.
 
 ---
@@ -52,7 +52,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 ## 5. Nawigacja
 - **Jedno dolne menu na każdej stronie** (`assets/app-nav.js`), zawsze w tej kolejności: **Mapa · Odkrywaj · Plany · Pieczątki · Profil** (EN: Map · Explore · Plans · Stamps · Profile).
   - **Mapa:** w Atlasie mapa; z regionu Atlas na tym samym województwie; z Warszawy Atlas.
-  - **Odkrywaj:** w Atlasie otwiera wyszukiwarkę, bez dublowania listy z paska; w przewodnikach przewija do wyboru atrakcji.
+  - **Odkrywaj:** w Atlasie **szlaki tematyczne** (decyzja z 8.6, patrz §10); wyszukiwarka miast zostaje pod ⌕ w nagłówku mapy. W przewodnikach przewija do wyboru atrakcji.
   - **Plany:** plany podróży i plany dnia z przełącznikiem. W przewodnikach przewija do planu dnia.
   - **Pieczątki:** okno lub zakładka Pieczątek (patrz §7).
   - **Profil:** karta Pieczątek, statystyki, dane i licencje. Język jest w nagłówku, a styl mapy w Warstwach, **nie** w Profilu.
@@ -87,7 +87,15 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Przy każdej atrakcji jest link „Więcej informacji o miejscu — Wikipedia”: potwierdzony artykuł (tag `wikidata` w OSM + Wikidata) albo uczciwe wyszukiwanie. Artykułów nie zgadujemy. Złe dopasowania są na liście `REJECT` w `tools/wiki_links.py`.
 - Ocena 1–5 jest **redakcyjna**, a nie z Google. Nie ma kluczy API.
 
-## 10. Planowane (uzgodnione kierunki, jeszcze niezrobione)
+- **Historia miejsca** (decyzja z 8.6): min. **10 zdań** w PL i EN dla każdego miejsca, tylko utrwalone fakty, legendy oznaczone jako legendy. Pliki `data/historia/<region>.json`, wczytywane dynamicznie; walidacja w `sync_database.py`. Uzupełniamy partiami po województwach.
+- **Baza danych:** propozycja w `BAZA_DANYCH.md` — etap 1 (pliki w repozytorium dzielone i ładowane na żądanie) wdrażany od 8.6; etap 2 (PostgreSQL/PostGIS w Supabase z panelem i nocnym eksportem) wymaga zgody właściciela.
+
+## 10. Odkrywaj — szlaki tematyczne (8.6)
+- Właściciel poprosił o zwiedzanie z podziałem na motywy: historia, baśnie, legendy, II wojna światowa, nauka, Jura i Szlak Orlich Gniazd, czarownice i legendy — oraz o kolejne propozycje i ładne ilustracje.
+- 14 motywów z wektorowymi kafelkami w stylu logo (kolor motywu, złota ramka, kremowy rysunek, bursztynowe akcenty; bez filtrów SVG). Dane w `data/szlaki.json`.
+- Szlak = wstęp PL/EN, przystanki (miejsca regionów lub miasto), notatki przy przystankach, dystans i czas jako szacunek, zapis jako podróż lub plan dnia.
+
+## 11. Planowane (uzgodnione kierunki, jeszcze niezrobione)
 - Kopia zapasowa danych użytkownika (eksport/import planów, pieczątek i dziennika ze zdjęciami).
 - Mapa przewodnika regionu offline (Leaflet lokalnie).
 - Kolejne pełne przewodniki miast, np. Kraków albo Gdańsk; wybór należy do właściciela.

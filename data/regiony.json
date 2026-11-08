@@ -6999,6 +6999,219 @@
     "pl": "Telegraf (góra)",
     "en": null
    }
+  },
+  {
+   "id": "mp-pieskowa-skala",
+   "region": "malopolskie",
+   "town": "Pieskowa Skała",
+   "name": {
+    "pl": "Zamek w Pieskowej Skale",
+    "en": "Pieskowa Skała Castle"
+   },
+   "cats": [
+    "history",
+    "museum",
+    "view"
+   ],
+   "time": 90,
+   "visitValue": 5,
+   "lat": 50.24418,
+   "lon": 19.78008,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowy zamek z arkadowym dziedzińcem na skale nad doliną Prądnika; oddział Zamku Królewskiego na Wawelu.",
+    "en": "A Renaissance castle with an arcaded courtyard on a rock above the Prądnik valley; a branch of the Wawel Royal Castle."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 1329687872,
+    "name": "Zamek Pieskowa Skała"
+   },
+   "wiki": {
+    "qid": "Q1780430",
+    "pl": "Zamek Pieskowa Skała",
+    "en": null
+   }
+  },
+  {
+   "id": "mp-rabsztyn",
+   "region": "malopolskie",
+   "town": "Rabsztyn",
+   "name": {
+    "pl": "Zamek w Rabsztynie",
+    "en": "Rabsztyn Castle"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.2996,
+   "lon": 19.59257,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Ruiny XIV-wiecznej warowni koło Olkusza, częściowo odbudowane; jeden z zamków Szlaku Orlich Gniazd.",
+    "en": "The ruins of a 14th-century stronghold near Olkusz, partly rebuilt; one of the castles of the Eagles' Nests Trail."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 150068559,
+    "name": "Zamek w Rabsztynie"
+   },
+   "wiki": {
+    "qid": "Q9386720",
+    "pl": "Zamek w Rabsztynie",
+    "en": null
+   }
+  },
+  {
+   "id": "sl-olsztyn",
+   "region": "slaskie",
+   "town": "Olsztyn k. Częstochowy",
+   "name": {
+    "pl": "Ruiny zamku w Olsztynie",
+    "en": "Olsztyn Castle ruins"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.74911,
+   "lon": 19.27376,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Ruiny zamku z wysoką cylindryczną wieżą na skale; legenda o Maćku Borkowicu i rezerwat Sokole Góry obok.",
+    "en": "Castle ruins with a tall round tower on a rock; the legend of Maćko Borkowic and the Sokole Góry reserve nearby."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 166980912,
+    "name": "Zamek w Olsztynie"
+   },
+   "wiki": {
+    "qid": "Q9386695",
+    "pl": "Zamek w Olsztynie (województwo śląskie)",
+    "en": null
+   }
+  },
+  {
+   "id": "sl-mirow",
+   "region": "slaskie",
+   "town": "Mirów",
+   "name": {
+    "pl": "Ruiny zamku w Mirowie",
+    "en": "Mirów Castle ruins"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.6145,
+   "lon": 19.47511,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Malownicza trwała ruina XIV-wiecznego zamku, para z pobliskimi Bobolicami.",
+    "en": "The picturesque permanent ruin of a 14th-century castle, paired with nearby Bobolice."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 219811004,
+    "name": "Zamek w Mirowie"
+   },
+   "wiki": {
+    "qid": "Q3493915",
+    "pl": "Zamek w Mirowie",
+    "en": null
+   }
+  },
+  {
+   "id": "sl-bobolice",
+   "region": "slaskie",
+   "town": "Bobolice",
+   "name": {
+    "pl": "Zamek w Bobolicach",
+    "en": "Bobolice Castle"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.61307,
+   "lon": 19.49417,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Odbudowany zamek z XIV w. na skale; zwiedzanie z przewodnikiem i legenda o braciach bliźniakach.",
+    "en": "A rebuilt 14th-century castle on a rock; guided tours and the legend of the twin brothers."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 224672026,
+    "name": "Zamek Bobolice"
+   }
+  },
+  {
+   "id": "sl-smolen",
+   "region": "slaskie",
+   "town": "Smoleń",
+   "name": {
+    "pl": "Ruiny zamku w Smoleniu",
+    "en": "Smoleń Castle ruins"
+   },
+   "cats": [
+    "history",
+    "view",
+    "hidden"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.43833,
+   "lon": 19.67551,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Leśne ruiny zamku z wieżą widokową w rezerwacie przyrody Smoleń koło Pilicy.",
+    "en": "Forest castle ruins with a viewing tower in the Smoleń nature reserve near Pilica."
+   },
+   "coordinateStatus": "osm",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11",
+   "osm": {
+    "type": "way",
+    "id": 297961564,
+    "name": "Zamek w Smoleniu"
+   },
+   "wiki": {
+    "qid": "Q9386739",
+    "pl": "Zamek w Smoleniu",
+    "en": null
+   }
   }
  ],
  "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",
