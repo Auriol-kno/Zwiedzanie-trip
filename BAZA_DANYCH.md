@@ -95,19 +95,20 @@ Ważne: aplikacja **nadal działa statycznie**. Co noc skrypt eksportuje bazę d
 Dzięki polu `kind` restauracje, noclegi i atrakcje dzielą jedną mapę, wyszukiwarkę, plany i pieczątki, a filtry rozdzielają je w interfejsie.
 
 ## 4. Plan wdrożenia
-1. **8.6 (ten PR):**
+1. **8.6 (zrobione):**
    - historie i szlaki jako osobne pliki wczytywane dynamicznie;
    - walidacja w `sync_database.py`;
    - cache w service workerze.
-2. **8.7:**
-   - lekki indeks `data/index/places.json` dla Atlasu;
+2. **8.6.1 (zrobione):** lekki indeks `data/index/places.json` (397 obiektów, regiony + Warszawa, pole rodzaju) generowany przez `sync_database.py`; korzystają z niego Pieczątki na każdej stronie.
+3. **8.7:**
+   - Atlas korzysta z indeksu `data/index/places.json` zamiast pełnego `regiony.js`;
    - podział `regiony.json` na pliki województw;
    - Warszawa w tym samym formacie, `kind: atrakcja`.
-3. **8.8:**
+4. **8.8:**
    - `media/` i pierwsze zdjęcia z Wikimedia Commons (automatycznie przez Wikidata, z licencją);
    - galeria w szczegółach miejsca.
-4. **8.9:** `gastronomia/` dla miast regionów, w formacie Warszawy, bez ocen Google.
-5. **10.x (decyzja właściciela):** Supabase/PostgreSQL + panel redakcyjny + nocny eksport do plików statycznych.
+5. **8.9:** `gastronomia/` dla miast regionów, w formacie Warszawy, bez ocen Google.
+6. **10.x (decyzja właściciela):** Supabase/PostgreSQL + panel redakcyjny + nocny eksport do plików statycznych.
 
 ## 5. Historie miejsc — zasady redakcyjne
 - **Długość:** min. 10 zdań w PL i w EN, w 3–5 akapitach. Automatycznie sprawdza to `sync_database.py`.
@@ -115,5 +116,5 @@ Dzięki polu `kind` restauracje, noclegi i atrakcje dzielą jedną mapę, wyszuk
 - **Legendy** zawsze z oznaczeniem („według legendy”, „podanie głosi”).
 - **Niepewne liczby** podajemy jako przybliżone („około”, „ponad”) albo pomijamy.
 - **Status `redakcyjne`** i nota o źródłach w każdym pliku. Przy przeglądzie można dopisać listę źródeł i zmienić status na `zweryfikowane`.
-- **Pokrycie:** 8.6 — 30 miejsc (Małopolskie i Śląskie, w tym cały Szlak Orlich Gniazd); 8.6.1 — +25 (Pomorskie, Dolnośląskie).
-- **Kolejne partie:** po 2–3 województwa na PR. Kolejność (zaakceptowana): Pomorskie ✓, Dolnośląskie ✓, Świętokrzyskie, Warmińsko-Mazurskie, potem pozostałe i Warszawa (`story` → historia ≥10 zdań).
+- **Pokrycie:** 8.6 — 30 miejsc (Małopolskie i Śląskie, w tym cały Szlak Orlich Gniazd); 8.6.1 — +65 (Pomorskie, Dolnośląskie, Świętokrzyskie); razem 95 z 213.
+- **Kolejne partie:** po 2–3 województwa na PR. Kolejność (zaakceptowana): Pomorskie ✓, Dolnośląskie ✓, Świętokrzyskie ✓, Warmińsko-Mazurskie, potem pozostałe i Warszawa (`story` → historia ≥10 zdań).

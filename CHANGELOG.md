@@ -10,7 +10,9 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-1-20261108`.
 ---
 
 ## [Nieopublikowane] 8.6.1 — 2026-11-08 — gałąź `claude/historie-pomorze-dolny-slask`
-- **Historie ≥10 zdań PL/EN** dla kolejnych 25 miejsc: całe Pomorskie (13) i Dolnośląskie (12). Razem 55 z 213 miejsc regionalnych.
+- **Historie ≥10 zdań PL/EN** dla kolejnych 65 miejsc: całe Pomorskie (13), Dolnośląskie (12) i Świętokrzyskie (40). Razem 95 z 213 miejsc regionalnych.
+- **Baza danych, etap 1 (`BAZA_DANYCH.md`):** `sync_database.py` generuje lekki indeks `data/index/places.json` (397 obiektów: 213 w regionach + 184 w Warszawie, pole rodzaju `k`, flaga historii `h`).
+  Pieczątki pobierają go na żądanie, gdy strona nie ma pełnej bazy: w Warszawie można teraz szukać i odblokowywać miejsca z regionów, a w Atlasie i regionach — atrakcje Warszawy (wcześniej był tylko link do drugiej strony).
 - Właściciel zaakceptował motywy i ilustracje Odkrywaj, etap 1 bazy danych oraz kolejność województw (Pomorskie, Dolnośląskie, Świętokrzyskie).
 - Cache `i-was-here-v8-6-1-20261108`.
 

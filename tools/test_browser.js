@@ -124,6 +124,10 @@ function check(ok, message) {
     && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');
   await page.click('#appNav [data-tab="passport"]');
   check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Stamps/.test(b.textContent) && !!b.querySelector('[data-pp-list-waw]') && b.querySelectorAll('.pp-stamp').length === 14; }), 'Warszawa: Pieczątki (14 znaczków miast + lista Warszawy) z dolnego menu (z pieczątkami Warszawy)');
+  await page.waitForSelector('.iwh-passport [data-pp-search="place"]', { timeout: 5000 }).catch(() => {});
+  await page.fill('.iwh-passport [data-pp-search="place"]', 'Ogrodzieniec').catch(() => {});
+  check(await page.evaluate(() => /Ogrodzieniec/.test((document.querySelector('.iwh-passport [data-pp-list-place]') || {}).textContent || '')), 'Warszawa: Pieczątki szukają miejsc z regionów (indeks data/index/places.json)');
+  await page.fill('.iwh-passport [data-pp-search="place"]', '').catch(() => {});
   await page.click('.iwh-passport .ij-done');
   await page.click('#langWarsaw [data-lang="pl"]');
   await page.waitForTimeout(400);

@@ -10,7 +10,7 @@
 ---
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
-- **Otwarte PR:** 8.6.1 — historie ≥10 zdań dla Pomorskiego i Dolnośląskiego (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
+- **Otwarte PR:** #18 — 8.6.1: historie ≥10 zdań dla Pomorskiego, Dolnośląskiego i Świętokrzyskiego + indeks bazy danych (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -64,7 +64,7 @@
 - Kolejność sekcji: „Co pokazać na mapie?” (miejscowości i kategorie) → mapa Leaflet → plan dnia → lista.
 - Plan dnia ma tryby Pieszo (domyślny przy wejściu z miejscowości), Samochód i Komunikacja.
 - Szczegóły miejsca zawierają:
-  - opis, **„📜 Historia miejsca”** (≥10 zdań: Małopolskie, Śląskie, Pomorskie, Dolnośląskie) i link do Wikipedii;
+  - opis, **„📜 Historia miejsca”** (≥10 zdań: Małopolskie, Śląskie, Pomorskie, Dolnośląskie, Świętokrzyskie) i link do Wikipedii;
   - „Na szlakach tematycznych” (linki do szlaków z Odkrywaj);
   - ♡ (zapisz);
   - „Byłem tu”;
@@ -92,13 +92,11 @@
 - Pełny przewodnik miejski ma **tylko Warszawa**. Pozostałe 13 miast ma atrakcje w przewodnikach regionów.
 - **Opisy EN Warszawy:** ok. 158 atrakcji ma uczciwy komunikat zamiast tłumaczenia.
 - **Wikipedia:** 97 miejsc regionalnych i 115 atrakcji Warszawy ma tylko link do wyszukiwania.
-- **Rozszerzona historia (≥10 zdań):** 55 z 213 miejsc regionalnych (Małopolskie, Śląskie, Pomorskie, Dolnośląskie); następne Świętokrzyskie (40 miejsc), potem pozostałe i Warszawa (`BAZA_DANYCH.md` §5).
+- **Rozszerzona historia (≥10 zdań):** 95 z 213 miejsc regionalnych (Małopolskie, Śląskie, Pomorskie, Dolnośląskie, Świętokrzyskie); następne Warmińsko-Mazurskie i pozostałe, potem Warszawa (`BAZA_DANYCH.md` §5).
 - **Wikipedia EN** dla 5 nowych zamków do uzupełnienia, gdy Wikidata przestanie zwracać 429 (`tools/wiki_links.py`).
 - **Współrzędne:** 41 z 213 miejsc regionalnych i ok. 158 atrakcji Warszawy jest orientacyjnych.
 - **Brak kopii zapasowej** danych użytkownika. Wyczyszczenie danych Safari usuwa plany, pieczątki i dziennik.
-- **Pieczątki poza „swoją” stroną:**
-  - na stronie Warszawy lista pieczątek regionów odsyła do Atlasu, bo nie ładujemy tam `regiony.js`;
-  - poza Warszawą lista atrakcji Warszawy odsyła do jej przewodnika.
+- **Pieczątki poza „swoją” stroną** (rozwiązane w 8.6.1): listy korzystają z indeksu `data/index/places.json`; bez sieci przy pierwszym otwarciu zostaje link do drugiej strony.
 - Plany dnia Atlasu nie przyjmują atrakcji Warszawy, bo Warszawa ma własny planer.
 - Trasy to szacunki i linki do Google Maps. Nie ma routingu WTP na żywo ani ocen Google.
 
@@ -126,7 +124,7 @@
 - **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
 
 ## 4. Ostatnio wykonane prace
-- **8.6.1 (gałąź `claude/historie-pomorze-dolny-slask`):** historie ≥10 zdań dla Pomorskiego i Dolnośląskiego (25 miejsc).
+- **8.6.1 (PR #18):** historie ≥10 zdań dla Pomorskiego, Dolnośląskiego i Świętokrzyskiego (65 miejsc); indeks bazy danych `data/index/places.json` używany przez Pieczątki.
 - **8.6 (PR #17):** Odkrywaj ze szlakami tematycznymi i ilustracjami, historie ≥10 zdań (30 miejsc), 6 zamków Jury, propozycja bazy danych `BAZA_DANYCH.md`.
 - **8.5.3 (PR #16, z #15):** mapka Polski w jednej linii z logo, „Zdobądź pieczątkę”, dokumentacja przekazania.
 - **8.5 (PR #14):**
@@ -155,7 +153,7 @@
 - **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
 ## 6. Najbliższe zadanie
-1. **Historie ≥10 zdań dla Świętokrzyskiego** (40 miejsc), potem **baza danych etap 1** (`BAZA_DANYCH.md` §4: lekki indeks + pliki województw) — oba zaakceptowane przez właściciela 2026-11-08.
+1. **Historie ≥10 zdań dla kolejnych województw** (Warmińsko-Mazurskie, Wielkopolskie, Kujawsko-Pomorskie…) i **dalszy etap 1 bazy danych**: Atlas na indeksie zamiast pełnego `regiony.js`, pliki województw dla przewodników (`BAZA_DANYCH.md` §4).
 2. **Ręczny test na iPhonie** (właściciel):
    - pływająca mapka i logo;
    - Pieczątki i „Byłem tu”;

@@ -161,8 +161,12 @@ new MutationObserver(()=>{if(box&&!box.hidden){texts();draw()}}).observe(documen
 const readLS=(k,f)=>{try{const v=JSON.parse(localStorage.getItem(k)||'null');return v==null?f:v}catch(e){return f}};
 const writeLS=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
 const ART=()=>window.IWH_ATLAS_ART;
-const REG=()=>window.IWH_REGIONS;
-const WAW=()=>window.WARSAW_DB&&window.WARSAW_DB.attractions;
+// 8.6.1 (BAZA_DANYCH.md, etap 1): gdy strona nie ładuje pełnej bazy (np. Warszawa nie ma regiony.js, Atlas nie ma atrakcje.js),
+// Pieczątki korzystają z lekkiego indeksu data/index/places.json, pobieranego dopiero po otwarciu Pieczątek.
+let IDX=null,idxP=null;
+function loadIndex(){if(!idxP)idxP=fetch('./data/index/places.json').then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.items))IDX=j;return IDX}).catch(()=>{idxP=null;return null});return idxP}
+const REG=()=>window.IWH_REGIONS||(IDX?{places:IDX.items.filter(i=>i.k==='place').map(i=>({id:i.id,icon:i.i,name:i.n,town:i.t}))}:null);
+const WAW=()=>(window.WARSAW_DB&&window.WARSAW_DB.attractions)||(IDX?IDX.items.filter(i=>i.k==='waw').map(i=>({id:i.id,icon:i.i,name:i.n.pl,district:i.t})):null);
 const cityIds=()=>ART()?ART().cities:['warsaw','krakow','gdansk','wroclaw','poznan','lodz','szczecin','torun','lublin','bialystok','katowice','rzeszow','kielce','olsztyn'];
 const visitedCities=()=>readLS('iwh_visited',[]).filter(k=>/^city:/.test(k)).map(k=>k.slice(5));
 const wawVisited=()=>{const w=readLS('odkryjWarszawe_1',{});return Array.isArray(w.visited)?w.visited:[]};
@@ -229,6 +233,7 @@ function mount(host){
   document.addEventListener('iwh-journal-change',()=>{if(host.isConnected)fillEntries(host)});
  }
  render();
+ if((!window.IWH_REGIONS||!(window.WARSAW_DB&&window.WARSAW_DB.attractions))&&!IDX)loadIndex().then(j=>{if(j&&host.isConnected)render()});
 }
 let pbox=null,pFocus=null;
 function passportOpen(){

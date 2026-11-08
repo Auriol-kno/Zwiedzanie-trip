@@ -118,3 +118,18 @@ for r in routes_db["routes"]:
         assert (kind == "place" and ref in place_ids) or (kind == "city" and ref in city_ids), "Nieznany przystanek " + st["ref"] + " w " + r["id"]
         assert ("pl" in st) == ("en" in st), "Notatka przystanku tylko w jednym języku: " + r["id"]
 print(f"OK: {hist_total} rozszerzonych historii (≥10 zdań PL i EN), {len(theme_ids)} motywów, {len(route_ids)} szlaków tematycznych.")
+
+# 8.6.1 — BAZA_DANYCH.md, etap 1: lekki indeks wszystkich obiektów (regiony + Warszawa), pobierany na żądanie (fetch).
+# Pola skrócone, żeby plik był mały: k = rodzaj (place = miejsce w regionie, waw = atrakcja Warszawy), r = województwo,
+# t = miejscowość lub dzielnica, n = nazwa {pl,en}, i = ikona, la/lo = współrzędne, c = kategorie, h = jest długa historia.
+hist_ids = set()
+for path in sorted(hist_dir.glob("*.json")):
+    hist_ids |= set(json.loads(path.read_text(encoding="utf-8"))["places"])
+index_items = [{"id": p["id"], "k": "place", "r": p["region"], "t": p["town"], "n": p["name"], "i": p["icon"],
+                "la": p["lat"], "lo": p["lon"], "c": p["cats"], **({"h": 1} if p["id"] in hist_ids else {})} for p in region_places]
+index_items += [{"id": a["id"], "k": "waw", "r": "mazowieckie", "t": a["district"], "n": {"pl": a["name"], "en": None}, "i": a.get("icon") or "📍",
+                 "la": a["lat"], "lo": a["lon"], "c": a["cats"]} for a in attractions]
+assert len({(i["k"], i["id"]) for i in index_items}) == len(index_items), "Powtórzone ID w indeksie"
+(DATA / "index").mkdir(exist_ok=True)
+write("index/places.json", json.dumps({"version": "8.6.1", "note": "Wygenerowano przez tools/sync_database.py — nie edytuj ręcznie.", "items": index_items}, ensure_ascii=False, separators=(",", ":")) + "\n")
+print(f"OK: indeks data/index/places.json — {len(index_items)} obiektów ({len(region_places)} w regionach, {len(attractions)} w Warszawie).")
