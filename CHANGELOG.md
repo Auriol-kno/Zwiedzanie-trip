@@ -5,11 +5,16 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-0-20261108`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-1-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.6 — 2026-11-08 — gałąź `claude/odkrywaj-szlaki`
+## [Nieopublikowane] 8.6.1 — 2026-11-08 — gałąź `claude/historie-pomorze-dolny-slask`
+- **Historie ≥10 zdań PL/EN** dla kolejnych 25 miejsc: całe Pomorskie (13) i Dolnośląskie (12). Razem 55 z 213 miejsc regionalnych.
+- Właściciel zaakceptował motywy i ilustracje Odkrywaj, etap 1 bazy danych oraz kolejność województw (Pomorskie, Dolnośląskie, Świętokrzyskie).
+- Cache `i-was-here-v8-6-1-20261108`.
+
+## 8.6 — 2026-11-08 — PR #17 (scalone 71aeaed)
 - **Odkrywaj = szlaki tematyczne** (`assets/explore-themes.js`, `.css`, dane `data/szlaki.json`):
   - 14 motywów z ilustrowanymi, wektorowymi kafelkami w stylu logo (kolor motywu, złota ramka): Historia i królowie, Zamki i rycerze, Baśnie i legendy, Czarownice, diabły i duchy, II wojna światowa i pamięć, Nauka i Kopernik, Technika i przemysł, Podziemia i jaskinie, Dzika przyroda, Wiele kultur i wyznań, Skarby UNESCO, Pałace i ogrody, Morze i latarnie, Dinozaury i rodzinne przygody;
   - 30 szlaków (m.in. Szlak Orlich Gniazd, Łysa Góra — sabat czarownic, Duchy i diabeł Boruta, Wrzesień 1939, Szlak Kopernikowski, Szlak Piastowski, Szlak Zabytków Techniki);

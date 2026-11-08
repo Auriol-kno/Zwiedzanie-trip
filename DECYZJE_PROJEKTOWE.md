@@ -87,7 +87,8 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Przy każdej atrakcji jest link „Więcej informacji o miejscu — Wikipedia”: potwierdzony artykuł (tag `wikidata` w OSM + Wikidata) albo uczciwe wyszukiwanie. Artykułów nie zgadujemy. Złe dopasowania są na liście `REJECT` w `tools/wiki_links.py`.
 - Ocena 1–5 jest **redakcyjna**, a nie z Google. Nie ma kluczy API.
 
-- **Historia miejsca** (decyzja z 8.6): min. **10 zdań** w PL i EN dla każdego miejsca, tylko utrwalone fakty, legendy oznaczone jako legendy. Pliki `data/historia/<region>.json`, wczytywane dynamicznie; walidacja w `sync_database.py`. Uzupełniamy partiami po województwach.
+- **Historia miejsca** (decyzja z 8.6): min. **10 zdań** w PL i EN dla każdego miejsca, tylko utrwalone fakty, legendy oznaczone jako legendy. Pliki `data/historia/<region>.json`, wczytywane dynamicznie; walidacja w `sync_database.py`. Uzupełniamy partiami po województwach; kolejność zaakceptowana 2026-11-08: Pomorskie, Dolnośląskie, Świętokrzyskie, potem pozostałe.
+- **Właściciel zaakceptował (2026-11-08):** motywy i ilustracje Odkrywaj oraz etap 1 bazy danych z `BAZA_DANYCH.md`.
 - **Baza danych:** propozycja w `BAZA_DANYCH.md` — etap 1 (pliki w repozytorium dzielone i ładowane na żądanie) wdrażany od 8.6; etap 2 (PostgreSQL/PostGIS w Supabase z panelem i nocnym eksportem) wymaga zgody właściciela.
 
 ## 10. Odkrywaj — szlaki tematyczne (8.6)
