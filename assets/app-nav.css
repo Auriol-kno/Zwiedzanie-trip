@@ -18,3 +18,4 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 /* Wąskie ekrany (iPhone SE/mini): sama pinezka bez napisu, żeby mapka zmieściła się w jednej linii */
 @media(max-width:370px){.top .brand .wordmark,.atlas-top .brand-name{display:none}.poland-fab,.poland-fab img{width:44px;height:44px}}
 .atlas-top .poland-fab,.atlas-top .poland-fab img{width:44px;height:44px}
+.made-by{font-style:italic;font-weight:700;font-family:Georgia,Palatino,serif}

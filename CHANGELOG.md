@@ -5,11 +5,15 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-1-20261108`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-2-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.6.1 — 2026-11-08 — gałąź `claude/historie-pomorze-dolny-slask`
+## [Nieopublikowane] 8.6.1–8.6.2 — 2026-11-08 — PR #18, gałąź `claude/historie-pomorze-dolny-slask`
+- **Historie dla wszystkich województw:** każde z 213 miejsc regionalnych ma historię ≥10 zdań PL i EN (16 plików `data/historia/<region>.json`). `sync_database.py` wymaga teraz historii dla każdego nowego miejsca.
+- **Plany zwiedzania dla 16 województw** w Odkrywaj: nowy motyw „Plany województw” (ilustracja mapy z pinezką), 8–12 przystanków w kolejności geograficznej, wstęp PL/EN, link „Przewodnik województwa” (46 szlaków, 15 motywów).
+- **Podpis autora „Made by Tomasz Kmiecik”** (prośba właściciela): Profil w Atlasie, stopki przewodników regionów i Warszawy, `<meta name="author">`, README.
+- Wszystkie 16 plików historii w cache PWA (ok. 0,5 MB), cache `i-was-here-v8-6-2-20261108`; testy przeglądarkowe: 80 kontroli.
 - **Historie ≥10 zdań PL/EN** dla kolejnych 65 miejsc: całe Pomorskie (13), Dolnośląskie (12) i Świętokrzyskie (40). Razem 95 z 213 miejsc regionalnych.
 - **Baza danych, etap 1 (`BAZA_DANYCH.md`):** `sync_database.py` generuje lekki indeks `data/index/places.json` (397 obiektów: 213 w regionach + 184 w Warszawie, pole rodzaju `k`, flaga historii `h`).
   Pieczątki pobierają go na żądanie, gdy strona nie ma pełnej bazy: w Warszawie można teraz szukać i odblokowywać miejsca z regionów, a w Atlasie i regionach — atrakcje Warszawy (wcześniej był tylko link do drugiej strony).

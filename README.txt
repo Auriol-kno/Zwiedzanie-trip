@@ -71,3 +71,5 @@ IMPORTANT
 - Currently only Warsaw has the full guide; the other 12 cities are coming soon.
 - The 180px and 512px PNG icons were regenerated from the SVG logo by GitHub Actions (commit 7766a2c2). Previously installed iPhone shortcuts may keep a cached old icon; add the app again if needed.
 - Final tests on a physical iPhone and live GitHub Pages deployment verification remain pending.
+
+Made by Tomasz Kmiecik.

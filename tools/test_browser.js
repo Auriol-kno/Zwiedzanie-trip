@@ -300,6 +300,13 @@ function check(ok, message) {
   check(await page.evaluate(() => document.querySelectorAll('#tabPanel .ex-theme').length >= 10 && document.querySelectorAll('#tabPanel .ex-route.big').length >= 8
     && document.querySelectorAll('#tabPanel .ex-theme svg.ex-art').length === document.querySelectorAll('#tabPanel .ex-theme').length), 'Odkrywaj: motywy z ilustracjami i polecane szlaki');
   check(await page.evaluate(() => !/[ąćęłńóśźż]|Szlak|zamki|Pokaż|Przewodnik/.test(document.querySelector('#tabPanel').innerText.replace(/Łysa Góra|Łęczyca|Kraków|Częstochowa|Toruń|Gdańsk|Wrocław|Poznań|Łódź|Białowieża/g, ''))), 'Odkrywaj: wersja EN bez polskich fragmentów interfejsu');
+  await page.click('#tabPanel [data-ex-theme="wojewodztwa"]');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel .ex-route').length === 16), 'Odkrywaj: plany zwiedzania dla wszystkich 16 województw');
+  await page.click('#tabPanel [data-ex-route="plan-podlaskie"]');
+  await page.waitForSelector('#tabPanel .ex-stops');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel .ex-stop').length >= 8 && !!document.querySelector('#tabPanel a[href*="region.html?region=podlaskie"]')), 'Odkrywaj: plan województwa z przystankami i linkiem do przewodnika');
+  await page.click('#tabPanel [data-ex-theme="wojewodztwa"]');
+  await page.click('#tabPanel [data-ex-home]');
   await page.click('#tabPanel [data-ex-theme="zamki"]');
   await page.click('#tabPanel [data-ex-route="orle-gniazda"]');
   await page.waitForSelector('#tabPanel .ex-stops');
@@ -309,12 +316,18 @@ function check(ok, message) {
   await page.goto(base + 'atlas.html?tab=explore&route=lysa-gora&lang=pl');
   await page.waitForSelector('#tabPanel .ex-stops');
   check(await page.evaluate(() => /Łysa Góra/.test(document.querySelector('#tabPanel h2').textContent) && document.querySelectorAll('#tabPanel .ex-stop').length === 3), 'Odkrywaj: głęboki link do szlaku (atlas.html?tab=explore&route=…)');
+  await page.click('.tabbar [data-tab="profile"]');
+  check(await page.evaluate(() => /Made by Tomasz Kmiecik/.test(document.querySelector('#tabPanel').textContent)), 'Profil: podpis „Made by Tomasz Kmiecik”');
   // 8.6 — rozszerzona historia (≥10 zdań) i szlaki w szczegółach miejsca regionu
   await page.goto(base + 'region.html?region=slaskie&place=og-zamek&lang=pl');
   await page.waitForSelector('#dHist .place-history');
   await page.waitForSelector('#dRoutes .place-routes a');
   check(await page.evaluate(() => { const t = document.querySelector('#dHist').innerText; return (t.match(/[.!?](\s|$)/g) || []).length >= 10 && /Bonerów|Boner/.test(t); }), 'Przewodnik regionu: historia miejsca ma co najmniej 10 zdań');
   check(await page.evaluate(() => [...document.querySelectorAll('#dRoutes a')].some(a => /route=orle-gniazda/.test(a.href))), 'Przewodnik regionu: link do szlaku, na którym leży miejsce');
+  check(await page.evaluate(() => /Made by Tomasz Kmiecik/.test(document.querySelector('#rFooter').textContent)), 'Przewodnik regionu: podpis autora w stopce');
+  await page.goto(base + 'region.html?region=podlaskie&place=kr-meczet&lang=en');
+  await page.waitForSelector('#dHist .place-history');
+  check(await page.evaluate(() => /Tatars/.test(document.querySelector('#dHist').innerText) && !/[ąęłśżź]/.test(document.querySelector('#dHist p').innerText.replace(/Kruszyniany|Bohoniki|pierekaczewnik/g,''))), 'Przewodnik regionu: historia w EN dla kolejnych województw');
 
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();

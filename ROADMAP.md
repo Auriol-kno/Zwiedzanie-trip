@@ -56,7 +56,7 @@ Szczegóły są w `CHANGELOG.md`.
 4. Wspólne dane regionów i Warszawy w Pieczątkach na każdej stronie (lekki indeks nazw zamiast pełnego `regiony.js`).
 
 ## Etap C — jakość treści (8.8–8.9)
-0. **Historie ≥10 zdań** dla kolejnych województw (po 2–3 na PR) i dla Warszawy; potem baza danych etap 1 (indeks + pliki województw, zdjęcia z Wikimedia Commons, gastronomia) według `BAZA_DANYCH.md` §4.
+0. **Historie ≥10 zdań:** województwa zrobione w 8.6.2 (213/213); zostaje Warszawa (184 atrakcje, partiami po dzielnicach); potem baza danych etap 1 (indeks + pliki województw, zdjęcia z Wikimedia Commons, gastronomia) według `BAZA_DANYCH.md` §4.
 1. **Wikipedia:** ręczne QID Wikidata dla miejsc bez tagu w OSM (dziś 97 regionów i 115 atrakcji Warszawy ma tylko wyszukiwanie).
 2. **Opisy EN Warszawy:** ok. 158 do przetłumaczenia redakcyjnie, partiami po dzielnicach, bez zmyślania historii.
 3. **Współrzędne Warszawy** w OSM (rozszerzyć `verify_coordinates.py`); pozostałe 41 miejsc regionalnych.

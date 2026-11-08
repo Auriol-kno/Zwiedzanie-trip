@@ -116,5 +116,5 @@ Dzięki polu `kind` restauracje, noclegi i atrakcje dzielą jedną mapę, wyszuk
 - **Legendy** zawsze z oznaczeniem („według legendy”, „podanie głosi”).
 - **Niepewne liczby** podajemy jako przybliżone („około”, „ponad”) albo pomijamy.
 - **Status `redakcyjne`** i nota o źródłach w każdym pliku. Przy przeglądzie można dopisać listę źródeł i zmienić status na `zweryfikowane`.
-- **Pokrycie:** 8.6 — 30 miejsc (Małopolskie i Śląskie, w tym cały Szlak Orlich Gniazd); 8.6.1 — +65 (Pomorskie, Dolnośląskie, Świętokrzyskie); razem 95 z 213.
+- **Pokrycie:** 8.6 — 30 miejsc (Małopolskie i Śląskie, w tym cały Szlak Orlich Gniazd); 8.6.1 — +65 (Pomorskie, Dolnośląskie, Świętokrzyskie); 8.6.2 — pozostałe 11 województw: **213 z 213**. Następna partia: atrakcje Warszawy.
 - **Kolejne partie:** po 2–3 województwa na PR. Kolejność (zaakceptowana): Pomorskie ✓, Dolnośląskie ✓, Świętokrzyskie ✓, Warmińsko-Mazurskie, potem pozostałe i Warszawa (`story` → historia ≥10 zdań).

@@ -113,10 +113,12 @@ for r in routes_db["routes"]:
     assert r["theme"] in theme_ids, r["id"]
     assert r["pl"]["name"] and r["en"]["name"] and r["pl"]["intro"] and r["en"]["intro"], "Brak PL/EN szlaku: " + r["id"]
     assert len(r["stops"]) >= 3, "Za mało przystanków: " + r["id"]
+    assert r.get("region") is None or r["region"] in region_ids, "Nieznane województwo szlaku: " + r["id"]
     for st in r["stops"]:
         kind, ref = st["ref"].split(":", 1)
         assert (kind == "place" and ref in place_ids) or (kind == "city" and ref in city_ids), "Nieznany przystanek " + st["ref"] + " w " + r["id"]
         assert ("pl" in st) == ("en" in st), "Notatka przystanku tylko w jednym języku: " + r["id"]
+assert hist_total == len(region_places), f"Każde miejsce regionalne musi mieć historię ≥10 zdań: {hist_total}/{len(region_places)}"
 print(f"OK: {hist_total} rozszerzonych historii (≥10 zdań PL i EN), {len(theme_ids)} motywów, {len(route_ids)} szlaków tematycznych.")
 
 # 8.6.1 — BAZA_DANYCH.md, etap 1: lekki indeks wszystkich obiektów (regiony + Warszawa), pobierany na żądanie (fetch).

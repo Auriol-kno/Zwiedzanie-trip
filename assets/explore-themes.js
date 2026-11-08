@@ -9,6 +9,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const C='#FFF9E8',A='#FFB24A';
 // Rysunki 64×64 (kremowa kreska + bursztynowe akcenty). {c} = kolor motywu (do „wycięć”).
 const ART={
+ region:'<path d="M9 19l15-6 16 6 15-6v33l-15 6-16-6-15 6Z" fill="'+C+'"/><path d="M24 13v33M40 19v33" stroke="{c}" stroke-width="1.6" opacity=".55"/><path d="M14 40c5-3 9 2 14-1s8-6 13-3 7 3 10 1" fill="none" stroke="{c}" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/><path d="M38 34c-5-6-8-9-8-13a8 8 0 0 1 16 0c0 4-3 7-8 13Z" fill="'+A+'"/><circle cx="38" cy="21" r="3" fill="{c}"/>',
  crown:'<path d="M15 43 13 23l10 9 9-15 9 15 10-9-2 20Z" fill="'+C+'"/><rect x="15" y="45" width="34" height="5" rx="1.5" fill="'+C+'"/><circle cx="32" cy="16" r="3" fill="'+A+'"/><circle cx="13" cy="22" r="2.6" fill="'+A+'"/><circle cx="51" cy="22" r="2.6" fill="'+A+'"/><circle cx="32" cy="36" r="3" fill="{c}"/><circle cx="22" cy="38" r="2" fill="{c}"/><circle cx="42" cy="38" r="2" fill="{c}"/>',
  castle:'<path d="M8 53c7-6 15-7 24-5s17 1 24 5Z" fill="'+A+'" opacity=".85"/><path d="M17 48V25h3v-4h3v4h2v-4h3v4h2V48ZM36 48V25h3v-4h3v4h2v-4h3v4h2V48ZM28 48V33h8v15Z" fill="'+C+'"/><path d="M30 48v-6a2 2 0 0 1 4 0v6Z" fill="{c}"/><rect x="21" y="31" width="3" height="5" rx="1.5" fill="{c}"/><rect x="40" y="31" width="3" height="5" rx="1.5" fill="{c}"/><path d="M43 21V11l8 3-8 3" fill="'+A+'"/>',
  dragon:'<path d="M27 26 21 11l11 12ZM35 23l-1-14 8 13Z" fill="'+A+'"/><path d="M12 54c0-13 6-22 16-26l12-4 12 2c4 1 5 5 2 7l-8 1 4 3c2 2 0 5-3 4l-7-2c-4 5-6 10-6 15Z" fill="'+C+'"/><path d="M16 42l-6-1 4-4ZM20 34l-5-3 5-2Z" fill="'+C+'"/><circle cx="41" cy="29" r="2" fill="{c}"/><circle cx="51" cy="29" r="1" fill="{c}"/><path d="M54 34c3-1 6 0 8 3-3 0-4 2-7 1Z" fill="'+A+'"/><path d="M27 44c2-3 5-4 8-3" fill="none" stroke="{c}" stroke-width="1.6" stroke-linecap="round"/>',
@@ -35,14 +36,14 @@ const T={
  pl:{title:'Odkrywaj',intro:'Wybierz motyw zwiedzania: historia, zamki, legendy, czarownice, II wojna światowa, nauka i więcej. Każdy szlak możesz zapisać jako podróż albo plan dnia.',
   featured:'Polecane szlaki',themes:'Motywy zwiedzania',routes:n=>n+' '+(n===1?'szlak':(n>=2&&n<=4)?'szlaki':'szlaków'),back:'← Wszystkie motywy',backTheme:t=>'← '+t,
   stops:n=>n+' '+(n===1?'przystanek':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'przystanki':'przystanków'),km:k=>'ok. '+k+' km',days:d=>d+' '+(d==='1'?'dzień':'dni'),car:'🚗 samochodem',walk:'🚶 pieszo',
-  saveTrip:'🧳 Zapisz jako podróż',saveDay:'🗓️ Utwórz plan dnia',maps:'🧭 Trasa w Google Maps',show:'Pokaż',guide:'Przewodnik',
+  saveTrip:'🧳 Zapisz jako podróż',regionGuide:'🗺️ Przewodnik województwa',saveDay:'🗓️ Utwórz plan dnia',maps:'🧭 Trasa w Google Maps',show:'Pokaż',guide:'Przewodnik',
   savedTrip:n=>'Zapisano podróż „'+n+'” w zakładce Plany.',savedDay:n=>'Utworzono plan dnia „'+n+'” w zakładce Plany.',
   loading:'Wczytywanie szlaków…',error:'Nie udało się wczytać szlaków. Sprawdź połączenie z internetem i spróbuj ponownie.',retry:'Spróbuj ponownie',
   search:'Szukasz konkretnego miasta lub województwa? Użyj wyszukiwarki ⌕ w nagłówku mapy.',kmNote:'Dystans liczony w linii prostej × 1,3 — to szacunek.',onRoute:'Na szlaku'},
  en:{title:'Explore',intro:'Pick a sightseeing theme: history, castles, legends, witches, World War II, science and more. You can save any route as a trip or a day plan.',
   featured:'Featured routes',themes:'Sightseeing themes',routes:n=>n+' '+(n===1?'route':'routes'),back:'← All themes',backTheme:t=>'← '+t,
   stops:n=>n+' '+(n===1?'stop':'stops'),km:k=>'about '+k+' km',days:d=>d+' '+(d==='1'?'day':'days'),car:'🚗 by car',walk:'🚶 on foot',
-  saveTrip:'🧳 Save as a trip',saveDay:'🗓️ Create a day plan',maps:'🧭 Route in Google Maps',show:'Show',guide:'Guide',
+  saveTrip:'🧳 Save as a trip',regionGuide:'🗺️ Province guide',saveDay:'🗓️ Create a day plan',maps:'🧭 Route in Google Maps',show:'Show',guide:'Guide',
   savedTrip:n=>'Saved the trip “'+n+'” in Plans.',savedDay:n=>'Created the day plan “'+n+'” in Plans.',
   loading:'Loading routes…',error:'Could not load the routes. Check your internet connection and try again.',retry:'Try again',
   search:'Looking for a specific city or province? Use the ⌕ search in the map header.',kmNote:'Distance is the straight line × 1.3 — an estimate.',onRoute:'On the route'}
@@ -96,7 +97,7 @@ function renderRoute(p,ctx,r){
  p.innerHTML=ctx.head(R.name)+'<button type="button" class="ex-back" data-ex-theme="'+esc(th.id)+'">'+esc(t.backTheme(L(th,l).name))+'</button>'+
   '<div class="ex-hero" style="--ex:'+esc(th.color)+'">'+art(r.art||th.art,th.color,84)+'<div><small class="ex-kicker">'+esc(L(th,l).name)+'</small><b>'+esc(t.stops(info.pts.length)+(info.km?' · '+t.km(info.km):'')+' · '+t.days(r.days)+' · '+(r.mode==='walking'?t.walk:t.car))+'</b></div></div>'+
   '<p class="ex-intro">'+esc(R.intro)+'</p>'+
-  '<div class="ex-actions"><button type="button" class="city-action" data-ex-save="trip">'+esc(t.saveTrip)+'</button><button type="button" class="ghost-action" data-ex-save="day">'+esc(t.saveDay)+'</button>'+(maps?'<a class="ghost-action" href="'+maps+'" target="_blank" rel="noopener">'+esc(t.maps)+'</a>':'')+'</div>'+
+  '<div class="ex-actions"><button type="button" class="city-action" data-ex-save="trip">'+esc(t.saveTrip)+'</button><button type="button" class="ghost-action" data-ex-save="day">'+esc(t.saveDay)+'</button>'+(maps?'<a class="ghost-action" href="'+maps+'" target="_blank" rel="noopener">'+esc(t.maps)+'</a>':'')+(r.region?'<a class="ghost-action" href="./region.html?region='+encodeURIComponent(r.region)+'&lang='+l+'">'+esc(t.regionGuide)+'</a>':'')+'</div>'+
   '<ol class="ex-stops">'+info.pts.map((o,i)=>{const note=o.s[l]||o.s.pl||'';const href=o.it.t==='city'&&o.it.id==='warsaw'?'./index.html?lang='+l:o.r.href?o.r.href+(o.r.href.includes('?')?'&':'?')+'lang='+l:'';
    return '<li class="plan-item ex-stop"><span class="ex-num" style="--ex:'+esc(th.color)+'">'+(i+1)+'</span><span class="pi-icon" aria-hidden="true">'+o.r.icon+'</span><span class="pi-text"><b>'+esc(o.r.name)+'</b><small>'+esc(o.r.sub||'')+'</small>'+(note?'<small class="ex-stop-note">'+esc(note)+'</small>':'')+'</span><span class="pi-actions"><button type="button" data-show-item=\''+esc(JSON.stringify(o.it))+'\'>'+esc(t.show)+'</button>'+(href?'<a href="'+esc(href)+'">'+esc(t.guide)+'</a>':'')+'</span></li>'}).join('')+'</ol>'+
   '<p class="muted small">'+esc(t.kmNote+' '+((data.note||{})[l]||''))+'</p>';
