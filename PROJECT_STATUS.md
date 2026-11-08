@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.6.1 (gałąź) / 8.6 (`main`) · **`main`:** `71aeaed` („Scal #17: 8.6 — Odkrywaj ze szlakami tematycznymi, historie miejsc ≥10 zdań, propozycja bazy danych”)
-**Cache PWA:** `i-was-here-v8-6-3-20261108` (na gałęzi 8.6.3) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.6.4 (gałąź) / 8.6.3 (`main`) · **`main`:** `b503643` („Scal #18: 8.6.1–8.6.3 — historie wszystkich miejsc i atrakcji Warszawy, plany 16 województw, indeks bazy, podpis autora”)
+**Cache PWA:** `i-was-here-v8-6-4-20261108` (na gałęzi 8.6.4) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
 > - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
@@ -10,7 +10,7 @@
 ---
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
-- **Otwarte PR:** #18 — 8.6.1–8.6.3: historie ≥10 zdań dla wszystkich 213 miejsc i 184 atrakcji Warszawy, plany 16 województw, indeks bazy danych, podpis autora (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
+- **Otwarte PR:** 8.6.4 — płynna mapa Atlasu (gałąź `claude/plynna-mapa`). Czeka na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -21,7 +21,8 @@
   - #13: 8.4;
   - #14: 8.5;
   - #15–#16: dokumentacja przekazania i 8.5.3;
-  - #17: 8.6 (Odkrywaj, historie, propozycja bazy danych).
+  - #17: 8.6 (Odkrywaj, historie, propozycja bazy danych);
+  - #18: 8.6.1–8.6.3 (historie wszystkich miejsc i atrakcji Warszawy, plany województw, indeks, podpis autora).
 - **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone, z jednym wyjątkiem: `claude/i-was-here-analysis-augprr` ma 3 niescalone commity, w tym `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`. To pierwszy raport techniczny; jego zalecenia wdrożono w PR #2–#4. Gałęzi nie usuwamy.
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
@@ -124,6 +125,7 @@
 - **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
 
 ## 4. Ostatnio wykonane prace
+- **8.6.4 (gałąź `claude/plynna-mapa`):** płynne przesuwanie i przybliżanie mapy Atlasu (podgląd na GPU, jeden rysunek po geście).
 - **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
 - **8.6.2 (PR #18):** historie dla wszystkich województw (213/213), plany zwiedzania 16 województw, podpis „Made by Tomasz Kmiecik”.
 - **8.6.1 (PR #18):** historie ≥10 zdań dla Pomorskiego, Dolnośląskiego i Świętokrzyskiego (65 miejsc); indeks bazy danych `data/index/places.json` używany przez Pieczątki.

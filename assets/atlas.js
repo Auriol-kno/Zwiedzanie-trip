@@ -171,8 +171,28 @@ function renderMarkers(){
  requestAnimationFrame(setTransform);
 }
 // ---------- przekształcenia i styl zależny od powiększenia
-function unitPx(){const r=svg.getBoundingClientRect();return Math.min(r.width/900,r.height/680)||1}
+// 8.6.4 — płynna mapa: w trakcie gestu (przesuwanie, pinch, kółko, animacja) przesuwamy i skalujemy gotową warstwę
+// <svg> transformacją CSS (kompozycja na GPU, bez przerysowania tysięcy ścieżek, filtrów i podpisów). Pełne
+// przerysowanie (commit → setTransform) następuje raz, po zakończeniu ruchu. box = prostokąt mapy bez transformacji CSS.
+let box=null,cz=1,ctx=0,cty=0,pv=0,commitT=0;
+// Transformację nakładamy na kontener .atlas-map, a nie na sam <svg>: granice i rzeki mają vector-effect:non-scaling-stroke,
+// więc zmiana transformacji samego <svg> wymuszałaby ich ponowne rysowanie w każdej klatce.
+const wrap=svg.parentNode;
+function measure(){const r=svg.getBoundingClientRect(),w=wrap.getBoundingClientRect();box={left:r.left,top:r.top,W:r.width||svg.clientWidth||900,H:r.height||svg.clientHeight||680,ax:r.left-w.left,ay:r.top-w.top};return box}
+function unitPx(){const b=box||measure();return Math.min(b.W/900,b.H/680)||1}
+function preview(){
+ if(pv)return;pv=requestAnimationFrame(()=>{pv=0;const b=box||measure(),u=unitPx(),ox=(b.W-900*u)/2,oy=(b.H-680*u)/2,sc=zoom/cz,dx=(tx-ctx*sc)*u,dy=(ty-cty*sc)*u;
+  if(Math.abs(sc-1)<1e-4&&Math.abs(dx)<.05&&Math.abs(dy)<.05){wrap.style.transform='';return}
+  svg.classList.add('moving');wrap.classList.add('moving');wrap.style.transform='translate3d('+((b.ax+ox)*(1-sc)+dx).toFixed(2)+'px,'+((b.ay+oy)*(1-sc)+dy).toFixed(2)+'px,0) scale('+sc.toFixed(5)+')';
+  // Bardzo duża zmiana w jednym geście: odśwież pełny rysunek od razu (inaczej obraz byłby rozmyty albo z pustymi krawędziami).
+  if(sc>3||sc<.4||Math.abs(dx)>b.W*.6||Math.abs(dy)>b.H*.6)commit();
+  // Gdy palce się zatrzymają, dorysuj ostry obraz także w trakcie gestu.
+  else if(touches.size)commitSoon(260);});
+}
+function commit(){if(pv){cancelAnimationFrame(pv);pv=0}clearTimeout(commitT);setTransform()}
+function commitSoon(ms){clearTimeout(commitT);commitT=setTimeout(commit,ms)}
 function setTransform(){
+ if(pv){cancelAnimationFrame(pv);pv=0}wrap.style.transform='';wrap.classList.remove('moving');svg.classList.remove('moving');measure();cz=zoom;ctx=tx;cty=ty;
  g.setAttribute('transform','translate('+tx.toFixed(2)+' '+ty.toFixed(2)+') scale('+zoom.toFixed(4)+')');
  const u=unitPx(),k=1/(zoom*u),z=zoom;
  // Granice: delikatne w widoku kraju, wyraźniejsze przy zbliżeniu (płynna interpolacja).
@@ -190,7 +210,7 @@ function setTransform(){
  townLayer.querySelectorAll('.town-pin').forEach(p=>p.setAttribute('transform','translate('+p.dataset.x+' '+p.dataset.y+') scale('+ks+')'));
  layoutTownLabels(u,layoutCityLabels());
  // Ilustracje miast: na telefonie dopiero po przybliżeniu (czytelność widoku całego kraju).
- svg.style.setProperty('--lm-o',(svg.getBoundingClientRect().width>=640?1:Math.min(1,Math.max(0,(z-1.45)/.35))).toFixed(2));
+ svg.style.setProperty('--lm-o',(box.W>=640?1:Math.min(1,Math.max(0,(z-1.45)/.35))).toFixed(2));
  updateScale(u);
 }
 // Podpisy miast bez nakładania: wybrane i miasta z przewodnikiem mają pierwszeństwo. Podpis przechodzi na drugą
@@ -222,18 +242,18 @@ function updateScale(u){
  const km=nice.find(n=>n/kmPerPx>=56)||300;
  $('#scaleBar').style.width=Math.round(km/kmPerPx)+'px';$('#scaleText').textContent=km+' '+t().km;
 }
-function zoomTo(v,cx=450,cy=340){const old=zoom;zoom=Math.min(MAXZ,Math.max(MINZ,v));tx=cx-(cx-tx)*zoom/old;ty=cy-(cy-ty)*zoom/old;setTransform()}
-function svgPoint(x,y){const m=svg.getScreenCTM();if(!m)return{x:450,y:340};const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(m.inverse());return{x:q.x,y:q.y}}
+function zoomTo(v,cx=450,cy=340,live){const old=zoom;zoom=Math.min(MAXZ,Math.max(MINZ,v));tx=cx-(cx-tx)*zoom/old;ty=cy-(cy-ty)*zoom/old;if(live)preview();else setTransform()}
+function svgPoint(x,y){const b=box||measure(),u=unitPx();return{x:(x-b.left-(b.W-900*u)/2)/u,y:(y-b.top-(b.H-680*u)/2)/u}}
 function reset(){zoom=1;tx=0;ty=0;setTransform()}
 let anim=0;
 function animateTo(z,x,y){
  const from={z:zoom,x:tx,y:ty},t0=performance.now(),D=matchMedia('(prefers-reduced-motion: reduce)').matches?0:460,id=++anim;
- const step=now=>{if(id!==anim)return;const k=D?1:Math.min(1,(now-t0)/D),e=1-Math.pow(1-k,3);zoom=from.z+(z-from.z)*e;tx=from.x+(x-from.x)*e;ty=from.y+(y-from.y)*e;setTransform();if(k<1)requestAnimationFrame(step)};
+ const step=now=>{if(id!==anim)return;const k=D?1:Math.min(1,(now-t0)/D),e=1-Math.pow(1-k,3);zoom=from.z+(z-from.z)*e;tx=from.x+(x-from.x)*e;ty=from.y+(y-from.y)*e;if(k<1){preview();requestAnimationFrame(step)}else commit()};
  requestAnimationFrame(step);
 }
 // Widoczny fragment mapy (pod nagłówkiem, nad dolnym panelem) w jednostkach viewBox.
 function viewWindow(){
- const top=$('.atlas-top').getBoundingClientRect().bottom,bottom=$('.atlas-bottom').getBoundingClientRect().top,r=svg.getBoundingClientRect();
+ const top=$('.atlas-top').getBoundingClientRect().bottom,bottom=$('.atlas-bottom').getBoundingClientRect().top,b0=box||measure(),r={left:b0.left,top:b0.top,right:b0.left+b0.W,bottom:b0.top+b0.H,width:b0.W};
  const a=svgPoint(r.left+10,Math.max(r.top,top)+4),b=svgPoint(r.right-(r.width<600?10:64),Math.min(r.bottom,bottom)-30);
  return{x0:a.x,y0:a.y,x1:b.x,y1:b.y};
 }
@@ -470,15 +490,15 @@ svg.addEventListener('pointerdown',e=>{
  drag={x:e.clientX,y:e.clientY,tx,ty};moved=false;try{svg.setPointerCapture(e.pointerId)}catch(_){}});
 svg.addEventListener('pointermove',e=>{
  if(touches.has(e.pointerId))touches.set(e.pointerId,{x:e.clientX,y:e.clientY});
- if(pinch&&touches.size===2){const c=middle();zoomTo(pinch.z*gap()/pinch.d,c.x,c.y);return}
- if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)moved=true;const u=unitPx();tx=drag.tx+dx/u;ty=drag.ty+dy/u;setTransform()});
+ if(pinch&&touches.size===2){const c=middle();zoomTo(pinch.z*gap()/pinch.d,c.x,c.y,true);return}
+ if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)moved=true;const u=unitPx();tx=drag.tx+dx/u;ty=drag.ty+dy/u;preview()});
 const release=e=>{
  // Krótkie dotknięcie województwa (bez przesuwania) wybiera je i przybliża mapę.
  if(drag&&!moved&&!pinch&&e.type==='pointerup'){const hit=document.elementFromPoint(e.clientX,e.clientY)?.closest?.('.region-hit');if(hit&&!(region&&mode!=='city'&&region.id===hit.dataset.region))selectRegion(hit.dataset.region)}
- touches.delete(e.pointerId);if(touches.size<2)pinch=null;drag=null;setTimeout(()=>{moved=false},30)};
+ touches.delete(e.pointerId);if(touches.size<2)pinch=null;const wasLive=!!pv||svg.classList.contains('moving');drag=null;if(wasLive&&!touches.size)commit();setTimeout(()=>{moved=false},30)};
 svg.addEventListener('pointerup',release);
 svg.addEventListener('pointercancel',release);
-svg.addEventListener('wheel',e=>{e.preventDefault();anim++;const c=svgPoint(e.clientX,e.clientY);zoomTo(zoom*(e.deltaY<0?1.1:.9),c.x,c.y)},{passive:false});
+svg.addEventListener('wheel',e=>{e.preventDefault();anim++;const c=svgPoint(e.clientX,e.clientY);zoomTo(zoom*Math.exp(-Math.max(-60,Math.min(60,e.deltaY))*.004),c.x,c.y,true);commitSoon(140)},{passive:false});
 // Safari na iOS wysyła też własne gesty — blokujemy powiększanie całej strony nad mapą.
 svg.addEventListener('gesturestart',e=>e.preventDefault());
 window.addEventListener('pageshow',()=>{let val=null;try{val=localStorage.getItem('tubylem_lang')}catch(e){}if(val&&val!==lang&&(val==='pl'||val==='en')){lang=val;localize()}});

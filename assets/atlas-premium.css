@@ -291,3 +291,8 @@ html[lang=en] .tabbar [data-l=pl],html:not([lang=en]) .tabbar [data-l=en]{displa
 /* 8.5 — znaczek miasta widoczny także po wejściu w województwo; w zakładce Pieczątki bez zdublowanego tytułu */
 body[data-focus=region] .city-landmark{opacity:1}
 .pp-host .pp-title,.pp-host .ij-kicker{display:none}
+
+/* 8.6.4 — płynna mapa: w trakcie gestu warstwa mapy jest przesuwana na GPU (patrz preview() w atlas.js) */
+#atlasApp .atlas-map{transform-origin:0 0}
+#atlasApp .atlas-map.moving{will-change:transform}
+#polandSvg.moving .city-spotlight{transition:none}
