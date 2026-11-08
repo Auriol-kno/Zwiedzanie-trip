@@ -1,6 +1,6 @@
 # DECYZJE PROJEKTOWE — I Was Here / Places & Memories
 
-Rejestr ustaleń właściciela (stan na 2026-11-08, wersja 8.6). To są **wiążące decyzje**. Nie zmieniaj ich bez wyraźnej prośby właściciela.
+Rejestr ustaleń właściciela (stan na 2026-11-08, wersja 8.6.4). To są **wiążące decyzje**. Nie zmieniaj ich bez wyraźnej prośby właściciela.
 Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właściciela. Zaktualizuj wtedy ten plik w tym samym PR.
 
 ---
@@ -51,6 +51,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
   - Nie używaj filtrów SVG, żeby zoom na iPhonie był płynny.
 - Dawny przycisk „Polska” w rogu mapy **usunięto w 8.5**: jego rolę przejęła pływająca mapka.
 - Atrybucje muszą zostać: Natural Earth, Terrain Tiles (© Copernicus), © OpenStreetMap (ODbL).
+- **Płynność mapy (8.6.4, prośba właściciela „przycina się ruch”):** w trakcie gestów mapa jest tylko przesuwana/skalowana na GPU (`preview()`), pełny rysunek raz po ruchu (`commit()`). Nie wracaj do `setTransform()` w każdym `pointermove`. Dopuszczalne: chwilowe rozmycie przy dużym przybliżeniu i mignięcie tła morza na krawędzi.
 
 ## 5. Nawigacja
 - **Jedno dolne menu na każdej stronie** (`assets/app-nav.js`), zawsze w tej kolejności: **Mapa · Odkrywaj · Plany · Pieczątki · Profil** (EN: Map · Explore · Plans · Stamps · Profile).

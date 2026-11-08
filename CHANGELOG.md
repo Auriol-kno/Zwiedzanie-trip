@@ -9,7 +9,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-4-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.6.4 — 2026-11-08 — gałąź `claude/plynna-mapa`
+## 8.6.4 — 2026-11-08 — PR #19 (scalone e00884e)
 - **Płynna mapa Atlasu** przy przesuwaniu, pinch-zoomie, kółku myszy i animacji przelotu do województwa:
   - w trakcie gestu przesuwana i skalowana jest gotowa warstwa (`.atlas-map`, transformacja CSS na GPU), bez przerysowania tysięcy ścieżek, filtrów, znaczków i podpisów;
   - pełny rysunek powstaje raz — po puszczeniu palca, po zatrzymaniu palców na ok. 0,25 s albo przy bardzo dużej zmianie skali;
