@@ -75,8 +75,23 @@ for p in region_places:
     assert p["coordinateStatus"] != "osm" or (p.get("osm", {}).get("type") and p["osm"].get("id")), "Brak identyfikatora OSM: " + p["id"]
     assert p["url"] is None or p["url"].startswith("https://"), p["id"]
 write("regiony.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
+# 8.7 — BAZA_DANYCH.md, etap 1: Atlas ładuje lekki plik (bez opisów, adresów i danych OSM), a przewodnik
+# regionu — pełne dane tylko swojego województwa (data/regiony/<id>.json, fetch). data/regiony.js zostaje jako zapas.
+LITE_KEYS = ("id", "region", "town", "name", "cats", "time", "visitValue", "lat", "lon", "icon", "coordinateStatus", "wiki")
+lite = {k: regions_db[k] for k in ("version", "updated", "note", "categories", "regions")}
+lite["lite"] = True
+lite["places"] = [{k: p[k] for k in LITE_KEYS if k in p} for p in region_places]
+write("regiony-lite.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py — lekka wersja dla Atlasu (bez opisów).\nwindow.IWH_REGIONS=" + compact(lite) + ";\n")
+(DATA / "regiony").mkdir(exist_ok=True)
+for r in regions:
+    own = [p for p in region_places if p["region"] == r["id"]]
+    target = DATA / "regiony" / (r["id"] + ".json")
+    if own:
+        write("regiony/" + r["id"] + ".json", json.dumps({"region": r["id"], "note": "Wygenerowano z data/regiony.json przez tools/sync_database.py — nie edytuj ręcznie.", "places": own}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    elif target.exists():
+        target.unlink()
 guided = sum(r["status"] != "planned" for r in regions)
-print(f"OK: 16 województw ({guided} z atrakcjami), {len(region_places)} miejsc regionalnych; data/regiony.js zsynchronizowane.")
+print(f"OK: 16 województw ({guided} z atrakcjami), {len(region_places)} miejsc regionalnych; data/regiony.js, regiony-lite.js i data/regiony/*.json zsynchronizowane.")
 
 # I Was Here 8.6 — rozszerzone historie miejsc (data/historia/<region>.json) i szlaki tematyczne (data/szlaki.json).
 # Pliki są wczytywane przez aplikację dynamicznie (fetch), dlatego nie generujemy dla nich kopii .js.

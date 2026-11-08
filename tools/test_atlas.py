@@ -130,12 +130,19 @@ for r in regdb["regions"]:
 swk = [p for p in regdb["places"] if p["region"] == "swietokrzyskie"]
 assert len(swk) >= 25 and {"Kielce", "Sandomierz", "Chęciny"} <= {p["town"] for p in swk}, "Baza świętokrzyska"
 assert any(p["town"] == "Sierpc" for p in regdb["places"] if p["region"] == "mazowieckie"), "Mazowieckie: Sierpc"
-assert "data/regiony.js" in atlas and 'id="regionStrip"' in atlas and 'id="cardTowns"' in atlas
+assert "data/regiony-lite.js" in atlas and "data/regiony.js" not in atlas and 'id="regionStrip"' in atlas and 'id="cardTowns"' in atlas
 for token in ["langRegion", "townChips", "catChips", "planList", "placeList", "atlasFloat", "rMap"]:
     assert 'id="' + token + '"' in region_page, "region.html: " + token
 assert "IWH_REGIONS" in (ROOT / "assets/region.js").read_text(encoding="utf-8")
-for f in ("./region.html", "./assets/region.js", "./assets/region.css", "./data/regiony.js"):
+for f in ("./region.html", "./assets/region.js", "./assets/region-loader.js", "./assets/region.css", "./data/regiony-lite.js", "./assets/vendor/leaflet/leaflet.js", "./assets/vendor/leaflet/leaflet.css"):
     assert f in sw, "PWA nie buforuje: " + f
+# 8.7: pełne dane województw w osobnych plikach, wszystkie w cache PWA; Leaflet lokalnie (mapa regionu offline)
+for r in regdb["regions"]:
+    has = (ROOT / "data/regiony" / (r["id"] + ".json")).exists()
+    assert has == (r["status"] != "planned"), "Plik województwa: " + r["id"]
+    assert has == ("./data/regiony/" + r["id"] + ".json" in sw), "PWA nie buforuje pliku województwa: " + r["id"]
+assert "unpkg.com" not in region_page and "unpkg.com" not in (ROOT / "index.html").read_text(encoding="utf-8"), "Leaflet musi być lokalny"
+assert "region-loader.js" in region_page and "regiony-lite.js" in region_page
 # 7.0: prawdziwa geometria (Natural Earth 1:10m), projekcja bez rozciągania, relief, plany
 assert "Natural Earth 1:10m" in geo["source"]["vectors"] and "Terrain Tiles" in geo["source"]["relief"], "Brak źródeł danych"
 proj = geo["projection"]

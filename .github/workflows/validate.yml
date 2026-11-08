@@ -15,7 +15,8 @@ jobs:
       - name: Zweryfikuj bazy danych
         run: |
           python tools/sync_database.py
-          git diff --exit-code -- data/atrakcje.js data/restauracje.js data/regiony.js
+          git diff --exit-code -- data/atrakcje.js data/restauracje.js data/regiony.js data/regiony-lite.js data/regiony data/index
+          test -z "$(git status --porcelain -- data)"
       - name: Test interfejsu i schematów
         run: python tools/test_bundle.py
       - name: Test Atlasu Polski i PL/EN
@@ -33,6 +34,8 @@ jobs:
           node --check assets/atlas-plans.js
           node --check assets/place-extras.js
           node --check data/regiony.js
+          node --check data/regiony-lite.js
+          node --check assets/region-loader.js
           node --check data/atrakcje.js
           node --check data/restauracje.js
           node --check service-worker.js
