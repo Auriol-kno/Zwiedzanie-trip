@@ -5,11 +5,23 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-0-20261108`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-3-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.6 — 2026-11-08 — gałąź `claude/odkrywaj-szlaki`
+## [Nieopublikowane] 8.6.1–8.6.3 — 2026-11-08 — PR #18, gałąź `claude/historie-pomorze-dolny-slask`
+- **8.6.3 — historie wszystkich 184 atrakcji Warszawy** (≥10 zdań PL i EN) w `data/warszawa-historia/*.json` z mapą `index.json` generowaną przez `sync_database.py`; przewodnik Warszawy wczytuje je na żądanie w „Historii miejsca” (krótkie `story` zostaje jako zapas). Przy mniej znanych parkach i skwerach opisujemy historię dzielnicy i kontekst, bez zgadywania szczegółów; ostatnie zdania części tekstów uzupełniono danymi z bazy (dzielnica, szacowany czas pobytu). Cache `i-was-here-v8-6-3-20261108`, 81 kontroli w teście przeglądarkowym.
+- **Historie dla wszystkich województw:** każde z 213 miejsc regionalnych ma historię ≥10 zdań PL i EN (16 plików `data/historia/<region>.json`). `sync_database.py` wymaga teraz historii dla każdego nowego miejsca.
+- **Plany zwiedzania dla 16 województw** w Odkrywaj: nowy motyw „Plany województw” (ilustracja mapy z pinezką), 8–12 przystanków w kolejności geograficznej, wstęp PL/EN, link „Przewodnik województwa” (46 szlaków, 15 motywów).
+- **Podpis autora „Made by Tomasz Kmiecik”** (prośba właściciela): Profil w Atlasie, stopki przewodników regionów i Warszawy, `<meta name="author">`, README.
+- Wszystkie 16 plików historii w cache PWA (ok. 0,5 MB), cache `i-was-here-v8-6-2-20261108`; testy przeglądarkowe: 80 kontroli.
+- **Historie ≥10 zdań PL/EN** dla kolejnych 65 miejsc: całe Pomorskie (13), Dolnośląskie (12) i Świętokrzyskie (40). Razem 95 z 213 miejsc regionalnych.
+- **Baza danych, etap 1 (`BAZA_DANYCH.md`):** `sync_database.py` generuje lekki indeks `data/index/places.json` (397 obiektów: 213 w regionach + 184 w Warszawie, pole rodzaju `k`, flaga historii `h`).
+  Pieczątki pobierają go na żądanie, gdy strona nie ma pełnej bazy: w Warszawie można teraz szukać i odblokowywać miejsca z regionów, a w Atlasie i regionach — atrakcje Warszawy (wcześniej był tylko link do drugiej strony).
+- Właściciel zaakceptował motywy i ilustracje Odkrywaj, etap 1 bazy danych oraz kolejność województw (Pomorskie, Dolnośląskie, Świętokrzyskie).
+- Cache `i-was-here-v8-6-1-20261108`.
+
+## 8.6 — 2026-11-08 — PR #17 (scalone 71aeaed)
 - **Odkrywaj = szlaki tematyczne** (`assets/explore-themes.js`, `.css`, dane `data/szlaki.json`):
   - 14 motywów z ilustrowanymi, wektorowymi kafelkami w stylu logo (kolor motywu, złota ramka): Historia i królowie, Zamki i rycerze, Baśnie i legendy, Czarownice, diabły i duchy, II wojna światowa i pamięć, Nauka i Kopernik, Technika i przemysł, Podziemia i jaskinie, Dzika przyroda, Wiele kultur i wyznań, Skarby UNESCO, Pałace i ogrody, Morze i latarnie, Dinozaury i rodzinne przygody;
   - 30 szlaków (m.in. Szlak Orlich Gniazd, Łysa Góra — sabat czarownic, Duchy i diabeł Boruta, Wrzesień 1939, Szlak Kopernikowski, Szlak Piastowski, Szlak Zabytków Techniki);

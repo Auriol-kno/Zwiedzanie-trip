@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.6 (gałąź) / 8.5.3 (`main`) · **`main`:** `62cc8af` („Scal #16: 8.5.3 — mapka Polski w jednej linii z logo, „Zdobądź pieczątkę”, dokumentacja przekazania”)
-**Cache PWA:** `i-was-here-v8-6-0-20261108` (na gałęzi 8.6) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.6.1 (gałąź) / 8.6 (`main`) · **`main`:** `71aeaed` („Scal #17: 8.6 — Odkrywaj ze szlakami tematycznymi, historie miejsc ≥10 zdań, propozycja bazy danych”)
+**Cache PWA:** `i-was-here-v8-6-3-20261108` (na gałęzi 8.6.3) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
 > - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
@@ -10,7 +10,7 @@
 ---
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
-- **Otwarte PR:** 8.6 — Odkrywaj ze szlakami tematycznymi, historie ≥10 zdań, propozycja bazy danych (gałąź `claude/odkrywaj-szlaki`). Czeka na „Scal”.
+- **Otwarte PR:** #18 — 8.6.1–8.6.3: historie ≥10 zdań dla wszystkich 213 miejsc i 184 atrakcji Warszawy, plany 16 województw, indeks bazy danych, podpis autora (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -20,7 +20,8 @@
   - #12: 8.3.1;
   - #13: 8.4;
   - #14: 8.5;
-  - #15–#16: dokumentacja przekazania i 8.5.3.
+  - #15–#16: dokumentacja przekazania i 8.5.3;
+  - #17: 8.6 (Odkrywaj, historie, propozycja bazy danych).
 - **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone, z jednym wyjątkiem: `claude/i-was-here-analysis-augprr` ma 3 niescalone commity, w tym `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`. To pierwszy raport techniczny; jego zalecenia wdrożono w PR #2–#4. Gałęzi nie usuwamy.
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
@@ -51,7 +52,7 @@
 - **Znaczki pocztowe miast** na mapie (także po wejściu w województwo) i w karcie miasta. Odwiedzone miasto ma stempel „✓”.
 - Karta miejsca ma akcje: przewodnik, „Podróż”, „Plan dnia” i „Byłem tu”.
 - Zakładki:
-  - **Odkrywaj** (8.6): 14 ilustrowanych motywów i 30 szlaków tematycznych (`data/szlaki.json`) z zapisem jako podróż / plan dnia; wyszukiwarka miast jest pod ⌕ w nagłówku;
+  - **Odkrywaj** (8.6): 15 ilustrowanych motywów (w tym „Plany województw” dla wszystkich 16 regionów) i 46 szlaków (`data/szlaki.json`) z zapisem jako podróż / plan dnia; wyszukiwarka miast jest pod ⌕ w nagłówku;
   - **Plany** pokazują podróże i plany dnia z przełącznikiem; z podróży można zrobić plan dnia; plan dnia ma tryb pieszo/samochód;
   - **Pieczątki**;
   - **Profil**: karta Pieczątek, statystyki, dane i licencje.
@@ -63,7 +64,7 @@
 - Kolejność sekcji: „Co pokazać na mapie?” (miejscowości i kategorie) → mapa Leaflet → plan dnia → lista.
 - Plan dnia ma tryby Pieszo (domyślny przy wejściu z miejscowości), Samochód i Komunikacja.
 - Szczegóły miejsca zawierają:
-  - opis, **„📜 Historia miejsca”** (≥10 zdań, 8.6: Małopolskie i Śląskie) i link do Wikipedii;
+  - opis, **„📜 Historia miejsca”** (≥10 zdań, wszystkie województwa) i link do Wikipedii;
   - „Na szlakach tematycznych” (linki do szlaków z Odkrywaj);
   - ♡ (zapisz);
   - „Byłem tu”;
@@ -91,13 +92,11 @@
 - Pełny przewodnik miejski ma **tylko Warszawa**. Pozostałe 13 miast ma atrakcje w przewodnikach regionów.
 - **Opisy EN Warszawy:** ok. 158 atrakcji ma uczciwy komunikat zamiast tłumaczenia.
 - **Wikipedia:** 97 miejsc regionalnych i 115 atrakcji Warszawy ma tylko link do wyszukiwania.
-- **Rozszerzona historia (≥10 zdań):** 30 z 213 miejsc regionalnych (Małopolskie, Śląskie); pozostałe województwa i Warszawa w kolejnych partiach (`BAZA_DANYCH.md` §5).
+- **Rozszerzona historia (≥10 zdań):** wszystkie 213 miejsc regionalnych i wszystkie 184 atrakcje Warszawy. Teksty mniej znanych parków Warszawy są ogólniejsze (historia dzielnicy) — warto je kiedyś uzupełnić o lokalne źródła.
 - **Wikipedia EN** dla 5 nowych zamków do uzupełnienia, gdy Wikidata przestanie zwracać 429 (`tools/wiki_links.py`).
 - **Współrzędne:** 41 z 213 miejsc regionalnych i ok. 158 atrakcji Warszawy jest orientacyjnych.
 - **Brak kopii zapasowej** danych użytkownika. Wyczyszczenie danych Safari usuwa plany, pieczątki i dziennik.
-- **Pieczątki poza „swoją” stroną:**
-  - na stronie Warszawy lista pieczątek regionów odsyła do Atlasu, bo nie ładujemy tam `regiony.js`;
-  - poza Warszawą lista atrakcji Warszawy odsyła do jej przewodnika.
+- **Pieczątki poza „swoją” stroną** (rozwiązane w 8.6.1): listy korzystają z indeksu `data/index/places.json`; bez sieci przy pierwszym otwarciu zostaje link do drugiej strony.
 - Plany dnia Atlasu nie przyjmują atrakcji Warszawy, bo Warszawa ma własny planer.
 - Trasy to szacunki i linki do Google Maps. Nie ma routingu WTP na żywo ani ocen Google.
 
@@ -125,7 +124,10 @@
 - **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
 
 ## 4. Ostatnio wykonane prace
-- **8.6 (gałąź `claude/odkrywaj-szlaki`):** Odkrywaj ze szlakami tematycznymi i ilustracjami, historie ≥10 zdań (30 miejsc), 6 zamków Jury, propozycja bazy danych `BAZA_DANYCH.md`.
+- **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
+- **8.6.2 (PR #18):** historie dla wszystkich województw (213/213), plany zwiedzania 16 województw, podpis „Made by Tomasz Kmiecik”.
+- **8.6.1 (PR #18):** historie ≥10 zdań dla Pomorskiego, Dolnośląskiego i Świętokrzyskiego (65 miejsc); indeks bazy danych `data/index/places.json` używany przez Pieczątki.
+- **8.6 (PR #17):** Odkrywaj ze szlakami tematycznymi i ilustracjami, historie ≥10 zdań (30 miejsc), 6 zamków Jury, propozycja bazy danych `BAZA_DANYCH.md`.
 - **8.5.3 (PR #16, z #15):** mapka Polski w jednej linii z logo, „Zdobądź pieczątkę”, dokumentacja przekazania.
 - **8.5 (PR #14):**
   - znaczki pocztowe miast na mapie;
@@ -153,7 +155,7 @@
 - **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
 ## 6. Najbliższe zadanie
-1. **Decyzja właściciela po 8.6:** akceptacja motywów i ilustracji Odkrywaj oraz etapu 1 bazy danych (`BAZA_DANYCH.md`); wybór kolejnych województw do historii ≥10 zdań.
+1. **Dalszy etap 1 bazy danych**: Atlas na indeksie zamiast pełnego `regiony.js`, pliki województw dla przewodników (`BAZA_DANYCH.md` §4).
 2. **Ręczny test na iPhonie** (właściciel):
    - pływająca mapka i logo;
    - Pieczątki i „Byłem tu”;

@@ -1,0 +1,761 @@
+{
+ "district": "Białołęka, Targówek, Rembertów, Wawer, Wesoła, Ursynów, Ursus, Włochy",
+ "places": {
+  "park_henrykowski": {
+   "pl": [
+    "Park Henrykowski leży na Białołęce, w dawnej wsi Henryków, włączonej do Warszawy w XX wieku. Białołęka przez wieki była obszarem wsi, pól i lasów na prawym brzegu Wisły. Dziś jest jedną z najszybciej rozwijających się dzielnic miasta.",
+    "W parku rosną drzewa, są alejki i place zabaw. To przestrzeń wypoczynku dla mieszkańców nowych osiedli.",
+    "Okolica zachowała jeszcze ślady dawnej zabudowy podmiejskiej. Niedaleko płynie Wisła, której brzegi są w tej części miasta dzikie.",
+    "Park dobrze nadaje się na rodzinny spacer. Z Henrykowa łatwo dojechać nad Kanał Żerański. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "Henryków Park lies in Białołęka, in the former village of Henryków, incorporated into Warsaw in the 20th century. For centuries Białołęka was an area of villages, fields and forests on the right bank of the Vistula. Today it is one of the fastest-growing districts of the city.",
+    "The park has trees, paths and playgrounds. It is a place for residents of the new estates to relax.",
+    "The area still shows traces of old suburban buildings. The Vistula flows nearby, and its banks are wild in this part of the city.",
+    "The park is good for a family walk. From Henryków it is easy to get to the Żerań Canal. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "kanal_zeranski": {
+   "pl": [
+    "Kanał Żerański zbudowano w latach 50. i 60. XX wieku. Łączy Wisłę w Warszawie z Jeziorem Zegrzyńskim i Narwią. Ma kilkanaście kilometrów długości.",
+    "Kanał miał służyć żegludze towarowej i rozwojowi przemysłu na Żeraniu. Przy jego ujściu powstał port i elektrociepłownia.",
+    "Dziś kanał wykorzystują głównie żeglarze, kajakarze i wędkarze. Wzdłuż jego brzegów biegnie popularna trasa rowerowa w stronę Zegrza.",
+    "Spacer lub przejażdżka rowerem nad kanałem to dobry sposób na wypad za miasto. Na brzegach odpoczywa wielu mieszkańców Białołęki."
+   ],
+   "en": [
+    "The Żerań Canal was built in the 1950s and 1960s. It links the Vistula in Warsaw with Lake Zegrze and the Narew. It is more than ten kilometres long.",
+    "The canal was meant to serve freight shipping and industrial development in Żerań. A port and a heat and power plant were built at its mouth.",
+    "Today the canal is used mainly by sailors, canoeists and anglers. A popular cycle route runs along its banks towards Zegrze.",
+    "A walk or bike ride along the canal is a good way to get out of the city. Many Białołęka residents relax on its banks. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "park_picassa": {
+   "pl": [
+    "Park Picassa leży na Białołęce, przy ulicy nazwanej imieniem hiszpańskiego malarza Pabla Picassa. Picasso odwiedził Polskę w 1948 roku, przy okazji kongresu intelektualistów we Wrocławiu. Podczas pobytu w Warszawie namalował na ścianie mieszkania na Kole syrenkę z młotkiem.",
+    "Picasso był jednym z najważniejszych artystów XX wieku i współtwórcą kubizmu. Jego wizyta w Polsce była szeroko komentowana.",
+    "Park jest zieloną przestrzenią dla mieszkańców nowych osiedli Białołęki. Są tu alejki, drzewa i place zabaw.",
+    "To spokojne miejsce codziennego wypoczynku. Nazwa parku przypomina o związkach Picassa z Polską. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "Picasso Park lies in Białołęka, on a street named after the Spanish painter Pablo Picasso. Picasso visited Poland in 1948 for the congress of intellectuals in Wrocław. During his stay in Warsaw he painted a mermaid with a hammer on the wall of a flat in Koło.",
+    "Picasso was one of the most important artists of the 20th century and a co-founder of Cubism. His visit to Poland attracted wide attention.",
+    "The park is a green space for residents of Białołęka's new estates. It has paths, trees and playgrounds.",
+    "It is a quiet place for everyday relaxation. The park's name recalls Picasso's links with Poland. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "port_zeranski": {
+   "pl": [
+    "Port Żerański powstał w latach 60. XX wieku przy ujściu Kanału Żerańskiego do Wisły. Miał obsługiwać transport towarów rzeką i kanałem. Przy porcie działały zakłady przemysłowe Żerania.",
+    "Żerań był w czasach PRL ważnym ośrodkiem przemysłu, m.in. Fabryki Samochodów Osobowych. Port nigdy nie osiągnął jednak dużego znaczenia handlowego.",
+    "Dziś teren portu stopniowo zmienia przeznaczenie, a w okolicy powstają nowe osiedla. Basen portowy jest miejscem spotkań wędkarzy i żeglarzy.",
+    "Okolica pokazuje przemysłową historię prawobrzeżnej Warszawy. Spacer można połączyć z trasą wzdłuż kanału."
+   ],
+   "en": [
+    "Żerań Port was built in the 1960s at the point where the Żerań Canal meets the Vistula. It was meant to handle freight on the river and the canal. Żerań's industrial plants operated near the port.",
+    "Under communism Żerań was an important industrial centre, home among others to the Passenger Car Factory. The port, however, never gained much commercial importance.",
+    "Today the port area is gradually changing its use, and new housing estates are being built nearby. The harbour basin is a meeting place for anglers and sailors.",
+    "The area shows the industrial history of right-bank Warsaw. A walk can be combined with the route along the canal. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "las_bialoleka": {
+   "pl": [
+    "Lasy Białołęki to pozostałości dawnych lasów na prawym brzegu Wisły. Rosną tu głównie sosny, dęby i brzozy. Lasy chronią dzielnicę przed całkowitą zabudową.",
+    "Białołęka przez stulecia była obszarem wsi i lasów, a do Warszawy w większości włączono ją w XX wieku. Część lasów leży na dawnych wydmach.",
+    "Przez lasy prowadzą ścieżki spacerowe, biegowe i rowerowe. To ważne miejsce wypoczynku dla mieszkańców osiedli.",
+    "W lasach można spotkać sarny, lisy i wiele gatunków ptaków. Warto zachować ciszę i nie schodzić z dróg. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "The Białołęka woods are remnants of old forests on the right bank of the Vistula. Pines, oaks and birches grow here. The woods protect the district from being completely built over.",
+    "For centuries Białołęka was an area of villages and forests, and most of it was incorporated into Warsaw in the 20th century. Some of the woods lie on old dunes.",
+    "Walking, running and cycling paths run through the woods. It is an important place of relaxation for residents of the estates.",
+    "You may see roe deer, foxes and many bird species in the woods. Keep quiet and stay on the tracks. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "w3-park-magiczna": {
+   "pl": [
+    "Park Magiczna to zielona przestrzeń na Białołęce, której nazwa pochodzi od ulicy Magicznej. Białołęka jest dzielnicą, która w ostatnich dekadach rozrosła się o wiele nowych osiedli. Parki zapewniają mieszkańcom miejsca do odpoczynku.",
+    "W parku są alejki, place zabaw i tereny do aktywności. To miejsce codziennych spacerów rodzin z dziećmi.",
+    "Dzielnica leży na prawym brzegu Wisły, wśród dawnych pól i lasów. Część terenów zachowała podmiejski charakter.",
+    "Park jest dobrym miejscem na krótki odpoczynek. W pobliżu leżą lasy i ścieżki rowerowe Białołęki. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "Magiczna Park is a green space in Białołęka named after Magiczna Street. Białołęka has grown in recent decades with many new housing estates. Parks give residents places to relax.",
+    "The park has paths, playgrounds and areas for activity. It is a place for everyday walks for families with children.",
+    "The district lies on the right bank of the Vistula, among former fields and forests. Some areas have kept their suburban character.",
+    "The park is a good place for a short rest. Białołęka's woods and cycle paths are nearby. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "w3-park-przy-ul-strumykowej": {
+   "pl": [
+    "Park przy ulicy Strumykowej leży na Białołęce. To jeden z mniejszych terenów zieleni dzielnicy, służący mieszkańcom okolicznych domów i bloków. Białołęka szybko się rozwija, a zieleń jest dla niej coraz cenniejsza.",
+    "W parku są alejki, ławki i drzewa. To miejsce na krótki spacer i odpoczynek.",
+    "Okolica leży na prawym brzegu Wisły, w pobliżu dawnych pól i lasów. Wiele ulic dzielnicy ma nazwy związane z przyrodą.",
+    "Park jest spokojny i rzadko zatłoczony. Dobrze nadaje się na wyjście z dziećmi lub psem. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "The park on Strumykowa Street lies in Białołęka. It is one of the district's smaller green areas, serving residents of the surrounding houses and blocks. Białołęka is growing fast, and green space is becoming ever more valuable.",
+    "The park has paths, benches and trees. It is a place for a short walk and a rest.",
+    "The area lies on the right bank of the Vistula, near former fields and forests. Many of the district's streets have names linked to nature.",
+    "The park is quiet and rarely crowded. It is good for an outing with children or a dog. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "w3-pomnik-tadeusza-kosciuszki-na-tarchominie": {
+   "pl": [
+    "Pomnik Tadeusza Kościuszki na Tarchominie upamiętnia przywódcę powstania z 1794 roku. Kościuszko był też bohaterem wojny o niepodległość Stanów Zjednoczonych. Jego imię nosi wiele ulic i pomników w Polsce i na świecie.",
+    "Tarchomin to dawna wieś nad Wisłą, której historia sięga średniowiecza. Dziś jest dużą częścią Białołęki z nowymi osiedlami.",
+    "W 1794 roku powstanie kościuszkowskie walczyło o ocalenie Rzeczypospolitej przed rozbiorami. Po jego upadku nastąpił trzeci rozbiór Polski.",
+    "Pomnik jest miejscem lokalnych uroczystości patriotycznych. Warto go odwiedzić w czasie spaceru po Tarchominie. Miejsce leży w warszawskiej dzielnicy Białołęka."
+   ],
+   "en": [
+    "The Tadeusz Kościuszko Monument in Tarchomin commemorates the leader of the 1794 uprising. Kościuszko was also a hero of the American War of Independence. Many streets and monuments in Poland and around the world bear his name.",
+    "Tarchomin is a former village on the Vistula whose history goes back to the Middle Ages. Today it is a large part of Białołęka with new housing estates.",
+    "In 1794 the Kościuszko Uprising fought to save the Commonwealth from partition. After its defeat came the third partition of Poland.",
+    "The monument is a place for local patriotic ceremonies. It is worth visiting on a walk around Tarchomin. It lies in Warsaw's Białołęka district."
+   ]
+  },
+  "park_brodnowski": {
+   "pl": [
+    "Park Bródnowski powstał w latach 70. XX wieku na Targówku, między osiedlami Bródna. Bródno to dawna wieś, której historia sięga wczesnego średniowiecza. Po wojnie zbudowano tu duże osiedla mieszkaniowe.",
+    "Park ma stawy, alejki, place zabaw i tereny sportowe. To jeden z największych parków prawobrzeżnej Warszawy.",
+    "Od 2009 roku działa tu Park Rzeźby na Bródnie, projekt artysty Pawła Althamera i Muzeum Sztuki Nowoczesnej. Wśród zieleni stoją prace uznanych artystów z całego świata.",
+    "Park jest ulubionym miejscem spacerów mieszkańców Bródna. Latem odbywają się tu wydarzenia kulturalne."
+   ],
+   "en": [
+    "Bródno Park was created in the 1970s in Targówek, between the Bródno estates. Bródno is a former village whose history goes back to the early Middle Ages. After the war large housing estates were built here.",
+    "The park has ponds, paths, playgrounds and sports areas. It is one of the largest parks in right-bank Warsaw.",
+    "Since 2009 it has been home to the Bródno Sculpture Park, a project by the artist Paweł Althamer and the Museum of Modern Art. Works by renowned artists from around the world stand among the greenery.",
+    "The park is a favourite place for Bródno residents to walk. In summer cultural events are held here. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "rzezby_brodno": {
+   "pl": [
+    "Park Rzeźby na Bródnie zainicjował w 2009 roku artysta Paweł Althamer, mieszkaniec dzielnicy, wspólnie z Muzeum Sztuki Nowoczesnej w Warszawie. Celem było wprowadzenie sztuki współczesnej do codziennej przestrzeni osiedla. Prace powstają przy udziale mieszkańców.",
+    "W parku można zobaczyć rzeźby i instalacje artystów z Polski i zagranicy. Niektóre są ukryte wśród drzew i trzeba ich szukać.",
+    "Projekt jest przykładem sztuki w przestrzeni publicznej, dostępnej dla wszystkich za darmo. Zdobył uznanie w świecie sztuki.",
+    "Spacer po parku przypomina poszukiwanie skarbów. Warto wcześniej sprawdzić mapę prac. Miejsce leży w warszawskiej dzielnicy Targówek."
+   ],
+   "en": [
+    "The Bródno Sculpture Park was started in 2009 by the artist Paweł Althamer, a local resident, together with the Museum of Modern Art in Warsaw. The aim was to bring contemporary art into the everyday space of a housing estate. The works are created with the participation of residents.",
+    "In the park you can see sculptures and installations by artists from Poland and abroad. Some are hidden among the trees and have to be searched for.",
+    "The project is an example of public art, open to everyone free of charge. It has won recognition in the art world.",
+    "A walk around the park feels like a treasure hunt. It is worth checking a map of the works in advance. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "las_brodnowski": {
+   "pl": [
+    "Las Bródnowski to kompleks leśny na Targówku, pozostałość dawnych lasów prawobrzeżnej Warszawy. Rosną tu sosny, dęby i inne drzewa. Las jest ważnym miejscem wypoczynku dla mieszkańców Bródna.",
+    "Bródno jest jedną z najstarszych osad w okolicy Warszawy, z grodem z wczesnego średniowiecza. Archeolodzy odkryli tu ślady dawnego osadnictwa.",
+    "Przez las prowadzą ścieżki spacerowe i biegowe. Można tu spotkać ptaki i drobne zwierzęta.",
+    "Las graniczy z osiedlami, dlatego łatwo tu dojść pieszo. To dobre miejsce na szybki odpoczynek od miasta. Miejsce leży w warszawskiej dzielnicy Targówek."
+   ],
+   "en": [
+    "Bródno Forest is a woodland area in Targówek, a remnant of the old forests of right-bank Warsaw. Pines, oaks and other trees grow here. The forest is an important place of relaxation for Bródno residents.",
+    "Bródno is one of the oldest settlements around Warsaw, with an early medieval stronghold. Archaeologists have found traces of early settlement here.",
+    "Walking and running paths run through the forest. You can see birds and small animals here.",
+    "The forest borders the housing estates, so it is easy to reach on foot. It is a good place for a quick break from the city. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "cmentarz_brodnowski": {
+   "pl": [
+    "Cmentarz Bródnowski założono w 1884 roku jako cmentarz dla prawobrzeżnej Warszawy. Jest jednym z największych cmentarzy w Polsce. Pochowano tu setki tysięcy osób.",
+    "Spoczywają tu m.in. ofiary walk i zbrodni z czasów wojen, a także znani warszawiacy. Na cmentarzu zachowało się wiele zabytkowych nagrobków.",
+    "W dniu Wszystkich Świętych cmentarz rozświetlają tysiące zniczy. To ważne miejsce pamięci dla mieszkańców Pragi i Bródna.",
+    "Cmentarz jest czynny i warto zachować powagę. Przez jego teren prowadzą długie aleje. Miejsce leży w warszawskiej dzielnicy Targówek."
+   ],
+   "en": [
+    "Bródno Cemetery was founded in 1884 as the cemetery for right-bank Warsaw. It is one of the largest cemeteries in Poland. Hundreds of thousands of people are buried here.",
+    "Those buried here include victims of fighting and crimes in wartime, as well as well-known Varsovians. Many historic gravestones survive.",
+    "On All Saints' Day the cemetery glows with thousands of candles. It is an important place of remembrance for the people of Praga and Bródno.",
+    "The cemetery is still in use, so please be respectful. Long avenues run through it. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "zalew_brodno": {
+   "pl": [
+    "Zbiorniki wodne w Parku Bródnowskim są centrum tej części parku. Wokół nich prowadzą alejki spacerowe i ścieżki. Park powstał w latach 70. XX wieku przy nowych osiedlach Bródna.",
+    "Nad wodą żyją kaczki i inne ptaki, a mieszkańcy przychodzą tu odpoczywać. Woda daje latem przyjemny chłód.",
+    "Park to także miejsce Parku Rzeźby, dlatego spacer nad wodą można połączyć z oglądaniem sztuki. Są tu też place zabaw.",
+    "To jedno z ulubionych miejsc spacerów na Targówku. Najpiękniej jest tu wiosną i jesienią."
+   ],
+   "en": [
+    "The ponds in Bródno Park are the heart of this part of the park. Paths and trails run around them. The park was created in the 1970s next to Bródno's new estates.",
+    "Ducks and other birds live by the water, and residents come here to relax. The water offers pleasant coolness in summer.",
+    "The park is also home to the Sculpture Park, so a walk by the water can be combined with looking at art. There are also playgrounds.",
+    "It is one of the favourite places for walks in Targówek. It is most beautiful in spring and autumn. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "w3-park-wiecha": {
+   "pl": [
+    "Park Wiecha nosi imię Stefana Wiecheckiego, znanego jako Wiech. Był pisarzem i felietonistą, który opisywał życie warszawskiej ulicy gwarą miejską. Jego teksty są skarbnicą dawnej warszawskiej mowy.",
+    "Wiech pisał zabawne opowiadania o mieszkańcach Pragi i Woli, ich codziennych kłopotach i humorze. Był jednym z najpopularniejszych autorów w Warszawie.",
+    "Park jest zieloną przestrzenią z alejkami i drzewami. Służy mieszkańcom Targówka.",
+    "Spacerując po parku, warto przypomnieć sobie warszawską gwarę. To spokojne miejsce codziennego wypoczynku. Miejsce leży w warszawskiej dzielnicy Targówek."
+   ],
+   "en": [
+    "Wiech Park is named after Stefan Wiechecki, known as Wiech. He was a writer and columnist who described life on Warsaw's streets in the city dialect. His writings are a treasure trove of old Warsaw speech.",
+    "Wiech wrote humorous stories about the people of Praga and Wola, their everyday troubles and their humour. He was one of the most popular writers in Warsaw.",
+    "The park is a green space with paths and trees. It serves residents of Targówek.",
+    "As you walk in the park, it is worth recalling the Warsaw dialect. It is a quiet place for everyday relaxation. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "w3-park-gaj-na-brodnie": {
+   "pl": [
+    "Park Gaj na Bródnie to niewielki zalesiony teren na Targówku. Nazwa „gaj” oznacza mały las lub zagajnik. Park daje mieszkańcom osiedli kontakt z przyrodą.",
+    "Bródno było dawną wsią, a po wojnie zabudowano je blokami mieszkalnymi. Zieleń jest tu bardzo ceniona przez mieszkańców.",
+    "W parku rosną drzewa, a między nimi prowadzą alejki. To przestrzeń cichego wypoczynku.",
+    "Park leży blisko większych terenów zieleni Bródna. Można tu zaplanować dłuższy spacer. Miejsce leży w warszawskiej dzielnicy Targówek."
+   ],
+   "en": [
+    "Gaj Park in Bródno is a small wooded area in Targówek. The word “gaj” means a small wood or grove. The park gives estate residents contact with nature.",
+    "Bródno was once a village, and after the war it was built up with blocks of flats. Green space is highly valued by residents here.",
+    "Trees grow in the park, with paths between them. It is a space for quiet relaxation.",
+    "The park lies near Bródno's larger green areas. A longer walk can be planned here. It lies in Warsaw's Targówek district."
+   ]
+  },
+  "las_rembertowski": {
+   "pl": [
+    "Las Rembertowski to duży kompleks leśny we wschodniej Warszawie. Przez wieki teren służył wojsku jako poligon. Dzięki temu nie został zabudowany i zachował leśny charakter.",
+    "Rembertów przyłączono do Warszawy w 1957 roku. W czasie II wojny światowej i tuż po niej działał tu obóz, w którym NKWD więziło żołnierzy Armii Krajowej.",
+    "W lesie rosną głównie sosny, a teren jest pagórkowaty, z dawnymi wydmami. Prowadzą tu ścieżki spacerowe i rowerowe.",
+    "To dobre miejsce na długi spacer w ciszy. Warto zwracać uwagę na oznaczenia terenów wojskowych. Miejsce leży w warszawskiej dzielnicy Rembertów."
+   ],
+   "en": [
+    "Rembertów Forest is a large woodland area in eastern Warsaw. For centuries the area served the army as a training ground. As a result it was not built over and kept its forest character.",
+    "Rembertów was incorporated into Warsaw in 1957. During and just after the Second World War there was a camp here where the NKVD imprisoned Home Army soldiers.",
+    "The forest is mostly pine, and the ground is hilly, with old dunes. Walking and cycling paths run through it.",
+    "It is a good place for a long, quiet walk. Watch out for signs marking military areas. It lies in Warsaw's Rembertów district."
+   ]
+  },
+  "rezerwat_kaw": {
+   "pl": [
+    "Rezerwat Kawęczyn leży w Rembertowie, na wschodnim skraju Warszawy. Chroni fragment lasu z cennymi drzewostanami i roślinnością. Takie rezerwaty pozwalają zachować przyrodę w granicach miasta.",
+    "Teren Rembertowa przez długi czas należał do wojska, co ograniczało zabudowę. Dzięki temu przetrwały tu fragmenty dawnych lasów.",
+    "W rezerwacie żyje wiele gatunków ptaków i owadów. Rosną tu stare drzewa i rośliny typowe dla lasów Mazowsza.",
+    "W rezerwacie trzeba poruszać się po wyznaczonych ścieżkach. To miejsce dla miłośników przyrody szukających ciszy. Miejsce leży w warszawskiej dzielnicy Rembertów."
+   ],
+   "en": [
+    "The Kawęczyn reserve lies in Rembertów, on the eastern edge of Warsaw. It protects a stretch of forest with valuable stands of trees and plants. Reserves like this preserve nature within the city.",
+    "For a long time Rembertów's land belonged to the army, which limited development. This allowed fragments of old forest to survive.",
+    "Many species of birds and insects live in the reserve. Old trees and plants typical of Mazovian forests grow here.",
+    "In the reserve you must keep to marked paths. It is a place for nature lovers looking for quiet. It lies in Warsaw's Rembertów district."
+   ]
+  },
+  "asw": {
+   "pl": [
+    "Okolice dawnej Akademii Sztuki Wojennej w Rembertowie są związane z długą tradycją wojskową. Rembertów od XIX wieku był miejscem poligonu i ośrodków szkolenia wojska. Później działały tu uczelnie wojskowe.",
+    "Na terenie kampusu stoją historyczne budynki i pomniki. Okolicę otaczają lasy dawnego poligonu.",
+    "W czasie II wojny światowej i tuż po niej w Rembertowie działał obóz NKWD dla żołnierzy Armii Krajowej. Przypominają o tym miejsca pamięci w dzielnicy.",
+    "Teren uczelni nie zawsze jest dostępny dla zwiedzających, ale okolicę można poznać spacerem. To ciekawy punkt na mapie wojskowej historii Warszawy. Miejsce leży w warszawskiej dzielnicy Rembertów."
+   ],
+   "en": [
+    "The area around the former War Studies Academy in Rembertów is linked to a long military tradition. From the 19th century Rembertów had a training ground and army training centres. Later military academies operated here.",
+    "The campus has historic buildings and monuments. The area is surrounded by the forests of the former training ground.",
+    "During and just after the Second World War Rembertów had an NKVD camp for Home Army soldiers. Memorials in the district recall this.",
+    "The academy grounds are not always open to visitors, but the area can be explored on foot. It is an interesting point on the map of Warsaw's military history. It lies in Warsaw's Rembertów district."
+   ]
+  },
+  "plac_rembertow": {
+   "pl": [
+    "Okolice stacji Warszawa Rembertów to centrum dawnego miasta Rembertów. Rembertów rozwijał się wokół linii kolejowej i terenów wojskowych. Do Warszawy przyłączono go w 1957 roku.",
+    "W okolicy zachowały się dawne wille i domy z okresu międzywojennego. Wiele z nich ma drewniane zdobienia typowe dla podwarszawskich letnisk.",
+    "Plac przy stacji jest miejscem lokalnego handlu i spotkań. Stąd łatwo dojść do lasów Rembertowa.",
+    "Spacer po okolicy pozwala poznać spokojny, podmiejski charakter dzielnicy. To dobry punkt startowy wycieczek. Miejsce leży w warszawskiej dzielnicy Rembertów."
+   ],
+   "en": [
+    "The area around Warszawa Rembertów station is the centre of the former town of Rembertów. Rembertów grew up around the railway line and military areas. It was incorporated into Warsaw in 1957.",
+    "Old villas and interwar houses survive in the area. Many have wooden decoration typical of the summer resorts around Warsaw.",
+    "The square by the station is a place for local trade and meetings. From here it is easy to walk to Rembertów's forests.",
+    "A walk around the area reveals the district's quiet, suburban character. It is a good starting point for outings. It lies in Warsaw's Rembertów district."
+   ]
+  },
+  "w3-lesne-alejki-starego-rembertowa": {
+   "pl": [
+    "Leśne alejki Starego Rembertowa prowadzą między domami a lasem. Stary Rembertów zachował charakter podmiejskiej miejscowości otoczonej sosnami. Wiele domów stoi tu na dużych, zalesionych działkach.",
+    "Rembertów rozwijał się dzięki kolei i obecności wojska. Do Warszawy włączono go w połowie XX wieku.",
+    "Spacer leśnymi alejkami pozwala odpocząć od miejskiego hałasu. Powietrze pachnie żywicą, a w lesie słychać ptaki.",
+    "To dobra trasa na spokojny spacer lub przejażdżkę rowerem. W pobliżu leży Las Rembertowski. Miejsce leży w warszawskiej dzielnicy Rembertów."
+   ],
+   "en": [
+    "The forest lanes of Old Rembertów run between houses and woodland. Old Rembertów has kept the character of a suburban town surrounded by pines. Many houses stand on large, wooded plots.",
+    "Rembertów grew thanks to the railway and the presence of the army. It was incorporated into Warsaw in the mid-20th century.",
+    "A walk along the forest lanes is a break from city noise. The air smells of resin, and birds sing in the woods.",
+    "It is a good route for a quiet walk or bike ride. Rembertów Forest lies nearby. It lies in Warsaw's Rembertów district."
+   ]
+  },
+  "plaza_romantyczna": {
+   "pl": [
+    "Plaża Romantyczna leży na prawym brzegu Wisły w Wawrze. Wisła w Warszawie ma wiele dzikich, piaszczystych plaż. Ta jest jednym z ulubionych miejsc letniego wypoczynku.",
+    "Kąpiel w Wiśle w miejscach niewyznaczonych jest niebezpieczna z powodu prądów i zmiennego dna. Plaża służy przede wszystkim do opalania, spacerów i pikników.",
+    "Prawy brzeg Wisły chroniony jest jako obszar Natura 2000, ważny dla ptaków. Można tu zobaczyć rybitwy i inne gatunki.",
+    "Na plażę łatwo dojechać rowerem wzdłuż wału. Najpiękniej jest tu o zachodzie słońca. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "Romantic Beach lies on the right bank of the Vistula in Wawer. The Vistula in Warsaw has many wild, sandy beaches. This is one of the favourite places for summer relaxation.",
+    "Swimming in the Vistula outside designated areas is dangerous because of currents and the changing riverbed. The beach is mainly for sunbathing, walks and picnics.",
+    "The right bank of the Vistula is protected as a Natura 2000 area, important for birds. You can see terns and other species here.",
+    "The beach is easy to reach by bike along the embankment. It is most beautiful at sunset. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "mazowiecki_park": {
+   "pl": [
+    "Mazowiecki Park Krajobrazowy utworzono w 1986 roku na wschód i południowy wschód od Warszawy. Część parku leży w granicach dzielnicy Wawer. Chroni lasy, wydmy i torfowiska.",
+    "Teren porastają głównie lasy sosnowe na dawnych wydmach śródlądowych. W parku znajduje się kilka rezerwatów przyrody.",
+    "Wawer w czasie wojny był miejscem tragicznych wydarzeń, w tym egzekucji mieszkańców w grudniu 1939 roku. Pamięć o nich jest ważna dla dzielnicy.",
+    "Przez park prowadzą liczne szlaki piesze i rowerowe. To jedno z najlepszych miejsc na leśną wycieczkę bez wyjeżdżania z miasta. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "Mazovian Landscape Park was established in 1986 east and south-east of Warsaw. Part of the park lies within the Wawer district. It protects forests, dunes and peat bogs.",
+    "The area is mostly covered with pine forest on old inland dunes. The park contains several nature reserves.",
+    "During the war Wawer was the scene of tragic events, including the execution of residents in December 1939. Their memory matters to the district.",
+    "Many walking and cycling trails run through the park. It is one of the best places for a forest outing without leaving the city. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "rezerwat_sobieskiego": {
+   "pl": [
+    "Rezerwat im. Króla Jana Sobieskiego leży w Wawrze i chroni fragment dawnej puszczy. Nosi imię króla Jana III Sobieskiego, zwycięzcy spod Wiednia. Rosną tu stare sosny i dęby.",
+    "Rezerwat jest częścią terenów leśnych prawobrzeżnej Warszawy. Teren obejmuje wydmy i podmokłe obniżenia.",
+    "W lesie żyje wiele gatunków ptaków, a także sarny i lisy. Rezerwat chroni przyrodę przed zabudową.",
+    "Na terenie rezerwatu trzeba trzymać się wyznaczonych ścieżek. To dobre miejsce na spokojny spacer w otoczeniu przyrody. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "The King John Sobieski reserve lies in Wawer and protects a fragment of old forest. It is named after King John III Sobieski, the victor of Vienna. Old pines and oaks grow here.",
+    "The reserve is part of the woodland of right-bank Warsaw. The area includes dunes and marshy hollows.",
+    "Many bird species live in the forest, as well as roe deer and foxes. The reserve protects nature from development.",
+    "In the reserve you must keep to marked paths. It is a good place for a quiet walk surrounded by nature. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "miedzeszyn": {
+   "pl": [
+    "Miedzeszyn to część Wawra nad Wisłą, dawniej letniskowa miejscowość. Na początku XX wieku warszawiacy budowali tu drewniane wille, by odpoczywać latem w lesie. Wiele z nich przetrwało do dziś.",
+    "Nadwiślańskie ścieżki prowadzą wzdłuż wału i brzegu rzeki. Teren jest dziki i zielony, z widokiem na Wisłę.",
+    "Okolica jest popularna wśród rowerzystów i spacerowiczów. Można tu obserwować ptaki nad rzeką.",
+    "Spacer po Miedzeszynie warto połączyć z oglądaniem starych willi. To spokojna, zielona część Warszawy. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "Miedzeszyn is part of Wawer on the Vistula, once a summer resort. In the early 20th century Varsovians built wooden villas here to spend summer in the forest. Many of them survive.",
+    "Riverside paths run along the embankment and the riverbank. The area is wild and green, with views of the Vistula.",
+    "The area is popular with cyclists and walkers. You can watch birds over the river here.",
+    "A walk in Miedzeszyn is worth combining with a look at the old villas. It is a quiet, green part of Warsaw. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "willa_swiderm": {
+   "pl": [
+    "Świdermajer to styl drewnianej architektury letniskowej, typowy dla miejscowości nad Świdrem i wzdłuż linii otwockiej. Nazwę stworzył poeta Konstanty Ildefons Gałczyński, łącząc nazwę rzeki Świder ze stylem biedermeier. Za twórcę stylu uważa się Michała Elwira Andriollego.",
+    "Wille świdermajer mają ażurowe werandy, ganki i bogate drewniane zdobienia. Budowano je od końca XIX do połowy XX wieku jako domy letnie.",
+    "W Falenicy, części Wawra, zachowało się kilka takich willi w pobliżu stacji. Wiele z nich wymaga remontu i ochrony.",
+    "Spacer po okolicy stacji pozwala zobaczyć ten charakterystyczny styl. To unikalne dziedzictwo podwarszawskich letnisk. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "Świdermajer is a style of wooden summer-house architecture typical of the towns along the Świder river and the Otwock railway line. The name was coined by the poet Konstanty Ildefons Gałczyński, combining the Świder river with the Biedermeier style. Michał Elwiro Andriolli is regarded as the creator of the style.",
+    "Świdermajer villas have openwork verandas, porches and rich wooden decoration. They were built from the late 19th to the mid-20th century as summer homes.",
+    "In Falenica, part of Wawer, several such villas survive near the station. Many of them need renovation and protection.",
+    "A walk around the station area reveals this distinctive style. It is a unique heritage of the summer resorts around Warsaw. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "w3-plaza-przy-wale-miedzeszynskim": {
+   "pl": [
+    "Plaża przy Wale Miedzeszyńskim leży na prawym brzegu Wisły. Wał Miedzeszyński to droga i nasyp przeciwpowodziowy biegnący wzdłuż rzeki. Chroni dzielnice prawobrzeżne przed wezbraniami Wisły.",
+    "Brzeg rzeki jest tu piaszczysty i porośnięty wierzbami. To miejsce letniego wypoczynku mieszkańców.",
+    "Prawy brzeg Wisły jest chroniony jako obszar ważny dla ptaków. Warto zachować ciszę i nie śmiecić.",
+    "Kąpiel w Wiśle poza wyznaczonymi miejscami jest niebezpieczna. Plaża dobrze nadaje się na spacer i piknik. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "The beach by Wał Miedzeszyński lies on the right bank of the Vistula. Wał Miedzeszyński is a road and flood embankment running along the river. It protects the right-bank districts from Vistula floods.",
+    "The riverbank here is sandy and lined with willows. It is a place for residents' summer relaxation.",
+    "The right bank of the Vistula is protected as an important bird area. Please keep quiet and do not leave litter.",
+    "Swimming in the Vistula outside designated areas is dangerous. The beach is good for a walk and a picnic. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "w3-park-aktywnosci-rodzinnej-w-wawrze": {
+   "pl": [
+    "Park Aktywności Rodzinnej w Wawrze to nowoczesna przestrzeń rekreacyjna dla rodzin. Są tu place zabaw, urządzenia sportowe i miejsca do odpoczynku. Park powstał, by zachęcić mieszkańców do aktywności na świeżym powietrzu.",
+    "Wawer to największa powierzchniowo dzielnica Warszawy, w dużej części pokryta lasami. Dzielnica ma charakter podmiejski z domami jednorodzinnymi.",
+    "Park jest popularny wśród rodzin z małymi dziećmi. Odbywają się tu też lokalne wydarzenia.",
+    "W pobliżu leżą lasy Mazowieckiego Parku Krajobrazowego. Można tu połączyć zabawę z leśnym spacerem. Miejsce leży w warszawskiej dzielnicy Wawer."
+   ],
+   "en": [
+    "The Family Activity Park in Wawer is a modern recreation space for families. It has playgrounds, sports equipment and places to rest. The park was created to encourage residents to be active outdoors.",
+    "Wawer is Warsaw's largest district by area, much of it covered with forest. The district has a suburban character with detached houses.",
+    "The park is popular with families with young children. Local events are also held here.",
+    "The forests of the Mazovian Landscape Park lie nearby. Play can be combined with a forest walk. It lies in Warsaw's Wawer district."
+   ]
+  },
+  "bagno_jacka": {
+   "pl": [
+    "Rezerwat Bagno Jacka leży w Wesołej, na wschodnim skraju Warszawy. Chroni torfowisko i podmokły las z rzadkimi roślinami. To jeden z ciekawszych przyrodniczo zakątków miasta.",
+    "Torfowiska powstawały przez tysiące lat z obumierających roślin w podmokłym terenie. Są cenne dla przyrody i magazynują wodę.",
+    "W rezerwacie rosną m.in. mchy torfowce i rośliny bagienne. Żyją tu płazy, owady i ptaki.",
+    "Wesołą przyłączono do Warszawy w 2002 roku. W rezerwacie trzeba poruszać się po wyznaczonych ścieżkach. Miejsce leży w warszawskiej dzielnicy Wesoła."
+   ],
+   "en": [
+    "The Bagno Jacka reserve lies in Wesoła, on the eastern edge of Warsaw. It protects a peat bog and marshy forest with rare plants. It is one of the most interesting natural corners of the city.",
+    "Peat bogs formed over thousands of years from dead plants in wet ground. They are valuable for nature and store water.",
+    "Sphagnum mosses and bog plants grow in the reserve, among others. Amphibians, insects and birds live here.",
+    "Wesoła was incorporated into Warsaw in 2002. In the reserve you must keep to marked paths. It lies in Warsaw's Wesoła district."
+   ]
+  },
+  "lasy_wesolej": {
+   "pl": [
+    "Lasy Wesołej pokrywają dużą część tej najbardziej na wschód wysuniętej dzielnicy Warszawy. Wesoła była samodzielnym miastem do 2002 roku. Przez wieki była miejscowością letniskową otoczoną lasami.",
+    "Rosną tu głównie sosny, a teren urozmaicają wydmy i bagna. Lasy są częścią większego kompleksu leśnego na wschód od stolicy.",
+    "Przez lasy prowadzą szlaki piesze i rowerowe. Można tu spotkać sarny, dziki i wiele gatunków ptaków.",
+    "To dobre miejsce na długą wycieczkę w ciszy. Warto zabrać mapę, bo lasy są rozległe. Miejsce leży w warszawskiej dzielnicy Wesoła."
+   ],
+   "en": [
+    "The forests of Wesoła cover a large part of Warsaw's easternmost district. Wesoła was a separate town until 2002. For centuries it was a summer resort surrounded by forests.",
+    "Pines dominate, and dunes and marshes vary the landscape. The forests are part of a larger woodland area east of the capital.",
+    "Walking and cycling trails run through the forests. You may see roe deer, wild boar and many bird species.",
+    "It is a good place for a long, quiet outing. Take a map, as the forests are extensive. It lies in Warsaw's Wesoła district."
+   ]
+  },
+  "plac_wesola": {
+   "pl": [
+    "Stara Miłosna to część dzielnicy Wesoła, dawniej osobna wieś i letnisko. W 1831 roku, w czasie powstania listopadowego, w okolicy toczyły się walki z wojskami rosyjskimi. Później miejscowość rozwijała się jako podwarszawskie letnisko.",
+    "Centrum Starej Miłosnej tworzą sklepy, punkty usługowe i domy jednorodzinne. Dzielnica ma spokojny, podmiejski charakter.",
+    "W okolicy zachowały się dawne wille i ogrody. Wokół rozciągają się lasy.",
+    "Spacer po Starej Miłośnie pozwala zobaczyć, jak wyglądały podwarszawskie miejscowości. Z centrum łatwo dojść do lasu. Miejsce leży w warszawskiej dzielnicy Wesoła."
+   ],
+   "en": [
+    "Stara Miłosna is part of the Wesoła district, once a separate village and summer resort. In 1831, during the November Uprising, fighting with Russian troops took place in the area. Later the village developed as a summer resort near Warsaw.",
+    "The centre of Stara Miłosna consists of shops, services and detached houses. The district has a quiet, suburban character.",
+    "Old villas and gardens survive in the area. Forests stretch all around.",
+    "A walk around Stara Miłosna shows what the towns around Warsaw used to look like. From the centre it is easy to walk to the forest. It lies in Warsaw's Wesoła district."
+   ]
+  },
+  "kosciol_wesola": {
+   "pl": [
+    "Kościół Opatrzności Bożej w Wesołej jest jednym z ważnych kościołów tej dzielnicy. Wesoła rozwinęła się w XX wieku jako miasteczko wśród lasów. Do Warszawy przyłączono ją w 2002 roku.",
+    "Kościół jest centrum życia parafii i miejscem lokalnych uroczystości. Jego architektura wyróżnia się w krajobrazie niskiej zabudowy.",
+    "Wokół kościoła mieszkańcy spotykają się podczas świąt i wydarzeń. Okolica jest spokojna i zielona.",
+    "Kościół można zobaczyć w trakcie spaceru po Wesołej. W pobliżu leżą lasy i rezerwat Bagno Jacka. Miejsce leży w warszawskiej dzielnicy Wesoła."
+   ],
+   "en": [
+    "The Church of Divine Providence in Wesoła is one of the district's important churches. Wesoła developed in the 20th century as a small town among forests. It was incorporated into Warsaw in 2002.",
+    "The church is the centre of parish life and a venue for local celebrations. Its architecture stands out among the low-rise buildings.",
+    "Residents gather around the church during holidays and events. The area is quiet and green.",
+    "The church can be seen on a walk around Wesoła. Forests and the Bagno Jacka reserve lie nearby. It lies in Warsaw's Wesoła district."
+   ]
+  },
+  "w3-lesne-trasy-w-starej-mi-osnie": {
+   "pl": [
+    "Leśne trasy w Starej Miłośnie prowadzą przez lasy otaczające tę część Wesołej. To miejsce dla spacerowiczów, biegaczy i rowerzystów. Lasy łączą się z większymi kompleksami na wschód od Warszawy.",
+    "Stara Miłosna przez długi czas była wsią i letniskiem. Dziś jest spokojną dzielnicą domów jednorodzinnych.",
+    "Na trasach rosną sosny i brzozy, a teren jest lekko pagórkowaty. Wiosną i latem słychać tu wiele ptaków.",
+    "Trasy dobrze nadają się na weekendową wycieczkę. Warto zabrać wodę i wygodne buty. Miejsce leży w warszawskiej dzielnicy Wesoła."
+   ],
+   "en": [
+    "The forest trails in Stara Miłosna run through the woods surrounding this part of Wesoła. They are for walkers, runners and cyclists. The woods link up with larger forest areas east of Warsaw.",
+    "For a long time Stara Miłosna was a village and summer resort. Today it is a quiet district of detached houses.",
+    "Pines and birches line the trails, and the ground is gently rolling. In spring and summer you can hear many birds.",
+    "The trails are good for a weekend outing. Take water and comfortable shoes. It lies in Warsaw's Wesoła district."
+   ]
+  },
+  "las_kabacki": {
+   "pl": [
+    "Las Kabacki to duży kompleks leśny na południu Warszawy, na granicy Ursynowa. Od 1980 roku jest rezerwatem przyrody im. Stefana Starzyńskiego. Rosną tu sosny, dęby, graby i lipy.",
+    "Las jest pozostałością dawnych lasów, które otaczały Warszawę. Przez wieki był terenem łowieckim i źródłem drewna.",
+    "Dziś to jedno z najpopularniejszych miejsc wypoczynku mieszkańców Ursynowa. Prowadzą tu ścieżki spacerowe, biegowe i rowerowe.",
+    "Do lasu łatwo dojechać metrem do stacji Kabaty. Trzeba poruszać się po wyznaczonych ścieżkach, bo to rezerwat. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Kabaty Forest is a large woodland area in southern Warsaw, on the edge of Ursynów. Since 1980 it has been the Stefan Starzyński nature reserve. Pines, oaks, hornbeams and limes grow here.",
+    "The forest is a remnant of the old woods that once surrounded Warsaw. For centuries it was a hunting ground and a source of timber.",
+    "Today it is one of the most popular places for Ursynów residents to relax. Walking, running and cycling paths run through it.",
+    "The forest is easy to reach by metro to Kabaty station. Keep to the marked paths, as it is a reserve. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "gorka_kazurka": {
+   "pl": [
+    "Górka Kazurka to sztuczne wzniesienie na Ursynowie. Usypano je z ziemi wydobytej m.in. podczas budowy linii metra. Dziś jest jednym z ulubionych miejsc rekreacji dzielnicy.",
+    "Zimą działa tu stok do zjazdów na sankach i nartach. Latem górka przyciąga rowerzystów, biegaczy i miłośników zachodów słońca.",
+    "Ze szczytu rozciąga się widok na Ursynów, Wilanów i dolinę Wisły. Przy dobrej widoczności widać też centrum miasta.",
+    "Ursynów nosi nazwę od Juliana Ursyna Niemcewicza, pisarza, który w XIX wieku miał tu majątek. Dzielnica powstała w latach 70. i 80. XX wieku jako duże osiedle."
+   ],
+   "en": [
+    "Kazurka Hill is an artificial hill in Ursynów. It was built from earth excavated during the construction of the metro line, among other things. Today it is one of the district's favourite recreation spots.",
+    "In winter there is a slope for sledging and skiing. In summer the hill attracts cyclists, runners and sunset lovers.",
+    "The summit offers a view of Ursynów, Wilanów and the Vistula valley. In good visibility you can also see the city centre.",
+    "Ursynów takes its name from Julian Ursyn Niemcewicz, a writer who owned an estate here in the 19th century. The district was built in the 1970s and 1980s as a large housing estate. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "bazantarnia": {
+   "pl": [
+    "Park przy Bażantarni leży na Ursynowie. Nazwa pochodzi od dawnej bażantarni, czyli hodowli bażantów, która należała do dóbr wilanowskich. Właściciele Wilanowa prowadzili tu hodowlę ptaków na polowania.",
+    "Park powstał przy nowych osiedlach Kabat i Ursynowa. Ma alejki, place zabaw i stawy.",
+    "Okolica łączy się z Lasem Kabackim, tworząc zielony pas na południu miasta. To ulubione miejsce spacerów mieszkańców.",
+    "Do parku łatwo dojechać metrem. Latem odbywają się tu wydarzenia dla mieszkańców. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Bażantarnia Park lies in Ursynów. Its name comes from a former pheasantry, a pheasant-breeding ground that belonged to the Wilanów estate. The owners of Wilanów bred birds here for hunting.",
+    "The park was created next to the new estates of Kabaty and Ursynów. It has paths, playgrounds and ponds.",
+    "The area links up with Kabaty Forest, forming a green belt in the south of the city. It is a favourite place for residents to walk.",
+    "The park is easy to reach by metro. In summer events for residents are held here. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "kosciol_katarzyny": {
+   "pl": [
+    "Kościół św. Katarzyny na Służewie należy do najstarszych parafii w okolicy Warszawy. Parafia jest wzmiankowana już w XIII wieku. Obecny kościół pochodzi z XVIII wieku, ale ma starsze elementy.",
+    "Kościół stoi na skarpie, otoczony zabytkowym cmentarzem. Przez wieki był centrum życia okolicznych wsi.",
+    "Na cmentarzu przy kościele spoczywa wielu zasłużonych mieszkańców. W pobliżu znajduje się też miejsce pamięci ofiar zbrodni komunistycznych.",
+    "To jedno z najstarszych i najbardziej klimatycznych miejsc południowej Warszawy. Warto połączyć wizytę ze spacerem po Dolince Służewieckiej. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "St Catherine's Church in Służew is one of the oldest parishes around Warsaw. The parish is mentioned as early as the 13th century. The present church dates from the 18th century but has older elements.",
+    "The church stands on the escarpment, surrounded by a historic cemetery. For centuries it was the centre of life for the surrounding villages.",
+    "Many distinguished local residents are buried in the churchyard. Nearby is also a memorial to victims of communist crimes.",
+    "It is one of the oldest and most atmospheric places in southern Warsaw. A visit is worth combining with a walk in the Służew Valley park. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "dolinka_sluzewiecka": {
+   "pl": [
+    "Park Dolinka Służewiecka ciągnie się wzdłuż Potoku Służewieckiego na Ursynowie i Mokotowie. Dolina potoku tworzy naturalny korytarz zieleni. W parku są stawy, alejki i ścieżki rowerowe.",
+    "Potok płynie u stóp skarpy, na której stoi kościół św. Katarzyny. Okolica należy do najstarszych osad na południu Warszawy.",
+    "Park jest popularny wśród rodzin, biegaczy i rowerzystów. Zimą stawy bywają zamarznięte.",
+    "Dolinka łączy kilka osiedli i ułatwia spacery bez wychodzenia na ruchliwe ulice. To spokojna zielona oś dzielnicy. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Służew Valley Park runs along the Służewiecki Stream in Ursynów and Mokotów. The stream valley forms a natural green corridor. The park has ponds, paths and cycle routes.",
+    "The stream flows at the foot of the escarpment on which St Catherine's Church stands. The area is among the oldest settlements in southern Warsaw.",
+    "The park is popular with families, runners and cyclists. In winter the ponds sometimes freeze.",
+    "The valley links several estates and makes it easy to walk without using busy roads. It is the district's quiet green axis. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "w3-park-im-romana-koz-owskiego": {
+   "pl": [
+    "Park im. Romana Kozłowskiego leży na Ursynowie. Roman Kozłowski był wybitnym polskim paleontologiem, badaczem dawnych organizmów. Prowadził badania m.in. nad graptolitami.",
+    "Kozłowski był profesorem Uniwersytetu Warszawskiego i założycielem polskiej szkoły paleontologii. Jego imię nosi też instytut naukowy.",
+    "Park jest zieloną przestrzenią z alejkami i stawem. Służy mieszkańcom pobliskich osiedli.",
+    "Spacer po parku to dobra okazja, by przypomnieć sobie polskich uczonych. To spokojne miejsce wypoczynku. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Roman Kozłowski Park lies in Ursynów. Roman Kozłowski was an eminent Polish palaeontologist who studied ancient organisms. Among other things, he researched graptolites.",
+    "Kozłowski was a professor at the University of Warsaw and founder of the Polish school of palaeontology. A research institute also bears his name.",
+    "The park is a green space with paths and a pond. It serves residents of the nearby estates.",
+    "A walk in the park is a good chance to remember Polish scientists. It is a quiet place to relax. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "w3-park-polskich-wynalazcow": {
+   "pl": [
+    "Park Polskich Wynalazców leży na Ursynowie i upamiętnia polskich wynalazców. Polacy wymyślili m.in. lampę naftową, kamizelkę kuloodporną i wycieraczki samochodowe. Takie dokonania są powodem do dumy.",
+    "Ignacy Łukasiewicz skonstruował lampę naftową w XIX wieku, a Jan Szczepanik był nazywany polskim Edisonem. Polscy kryptolodzy złamali szyfr Enigmy przed II wojną światową.",
+    "W parku są alejki, place zabaw i miejsca do odpoczynku. To przestrzeń dla mieszkańców nowych osiedli.",
+    "Spacer po parku może zachęcić dzieci do poznawania historii nauki. To miejsce łączące wypoczynek z edukacją. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Polish Inventors Park lies in Ursynów and commemorates Polish inventors. Poles invented, among other things, the kerosene lamp, the bulletproof vest and car windscreen wipers. Such achievements are a source of pride.",
+    "Ignacy Łukasiewicz built the kerosene lamp in the 19th century, and Jan Szczepanik was called the Polish Edison. Polish cryptologists broke the Enigma cipher before the Second World War.",
+    "The park has paths, playgrounds and places to rest. It is a space for residents of the new estates.",
+    "A walk in the park can encourage children to learn about the history of science. It is a place that combines relaxation with education. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "w3-park-cichociemnych-spadochroniarzy-ak": {
+   "pl": [
+    "Park Cichociemnych Spadochroniarzy AK leży na Ursynowie. Cichociemni byli żołnierzami szkolonymi w Wielkiej Brytanii i zrzucanymi na spadochronach do okupowanej Polski. Wspierali Armię Krajową w walce z okupantem.",
+    "Do kraju przerzucono ponad 300 cichociemnych, a wielu z nich zginęło w walce lub z rąk Niemców i komunistów. Ich szkolenie było niezwykle wymagające.",
+    "Park jest zieloną przestrzenią z alejkami i miejscem pamięci. Służy mieszkańcom i przypomina o bohaterach.",
+    "Nazwa parku zachęca, by poznać historię cichociemnych. To spokojne miejsce wypoczynku i zadumy. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "Home Army Silent Unseen Paratroopers Park lies in Ursynów. The Silent Unseen were soldiers trained in Britain and parachuted into occupied Poland. They supported the Home Army in the fight against the occupiers.",
+    "More than 300 of them were dropped into the country, and many died in combat or at the hands of the Germans and the communists. Their training was extremely demanding.",
+    "The park is a green space with paths and a memorial. It serves residents and recalls these heroes.",
+    "The park's name invites you to learn the story of the Silent Unseen. It is a quiet place for rest and reflection. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "w3-park-jana-paw-a-ii": {
+   "pl": [
+    "Park Jana Pawła II leży na Ursynowie. Patron parku, Karol Wojtyła, był papieżem w latach 1978–2005. Odwiedzał Warszawę kilkakrotnie, a jego msza na placu Zwycięstwa w 1979 roku przeszła do historii.",
+    "Papież został ogłoszony świętym w 2014 roku. Wiele miejsc w Polsce nosi jego imię.",
+    "Park jest zieloną przestrzenią z alejkami, drzewami i placami zabaw. Służy mieszkańcom Ursynowa.",
+    "To dobre miejsce na spokojny spacer w otoczeniu zieleni. W pobliżu leżą inne parki dzielnicy. Miejsce leży w warszawskiej dzielnicy Ursynów."
+   ],
+   "en": [
+    "John Paul II Park lies in Ursynów. The park's patron, Karol Wojtyła, was pope from 1978 to 2005. He visited Warsaw several times, and his Mass on Victory Square in 1979 went down in history.",
+    "The pope was canonised in 2014. Many places in Poland bear his name.",
+    "The park is a green space with paths, trees and playgrounds. It serves the residents of Ursynów.",
+    "It is a good place for a quiet walk among greenery. Other parks in the district are nearby. It lies in Warsaw's Ursynów district."
+   ]
+  },
+  "park_czechowicki": {
+   "pl": [
+    "Park Czechowicki leży w Ursusie, na terenie dawnej wsi Czechowice. Ursus rozwinął się wokół fabryki ciągników, od której wziął nazwę. Do Warszawy dzielnicę przyłączono w 1977 roku.",
+    "Park ma charakter krajobrazowy, z drzewami, alejkami i stawem. To jeden z ważniejszych terenów zielonych zachodniej Warszawy.",
+    "W okolicy zachowały się ślady dawnej zabudowy wiejskiej i przemysłowej. Ursus łączy historię przemysłu z nowymi osiedlami.",
+    "Park jest popularny wśród mieszkańców dzielnicy. Latem odbywają się tu lokalne wydarzenia. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "Czechowice Park lies in Ursus, on the site of the former village of Czechowice. Ursus grew around the tractor factory from which it took its name. The district was incorporated into Warsaw in 1977.",
+    "The park is a landscape park with trees, paths and a pond. It is one of the more important green areas of western Warsaw.",
+    "Traces of old village and industrial buildings survive in the area. Ursus combines industrial history with new housing estates.",
+    "The park is popular with local residents. In summer local events are held here. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "park_achera": {
+   "pl": [
+    "Park Achera leży w Ursusie. To niewielki park służący mieszkańcom okolicznych osiedli. Ursus rozwijał się w XX wieku jako dzielnica robotnicza wokół zakładów przemysłowych.",
+    "W parku są alejki, drzewa i miejsca do odpoczynku. To przestrzeń codziennych spacerów.",
+    "Ursus był w XX wieku znanym ośrodkiem produkcji ciągników w Polsce. Dziś na terenach dawnej fabryki powstają nowe osiedla.",
+    "Park jest dobrym miejscem na krótki odpoczynek. W pobliżu leżą inne tereny zielone dzielnicy. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "Acher Park lies in Ursus. It is a small park serving residents of the surrounding estates. In the 20th century Ursus developed as a working-class district around its industrial plants.",
+    "The park has paths, trees and places to rest. It is a space for everyday walks.",
+    "In the 20th century Ursus was a well-known centre of tractor production in Poland. Today new housing estates are being built on the former factory site.",
+    "The park is a good place for a short rest. Other green areas of the district are nearby. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "pomnik_1976": {
+   "pl": [
+    "Pomnik Czerwca 1976 upamiętnia protest robotników Zakładów Mechanicznych „Ursus”. W czerwcu 1976 roku, po ogłoszeniu dużych podwyżek cen żywności, robotnicy Ursusa i Radomia rozpoczęli strajki. W Ursusie zablokowano tory kolejowe.",
+    "Władze szybko wycofały podwyżki, ale potem represjonowały uczestników protestów. Wielu robotników pobito, zwolniono z pracy lub skazano.",
+    "W obronie represjonowanych powstał Komitet Obrony Robotników, ważny krok w kierunku narodzin Solidarności. Wydarzenia z 1976 roku są jednym z kamieni milowych na drodze do wolności.",
+    "Pomnik stoi w Ursusie w pobliżu dawnego zakładu. Odbywają się przy nim rocznicowe uroczystości. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "The June 1976 Monument commemorates the protest by workers of the Ursus Mechanical Works. In June 1976, after large food price rises were announced, workers in Ursus and Radom went on strike. In Ursus they blocked the railway tracks.",
+    "The authorities quickly withdrew the price rises, but then persecuted the protesters. Many workers were beaten, fired or sentenced.",
+    "The Workers' Defence Committee was formed to help those persecuted, an important step towards the birth of Solidarity. The events of 1976 are a milestone on the road to freedom.",
+    "The monument stands in Ursus near the former factory. Anniversary ceremonies are held there. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "fabryka_ursus": {
+   "pl": [
+    "Zakłady Ursus powstały na początku XX wieku i od nazwy fabryki pochodzi nazwa dzielnicy. W 1922 roku wyprodukowano tu pierwszy polski ciągnik. W okresie międzywojennym fabryka produkowała też pojazdy dla wojska.",
+    "Po wojnie Ursus stał się jednym z największych producentów ciągników w Europie Środkowej. Pracowały tu tysiące ludzi.",
+    "W czerwcu 1976 roku robotnicy Ursusa protestowali przeciwko podwyżkom cen. W XXI wieku produkcję w Warszawie zakończono.",
+    "Na terenach dawnej fabryki powstają nowe osiedla, ale zachowano niektóre budynki przemysłowe. Spacer po okolicy pokazuje przemysłową historię Warszawy. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "The Ursus works were founded in the early 20th century, and the district took its name from the factory. In 1922 the first Polish tractor was produced here. In the interwar period the factory also made vehicles for the army.",
+    "After the war Ursus became one of the largest tractor manufacturers in Central Europe. Thousands of people worked here.",
+    "In June 1976 Ursus workers protested against price rises. In the 21st century production in Warsaw ended.",
+    "New housing estates are being built on the former factory site, but some industrial buildings have been preserved. A walk around the area shows Warsaw's industrial history. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "w3-park-hassow": {
+   "pl": [
+    "Park Hassów leży w Ursusie. To zielona przestrzeń wśród zabudowy dzielnicy. Ursus był do 1977 roku osobnym miastem pod Warszawą.",
+    "Dzielnica rozwijała się wokół fabryki ciągników i linii kolejowej. Dziś przybywa tu nowych mieszkańców.",
+    "W parku są alejki, drzewa i ławki. To miejsce codziennego odpoczynku i spacerów.",
+    "Park dobrze nadaje się na krótkie wyjście z dziećmi. W pobliżu działają sklepy i punkty usługowe. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "Hass Park lies in Ursus. It is a green space among the district's buildings. Until 1977 Ursus was a separate town near Warsaw.",
+    "The district grew around the tractor factory and the railway line. Today it is attracting new residents.",
+    "The park has paths, trees and benches. It is a place for everyday rest and walks.",
+    "The park is good for a short outing with children. Shops and services are nearby. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "w3-park-im-adama-mickiewicza-w-ursusie": {
+   "pl": [
+    "Park im. Adama Mickiewicza w Ursusie nosi imię najsłynniejszego polskiego poety romantycznego. Mickiewicz jest autorem „Pana Tadeusza” i „Dziadów”. Wiele miejsc w Polsce nosi jego imię.",
+    "Park jest zieloną przestrzenią z alejkami, drzewami i placami zabaw. Służy mieszkańcom Ursusa.",
+    "Ursus rozwinął się w XX wieku wokół zakładów przemysłowych, a do Warszawy przyłączono go w 1977 roku. Parki są ważną częścią dzielnicy.",
+    "To spokojne miejsce na rodzinny spacer. W pobliżu leżą inne tereny zielone Ursusa. Miejsce leży w warszawskiej dzielnicy Ursus."
+   ],
+   "en": [
+    "Adam Mickiewicz Park in Ursus is named after the most famous Polish Romantic poet. Mickiewicz wrote “Pan Tadeusz” and “Forefathers' Eve”. Many places in Poland bear his name.",
+    "The park is a green space with paths, trees and playgrounds. It serves the residents of Ursus.",
+    "Ursus grew in the 20th century around its industrial plants and was incorporated into Warsaw in 1977. Parks are an important part of the district.",
+    "It is a quiet place for a family walk. Other green areas of Ursus are nearby. It lies in Warsaw's Ursus district."
+   ]
+  },
+  "stawy_cietrzewia": {
+   "pl": [
+    "Stawy Cietrzewia leżą we Włochach, w zachodniej części Warszawy. To zespół zbiorników wodnych otoczonych zielenią. Teren przekształcono w park z alejkami.",
+    "Włochy przyłączono do Warszawy w 1951 roku. W dzielnicy leży Lotnisko Chopina, główny port lotniczy kraju.",
+    "Nad stawami żyją ptaki wodne, a mieszkańcy przychodzą tu na spacery i wędkowanie. Wokół wody biegnie promenada.",
+    "To spokojne miejsce odpoczynku, mimo bliskości lotniska. Najprzyjemniej jest tu w ciepłe dni. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "Cietrzewia Ponds lie in Włochy, in western Warsaw. They are a group of ponds surrounded by greenery. The area has been turned into a park with paths.",
+    "Włochy was incorporated into Warsaw in 1951. The district is home to Chopin Airport, the country's main airport.",
+    "Waterbirds live by the ponds, and residents come here to walk and fish. A promenade runs around the water.",
+    "It is a quiet place to relax, despite the nearby airport. It is most pleasant on warm days. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "park_kombatantow": {
+   "pl": [
+    "Park Kombatantów leży we Włochach. Jego nazwa upamiętnia weteranów walk o niepodległość Polski. W dzielnicy wiele miejsc przypomina o historii II wojny światowej.",
+    "Włochy były przed wojną osobną miejscowością pod Warszawą. W czasie okupacji działała tu konspiracja Armii Krajowej.",
+    "Park jest zieloną przestrzenią z alejkami i drzewami. Służy mieszkańcom okolicznych domów.",
+    "To spokojne miejsce na spacer i chwilę zadumy. W pobliżu leżą inne parki i stawy dzielnicy. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "Veterans Park lies in Włochy. Its name commemorates veterans of the struggle for Polish independence. Many places in the district recall the history of the Second World War.",
+    "Before the war Włochy was a separate town near Warsaw. During the occupation the Home Army underground was active here.",
+    "The park is a green space with paths and trees. It serves residents of the surrounding houses.",
+    "It is a quiet place for a walk and a moment of reflection. Other parks and ponds of the district lie nearby. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "staw_koziorozca": {
+   "pl": [
+    "Stawy Koziorożca leżą we Włochach. Ich nazwa pochodzi od pobliskiej ulicy Koziorożca. To zbiorniki otoczone zielenią, służące rekreacji.",
+    "Włochy to dzielnica o podmiejskim charakterze, z domami jednorodzinnymi i ogrodami. Do Warszawy przyłączono ją w połowie XX wieku.",
+    "Nad stawami żyją ptaki, a wokół prowadzą ścieżki spacerowe. Mieszkańcy przychodzą tu odpoczywać.",
+    "To dobre miejsce na krótki spacer. W pobliżu leżą Stawy Cietrzewia. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "Koziorożca Ponds lie in Włochy. Their name comes from nearby Koziorożca Street. They are ponds surrounded by greenery, used for recreation.",
+    "Włochy is a district with a suburban character, with detached houses and gardens. It was incorporated into Warsaw in the mid-20th century.",
+    "Birds live by the ponds, and footpaths run around them. Residents come here to relax.",
+    "It is a good place for a short walk. The Cietrzewia Ponds lie nearby. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "fort_v": {
+   "pl": [
+    "Fort V Włochy jest jednym z fortów zewnętrznego pierścienia Twierdzy Warszawa. Zbudowali go Rosjanie pod koniec XIX wieku. Forty miały chronić miasto przed atakiem z zachodu.",
+    "Wraz z rozwojem artylerii forty szybko się zestarzały, a część rozbrojono przed I wojną światową. W czasie II wojny światowej forty wykorzystywali Niemcy.",
+    "Dziś zachowały się wały, fosa i fragmenty budowli. Teren porasta zieleń.",
+    "Fort jest ciekawym celem dla miłośników historii wojskowej. Okolicę można zwiedzić spacerem. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "Fort V Włochy is one of the forts of the outer ring of the Warsaw Fortress. It was built by the Russians at the end of the 19th century. The forts were meant to protect the city from attack from the west.",
+    "With advances in artillery the forts soon became obsolete, and some were disarmed before the First World War. During the Second World War the forts were used by the Germans.",
+    "Today the ramparts, the moat and fragments of the buildings survive. The site is overgrown with greenery.",
+    "The fort is an interesting destination for military history enthusiasts. The area can be explored on foot. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "willa_wlochy": {
+   "pl": [
+    "Stare Włochy to część dzielnicy z zabudową willową z okresu międzywojennego. Włochy rozwinęły się jako podwarszawskie osiedle przy linii kolejowej. Do Warszawy przyłączono je w 1951 roku.",
+    "Wille mają różnorodne formy, od dworkowych po modernistyczne. Wiele z nich otaczają ogrody.",
+    "W dzielnicy stoi też pałac we Włochach z XIX wieku, związany z dawnymi właścicielami okolicy. W czasie wojny działała tu konspiracja.",
+    "Spacer po Starych Włochach pozwala zobaczyć spokojną, przedwojenną Warszawę. To mało znana, ale ciekawa część miasta. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "Old Włochy is part of the district with interwar villa housing. Włochy developed as a suburban settlement by the railway line. It was incorporated into Warsaw in 1951.",
+    "The villas have varied forms, from manor-house style to modernist. Many are surrounded by gardens.",
+    "The district also has a 19th-century palace linked to the area's former owners. During the war the resistance was active here.",
+    "A walk around Old Włochy reveals a quiet, pre-war Warsaw. It is a little-known but interesting part of the city. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "w3-park-im-marka-kotanskiego-we-w-ochach": {
+   "pl": [
+    "Park im. Marka Kotańskiego we Włochach upamiętnia twórcę stowarzyszenia Monar. Marek Kotański był psychologiem, który od lat 70. XX wieku pomagał osobom uzależnionym i bezdomnym. Jego ośrodki działają w całej Polsce.",
+    "Kotański zmarł w 2002 roku, a jego imię nosi kilka miejsc w Warszawie. Był znany z bezkompromisowej walki o ludzi wykluczonych.",
+    "Park jest zieloną przestrzenią dla mieszkańców Włoch. Są tu alejki i miejsca do odpoczynku.",
+    "Nazwa parku przypomina o wartości pomocy innym. To spokojne miejsce codziennego spaceru."
+   ],
+   "en": [
+    "Marek Kotański Park in Włochy commemorates the founder of the Monar association. Marek Kotański was a psychologist who from the 1970s helped people with addictions and the homeless. His centres operate all over Poland.",
+    "Kotański died in 2002, and several places in Warsaw bear his name. He was known for his uncompromising fight for excluded people.",
+    "The park is a green space for Włochy residents. It has paths and places to rest.",
+    "The park's name recalls the value of helping others. It is a quiet place for an everyday walk. It lies in Warsaw's Włochy district."
+   ]
+  },
+  "w3-stawy-cietrzewia-promenada": {
+   "pl": [
+    "Promenada przy Stawach Cietrzewia to ścieżka spacerowa wokół zbiorników we Włochach. Pozwala obejść wodę dookoła i podziwiać ptaki. To ulubione miejsce mieszkańców dzielnicy.",
+    "Włochy leżą w zachodniej Warszawie, w pobliżu Lotniska Chopina. Mimo to w tej części dzielnicy panuje spokój.",
+    "Wzdłuż promenady stoją ławki i rosną drzewa. Jest tu też miejsce do wędkowania.",
+    "Spacer promenadą zajmuje kilkadziesiąt minut. Najpiękniej jest tu wieczorem. Miejsce leży w warszawskiej dzielnicy Włochy."
+   ],
+   "en": [
+    "The promenade at the Cietrzewia Ponds is a footpath around the ponds in Włochy. It lets you walk all the way round the water and watch the birds. It is a favourite place for local residents.",
+    "Włochy lies in western Warsaw, near Chopin Airport. Even so, this part of the district is peaceful.",
+    "Benches and trees line the promenade. There is also a place to fish.",
+    "A walk along the promenade takes several tens of minutes. It is most beautiful in the evening. It lies in Warsaw's Włochy district."
+   ]
+  }
+ }
+}

@@ -1,0 +1,572 @@
+{
+ "region": "swietokrzyskie",
+ "version": "8.6.1",
+ "updated": "2026-11-08",
+ "status": "redakcyjne",
+ "note": {
+  "pl": "Opracowanie redakcyjne na podstawie ogólnodostępnych, utrwalonych faktów historycznych. Legendy są wyraźnie oznaczone jako legendy. Przed wizytą sprawdź szczegóły w źródłach (link do Wikipedii w karcie miejsca).",
+  "en": "Editorial summary based on widely available, well-established historical facts. Legends are clearly marked as legends. Check the details in the sources before visiting (Wikipedia link in the place card)."
+ },
+ "places": {
+  "ki-palac-biskupow": {
+   "pl": [
+    "Kielce przez wieki należały do biskupów krakowskich, którzy mieli tu jedną ze swoich rezydencji. W latach 30. i 40. XVII wieku biskup Jakub Zadzik wzniósł tu okazały pałac w stylu wczesnego baroku. Należy on do najcenniejszych zabytków architektury świeckiej epoki Wazów w Polsce.",
+    "Budowla ma charakterystyczne narożne wieże i krużganek od strony dziedzińca. We wnętrzach zachowały się bogato malowane stropy i plafony z XVII wieku. Pałac otacza ogród w stylu włoskim, odtworzony w XXI wieku.",
+    "Pod koniec XVIII wieku dobra biskupie przejęło państwo, a pałac zmieniał funkcje. W 1816 roku działała tu Szkoła Akademiczno-Górnicza, zainicjowana przez Stanisława Staszica, pierwsza uczelnia techniczna na ziemiach polskich. Później mieściły się tu m.in. urzędy władz gubernialnych.",
+    "Dziś pałac jest siedzibą Muzeum Narodowego w Kielcach. Można zobaczyć urządzone wnętrza dawnej rezydencji oraz galerię malarstwa polskiego. To dobry początek zwiedzania Kielc, bo pałac stoi tuż obok katedry."
+   ],
+   "en": [
+    "For centuries Kielce belonged to the Bishops of Kraków, who had one of their residences here. In the 1630s and 1640s Bishop Jakub Zadzik built an impressive palace in the early Baroque style. It is among the most valuable examples of secular architecture of the Vasa era in Poland.",
+    "The building has distinctive corner towers and an arcaded gallery facing the courtyard. The interiors preserve richly painted 17th-century ceilings. The palace is surrounded by an Italian-style garden, recreated in the 21st century.",
+    "At the end of the 18th century the state took over the bishops' estates, and the palace changed its function. In 1816 it housed the Academic Mining School, initiated by Stanisław Staszic, the first technical college in the Polish lands. Later it held government offices, among other things.",
+    "Today the palace is the seat of the National Museum in Kielce. You can see the furnished interiors of the former residence and a gallery of Polish painting. It is a good place to start exploring Kielce, as the palace stands right next to the cathedral."
+   ]
+  },
+  "ki-katedra": {
+   "pl": [
+    "Pierwszy kościół na kieleckim wzgórzu ufundował w XII wieku biskup krakowski Gedeon. Była to kolegiata, wokół której rozwijała się osada biskupia. W XVII wieku świątynię przebudowano w stylu barokowym.",
+    "Wnętrze ma bogate barokowe wyposażenie, ołtarze i nagrobki biskupów. Kościół stał się katedrą po utworzeniu diecezji kieleckiej na początku XIX wieku. Później diecezja była przez pewien czas zniesiona, a po jej odnowieniu katedra wróciła do swej roli.",
+    "W 1970 roku świątynia otrzymała tytuł bazyliki mniejszej. W 1991 roku Kielce odwiedził papież Jan Paweł II, co upamiętniają tablice i pomnik przed katedrą. Wzgórze katedralne jest najstarszą częścią miasta.",
+    "Katedra i Pałac Biskupów tworzą wspólny zespół, który najlepiej zwiedzać razem. Ze wzgórza schodzi się do Rynku i na deptak przy ulicy Sienkiewicza. Wokół katedry jest spokojny skwer, dobry na krótki odpoczynek."
+   ],
+   "en": [
+    "The first church on the Kielce hill was founded in the 12th century by Bishop Gedeon of Kraków. It was a collegiate church around which the bishops' settlement grew. In the 17th century the church was rebuilt in the Baroque style.",
+    "The interior has rich Baroque furnishings, altars and bishops' tombs. The church became a cathedral when the Diocese of Kielce was created in the early 19th century. Later the diocese was abolished for a time, and after it was restored the cathedral regained its role.",
+    "In 1970 the church was granted the title of minor basilica. In 1991 Pope John Paul II visited Kielce, which is commemorated by plaques and a monument in front of the cathedral. The cathedral hill is the oldest part of the city.",
+    "The cathedral and the Bishops' Palace form a single complex that is best visited together. From the hill you walk down to the Market Square and the promenade on Sienkiewicza Street. Around the cathedral there is a quiet square, good for a short rest."
+   ]
+  },
+  "ki-kadzielnia": {
+   "pl": [
+    "Kadzielnia to dawny kamieniołom wapienia w samym centrum Kielc. Skały powstały w morzu w okresie dewonu, około 380 milionów lat temu, i zawierają liczne skamieniałości. Wapień wydobywano tu od XVIII wieku aż do połowy XX wieku.",
+    "Po zakończeniu eksploatacji teren stał się rezerwatem przyrody nieożywionej. Najbardziej charakterystycznym miejscem jest Skałka Geologów, wapienny ostaniec pozostawiony w środku wyrobiska. Na dnie kamieniołomu powstało jeziorko z turkusową wodą.",
+    "W skałach Kadzielni znajduje się kilka jaskiń, a część z nich połączono w podziemną trasę turystyczną. W dawnym wyrobisku zbudowano amfiteatr, w którym odbywają się koncerty i festiwale. Nad rezerwatem przebiega tyrolka, z której można przelecieć nad kamieniołomem.",
+    "Kadzielnia łączy przyrodę, geologię i rozrywkę w jednym miejscu. Ścieżki prowadzą na punkty widokowe nad wyrobiskiem. To świetne miejsce na spacer z dziećmi w ciepły dzień."
+   ],
+   "en": [
+    "Kadzielnia is a former limestone quarry in the very centre of Kielce. The rocks formed in the sea during the Devonian period, about 380 million years ago, and contain many fossils. Limestone was quarried here from the 18th century until the mid-20th century.",
+    "When quarrying ended, the area became a nature reserve for its geology. Its most distinctive feature is Geologists' Rock, a limestone outcrop left standing in the middle of the pit. A small lake with turquoise water has formed at the bottom of the quarry.",
+    "The Kadzielnia rocks contain several caves, some of which have been linked into an underground tourist route. An amphitheatre was built in the old quarry, hosting concerts and festivals. A zip line runs above the reserve, letting you fly across the quarry.",
+    "Kadzielnia combines nature, geology and entertainment in one place. Paths lead to viewpoints above the pit. It is a great place for a walk with children on a warm day."
+   ]
+  },
+  "ki-wietrznia": {
+   "pl": [
+    "Wietrznia to dawny kamieniołom wapieni dewońskich na wschodnim skraju Kielc. Skały powstały około 380 milionów lat temu na dnie ciepłego, płytkiego morza z rafami. W ścianach kamieniołomu można zobaczyć warstwy skał i ślady dawnych organizmów.",
+    "Część wyrobiska objęto ochroną jako rezerwat przyrody nieożywionej. Odsłonięcia mają duże znaczenie naukowe, bo pokazują, jak zmieniało się środowisko w dewonie. Badali je geolodzy z Polski i zagranicy.",
+    "W 2011 roku otwarto tu Centrum Geoedukacji, które w przystępny sposób opowiada o historii Ziemi. Są tu interaktywne wystawy, sala z pokazami multimedialnymi i ścieżki dydaktyczne. Centrum należy do Geoparku Kielce, łączącego kilka cennych miejsc geologicznych w mieście.",
+    "Z punktów widokowych na krawędzi kamieniołomu rozciąga się widok na Kielce i Góry Świętokrzyskie. To dobre miejsce dla rodzin i uczniów, którzy chcą zobaczyć geologię na żywo. Wizytę można połączyć z Kadzielnią i rezerwatem Ślichowice."
+   ],
+   "en": [
+    "Wietrznia is a former quarry of Devonian limestone on the eastern edge of Kielce. The rocks formed about 380 million years ago on the floor of a warm, shallow sea with reefs. In the quarry walls you can see rock layers and traces of ancient organisms.",
+    "Part of the quarry is protected as a geological nature reserve. The exposures are of great scientific value because they show how the environment changed during the Devonian. Geologists from Poland and abroad have studied them.",
+    "In 2011 the Geoeducation Centre opened here, telling the history of the Earth in an accessible way. It has interactive exhibitions, a multimedia show room and educational trails. The centre is part of the Kielce Geopark, which links several valuable geological sites in the city.",
+    "Viewpoints on the edge of the quarry overlook Kielce and the Holy Cross Mountains. It is a good place for families and students who want to see geology first-hand. The visit can be combined with Kadzielnia and the Ślichowice reserve."
+   ]
+  },
+  "ki-karczowka": {
+   "pl": [
+    "Klasztor na Karczówce stoi na zalesionym wzgórzu na zachodnim skraju Kielc. Kościół wzniesiono w latach 20. i 30. XVII wieku z fundacji biskupa krakowskiego Marcina Szyszkowskiego. Według przekazów było to wotum za ustanie zarazy w okolicy.",
+    "Z fundacją wiąże się też odkrycie w okolicy rud ołowiu, których wydobycie było ważne dla gospodarki regionu. W kościele znajduje się figura św. Barbary, patronki górników, wykonana z bryły galeny, czyli rudy ołowiu. To jeden z najbardziej niezwykłych przedmiotów w kieleckich kościołach.",
+    "Przez wieki klasztorem opiekowali się bernardyni, a później inne zgromadzenia zakonne. W XIX wieku klasztor przeszedł trudne czasy po kasacie zakonów przez władze carskie. Dziś opiekują się nim pallotyni.",
+    "Ze wzgórza roztacza się widok na Kielce i pasma Gór Świętokrzyskich. Wokół klasztoru prowadzą ścieżki spacerowe przez las, popularne wśród mieszkańców. To spokojne miejsce na krótki spacer poza zgiełkiem miasta."
+   ],
+   "en": [
+    "The Karczówka monastery stands on a wooded hill on the western edge of Kielce. The church was built in the 1620s and 1630s, funded by Bishop Marcin Szyszkowski of Kraków. According to tradition it was a votive offering for the end of a plague in the area.",
+    "The foundation is also linked to the discovery of lead ores nearby, whose mining was important for the region's economy. The church holds a figure of St Barbara, patron saint of miners, made from a lump of galena, or lead ore. It is one of the most unusual objects in Kielce's churches.",
+    "For centuries the monastery was run by Bernardine friars and later by other religious orders. In the 19th century it went through hard times after the Tsarist authorities dissolved the monasteries. Today it is cared for by the Pallottines.",
+    "The hill offers a view over Kielce and the ranges of the Holy Cross Mountains. Footpaths through the forest around the monastery are popular with locals. It is a peaceful place for a short walk away from the bustle of the city."
+   ]
+  },
+  "za-dab-bartek": {
+   "pl": [
+    "Dąb Bartek rośnie w Zagnańsku, na skraju Puszczy Świętokrzyskiej. To jedno z najbardziej znanych drzew w Polsce i pomnik przyrody. Jego wiek szacuje się na kilkaset lat, choć dokładne szacunki różnią się między badaczami.",
+    "Dąb ma kilka potężnych konarów i obwód pnia mierzący około dziesięciu metrów. Z powodu wieku drzewo wymaga stałej opieki, a jego konary podpierają metalowe podpory. Konserwatorzy przyrody regularnie sprawdzają stan dębu i wzmacniają osłabione części.",
+    "Wokół Bartka narosło wiele legend. Według jednej z nich pod dębem odpoczywał król Jan III Sobieski, a według innych w jego dziupli ukrywano skarby. To podania przekazywane ustnie, a nie udokumentowane fakty.",
+    "Bartek zdobył dużą popularność w konkursach na drzewo roku, także w skali europejskiej. Wokół drzewa wytyczono ścieżkę i ogrodzenie chroniące korzenie. Niedaleko leżą szlaki Puszczy Świętokrzyskiej, idealne na rowerową lub pieszą wycieczkę."
+   ],
+   "en": [
+    "The Bartek Oak grows in Zagnańsk, on the edge of the Świętokrzyska Forest. It is one of the best-known trees in Poland and a protected natural monument. Its age is estimated at several hundred years, although estimates differ between researchers.",
+    "The oak has several mighty limbs and a trunk with a girth of about ten metres. Because of its age the tree needs constant care, and its limbs are held up by metal supports. Conservationists regularly check the oak and strengthen weakened parts.",
+    "Many legends have grown up around Bartek. According to one, King John III Sobieski rested under the oak, and according to others treasures were hidden in its hollow. These are tales passed down by word of mouth, not documented facts.",
+    "Bartek has become very popular in tree-of-the-year contests, including at European level. A path and a fence protecting the roots have been laid out around the tree. The trails of the Świętokrzyska Forest are nearby, ideal for a cycling or walking trip."
+   ]
+  },
+  "ob-sienkiewicz": {
+   "pl": [
+    "Pałacyk w Oblęgorku otrzymał w 1900 roku Henryk Sienkiewicz jako dar narodowy na 25-lecie pracy twórczej. Majątek kupiono ze składek społeczeństwa, co było wyrazem wdzięczności dla autora „Trylogii”. Pisarz spędzał tu z rodziną wiele miesięcy w roku, aż do wybuchu I wojny światowej.",
+    "W 1905 roku Sienkiewicz otrzymał Literacką Nagrodę Nobla, głównie za powieść „Quo vadis”. W Oblęgorku pracował nad kolejnymi utworami, m.in. nad powieścią „W pustyni i w puszczy”. Prowadził też działalność społeczną i wspierał okolicznych mieszkańców.",
+    "Budynek ma eklektyczną formę z wieżyczką, przypominającą mały zamek. Po II wojnie światowej rodzina pisarza przekazała pamiątki państwu, a w 1958 roku otwarto tu muzeum. Dziś jest ono oddziałem Muzeum Narodowego w Kielcach.",
+    "W muzeum można zobaczyć gabinet pisarza, salon, pamiątki rodzinne i trofea z podróży do Afryki. Wokół pałacyku rozciąga się park, w którym miło spacerować. Wizyta w Oblęgorku to dobra okazja, by przypomnieć sobie lektury z dzieciństwa."
+   ],
+   "en": [
+    "In 1900 Henryk Sienkiewicz received the small palace in Oblęgorek as a national gift for the 25th anniversary of his writing career. The estate was bought with public donations as a token of gratitude to the author of “The Trilogy”. The writer spent many months a year here with his family until the outbreak of the First World War.",
+    "In 1905 Sienkiewicz was awarded the Nobel Prize in Literature, mainly for his novel “Quo Vadis”. In Oblęgorek he worked on further books, including “In Desert and Wilderness”. He was also active socially and supported local people.",
+    "The building has an eclectic form with a turret, resembling a small castle. After the Second World War the writer's family handed his memorabilia to the state, and a museum opened here in 1958. Today it is a branch of the National Museum in Kielce.",
+    "The museum shows the writer's study, the salon, family mementos and trophies from his journey to Africa. The palace is surrounded by a pleasant park for walking. A visit to Oblęgorek is a good chance to recall the books many Poles read as children."
+   ]
+  },
+  "ch-zamek": {
+   "pl": [
+    "Zamek w Chęcinach wzniesiono na przełomie XIII i XIV wieku na wapiennym wzgórzu nad miastem. Był jednym z ważnych zamków królewskich Małopolski. Z jego wież rozciąga się szeroki widok na okolicę i Góry Świętokrzyskie.",
+    "W średniowieczu zamek służył jako warownia, miejsce przechowywania skarbca i więzienie dla ważnych jeńców. Gościli tu królowie i królowe, a w XVI wieku zamek należał do oprawy królowej Bony. Odbywały się tu także zjazdy rycerstwa.",
+    "W XVII wieku zamek ucierpiał w czasie wojen, m.in. potopu szwedzkiego, i stopniowo popadał w ruinę. Według miejscowej legendy na murach pojawia się Biała Dama, utożsamiana z duchem królowej Bony. To podanie, które dodaje ruinom tajemniczości.",
+    "W XXI wieku zamek zabezpieczono, odbudowano część murów i udostępniono zwiedzającym. W sezonie odbywają się tu turnieje rycerskie i inscenizacje historyczne. Wizytę można połączyć z pobliską Jaskinią Raj i Europejskim Centrum Edukacji Geologicznej."
+   ],
+   "en": [
+    "Chęciny Castle was built around 1300 on a limestone hill above the town. It was one of the important royal castles of Lesser Poland. Its towers offer a wide view of the area and the Holy Cross Mountains.",
+    "In the Middle Ages the castle served as a stronghold, a place to keep the treasury and a prison for important captives. Kings and queens stayed here, and in the 16th century the castle was part of Queen Bona's dower. Assemblies of knights were also held here.",
+    "In the 17th century the castle suffered during wars, including the Swedish Deluge, and gradually fell into ruin. According to local legend, a White Lady, identified with the ghost of Queen Bona, appears on the walls. It is a tale that adds mystery to the ruins.",
+    "In the 21st century the castle was secured, parts of the walls were rebuilt and it was opened to visitors. In season it hosts knights' tournaments and historical re-enactments. The visit can be combined with nearby Raj Cave and the European Centre for Geological Education."
+   ]
+  },
+  "ch-jaskinia-raj": {
+   "pl": [
+    "Jaskinię Raj odkryto w 1964 roku, a udostępniono turystom w 1972 roku. Powstała w wapieniach dewońskich wzgórza Ślichowica koło Chęcin. Słynie z wyjątkowo bogatej szaty naciekowej, jednej z najpiękniejszych w Polsce.",
+    "W jaskini można zobaczyć tysiące stalaktytów, stalagmitów i kolumn, a także nacieki w kształcie draperii. Aby je chronić, liczba zwiedzających jest ograniczona, a wejścia odbywają się w małych grupach. W jaskini panuje stała temperatura około 9°C.",
+    "W jaskini odkryto ślady pobytu neandertalczyków sprzed kilkudziesięciu tysięcy lat oraz kości zwierząt epoki lodowcowej, m.in. niedźwiedzia jaskiniowego. Znaleziska pokazują, że jaskinia służyła ludziom jako schronienie w czasie łowów. Część z nich można zobaczyć na wystawie w pawilonie przy wejściu.",
+    "Jaskinia jest rezerwatem przyrody, dlatego zwiedza się ją tylko z przewodnikiem. Bilety warto zarezerwować wcześniej, zwłaszcza w weekendy i wakacje. Nie wolno tu fotografować, aby nie niszczyć delikatnych nacieków."
+   ],
+   "en": [
+    "Raj Cave was discovered in 1964 and opened to visitors in 1972. It formed in the Devonian limestone of Ślichowica hill near Chęciny. It is famous for its exceptionally rich dripstone formations, among the most beautiful in Poland.",
+    "In the cave you can see thousands of stalactites, stalagmites and columns, as well as curtain-like formations. To protect them, the number of visitors is limited and entry is in small groups. The temperature in the cave stays at about 9°C.",
+    "Traces of Neanderthals from tens of thousands of years ago were found in the cave, together with bones of Ice Age animals, including the cave bear. The finds show that people used the cave as a shelter while hunting. Some of them can be seen in an exhibition in the pavilion at the entrance.",
+    "The cave is a nature reserve, so it can only be visited with a guide. Tickets are worth booking in advance, especially at weekends and in the holidays. Photography is not allowed, to avoid damaging the delicate formations."
+   ]
+  },
+  "to-skansen": {
+   "pl": [
+    "Park Etnograficzny w Tokarni to skansen Muzeum Wsi Kieleckiej, położony w dolinie rzeki Czarnej Nidy. Zgromadzono tu kilkadziesiąt zabytkowych budynków przeniesionych z różnych części regionu. Skansen pokazuje, jak żyli mieszkańcy wsi i miasteczek dawnej Kielecczyzny.",
+    "Na terenie parku stoją chałupy, stodoły, wiatraki, kuźnia i budynki gospodarcze. Są tu także dwór szlachecki, kościół i zabudowa małomiasteczkowa z apteką i sklepikami. Wnętrza urządzono tak, by przypominały codzienne życie sprzed stu i więcej lat.",
+    "Zabudowa jest pogrupowana według dawnych krain etnograficznych regionu. Dzięki temu można porównać różne style budownictwa i zdobnictwa. Wiele budynków uratowano przed zniszczeniem, przenosząc je tutaj w częściach.",
+    "W skansenie odbywają się jarmarki, pokazy dawnych rzemiosł i święta ludowe. To dobre miejsce na rodzinną wycieczkę na kilka godzin. Teren jest rozległy, więc warto zabrać wygodne buty."
+   ],
+   "en": [
+    "The Ethnographic Park in Tokarnia is the open-air museum of the Museum of the Kielce Countryside, in the valley of the Czarna Nida river. Dozens of historic buildings moved from different parts of the region have been gathered here. The museum shows how people lived in the villages and small towns of the old Kielce region.",
+    "The park has cottages, barns, windmills, a smithy and farm buildings. There is also a manor house, a church and small-town buildings with a pharmacy and little shops. The interiors are furnished to recall everyday life a hundred or more years ago.",
+    "The buildings are grouped according to the region's former ethnographic areas. This lets you compare different styles of building and decoration. Many buildings were saved from destruction by being moved here piece by piece.",
+    "The museum hosts fairs, demonstrations of old crafts and folk festivals. It is a good place for a family trip of a few hours. The grounds are large, so wear comfortable shoes."
+   ]
+  },
+  "ns-swiety-krzyz": {
+   "pl": [
+    "Święty Krzyż leży na Łysej Górze, czyli Łyścu, wznoszącej się na niecałe 600 metrów w paśmie Łysogór. Na szczycie zachowały się kamienne wały z czasów przedchrześcijańskich, związane prawdopodobnie z dawnym miejscem kultu. Według tradycji klasztor benedyktynów ufundował tu Bolesław Chrobry, a w źródłach opactwo pojawia się w XII wieku.",
+    "W klasztorze przechowywane są relikwie Drzewa Krzyża Świętego, od których pochodzi nazwa miejsca i całych gór. Sanktuarium należy do najstarszych w Polsce i od wieków przyciąga pielgrzymów. W bibliotece klasztoru odnaleziono w XIX wieku „Kazania świętokrzyskie”, jeden z najstarszych zabytków prozy w języku polskim.",
+    "Legenda głosi, że na Łysej Górze w noce sabatu zbierały się czarownice, by tańczyć z diabłami. Inne podania mówią, że gołoborza, czyli rumowiska skalne na stokach, to szczątki zniszczonej pogańskiej świątyni. To ludowe opowieści, które od wieków budzą wyobraźnię.",
+    "W XIX wieku władze carskie skasowały klasztor i urządziły w nim więzienie, które działało do okresu międzywojennego. W czasie II wojny światowej Niemcy utworzyli tu obóz dla jeńców radzieckich, z których wielu zmarło. Dziś klasztorem opiekują się misjonarze oblaci, a obok działa muzeum Świętokrzyskiego Parku Narodowego."
+   ],
+   "en": [
+    "Święty Krzyż (Holy Cross) lies on Łysa Góra, or Łysiec, which rises to just under 600 metres in the Łysogóry range. Stone ramparts from pre-Christian times survive on the summit, probably linked to an ancient place of worship. According to tradition, the Benedictine monastery was founded here by Bolesław the Brave, and the abbey appears in the sources in the 12th century.",
+    "The monastery holds relics of the wood of the Holy Cross, which gave its name to the place and to the whole mountain range. The sanctuary is one of the oldest in Poland and has attracted pilgrims for centuries. In the 19th century the “Holy Cross Sermons”, one of the oldest surviving texts of Polish prose, were found in its library.",
+    "Legend has it that on sabbath nights witches gathered on Łysa Góra to dance with devils. Other tales say that the gołoborza, the rock fields on the slopes, are the remains of a destroyed pagan temple. These are folk stories that have stirred the imagination for centuries.",
+    "In the 19th century the Tsarist authorities dissolved the monastery and turned it into a prison, which operated until the interwar period. During the Second World War the Germans set up a camp here for Soviet prisoners of war, many of whom died. Today the monastery is run by the Oblate missionaries, and next to it is the Holy Cross National Park museum."
+   ]
+  },
+  "ns-hutnictwo": {
+   "pl": [
+    "W okresie wpływów rzymskich, w pierwszych wiekach naszej ery, w rejonie Gór Świętokrzyskich działał jeden z największych ośrodków hutnictwa żelaza w Europie poza granicami Cesarstwa Rzymskiego. Archeolodzy odkryli tu ślady wielu tysięcy pieców do wytopu żelaza. Piece te nazywa się dymarkami.",
+    "Dymarka była jednorazowym piecem z gliny, w którym wytapiano żelazo z miejscowej rudy przy użyciu węgla drzewnego. Po wytopie piec rozbijano, aby wydobyć łupkę żelaza, a na miejscu zostawała żużlowa pozostałość. Takie pozostałości, ułożone w regularne skupiska, archeolodzy odnajdują do dziś.",
+    "Muzeum Starożytnego Hutnictwa Świętokrzyskiego w Nowej Słupi zbudowano nad zachowanym stanowiskiem z resztkami pieców. Wystawa pokazuje proces wytopu żelaza i życie dawnych hutników. W pobliżu zrekonstruowano osadę z epoki.",
+    "Od 1967 roku w Nowej Słupi odbywa się festyn Dymarki Świętokrzyskie, podczas którego odtwarza się dawny wytop żelaza. Impreza przyciąga tysiące gości i jest połączona z jarmarkiem i pokazami rzemiosł. Z Nowej Słupi prowadzi też Droga Królewska na szczyt Łysej Góry."
+   ],
+   "en": [
+    "During the Roman period, in the first centuries AD, the Holy Cross Mountains region was home to one of the largest iron-smelting centres in Europe outside the Roman Empire. Archaeologists have found traces of many thousands of smelting furnaces here. These furnaces are known as bloomeries.",
+    "A bloomery was a single-use clay furnace in which iron was smelted from local ore using charcoal. After smelting the furnace was broken open to extract the iron bloom, leaving behind a lump of slag. Archaeologists still find such remains, arranged in regular clusters.",
+    "The Museum of Ancient Ironworking in Nowa Słupia was built over a preserved site with the remains of furnaces. The exhibition shows the iron-smelting process and the lives of the ancient smelters. A settlement from the period has been reconstructed nearby.",
+    "Since 1967 Nowa Słupia has hosted the Dymarki Świętokrzyskie festival, which recreates ancient iron smelting. The event draws thousands of visitors and includes a fair and craft demonstrations. From Nowa Słupia the Royal Way also leads up to the summit of Łysa Góra."
+   ]
+  },
+  "sk-lysica": {
+   "pl": [
+    "Łysica ma 614 metrów wysokości i jest najwyższym szczytem Gór Świętokrzyskich. Wznosi się w paśmie Łysogór, porośniętym gęstą puszczą jodłową. Od 1950 roku szczyt należy do Świętokrzyskiego Parku Narodowego.",
+    "Najpopularniejszy szlak na Łysicę zaczyna się w Świętej Katarzynie i ma około dwóch kilometrów. Po drodze mija się kapliczkę przy źródełku św. Franciszka, z którym wiążą się miejscowe podania o uzdrawiającej wodzie. W Świętej Katarzynie stoi też klasztor bernardynek z XV wieku.",
+    "Na stokach Łysicy rozciągają się gołoborza, rumowiska kwarcytowych skał powstałe w wyniku wietrzenia w chłodnym klimacie epoki lodowcowej. Są jednym z symboli Gór Świętokrzyskich. Ze względu na ochronę przyrody nie wolno po nich chodzić.",
+    "Puszczę Jodłową opisał w swoich utworach Stefan Żeromski, który dorastał w tej okolicy. Szlak na Łysicę jest krótki, ale miejscami kamienisty, więc przydają się dobre buty. Ze szczytu można przejść czerwonym szlakiem dalej, aż na Święty Krzyż."
+   ],
+   "en": [
+    "Łysica is 614 metres high and is the highest peak of the Holy Cross Mountains. It rises in the Łysogóry range, covered with dense fir forest. Since 1950 the summit has been part of the Holy Cross National Park.",
+    "The most popular trail to Łysica starts in Święta Katarzyna and is about two kilometres long. On the way you pass a shrine by St Francis's spring, linked to local tales of healing water. Święta Katarzyna also has a 15th-century Bernardine convent.",
+    "On the slopes of Łysica lie gołoborza, fields of quartzite rubble formed by weathering in the cold climate of the Ice Age. They are one of the symbols of the Holy Cross Mountains. To protect nature, walking on them is not allowed.",
+    "Stefan Żeromski, who grew up in the area, described the Fir Forest in his writings. The trail to Łysica is short but stony in places, so good shoes help. From the summit you can continue along the red trail all the way to Święty Krzyż."
+   ]
+  },
+  "bo-zamek": {
+   "pl": [
+    "Bodzentyn był miastem biskupów krakowskich, którzy wznieśli tu zamek w XIV i XV wieku. Zamek stał nad doliną rzeki Psarki u stóp Łysogór. Służył biskupom jako rezydencja podczas pobytów w ich świętokrzyskich dobrach.",
+    "W XVI wieku biskup Franciszek Krasiński przebudował zamek w renesansową rezydencję. Biskupi przyjeżdżali tu na odpoczynek i polowania w okolicznych lasach. Bodzentyn był wtedy ważnym ośrodkiem administracji dóbr biskupich.",
+    "Pod koniec XVIII wieku dobra biskupie przejęło państwo, a zamek przestał być zamieszkany. W XIX wieku popadł w ruinę, a jego mury rozbierano na budulec. Do dziś zachowały się fragmenty murów, wieży i okien.",
+    "W mieście stoi też gotycki kościół z XV wieku z cennym wyposażeniem. Ruiny są zabezpieczone i dostępne dla zwiedzających. Bodzentyn to dobra baza na wycieczki do Świętokrzyskiego Parku Narodowego."
+   ],
+   "en": [
+    "Bodzentyn was a town belonging to the Bishops of Kraków, who built a castle here in the 14th and 15th centuries. The castle stood above the valley of the Psarka river at the foot of the Łysogóry. It served the bishops as a residence during their stays on their Holy Cross estates.",
+    "In the 16th century Bishop Franciszek Krasiński rebuilt the castle as a Renaissance residence. The bishops came here to rest and to hunt in the surrounding forests. Bodzentyn was then an important centre for managing the bishops' estates.",
+    "At the end of the 18th century the state took over the bishops' estates, and the castle was no longer lived in. In the 19th century it fell into ruin, and its walls were taken apart for building material. Fragments of the walls, a tower and windows survive.",
+    "The town also has a 15th-century Gothic church with valuable furnishings. The ruins are secured and open to visitors. Bodzentyn is a good base for trips to the Holy Cross National Park."
+   ]
+  },
+  "wa-opactwo": {
+   "pl": [
+    "Opactwo cystersów w Wąchocku ufundował w 1179 roku biskup krakowski Gedeon. Cystersi przybyli tu z Morimond we Francji i rozwijali w dolinie Kamiennej rolnictwo oraz hutnictwo. Klasztor stał się ważnym ośrodkiem gospodarczym regionu.",
+    "Romańskie budynki klasztoru, zwłaszcza kapitularz i refektarz, należą do najlepiej zachowanych w Polsce. Zbudowano je z kamienia w dwóch kolorach, układanego w pasy, co nadaje wnętrzom charakterystyczny wygląd. Prace wiąże się z warsztatem mistrza Szymona.",
+    "W XIX wieku władze carskie skasowały klasztor, ale kościół nadal służył parafii. Cystersi powrócili do Wąchocka w połowie XX wieku. W klasztorze działa muzeum poświęcone m.in. partyzantom z czasów II wojny światowej, a przy kościele pochowano majora Jana Piwnika „Ponurego”.",
+    "Wąchock słynie w Polsce z dowcipów o sołtysie, które miasto przyjęło z humorem i wykorzystuje w promocji. Na rynku stoi nawet pomnik sołtysa. Wizyta w opactwie trwa około godziny, a zwiedza się je z przewodnikiem."
+   ],
+   "en": [
+    "The Cistercian abbey in Wąchock was founded in 1179 by Bishop Gedeon of Kraków. The Cistercians came from Morimond in France and developed farming and ironworking in the Kamienna valley. The monastery became an important economic centre of the region.",
+    "The Romanesque monastery buildings, especially the chapter house and refectory, are among the best preserved in Poland. They are built of stone in two colours laid in stripes, which gives the interiors their distinctive look. The work is linked to the workshop of a master named Simon.",
+    "In the 19th century the Tsarist authorities dissolved the monastery, but the church continued to serve the parish. The Cistercians returned to Wąchock in the mid-20th century. The monastery has a museum devoted among other things to Second World War partisans, and Major Jan Piwnik “Ponury” is buried beside the church.",
+    "Wąchock is famous in Poland for jokes about its village head, which the town has embraced with humour and uses in its promotion. There is even a monument to the village head on the square. A visit to the abbey takes about an hour and is guided."
+   ]
+  },
+  "kr-krzemionki": {
+   "pl": [
+    "Krzemionki to prehistoryczne kopalnie krzemienia pasiastego, eksploatowane od około 3900 do 1600 roku przed naszą erą. Neolityczni górnicy wydrążyli tu kilka tysięcy szybów i chodników. To jeden z największych tego typu kompleksów górniczych w Europie.",
+    "Krzemień pasiasty ma charakterystyczne, jasne i ciemne pasy, a występuje niemal wyłącznie w tym rejonie. Wyrabiano z niego przede wszystkim siekiery, które docierały na odległość setek kilometrów. Górnicy pracowali przy świetle łuczyw, używając narzędzi z kamienia, rogu i drewna.",
+    "Kopalnie odkrył w 1922 roku geolog Jan Samsonowicz. W 2019 roku region prehistorycznego wydobycia krzemienia pasiastego wpisano na Listę światowego dziedzictwa UNESCO. To jedno z najstarszych miejsc pracy człowieka w Polsce.",
+    "Trasa turystyczna prowadzi pod ziemią przez dawne wyrobiska, a na powierzchni zrekonstruowano neolityczną osadę. W pawilonie muzealnym pokazano narzędzia i sposoby wydobycia. Zwiedzanie z przewodnikiem trwa około dwóch godzin."
+   ],
+   "en": [
+    "Krzemionki are prehistoric mines of striped flint, worked from about 3900 to 1600 BC. Neolithic miners dug several thousand shafts and galleries here. It is one of the largest mining complexes of its kind in Europe.",
+    "Striped flint has characteristic light and dark bands and occurs almost exclusively in this area. It was used above all to make axes, which travelled hundreds of kilometres. The miners worked by the light of torches, using tools of stone, antler and wood.",
+    "The mines were discovered in 1922 by the geologist Jan Samsonowicz. In 2019 the prehistoric striped flint mining region was added to the UNESCO World Heritage List. It is one of the oldest places of human work in Poland.",
+    "The tourist route leads underground through the old workings, and a Neolithic settlement has been reconstructed on the surface. The museum pavilion shows the tools and methods of mining. A guided visit takes about two hours."
+   ]
+  },
+  "ba-jurapark": {
+   "pl": [
+    "JuraPark w Bałtowie otwarto w 2004 roku w dolinie rzeki Kamiennej. Pomysł narodził się po odkryciu w okolicy śladów dinozaurów odciśniętych w skałach. Park stał się jednym z najbardziej znanych przykładów, jak mała gmina może rozwinąć turystykę.",
+    "Na trasie stoją modele dinozaurów naturalnej wielkości, rozmieszczone wśród drzew na zboczach doliny. Tablice opowiadają o erach geologicznych i zwierzętach, które żyły na tych terenach. W muzeum można zobaczyć prawdziwe tropy i skamieniałości.",
+    "Z czasem wokół parku powstały kolejne atrakcje: zwierzyniec typu safari, park rozrywki i stok narciarski. Dzięki temu Bałtów przyciąga rodziny przez cały rok. Na Kamiennej organizowane są też spływy tratwami.",
+    "Ślady dinozaurów z rejonu Gór Świętokrzyskich pochodzą głównie z okresu jurajskiego i triasowego. Geolodzy odkrywają tu nowe tropy także w XXI wieku. Wizyta w JuraParku to dobra lekcja paleontologii dla dzieci i dorosłych."
+   ],
+   "en": [
+    "JuraPark in Bałtów opened in 2004 in the valley of the Kamienna river. The idea arose after dinosaur footprints preserved in rocks were found in the area. The park has become one of the best-known examples of how a small municipality can develop tourism.",
+    "Along the route stand life-size dinosaur models, placed among the trees on the valley slopes. Information boards tell of geological eras and the animals that lived in this area. In the museum you can see real footprints and fossils.",
+    "Over time more attractions grew up around the park: a safari-style wildlife park, an amusement park and a ski slope. This brings families to Bałtów all year round. Raft trips are also organised on the Kamienna.",
+    "Dinosaur footprints from the Holy Cross Mountains region date mainly from the Jurassic and Triassic periods. Geologists are still discovering new tracks here in the 21st century. A visit to JuraPark is a good lesson in palaeontology for children and adults."
+   ]
+  },
+  "uj-krzyztopor": {
+   "pl": [
+    "Zamek Krzyżtopór w Ujeździe zbudowano w latach 1627–1644 dla wojewody sandomierskiego Krzysztofa Ossolińskiego. Projekt przypisuje się włoskiemu architektowi Wawrzyńcowi Senesowi. Był to typ rezydencji pałacowej otoczonej fortyfikacjami bastionowymi.",
+    "Przed wybudowaniem Wersalu był jedną z największych rezydencji w Europie. Nazwa nawiązuje do herbów rodu: krzyża i topora, które widnieją na bramie wjazdowej. Według tradycji zamek miał tyle okien, ile dni w roku, tyle pokoi, ile tygodni, tyle sal, ile miesięcy, i tyle baszt, ile kwartałów.",
+    "Legenda głosi, że w stajniach były marmurowe żłoby i kryształowe lustra, a nad jedną z sal wisiało akwarium ze szklanym sufitem. Te opowieści trudno dziś potwierdzić, ale świadczą o sławie przepychu zamku. Krzysztof Ossoliński zmarł w 1645 roku, niedługo po ukończeniu budowy.",
+    "W 1655 roku zamek zdobyli i zniszczyli Szwedzi, a później nie odzyskał już dawnej świetności. Dziś to potężna, zabezpieczona ruina udostępniona zwiedzającym. Latem odbywają się tu inscenizacje i pokazy historyczne."
+   ],
+   "en": [
+    "Krzyżtopór Castle in Ujazd was built in 1627–1644 for Krzysztof Ossoliński, Voivode of Sandomierz. The design is attributed to the Italian architect Lorenzo Senes. It was a palace residence surrounded by bastion fortifications.",
+    "Before Versailles was built, it was one of the largest residences in Europe. Its name refers to the family's coats of arms, a cross and an axe, which appear on the entrance gate. According to tradition the castle had as many windows as days in the year, as many rooms as weeks, as many halls as months and as many towers as quarters.",
+    "Legend has it that the stables had marble mangers and crystal mirrors, and that one hall had an aquarium in its glass ceiling. These stories are hard to confirm today, but they show how famous the castle's splendour was. Krzysztof Ossoliński died in 1645, shortly after the building was finished.",
+    "In 1655 the castle was captured and destroyed by the Swedes, and it never regained its former glory. Today it is a huge, secured ruin open to visitors. In summer it hosts re-enactments and historical shows."
+   ]
+  },
+  "sa-rynek": {
+   "pl": [
+    "Sandomierz należy do najstarszych miast Polski; w XII wieku kronikarz Gall Anonim wymienił go wśród głównych siedzib królestwa. Miasto leży na wzgórzach nad Wisłą i przez wieki było ważnym ośrodkiem handlu zbożem. W XIII wieku było kilkakrotnie niszczone przez najazdy tatarskie.",
+    "Rynek ma średniowieczny układ, a pośrodku stoi ratusz z XIV wieku z renesansową attyką. W ratuszu działa dziś oddział muzeum okręgowego. Wokół rynku stoją kamienice, w których podziemiach kryją się dawne piwnice kupieckie.",
+    "Miasto przetrwało II wojnę światową bez wielkich zniszczeń, ale w XX wieku zagroziły mu zapadające się piwnice. Ratowanie Starego Miasta w latach 60. i 70. XX wieku było jedną z największych akcji konserwatorskich w Polsce. W 2017 roku zespół staromiejski uznano za Pomnik Historii.",
+    "Sandomierz zyskał dużą popularność dzięki serialowi „Ojciec Mateusz”, kręconemu na jego ulicach. Z rynku blisko do Bramy Opatowskiej, katedry, zamku i Podziemnej Trasy Turystycznej. Miasto słynie też z sadów i winnic na okolicznych wzgórzach."
+   ],
+   "en": [
+    "Sandomierz is one of Poland's oldest towns; in the 12th century the chronicler Gallus Anonymus listed it among the main seats of the kingdom. The town lies on hills above the Vistula and for centuries was an important centre of the grain trade. In the 13th century it was destroyed several times by Tatar invasions.",
+    "The market square has a medieval layout, and in the middle stands a 14th-century town hall with a Renaissance parapet. The town hall now houses a branch of the regional museum. Around the square stand townhouses with old merchants' cellars hidden beneath them.",
+    "The town survived the Second World War without major damage, but in the 20th century it was threatened by collapsing cellars. Saving the Old Town in the 1960s and 1970s was one of the largest conservation projects in Poland. In 2017 the Old Town complex was declared a Monument of History.",
+    "Sandomierz became very popular thanks to the TV series “Father Matthew”, filmed in its streets. From the square it is a short walk to the Opatów Gate, the cathedral, the castle and the Underground Tourist Route. The town is also known for the orchards and vineyards on the surrounding hills."
+   ]
+  },
+  "sa-brama": {
+   "pl": [
+    "Brama Opatowska to jedyna zachowana z czterech dawnych bram miejskich Sandomierza. Zbudowano ją w XIV wieku, gdy król Kazimierz Wielki otoczył miasto murami obronnymi. Prowadziła do niej droga z Opatowa, od którego wzięła nazwę.",
+    "W XVI wieku bramę zwieńczono renesansową attyką, która nadaje jej charakterystyczny wygląd. Obok zachowały się fragmenty murów miejskich. Brama była ważnym punktem obrony miasta od strony północnej.",
+    "Na szczycie bramy urządzono taras widokowy, na który prowadzą wąskie schody. Rozciąga się z niego widok na dachy Starego Miasta, dolinę Wisły i okoliczne wzgórza. To jeden z najlepszych punktów widokowych w Sandomierzu.",
+    "Przez bramę przechodzi się z nowszej części miasta prosto na ulicę Opatowską i do rynku. W sezonie wejście na taras jest płatne. Wieczorem brama jest pięknie podświetlona."
+   ],
+   "en": [
+    "The Opatów Gate is the only surviving one of Sandomierz's four old town gates. It was built in the 14th century, when King Casimir the Great surrounded the town with defensive walls. The road from Opatów led to it, which gave the gate its name.",
+    "In the 16th century the gate was crowned with a Renaissance parapet, which gives it its distinctive look. Fragments of the town walls survive next to it. The gate was an important point in the town's defence on the northern side.",
+    "A viewing terrace has been set up on top of the gate, reached by narrow stairs. It offers a view over the roofs of the Old Town, the Vistula valley and the surrounding hills. It is one of the best viewpoints in Sandomierz.",
+    "Passing through the gate takes you from the newer part of town straight onto Opatowska Street and to the market square. In season there is a fee to climb to the terrace. In the evening the gate is beautifully lit."
+   ]
+  },
+  "sa-trasa": {
+   "pl": [
+    "Pod Starym Miastem w Sandomierzu kryją się dawne piwnice kupieckie, wykute w miękkich skałach lessowych na kilku poziomach. Kupcy przechowywali w nich zboże, wino i inne towary. Z czasem piwnice połączyły się w gęstą sieć.",
+    "W XX wieku osłabione piwnice zaczęły się zapadać, zagrażając budynkom na powierzchni. W latach 60. i 70. XX wieku przeprowadzono wielką akcję ratowania miasta przy udziale górników. Część zabezpieczonych piwnic połączono w trasę turystyczną, otwartą w 1977 roku.",
+    "Trasa ma kilkaset metrów długości i schodzi na głębokość kilkunastu metrów. Na ścianach widać ślady narzędzi i dawne napisy, a ekspozycja opowiada o historii miasta. W najniższych miejscach panuje chłód i wilgoć.",
+    "Z podziemiami wiąże się legenda o Halinie Krępiance, która w czasie najazdu tatarskiego wprowadziła wrogów w labirynt piwnic. Według podania mieszkańcy zasypali wtedy wejścia, a Halina zginęła razem z najeźdźcami, ratując miasto. Zwiedzanie odbywa się z przewodnikiem i trwa około 40 minut."
+   ],
+   "en": [
+    "Beneath Sandomierz's Old Town lie old merchants' cellars cut into soft loess rock on several levels. Merchants stored grain, wine and other goods in them. Over time the cellars joined up into a dense network.",
+    "In the 20th century the weakened cellars began to collapse, threatening the buildings above. In the 1960s and 1970s a major rescue of the town was carried out with the help of miners. Some of the secured cellars were linked into a tourist route, opened in 1977.",
+    "The route is several hundred metres long and goes down to a depth of more than ten metres. Tool marks and old inscriptions can be seen on the walls, and the exhibition tells the history of the town. In the lowest parts it is cool and damp.",
+    "The underground is linked to the legend of Halina Krępianka, who led invading Tatars into the maze of cellars. According to the tale, the townspeople then sealed the entrances, and Halina died together with the invaders, saving the town. Visits are guided and take about 40 minutes."
+   ]
+  },
+  "sa-zamek": {
+   "pl": [
+    "Zamek w Sandomierzu stoi na skarpie nad Wisłą, w miejscu wczesnośredniowiecznego grodu. Murowany zamek wzniósł w XIV wieku król Kazimierz Wielki. W XVI wieku za Zygmunta Starego przebudowano go w renesansową rezydencję.",
+    "Królowie zatrzymywali się tu podczas podróży, a zamek był siedzibą starostów. W 1656 roku, w czasie potopu, wycofujący się Szwedzi wysadzili zamek w powietrze. Ocalało tylko skrzydło zachodnie, które odbudowano w drugiej połowie XVII wieku.",
+    "W XIX wieku władze carskie urządziły w zamku więzienie, które działało aż do połowy XX wieku. Po jego likwidacji budynek odnowiono i przeznaczono na muzeum. Dziś działa w nim Muzeum Okręgowe w Sandomierzu.",
+    "Wystawy pokazują historię zamku, miasta i regionu, a także sztukę i archeologię. Z dziedzińca rozciąga się widok na Wisłę. Spacer od zamku do katedry i Wąwozu Królowej Jadwigi to klasyczna trasa po Sandomierzu."
+   ],
+   "en": [
+    "Sandomierz Castle stands on an escarpment above the Vistula, on the site of an early medieval stronghold. The stone castle was built in the 14th century by King Casimir the Great. In the 16th century, under Sigismund the Old, it was rebuilt as a Renaissance residence.",
+    "Kings stayed here on their travels, and the castle was the seat of royal governors. In 1656, during the Deluge, the retreating Swedes blew the castle up. Only the west wing survived and was rebuilt in the second half of the 17th century.",
+    "In the 19th century the Tsarist authorities turned the castle into a prison, which operated until the mid-20th century. After it closed the building was restored and turned into a museum. Today it houses the Regional Museum in Sandomierz.",
+    "The exhibitions show the history of the castle, the town and the region, as well as art and archaeology. The courtyard offers a view of the Vistula. A walk from the castle to the cathedral and Queen Jadwiga's Ravine is the classic Sandomierz route."
+   ]
+  },
+  "sa-katedra": {
+   "pl": [
+    "Pierwsza kolegiata w Sandomierzu powstała w XII wieku. Obecną gotycką świątynię wzniesiono w połowie XIV wieku z fundacji króla Kazimierza Wielkiego. Od początku XIX wieku kościół jest katedrą diecezji sandomierskiej.",
+    "W prezbiterium zachowały się cenne malowidła w stylu bizantyjsko-ruskim z XV wieku, ufundowane przez króla Władysława Jagiełłę. To jeden z niewielu zespołów takich fresków w Polsce, podobny do tych w kaplicy zamku lubelskiego. Freski przedstawiają sceny z życia Matki Bożej i Chrystusa.",
+    "W XVIII wieku wnętrze otrzymało barokowy wystrój, ołtarze i stalle. Na ścianach wiszą obrazy z tego okresu, przedstawiające m.in. historię miasta i męczeństwo jego mieszkańców w czasie najazdów tatarskich. Fasada katedry została przebudowana w stylu barokowym.",
+    "Obok katedry stoi Dom Długosza, w którym działa Muzeum Diecezjalne. Katedra jest celem pielgrzymek i ważnym miejscem dla mieszkańców. Wnętrze najlepiej zwiedzać poza godzinami nabożeństw."
+   ],
+   "en": [
+    "The first collegiate church in Sandomierz was founded in the 12th century. The present Gothic church was built in the mid-14th century, funded by King Casimir the Great. Since the early 19th century it has been the cathedral of the Diocese of Sandomierz.",
+    "The presbytery preserves valuable 15th-century paintings in the Byzantine-Ruthenian style, funded by King Władysław Jagiełło. It is one of the few sets of such frescoes in Poland, similar to those in the chapel of Lublin Castle. The frescoes show scenes from the lives of the Virgin Mary and Christ.",
+    "In the 18th century the interior received Baroque decoration, altars and choir stalls. Paintings from that period hang on the walls, depicting among other things the history of the town and the martyrdom of its inhabitants during the Tatar invasions. The cathedral's façade was rebuilt in the Baroque style.",
+    "Next to the cathedral stands Długosz House, home to the Diocesan Museum. The cathedral is a pilgrimage destination and an important place for local people. The interior is best visited outside service times."
+   ]
+  },
+  "sa-wawoz": {
+   "pl": [
+    "Wąwóz Królowej Jadwigi to głęboki wąwóz lessowy na skraju Sandomierza. Less to drobny pył naniesiony przez wiatr w czasie epoki lodowcowej, który tworzy tu grube pokłady. Woda i ludzie przez wieki wyżłobili w nim wąwozy o stromych ścianach.",
+    "Ściany wąwozu mają miejscami kilka metrów wysokości, a ze ścian zwisają splątane korzenie drzew. Wąwóz ma kilkaset metrów długości i prowadzi wśród sadów i łąk. Latem panuje tu przyjemny chłód i półmrok.",
+    "Według tradycji wąwozem chodziła królowa Jadwiga, a jej imię nadano mu na pamiątkę. Okolice Sandomierza słyną z wielu podobnych wąwozów, które są dawnymi drogami polnymi. To cenny element krajobrazu chroniony przez lokalne władze.",
+    "Wąwóz zaczyna się niedaleko Starego Miasta, więc łatwo dojść tu pieszo. Po deszczu ścieżka może być śliska, dlatego warto mieć wygodne buty. Spacer można połączyć z wizytą w Górach Pieprzowych."
+   ],
+   "en": [
+    "Queen Jadwiga's Ravine is a deep loess gully on the edge of Sandomierz. Loess is fine dust laid down by the wind during the Ice Age, forming thick deposits here. Over the centuries water and people have carved steep-sided ravines into it.",
+    "In places the walls of the ravine are several metres high, and tangled tree roots hang down from them. The ravine is several hundred metres long and runs among orchards and meadows. In summer it is pleasantly cool and shady.",
+    "According to tradition Queen Jadwiga walked through the ravine, and it was named after her in her memory. The area around Sandomierz is known for many similar ravines that were once country roads. They are a valuable part of the landscape, protected by the local authorities.",
+    "The ravine starts not far from the Old Town, so it is easy to walk here. After rain the path can be slippery, so comfortable shoes are a good idea. The walk can be combined with a visit to the Pepper Mountains."
+   ]
+  },
+  "sa-gory-pieprzowe": {
+   "pl": [
+    "Góry Pieprzowe to strome zbocza nad Wisłą na wschód od Sandomierza. Zbudowane są z łupków kambryjskich sprzed około 500 milionów lat, należących do najstarszych skał odsłoniętych w Polsce. Ciemne łupki kruszą się na drobne kawałki, które przypominają zmielony pieprz, i stąd wzięła się nazwa.",
+    "Rezerwat Góry Pieprzowe należy do najstarszych rezerwatów przyrody w Polsce. Chroni nie tylko skały, ale także rzadkie rośliny ciepłolubne, typowe dla stepów. Rośnie tu m.in. wiśnia karłowata, która wiosną pokrywa zbocza białymi kwiatami.",
+    "Z grzbietu rozciąga się widok na szeroką dolinę Wisły i odległy Sandomierz. Zbocza są strome i podatne na osuwanie, dlatego trzeba poruszać się po wyznaczonych ścieżkach. W okolicy leżą też winnice, z których słynie region sandomierski.",
+    "Najpiękniej jest tu wiosną, w czasie kwitnienia, oraz o zachodzie słońca. Spacer zajmuje około godziny. Do rezerwatu można dojść z Sandomierza lub dojechać samochodem do parkingu przy jego granicy."
+   ],
+   "en": [
+    "The Pepper Mountains are steep slopes above the Vistula east of Sandomierz. They are made of Cambrian shales about 500 million years old, among the oldest rocks exposed in Poland. The dark shales crumble into small pieces that resemble ground pepper, which gave the place its name.",
+    "The Pepper Mountains reserve is one of the oldest nature reserves in Poland. It protects not only the rocks but also rare warmth-loving plants typical of the steppe. Among them is the dwarf cherry, which covers the slopes with white blossom in spring.",
+    "The ridge offers a view of the wide Vistula valley and distant Sandomierz. The slopes are steep and prone to slipping, so you must stay on the marked paths. The area also has vineyards, for which the Sandomierz region is famous.",
+    "It is most beautiful here in spring, during the blossom, and at sunset. The walk takes about an hour. You can walk to the reserve from Sandomierz or drive to the car park on its edge."
+   ]
+  },
+  "sz-mury": {
+   "pl": [
+    "Szydłów to małe miasteczko, nazywane polskim Carcassonne ze względu na dobrze zachowane mury obronne. Mury wzniesiono w XIV wieku z fundacji króla Kazimierza Wielkiego. Do dziś zachowała się ich znaczna część wraz z Bramą Krakowską.",
+    "W miasteczku stoją ruiny zamku królewskiego z Salą Rycerską oraz gotycki kościół. Zachowała się też synagoga z XVI wieku, która miała grube mury i pełniła także funkcje obronne. Przypomina o społeczności żydowskiej, która przez wieki żyła w Szydłowie.",
+    "Szydłów był ważnym ośrodkiem w średniowieczu, ale później stracił znaczenie i pozostał niewielkim miasteczkiem. Dzięki temu zachował dawny układ i klimat. W XX wieku na krótko utracił prawa miejskie, które później odzyskał.",
+    "Szydłów słynie też z sadów śliwkowych i nazywany jest śliwkową stolicą Polski. Co roku odbywa się tu Święto Śliwki z jarmarkiem i przetworami. Spacer dookoła murów zajmuje mniej niż godzinę."
+   ],
+   "en": [
+    "Szydłów is a small town known as the Polish Carcassonne because of its well-preserved defensive walls. The walls were built in the 14th century, funded by King Casimir the Great. A large part of them survives today, together with the Kraków Gate.",
+    "The town has the ruins of a royal castle with a Knights' Hall and a Gothic church. A 16th-century synagogue also survives; its thick walls also served a defensive purpose. It recalls the Jewish community that lived in Szydłów for centuries.",
+    "Szydłów was an important centre in the Middle Ages but later lost its importance and remained a small town. This is why it has kept its old layout and atmosphere. In the 20th century it lost its town rights for a time and later regained them.",
+    "Szydłów is also famous for its plum orchards and is called Poland's plum capital. Every year it holds a Plum Festival with a fair and preserves. A walk around the walls takes less than an hour."
+   ]
+  },
+  "ku-palac": {
+   "pl": [
+    "W Kurozwękach już w średniowieczu stał zamek możnego rodu Kurozwęckich. W XVIII wieku dawną warownię przebudowano w barokowo-klasycystyczny pałac. Zespół otacza park z fosą, która przypomina o obronnej przeszłości.",
+    "Od XIX wieku majątek należał do rodziny Popielów. Po II wojnie światowej upaństwowiono go i przez lata niszczał. Po 1989 roku rodzina odzyskała pałac i rozpoczęła jego odnowę.",
+    "Dziś pałac jest prywatnym ośrodkiem turystycznym z hotelem i restauracją. Właściciele założyli tu hodowlę bizonów, a goście mogą wyruszyć na safari wozem między pastwiskami. Latem w polach kukurydzy powstaje wielki labirynt.",
+    "Pałac można zwiedzać z przewodnikiem, poznając historię rodu i budynku. To dobre miejsce na wycieczkę z dziećmi, łączące historię i zwierzęta. Kurozwęki leżą niedaleko Staszowa i Szydłowa, więc łatwo połączyć te miejsca w jeden dzień."
+   ],
+   "en": [
+    "As early as the Middle Ages a castle of the powerful Kurozwęcki family stood in Kurozwęki. In the 18th century the old stronghold was rebuilt as a Baroque-Neoclassical palace. The complex is surrounded by a park with a moat that recalls its defensive past.",
+    "From the 19th century the estate belonged to the Popiel family. After the Second World War it was nationalised and fell into disrepair for years. After 1989 the family recovered the palace and began restoring it.",
+    "Today the palace is a private tourist centre with a hotel and restaurant. The owners have set up a bison farm here, and guests can go on a wagon safari among the pastures. In summer a large maze is created in the cornfields.",
+    "The palace can be visited with a guide who tells the history of the family and the building. It is a good place for a trip with children, combining history and animals. Kurozwęki lies near Staszów and Szydłów, so it is easy to combine these places in one day."
+   ]
+  },
+  "wi-kolegiata": {
+   "pl": [
+    "Wiślica była we wczesnym średniowieczu jednym z najważniejszych grodów Małopolski. Według niektórych historyków była ośrodkiem plemienia Wiślan. W XIV wieku król Kazimierz Wielki wydał tu tzw. statuty wiślickie, ważny zbiór praw dla Małopolski.",
+    "Gotycką kolegiatę ufundował Kazimierz Wielki w połowie XIV wieku. Kościół ma charakterystyczne sklepienie wsparte na trzech filarach, które dzieli wnętrze na dwie nawy. Na ścianach zachowały się fragmenty fresków bizantyjsko-ruskich.",
+    "Pod kolegiatą archeolodzy odkryli relikty starszych, romańskich kościołów. Najcenniejszym znaleziskiem jest Płyta Orantów z XII wieku, gipsowa posadzka z wyrytymi postaciami modlących się ludzi. To jeden z najcenniejszych zabytków sztuki romańskiej w Polsce.",
+    "Obok kolegiaty stoi Dom Długosza z XV wieku, ufundowany przez kronikarza Jana Długosza. Podziemia pod kolegiatą udostępniono jako rezerwat archeologiczny. Wiślica to mała miejscowość, ale bardzo ważna dla historii Polski."
+   ],
+   "en": [
+    "In the early Middle Ages Wiślica was one of the most important strongholds of Lesser Poland. Some historians believe it was the centre of the Vistulan tribe. In the 14th century King Casimir the Great issued the Wiślica Statutes here, an important code of law for Lesser Poland.",
+    "The Gothic collegiate church was founded by Casimir the Great in the mid-14th century. The church has a distinctive vault resting on three pillars, which divides the interior into two naves. Fragments of Byzantine-Ruthenian frescoes survive on the walls.",
+    "Beneath the collegiate church archaeologists found the remains of older Romanesque churches. The most valuable find is the 12th-century Orants' Slab, a gypsum floor engraved with figures of people praying. It is one of the most precious works of Romanesque art in Poland.",
+    "Next to the church stands the 15th-century Długosz House, founded by the chronicler Jan Długosz. The underground beneath the church is open as an archaeological reserve. Wiślica is a small village, but very important for Polish history."
+   ]
+  },
+  "bz-park-zdrojowy": {
+   "pl": [
+    "Busko-Zdrój słynie z wód mineralnych, przede wszystkim siarczkowych, o właściwościach leczniczych. Uzdrowisko założono w latach 30. XIX wieku. Od tego czasu przyjeżdżają tu kuracjusze z całej Polski.",
+    "Najważniejszym budynkiem jest klasycystyczne Sanatorium Marconi, zaprojektowane przez architekta Henryka Marconiego. Budynek z kolumnowym portykiem stał się symbolem miasta. Wokół niego założono rozległy park zdrojowy.",
+    "W parku rosną stare drzewa, są alejki, stawy i pijalnia wód. Spacer po parku od zawsze był częścią kuracji. W uzdrowisku leczy się m.in. choroby stawów, skóry i układu krążenia.",
+    "Co roku latem odbywa się tu festiwal muzyczny imienia Krystyny Jamroz, śpiewaczki związanej z Buskiem. Miasto jest dobrą bazą do zwiedzania Ponidzia, w tym Wiślicy i Pińczowa. W okolicy działa też kilka innych uzdrowisk, m.in. Solec-Zdrój."
+   ],
+   "en": [
+    "Busko-Zdrój is famous for its mineral waters, above all sulphurous waters with healing properties. The spa was founded in the 1830s. Since then patients have come here from all over Poland.",
+    "The most important building is the Neoclassical Marconi Sanatorium, designed by the architect Henryk Marconi. The building with its columned portico has become a symbol of the town. A large spa park was laid out around it.",
+    "The park has old trees, avenues, ponds and a pump room. A walk in the park has always been part of the cure. The spa treats among other things joint, skin and circulatory conditions.",
+    "Every summer a music festival named after Krystyna Jamroz, a singer associated with Busko, takes place here. The town is a good base for exploring the Ponidzie region, including Wiślica and Pińczów. There are several other spas nearby, including Solec-Zdrój."
+   ]
+  },
+  "je-przypkowscy": {
+   "pl": [
+    "Muzeum w Jędrzejowie powstało z prywatnej kolekcji rodziny Przypkowskich. Lekarz Feliks Przypkowski pod koniec XIX wieku zaczął zbierać zegary słoneczne, instrumenty astronomiczne i książki o mierzeniu czasu. Jego syn Tadeusz kontynuował pasję i rozwinął kolekcję.",
+    "Zbiory należą do największych na świecie kolekcji zegarów słonecznych. Są tu zegary z różnych epok i krajów, od prostych przenośnych po wielkie zegary ścienne. Kolekcja obejmuje też zegary mechaniczne, astrolabia i dawne mapy nieba.",
+    "W 1962 roku rodzina przekazała zbiory państwu, a w ich domu otwarto muzeum. Ekspozycja pokazuje także zachowane wnętrza mieszkalne rodziny. W ogrodzie można zobaczyć zegary słoneczne w działaniu.",
+    "Niedaleko Jędrzejowa leży opactwo cystersów, jedno z najstarszych w Polsce. Zmarł w nim w XIII wieku kronikarz Wincenty Kadłubek. Wizytę w muzeum warto połączyć z odwiedzeniem klasztoru."
+   ],
+   "en": [
+    "The museum in Jędrzejów grew out of the private collection of the Przypkowski family. In the late 19th century the physician Feliks Przypkowski began collecting sundials, astronomical instruments and books about measuring time. His son Tadeusz continued the passion and expanded the collection.",
+    "The collection is one of the largest collections of sundials in the world. It holds sundials from many eras and countries, from simple portable ones to large wall dials. It also includes mechanical clocks, astrolabes and old star maps.",
+    "In 1962 the family handed the collection to the state, and a museum opened in their house. The exhibition also shows the family's preserved living quarters. In the garden you can see sundials at work.",
+    "Near Jędrzejów lies a Cistercian abbey, one of the oldest in Poland. The chronicler Wincenty Kadłubek died there in the 13th century. A visit to the museum is worth combining with a visit to the monastery."
+   ]
+  },
+  "pi-kaplica": {
+   "pl": [
+    "Pińczów w XVI wieku był jednym z najważniejszych ośrodków reformacji w Polsce. Działała tu szkoła arian, nazywanych braćmi polskimi, a miasto zyskało miano „sarmackich Aten”. W Pińczowie pracowali tłumacze, którzy przygotowali przekład Biblii wydany później w Brześciu.",
+    "Na wzgórzu nad miastem stoi Kaplica św. Anny, zbudowana około 1600 roku według projektu Santi Gucciego. Gucci był włoskim rzeźbiarzem i architektem, który prowadził w Pińczowie warsztat kamieniarski. Okoliczny wapień pińczowski był cenionym materiałem rzeźbiarskim.",
+    "W mieście zachowała się Stara Synagoga z przełomu XVI i XVII wieku, jedna z najstarszych w Polsce. Przypomina o liczebnej społeczności żydowskiej, która przez stulecia żyła w Pińczowie. Dziś w synagodze działa oddział muzeum regionalnego.",
+    "Ze wzgórza z kaplicą rozciąga się widok na miasto i dolinę Nidy. Pińczów jest dobrą bazą do spływów kajakowych po Nidzie. Wizytę można połączyć z Wiślicą i Buskiem-Zdrojem."
+   ],
+   "en": [
+    "In the 16th century Pińczów was one of the most important centres of the Reformation in Poland. It had a school of the Arians, known as the Polish Brethren, and the town was called the “Sarmatian Athens”. Translators worked in Pińczów on a translation of the Bible later published in Brest.",
+    "On a hill above the town stands St Anne's Chapel, built around 1600 to a design by Santi Gucci. Gucci was an Italian sculptor and architect who ran a stonemason's workshop in Pińczów. The local Pińczów limestone was a prized material for sculpture.",
+    "The town preserves the Old Synagogue from around 1600, one of the oldest in Poland. It recalls the large Jewish community that lived in Pińczów for centuries. Today the synagogue houses a branch of the regional museum.",
+    "The chapel hill offers a view of the town and the Nida valley. Pińczów is a good base for canoe trips on the Nida. The visit can be combined with Wiślica and Busko-Zdrój."
+   ]
+  },
+  "ki-rynek": {
+   "pl": [
+    "Kielce rozwinęły się wokół wzgórza z kolegiatą, w dobrach biskupów krakowskich. Prawa miejskie otrzymały w średniowieczu, a rynek był ośrodkiem handlu i życia mieszczan. Przez wieki miasto było niewielkie, a szybciej rosło dopiero w XIX wieku.",
+    "W XIX wieku Kielce stały się centrum Staropolskiego Okręgu Przemysłowego, rozwijanego z inicjatywy Stanisława Staszica. Wtedy powstało wiele kamienic, a ulica Sienkiewicza stała się główną ulicą miasta. Dziś jest reprezentacyjnym deptakiem z kawiarniami i sklepami.",
+    "Przy rynku stoi ratusz i kamienice z różnych epok. W pobliżu znajduje się Muzeum Historii Kielc, które opowiada o dziejach miasta. W okresie międzywojennym Kielce rozwijały się jako stolica województwa.",
+    "Spacer od rynku przez ulicę Sienkiewicza prowadzi aż do dworca kolejowego. Po drodze mija się kościoły, kamienice i skwery. Wieczorem deptak jest najbardziej ożywionym miejscem w mieście."
+   ],
+   "en": [
+    "Kielce grew up around the hill with the collegiate church, on the estates of the Bishops of Kraków. It received town rights in the Middle Ages, and the market square was the centre of trade and burgher life. For centuries the town was small and began to grow faster only in the 19th century.",
+    "In the 19th century Kielce became the centre of the Old Polish Industrial District, developed on the initiative of Stanisław Staszic. Many townhouses were built at that time, and Sienkiewicza Street became the town's main street. Today it is a showcase pedestrian street with cafés and shops.",
+    "On the square stand the town hall and townhouses from various periods. Nearby is the Museum of the History of Kielce, which tells the story of the city. In the interwar period Kielce developed as a provincial capital.",
+    "A walk from the square along Sienkiewicza Street leads all the way to the railway station. On the way you pass churches, townhouses and small squares. In the evening the promenade is the liveliest place in town."
+   ]
+  },
+  "ki-muzeum-zabawek": {
+   "pl": [
+    "Muzeum Zabawek i Zabawy w Kielcach należy do największych muzeów zabawek w Polsce. Powstało w 1979 roku i od tego czasu gromadzi zabawki z różnych epok i krajów. Zbiory liczą wiele tysięcy obiektów.",
+    "Można tu zobaczyć lalki, misie, domki dla lalek, gry planszowe i zabawki mechaniczne. Część kolekcji to zabawki ludowe, wykonane przez wiejskich twórców z drewna i gliny. Są też makiety kolejek i zabawki z czasów PRL.",
+    "Muzeum gromadzi także lalki i rekwizyty z polskich filmów animowanych. Dla rodziców to często podróż w czasie do własnego dzieciństwa. Wystawy są przygotowane tak, aby zainteresować zarówno dzieci, jak i dorosłych.",
+    "W muzeum odbywają się warsztaty, zajęcia edukacyjne i wystawy czasowe. To dobre miejsce na deszczowy dzień w Kielcach. Zwiedzanie zajmuje około godziny."
+   ],
+   "en": [
+    "The Museum of Toys and Play in Kielce is one of the largest toy museums in Poland. It was founded in 1979 and has been collecting toys from different eras and countries ever since. The collection numbers many thousands of objects.",
+    "Here you can see dolls, teddy bears, dolls' houses, board games and mechanical toys. Part of the collection consists of folk toys made by village craftspeople from wood and clay. There are also model railways and toys from the communist era.",
+    "The museum also collects puppets and props from Polish animated films. For parents it is often a journey back to their own childhood. The exhibitions are designed to interest both children and adults.",
+    "The museum runs workshops, educational activities and temporary exhibitions. It is a good place for a rainy day in Kielce. A visit takes about an hour."
+   ]
+  },
+  "ki-muzeum-historii": {
+   "pl": [
+    "Muzeum Historii Kielc opowiada o dziejach miasta od średniowiecza do współczesności. Powstało w pierwszej dekadzie XXI wieku i mieści się w zabytkowym budynku w centrum. Ekspozycja jest nowoczesna i interaktywna.",
+    "Wystawa pokazuje Kielce jako miasto biskupów krakowskich, ośrodek przemysłu i stolicę regionu. Dużo miejsca poświęcono życiu codziennemu mieszkańców, rzemiosłu i handlowi. Są też makiety dawnego miasta i archiwalne fotografie.",
+    "Muzeum przedstawia też trudne karty XX wieku: obie wojny światowe, okupację i czasy powojenne. Opowiada o mieszkańcach różnych narodowości i wyznań, którzy tworzyli historię Kielc. Wystawy czasowe uzupełniają stałą ekspozycję.",
+    "Muzeum leży kilka minut od rynku, więc łatwo połączyć je ze spacerem po centrum. Zwiedzanie zajmuje około godziny. To dobre miejsce, by zrozumieć miasto przed dalszym zwiedzaniem."
+   ],
+   "en": [
+    "The Museum of the History of Kielce tells the story of the city from the Middle Ages to the present. It was founded in the first decade of the 21st century and occupies a historic building in the centre. The exhibition is modern and interactive.",
+    "The exhibition presents Kielce as a town of the Bishops of Kraków, an industrial centre and a regional capital. Much space is given to the daily life of the inhabitants, crafts and trade. There are also models of the old town and archive photographs.",
+    "The museum also covers the difficult chapters of the 20th century: both world wars, the occupation and the post-war years. It tells of residents of different nationalities and faiths who shaped the history of Kielce. Temporary exhibitions complement the permanent display.",
+    "The museum is a few minutes from the market square, so it is easy to combine with a walk around the centre. A visit takes about an hour. It is a good place to understand the city before exploring further."
+   ]
+  },
+  "ki-slichowice": {
+   "pl": [
+    "Rezerwat Ślichowice w Kielcach chroni dawny kamieniołom wapieni dewońskich. Jego patronem jest geolog Jan Czarnocki, badacz Gór Świętokrzyskich. Rezerwat należy do Geoparku Kielce.",
+    "Najsłynniejszym miejscem jest ściana kamieniołomu z wyraźnym, wielkim fałdem warstw skalnych. Fałd powstał, gdy ruchy skorupy ziemskiej wygięły pierwotnie poziome warstwy wapienia. To jeden z najbardziej znanych i najczęściej fotografowanych przykładów fałdu w Polsce.",
+    "W wapieniach zachowały się skamieniałości morskich organizmów sprzed setek milionów lat. Teren rezerwatu porasta murawa i zarośla, a wokół wytyczono ścieżkę dydaktyczną. Z krawędzi kamieniołomu widać zachodnie osiedla Kielc.",
+    "Rezerwat jest dobrym celem krótkiego spaceru dla miłośników geologii. Najlepiej zwiedzać go razem z pobliską Kadzielnią i Wietrznią. Tablice na ścieżce wyjaśniają, jak czytać historię Ziemi zapisaną w skałach."
+   ],
+   "en": [
+    "The Ślichowice reserve in Kielce protects a former quarry of Devonian limestone. It is named after the geologist Jan Czarnocki, who studied the Holy Cross Mountains. The reserve is part of the Kielce Geopark.",
+    "Its most famous feature is a quarry wall with a clear, large fold in the rock layers. The fold formed when movements of the Earth's crust bent the originally horizontal layers of limestone. It is one of the best-known and most photographed examples of a fold in Poland.",
+    "The limestone preserves fossils of marine organisms hundreds of millions of years old. The reserve is covered with grassland and scrub, and an educational path has been laid out around it. From the edge of the quarry you can see the western districts of Kielce.",
+    "The reserve is a good destination for a short walk for geology enthusiasts. It is best visited together with nearby Kadzielnia and Wietrznia. Boards along the path explain how to read the history of the Earth written in the rocks."
+   ]
+  },
+  "ki-park-staszica": {
+   "pl": [
+    "Park Miejski im. Stanisława Staszica to najstarszy i najbardziej znany park w centrum Kielc. Założono go w XIX wieku na terenie dawnych ogrodów. Nosi imię Stanisława Staszica, uczonego i działacza, który przyczynił się do rozwoju przemysłu w regionie.",
+    "W parku stoi pomnik Staszica oraz inne upamiętnienia ważnych postaci. Są tu stare drzewa, alejki, staw i plac zabaw. Park leży u stóp wzgórza katedralnego, w sąsiedztwie Pałacu Biskupów.",
+    "Staszic był jednym z najwybitniejszych przedstawicieli polskiego oświecenia. Zajmował się geologią, gospodarką i edukacją, a jego idee wpłynęły na rozwój Staropolskiego Okręgu Przemysłowego. Kielce pamiętają go jako patrona wielu instytucji.",
+    "Park jest ulubionym miejscem spacerów mieszkańców, zwłaszcza w weekendy. W ciepłe dni odbywają się tu koncerty i wydarzenia rodzinne. To dobre miejsce na odpoczynek między zwiedzaniem muzeów."
+   ],
+   "en": [
+    "The Stanisław Staszic City Park is the oldest and best-known park in central Kielce. It was laid out in the 19th century on the site of old gardens. It is named after Stanisław Staszic, a scholar and public figure who contributed to the development of industry in the region.",
+    "The park has a monument to Staszic and other memorials to important figures. There are old trees, avenues, a pond and a playground. The park lies at the foot of the cathedral hill, next to the Bishops' Palace.",
+    "Staszic was one of the most outstanding figures of the Polish Enlightenment. He worked on geology, the economy and education, and his ideas shaped the development of the Old Polish Industrial District. Kielce remembers him as the patron of many institutions.",
+    "The park is a favourite place for locals to stroll, especially at weekends. On warm days it hosts concerts and family events. It is a good place to rest between museum visits."
+   ]
+  },
+  "ki-dworek-laszczykow": {
+   "pl": [
+    "Dworek Laszczyków to drewniany dwór z XVIII wieku, jeden z najstarszych zachowanych budynków mieszkalnych w Kielcach. Zbudowano go z modrzewia, a nazwa pochodzi od dawnych właścicieli. Przez wieki stał na skraju miasta, otoczony ogrodem.",
+    "Dwór ma typową dla polskich dworków formę z gankiem i wysokim dachem. Wnętrza urządzono tak, by przypominały dom szlachecki sprzed dwóch stuleci. Dworek jest jednym z ostatnich śladów dawnej, drewnianej zabudowy Kielc.",
+    "Dziś dworek należy do Muzeum Wsi Kieleckiej i pełni funkcję jego siedziby. Odbywają się tu wystawy, spotkania i wydarzenia kulturalne. Obok dworu zachował się fragment ogrodu.",
+    "Dworek leży blisko centrum, w pobliżu ulicy Jana Pawła II. Wizytę można połączyć ze spacerem do Pałacu Biskupów. To kameralne miejsce, które pokazuje, jak wyglądały Kielce przed rozwojem przemysłowym."
+   ],
+   "en": [
+    "The Laszczyk Manor is an 18th-century wooden manor house, one of the oldest surviving dwellings in Kielce. It was built of larch, and its name comes from its former owners. For centuries it stood on the edge of the town, surrounded by a garden.",
+    "The manor has the typical form of a Polish country house, with a porch and a tall roof. The interiors are furnished to resemble a gentry home of two centuries ago. The manor is one of the last traces of the old wooden buildings of Kielce.",
+    "Today the manor belongs to the Museum of the Kielce Countryside and serves as its headquarters. It hosts exhibitions, meetings and cultural events. Part of the garden survives next to the house.",
+    "The manor lies close to the centre, near Jana Pawła II Street. The visit can be combined with a walk to the Bishops' Palace. It is an intimate place that shows what Kielce looked like before industrial development."
+   ]
+  },
+  "ki-muzeum-zeromskiego": {
+   "pl": [
+    "Muzeum Lat Szkolnych Stefana Żeromskiego mieści się w budynku dawnego gimnazjum, w którym uczył się przyszły pisarz. Żeromski chodził do kieleckiej szkoły w latach 70. i 80. XIX wieku, gdy Kielce należały do zaboru rosyjskiego. Szkoła słynęła z surowej rusyfikacji uczniów.",
+    "Doświadczenia z tamtych lat Żeromski opisał w powieści „Syzyfowe prace”. Książka opowiada o polskich uczniach zmagających się z próbą odebrania im języka i tożsamości. Jest do dziś szkolną lekturą.",
+    "Muzeum pokazuje dawną klasę, pamiątki po pisarzu i dokumenty z epoki. Ekspozycja przybliża realia życia ucznia pod zaborami. Budynek nadal służy jako liceum noszące imię Żeromskiego.",
+    "Żeromski związany był z regionem świętokrzyskim przez całe życie, a jego twórczość pełna jest opisów tutejszej przyrody. Muzeum jest oddziałem Muzeum Narodowego w Kielcach. Zwiedzanie zajmuje około pół godziny."
+   ],
+   "en": [
+    "The Museum of Stefan Żeromski's School Years is housed in the former grammar school building where the future writer studied. Żeromski attended the Kielce school in the 1870s and 1880s, when Kielce was in the Russian partition. The school was known for its harsh Russification of pupils.",
+    "Żeromski described his experiences of those years in the novel “The Labours of Sisyphus”. The book tells of Polish pupils struggling against attempts to take away their language and identity. It is still read in Polish schools today.",
+    "The museum shows an old classroom, mementos of the writer and documents from the period. The exhibition brings to life the realities of a pupil's life under the partitions. The building still serves as a secondary school named after Żeromski.",
+    "Żeromski was linked to the Holy Cross region throughout his life, and his writing is full of descriptions of local nature. The museum is a branch of the National Museum in Kielce. A visit takes about half an hour."
+   ]
+  },
+  "ki-ogrod-botaniczny": {
+   "pl": [
+    "Ogród Botaniczny w Kielcach to jeden z najmłodszych ogrodów botanicznych w Polsce, otwarty w XXI wieku. Leży na zachodnich wzgórzach miasta, w sąsiedztwie lasów. Ogród rozwija się etapami, a kolekcje stale się powiększają.",
+    "Najważniejszą częścią ogrodu są rośliny Gór Świętokrzyskich i regionu, pokazane w naturalnych zbiorowiskach. Są tu także kolekcje roślin ozdobnych, drzew i krzewów. Ścieżki i tablice informacyjne pomagają poznać przyrodę regionu.",
+    "Ogród pełni funkcję naukową i edukacyjną, prowadząc zajęcia dla szkół i warsztaty dla dorosłych. Chroni też rzadkie i zagrożone gatunki roślin. Organizuje wystawy i wydarzenia sezonowe.",
+    "Na terenie ogrodu stoi wieża widokowa, z której widać Kielce i pasma gór. To dobre miejsce na spokojny spacer, szczególnie wiosną i jesienią. Wstęp do ogrodu jest zwykle bezpłatny, ale warto sprawdzić aktualne godziny otwarcia."
+   ],
+   "en": [
+    "The Kielce Botanical Garden is one of the youngest botanical gardens in Poland, opened in the 21st century. It lies on the western hills of the city, next to the forests. The garden is being developed in stages, and its collections keep growing.",
+    "The most important part of the garden is the flora of the Holy Cross Mountains and the region, shown in natural plant communities. There are also collections of ornamental plants, trees and shrubs. Paths and information boards help visitors get to know the region's nature.",
+    "The garden has a scientific and educational role, running classes for schools and workshops for adults. It also protects rare and endangered plant species. It organises exhibitions and seasonal events.",
+    "The garden has a viewing tower from which you can see Kielce and the mountain ranges. It is a good place for a quiet walk, especially in spring and autumn. Admission is usually free, but check the current opening hours."
+   ]
+  },
+  "ki-telegraf": {
+   "pl": [
+    "Wzgórze Telegraf wznosi się na południowo-wschodnim skraju Kielc. Nazwa pochodzi od stacji telegrafu optycznego, która działała tu w XIX wieku. Telegraf przekazywał wiadomości za pomocą ruchomych ramion widocznych z kolejnych wzgórz.",
+    "Linie telegrafu optycznego budowano w Królestwie Polskim w pierwszej połowie XIX wieku. Łączyły one ważne miasta i pozwalały szybko przesyłać rozkazy i informacje. Z czasem zastąpił je telegraf elektryczny.",
+    "Dziś na stokach Telegrafu działa stok narciarski z wyciągami, popularny wśród mieszkańców Kielc. Latem wzgórze jest miejscem spacerów i wycieczek rowerowych. Ze szczytu rozciąga się szeroka panorama miasta i Gór Świętokrzyskich.",
+    "Wzgórze zbudowane jest z wapieni, podobnie jak inne wzniesienia w Kielcach. W okolicy biegną szlaki turystyczne prowadzące w kierunku Pasma Posłowickiego. Telegraf to dobre miejsce na krótką aktywną wycieczkę w każdej porze roku."
+   ],
+   "en": [
+    "Telegraf Hill rises on the south-eastern edge of Kielce. Its name comes from an optical telegraph station that operated here in the 19th century. The telegraph sent messages using movable arms visible from the next hill.",
+    "Optical telegraph lines were built in the Kingdom of Poland in the first half of the 19th century. They linked important cities and allowed orders and information to be sent quickly. They were later replaced by the electric telegraph.",
+    "Today the slopes of Telegraf have a ski run with lifts, popular with Kielce residents. In summer the hill is a place for walks and bike rides. The summit offers a wide panorama of the city and the Holy Cross Mountains.",
+    "The hill is made of limestone, like other hills in Kielce. Tourist trails run nearby towards the Posłowice Range. Telegraf is a good place for a short active outing in any season."
+   ]
+  }
+ }
+}

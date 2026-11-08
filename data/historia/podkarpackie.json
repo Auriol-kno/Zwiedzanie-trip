@@ -1,0 +1,166 @@
+{
+ "region": "podkarpackie",
+ "version": "8.6.2",
+ "updated": "2026-11-08",
+ "status": "redakcyjne",
+ "note": {
+  "pl": "Opracowanie redakcyjne na podstawie ogólnodostępnych, utrwalonych faktów historycznych. Legendy są wyraźnie oznaczone jako legendy. Przed wizytą sprawdź szczegóły w źródłach (link do Wikipedii w karcie miejsca).",
+  "en": "Editorial summary based on widely available, well-established historical facts. Legends are clearly marked as legends. Check the details in the sources before visiting (Wikipedia link in the place card)."
+ },
+ "places": {
+  "rz-rynek": {
+   "pl": [
+    "Rzeszów otrzymał prawa miejskie w 1354 roku od króla Kazimierza Wielkiego. Przez wieki należał do możnych rodów, m.in. Lubomirskich, którzy rozbudowali miasto i zamek. Był ważnym ośrodkiem handlu na szlaku z zachodu na wschód.",
+    "Rynek otaczają kamienice z różnych epok, a pośrodku stoi ratusz przebudowany pod koniec XIX wieku w stylu neogotyckim. Pod rynkiem i kamienicami ciągną się piwnice kupieckie wykopane na kilku poziomach. Służyły jako magazyny, a w czasie zagrożenia jako schronienie.",
+    "Piwnice połączono w Podziemną Trasę Turystyczną, otwartą na początku XXI wieku. Trasa ma kilkaset metrów i schodzi na głębokość kilku kondygnacji. Ekspozycja opowiada o historii miasta i jego mieszkańców.",
+    "Dziś Rzeszów jest stolicą województwa i dynamicznie rozwijającym się miastem akademickim. Wokół rynku działają kawiarnie i restauracje. Warto zobaczyć też zamek Lubomirskich i Ogród Bernardyński."
+   ],
+   "en": [
+    "Rzeszów received town rights in 1354 from King Casimir the Great. For centuries it belonged to powerful families, including the Lubomirskis, who expanded the town and the castle. It was an important trading centre on the route from west to east.",
+    "The market square is surrounded by houses from different periods, and in the middle stands the town hall, rebuilt in neo-Gothic style at the end of the 19th century. Merchants' cellars dug on several levels run beneath the square and the houses. They served as stores and, in times of danger, as shelters.",
+    "The cellars have been linked into the Underground Tourist Route, opened in the early 21st century. The route is several hundred metres long and goes several storeys down. The exhibition tells the history of the town and its people.",
+    "Today Rzeszów is the provincial capital and a fast-growing university city. Cafés and restaurants line the square. The Lubomirski castle and the Bernardine Garden are also worth seeing."
+   ]
+  },
+  "lc-zamek": {
+   "pl": [
+    "Zamek w Łańcucie zbudował w pierwszej połowie XVII wieku Stanisław Lubomirski jako rezydencję otoczoną fortyfikacjami. W XVIII wieku księżna Izabela Lubomirska przekształciła go we wspaniały pałac z teatrem, salonami i ogrodami. Była jedną z najbardziej wpływowych kobiet swojej epoki.",
+    "Od przełomu XVIII i XIX wieku zamek należał do rodu Potockich. Ostatni ordynat, Alfred Potocki, w 1944 roku wywiózł część zbiorów na zachód. Po wojnie zamek przejęło państwo i urządziło w nim muzeum.",
+    "Wnętrza zachowały bogate wyposażenie: salę balową, bibliotekę, teatr i salony. Słynna Powozownia mieści jedną z największych w Europie kolekcji powozów i sań. Wokół zamku rozciąga się park ze storczykarnią i oranżerią.",
+    "Od lat 60. XX wieku w zamku odbywa się Festiwal Muzyki w Łańcucie. Obok działa Muzeum Gorzelnictwa, przypominające o tradycji produkcji alkoholi. Zwiedzanie zamku i powozowni zajmuje kilka godzin."
+   ],
+   "en": [
+    "Łańcut Castle was built in the first half of the 17th century by Stanisław Lubomirski as a residence surrounded by fortifications. In the 18th century Princess Izabela Lubomirska turned it into a splendid palace with a theatre, salons and gardens. She was one of the most influential women of her time.",
+    "From around 1800 the castle belonged to the Potocki family. The last owner, Alfred Potocki, took part of the collection to the West in 1944. After the war the state took over the castle and set up a museum in it.",
+    "The interiors keep their rich furnishings: a ballroom, a library, a theatre and salons. The famous Coach House holds one of the largest collections of carriages and sleighs in Europe. Around the castle lies a park with an orchid house and an orangery.",
+    "Since the 1960s the castle has hosted the Łańcut Music Festival. Next door is the Museum of Distilling, recalling the tradition of spirit production. A visit to the castle and the coach house takes several hours."
+   ]
+  },
+  "kr-zamek": {
+   "pl": [
+    "Zamek w Krasiczynie budowano od końca XVI do początku XVII wieku z inicjatywy Stanisława Krasickiego i jego syna Marcina. Projektował go włoski architekt Galeazzo Appiani. To jeden z najpiękniejszych renesansowych zamków w Polsce.",
+    "Ściany zamku pokrywają rozległe sgraffita, czyli dekoracje wydrapywane w tynku. Przedstawiają m.in. sceny biblijne, królów i polowania. Cztery narożne baszty symbolizują porządek świata: Boska, Papieska, Królewska i Szlachecka.",
+    "Od XIX wieku zamek należał do rodu Sapiehów. Urodził się tu w 1867 roku Adam Stefan Sapieha, późniejszy kardynał i metropolita krakowski. Po II wojnie światowej zamek przejęło państwo, a później go odnowiono.",
+    "Dziś w zamku działa hotel, a wnętrza i dziedziniec można zwiedzać z przewodnikiem. Wokół rozciąga się park z bogatą roślinnością. Krasiczyn leży kilkanaście kilometrów od Przemyśla."
+   ],
+   "en": [
+    "Krasiczyn Castle was built from the late 16th to the early 17th century on the initiative of Stanisław Krasicki and his son Marcin. It was designed by the Italian architect Galeazzo Appiani. It is one of the most beautiful Renaissance castles in Poland.",
+    "The castle walls are covered with extensive sgraffito, decoration scratched into the plaster. It shows biblical scenes, kings and hunts, among other things. The four corner towers symbolise the order of the world: Divine, Papal, Royal and Noble.",
+    "From the 19th century the castle belonged to the Sapieha family. Adam Stefan Sapieha, later Cardinal and Archbishop of Kraków, was born here in 1867. After the Second World War the state took over the castle, which was later restored.",
+    "Today the castle is a hotel, and the interiors and courtyard can be visited with a guide. It is surrounded by a park with rich planting. Krasiczyn lies a dozen or so kilometres from Przemyśl."
+   ]
+  },
+  "pr-stare-miasto": {
+   "pl": [
+    "Przemyśl jest jednym z najstarszych miast w Polsce; gród nad Sanem istniał już w X wieku. Przez wieki o miasto rywalizowały Polska i Ruś, a mieszkali tu Polacy, Rusini, Żydzi i Ormianie. Przemyśl jest siedzibą zarówno biskupów rzymskokatolickich, jak i greckokatolickich.",
+    "Stare Miasto leży na zboczu wzgórza, a jego uliczki schodzą tarasami do rzeki. Nad miastem górują katedra, zamek i liczne kościoły. W mieście działa m.in. Muzeum Dzwonów i Fajek, nawiązujące do lokalnych tradycji rzemieślniczych.",
+    "W XIX wieku Austro-Węgry zbudowały wokół Przemyśla potężną twierdzę z pierścieniem kilkudziesięciu fortów. W czasie I wojny światowej twierdza wytrzymała długie oblężenie przez wojska rosyjskie, a w 1915 roku skapitulowała. Była to jedna z największych twierdz Europy.",
+    "Dziś forty można zwiedzać pieszo i rowerem na wyznaczonych szlakach. Z Kopca Tatarskiego rozciąga się widok na miasto i dolinę Sanu. Przemyśl to dobra baza do wycieczek do Krasiczyna i w Bieszczady."
+   ],
+   "en": [
+    "Przemyśl is one of the oldest towns in Poland; a stronghold on the San river existed here as early as the 10th century. For centuries Poland and Ruthenia competed for the town, and Poles, Ruthenians, Jews and Armenians lived here. Przemyśl is the seat of both Roman Catholic and Greek Catholic bishops.",
+    "The Old Town lies on a hillside, and its streets descend in terraces to the river. The cathedral, the castle and many churches rise above the town. The town has, among others, the Museum of Bells and Pipes, recalling local craft traditions.",
+    "In the 19th century Austria-Hungary built a mighty fortress around Przemyśl with a ring of dozens of forts. During the First World War the fortress withstood a long siege by Russian troops before surrendering in 1915. It was one of the largest fortresses in Europe.",
+    "Today the forts can be explored on foot and by bike along marked trails. The Tatar Mound offers a view of the town and the San valley. Przemyśl is a good base for trips to Krasiczyn and the Bieszczady."
+   ]
+  },
+  "bi-poloniny": {
+   "pl": [
+    "Połoniny to rozległe łąki na grzbietach Bieszczadów, położone powyżej górnej granicy lasu. Najbardziej znane są Połonina Caryńska i Połonina Wetlińska. Najwyższym szczytem polskich Bieszczadów jest Tarnica.",
+    "Bieszczadzki Park Narodowy utworzono w 1973 roku, a później znacznie powiększono. Park jest częścią międzynarodowego rezerwatu biosfery UNESCO „Karpaty Wschodnie”. Żyją tu niedźwiedzie, wilki, rysie i żubry.",
+    "Przed II wojną światową Bieszczady były gęsto zaludnione przez Bojków i Łemków. Po wojnie, w wyniku przesiedleń, w tym akcji „Wisła” w 1947 roku, wiele wsi przestało istnieć. Dziś o ich istnieniu przypominają cerkwiska, sady i krzyże w lasach.",
+    "Szlaki na połoniny zaczynają się m.in. w Ustrzykach Górnych, Wetlinie i Brzegach Górnych. Na Połoninie Wetlińskiej stoi słynne schronisko „Chatka Puchatka”, odbudowane w XXI wieku. Pogoda w górach zmienia się szybko, a na grzbietach mocno wieje."
+   ],
+   "en": [
+    "Połoniny are wide meadows on the ridges of the Bieszczady, lying above the upper tree line. The best known are Połonina Caryńska and Połonina Wetlińska. The highest peak of the Polish Bieszczady is Tarnica.",
+    "Bieszczady National Park was established in 1973 and later greatly enlarged. The park is part of the international UNESCO biosphere reserve “East Carpathians”. Bears, wolves, lynx and European bison live here.",
+    "Before the Second World War the Bieszczady were densely populated by Boykos and Lemkos. After the war, as a result of resettlements including Operation Vistula in 1947, many villages ceased to exist. Today church sites, orchards and crosses in the forests recall them.",
+    "Trails to the połoniny start in Ustrzyki Górne, Wetlina and Brzegi Górne, among other places. On Połonina Wetlińska stands the famous “Chatka Puchatka” hut, rebuilt in the 21st century. The weather in the mountains changes quickly, and it is very windy on the ridges."
+   ]
+  },
+  "so-zapora": {
+   "pl": [
+    "Zaporę w Solinie zbudowano na Sanie i ukończono w 1968 roku. Ma ponad 80 metrów wysokości i jest najwyższą zaporą w Polsce. Służy do produkcji energii i ochrony przed powodziami.",
+    "Powstałe za zaporą Jezioro Solińskie jest największym sztucznym zbiornikiem w Polsce pod względem pojemności. Woda zalała kilka wsi, których mieszkańców przesiedlono. Kręta linia brzegowa tworzy liczne zatoki i półwyspy.",
+    "Jezioro stało się centrum turystyki w Bieszczadach. W Polańczyku i Solinie działają przystanie, plaże i ośrodki wypoczynkowe. Po jeziorze pływają statki wycieczkowe i żaglówki.",
+    "Koroną zapory można przejść pieszo, podziwiając widok na jezioro i góry. W sezonie organizowane jest zwiedzanie wnętrza zapory z przewodnikiem. Okolica jest zatłoczona latem, dlatego spokojniej jest wiosną i jesienią."
+   ],
+   "en": [
+    "The Solina dam was built on the San river and completed in 1968. It is more than 80 metres high and is the highest dam in Poland. It is used to generate power and protect against floods.",
+    "Lake Solina, formed behind the dam, is the largest artificial reservoir in Poland by volume. The water flooded several villages, whose residents were resettled. The winding shoreline forms many bays and peninsulas.",
+    "The lake has become the centre of tourism in the Bieszczady. Polańczyk and Solina have marinas, beaches and holiday centres. Excursion boats and sailing boats ply the lake.",
+    "You can walk across the top of the dam, admiring the view of the lake and the mountains. In season guided tours of the inside of the dam are available. The area is crowded in summer, so it is quieter in spring and autumn."
+   ]
+  },
+  "sa-skansen": {
+   "pl": [
+    "Muzeum Budownictwa Ludowego w Sanoku założono w 1958 roku nad Sanem. To jeden z największych skansenów w Polsce. Zgromadzono tu ponad sto zabytkowych obiektów.",
+    "Budynki pochodzą od czterech grup etnograficznych regionu: Bojków, Łemków, Dolinian i Pogórzan. Dzięki temu skansen pokazuje różnorodność kultur dawnego pogranicza polsko-ukraińskiego. Szczególnie cenne są drewniane cerkwie z ikonostasami.",
+    "W skansenie odtworzono rynek galicyjskiego miasteczka z domami, sklepami i warsztatami. Można zajrzeć do dawnej szkoły, apteki czy zakładu fryzjerskiego. Ekspozycja pokazuje codzienność przełomu XIX i XX wieku.",
+    "Muzeum gromadzi także jedną z największych kolekcji ikon w Polsce, prezentowaną w osobnej galerii. Na zwiedzanie warto przeznaczyć kilka godzin. Wizytę w Sanoku można połączyć z Galerią Beksińskiego na zamku."
+   ],
+   "en": [
+    "The Museum of Folk Architecture in Sanok was founded in 1958 on the San river. It is one of the largest open-air museums in Poland. More than a hundred historic buildings have been gathered here.",
+    "The buildings come from the region's four ethnographic groups: Boykos, Lemkos, Dolinians and Pogórzans. This lets the museum show the diversity of cultures of the old Polish-Ukrainian borderland. The wooden Orthodox churches with iconostases are especially valuable.",
+    "The museum has recreated the market square of a Galician small town with houses, shops and workshops. You can look into an old school, a pharmacy or a barber's. The exhibition shows everyday life around 1900.",
+    "The museum also holds one of the largest icon collections in Poland, displayed in a separate gallery. Allow several hours for a visit. A visit to Sanok can be combined with the Beksiński Gallery in the castle."
+   ]
+  },
+  "sa-beksinski": {
+   "pl": [
+    "Zdzisław Beksiński urodził się w Sanoku w 1929 roku. Był malarzem, rysownikiem i fotografem, znanym z niepokojących, fantastycznych obrazów. Jego wizje przedstawiają opustoszałe krajobrazy, postaci i architekturę jak ze snu.",
+    "Beksiński zapisał swoją kolekcję Muzeum Historycznemu w Sanoku. Galerię jego prac urządzono w nowym skrzydle Zamku Królewskiego w Sanoku. To największy zbiór dzieł artysty na świecie.",
+    "Malarz zginął tragicznie w Warszawie w 2005 roku. Jego twórczość cieszy się ogromnym zainteresowaniem w Polsce i za granicą. Losy jego rodziny opisano w książkach i filmie fabularnym.",
+    "W galerii można zobaczyć obrazy, rysunki, fotografie oraz odtworzoną pracownię artysty. Zamek w Sanoku ma też inne wystawy, m.in. sztuki sakralnej. Zwiedzanie galerii zajmuje około godziny."
+   ],
+   "en": [
+    "Zdzisław Beksiński was born in Sanok in 1929. He was a painter, draughtsman and photographer known for his disturbing, fantastical paintings. His visions show desolate landscapes, figures and dreamlike architecture.",
+    "Beksiński bequeathed his collection to the Historical Museum in Sanok. A gallery of his works has been set up in a new wing of Sanok's Royal Castle. It is the largest collection of the artist's works in the world.",
+    "The painter died tragically in Warsaw in 2005. His work attracts huge interest in Poland and abroad. The story of his family has been told in books and a feature film.",
+    "The gallery shows paintings, drawings, photographs and a recreation of the artist's studio. Sanok Castle also has other exhibitions, including religious art. A visit to the gallery takes about an hour."
+   ]
+  },
+  "ba-zamek": {
+   "pl": [
+    "Zamek w Baranowie Sandomierskim zbudowano na przełomie XVI i XVII wieku dla rodu Leszczyńskich. Projekt przypisuje się Santi Gucciemu, włoskiemu architektowi pracującemu w Polsce. Ze względu na podobieństwo do Wawelu nazywa się go małym Wawelem.",
+    "Najpiękniejszą częścią zamku jest arkadowy dziedziniec z bogato zdobionymi kolumnami i maszkaronami. Narożne baszty i attyki nadają budowli charakterystyczny wygląd. Zamek należał później m.in. do Lubomirskich i innych rodów.",
+    "W XIX wieku zamek ucierpiał w pożarze, a po II wojnie światowej był zaniedbany. W latach 60. XX wieku odnowiło go przedsiębiorstwo przemysłu siarkowego z okolicy. Dzięki temu zamek odzyskał dawną świetność.",
+    "Dziś w zamku działa muzeum, hotel i restauracja. Wokół rozciąga się park z ogrodem włoskim. Baranów leży nad Wisłą, niedaleko Tarnobrzega i Sandomierza."
+   ],
+   "en": [
+    "Baranów Sandomierski Castle was built around 1600 for the Leszczyński family. The design is attributed to Santi Gucci, an Italian architect working in Poland. Because of its resemblance to Wawel it is called the little Wawel.",
+    "The most beautiful part of the castle is its arcaded courtyard with richly decorated columns and grotesque masks. Corner towers and parapets give the building its distinctive look. The castle later belonged to the Lubomirskis and other families.",
+    "In the 19th century the castle was damaged by fire, and after the Second World War it was neglected. In the 1960s it was restored by a local sulphur industry enterprise. Thanks to this the castle regained its former splendour.",
+    "Today the castle houses a museum, a hotel and a restaurant. It is surrounded by a park with an Italian garden. Baranów lies on the Vistula, near Tarnobrzeg and Sandomierz."
+   ]
+  },
+  "ha-kosciol": {
+   "pl": [
+    "Kościół Wniebowzięcia NMP w Haczowie to jeden z najstarszych i największych gotyckich kościołów drewnianych w Europie. Powstał prawdopodobnie w XV wieku. Zbudowano go w konstrukcji zrębowej z bali jodłowych.",
+    "Wnętrze zdobi polichromia z końca XV wieku, jedna z najstarszych zachowanych w drewnianych kościołach. Malowidła przedstawiają sceny biblijne i postaci świętych. Kolejne warstwy malowideł dodawano w następnych stuleciach.",
+    "W 2003 roku kościół wpisano na Listę UNESCO razem z innymi drewnianymi kościołami południowej Małopolski. To wyjątkowy przykład średniowiecznego budownictwa drewnianego. Kościół przetrwał wojny i pożary dzięki opiece parafian.",
+    "Haczów leży w dolinie Wisłoka, niedaleko Brzozowa. Kościół można zwiedzać z przewodnikiem poza nabożeństwami. W okolicy przebiega Szlak Architektury Drewnianej z wieloma podobnymi świątyniami."
+   ],
+   "en": [
+    "The Church of the Assumption in Haczów is one of the oldest and largest Gothic wooden churches in Europe. It was probably built in the 15th century. It is constructed of horizontal fir logs.",
+    "The interior is decorated with paintings from the late 15th century, among the oldest surviving in wooden churches. They show biblical scenes and figures of saints. Further layers of painting were added in later centuries.",
+    "In 2003 the church was added to the UNESCO list together with other wooden churches of southern Lesser Poland. It is an exceptional example of medieval wooden architecture. The church survived wars and fires thanks to the care of its parishioners.",
+    "Haczów lies in the Wisłok valley, near Brzozów. The church can be visited with a guide outside service times. The Wooden Architecture Route, with many similar churches, runs through the area."
+   ]
+  },
+  "bo-naftowe": {
+   "pl": [
+    "W 1854 roku Ignacy Łukasiewicz wraz ze wspólnikami założył w Bóbrce kopalnię ropy naftowej. To jedna z najstarszych kopalń ropy na świecie. Łukasiewicz był farmaceutą, który rok wcześniej we Lwowie opracował metodę destylacji nafty.",
+    "Łukasiewicz skonstruował też lampę naftową, która zrewolucjonizowała oświetlenie. Dzięki niemu powstała jedna z pierwszych na świecie lamp ulicznych na naftę i pierwsze rafinerie. Jest uważany za ojca polskiego przemysłu naftowego.",
+    "W 1961 roku w Bóbrce utworzono Muzeum Przemysłu Naftowego i Gazowniczego jego imienia. Na terenie skansenu zachowały się dawne szyby, kieraty, wiertnie i budynki kopalni. Niektóre dawne szyby nadal wydobywają niewielkie ilości ropy.",
+    "Muzeum pokazuje historię wydobycia ropy i gazu, od ręcznych studni po nowoczesne wiertnie. Teren leży w lesie i ma charakter skansenu. Bóbrka leży w pobliżu Krosna."
+   ],
+   "en": [
+    "In 1854 Ignacy Łukasiewicz and his partners founded an oil mine in Bóbrka. It is one of the oldest oil mines in the world. Łukasiewicz was a pharmacist who a year earlier in Lwów had developed a method of distilling kerosene.",
+    "Łukasiewicz also built a kerosene lamp that revolutionised lighting. Thanks to him one of the world's first kerosene street lamps and the first refineries were created. He is regarded as the father of the Polish oil industry.",
+    "In 1961 the Museum of the Oil and Gas Industry named after him was established in Bóbrka. The open-air site preserves old shafts, horse-driven pumps, drilling rigs and mine buildings. Some old wells still produce small amounts of oil.",
+    "The museum presents the history of oil and gas extraction, from hand-dug wells to modern rigs. The site lies in the forest and has the character of an open-air museum. Bóbrka lies near Krosno."
+   ]
+  }
+ }
+}

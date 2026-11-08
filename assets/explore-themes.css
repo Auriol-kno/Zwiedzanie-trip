@@ -39,3 +39,4 @@ body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[dat
 .place-routes a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 12px 4px 4px;border-radius:14px;background:#0B3446;color:#fff!important;font-size:12px;font-weight:800;text-decoration:none!important}
 .place-routes a .ex-art{filter:none}
 .place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a8500f}
+.made-by{margin:18px 0 4px;text-align:center;font:italic 700 12px/1.4 Georgia,Palatino,serif;letter-spacing:.02em;opacity:.8}

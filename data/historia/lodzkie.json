@@ -1,0 +1,180 @@
+{
+ "region": "lodzkie",
+ "version": "8.6.2",
+ "updated": "2026-11-08",
+ "status": "redakcyjne",
+ "note": {
+  "pl": "Opracowanie redakcyjne na podstawie ogólnodostępnych, utrwalonych faktów historycznych. Legendy są wyraźnie oznaczone jako legendy. Przed wizytą sprawdź szczegóły w źródłach (link do Wikipedii w karcie miejsca).",
+  "en": "Editorial summary based on widely available, well-established historical facts. Legends are clearly marked as legends. Check the details in the sources before visiting (Wikipedia link in the place card)."
+ },
+ "places": {
+  "lo-piotrkowska": {
+   "pl": [
+    "Łódź przez stulecia była małym miasteczkiem, a jej wielki rozwój zaczął się w latach 20. XIX wieku. Władze Królestwa Polskiego uczyniły ją ośrodkiem przemysłu włókienniczego. W ciągu kilkudziesięciu lat stała się jednym z największych miast przemysłowych Europy.",
+    "Ulica Piotrkowska ma ponad cztery kilometry i jest główną osią miasta. Wzdłuż niej fabrykanci budowali okazałe kamienice i pałace. W mieście żyli obok siebie Polacy, Żydzi, Niemcy i Rosjanie, co opisał Władysław Reymont w „Ziemi obiecanej”.",
+    "Po 1945 roku w Łodzi powstała słynna Szkoła Filmowa, którą ukończyli m.in. Andrzej Wajda, Roman Polański i Krzysztof Kieślowski. Na Piotrkowskiej leży Aleja Gwiazd z gwiazdami znanych artystów. Przy ulicy stoją też pomniki, m.in. ławeczka Juliana Tuwima.",
+    "Dziś Piotrkowska jest deptakiem pełnym kawiarni, restauracji i murali. Wiele podwórek odnowiono, tworząc pasaże i ogródki. Najlepiej przejść ją spokojnie, zaglądając w bramy kamienic."
+   ],
+   "en": [
+    "For centuries Łódź was a small town, and its great growth began in the 1820s. The authorities of the Kingdom of Poland made it a centre of the textile industry. Within a few decades it became one of the largest industrial cities in Europe.",
+    "Piotrkowska Street is more than four kilometres long and is the city's main axis. Along it manufacturers built grand townhouses and palaces. Poles, Jews, Germans and Russians lived side by side in the city, as Władysław Reymont described in “The Promised Land”.",
+    "After 1945 Łódź became home to the famous Film School, whose graduates include Andrzej Wajda, Roman Polański and Krzysztof Kieślowski. On Piotrkowska lies the Walk of Fame with stars for well-known artists. The street also has monuments, including Julian Tuwim's bench.",
+    "Today Piotrkowska is a pedestrian street full of cafés, restaurants and murals. Many courtyards have been restored as passages and gardens. It is best walked slowly, looking through the gateways of the townhouses."
+   ]
+  },
+  "lo-manufaktura": {
+   "pl": [
+    "Manufaktura powstała w dawnym kompleksie fabryki włókienniczej Izraela Poznańskiego, jednego z najbogatszych łódzkich przemysłowców. Fabrykę rozbudowywano od lat 70. XIX wieku, a obok powstały domy robotnicze i pałac właściciela. Zakład produkował tkaniny bawełniane i zatrudniał tysiące ludzi.",
+    "Ceglane budynki fabryczne z charakterystycznymi detalami stały się symbolem przemysłowej Łodzi. Po upadku przemysłu włókienniczego w latach 90. XX wieku zakład zamknięto. Przez kilka lat budynki stały puste.",
+    "W 2006 roku po rewitalizacji otwarto tu Manufakturę, centrum handlu, kultury i rozrywki. W odnowionych halach działają sklepy, restauracje, kino, hotel i muzea, m.in. Muzeum Fabryki i ms2. Pośrodku leży jeden z największych placów w Polsce.",
+    "Manufaktura jest przykładem udanej przemiany dawnych terenów przemysłowych. Na rynku odbywają się koncerty, a zimą działa lodowisko. Obok stoi Pałac Poznańskiego, który warto odwiedzić przy okazji."
+   ],
+   "en": [
+    "Manufaktura was created in the former textile factory complex of Izrael Poznański, one of the richest Łódź industrialists. The factory was expanded from the 1870s, and workers' houses and the owner's palace were built nearby. The plant produced cotton fabrics and employed thousands of people.",
+    "The brick factory buildings with their distinctive details became a symbol of industrial Łódź. After the collapse of the textile industry in the 1990s the plant closed. For several years the buildings stood empty.",
+    "In 2006, after revitalisation, Manufaktura opened as a centre of shopping, culture and entertainment. The restored halls house shops, restaurants, a cinema, a hotel and museums, including the Factory Museum and ms2. In the middle lies one of the largest squares in Poland.",
+    "Manufaktura is an example of a successful transformation of former industrial land. The square hosts concerts, and in winter there is an ice rink. Next to it stands the Poznański Palace, which is worth visiting too."
+   ]
+  },
+  "lo-palac-poznanskiego": {
+   "pl": [
+    "Pałac Izraela Poznańskiego zbudowano na przełomie XIX i XX wieku obok jego fabryki. Eklektyczna budowla miała pokazać bogactwo i pozycję właściciela. Ze względu na przepych nazywano ją łódzkim Luwrem.",
+    "Wnętrza zdobią sztukaterie, malowidła, boazerie i witraże. Najbardziej okazałe są sala balowa i jadalnia. Pałac był symbolem wielkich fortun łódzkich fabrykantów.",
+    "Od lat 70. XX wieku w pałacu działa Muzeum Miasta Łodzi. Wystawy opowiadają o historii miasta, jego mieszkańcach i wielokulturowości. Są tu także sale poświęcone znanym łodzianom, m.in. Arturowi Rubinsteinowi i Julianowi Tuwimowi.",
+    "Pałac stoi tuż przy Manufakturze, więc łatwo połączyć obie wizyty. Za budynkiem znajduje się ogród. Zwiedzanie wnętrz zajmuje około godziny."
+   ],
+   "en": [
+    "Izrael Poznański's palace was built around 1900 next to his factory. The eclectic building was meant to show its owner's wealth and status. Because of its splendour it was called the Louvre of Łódź.",
+    "The interiors are decorated with stucco, paintings, panelling and stained glass. The ballroom and the dining room are the most magnificent. The palace was a symbol of the great fortunes of the Łódź manufacturers.",
+    "Since the 1970s the palace has housed the Museum of the City of Łódź. The exhibitions tell the history of the city, its residents and its many cultures. There are also rooms devoted to famous people from Łódź, including Artur Rubinstein and Julian Tuwim.",
+    "The palace stands right next to Manufaktura, so the two visits are easy to combine. Behind the building there is a garden. A tour of the interiors takes about an hour."
+   ]
+  },
+  "lo-ec1": {
+   "pl": [
+    "EC1 to dawna elektrownia, pierwsza publiczna elektrownia w Łodzi, uruchomiona na początku XX wieku. Dostarczała prąd fabrykom, tramwajom i mieszkańcom rozwijającego się miasta. Działała przez kilkadziesiąt lat jako elektrociepłownia.",
+    "Po zamknięciu zakładu budynki odnowiono i przekształcono w centrum kultury i nauki. Zachowano dawne maszyny, kotły i turbiny, które są dziś częścią ekspozycji. Ceglane hale i wysoki komin stały się symbolem nowej części miasta.",
+    "Centrum Nauki i Techniki pozwala poznać fizykę, energię i technikę poprzez doświadczenia. Planetarium EC1 należy do najnowocześniejszych w Polsce. W kompleksie działa też Narodowe Centrum Kultury Filmowej.",
+    "EC1 leży przy nowym dworcu Łódź Fabryczna, w centrum miasta. Na zwiedzanie warto przeznaczyć kilka godzin. To świetne miejsce na rodzinny dzień, także w deszczową pogodę."
+   ],
+   "en": [
+    "EC1 is a former power station, the first public power plant in Łódź, opened in the early 20th century. It supplied electricity to factories, trams and residents of the growing city. It operated for decades as a combined heat and power plant.",
+    "After the plant closed, the buildings were restored and turned into a centre of culture and science. The old machines, boilers and turbines were preserved and are now part of the exhibition. The brick halls and tall chimney have become a symbol of a new part of the city.",
+    "The Science and Technology Centre lets you explore physics, energy and technology through experiments. The EC1 Planetarium is one of the most modern in Poland. The complex also houses the National Centre for Film Culture.",
+    "EC1 lies next to the new Łódź Fabryczna station, in the city centre. Allow several hours for a visit. It is a great place for a family day, including in rainy weather."
+   ]
+  },
+  "lo-ms2": {
+   "pl": [
+    "Muzeum Sztuki w Łodzi powstało w 1930 roku i jest jednym z najstarszych muzeów sztuki nowoczesnej na świecie. Jego podstawą była kolekcja grupy artystów awangardowych „a.r.”. Należeli do niej m.in. Władysław Strzemiński, Katarzyna Kobro i Henryk Stażewski.",
+    "Artyści zebrali dzieła czołowych twórców europejskiej awangardy i przekazali je miastu. W kolekcji znalazły się prace m.in. Picassa, Légera i Arpa. Był to wyjątkowy gest, który uczynił Łódź ważnym punktem na mapie sztuki.",
+    "Od 2008 roku część zbiorów pokazywana jest w ms2, w odnowionym budynku dawnej tkalni przy Manufakturze. Ekspozycja prezentuje sztukę XX i XXI wieku w nowoczesny sposób. W głównej siedzibie muzeum zachowano Salę Neoplastyczną zaprojektowaną przez Strzemińskiego.",
+    "ms2 organizuje także wystawy czasowe, spotkania i warsztaty. Wizytę łatwo połączyć ze spacerem po Manufakturze. Muzeum ma trzy siedziby w Łodzi, dlatego warto sprawdzić, która wystawa jest gdzie."
+   ],
+   "en": [
+    "The Museum of Art in Łódź was founded in 1930 and is one of the oldest museums of modern art in the world. Its core was the collection of the avant-garde artists' group “a.r.”. Its members included Władysław Strzemiński, Katarzyna Kobro and Henryk Stażewski.",
+    "The artists gathered works by leading figures of the European avant-garde and donated them to the city. The collection included works by Picasso, Léger and Arp, among others. It was an exceptional gesture that put Łódź on the map of art.",
+    "Since 2008 part of the collection has been shown in ms2, in a restored former weaving mill at Manufaktura. The exhibition presents 20th- and 21st-century art in a modern way. The museum's main building preserves the Neoplastic Room designed by Strzemiński.",
+    "ms2 also organises temporary exhibitions, meetings and workshops. The visit is easy to combine with a walk around Manufaktura. The museum has three sites in Łódź, so check which exhibition is where."
+   ]
+  },
+  "lo-ksiezy-mlyn": {
+   "pl": [
+    "Księży Młyn to zespół fabryczno-mieszkalny zbudowany w XIX wieku przez Karola Scheiblera, łódzkiego „króla bawełny”. Obejmował ogromną przędzalnię, domy robotnicze, szkołę, szpital i sklepy. Był niemal samowystarczalnym miastem w mieście.",
+    "Czerwone ceglane familoki dla robotników ustawiono wzdłuż jednej ulicy. Przędzalnia była jednym z największych budynków przemysłowych w ówczesnym Królestwie Polskim. Rodzina Scheiblerów mieszkała w pobliskim pałacu.",
+    "W pałacu Scheiblera działa dziś Muzeum Kinematografii. Na Księżym Młynie Andrzej Wajda kręcił w latach 70. sceny do filmu „Ziemia obiecana”. Osiedle jest częścią Pomnika Historii, który chroni wielokulturowy krajobraz przemysłowej Łodzi.",
+    "Dawna przędzalnia została przebudowana na lofty mieszkalne. W domach robotniczych nadal mieszkają ludzie, a część zajmują pracownie artystyczne. Obok rozciąga się Park Źródliska, jeden z najstarszych parków miasta."
+   ],
+   "en": [
+    "Księży Młyn is a factory and housing complex built in the 19th century by Karl Scheibler, the Łódź “cotton king”. It included a huge spinning mill, workers' houses, a school, a hospital and shops. It was almost a self-sufficient town within the city.",
+    "Red-brick workers' houses were set along a single street. The spinning mill was one of the largest industrial buildings in the Kingdom of Poland at the time. The Scheibler family lived in a palace nearby.",
+    "Scheibler's palace now houses the Museum of Cinematography. In the 1970s Andrzej Wajda filmed scenes for “The Promised Land” at Księży Młyn. The estate is part of a Monument of History protecting the multicultural industrial landscape of Łódź.",
+    "The former spinning mill has been converted into residential lofts. People still live in the workers' houses, and some are used as artists' studios. Next to it lies Źródliska Park, one of the city's oldest parks."
+   ]
+  },
+  "le-zamek": {
+   "pl": [
+    "Zamek w Łęczycy zbudował w XIV wieku król Kazimierz Wielki. Łęczyca była wtedy stolicą księstwa i ważnym ośrodkiem politycznym. Odbywały się tu zjazdy rycerstwa i synody kościelne.",
+    "Gotycka warownia z cegły ma wysoką wieżę i mury obronne. W kolejnych wiekach zamek był wielokrotnie niszczony, m.in. przez Szwedów. W XX wieku został odbudowany i przeznaczony na muzeum.",
+    "Z zamkiem związana jest legenda o diable Borucie, który mieszka w jego lochach i strzeże skarbów. Boruta przybiera postać szlachcica w kontuszu i płata figle tym, którzy próbują zdobyć bogactwo. To jedna z najbardziej znanych polskich legend o diable.",
+    "W muzeum na zamku można zobaczyć kolekcję figurek i przedstawień Boruty. Pozostałe wystawy opowiadają o historii Łęczycy i regionu. Kilka kilometrów od zamku leży Tum z romańską archikolegiatą."
+   ],
+   "en": [
+    "Łęczyca Castle was built in the 14th century by King Casimir the Great. Łęczyca was then the capital of a duchy and an important political centre. Assemblies of knights and church synods were held here.",
+    "The Gothic brick stronghold has a tall tower and defensive walls. In later centuries the castle was damaged many times, including by the Swedes. In the 20th century it was rebuilt and turned into a museum.",
+    "The castle is linked to the legend of Boruta the devil, who lives in its dungeons and guards treasure. Boruta takes the form of a nobleman in traditional dress and plays tricks on those who try to get rich. It is one of the best-known Polish legends about the devil.",
+    "The castle museum has a collection of figures and images of Boruta. The other exhibitions tell the history of Łęczyca and the region. A few kilometres from the castle lies Tum with its Romanesque collegiate church."
+   ]
+  },
+  "tu-archikolegiata": {
+   "pl": [
+    "Archikolegiatę w Tumie konsekrowano w 1161 roku. Jest jedną z najcenniejszych i najlepiej zachowanych budowli romańskich w Polsce. Zbudowano ją z ciosów granitowych i piaskowcowych.",
+    "Kościół ma dwie apsydy, wschodnią i zachodnią, oraz cztery wieże, co nadaje mu wygląd twierdzy. W zachodniej apsydzie zachowało się romańskie malowidło przedstawiające Chrystusa w majestacie. Wnętrze jest surowe i monumentalne.",
+    "W średniowieczu odbywały się tu synody i zjazdy, a świątynia była ważnym ośrodkiem kościelnym. We wrześniu 1939 roku kościół został poważnie uszkodzony w czasie walk. Po wojnie odbudowano go, przywracając romańską formę.",
+    "Tum leży w dolinie Bzury, kilka kilometrów od Łęczycy. Obok kościoła zachowało się grodzisko, dawny gród łęczycki. Wizytę warto połączyć z zamkiem w Łęczycy."
+   ],
+   "en": [
+    "The collegiate church in Tum was consecrated in 1161. It is one of the most valuable and best-preserved Romanesque buildings in Poland. It was built of granite and sandstone blocks.",
+    "The church has two apses, east and west, and four towers, which give it the look of a fortress. The west apse preserves a Romanesque painting of Christ in Majesty. The interior is austere and monumental.",
+    "In the Middle Ages synods and assemblies were held here, and the church was an important ecclesiastical centre. In September 1939 the church was badly damaged during the fighting. After the war it was rebuilt, restoring its Romanesque form.",
+    "Tum lies in the Bzura valley, a few kilometres from Łęczyca. Next to the church survives an earthwork, the old Łęczyca stronghold. The visit is worth combining with the castle in Łęczyca."
+   ]
+  },
+  "ar-park": {
+   "pl": [
+    "Park w Arkadii założyła w 1778 roku księżna Helena Radziwiłłowa. Ogród miał być wymarzoną krainą szczęścia, nawiązującą do mitycznej Arkadii ze starożytnej Grecji. To jeden z najcenniejszych ogrodów sentymentalnych w Polsce.",
+    "W parku wzniesiono romantyczne budowle: Świątynię Diany, akwedukt, Dom Gotycki i grobowiec. Projektowali je m.in. Szymon Bogumił Zug i Henryk Ittar. Budowle ustawiono tak, by spacerowiczowi odsłaniały się kolejne malownicze widoki.",
+    "Do ozdobienia parku wykorzystano antyczne i średniowieczne elementy kamienne sprowadzane z różnych miejsc. Ogród miał wzbudzać nastrój zadumy, melancholii i zachwytu. Spacer po nim był jak podróż przez historię i mitologię.",
+    "Dziś Arkadia jest oddziałem Muzeum Narodowego w Warszawie, razem z pobliskim pałacem w Nieborowie. Park leży kilka kilometrów od Łowicza. Najpiękniej jest tu wiosną i jesienią."
+   ],
+   "en": [
+    "The park at Arkadia was founded in 1778 by Princess Helena Radziwiłł. The garden was meant to be a dreamland of happiness, inspired by the mythical Arcadia of ancient Greece. It is one of the most valuable sentimental gardens in Poland.",
+    "Romantic buildings were erected in the park: the Temple of Diana, an aqueduct, a Gothic House and a tomb. They were designed by Szymon Bogumił Zug and Henryk Ittar, among others. The buildings were placed so that walkers would discover one picturesque view after another.",
+    "Ancient and medieval stone elements brought from various places were used to decorate the park. The garden was meant to evoke reflection, melancholy and wonder. A walk through it was like a journey through history and mythology.",
+    "Today Arkadia is a branch of the National Museum in Warsaw, together with the nearby palace in Nieborów. The park lies a few kilometres from Łowicz. It is most beautiful in spring and autumn."
+   ]
+  },
+  "ni-palac": {
+   "pl": [
+    "Pałac w Nieborowie zbudowano pod koniec XVII wieku dla prymasa Michała Radziejowskiego. Projekt przypisuje się architektowi Tylmanowi z Gameren. Barokowa rezydencja stała się jedną z najpiękniejszych w Polsce.",
+    "Od 1774 roku pałac należał do Radziwiłłów, którzy przez dwa stulecia gromadzili tu dzieła sztuki, meble i książki. Zachowały się historyczne wnętrza z bogatą biblioteką. Pod koniec XIX wieku działała tu manufaktura majoliki.",
+    "Jednym z najcenniejszych zabytków jest antyczna rzeźba głowy Niobe, sprowadzona z Rzymu. Wokół pałacu rozciąga się barokowy ogród z alejami lip i stawami. Po II wojnie światowej pałac przejęło Muzeum Narodowe w Warszawie.",
+    "Muzeum w Nieborowie i Arkadii pokazuje życie dawnej arystokracji. Wnętrza zwiedza się z przewodnikiem lub według trasy. Pałac i park w Arkadii leżą blisko siebie i warto zobaczyć je razem."
+   ],
+   "en": [
+    "The palace in Nieborów was built at the end of the 17th century for Primate Michał Radziejowski. The design is attributed to the architect Tylman van Gameren. The Baroque residence became one of the finest in Poland.",
+    "From 1774 the palace belonged to the Radziwiłłs, who for two centuries collected works of art, furniture and books here. The historic interiors survive with a rich library. At the end of the 19th century a majolica workshop operated here.",
+    "One of the most precious pieces is an ancient sculpture of the head of Niobe, brought from Rome. Around the palace lies a Baroque garden with lime avenues and ponds. After the Second World War the palace was taken over by the National Museum in Warsaw.",
+    "The museum in Nieborów and Arkadia shows the life of the old aristocracy. The interiors are visited with a guide or along a set route. The palace and the park in Arkadia are close together and worth seeing on the same day."
+   ]
+  },
+  "lw-muzeum": {
+   "pl": [
+    "Łowicz przez wieki należał do arcybiskupów gnieźnieńskich, prymasów Polski, którzy mieli tu swoją rezydencję. Miasto było jednym z ważnych ośrodków kościelnych i gospodarczych Mazowsza. W katedrze spoczywa wielu prymasów.",
+    "Muzeum w Łowiczu mieści się w budynku dawnego kolegium misjonarzy z barokową kaplicą. Kaplicę zdobią freski włoskiego malarza Michelangela Palloniego. To jedno z najcenniejszych wnętrz barokowych regionu.",
+    "Najbardziej znane są zbiory sztuki ludowej Księżaków łowickich. Łowickie stroje w kolorowe pasy, wycinanki z papieru i hafty rozpoznaje się w całej Polsce. Na dziedzińcu muzeum stoi skansen z chałupami regionu.",
+    "Każdego roku w Boże Ciało w Łowiczu odbywa się procesja, w której mieszkańcy idą w tradycyjnych strojach. To jedno z najbardziej barwnych świąt w Polsce. Łowicz leży przy trasie z Warszawy do Łodzi."
+   ],
+   "en": [
+    "For centuries Łowicz belonged to the Archbishops of Gniezno, the Primates of Poland, who had their residence here. The town was an important ecclesiastical and economic centre of Mazovia. Many primates are buried in the cathedral.",
+    "The museum in Łowicz occupies the former missionaries' college with a Baroque chapel. The chapel is decorated with frescoes by the Italian painter Michelangelo Palloni. It is one of the finest Baroque interiors in the region.",
+    "Its best-known collections are the folk art of the Łowicz Księżacy. Łowicz costumes in colourful stripes, paper cut-outs and embroidery are recognised all over Poland. In the museum courtyard stands an open-air display of local cottages.",
+    "Every year on Corpus Christi Łowicz holds a procession in which residents walk in traditional costume. It is one of the most colourful festivals in Poland. Łowicz lies on the route from Warsaw to Łódź."
+   ]
+  },
+  "pt-stare-miasto": {
+   "pl": [
+    "Piotrków Trybunalski był w XV i XVI wieku miejscem obrad sejmów walnych Korony. Od 1578 roku obradował tu Trybunał Koronny, najwyższy sąd dla szlachty Wielkopolski. Od niego miasto wzięło swój przydomek.",
+    "Na początku XVI wieku król Zygmunt Stary zbudował tu zamek królewski, w którym zatrzymywał się podczas sejmów. Dziś mieści się w nim muzeum. Stare Miasto zachowało średniowieczny układ ulic i fragmenty murów.",
+    "Na rynku stał dawniej ratusz, w którym zasiadał Trybunał; dziś zachowały się jego fundamenty. W październiku 1939 roku Niemcy utworzyli w Piotrkowie pierwsze getto w okupowanej Polsce. Przypominają o tym tablice i dawna synagoga.",
+    "Spacer po Starym Mieście obejmuje rynek, kościoły i mury obronne. Piotrków leży przy autostradzie A1, więc to dogodny przystanek w podróży. Miasto ma spokojny, kameralny charakter."
+   ],
+   "en": [
+    "In the 15th and 16th centuries Piotrków Trybunalski hosted the general diets of the Crown. From 1578 the Crown Tribunal, the highest court for the nobility of Greater Poland, sat here. The town took its epithet from it.",
+    "In the early 16th century King Sigismund the Old built a royal castle here, where he stayed during the diets. Today it houses a museum. The Old Town has kept its medieval street plan and fragments of its walls.",
+    "The town hall where the Tribunal sat once stood on the market square; today only its foundations remain. In October 1939 the Germans created the first ghetto in occupied Poland in Piotrków. Plaques and the old synagogue recall this history.",
+    "A walk around the Old Town takes in the square, the churches and the defensive walls. Piotrków lies on the A1 motorway, making it a convenient stop on a journey. The town has a quiet, intimate character."
+   ]
+  }
+ }
+}

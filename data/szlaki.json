@@ -6,207 +6,2005 @@
   "en": "Themed routes are editorial sightseeing suggestions. Stops are in geographical order, and distances and times are estimates. Legends are presented as legends, not as facts."
  },
  "themes": [
-  {"id": "historia", "art": "crown", "color": "#8E2F3C",
-   "pl": {"name": "Historia i królowie", "tagline": "Piastowie, koronacje i dawne stolice", "desc": "Śladami pierwszych władców, koronacji i miast, w których rodziło się państwo polskie."},
-   "en": {"name": "History and kings", "tagline": "Piasts, coronations and old capitals", "desc": "Follow the first rulers, the coronations and the towns where the Polish state was born."}},
-  {"id": "zamki", "art": "castle", "color": "#6A4E36",
-   "pl": {"name": "Zamki i rycerze", "tagline": "Orle Gniazda, krzyżackie twierdze, ruiny", "desc": "Warownie na wapiennych skałach Jury, ceglane zamki krzyżackie i romantyczne ruiny."},
-   "en": {"name": "Castles and knights", "tagline": "Eagles' Nests, Teutonic fortresses, ruins", "desc": "Strongholds on the limestone rocks of the Jura, brick Teutonic castles and romantic ruins."}},
-  {"id": "legendy", "art": "dragon", "color": "#2C6A8C",
-   "pl": {"name": "Baśnie i legendy", "tagline": "Smok, hejnał, koziołki i pierścień Kingi", "desc": "Miejsca, w których narodziły się najsłynniejsze polskie podania — opowiedziane jako legendy."},
-   "en": {"name": "Fairy tales and legends", "tagline": "The dragon, the bugle call, the goats and Kinga's ring", "desc": "Places where Poland's best-known tales were born — told as legends."}},
-  {"id": "czarownice", "art": "witch", "color": "#4A2D66",
-   "pl": {"name": "Czarownice, diabły i duchy", "tagline": "Sabat na Łysej Górze, Boruta, czarny pies", "desc": "Łysa Góra czarownic, diabeł Boruta z Łęczycy i zamki, w których według podań straszy."},
-   "en": {"name": "Witches, devils and ghosts", "tagline": "The witches' sabbath, Boruta, the black dog", "desc": "The witches' Bald Mountain, Boruta the devil of Łęczyca and castles that legends say are haunted."}},
-  {"id": "ww2", "art": "candle", "color": "#3F4B3E",
-   "pl": {"name": "II wojna światowa i pamięć", "tagline": "Wrzesień 1939, bunkry, miejsca pamięci", "desc": "Miejsca pierwszych dni wojny, fortyfikacje i muzea, które przypominają o ofiarach."},
-   "en": {"name": "World War II and remembrance", "tagline": "September 1939, bunkers, memorials", "desc": "Sites of the first days of the war, fortifications and museums that remember the victims."}},
-  {"id": "nauka", "art": "orbit", "color": "#1F4F7B",
-   "pl": {"name": "Nauka i Kopernik", "tagline": "Astronomia, eksperymenty, zegary", "desc": "Szlak Mikołaja Kopernika i miejsca, w których naukę można dotknąć i sprawdzić."},
-   "en": {"name": "Science and Copernicus", "tagline": "Astronomy, experiments, clocks", "desc": "The Copernicus Trail and places where you can touch and test science yourself."}},
-  {"id": "technika", "art": "gear", "color": "#7A5B22",
-   "pl": {"name": "Technika i przemysł", "tagline": "Kopalnie, kanały, ropa i para", "desc": "Zabytki techniki: kopalnie Śląska, pierwsza kopalnia ropy i statki płynące po trawie."},
-   "en": {"name": "Technology and industry", "tagline": "Mines, canals, oil and steam", "desc": "Industrial heritage: Silesian mines, the first oil mine and boats that sail over grass."}},
-  {"id": "podziemia", "art": "mine", "color": "#3B3A48",
-   "pl": {"name": "Podziemia i jaskinie", "tagline": "Sól, srebro, krzemień, kreda", "desc": "Zejdź pod ziemię: kopalnie soli i srebra, prehistoryczne kopalnie krzemienia i jaskinie."},
-   "en": {"name": "Underground and caves", "tagline": "Salt, silver, flint, chalk", "desc": "Go underground: salt and silver mines, prehistoric flint mines and caves."}},
-  {"id": "przyroda", "art": "bison", "color": "#2F6A3E",
-   "pl": {"name": "Dzika przyroda", "tagline": "Żubry, bagna, góry i parki narodowe", "desc": "Puszcze z żubrami, bagna Biebrzy, Tatry, Pieniny i Bieszczady."},
-   "en": {"name": "Wild nature", "tagline": "Bison, marshes, mountains and national parks", "desc": "Primeval forests with bison, the Biebrza marshes, the Tatras, the Pieniny and the Bieszczady."}},
-  {"id": "kultury", "art": "domes", "color": "#8A5326",
-   "pl": {"name": "Wiele kultur i wyznań", "tagline": "Tatarzy, prawosławie, synagogi", "desc": "Meczety Tatarów, prawosławne monastery, synagogi i miasta, w których spotykały się kultury."},
-   "en": {"name": "Many cultures and faiths", "tagline": "Tatars, Orthodoxy, synagogues", "desc": "Tatar mosques, Orthodox monasteries, synagogues and towns where cultures met."}},
-  {"id": "unesco", "art": "globe", "color": "#1E5F74",
-   "pl": {"name": "Skarby UNESCO", "tagline": "Światowe dziedzictwo w Polsce", "desc": "Miejsca z Listy światowego dziedzictwa UNESCO, od Wieliczki po Puszczę Białowieską."},
-   "en": {"name": "UNESCO treasures", "tagline": "World Heritage in Poland", "desc": "Sites on the UNESCO World Heritage List, from Wieliczka to the Białowieża Forest."}},
-  {"id": "palace", "art": "palace", "color": "#6C5A8E",
-   "pl": {"name": "Pałace i romantyczne ogrody", "tagline": "Rezydencje magnatów i parki", "desc": "Magnackie rezydencje, romantyczne parki i wnętrza, które przetrwały do dziś."},
-   "en": {"name": "Palaces and romantic gardens", "tagline": "Magnate residences and parks", "desc": "Magnate residences, romantic parks and interiors that have survived to this day."}},
-  {"id": "morze", "art": "lighthouse", "color": "#1C5D8C",
-   "pl": {"name": "Morze i latarnie", "tagline": "Wydmy, mola, klify i latarnie", "desc": "Wybrzeże Bałtyku: latarnie morskie, klify, ruchome wydmy i drewniane mola."},
-   "en": {"name": "Sea and lighthouses", "tagline": "Dunes, piers, cliffs and lighthouses", "desc": "The Baltic coast: lighthouses, cliffs, shifting dunes and wooden piers."}},
-  {"id": "dzieci", "art": "dino", "color": "#4F7A2A",
-   "pl": {"name": "Dinozaury i rodzinne przygody", "tagline": "Parki jurajskie, pierniki, zabawki", "desc": "Dinozaury, prehistoryczne osady, pierniki i muzea, w których dzieci mogą wszystkiego spróbować."},
-   "en": {"name": "Dinosaurs and family adventures", "tagline": "Jurassic parks, gingerbread, toys", "desc": "Dinosaurs, prehistoric settlements, gingerbread and museums where children can try everything."}}
+  {
+   "id": "wojewodztwa",
+   "art": "region",
+   "color": "#2B5D74",
+   "pl": {
+    "name": "Plany województw",
+    "tagline": "Najciekawsze miejsca każdego regionu",
+    "desc": "Gotowy plan zwiedzania dla każdego z 16 województw: najważniejsze miejsca w kolejności geograficznej, do zapisania jako podróż lub plan dnia."
+   },
+   "en": {
+    "name": "Province plans",
+    "tagline": "The best places in every region",
+    "desc": "A ready-made sightseeing plan for each of the 16 provinces: the key places in geographical order, ready to save as a trip or a day plan."
+   }
+  },
+  {
+   "id": "historia",
+   "art": "crown",
+   "color": "#8E2F3C",
+   "pl": {
+    "name": "Historia i królowie",
+    "tagline": "Piastowie, koronacje i dawne stolice",
+    "desc": "Śladami pierwszych władców, koronacji i miast, w których rodziło się państwo polskie."
+   },
+   "en": {
+    "name": "History and kings",
+    "tagline": "Piasts, coronations and old capitals",
+    "desc": "Follow the first rulers, the coronations and the towns where the Polish state was born."
+   }
+  },
+  {
+   "id": "zamki",
+   "art": "castle",
+   "color": "#6A4E36",
+   "pl": {
+    "name": "Zamki i rycerze",
+    "tagline": "Orle Gniazda, krzyżackie twierdze, ruiny",
+    "desc": "Warownie na wapiennych skałach Jury, ceglane zamki krzyżackie i romantyczne ruiny."
+   },
+   "en": {
+    "name": "Castles and knights",
+    "tagline": "Eagles' Nests, Teutonic fortresses, ruins",
+    "desc": "Strongholds on the limestone rocks of the Jura, brick Teutonic castles and romantic ruins."
+   }
+  },
+  {
+   "id": "legendy",
+   "art": "dragon",
+   "color": "#2C6A8C",
+   "pl": {
+    "name": "Baśnie i legendy",
+    "tagline": "Smok, hejnał, koziołki i pierścień Kingi",
+    "desc": "Miejsca, w których narodziły się najsłynniejsze polskie podania — opowiedziane jako legendy."
+   },
+   "en": {
+    "name": "Fairy tales and legends",
+    "tagline": "The dragon, the bugle call, the goats and Kinga's ring",
+    "desc": "Places where Poland's best-known tales were born — told as legends."
+   }
+  },
+  {
+   "id": "czarownice",
+   "art": "witch",
+   "color": "#4A2D66",
+   "pl": {
+    "name": "Czarownice, diabły i duchy",
+    "tagline": "Sabat na Łysej Górze, Boruta, czarny pies",
+    "desc": "Łysa Góra czarownic, diabeł Boruta z Łęczycy i zamki, w których według podań straszy."
+   },
+   "en": {
+    "name": "Witches, devils and ghosts",
+    "tagline": "The witches' sabbath, Boruta, the black dog",
+    "desc": "The witches' Bald Mountain, Boruta the devil of Łęczyca and castles that legends say are haunted."
+   }
+  },
+  {
+   "id": "ww2",
+   "art": "candle",
+   "color": "#3F4B3E",
+   "pl": {
+    "name": "II wojna światowa i pamięć",
+    "tagline": "Wrzesień 1939, bunkry, miejsca pamięci",
+    "desc": "Miejsca pierwszych dni wojny, fortyfikacje i muzea, które przypominają o ofiarach."
+   },
+   "en": {
+    "name": "World War II and remembrance",
+    "tagline": "September 1939, bunkers, memorials",
+    "desc": "Sites of the first days of the war, fortifications and museums that remember the victims."
+   }
+  },
+  {
+   "id": "nauka",
+   "art": "orbit",
+   "color": "#1F4F7B",
+   "pl": {
+    "name": "Nauka i Kopernik",
+    "tagline": "Astronomia, eksperymenty, zegary",
+    "desc": "Szlak Mikołaja Kopernika i miejsca, w których naukę można dotknąć i sprawdzić."
+   },
+   "en": {
+    "name": "Science and Copernicus",
+    "tagline": "Astronomy, experiments, clocks",
+    "desc": "The Copernicus Trail and places where you can touch and test science yourself."
+   }
+  },
+  {
+   "id": "technika",
+   "art": "gear",
+   "color": "#7A5B22",
+   "pl": {
+    "name": "Technika i przemysł",
+    "tagline": "Kopalnie, kanały, ropa i para",
+    "desc": "Zabytki techniki: kopalnie Śląska, pierwsza kopalnia ropy i statki płynące po trawie."
+   },
+   "en": {
+    "name": "Technology and industry",
+    "tagline": "Mines, canals, oil and steam",
+    "desc": "Industrial heritage: Silesian mines, the first oil mine and boats that sail over grass."
+   }
+  },
+  {
+   "id": "podziemia",
+   "art": "mine",
+   "color": "#3B3A48",
+   "pl": {
+    "name": "Podziemia i jaskinie",
+    "tagline": "Sól, srebro, krzemień, kreda",
+    "desc": "Zejdź pod ziemię: kopalnie soli i srebra, prehistoryczne kopalnie krzemienia i jaskinie."
+   },
+   "en": {
+    "name": "Underground and caves",
+    "tagline": "Salt, silver, flint, chalk",
+    "desc": "Go underground: salt and silver mines, prehistoric flint mines and caves."
+   }
+  },
+  {
+   "id": "przyroda",
+   "art": "bison",
+   "color": "#2F6A3E",
+   "pl": {
+    "name": "Dzika przyroda",
+    "tagline": "Żubry, bagna, góry i parki narodowe",
+    "desc": "Puszcze z żubrami, bagna Biebrzy, Tatry, Pieniny i Bieszczady."
+   },
+   "en": {
+    "name": "Wild nature",
+    "tagline": "Bison, marshes, mountains and national parks",
+    "desc": "Primeval forests with bison, the Biebrza marshes, the Tatras, the Pieniny and the Bieszczady."
+   }
+  },
+  {
+   "id": "kultury",
+   "art": "domes",
+   "color": "#8A5326",
+   "pl": {
+    "name": "Wiele kultur i wyznań",
+    "tagline": "Tatarzy, prawosławie, synagogi",
+    "desc": "Meczety Tatarów, prawosławne monastery, synagogi i miasta, w których spotykały się kultury."
+   },
+   "en": {
+    "name": "Many cultures and faiths",
+    "tagline": "Tatars, Orthodoxy, synagogues",
+    "desc": "Tatar mosques, Orthodox monasteries, synagogues and towns where cultures met."
+   }
+  },
+  {
+   "id": "unesco",
+   "art": "globe",
+   "color": "#1E5F74",
+   "pl": {
+    "name": "Skarby UNESCO",
+    "tagline": "Światowe dziedzictwo w Polsce",
+    "desc": "Miejsca z Listy światowego dziedzictwa UNESCO, od Wieliczki po Puszczę Białowieską."
+   },
+   "en": {
+    "name": "UNESCO treasures",
+    "tagline": "World Heritage in Poland",
+    "desc": "Sites on the UNESCO World Heritage List, from Wieliczka to the Białowieża Forest."
+   }
+  },
+  {
+   "id": "palace",
+   "art": "palace",
+   "color": "#6C5A8E",
+   "pl": {
+    "name": "Pałace i romantyczne ogrody",
+    "tagline": "Rezydencje magnatów i parki",
+    "desc": "Magnackie rezydencje, romantyczne parki i wnętrza, które przetrwały do dziś."
+   },
+   "en": {
+    "name": "Palaces and romantic gardens",
+    "tagline": "Magnate residences and parks",
+    "desc": "Magnate residences, romantic parks and interiors that have survived to this day."
+   }
+  },
+  {
+   "id": "morze",
+   "art": "lighthouse",
+   "color": "#1C5D8C",
+   "pl": {
+    "name": "Morze i latarnie",
+    "tagline": "Wydmy, mola, klify i latarnie",
+    "desc": "Wybrzeże Bałtyku: latarnie morskie, klify, ruchome wydmy i drewniane mola."
+   },
+   "en": {
+    "name": "Sea and lighthouses",
+    "tagline": "Dunes, piers, cliffs and lighthouses",
+    "desc": "The Baltic coast: lighthouses, cliffs, shifting dunes and wooden piers."
+   }
+  },
+  {
+   "id": "dzieci",
+   "art": "dino",
+   "color": "#4F7A2A",
+   "pl": {
+    "name": "Dinozaury i rodzinne przygody",
+    "tagline": "Parki jurajskie, pierniki, zabawki",
+    "desc": "Dinozaury, prehistoryczne osady, pierniki i muzea, w których dzieci mogą wszystkiego spróbować."
+   },
+   "en": {
+    "name": "Dinosaurs and family adventures",
+    "tagline": "Jurassic parks, gingerbread, toys",
+    "desc": "Dinosaurs, prehistoric settlements, gingerbread and museums where children can try everything."
+   }
+  }
  ],
  "routes": [
-  {"id": "orle-gniazda", "theme": "zamki", "featured": true, "art": "castle", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Szlak Orlich Gniazd — Jura Krakowsko-Częstochowska", "intro": "Szlak Orlich Gniazd prowadzi z Krakowa do Częstochowy przez Wyżynę Krakowsko-Częstochowską, czyli Jurę. Nazwa pochodzi od średniowiecznych zamków zbudowanych na wapiennych skałach jak gniazda orłów. Większość z nich powstała w XIV wieku, gdy Kazimierz Wielki umacniał zachodnią granicę Małopolski od strony Śląska. Pieszy czerwony szlak PTTK ma około 160 kilometrów, ale wszystkie zamki można też odwiedzić samochodem w dwa–trzy dni. Po drodze czekają wapienne ostańce, jaskinie, Pustynia Błędowska i liczne legendy o duchach i skarbach."},
-   "en": {"name": "Eagles' Nests Trail — the Kraków-Częstochowa Jura", "intro": "The Eagles' Nests Trail runs from Kraków to Częstochowa across the Kraków-Częstochowa Upland, known as the Jura. Its name comes from medieval castles built on limestone rocks like eagles' nests. Most of them date from the 14th century, when Casimir the Great fortified Lesser Poland's western border with Silesia. The red PTTK walking trail is about 160 kilometres long, but you can also visit all the castles by car in two or three days. Along the way you will find limestone outcrops, caves, the Błędów Desert and many legends of ghosts and treasure."},
+  {
+   "id": "plan-dolnoslaskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "dolnoslaskie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Dolny Śląsk: Wrocław, zamki i Sudety",
+    "intro": "Dolny Śląsk łączy historię wielu narodów z górskimi krajobrazami Sudetów. Plan zaczyna się we Wrocławiu, przez Świdnicę, Książ i Krzeszów prowadzi w Karkonosze, a kończy w Górach Stołowych i Kłodzku. Na całość warto przeznaczyć trzy–cztery dni."
+   },
+   "en": {
+    "name": "Lower Silesia: Wrocław, castles and the Sudetes",
+    "intro": "Lower Silesia combines the history of many nations with the mountain scenery of the Sudetes. The plan starts in Wrocław, leads through Świdnica, Książ and Krzeszów to the Karkonosze, and ends in the Table Mountains and Kłodzko. Allow three to four days for the whole route."
+   },
    "stops": [
-    {"ref": "place:kr-wawel", "pl": "Start szlaku: królewski Kraków.", "en": "Start of the trail: royal Kraków."},
-    {"ref": "place:oj-park", "pl": "Ruiny zamku w Ojcowie, Jaskinia Łokietka i Maczuga Herkulesa.", "en": "Ojców castle ruins, Łokietek's Cave and Hercules' Club."},
-    {"ref": "place:mp-pieskowa-skala", "pl": "Renesansowy zamek z krużgankami i legendą o Dorotce.", "en": "A Renaissance castle with galleries and the legend of Dorotka."},
-    {"ref": "place:mp-rabsztyn", "pl": "Kruczy Kamień nad Olkuszem; obok Pustynia Błędowska.", "en": "Raven Rock above Olkusz; the Błędów Desert is nearby."},
-    {"ref": "place:sl-smolen", "pl": "Leśne ruiny w rezerwacie przyrody.", "en": "Forest ruins in a nature reserve."},
-    {"ref": "place:og-zamek", "pl": "Największe ruiny Jury i legenda o czarnym psie.", "en": "The largest ruins of the Jura and the legend of the black dog."},
-    {"ref": "place:sl-bobolice", "pl": "Odbudowany zamek i legenda o braciach bliźniakach.", "en": "A rebuilt castle and the legend of the twin brothers."},
-    {"ref": "place:sl-mirow", "pl": "Trwała ruina — spacer z Bobolic przez łąki.", "en": "A permanent ruin — a walk from Bobolice across the meadows."},
-    {"ref": "place:sl-olsztyn", "pl": "Wieża, w której zmarł Maćko Borkowic.", "en": "The tower where Maćko Borkowic died."},
-    {"ref": "place:cz-jasna-gora", "pl": "Meta szlaku: sanktuarium na Jasnej Górze.", "en": "End of the trail: the Jasna Góra sanctuary."}
-   ]},
-  {"id": "zamki-gotyckie", "theme": "zamki", "art": "castle", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Szlak Zamków Gotyckich — krzyżacy i biskupi", "intro": "Ceglane zamki gotyckie na Pomorzu, Kujawach i Warmii budowali zakon krzyżacki oraz biskupi i kapituła warmińska. Najpotężniejszy z nich, Malbork, był od 1309 roku stolicą państwa zakonnego. Na Warmii zamki w Lidzbarku, Reszlu i Olsztynie były siedzibami biskupów i kapituły, a w dwóch z nich pracował Mikołaj Kopernik. Trasę najlepiej pokonać samochodem, nocując w Malborku lub w Olsztynie."},
-   "en": {"name": "Gothic Castles Trail — Teutonic Knights and bishops", "intro": "The brick Gothic castles of Pomerania, Kuyavia and Warmia were built by the Teutonic Order and by the bishops and chapter of Warmia. The mightiest of them, Malbork, was the capital of the Order's state from 1309. In Warmia the castles in Lidzbark, Reszel and Olsztyn were seats of the bishops and chapter, and Nicolaus Copernicus worked in two of them. The route is best done by car, staying overnight in Malbork or Olsztyn."},
-   "stops": [{"ref": "place:go-zamek"}, {"ref": "place:ma-zamek"}, {"ref": "place:ol-zamek"}, {"ref": "place:lw-zamek"}, {"ref": "place:re-zamek"}]},
-  {"id": "zamki-swietokrzyskie", "theme": "zamki", "art": "castle", "mode": "driving", "days": "1–2",
-   "pl": {"name": "Zamki i ruiny Ziemi Świętokrzyskiej", "intro": "Ziemia Świętokrzyska kryje kilka niezwykłych zamków i ruin. Królewski zamek w Chęcinach góruje nad miastem od średniowiecza, a w Bodzentynie stoją ruiny zamku biskupów krakowskich. Krzyżtopór w Ujeździe, zbudowany w XVII wieku dla Krzysztofa Ossolińskiego, był jedną z największych rezydencji w Europie przed Wersalem. Trasę kończy Sandomierz z zamkiem królewskim nad Wisłą."},
-   "en": {"name": "Castles and ruins of the Holy Cross region", "intro": "The Holy Cross region hides several remarkable castles and ruins. The royal castle in Chęciny has towered over the town since the Middle Ages, and Bodzentyn has the ruins of a castle of the Bishops of Kraków. Krzyżtopór in Ujazd, built in the 17th century for Krzysztof Ossoliński, was one of the largest residences in Europe before Versailles. The route ends in Sandomierz with its royal castle above the Vistula."},
-   "stops": [{"ref": "place:ch-zamek"}, {"ref": "place:bo-zamek"}, {"ref": "place:uj-krzyztopor"}, {"ref": "place:sa-zamek"}]},
-
-  {"id": "piastowski", "theme": "historia", "featured": true, "art": "crown", "mode": "driving", "days": "1–2",
-   "pl": {"name": "Szlak Piastowski — kolebka państwa", "intro": "Szlak Piastowski łączy miejsca związane z początkami państwa polskiego w Wielkopolsce i na Kujawach. Na Ostrowie Tumskim w Poznaniu stoi katedra, w której pochowano pierwszych Piastów. Na Ostrowie Lednickim zachowały się relikty wczesnośredniowiecznego palatium, a w Gnieźnie w 1000 roku odbył się zjazd z udziałem cesarza Ottona III. Szlak obejmuje też Biskupin — znacznie starszą osadę z epoki żelaza, która pokazuje, jak wyglądało życie na tych ziemiach przed Piastami."},
-   "en": {"name": "Piast Trail — the cradle of the state", "intro": "The Piast Trail links places connected with the beginnings of the Polish state in Greater Poland and Kuyavia. On Ostrów Tumski in Poznań stands the cathedral where the first Piast rulers were buried. On Ostrów Lednicki the remains of an early medieval palace survive, and in Gniezno the famous congress with Emperor Otto III took place in the year 1000. The trail also includes Biskupin, a much older Iron Age settlement that shows what life on these lands looked like before the Piasts."},
-   "stops": [{"ref": "place:po-ostrow-tumski"}, {"ref": "place:le-lednica"}, {"ref": "place:gn-katedra"}, {"ref": "place:bi-biskupin"}]},
-  {"id": "stolice", "theme": "historia", "art": "crown", "mode": "driving", "days": "3–4",
-   "pl": {"name": "Trzy stolice: Gniezno, Kraków, Warszawa", "intro": "Polska miała w swojej historii kilka stolic. Gniezno było pierwszym ośrodkiem kościelnym i miejscem koronacji pierwszych królów. Kraków przez kilka stuleci był siedzibą władców i miejscem koronacji na Wawelu. Na przełomie XVI i XVII wieku król Zygmunt III Waza przeniósł dwór do Warszawy, która stała się stolicą Rzeczypospolitej."},
-   "en": {"name": "Three capitals: Gniezno, Kraków, Warsaw", "intro": "Poland has had several capitals in its history. Gniezno was the first church centre and the place where the first kings were crowned. For several centuries Kraków was the seat of the rulers, with coronations held at Wawel. Around 1600 King Sigismund III Vasa moved the court to Warsaw, which became the capital of the Commonwealth."},
-   "stops": [{"ref": "place:gn-katedra"}, {"ref": "place:kr-wawel"}, {"ref": "place:kr-rynek"}, {"ref": "city:warsaw", "pl": "Pełny przewodnik po Warszawie z Zamkiem Królewskim i Starym Miastem.", "en": "The full Warsaw guide with the Royal Castle and the Old Town."}]},
-  {"id": "renesans", "theme": "historia", "art": "crown", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Renesansowe miasta i rezydencje", "intro": "W XVI wieku Rzeczpospolita przeżywała złoty wiek, a renesans zmieniał wygląd miast i rezydencji. Zamość założył w 1580 roku kanclerz Jan Zamoyski jako miasto idealne, zaprojektowane przez Bernarda Morando. Kazimierz Dolny i Sandomierz bogaciły się na handlu zbożem spławianym Wisłą. Zamki w Krasiczynie i Baranowie Sandomierskim należą do najpiękniejszych rezydencji renesansowych w Polsce."},
-   "en": {"name": "Renaissance towns and residences", "intro": "In the 16th century the Commonwealth enjoyed its golden age, and the Renaissance changed the look of towns and residences. Zamość was founded in 1580 by Chancellor Jan Zamoyski as an ideal town designed by Bernardo Morando. Kazimierz Dolny and Sandomierz grew rich on the grain trade along the Vistula. The castles in Krasiczyn and Baranów Sandomierski are among the finest Renaissance residences in Poland."},
-   "stops": [{"ref": "place:kd-rynek"}, {"ref": "place:za-stare-miasto"}, {"ref": "place:kr-zamek"}, {"ref": "place:ba-zamek"}, {"ref": "place:sa-rynek"}]},
-
-  {"id": "legendy-stolic", "theme": "legendy", "featured": true, "art": "dragon", "mode": "driving", "days": "3–4",
-   "pl": {"name": "Legendy dawnych stolic i grodów", "intro": "Ta trasa prowadzi przez miejsca, z którymi wiążą się najbardziej znane polskie legendy. Każdą z nich opowiadamy jako podanie, a w karcie miejsca znajdziesz też prawdziwą historię. W Krakowie czeka smok wawelski i urwany hejnał, w Wieliczce pierścień św. Kingi, a w Gnieźnie opowieść o Lechu i białym orle. Trasę zamykają koziołki z poznańskiego ratusza i krzywa wieża w Toruniu."},
-   "en": {"name": "Legends of the old capitals and towns", "intro": "This route leads through places linked to Poland's best-known legends. We tell each one as a legend, and the place card also gives the real history. In Kraków you will meet the Wawel Dragon and the broken bugle call, in Wieliczka St Kinga's ring, and in Gniezno the tale of Lech and the white eagle. The route ends with the goats of the Poznań town hall and the leaning tower in Toruń."},
+    {
+     "ref": "place:wr-rynek"
+    },
+    {
+     "ref": "place:wr-ostrow-tumski"
+    },
+    {
+     "ref": "place:wr-hala-stulecia"
+    },
+    {
+     "ref": "place:sw-kosciol-pokoju"
+    },
+    {
+     "ref": "place:wb-ksiaz"
+    },
+    {
+     "ref": "place:kr-opactwo"
+    },
+    {
+     "ref": "place:kp-sniezka"
+    },
+    {
+     "ref": "place:ka-szczeliniec"
+    },
+    {
+     "ref": "place:kl-twierdza"
+    }
+   ]
+  },
+  {
+   "id": "plan-kujawsko-pomorskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "kujawsko-pomorskie",
+   "mode": "driving",
+   "days": "3",
+   "pl": {
+    "name": "Kujawy i Pomorze: Toruń, gotyk i Wisła",
+    "intro": "Region nad Wisłą słynie z gotyckich miast, krzyżackich zamków i prehistorycznego Biskupina. Plan prowadzi od Biskupina przez Bydgoszcz, Chełmno i Grudziądz do Torunia, a kończy się w uzdrowisku Ciechocinek. W Toruniu warto zostać co najmniej jeden pełny dzień."
+   },
+   "en": {
+    "name": "Kuyavia-Pomerania: Toruń, Gothic and the Vistula",
+    "intro": "This Vistula region is famous for Gothic towns, Teutonic castles and prehistoric Biskupin. The plan leads from Biskupin through Bydgoszcz, Chełmno and Grudziądz to Toruń, ending in the spa town of Ciechocinek. It is worth spending at least one full day in Toruń."
+   },
    "stops": [
-    {"ref": "place:kr-wawel", "pl": "Legenda: smok wawelski pokonany owcą wypchaną siarką.", "en": "Legend: the Wawel Dragon defeated with a sheep stuffed with sulphur."},
-    {"ref": "place:kr-mariacki", "pl": "Legenda: hejnał urywa się, bo trębacza trafiła strzała.", "en": "Legend: the bugle call breaks off because an arrow struck the trumpeter."},
-    {"ref": "place:wi-kopalnia", "pl": "Legenda: pierścień św. Kingi odnaleziony w bryle soli.", "en": "Legend: St Kinga's ring found in a lump of salt."},
-    {"ref": "place:gn-katedra", "pl": "Legenda: Lech zobaczył białego orła w gnieździe i założył tu gród.", "en": "Legend: Lech saw a white eagle in its nest and founded his stronghold here."},
-    {"ref": "place:po-stary-rynek", "pl": "Legenda: koziołki, które co dzień w południe trykają się na ratuszowej wieży.", "en": "Legend: the goats that butt heads on the town hall tower every day at noon."},
-    {"ref": "place:to-krzywa-wieza", "pl": "Legenda: wieża przechyliła się za winy rycerza zakonnego.", "en": "Legend: the tower leans because of a knight's sins."}
-   ]},
-  {"id": "legendy-gor", "theme": "legendy", "art": "dragon", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Legendy gór, jezior i jaskiń", "intro": "Góry i jaskinie od zawsze pobudzały wyobraźnię. Według podania Morskie Oko łączy się podziemnym przejściem z morzem, a w jaskini pod Ojcowem pająk miał uratować księcia Łokietka. Zamek w Niedzicy strzeże legendy o skarbie Inków. W Karkonoszach króluje Duch Gór, znany jako Liczyrzepa, który według opowieści sprawdza wędrowców."},
-   "en": {"name": "Legends of mountains, lakes and caves", "intro": "Mountains and caves have always stirred the imagination. According to the tale, Morskie Oko is linked to the sea by an underground passage, and in a cave near Ojców a spider is said to have saved Duke Łokietek. Niedzica Castle guards the legend of the Inca treasure. The Karkonosze Mountains are ruled by the Mountain Spirit, known as Rübezahl or Liczyrzepa, who according to the stories tests travellers."},
-   "stops": [{"ref": "place:oj-park"}, {"ref": "place:ni-zamek"}, {"ref": "place:ta-morskie-oko"}, {"ref": "place:kp-sniezka", "pl": "Legenda: Duch Gór Liczyrzepa, władca Karkonoszy.", "en": "Legend: the Mountain Spirit Rübezahl, lord of the Karkonosze."}]},
-
-  {"id": "lysa-gora", "theme": "czarownice", "featured": true, "art": "witch", "mode": "driving", "days": "1",
-   "pl": {"name": "Łysa Góra — sabat czarownic", "intro": "Łysa Góra, czyli Łysiec w Górach Świętokrzyskich, od wieków słynie z legend o sabatach czarownic. Według podań w noce sabatu czarownice zlatywały się tu na miotłach, by tańczyć z diabłami. Na szczycie zachowały się kamienne wały z czasów przedchrześcijańskich, a w średniowieczu benedyktyni założyli tu klasztor z relikwiami Krzyża Świętego. Rumowiska skalne zwane gołoborzami według legend są pozostałością zniszczonej pogańskiej świątyni. Trasę uzupełnia wejście na Łysicę i muzeum starożytnych hutników."},
-   "en": {"name": "Bald Mountain — the witches' sabbath", "intro": "Łysa Góra, or Łysiec, in the Holy Cross Mountains has long been famous for legends of witches' sabbaths. According to the tales, on sabbath nights witches flew here on broomsticks to dance with devils. Stone ramparts from pre-Christian times survive on the summit, and in the Middle Ages Benedictine monks founded a monastery here with relics of the Holy Cross. The rock fields known as gołoborza are, according to legend, the remains of a destroyed pagan temple. The route also includes the climb to Łysica and the museum of ancient ironworking."},
-   "stops": [{"ref": "place:ns-swiety-krzyz", "pl": "Szczyt czarownic: klasztor, wały kultowe i gołoborze.", "en": "The witches' summit: monastery, ancient ramparts and rock fields."}, {"ref": "place:ns-hutnictwo", "pl": "Starożytni hutnicy i jesienne Dymarki.", "en": "Ancient ironworkers and the autumn smelting festival."}, {"ref": "place:sk-lysica", "pl": "Najwyższy szczyt Gór Świętokrzyskich.", "en": "The highest peak of the Holy Cross Mountains."}]},
-  {"id": "duchy", "theme": "czarownice", "art": "witch", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Duchy, upiory i diabeł Boruta", "intro": "Polskie zamki mają swoich legendarnych mieszkańców. W lochach zamku w Łęczycy według podań mieszka diabeł Boruta, który pilnuje skarbów. W ruinach Ogrodzieńca ma błąkać się czarny pies, a w Olsztynie słychać jęki uwięzionego Maćka Borkowica. W Golubiu opowiada się o duchu królewny Anny Wazówny. Kaplica Czaszek w Czermnej to z kolei prawdziwe, niezwykłe miejsce pamięci o ofiarach wojen i epidemii."},
-   "en": {"name": "Ghosts, phantoms and Boruta the devil", "intro": "Polish castles have their legendary residents. According to legend, Boruta the devil lives in the dungeons of Łęczyca Castle and guards its treasure. A black dog is said to roam the ruins of Ogrodzieniec, and in Olsztyn the groans of the imprisoned Maćko Borkowic can be heard. In Golub they tell of the ghost of Princess Anna Vasa. The Chapel of Skulls in Czermna, by contrast, is a real and extraordinary memorial to the victims of wars and epidemics."},
+    {
+     "ref": "place:bi-biskupin"
+    },
+    {
+     "ref": "place:by-wyspa-mlynska"
+    },
+    {
+     "ref": "place:ch-stare-miasto"
+    },
+    {
+     "ref": "place:gr-spichrze"
+    },
+    {
+     "ref": "place:go-zamek"
+    },
+    {
+     "ref": "place:to-stare-miasto"
+    },
+    {
+     "ref": "place:to-dom-kopernika"
+    },
+    {
+     "ref": "place:to-piernik"
+    },
+    {
+     "ref": "place:ci-teznie"
+    }
+   ]
+  },
+  {
+   "id": "plan-lubelskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "lubelskie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Lubelszczyzna: Lublin, Kazimierz i Zamość",
+    "intro": "Lubelszczyzna to region renesansowych miasteczek, wąwozów lessowych i wielu kultur. Plan łączy pałac w Kozłówce, Lublin, Nałęczów, Kazimierz Dolny z Janowcem, renesansowy Zamość i lasy Roztocza. To dobry pomysł na długi weekend."
+   },
+   "en": {
+    "name": "Lublin region: Lublin, Kazimierz and Zamość",
+    "intro": "The Lublin region is a land of Renaissance towns, loess ravines and many cultures. The plan combines the palace at Kozłówka, Lublin, Nałęczów, Kazimierz Dolny with Janowiec, Renaissance Zamość and the forests of Roztocze. It makes a good long weekend."
+   },
    "stops": [
-    {"ref": "place:le-zamek", "pl": "Legenda: diabeł Boruta w zamkowych lochach.", "en": "Legend: Boruta the devil in the castle dungeons."},
-    {"ref": "place:go-zamek", "pl": "Legenda: duch Anny Wazówny.", "en": "Legend: the ghost of Anna Vasa."},
-    {"ref": "place:sl-olsztyn", "pl": "Legenda: jęki Maćka Borkowica.", "en": "Legend: the groans of Maćko Borkowic."},
-    {"ref": "place:og-zamek", "pl": "Legenda: czarny pies z łańcuchem.", "en": "Legend: the black dog with a chain."},
-    {"ref": "place:mp-pieskowa-skala", "pl": "Legenda: baszta Dorotki.", "en": "Legend: Dorotka's tower."},
-    {"ref": "place:ku-kaplica-czaszek", "pl": "Prawdziwe miejsce pamięci, wyłożone tysiącami czaszek.", "en": "A real memorial lined with thousands of skulls."}
-   ]},
-
-  {"id": "wrzesien-1939", "theme": "ww2", "featured": true, "art": "candle", "mode": "driving", "days": "2",
-   "pl": {"name": "Wrzesień 1939 — pierwsze dni wojny", "intro": "Wieczorem 31 sierpnia 1939 roku niemieccy esesmani upozorowali napad na radiostację w Gliwicach, by mieć pretekst do wojny. O świcie 1 września pancernik Schleswig-Holstein ostrzelał polską składnicę na Westerplatte, której załoga broniła się przez siedem dni. Muzeum II Wojny Światowej w Gdańsku opowiada o wojnie z perspektywy ludności cywilnej. W Gdyni można wejść na pokład niszczyciela ORP Błyskawica, który walczył w czasie wojny u boku aliantów."},
-   "en": {"name": "September 1939 — the first days of the war", "intro": "On the evening of 31 August 1939 German SS men staged an attack on the Gliwice radio station to create a pretext for war. At dawn on 1 September the battleship Schleswig-Holstein shelled the Polish depot at Westerplatte, whose garrison held out for seven days. The Museum of the Second World War in Gdańsk tells the story of the war from the perspective of civilians. In Gdynia you can board the destroyer ORP Błyskawica, which fought alongside the Allies during the war."},
-   "stops": [{"ref": "place:gl-radiostacja"}, {"ref": "place:gd-westerplatte"}, {"ref": "place:gd-muzeum-ii-ws"}, {"ref": "place:gy-nabrzeze"}]},
-  {"id": "pamiec", "theme": "ww2", "art": "candle", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Pamięć o ofiarach — okupacja i Zagłada", "intro": "W czasie II wojny światowej okupowana Polska stała się miejscem największych zbrodni niemieckich nazistów, w tym Zagłady Żydów. Krakowski Kazimierz i Fabryka Schindlera opowiadają o życiu i losach mieszkańców miasta. Auschwitz-Birkenau i Majdanek to dawne niemieckie obozy, dziś muzea i miejsca pamięci. W Warszawie Muzeum Powstania Warszawskiego i Muzeum POLIN uzupełniają tę opowieść. Te miejsca wymagają powagi i czasu, dlatego warto rozłożyć trasę na kilka dni."},
-   "en": {"name": "Remembering the victims — occupation and Holocaust", "intro": "During the Second World War occupied Poland became the scene of the gravest crimes of the German Nazis, including the Holocaust of the Jews. Kraków's Kazimierz and Schindler's Factory tell of the life and fate of the city's inhabitants. Auschwitz-Birkenau and Majdanek are former German camps, now museums and memorials. In Warsaw the Warsaw Rising Museum and the POLIN Museum complete the story. These places demand solemnity and time, so it is worth spreading the route over several days."},
-   "stops": [{"ref": "place:kr-kazimierz"}, {"ref": "place:kr-schindler"}, {"ref": "place:os-auschwitz"}, {"ref": "place:lu-majdanek"}, {"ref": "city:warsaw", "pl": "Muzeum Powstania Warszawskiego i POLIN w przewodniku Warszawy.", "en": "The Warsaw Rising Museum and POLIN in the Warsaw guide."}]},
-  {"id": "bunkry", "theme": "ww2", "art": "candle", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Bunkry, kwatery i fabryki wojny", "intro": "Na terenie dzisiejszej Polski zachowały się potężne fortyfikacje i obiekty z czasów II wojny światowej. Międzyrzecki Rejon Umocniony to system bunkrów połączonych kilometrami podziemnych korytarzy. Wilczy Szaniec w Gierłoży był główną kwaterą Hitlera, gdzie w 1944 roku Claus von Stauffenberg przeprowadził nieudany zamach. Exploseum w Bydgoszczy pokazuje dawną niemiecką fabrykę materiałów wybuchowych ukrytą w lesie."},
-   "en": {"name": "Bunkers, headquarters and war factories", "intro": "Huge fortifications and Second World War sites survive on the territory of today's Poland. The Międzyrzecz Fortified Region is a system of bunkers linked by kilometres of underground tunnels. The Wolf's Lair in Gierłoż was Hitler's main headquarters, where in 1944 Claus von Stauffenberg carried out a failed assassination attempt. Exploseum in Bydgoszcz shows a former German explosives factory hidden in the forest."},
-   "stops": [{"ref": "place:mr-mru"}, {"ref": "place:by-exploseum"}, {"ref": "place:gi-wilczy-szaniec"}]},
-
-  {"id": "kopernik", "theme": "nauka", "featured": true, "art": "orbit", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Szlak Kopernikowski", "intro": "Mikołaj Kopernik urodził się w 1473 roku w Toruniu, a studiował m.in. w Akademii Krakowskiej. Przez wiele lat mieszkał na Warmii: w Lidzbarku jako sekretarz i lekarz swojego wuja, biskupa, a w Olsztynie jako administrator dóbr kapituły. We Fromborku, jako kanonik, prowadził obserwacje i ukończył dzieło „O obrotach sfer niebieskich”, wydane w 1543 roku. Teoria heliocentryczna zmieniła sposób, w jaki ludzie patrzą na Wszechświat."},
-   "en": {"name": "Copernicus Trail", "intro": "Nicolaus Copernicus was born in Toruń in 1473 and studied, among other places, at the Kraków Academy. For many years he lived in Warmia: in Lidzbark as secretary and physician to his uncle, the bishop, and in Olsztyn as administrator of the chapter's estates. In Frombork, as a canon, he made observations and completed “On the Revolutions of the Heavenly Spheres”, published in 1543. The heliocentric theory changed the way people see the Universe."},
-   "stops": [{"ref": "place:kr-rynek", "pl": "Collegium Maius, gdzie studiował Kopernik, jest kilka minut od Rynku.", "en": "Collegium Maius, where Copernicus studied, is a few minutes from the square."}, {"ref": "place:to-dom-kopernika"}, {"ref": "place:ol-zamek"}, {"ref": "place:lw-zamek"}, {"ref": "place:fr-wzgorze"}]},
-  {"id": "nauka-dotyk", "theme": "nauka", "art": "orbit", "mode": "driving", "days": "2",
-   "pl": {"name": "Nauka, której można dotknąć", "intro": "Ta trasa łączy miejsca, w których naukę poznaje się przez eksperyment i obserwację. Centrum Nauki i Techniki EC1 w Łodzi mieści się w dawnej elektrowni i ma także planetarium. W Jędrzejowie Muzeum Przypkowskich gromadzi jedną z największych kolekcji zegarów słonecznych. Na Wietrzni w Kielcach geolodzy pokazują skały i skamieniałości sprzed setek milionów lat."},
-   "en": {"name": "Science you can touch", "intro": "This route links places where you learn science through experiment and observation. The EC1 Science and Technology Centre in Łódź occupies a former power station and also has a planetarium. In Jędrzejów the Przypkowski Museum holds one of the largest collections of sundials. At Wietrznia in Kielce geologists show rocks and fossils hundreds of millions of years old."},
-   "stops": [{"ref": "place:lo-ec1"}, {"ref": "place:je-przypkowscy"}, {"ref": "place:ki-wietrznia"}]},
-
-  {"id": "slask-techniki", "theme": "technika", "featured": true, "art": "gear", "mode": "driving", "days": "1–2",
-   "pl": {"name": "Szlak Zabytków Techniki — Górny Śląsk", "intro": "Górny Śląsk przez dwa stulecia był przemysłowym sercem tej części Europy. Dziś dawne kopalnie, osiedla robotnicze i zakłady zamieniono w muzea i ośrodki kultury. Można zjechać do kopalni węgla na głębokość 320 metrów, przepłynąć łodzią zalany chodnik kopalni srebra i zobaczyć drewnianą wieżę radiostacji. Wszystkie przystanki leżą blisko siebie, więc trasę da się zrobić w jeden–dwa dni."},
-   "en": {"name": "Industrial Monuments Route — Upper Silesia", "intro": "For two centuries Upper Silesia was the industrial heart of this part of Europe. Today former mines, workers' estates and factories have become museums and cultural centres. You can ride down a coal mine to a depth of 320 metres, take a boat along a flooded gallery of a silver mine and see the wooden tower of a radio station. All stops are close together, so the route can be done in one or two days."},
-   "stops": [{"ref": "place:ka-nikiszowiec"}, {"ref": "place:ka-strefa-kultury"}, {"ref": "place:za-guido"}, {"ref": "place:gl-radiostacja"}, {"ref": "place:tg-kopalnia-srebra"}]},
-  {"id": "ropa-woda", "theme": "technika", "art": "gear", "mode": "driving", "days": "3–4",
-   "pl": {"name": "Ropa, para i woda", "intro": "Polska ma kilka zabytków techniki, którymi szczyci się cały świat. W Bóbrce Ignacy Łukasiewicz założył w połowie XIX wieku jedną z pierwszych na świecie kopalni ropy naftowej. Na Kanale Elbląskim statki pokonują różnicę wysokości, wjeżdżając na wózkach po pochylniach, czyli płynąc po trawie. Kanał Augustowski z XIX wieku łączy jeziora i rzeki śluzami, a łódzka Manufaktura przypomina o potędze dawnego przemysłu włókienniczego."},
-   "en": {"name": "Oil, steam and water", "intro": "Poland has several industrial monuments that are admired worldwide. In Bóbrka Ignacy Łukasiewicz founded one of the world's first oil mines in the mid-19th century. On the Elbląg Canal boats overcome differences in height by riding on trolleys up inclined planes, in effect sailing over grass. The 19th-century Augustów Canal links lakes and rivers with locks, and Łódź's Manufaktura recalls the might of the old textile industry."},
-   "stops": [{"ref": "place:bo-naftowe"}, {"ref": "place:lo-manufaktura"}, {"ref": "place:bu-pochylnie"}, {"ref": "place:au-kanal"}]},
-
-  {"id": "pod-ziemia-poludnie", "theme": "podziemia", "featured": true, "art": "mine", "mode": "driving", "days": "2",
-   "pl": {"name": "Pod ziemią: sól, węgiel i srebro", "intro": "Małopolska i Śląsk kryją pod ziemią całe miasta wydrążone przez górników. W Wieliczce kopalnia soli działa od XIII wieku, a w Tarnowskich Górach wydobywano srebro i ołów. W Zabrzu można zjechać do kopalni węgla na głębokość 320 metrów. Pod ziemią panuje chłód, więc warto zabrać ciepłe ubranie także latem."},
-   "en": {"name": "Underground: salt, coal and silver", "intro": "Lesser Poland and Silesia hide whole underground towns dug by miners. In Wieliczka the salt mine has worked since the 13th century, and in Tarnowskie Góry silver and lead were mined. In Zabrze you can ride down a coal mine to a depth of 320 metres. It is cold underground, so take warm clothes even in summer."},
-   "stops": [{"ref": "place:wi-kopalnia"}, {"ref": "place:tg-kopalnia-srebra"}, {"ref": "place:za-guido"}]},
-  {"id": "pod-ziemia-wschod", "theme": "podziemia", "art": "mine", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Krzemień, kreda i jaskinie", "intro": "W Krzemionkach zachowały się kopalnie krzemienia pasiastego sprzed około pięciu tysięcy lat, wpisane na Listę UNESCO. Pod Chełmem ciągną się korytarze dawnej kopalni kredy, w których według legendy straszy duch zwany Bieluchem. Pod Sandomierzem i Rzeszowem można przejść podziemnymi trasami po dawnych piwnicach kupieckich. Jaskinia Raj koło Chęcin zachwyca naciekami i należy do najpiękniejszych jaskiń w Polsce."},
-   "en": {"name": "Flint, chalk and caves", "intro": "Krzemionki preserves striped-flint mines about five thousand years old, listed by UNESCO. Under Chełm run the tunnels of an old chalk mine, said by legend to be haunted by a ghost called Bieluch. Under Sandomierz and Rzeszów you can follow underground routes through old merchants' cellars. Raj Cave near Chęciny delights with its dripstones and is one of the most beautiful caves in Poland."},
-   "stops": [{"ref": "place:ch-jaskinia-raj"}, {"ref": "place:kr-krzemionki"}, {"ref": "place:sa-trasa"}, {"ref": "place:ch-podziemia"}, {"ref": "place:rz-rynek"}]},
-
-  {"id": "puszcze", "theme": "przyroda", "featured": true, "art": "bison", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Puszcze i bagna Podlasia", "intro": "Podlasie to kraina dzikiej przyrody. Puszcza Białowieska jest jednym z ostatnich fragmentów pierwotnego lasu nizinnego Europy i wpisano ją na Listę UNESCO. Żyją tu żubry, które uratowano przed wyginięciem w XX wieku dzięki hodowli. Bagna Biebrzy to raj dla ptaków i miłośników obserwacji przyrody, a Kanał Augustowski prowadzi przez lasy i jeziora."},
-   "en": {"name": "Forests and marshes of Podlasie", "intro": "Podlasie is a land of wild nature. The Białowieża Forest is one of the last fragments of Europe's primeval lowland forest and is listed by UNESCO. It is home to European bison, which were saved from extinction in the 20th century through breeding. The Biebrza marshes are a paradise for birds and wildlife watchers, and the Augustów Canal runs through forests and lakes."},
-   "stops": [{"ref": "place:bw-park"}, {"ref": "place:bw-zubry"}, {"ref": "place:go-biebrza"}, {"ref": "place:au-kanal"}]},
-  {"id": "gory", "theme": "przyroda", "art": "bison", "mode": "driving", "days": "3–5",
-   "pl": {"name": "Góry: Tatry, Pieniny i Bieszczady", "intro": "Południe Polski to pasmo gór o bardzo różnym charakterze. Tatry są jedynymi w Polsce górami o charakterze wysokogórskim, z jeziorami polodowcowymi i skalnymi graniami. Pieniny słyną z przełomu Dunajca i spływu tratwami. Bieszczady kuszą połoninami, czyli rozległymi łąkami na grzbietach, i poczuciem dzikości."},
-   "en": {"name": "Mountains: Tatras, Pieniny and Bieszczady", "intro": "Southern Poland has mountain ranges of very different character. The Tatras are Poland's only alpine mountains, with glacial lakes and rocky ridges. The Pieniny are famous for the Dunajec Gorge and its rafting trips. The Bieszczady tempt with połoniny, wide grasslands on the ridges, and a feeling of wilderness."},
-   "stops": [{"ref": "place:ta-morskie-oko"}, {"ref": "place:ta-kasprowy"}, {"ref": "place:pi-splyw"}, {"ref": "place:bi-poloniny"}]},
-
-  {"id": "tatarski", "theme": "kultury", "featured": true, "art": "domes", "mode": "driving", "days": "2",
-   "pl": {"name": "Szlak Tatarski i Podlasie wielu wyznań", "intro": "Na Podlasiu od wieków żyją obok siebie katolicy, prawosławni, a dawniej także liczni Żydzi i Tatarzy. W Kruszynianach stoi drewniany meczet polskich Tatarów, którzy osiedlili się tu w XVII wieku. Supraśl i Grabarka to ważne miejsca prawosławia, a Wielka Synagoga w Tykocinie przypomina o społeczności żydowskiej. Trasę kończy pokamedulski klasztor w Wigrach nad jeziorem."},
-   "en": {"name": "Tatar Trail and the many faiths of Podlasie", "intro": "In Podlasie Catholics and Orthodox Christians have lived side by side for centuries, as did many Jews and Tatars in the past. In Kruszyniany stands the wooden mosque of the Polish Tatars, who settled here in the 17th century. Supraśl and Grabarka are important Orthodox sites, and the Great Synagogue in Tykocin recalls the Jewish community. The route ends at the former Camaldolese monastery in Wigry by the lake."},
-   "stops": [{"ref": "place:gr-grabarka"}, {"ref": "place:ty-synagoga"}, {"ref": "place:kr-meczet"}, {"ref": "place:su-ikony"}, {"ref": "place:wi-klasztor"}]},
-  {"id": "spotkania", "theme": "kultury", "art": "domes", "mode": "driving", "days": "3",
-   "pl": {"name": "Miasta spotkania kultur", "intro": "Wiele polskich miast przez stulecia było domem dla różnych narodów i wyznań. Krakowski Kazimierz łączył miasto chrześcijańskie i żydowskie. W Lublinie, w kaplicy zamkowej, zachowały się średniowieczne freski w stylu bizantyjsko-ruskim, ufundowane przez Władysława Jagiełłę. W Karpaczu stoi norweska świątynia Wang, przeniesiona tu w XIX wieku."},
-   "en": {"name": "Towns where cultures met", "intro": "For centuries many Polish towns were home to different nations and faiths. Kraków's Kazimierz combined a Christian and a Jewish town. In Lublin the castle chapel preserves medieval frescoes in the Byzantine-Ruthenian style, funded by Władysław Jagiełło. In Karpacz stands the Norwegian Wang stave church, moved here in the 19th century."},
-   "stops": [{"ref": "place:kr-kazimierz"}, {"ref": "place:lu-stare-miasto"}, {"ref": "place:lu-zamek"}, {"ref": "place:kp-wang"}]},
-
-  {"id": "unesco-poludnie", "theme": "unesco", "featured": true, "art": "globe", "mode": "driving", "days": "3–4",
-   "pl": {"name": "UNESCO na południu Polski", "intro": "Na południu Polski leży wiele obiektów z Listy światowego dziedzictwa UNESCO. Stare Miasto w Krakowie i kopalnia w Wieliczce znalazły się już na pierwszej liście z 1978 roku. Na Śląsku czekają Kopalnia Srebra w Tarnowskich Górach, Kościół Pokoju w Świdnicy i Hala Stulecia we Wrocławiu. Na Podkarpaciu warto zobaczyć drewniany kościół w Haczowie."},
-   "en": {"name": "UNESCO in southern Poland", "intro": "Southern Poland has many sites on the UNESCO World Heritage List. Kraków's Old Town and the Wieliczka mine were on the very first list in 1978. In Silesia you can visit the silver mine in Tarnowskie Góry, the Church of Peace in Świdnica and the Centennial Hall in Wrocław. In Podkarpacie it is worth seeing the wooden church in Haczów."},
-   "stops": [{"ref": "place:wr-hala-stulecia"}, {"ref": "place:sw-kosciol-pokoju"}, {"ref": "place:tg-kopalnia-srebra"}, {"ref": "place:kr-rynek"}, {"ref": "place:wi-kopalnia"}, {"ref": "place:ha-kosciol"}]},
-  {"id": "unesco-reszta", "theme": "unesco", "art": "globe", "mode": "driving", "days": "4–6",
-   "pl": {"name": "UNESCO: północ, zachód i wschód", "intro": "Pozostałe polskie obiekty UNESCO są rozrzucone po całym kraju. Na zachodzie leży Park Mużakowski, dzielony z Niemcami, a na północy średniowieczny Toruń i zamek w Malborku. Na wschodzie czekają renesansowy Zamość i Puszcza Białowieska. Ta trasa to raczej plan na kilka wyjazdów niż na jeden weekend."},
-   "en": {"name": "UNESCO: north, west and east", "intro": "Poland's other UNESCO sites are spread across the country. In the west lies Muskau Park, shared with Germany, and in the north medieval Toruń and Malbork Castle. In the east you will find Renaissance Zamość and the Białowieża Forest. This route is more a plan for several trips than for a single weekend."},
-   "stops": [{"ref": "place:le-park-muzakowski"}, {"ref": "place:to-stare-miasto"}, {"ref": "place:ma-zamek"}, {"ref": "place:bw-park"}, {"ref": "place:za-stare-miasto"}]},
-
-  {"id": "rezydencje", "theme": "palace", "featured": true, "art": "palace", "mode": "driving", "days": "2–3",
-   "pl": {"name": "Rezydencje magnatów — centrum i wschód", "intro": "Magnackie rody budowały okazałe rezydencje otoczone parkami. Nieborów i pobliska Arkadia Radziwiłłów to pałac oraz romantyczny park z ruinami i świątyniami. W Kozłówce zachowały się pełne wnętrza pałacu Zamoyskich. Zamek w Łańcucie, dawna rezydencja Lubomirskich i Potockich, słynie z kolekcji powozów i bogatych sal."},
-   "en": {"name": "Magnate residences — centre and east", "intro": "Magnate families built grand residences surrounded by parks. Nieborów and nearby Arkadia of the Radziwiłłs combine a palace with a romantic park full of ruins and temples. Kozłówka preserves the complete interiors of the Zamoyski palace. Łańcut Castle, once home to the Lubomirski and Potocki families, is famous for its carriage collection and lavish halls."},
-   "stops": [{"ref": "place:ni-palac"}, {"ref": "place:ar-park"}, {"ref": "place:ko-muzeum-zamoyskich"}, {"ref": "place:lc-zamek"}]},
-  {"id": "zamki-palace-zachod", "theme": "palace", "art": "palace", "mode": "driving", "days": "3",
-   "pl": {"name": "Zamki-pałace Śląska i Wielkopolski", "intro": "Na Śląsku i w Wielkopolsce arystokraci zamieniali średniowieczne zamki w wystawne pałace. Książ i Pszczyna należały do Hochbergów, jednego z najbogatszych rodów Europy. Moszna zachwyca wieżyczkami jak z baśni, a Kórnik i Rogalin pokazują rezydencje wielkopolskich rodów z bibliotekami i starymi dębami. Gołuchów to zamek przebudowany na wzór francuskich rezydencji nad Loarą."},
-   "en": {"name": "Castle-palaces of Silesia and Greater Poland", "intro": "In Silesia and Greater Poland aristocrats turned medieval castles into lavish palaces. Książ and Pszczyna belonged to the Hochbergs, one of the richest families in Europe. Moszna delights with fairy-tale turrets, while Kórnik and Rogalin show residences of Greater Poland families with libraries and ancient oaks. Gołuchów is a castle rebuilt in the manner of French châteaux on the Loire."},
-   "stops": [{"ref": "place:wb-ksiaz"}, {"ref": "place:mo-zamek"}, {"ref": "place:ps-zamek"}, {"ref": "place:gl-zamek"}, {"ref": "place:ko-zamek"}, {"ref": "place:ro-palac"}]},
-
-  {"id": "wybrzeze", "theme": "morze", "featured": true, "art": "lighthouse", "mode": "driving", "days": "3–5",
-   "pl": {"name": "Wybrzeże: latarnie, klify i wydmy", "intro": "Polskie wybrzeże Bałtyku ma ponad 500 kilometrów i bardzo różne oblicza. W Świnoujściu stoi najwyższa latarnia morska w Polsce, a w Wolińskim Parku Narodowym strome klify. W Trzęsaczu morze stopniowo zabrało gotycki kościół, z którego została jedna ściana. Ruchome wydmy koło Łeby wędrują co roku o kilka metrów, a Półwysep Helski wcina się daleko w Zatokę Gdańską."},
-   "en": {"name": "The coast: lighthouses, cliffs and dunes", "intro": "Poland's Baltic coast is more than 500 kilometres long and has many faces. Świnoujście has the tallest lighthouse in Poland, and Wolin National Park has steep cliffs. In Trzęsacz the sea gradually swallowed a Gothic church, leaving a single wall. The shifting dunes near Łeba move several metres a year, and the Hel Peninsula reaches far into the Bay of Gdańsk."},
-   "stops": [{"ref": "place:sw-latarnia"}, {"ref": "place:mi-wolinski-pn"}, {"ref": "place:tr-ruina"}, {"ref": "place:ko-molo"}, {"ref": "place:le-wydmy"}, {"ref": "place:he-mierzeja"}, {"ref": "place:so-molo"}]},
-
-  {"id": "dinozaury", "theme": "dzieci", "featured": true, "art": "dino", "mode": "driving", "days": "2",
-   "pl": {"name": "Dinozaury i podróż w czasie", "intro": "Ta trasa to podróż przez miliony lat. W Krasiejowie odkryto szczątki gadów sprzed ponad 200 milionów lat, a park pokazuje je w naturalnej skali. JuraPark w Bałtowie łączy modele dinozaurów z prawdziwymi tropami. Na Wietrzni w Kielcach można zobaczyć skały dawnego morza, a w Biskupinie wejść do zrekonstruowanej osady sprzed blisko trzech tysięcy lat."},
-   "en": {"name": "Dinosaurs and time travel", "intro": "This route is a journey through millions of years. In Krasiejów remains of reptiles more than 200 million years old were discovered, and the park shows them at full scale. JuraPark in Bałtów combines dinosaur models with real footprints. At Wietrznia in Kielce you can see the rocks of an ancient sea, and in Biskupin enter a reconstructed settlement almost three thousand years old."},
-   "stops": [{"ref": "place:kr-jurapark"}, {"ref": "place:ba-jurapark"}, {"ref": "place:ki-wietrznia"}, {"ref": "place:bi-biskupin"}]},
-  {"id": "slodkie", "theme": "dzieci", "art": "dino", "mode": "driving", "days": "3",
-   "pl": {"name": "Pierniki, rogale i zabawki", "intro": "Rodzinna trasa po miejscach, w których można coś zrobić samemu. W Toruniu dzieci wypiekają pierniki według dawnych receptur, a w Poznaniu poznają tajemnice rogali świętomarcińskich. W Kielcach Muzeum Zabawek i Zabawy pokazuje zabawki z różnych epok. W Szymbarku czeka dom do góry nogami, w którym trudno utrzymać równowagę."},
-   "en": {"name": "Gingerbread, croissants and toys", "intro": "A family route to places where you can make things yourself. In Toruń children bake gingerbread to old recipes, and in Poznań they learn the secrets of St Martin's croissants. In Kielce the Museum of Toys and Play shows toys from many eras. In Szymbark an upside-down house awaits, where it is hard to keep your balance."},
-   "stops": [{"ref": "place:ki-muzeum-zabawek"}, {"ref": "place:po-rogalowe"}, {"ref": "place:to-piernik"}, {"ref": "place:sz-szymbark"}]}
+    {
+     "ref": "place:ko-muzeum-zamoyskich"
+    },
+    {
+     "ref": "place:lu-stare-miasto"
+    },
+    {
+     "ref": "place:lu-zamek"
+    },
+    {
+     "ref": "place:na-park-zdrojowy"
+    },
+    {
+     "ref": "place:kd-rynek"
+    },
+    {
+     "ref": "place:ja-zamek"
+    },
+    {
+     "ref": "place:za-stare-miasto"
+    },
+    {
+     "ref": "place:zw-roztocze"
+    }
+   ]
+  },
+  {
+   "id": "plan-lubuskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "lubuskie",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Ziemia Lubuska: wino, bunkry i parki",
+    "intro": "Ziemia Lubuska jest mniej znana, ale pełna niespodzianek: podziemi MRU, winnic Zielonej Góry i parku z Listy UNESCO. Plan prowadzi od Gorzowa przez Międzyrzecz, Łagów i Świebodzin do Zielonej Góry i Parku Mużakowskiego. Dwa–trzy dni wystarczą na spokojne zwiedzanie."
+   },
+   "en": {
+    "name": "Lubusz Land: wine, bunkers and parks",
+    "intro": "The Lubusz Land is less known but full of surprises: the Międzyrzecz underground, the vineyards of Zielona Góra and a UNESCO-listed park. The plan leads from Gorzów through Międzyrzecz, Łagów and Świebodzin to Zielona Góra and Muskau Park. Two or three days are enough for a relaxed visit."
+   },
+   "stops": [
+    {
+     "ref": "place:gw-katedra"
+    },
+    {
+     "ref": "place:mr-mru"
+    },
+    {
+     "ref": "place:la-zamek"
+    },
+    {
+     "ref": "place:sw-chrystus-krol"
+    },
+    {
+     "ref": "place:go-paradyz"
+    },
+    {
+     "ref": "place:zg-stare-miasto"
+    },
+    {
+     "ref": "place:zg-palmiarnia"
+    },
+    {
+     "ref": "place:le-park-muzakowski"
+    }
+   ]
+  },
+  {
+   "id": "plan-lodzkie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "lodzkie",
+   "mode": "driving",
+   "days": "3",
+   "pl": {
+    "name": "Łódzkie: fabryki, Boruta i Arkadia",
+    "intro": "Łódzkie to przemysłowa Łódź, romańskie zabytki i magnackie rezydencje. Plan zaczyna się w Piotrkowie Trybunalskim, prowadzi przez fabryczną Łódź do Łęczycy i Tumu, a kończy w Łowiczu, Nieborowie i Arkadii. Na samą Łódź warto przeznaczyć cały dzień."
+   },
+   "en": {
+    "name": "Łódź region: factories, Boruta and Arkadia",
+    "intro": "The Łódź region means industrial Łódź, Romanesque monuments and magnate residences. The plan starts in Piotrków Trybunalski, leads through factory Łódź to Łęczyca and Tum, and ends in Łowicz, Nieborów and Arkadia. Łódź itself deserves a whole day."
+   },
+   "stops": [
+    {
+     "ref": "place:pt-stare-miasto"
+    },
+    {
+     "ref": "place:lo-piotrkowska"
+    },
+    {
+     "ref": "place:lo-manufaktura"
+    },
+    {
+     "ref": "place:lo-ec1"
+    },
+    {
+     "ref": "place:lo-ksiezy-mlyn"
+    },
+    {
+     "ref": "place:le-zamek"
+    },
+    {
+     "ref": "place:tu-archikolegiata"
+    },
+    {
+     "ref": "place:lw-muzeum"
+    },
+    {
+     "ref": "place:ni-palac"
+    },
+    {
+     "ref": "place:ar-park"
+    }
+   ]
+  },
+  {
+   "id": "plan-malopolskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "malopolskie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Małopolska: Kraków, Wieliczka i Tatry",
+    "intro": "Małopolska łączy królewski Kraków, kopalnię w Wieliczce, miejsce pamięci Auschwitz i najwyższe polskie góry. Plan prowadzi z Oświęcimia przez Ojców i Kraków do Wieliczki, a potem na Podhale, nad Morskie Oko i w Pieniny. Na całość warto zarezerwować cztery–pięć dni."
+   },
+   "en": {
+    "name": "Lesser Poland: Kraków, Wieliczka and the Tatras",
+    "intro": "Lesser Poland combines royal Kraków, the Wieliczka mine, the Auschwitz memorial and Poland's highest mountains. The plan leads from Oświęcim through Ojców and Kraków to Wieliczka, then to Podhale, Morskie Oko and the Pieniny. Set aside four to five days for the whole route."
+   },
+   "stops": [
+    {
+     "ref": "place:os-auschwitz"
+    },
+    {
+     "ref": "place:oj-park"
+    },
+    {
+     "ref": "place:kr-wawel"
+    },
+    {
+     "ref": "place:kr-rynek"
+    },
+    {
+     "ref": "place:kr-kazimierz"
+    },
+    {
+     "ref": "place:wi-kopalnia"
+    },
+    {
+     "ref": "place:za-krupowki"
+    },
+    {
+     "ref": "place:ta-morskie-oko"
+    },
+    {
+     "ref": "place:ni-zamek"
+    },
+    {
+     "ref": "place:pi-splyw"
+    }
+   ]
+  },
+  {
+   "id": "plan-mazowieckie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "mazowieckie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Mazowsze: Warszawa, Chopin i zamki książąt",
+    "intro": "Mazowsze to Warszawa z pełnym przewodnikiem i okolice pełne pamiątek po książętach mazowieckich i Chopinie. Plan prowadzi od Czerska przez Warszawę i Puszczę Kampinoską do Żelazowej Woli i Płocka, a potem na północ przez Sierpc i Ciechanów do Pułtuska. Warszawie warto poświęcić osobne dni."
+   },
+   "en": {
+    "name": "Mazovia: Warsaw, Chopin and ducal castles",
+    "intro": "Mazovia means Warsaw, with its full city guide, and surroundings full of memories of the Dukes of Mazovia and Chopin. The plan leads from Czersk through Warsaw and the Kampinos Forest to Żelazowa Wola and Płock, then north via Sierpc and Ciechanów to Pułtusk. Warsaw deserves separate days of its own."
+   },
+   "stops": [
+    {
+     "ref": "place:cz-zamek"
+    },
+    {
+     "ref": "city:warsaw"
+    },
+    {
+     "ref": "place:kp-granica"
+    },
+    {
+     "ref": "place:zw-chopin"
+    },
+    {
+     "ref": "place:pl-wzgorze-tumskie"
+    },
+    {
+     "ref": "place:si-skansen"
+    },
+    {
+     "ref": "place:ci-zamek"
+    },
+    {
+     "ref": "place:op-romantyzm"
+    },
+    {
+     "ref": "place:pu-rynek"
+    }
+   ]
+  },
+  {
+   "id": "plan-opolskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "opolskie",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Opolszczyzna: Piastowie, dinozaury i bajkowe zamki",
+    "intro": "Śląsk Opolski to piastowskie zamki, prehistoryczne skamieniałości i bajkowa Moszna. Plan zaczyna się w Brzegu, prowadzi przez Opole i Krasiejów na Górę Świętej Anny i do Mosznej, a kończy w Nysie i Paczkowie. Region dobrze nadaje się na długi weekend."
+   },
+   "en": {
+    "name": "Opole region: Piasts, dinosaurs and fairy-tale castles",
+    "intro": "Opole Silesia means Piast castles, prehistoric fossils and fairy-tale Moszna. The plan starts in Brzeg, leads through Opole and Krasiejów to St Anne's Mountain and Moszna, and ends in Nysa and Paczków. The region is well suited to a long weekend."
+   },
+   "stops": [
+    {
+     "ref": "place:br-zamek"
+    },
+    {
+     "ref": "place:op-wieza-piastowska"
+    },
+    {
+     "ref": "place:op-wenecja"
+    },
+    {
+     "ref": "place:op-skansen"
+    },
+    {
+     "ref": "place:kr-jurapark"
+    },
+    {
+     "ref": "place:ga-gora-sw-anny"
+    },
+    {
+     "ref": "place:mo-zamek"
+    },
+    {
+     "ref": "place:ny-bazylika"
+    },
+    {
+     "ref": "place:pa-mury"
+    }
+   ]
+  },
+  {
+   "id": "plan-podkarpackie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "podkarpackie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Podkarpacie: rezydencje, Sanok i Bieszczady",
+    "intro": "Podkarpacie łączy magnackie rezydencje, wielokulturowe miasta i dzikie Bieszczady. Plan prowadzi z Baranowa przez Rzeszów, Łańcut, Przemyśl i Krasiczyn do Sanoka, a kończy nad Soliną i na połoninach. Na góry warto zostawić co najmniej dwa dni."
+   },
+   "en": {
+    "name": "Podkarpacie: residences, Sanok and the Bieszczady",
+    "intro": "Podkarpacie combines magnate residences, multicultural towns and the wild Bieszczady. The plan leads from Baranów through Rzeszów, Łańcut, Przemyśl and Krasiczyn to Sanok, ending at Lake Solina and on the połoniny. Leave at least two days for the mountains."
+   },
+   "stops": [
+    {
+     "ref": "place:ba-zamek"
+    },
+    {
+     "ref": "place:rz-rynek"
+    },
+    {
+     "ref": "place:lc-zamek"
+    },
+    {
+     "ref": "place:pr-stare-miasto"
+    },
+    {
+     "ref": "place:kr-zamek"
+    },
+    {
+     "ref": "place:sa-skansen"
+    },
+    {
+     "ref": "place:sa-beksinski"
+    },
+    {
+     "ref": "place:so-zapora"
+    },
+    {
+     "ref": "place:bi-poloniny"
+    }
+   ]
+  },
+  {
+   "id": "plan-podlaskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "podlaskie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Podlasie: jeziora, bagna, puszcza i wiele wyznań",
+    "intro": "Podlasie to dzika przyroda i spotkanie kultur: katolików, prawosławnych, Żydów i Tatarów. Plan prowadzi z północy, od Wigier i Augustowa, przez bagna Biebrzy, Tykocin i Białystok, do Supraśla, Kruszynian, Puszczy Białowieskiej i Grabarki. To trasa na cztery–pięć dni."
+   },
+   "en": {
+    "name": "Podlasie: lakes, marshes, primeval forest and many faiths",
+    "intro": "Podlasie means wild nature and a meeting of cultures: Catholics, Orthodox Christians, Jews and Tatars. The plan leads from the north, from Wigry and Augustów, through the Biebrza marshes, Tykocin and Białystok, to Supraśl, Kruszyniany, the Białowieża Forest and Grabarka. It is a route for four to five days."
+   },
+   "stops": [
+    {
+     "ref": "place:wi-klasztor"
+    },
+    {
+     "ref": "place:au-kanal"
+    },
+    {
+     "ref": "place:go-biebrza"
+    },
+    {
+     "ref": "place:ty-synagoga"
+    },
+    {
+     "ref": "place:bi-palac-branickich"
+    },
+    {
+     "ref": "place:bi-rynek"
+    },
+    {
+     "ref": "place:su-ikony"
+    },
+    {
+     "ref": "place:kr-meczet"
+    },
+    {
+     "ref": "place:bw-park"
+    },
+    {
+     "ref": "place:bw-zubry"
+    },
+    {
+     "ref": "place:gr-grabarka"
+    }
+   ]
+  },
+  {
+   "id": "plan-pomorskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "pomorskie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Pomorze: Trójmiasto, wydmy i Malbork",
+    "intro": "Pomorze to Gdańsk z Gdynią i Sopotem, ruchome wydmy, Półwysep Helski i krzyżacki Malbork. Plan prowadzi z Kaszub przez Łebę i Hel do Trójmiasta, a kończy w Malborku. Na samo Trójmiasto warto przeznaczyć dwa dni."
+   },
+   "en": {
+    "name": "Pomerania: the Tri-City, dunes and Malbork",
+    "intro": "Pomerania means Gdańsk with Gdynia and Sopot, shifting dunes, the Hel Peninsula and Teutonic Malbork. The plan leads from Kashubia through Łeba and Hel to the Tri-City, ending in Malbork. The Tri-City alone deserves two days."
+   },
+   "stops": [
+    {
+     "ref": "place:sz-szymbark"
+    },
+    {
+     "ref": "place:le-wydmy"
+    },
+    {
+     "ref": "place:he-mierzeja"
+    },
+    {
+     "ref": "place:gy-nabrzeze"
+    },
+    {
+     "ref": "place:so-molo"
+    },
+    {
+     "ref": "place:gd-oliwa"
+    },
+    {
+     "ref": "place:gd-dlugi-targ"
+    },
+    {
+     "ref": "place:gd-zuraw"
+    },
+    {
+     "ref": "place:gd-ecs"
+    },
+    {
+     "ref": "place:gd-muzeum-ii-ws"
+    },
+    {
+     "ref": "place:gd-westerplatte"
+    },
+    {
+     "ref": "place:ma-zamek"
+    }
+   ]
+  },
+  {
+   "id": "plan-slaskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "slaskie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Śląsk: Jasna Góra, kopalnie i Beskidy",
+    "intro": "Województwo śląskie łączy Jurę z Jasną Górą, przemysłowe dziedzictwo Górnego Śląska i Beskidy. Plan prowadzi z Częstochowy przez Ogrodzieniec do Tarnowskich Gór, Gliwic, Zabrza i Katowic, a potem na południe do Pszczyny, Cieszyna i Wisły. Na trasę warto przeznaczyć trzy–cztery dni."
+   },
+   "en": {
+    "name": "Silesia: Jasna Góra, mines and the Beskids",
+    "intro": "The Silesian Voivodeship combines the Jura with Jasna Góra, the industrial heritage of Upper Silesia and the Beskid Mountains. The plan leads from Częstochowa through Ogrodzieniec to Tarnowskie Góry, Gliwice, Zabrze and Katowice, then south to Pszczyna, Cieszyn and Wisła. Allow three to four days."
+   },
+   "stops": [
+    {
+     "ref": "place:cz-jasna-gora"
+    },
+    {
+     "ref": "place:og-zamek"
+    },
+    {
+     "ref": "place:tg-kopalnia-srebra"
+    },
+    {
+     "ref": "place:gl-radiostacja"
+    },
+    {
+     "ref": "place:za-guido"
+    },
+    {
+     "ref": "place:ka-nikiszowiec"
+    },
+    {
+     "ref": "place:ka-strefa-kultury"
+    },
+    {
+     "ref": "place:ps-zamek"
+    },
+    {
+     "ref": "place:ci-rotunda"
+    },
+    {
+     "ref": "place:wi-wisla"
+    }
+   ]
+  },
+  {
+   "id": "plan-swietokrzyskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "swietokrzyskie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Świętokrzyskie: Kielce, Łysa Góra i Sandomierz",
+    "intro": "Ziemia Świętokrzyska to najstarsze góry Polski, jaskinie, zamki i legendy o czarownicach. Plan prowadzi z Oblęgorka przez Kielce i Chęciny na Łysicę i Święty Krzyż, a potem przez Krzemionki i Krzyżtopór do Sandomierza. Trzy–cztery dni pozwolą zobaczyć to, co najważniejsze."
+   },
+   "en": {
+    "name": "Holy Cross region: Kielce, Bald Mountain and Sandomierz",
+    "intro": "The Holy Cross region has Poland's oldest mountains, caves, castles and legends of witches. The plan leads from Oblęgorek through Kielce and Chęciny to Łysica and Święty Krzyż, then via Krzemionki and Krzyżtopór to Sandomierz. Three to four days let you see the highlights."
+   },
+   "stops": [
+    {
+     "ref": "place:ob-sienkiewicz"
+    },
+    {
+     "ref": "place:ki-palac-biskupow"
+    },
+    {
+     "ref": "place:ki-kadzielnia"
+    },
+    {
+     "ref": "place:ch-zamek"
+    },
+    {
+     "ref": "place:ch-jaskinia-raj"
+    },
+    {
+     "ref": "place:sk-lysica"
+    },
+    {
+     "ref": "place:ns-swiety-krzyz"
+    },
+    {
+     "ref": "place:kr-krzemionki"
+    },
+    {
+     "ref": "place:uj-krzyztopor"
+    },
+    {
+     "ref": "place:sa-rynek"
+    },
+    {
+     "ref": "place:sa-trasa"
+    },
+    {
+     "ref": "place:sa-gory-pieprzowe"
+    }
+   ]
+  },
+  {
+   "id": "plan-warminsko-mazurskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "warminsko-mazurskie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Warmia i Mazury: Kopernik, zamki i wielkie jeziora",
+    "intro": "Warmia słynie z gotyckich zamków biskupich i śladów Kopernika, a Mazury z tysięcy jezior. Plan prowadzi z Fromborka przez pochylnie Kanału Elbląskiego, Olsztynek i Olsztyn do Lidzbarka, Reszla i Świętej Lipki, a kończy na Szlaku Wielkich Jezior. To trasa na cztery–pięć dni, najlepiej latem."
+   },
+   "en": {
+    "name": "Warmia and Masuria: Copernicus, castles and great lakes",
+    "intro": "Warmia is famous for Gothic bishops' castles and traces of Copernicus, and Masuria for its thousands of lakes. The plan leads from Frombork through the inclined planes of the Elbląg Canal, Olsztynek and Olsztyn to Lidzbark, Reszel and Święta Lipka, ending on the Great Lakes route. It is a route for four to five days, best in summer."
+   },
+   "stops": [
+    {
+     "ref": "place:fr-wzgorze"
+    },
+    {
+     "ref": "place:bu-pochylnie"
+    },
+    {
+     "ref": "place:os-skansen"
+    },
+    {
+     "ref": "place:ol-zamek"
+    },
+    {
+     "ref": "place:ol-stare-miasto"
+    },
+    {
+     "ref": "place:lw-zamek"
+    },
+    {
+     "ref": "place:re-zamek"
+    },
+    {
+     "ref": "place:sl-sanktuarium"
+    },
+    {
+     "ref": "place:gi-wilczy-szaniec"
+    },
+    {
+     "ref": "place:gz-boyen"
+    },
+    {
+     "ref": "place:mi-sniardwy"
+    },
+    {
+     "ref": "place:kr-krutynia"
+    }
+   ]
+  },
+  {
+   "id": "plan-wielkopolskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "wielkopolskie",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Wielkopolska: kolebka Polski i magnackie rezydencje",
+    "intro": "Wielkopolska to miejsca, w których rodziło się państwo polskie, a także pałace i parki dawnych rodów. Plan prowadzi z Gniezna przez Lednicę do Poznania, potem przez Wielkopolski Park Narodowy, Rogalin, Kórnik i Gołuchów do Kalisza i Lichenia. Poznaniowi warto poświęcić cały dzień."
+   },
+   "en": {
+    "name": "Greater Poland: cradle of Poland and magnate residences",
+    "intro": "Greater Poland is where the Polish state was born, and it also has the palaces and parks of old families. The plan leads from Gniezno via Lednica to Poznań, then through Wielkopolski National Park, Rogalin, Kórnik and Gołuchów to Kalisz and Licheń. Poznań deserves a whole day."
+   },
+   "stops": [
+    {
+     "ref": "place:gn-katedra"
+    },
+    {
+     "ref": "place:le-lednica"
+    },
+    {
+     "ref": "place:po-ostrow-tumski"
+    },
+    {
+     "ref": "place:po-stary-rynek"
+    },
+    {
+     "ref": "place:po-rogalowe"
+    },
+    {
+     "ref": "place:wi-park"
+    },
+    {
+     "ref": "place:ro-palac"
+    },
+    {
+     "ref": "place:ko-zamek"
+    },
+    {
+     "ref": "place:gl-zamek"
+    },
+    {
+     "ref": "place:ka-stare-miasto"
+    },
+    {
+     "ref": "place:li-sanktuarium"
+    }
+   ]
+  },
+  {
+   "id": "plan-zachodniopomorskie",
+   "theme": "wojewodztwa",
+   "art": "region",
+   "region": "zachodniopomorskie",
+   "mode": "driving",
+   "days": "4–5",
+   "pl": {
+    "name": "Pomorze Zachodnie: Szczecin i wybrzeże",
+    "intro": "Pomorze Zachodnie łączy Szczecin, gotyckie miasta, Puszczę Drawską i najpiękniejsze klify Bałtyku. Plan zaczyna się nad Drawą, prowadzi przez Stargard do Szczecina, a potem wzdłuż wybrzeża od Świnoujścia po Darłowo. Na całą trasę warto przeznaczyć cztery–pięć dni."
+   },
+   "en": {
+    "name": "Western Pomerania: Szczecin and the coast",
+    "intro": "Western Pomerania combines Szczecin, Gothic towns, the Drawa Forest and the finest cliffs on the Baltic. The plan starts on the Drawa, leads through Stargard to Szczecin, then along the coast from Świnoujście to Darłowo. Allow four to five days for the whole route."
+   },
+   "stops": [
+    {
+     "ref": "place:dr-park"
+    },
+    {
+     "ref": "place:st-kolegiata"
+    },
+    {
+     "ref": "place:sz-zamek"
+    },
+    {
+     "ref": "place:sz-waly"
+    },
+    {
+     "ref": "place:sz-filharmonia"
+    },
+    {
+     "ref": "place:sw-latarnia"
+    },
+    {
+     "ref": "place:mi-wolinski-pn"
+    },
+    {
+     "ref": "place:ka-katedra"
+    },
+    {
+     "ref": "place:tr-ruina"
+    },
+    {
+     "ref": "place:ko-molo"
+    },
+    {
+     "ref": "place:da-zamek"
+    }
+   ]
+  },
+  {
+   "id": "orle-gniazda",
+   "theme": "zamki",
+   "featured": true,
+   "art": "castle",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Szlak Orlich Gniazd — Jura Krakowsko-Częstochowska",
+    "intro": "Szlak Orlich Gniazd prowadzi z Krakowa do Częstochowy przez Wyżynę Krakowsko-Częstochowską, czyli Jurę. Nazwa pochodzi od średniowiecznych zamków zbudowanych na wapiennych skałach jak gniazda orłów. Większość z nich powstała w XIV wieku, gdy Kazimierz Wielki umacniał zachodnią granicę Małopolski od strony Śląska. Pieszy czerwony szlak PTTK ma około 160 kilometrów, ale wszystkie zamki można też odwiedzić samochodem w dwa–trzy dni. Po drodze czekają wapienne ostańce, jaskinie, Pustynia Błędowska i liczne legendy o duchach i skarbach."
+   },
+   "en": {
+    "name": "Eagles' Nests Trail — the Kraków-Częstochowa Jura",
+    "intro": "The Eagles' Nests Trail runs from Kraków to Częstochowa across the Kraków-Częstochowa Upland, known as the Jura. Its name comes from medieval castles built on limestone rocks like eagles' nests. Most of them date from the 14th century, when Casimir the Great fortified Lesser Poland's western border with Silesia. The red PTTK walking trail is about 160 kilometres long, but you can also visit all the castles by car in two or three days. Along the way you will find limestone outcrops, caves, the Błędów Desert and many legends of ghosts and treasure."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-wawel",
+     "pl": "Start szlaku: królewski Kraków.",
+     "en": "Start of the trail: royal Kraków."
+    },
+    {
+     "ref": "place:oj-park",
+     "pl": "Ruiny zamku w Ojcowie, Jaskinia Łokietka i Maczuga Herkulesa.",
+     "en": "Ojców castle ruins, Łokietek's Cave and Hercules' Club."
+    },
+    {
+     "ref": "place:mp-pieskowa-skala",
+     "pl": "Renesansowy zamek z krużgankami i legendą o Dorotce.",
+     "en": "A Renaissance castle with galleries and the legend of Dorotka."
+    },
+    {
+     "ref": "place:mp-rabsztyn",
+     "pl": "Kruczy Kamień nad Olkuszem; obok Pustynia Błędowska.",
+     "en": "Raven Rock above Olkusz; the Błędów Desert is nearby."
+    },
+    {
+     "ref": "place:sl-smolen",
+     "pl": "Leśne ruiny w rezerwacie przyrody.",
+     "en": "Forest ruins in a nature reserve."
+    },
+    {
+     "ref": "place:og-zamek",
+     "pl": "Największe ruiny Jury i legenda o czarnym psie.",
+     "en": "The largest ruins of the Jura and the legend of the black dog."
+    },
+    {
+     "ref": "place:sl-bobolice",
+     "pl": "Odbudowany zamek i legenda o braciach bliźniakach.",
+     "en": "A rebuilt castle and the legend of the twin brothers."
+    },
+    {
+     "ref": "place:sl-mirow",
+     "pl": "Trwała ruina — spacer z Bobolic przez łąki.",
+     "en": "A permanent ruin — a walk from Bobolice across the meadows."
+    },
+    {
+     "ref": "place:sl-olsztyn",
+     "pl": "Wieża, w której zmarł Maćko Borkowic.",
+     "en": "The tower where Maćko Borkowic died."
+    },
+    {
+     "ref": "place:cz-jasna-gora",
+     "pl": "Meta szlaku: sanktuarium na Jasnej Górze.",
+     "en": "End of the trail: the Jasna Góra sanctuary."
+    }
+   ]
+  },
+  {
+   "id": "zamki-gotyckie",
+   "theme": "zamki",
+   "art": "castle",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Szlak Zamków Gotyckich — krzyżacy i biskupi",
+    "intro": "Ceglane zamki gotyckie na Pomorzu, Kujawach i Warmii budowali zakon krzyżacki oraz biskupi i kapituła warmińska. Najpotężniejszy z nich, Malbork, był od 1309 roku stolicą państwa zakonnego. Na Warmii zamki w Lidzbarku, Reszlu i Olsztynie były siedzibami biskupów i kapituły, a w dwóch z nich pracował Mikołaj Kopernik. Trasę najlepiej pokonać samochodem, nocując w Malborku lub w Olsztynie."
+   },
+   "en": {
+    "name": "Gothic Castles Trail — Teutonic Knights and bishops",
+    "intro": "The brick Gothic castles of Pomerania, Kuyavia and Warmia were built by the Teutonic Order and by the bishops and chapter of Warmia. The mightiest of them, Malbork, was the capital of the Order's state from 1309. In Warmia the castles in Lidzbark, Reszel and Olsztyn were seats of the bishops and chapter, and Nicolaus Copernicus worked in two of them. The route is best done by car, staying overnight in Malbork or Olsztyn."
+   },
+   "stops": [
+    {
+     "ref": "place:go-zamek"
+    },
+    {
+     "ref": "place:ma-zamek"
+    },
+    {
+     "ref": "place:ol-zamek"
+    },
+    {
+     "ref": "place:lw-zamek"
+    },
+    {
+     "ref": "place:re-zamek"
+    }
+   ]
+  },
+  {
+   "id": "zamki-swietokrzyskie",
+   "theme": "zamki",
+   "art": "castle",
+   "mode": "driving",
+   "days": "1–2",
+   "pl": {
+    "name": "Zamki i ruiny Ziemi Świętokrzyskiej",
+    "intro": "Ziemia Świętokrzyska kryje kilka niezwykłych zamków i ruin. Królewski zamek w Chęcinach góruje nad miastem od średniowiecza, a w Bodzentynie stoją ruiny zamku biskupów krakowskich. Krzyżtopór w Ujeździe, zbudowany w XVII wieku dla Krzysztofa Ossolińskiego, był jedną z największych rezydencji w Europie przed Wersalem. Trasę kończy Sandomierz z zamkiem królewskim nad Wisłą."
+   },
+   "en": {
+    "name": "Castles and ruins of the Holy Cross region",
+    "intro": "The Holy Cross region hides several remarkable castles and ruins. The royal castle in Chęciny has towered over the town since the Middle Ages, and Bodzentyn has the ruins of a castle of the Bishops of Kraków. Krzyżtopór in Ujazd, built in the 17th century for Krzysztof Ossoliński, was one of the largest residences in Europe before Versailles. The route ends in Sandomierz with its royal castle above the Vistula."
+   },
+   "stops": [
+    {
+     "ref": "place:ch-zamek"
+    },
+    {
+     "ref": "place:bo-zamek"
+    },
+    {
+     "ref": "place:uj-krzyztopor"
+    },
+    {
+     "ref": "place:sa-zamek"
+    }
+   ]
+  },
+  {
+   "id": "piastowski",
+   "theme": "historia",
+   "featured": true,
+   "art": "crown",
+   "mode": "driving",
+   "days": "1–2",
+   "pl": {
+    "name": "Szlak Piastowski — kolebka państwa",
+    "intro": "Szlak Piastowski łączy miejsca związane z początkami państwa polskiego w Wielkopolsce i na Kujawach. Na Ostrowie Tumskim w Poznaniu stoi katedra, w której pochowano pierwszych Piastów. Na Ostrowie Lednickim zachowały się relikty wczesnośredniowiecznego palatium, a w Gnieźnie w 1000 roku odbył się zjazd z udziałem cesarza Ottona III. Szlak obejmuje też Biskupin — znacznie starszą osadę z epoki żelaza, która pokazuje, jak wyglądało życie na tych ziemiach przed Piastami."
+   },
+   "en": {
+    "name": "Piast Trail — the cradle of the state",
+    "intro": "The Piast Trail links places connected with the beginnings of the Polish state in Greater Poland and Kuyavia. On Ostrów Tumski in Poznań stands the cathedral where the first Piast rulers were buried. On Ostrów Lednicki the remains of an early medieval palace survive, and in Gniezno the famous congress with Emperor Otto III took place in the year 1000. The trail also includes Biskupin, a much older Iron Age settlement that shows what life on these lands looked like before the Piasts."
+   },
+   "stops": [
+    {
+     "ref": "place:po-ostrow-tumski"
+    },
+    {
+     "ref": "place:le-lednica"
+    },
+    {
+     "ref": "place:gn-katedra"
+    },
+    {
+     "ref": "place:bi-biskupin"
+    }
+   ]
+  },
+  {
+   "id": "stolice",
+   "theme": "historia",
+   "art": "crown",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Trzy stolice: Gniezno, Kraków, Warszawa",
+    "intro": "Polska miała w swojej historii kilka stolic. Gniezno było pierwszym ośrodkiem kościelnym i miejscem koronacji pierwszych królów. Kraków przez kilka stuleci był siedzibą władców i miejscem koronacji na Wawelu. Na przełomie XVI i XVII wieku król Zygmunt III Waza przeniósł dwór do Warszawy, która stała się stolicą Rzeczypospolitej."
+   },
+   "en": {
+    "name": "Three capitals: Gniezno, Kraków, Warsaw",
+    "intro": "Poland has had several capitals in its history. Gniezno was the first church centre and the place where the first kings were crowned. For several centuries Kraków was the seat of the rulers, with coronations held at Wawel. Around 1600 King Sigismund III Vasa moved the court to Warsaw, which became the capital of the Commonwealth."
+   },
+   "stops": [
+    {
+     "ref": "place:gn-katedra"
+    },
+    {
+     "ref": "place:kr-wawel"
+    },
+    {
+     "ref": "place:kr-rynek"
+    },
+    {
+     "ref": "city:warsaw",
+     "pl": "Pełny przewodnik po Warszawie z Zamkiem Królewskim i Starym Miastem.",
+     "en": "The full Warsaw guide with the Royal Castle and the Old Town."
+    }
+   ]
+  },
+  {
+   "id": "renesans",
+   "theme": "historia",
+   "art": "crown",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Renesansowe miasta i rezydencje",
+    "intro": "W XVI wieku Rzeczpospolita przeżywała złoty wiek, a renesans zmieniał wygląd miast i rezydencji. Zamość założył w 1580 roku kanclerz Jan Zamoyski jako miasto idealne, zaprojektowane przez Bernarda Morando. Kazimierz Dolny i Sandomierz bogaciły się na handlu zbożem spławianym Wisłą. Zamki w Krasiczynie i Baranowie Sandomierskim należą do najpiękniejszych rezydencji renesansowych w Polsce."
+   },
+   "en": {
+    "name": "Renaissance towns and residences",
+    "intro": "In the 16th century the Commonwealth enjoyed its golden age, and the Renaissance changed the look of towns and residences. Zamość was founded in 1580 by Chancellor Jan Zamoyski as an ideal town designed by Bernardo Morando. Kazimierz Dolny and Sandomierz grew rich on the grain trade along the Vistula. The castles in Krasiczyn and Baranów Sandomierski are among the finest Renaissance residences in Poland."
+   },
+   "stops": [
+    {
+     "ref": "place:kd-rynek"
+    },
+    {
+     "ref": "place:za-stare-miasto"
+    },
+    {
+     "ref": "place:kr-zamek"
+    },
+    {
+     "ref": "place:ba-zamek"
+    },
+    {
+     "ref": "place:sa-rynek"
+    }
+   ]
+  },
+  {
+   "id": "legendy-stolic",
+   "theme": "legendy",
+   "featured": true,
+   "art": "dragon",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Legendy dawnych stolic i grodów",
+    "intro": "Ta trasa prowadzi przez miejsca, z którymi wiążą się najbardziej znane polskie legendy. Każdą z nich opowiadamy jako podanie, a w karcie miejsca znajdziesz też prawdziwą historię. W Krakowie czeka smok wawelski i urwany hejnał, w Wieliczce pierścień św. Kingi, a w Gnieźnie opowieść o Lechu i białym orle. Trasę zamykają koziołki z poznańskiego ratusza i krzywa wieża w Toruniu."
+   },
+   "en": {
+    "name": "Legends of the old capitals and towns",
+    "intro": "This route leads through places linked to Poland's best-known legends. We tell each one as a legend, and the place card also gives the real history. In Kraków you will meet the Wawel Dragon and the broken bugle call, in Wieliczka St Kinga's ring, and in Gniezno the tale of Lech and the white eagle. The route ends with the goats of the Poznań town hall and the leaning tower in Toruń."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-wawel",
+     "pl": "Legenda: smok wawelski pokonany owcą wypchaną siarką.",
+     "en": "Legend: the Wawel Dragon defeated with a sheep stuffed with sulphur."
+    },
+    {
+     "ref": "place:kr-mariacki",
+     "pl": "Legenda: hejnał urywa się, bo trębacza trafiła strzała.",
+     "en": "Legend: the bugle call breaks off because an arrow struck the trumpeter."
+    },
+    {
+     "ref": "place:wi-kopalnia",
+     "pl": "Legenda: pierścień św. Kingi odnaleziony w bryle soli.",
+     "en": "Legend: St Kinga's ring found in a lump of salt."
+    },
+    {
+     "ref": "place:gn-katedra",
+     "pl": "Legenda: Lech zobaczył białego orła w gnieździe i założył tu gród.",
+     "en": "Legend: Lech saw a white eagle in its nest and founded his stronghold here."
+    },
+    {
+     "ref": "place:po-stary-rynek",
+     "pl": "Legenda: koziołki, które co dzień w południe trykają się na ratuszowej wieży.",
+     "en": "Legend: the goats that butt heads on the town hall tower every day at noon."
+    },
+    {
+     "ref": "place:to-krzywa-wieza",
+     "pl": "Legenda: wieża przechyliła się za winy rycerza zakonnego.",
+     "en": "Legend: the tower leans because of a knight's sins."
+    }
+   ]
+  },
+  {
+   "id": "legendy-gor",
+   "theme": "legendy",
+   "art": "dragon",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Legendy gór, jezior i jaskiń",
+    "intro": "Góry i jaskinie od zawsze pobudzały wyobraźnię. Według podania Morskie Oko łączy się podziemnym przejściem z morzem, a w jaskini pod Ojcowem pająk miał uratować księcia Łokietka. Zamek w Niedzicy strzeże legendy o skarbie Inków. W Karkonoszach króluje Duch Gór, znany jako Liczyrzepa, który według opowieści sprawdza wędrowców."
+   },
+   "en": {
+    "name": "Legends of mountains, lakes and caves",
+    "intro": "Mountains and caves have always stirred the imagination. According to the tale, Morskie Oko is linked to the sea by an underground passage, and in a cave near Ojców a spider is said to have saved Duke Łokietek. Niedzica Castle guards the legend of the Inca treasure. The Karkonosze Mountains are ruled by the Mountain Spirit, known as Rübezahl or Liczyrzepa, who according to the stories tests travellers."
+   },
+   "stops": [
+    {
+     "ref": "place:oj-park"
+    },
+    {
+     "ref": "place:ni-zamek"
+    },
+    {
+     "ref": "place:ta-morskie-oko"
+    },
+    {
+     "ref": "place:kp-sniezka",
+     "pl": "Legenda: Duch Gór Liczyrzepa, władca Karkonoszy.",
+     "en": "Legend: the Mountain Spirit Rübezahl, lord of the Karkonosze."
+    }
+   ]
+  },
+  {
+   "id": "lysa-gora",
+   "theme": "czarownice",
+   "featured": true,
+   "art": "witch",
+   "mode": "driving",
+   "days": "1",
+   "pl": {
+    "name": "Łysa Góra — sabat czarownic",
+    "intro": "Łysa Góra, czyli Łysiec w Górach Świętokrzyskich, od wieków słynie z legend o sabatach czarownic. Według podań w noce sabatu czarownice zlatywały się tu na miotłach, by tańczyć z diabłami. Na szczycie zachowały się kamienne wały z czasów przedchrześcijańskich, a w średniowieczu benedyktyni założyli tu klasztor z relikwiami Krzyża Świętego. Rumowiska skalne zwane gołoborzami według legend są pozostałością zniszczonej pogańskiej świątyni. Trasę uzupełnia wejście na Łysicę i muzeum starożytnych hutników."
+   },
+   "en": {
+    "name": "Bald Mountain — the witches' sabbath",
+    "intro": "Łysa Góra, or Łysiec, in the Holy Cross Mountains has long been famous for legends of witches' sabbaths. According to the tales, on sabbath nights witches flew here on broomsticks to dance with devils. Stone ramparts from pre-Christian times survive on the summit, and in the Middle Ages Benedictine monks founded a monastery here with relics of the Holy Cross. The rock fields known as gołoborza are, according to legend, the remains of a destroyed pagan temple. The route also includes the climb to Łysica and the museum of ancient ironworking."
+   },
+   "stops": [
+    {
+     "ref": "place:ns-swiety-krzyz",
+     "pl": "Szczyt czarownic: klasztor, wały kultowe i gołoborze.",
+     "en": "The witches' summit: monastery, ancient ramparts and rock fields."
+    },
+    {
+     "ref": "place:ns-hutnictwo",
+     "pl": "Starożytni hutnicy i jesienne Dymarki.",
+     "en": "Ancient ironworkers and the autumn smelting festival."
+    },
+    {
+     "ref": "place:sk-lysica",
+     "pl": "Najwyższy szczyt Gór Świętokrzyskich.",
+     "en": "The highest peak of the Holy Cross Mountains."
+    }
+   ]
+  },
+  {
+   "id": "duchy",
+   "theme": "czarownice",
+   "art": "witch",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Duchy, upiory i diabeł Boruta",
+    "intro": "Polskie zamki mają swoich legendarnych mieszkańców. W lochach zamku w Łęczycy według podań mieszka diabeł Boruta, który pilnuje skarbów. W ruinach Ogrodzieńca ma błąkać się czarny pies, a w Olsztynie słychać jęki uwięzionego Maćka Borkowica. W Golubiu opowiada się o duchu królewny Anny Wazówny. Kaplica Czaszek w Czermnej to z kolei prawdziwe, niezwykłe miejsce pamięci o ofiarach wojen i epidemii."
+   },
+   "en": {
+    "name": "Ghosts, phantoms and Boruta the devil",
+    "intro": "Polish castles have their legendary residents. According to legend, Boruta the devil lives in the dungeons of Łęczyca Castle and guards its treasure. A black dog is said to roam the ruins of Ogrodzieniec, and in Olsztyn the groans of the imprisoned Maćko Borkowic can be heard. In Golub they tell of the ghost of Princess Anna Vasa. The Chapel of Skulls in Czermna, by contrast, is a real and extraordinary memorial to the victims of wars and epidemics."
+   },
+   "stops": [
+    {
+     "ref": "place:le-zamek",
+     "pl": "Legenda: diabeł Boruta w zamkowych lochach.",
+     "en": "Legend: Boruta the devil in the castle dungeons."
+    },
+    {
+     "ref": "place:go-zamek",
+     "pl": "Legenda: duch Anny Wazówny.",
+     "en": "Legend: the ghost of Anna Vasa."
+    },
+    {
+     "ref": "place:sl-olsztyn",
+     "pl": "Legenda: jęki Maćka Borkowica.",
+     "en": "Legend: the groans of Maćko Borkowic."
+    },
+    {
+     "ref": "place:og-zamek",
+     "pl": "Legenda: czarny pies z łańcuchem.",
+     "en": "Legend: the black dog with a chain."
+    },
+    {
+     "ref": "place:mp-pieskowa-skala",
+     "pl": "Legenda: baszta Dorotki.",
+     "en": "Legend: Dorotka's tower."
+    },
+    {
+     "ref": "place:ku-kaplica-czaszek",
+     "pl": "Prawdziwe miejsce pamięci, wyłożone tysiącami czaszek.",
+     "en": "A real memorial lined with thousands of skulls."
+    }
+   ]
+  },
+  {
+   "id": "wrzesien-1939",
+   "theme": "ww2",
+   "featured": true,
+   "art": "candle",
+   "mode": "driving",
+   "days": "2",
+   "pl": {
+    "name": "Wrzesień 1939 — pierwsze dni wojny",
+    "intro": "Wieczorem 31 sierpnia 1939 roku niemieccy esesmani upozorowali napad na radiostację w Gliwicach, by mieć pretekst do wojny. O świcie 1 września pancernik Schleswig-Holstein ostrzelał polską składnicę na Westerplatte, której załoga broniła się przez siedem dni. Muzeum II Wojny Światowej w Gdańsku opowiada o wojnie z perspektywy ludności cywilnej. W Gdyni można wejść na pokład niszczyciela ORP Błyskawica, który walczył w czasie wojny u boku aliantów."
+   },
+   "en": {
+    "name": "September 1939 — the first days of the war",
+    "intro": "On the evening of 31 August 1939 German SS men staged an attack on the Gliwice radio station to create a pretext for war. At dawn on 1 September the battleship Schleswig-Holstein shelled the Polish depot at Westerplatte, whose garrison held out for seven days. The Museum of the Second World War in Gdańsk tells the story of the war from the perspective of civilians. In Gdynia you can board the destroyer ORP Błyskawica, which fought alongside the Allies during the war."
+   },
+   "stops": [
+    {
+     "ref": "place:gl-radiostacja"
+    },
+    {
+     "ref": "place:gd-westerplatte"
+    },
+    {
+     "ref": "place:gd-muzeum-ii-ws"
+    },
+    {
+     "ref": "place:gy-nabrzeze"
+    }
+   ]
+  },
+  {
+   "id": "pamiec",
+   "theme": "ww2",
+   "art": "candle",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Pamięć o ofiarach — okupacja i Zagłada",
+    "intro": "W czasie II wojny światowej okupowana Polska stała się miejscem największych zbrodni niemieckich nazistów, w tym Zagłady Żydów. Krakowski Kazimierz i Fabryka Schindlera opowiadają o życiu i losach mieszkańców miasta. Auschwitz-Birkenau i Majdanek to dawne niemieckie obozy, dziś muzea i miejsca pamięci. W Warszawie Muzeum Powstania Warszawskiego i Muzeum POLIN uzupełniają tę opowieść. Te miejsca wymagają powagi i czasu, dlatego warto rozłożyć trasę na kilka dni."
+   },
+   "en": {
+    "name": "Remembering the victims — occupation and Holocaust",
+    "intro": "During the Second World War occupied Poland became the scene of the gravest crimes of the German Nazis, including the Holocaust of the Jews. Kraków's Kazimierz and Schindler's Factory tell of the life and fate of the city's inhabitants. Auschwitz-Birkenau and Majdanek are former German camps, now museums and memorials. In Warsaw the Warsaw Rising Museum and the POLIN Museum complete the story. These places demand solemnity and time, so it is worth spreading the route over several days."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-kazimierz"
+    },
+    {
+     "ref": "place:kr-schindler"
+    },
+    {
+     "ref": "place:os-auschwitz"
+    },
+    {
+     "ref": "place:lu-majdanek"
+    },
+    {
+     "ref": "city:warsaw",
+     "pl": "Muzeum Powstania Warszawskiego i POLIN w przewodniku Warszawy.",
+     "en": "The Warsaw Rising Museum and POLIN in the Warsaw guide."
+    }
+   ]
+  },
+  {
+   "id": "bunkry",
+   "theme": "ww2",
+   "art": "candle",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Bunkry, kwatery i fabryki wojny",
+    "intro": "Na terenie dzisiejszej Polski zachowały się potężne fortyfikacje i obiekty z czasów II wojny światowej. Międzyrzecki Rejon Umocniony to system bunkrów połączonych kilometrami podziemnych korytarzy. Wilczy Szaniec w Gierłoży był główną kwaterą Hitlera, gdzie w 1944 roku Claus von Stauffenberg przeprowadził nieudany zamach. Exploseum w Bydgoszczy pokazuje dawną niemiecką fabrykę materiałów wybuchowych ukrytą w lesie."
+   },
+   "en": {
+    "name": "Bunkers, headquarters and war factories",
+    "intro": "Huge fortifications and Second World War sites survive on the territory of today's Poland. The Międzyrzecz Fortified Region is a system of bunkers linked by kilometres of underground tunnels. The Wolf's Lair in Gierłoż was Hitler's main headquarters, where in 1944 Claus von Stauffenberg carried out a failed assassination attempt. Exploseum in Bydgoszcz shows a former German explosives factory hidden in the forest."
+   },
+   "stops": [
+    {
+     "ref": "place:mr-mru"
+    },
+    {
+     "ref": "place:by-exploseum"
+    },
+    {
+     "ref": "place:gi-wilczy-szaniec"
+    }
+   ]
+  },
+  {
+   "id": "kopernik",
+   "theme": "nauka",
+   "featured": true,
+   "art": "orbit",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Szlak Kopernikowski",
+    "intro": "Mikołaj Kopernik urodził się w 1473 roku w Toruniu, a studiował m.in. w Akademii Krakowskiej. Przez wiele lat mieszkał na Warmii: w Lidzbarku jako sekretarz i lekarz swojego wuja, biskupa, a w Olsztynie jako administrator dóbr kapituły. We Fromborku, jako kanonik, prowadził obserwacje i ukończył dzieło „O obrotach sfer niebieskich”, wydane w 1543 roku. Teoria heliocentryczna zmieniła sposób, w jaki ludzie patrzą na Wszechświat."
+   },
+   "en": {
+    "name": "Copernicus Trail",
+    "intro": "Nicolaus Copernicus was born in Toruń in 1473 and studied, among other places, at the Kraków Academy. For many years he lived in Warmia: in Lidzbark as secretary and physician to his uncle, the bishop, and in Olsztyn as administrator of the chapter's estates. In Frombork, as a canon, he made observations and completed “On the Revolutions of the Heavenly Spheres”, published in 1543. The heliocentric theory changed the way people see the Universe."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-rynek",
+     "pl": "Collegium Maius, gdzie studiował Kopernik, jest kilka minut od Rynku.",
+     "en": "Collegium Maius, where Copernicus studied, is a few minutes from the square."
+    },
+    {
+     "ref": "place:to-dom-kopernika"
+    },
+    {
+     "ref": "place:ol-zamek"
+    },
+    {
+     "ref": "place:lw-zamek"
+    },
+    {
+     "ref": "place:fr-wzgorze"
+    }
+   ]
+  },
+  {
+   "id": "nauka-dotyk",
+   "theme": "nauka",
+   "art": "orbit",
+   "mode": "driving",
+   "days": "2",
+   "pl": {
+    "name": "Nauka, której można dotknąć",
+    "intro": "Ta trasa łączy miejsca, w których naukę poznaje się przez eksperyment i obserwację. Centrum Nauki i Techniki EC1 w Łodzi mieści się w dawnej elektrowni i ma także planetarium. W Jędrzejowie Muzeum Przypkowskich gromadzi jedną z największych kolekcji zegarów słonecznych. Na Wietrzni w Kielcach geolodzy pokazują skały i skamieniałości sprzed setek milionów lat."
+   },
+   "en": {
+    "name": "Science you can touch",
+    "intro": "This route links places where you learn science through experiment and observation. The EC1 Science and Technology Centre in Łódź occupies a former power station and also has a planetarium. In Jędrzejów the Przypkowski Museum holds one of the largest collections of sundials. At Wietrznia in Kielce geologists show rocks and fossils hundreds of millions of years old."
+   },
+   "stops": [
+    {
+     "ref": "place:lo-ec1"
+    },
+    {
+     "ref": "place:je-przypkowscy"
+    },
+    {
+     "ref": "place:ki-wietrznia"
+    }
+   ]
+  },
+  {
+   "id": "slask-techniki",
+   "theme": "technika",
+   "featured": true,
+   "art": "gear",
+   "mode": "driving",
+   "days": "1–2",
+   "pl": {
+    "name": "Szlak Zabytków Techniki — Górny Śląsk",
+    "intro": "Górny Śląsk przez dwa stulecia był przemysłowym sercem tej części Europy. Dziś dawne kopalnie, osiedla robotnicze i zakłady zamieniono w muzea i ośrodki kultury. Można zjechać do kopalni węgla na głębokość 320 metrów, przepłynąć łodzią zalany chodnik kopalni srebra i zobaczyć drewnianą wieżę radiostacji. Wszystkie przystanki leżą blisko siebie, więc trasę da się zrobić w jeden–dwa dni."
+   },
+   "en": {
+    "name": "Industrial Monuments Route — Upper Silesia",
+    "intro": "For two centuries Upper Silesia was the industrial heart of this part of Europe. Today former mines, workers' estates and factories have become museums and cultural centres. You can ride down a coal mine to a depth of 320 metres, take a boat along a flooded gallery of a silver mine and see the wooden tower of a radio station. All stops are close together, so the route can be done in one or two days."
+   },
+   "stops": [
+    {
+     "ref": "place:ka-nikiszowiec"
+    },
+    {
+     "ref": "place:ka-strefa-kultury"
+    },
+    {
+     "ref": "place:za-guido"
+    },
+    {
+     "ref": "place:gl-radiostacja"
+    },
+    {
+     "ref": "place:tg-kopalnia-srebra"
+    }
+   ]
+  },
+  {
+   "id": "ropa-woda",
+   "theme": "technika",
+   "art": "gear",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "Ropa, para i woda",
+    "intro": "Polska ma kilka zabytków techniki, którymi szczyci się cały świat. W Bóbrce Ignacy Łukasiewicz założył w połowie XIX wieku jedną z pierwszych na świecie kopalni ropy naftowej. Na Kanale Elbląskim statki pokonują różnicę wysokości, wjeżdżając na wózkach po pochylniach, czyli płynąc po trawie. Kanał Augustowski z XIX wieku łączy jeziora i rzeki śluzami, a łódzka Manufaktura przypomina o potędze dawnego przemysłu włókienniczego."
+   },
+   "en": {
+    "name": "Oil, steam and water",
+    "intro": "Poland has several industrial monuments that are admired worldwide. In Bóbrka Ignacy Łukasiewicz founded one of the world's first oil mines in the mid-19th century. On the Elbląg Canal boats overcome differences in height by riding on trolleys up inclined planes, in effect sailing over grass. The 19th-century Augustów Canal links lakes and rivers with locks, and Łódź's Manufaktura recalls the might of the old textile industry."
+   },
+   "stops": [
+    {
+     "ref": "place:bo-naftowe"
+    },
+    {
+     "ref": "place:lo-manufaktura"
+    },
+    {
+     "ref": "place:bu-pochylnie"
+    },
+    {
+     "ref": "place:au-kanal"
+    }
+   ]
+  },
+  {
+   "id": "pod-ziemia-poludnie",
+   "theme": "podziemia",
+   "featured": true,
+   "art": "mine",
+   "mode": "driving",
+   "days": "2",
+   "pl": {
+    "name": "Pod ziemią: sól, węgiel i srebro",
+    "intro": "Małopolska i Śląsk kryją pod ziemią całe miasta wydrążone przez górników. W Wieliczce kopalnia soli działa od XIII wieku, a w Tarnowskich Górach wydobywano srebro i ołów. W Zabrzu można zjechać do kopalni węgla na głębokość 320 metrów. Pod ziemią panuje chłód, więc warto zabrać ciepłe ubranie także latem."
+   },
+   "en": {
+    "name": "Underground: salt, coal and silver",
+    "intro": "Lesser Poland and Silesia hide whole underground towns dug by miners. In Wieliczka the salt mine has worked since the 13th century, and in Tarnowskie Góry silver and lead were mined. In Zabrze you can ride down a coal mine to a depth of 320 metres. It is cold underground, so take warm clothes even in summer."
+   },
+   "stops": [
+    {
+     "ref": "place:wi-kopalnia"
+    },
+    {
+     "ref": "place:tg-kopalnia-srebra"
+    },
+    {
+     "ref": "place:za-guido"
+    }
+   ]
+  },
+  {
+   "id": "pod-ziemia-wschod",
+   "theme": "podziemia",
+   "art": "mine",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Krzemień, kreda i jaskinie",
+    "intro": "W Krzemionkach zachowały się kopalnie krzemienia pasiastego sprzed około pięciu tysięcy lat, wpisane na Listę UNESCO. Pod Chełmem ciągną się korytarze dawnej kopalni kredy, w których według legendy straszy duch zwany Bieluchem. Pod Sandomierzem i Rzeszowem można przejść podziemnymi trasami po dawnych piwnicach kupieckich. Jaskinia Raj koło Chęcin zachwyca naciekami i należy do najpiękniejszych jaskiń w Polsce."
+   },
+   "en": {
+    "name": "Flint, chalk and caves",
+    "intro": "Krzemionki preserves striped-flint mines about five thousand years old, listed by UNESCO. Under Chełm run the tunnels of an old chalk mine, said by legend to be haunted by a ghost called Bieluch. Under Sandomierz and Rzeszów you can follow underground routes through old merchants' cellars. Raj Cave near Chęciny delights with its dripstones and is one of the most beautiful caves in Poland."
+   },
+   "stops": [
+    {
+     "ref": "place:ch-jaskinia-raj"
+    },
+    {
+     "ref": "place:kr-krzemionki"
+    },
+    {
+     "ref": "place:sa-trasa"
+    },
+    {
+     "ref": "place:ch-podziemia"
+    },
+    {
+     "ref": "place:rz-rynek"
+    }
+   ]
+  },
+  {
+   "id": "puszcze",
+   "theme": "przyroda",
+   "featured": true,
+   "art": "bison",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Puszcze i bagna Podlasia",
+    "intro": "Podlasie to kraina dzikiej przyrody. Puszcza Białowieska jest jednym z ostatnich fragmentów pierwotnego lasu nizinnego Europy i wpisano ją na Listę UNESCO. Żyją tu żubry, które uratowano przed wyginięciem w XX wieku dzięki hodowli. Bagna Biebrzy to raj dla ptaków i miłośników obserwacji przyrody, a Kanał Augustowski prowadzi przez lasy i jeziora."
+   },
+   "en": {
+    "name": "Forests and marshes of Podlasie",
+    "intro": "Podlasie is a land of wild nature. The Białowieża Forest is one of the last fragments of Europe's primeval lowland forest and is listed by UNESCO. It is home to European bison, which were saved from extinction in the 20th century through breeding. The Biebrza marshes are a paradise for birds and wildlife watchers, and the Augustów Canal runs through forests and lakes."
+   },
+   "stops": [
+    {
+     "ref": "place:bw-park"
+    },
+    {
+     "ref": "place:bw-zubry"
+    },
+    {
+     "ref": "place:go-biebrza"
+    },
+    {
+     "ref": "place:au-kanal"
+    }
+   ]
+  },
+  {
+   "id": "gory",
+   "theme": "przyroda",
+   "art": "bison",
+   "mode": "driving",
+   "days": "3–5",
+   "pl": {
+    "name": "Góry: Tatry, Pieniny i Bieszczady",
+    "intro": "Południe Polski to pasmo gór o bardzo różnym charakterze. Tatry są jedynymi w Polsce górami o charakterze wysokogórskim, z jeziorami polodowcowymi i skalnymi graniami. Pieniny słyną z przełomu Dunajca i spływu tratwami. Bieszczady kuszą połoninami, czyli rozległymi łąkami na grzbietach, i poczuciem dzikości."
+   },
+   "en": {
+    "name": "Mountains: Tatras, Pieniny and Bieszczady",
+    "intro": "Southern Poland has mountain ranges of very different character. The Tatras are Poland's only alpine mountains, with glacial lakes and rocky ridges. The Pieniny are famous for the Dunajec Gorge and its rafting trips. The Bieszczady tempt with połoniny, wide grasslands on the ridges, and a feeling of wilderness."
+   },
+   "stops": [
+    {
+     "ref": "place:ta-morskie-oko"
+    },
+    {
+     "ref": "place:ta-kasprowy"
+    },
+    {
+     "ref": "place:pi-splyw"
+    },
+    {
+     "ref": "place:bi-poloniny"
+    }
+   ]
+  },
+  {
+   "id": "tatarski",
+   "theme": "kultury",
+   "featured": true,
+   "art": "domes",
+   "mode": "driving",
+   "days": "2",
+   "pl": {
+    "name": "Szlak Tatarski i Podlasie wielu wyznań",
+    "intro": "Na Podlasiu od wieków żyją obok siebie katolicy, prawosławni, a dawniej także liczni Żydzi i Tatarzy. W Kruszynianach stoi drewniany meczet polskich Tatarów, którzy osiedlili się tu w XVII wieku. Supraśl i Grabarka to ważne miejsca prawosławia, a Wielka Synagoga w Tykocinie przypomina o społeczności żydowskiej. Trasę kończy pokamedulski klasztor w Wigrach nad jeziorem."
+   },
+   "en": {
+    "name": "Tatar Trail and the many faiths of Podlasie",
+    "intro": "In Podlasie Catholics and Orthodox Christians have lived side by side for centuries, as did many Jews and Tatars in the past. In Kruszyniany stands the wooden mosque of the Polish Tatars, who settled here in the 17th century. Supraśl and Grabarka are important Orthodox sites, and the Great Synagogue in Tykocin recalls the Jewish community. The route ends at the former Camaldolese monastery in Wigry by the lake."
+   },
+   "stops": [
+    {
+     "ref": "place:gr-grabarka"
+    },
+    {
+     "ref": "place:ty-synagoga"
+    },
+    {
+     "ref": "place:kr-meczet"
+    },
+    {
+     "ref": "place:su-ikony"
+    },
+    {
+     "ref": "place:wi-klasztor"
+    }
+   ]
+  },
+  {
+   "id": "spotkania",
+   "theme": "kultury",
+   "art": "domes",
+   "mode": "driving",
+   "days": "3",
+   "pl": {
+    "name": "Miasta spotkania kultur",
+    "intro": "Wiele polskich miast przez stulecia było domem dla różnych narodów i wyznań. Krakowski Kazimierz łączył miasto chrześcijańskie i żydowskie. W Lublinie, w kaplicy zamkowej, zachowały się średniowieczne freski w stylu bizantyjsko-ruskim, ufundowane przez Władysława Jagiełłę. W Karpaczu stoi norweska świątynia Wang, przeniesiona tu w XIX wieku."
+   },
+   "en": {
+    "name": "Towns where cultures met",
+    "intro": "For centuries many Polish towns were home to different nations and faiths. Kraków's Kazimierz combined a Christian and a Jewish town. In Lublin the castle chapel preserves medieval frescoes in the Byzantine-Ruthenian style, funded by Władysław Jagiełło. In Karpacz stands the Norwegian Wang stave church, moved here in the 19th century."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-kazimierz"
+    },
+    {
+     "ref": "place:lu-stare-miasto"
+    },
+    {
+     "ref": "place:lu-zamek"
+    },
+    {
+     "ref": "place:kp-wang"
+    }
+   ]
+  },
+  {
+   "id": "unesco-poludnie",
+   "theme": "unesco",
+   "featured": true,
+   "art": "globe",
+   "mode": "driving",
+   "days": "3–4",
+   "pl": {
+    "name": "UNESCO na południu Polski",
+    "intro": "Na południu Polski leży wiele obiektów z Listy światowego dziedzictwa UNESCO. Stare Miasto w Krakowie i kopalnia w Wieliczce znalazły się już na pierwszej liście z 1978 roku. Na Śląsku czekają Kopalnia Srebra w Tarnowskich Górach, Kościół Pokoju w Świdnicy i Hala Stulecia we Wrocławiu. Na Podkarpaciu warto zobaczyć drewniany kościół w Haczowie."
+   },
+   "en": {
+    "name": "UNESCO in southern Poland",
+    "intro": "Southern Poland has many sites on the UNESCO World Heritage List. Kraków's Old Town and the Wieliczka mine were on the very first list in 1978. In Silesia you can visit the silver mine in Tarnowskie Góry, the Church of Peace in Świdnica and the Centennial Hall in Wrocław. In Podkarpacie it is worth seeing the wooden church in Haczów."
+   },
+   "stops": [
+    {
+     "ref": "place:wr-hala-stulecia"
+    },
+    {
+     "ref": "place:sw-kosciol-pokoju"
+    },
+    {
+     "ref": "place:tg-kopalnia-srebra"
+    },
+    {
+     "ref": "place:kr-rynek"
+    },
+    {
+     "ref": "place:wi-kopalnia"
+    },
+    {
+     "ref": "place:ha-kosciol"
+    }
+   ]
+  },
+  {
+   "id": "unesco-reszta",
+   "theme": "unesco",
+   "art": "globe",
+   "mode": "driving",
+   "days": "4–6",
+   "pl": {
+    "name": "UNESCO: północ, zachód i wschód",
+    "intro": "Pozostałe polskie obiekty UNESCO są rozrzucone po całym kraju. Na zachodzie leży Park Mużakowski, dzielony z Niemcami, a na północy średniowieczny Toruń i zamek w Malborku. Na wschodzie czekają renesansowy Zamość i Puszcza Białowieska. Ta trasa to raczej plan na kilka wyjazdów niż na jeden weekend."
+   },
+   "en": {
+    "name": "UNESCO: north, west and east",
+    "intro": "Poland's other UNESCO sites are spread across the country. In the west lies Muskau Park, shared with Germany, and in the north medieval Toruń and Malbork Castle. In the east you will find Renaissance Zamość and the Białowieża Forest. This route is more a plan for several trips than for a single weekend."
+   },
+   "stops": [
+    {
+     "ref": "place:le-park-muzakowski"
+    },
+    {
+     "ref": "place:to-stare-miasto"
+    },
+    {
+     "ref": "place:ma-zamek"
+    },
+    {
+     "ref": "place:bw-park"
+    },
+    {
+     "ref": "place:za-stare-miasto"
+    }
+   ]
+  },
+  {
+   "id": "rezydencje",
+   "theme": "palace",
+   "featured": true,
+   "art": "palace",
+   "mode": "driving",
+   "days": "2–3",
+   "pl": {
+    "name": "Rezydencje magnatów — centrum i wschód",
+    "intro": "Magnackie rody budowały okazałe rezydencje otoczone parkami. Nieborów i pobliska Arkadia Radziwiłłów to pałac oraz romantyczny park z ruinami i świątyniami. W Kozłówce zachowały się pełne wnętrza pałacu Zamoyskich. Zamek w Łańcucie, dawna rezydencja Lubomirskich i Potockich, słynie z kolekcji powozów i bogatych sal."
+   },
+   "en": {
+    "name": "Magnate residences — centre and east",
+    "intro": "Magnate families built grand residences surrounded by parks. Nieborów and nearby Arkadia of the Radziwiłłs combine a palace with a romantic park full of ruins and temples. Kozłówka preserves the complete interiors of the Zamoyski palace. Łańcut Castle, once home to the Lubomirski and Potocki families, is famous for its carriage collection and lavish halls."
+   },
+   "stops": [
+    {
+     "ref": "place:ni-palac"
+    },
+    {
+     "ref": "place:ar-park"
+    },
+    {
+     "ref": "place:ko-muzeum-zamoyskich"
+    },
+    {
+     "ref": "place:lc-zamek"
+    }
+   ]
+  },
+  {
+   "id": "zamki-palace-zachod",
+   "theme": "palace",
+   "art": "palace",
+   "mode": "driving",
+   "days": "3",
+   "pl": {
+    "name": "Zamki-pałace Śląska i Wielkopolski",
+    "intro": "Na Śląsku i w Wielkopolsce arystokraci zamieniali średniowieczne zamki w wystawne pałace. Książ i Pszczyna należały do Hochbergów, jednego z najbogatszych rodów Europy. Moszna zachwyca wieżyczkami jak z baśni, a Kórnik i Rogalin pokazują rezydencje wielkopolskich rodów z bibliotekami i starymi dębami. Gołuchów to zamek przebudowany na wzór francuskich rezydencji nad Loarą."
+   },
+   "en": {
+    "name": "Castle-palaces of Silesia and Greater Poland",
+    "intro": "In Silesia and Greater Poland aristocrats turned medieval castles into lavish palaces. Książ and Pszczyna belonged to the Hochbergs, one of the richest families in Europe. Moszna delights with fairy-tale turrets, while Kórnik and Rogalin show residences of Greater Poland families with libraries and ancient oaks. Gołuchów is a castle rebuilt in the manner of French châteaux on the Loire."
+   },
+   "stops": [
+    {
+     "ref": "place:wb-ksiaz"
+    },
+    {
+     "ref": "place:mo-zamek"
+    },
+    {
+     "ref": "place:ps-zamek"
+    },
+    {
+     "ref": "place:gl-zamek"
+    },
+    {
+     "ref": "place:ko-zamek"
+    },
+    {
+     "ref": "place:ro-palac"
+    }
+   ]
+  },
+  {
+   "id": "wybrzeze",
+   "theme": "morze",
+   "featured": true,
+   "art": "lighthouse",
+   "mode": "driving",
+   "days": "3–5",
+   "pl": {
+    "name": "Wybrzeże: latarnie, klify i wydmy",
+    "intro": "Polskie wybrzeże Bałtyku ma ponad 500 kilometrów i bardzo różne oblicza. W Świnoujściu stoi najwyższa latarnia morska w Polsce, a w Wolińskim Parku Narodowym strome klify. W Trzęsaczu morze stopniowo zabrało gotycki kościół, z którego została jedna ściana. Ruchome wydmy koło Łeby wędrują co roku o kilka metrów, a Półwysep Helski wcina się daleko w Zatokę Gdańską."
+   },
+   "en": {
+    "name": "The coast: lighthouses, cliffs and dunes",
+    "intro": "Poland's Baltic coast is more than 500 kilometres long and has many faces. Świnoujście has the tallest lighthouse in Poland, and Wolin National Park has steep cliffs. In Trzęsacz the sea gradually swallowed a Gothic church, leaving a single wall. The shifting dunes near Łeba move several metres a year, and the Hel Peninsula reaches far into the Bay of Gdańsk."
+   },
+   "stops": [
+    {
+     "ref": "place:sw-latarnia"
+    },
+    {
+     "ref": "place:mi-wolinski-pn"
+    },
+    {
+     "ref": "place:tr-ruina"
+    },
+    {
+     "ref": "place:ko-molo"
+    },
+    {
+     "ref": "place:le-wydmy"
+    },
+    {
+     "ref": "place:he-mierzeja"
+    },
+    {
+     "ref": "place:so-molo"
+    }
+   ]
+  },
+  {
+   "id": "dinozaury",
+   "theme": "dzieci",
+   "featured": true,
+   "art": "dino",
+   "mode": "driving",
+   "days": "2",
+   "pl": {
+    "name": "Dinozaury i podróż w czasie",
+    "intro": "Ta trasa to podróż przez miliony lat. W Krasiejowie odkryto szczątki gadów sprzed ponad 200 milionów lat, a park pokazuje je w naturalnej skali. JuraPark w Bałtowie łączy modele dinozaurów z prawdziwymi tropami. Na Wietrzni w Kielcach można zobaczyć skały dawnego morza, a w Biskupinie wejść do zrekonstruowanej osady sprzed blisko trzech tysięcy lat."
+   },
+   "en": {
+    "name": "Dinosaurs and time travel",
+    "intro": "This route is a journey through millions of years. In Krasiejów remains of reptiles more than 200 million years old were discovered, and the park shows them at full scale. JuraPark in Bałtów combines dinosaur models with real footprints. At Wietrznia in Kielce you can see the rocks of an ancient sea, and in Biskupin enter a reconstructed settlement almost three thousand years old."
+   },
+   "stops": [
+    {
+     "ref": "place:kr-jurapark"
+    },
+    {
+     "ref": "place:ba-jurapark"
+    },
+    {
+     "ref": "place:ki-wietrznia"
+    },
+    {
+     "ref": "place:bi-biskupin"
+    }
+   ]
+  },
+  {
+   "id": "slodkie",
+   "theme": "dzieci",
+   "art": "dino",
+   "mode": "driving",
+   "days": "3",
+   "pl": {
+    "name": "Pierniki, rogale i zabawki",
+    "intro": "Rodzinna trasa po miejscach, w których można coś zrobić samemu. W Toruniu dzieci wypiekają pierniki według dawnych receptur, a w Poznaniu poznają tajemnice rogali świętomarcińskich. W Kielcach Muzeum Zabawek i Zabawy pokazuje zabawki z różnych epok. W Szymbarku czeka dom do góry nogami, w którym trudno utrzymać równowagę."
+   },
+   "en": {
+    "name": "Gingerbread, croissants and toys",
+    "intro": "A family route to places where you can make things yourself. In Toruń children bake gingerbread to old recipes, and in Poznań they learn the secrets of St Martin's croissants. In Kielce the Museum of Toys and Play shows toys from many eras. In Szymbark an upside-down house awaits, where it is hard to keep your balance."
+   },
+   "stops": [
+    {
+     "ref": "place:ki-muzeum-zabawek"
+    },
+    {
+     "ref": "place:po-rogalowe"
+    },
+    {
+     "ref": "place:to-piernik"
+    },
+    {
+     "ref": "place:sz-szymbark"
+    }
+   ]
+  }
  ]
 }

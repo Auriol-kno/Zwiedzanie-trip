@@ -192,7 +192,8 @@ function render(){
   const pst=window.IWH_EXTRAS?IWH_EXTRAS.passport.stats():null;
   p.innerHTML=head(t.profile)+(pst?'<button type="button" class="passport-card" data-open-tab="passport"><img src="./assets/brand-pin-landscape.svg" alt="" width="40" height="54"><span><b>'+esc(t.passportCard)+'</b><small>'+esc(t.passportCardSub)+'</small><small class="pc-stats">🏙️ '+pst.cities+'/'+pst.citiesAll+' · 🗺️ '+pst.regions+' · 🏛️ '+pst.warsaw+'</small></span><em>'+esc(t.openIt)+' →</em></button>':'')+
    '<h3>'+esc(t.stats)+'</h3><div class="stat-row"><div><b>'+trips().length+'</b><small>'+esc(t.statTrips)+'</small></div><div><b>'+days().length+'</b><small>'+esc(t.statDays)+'</small></div><div><b>'+(visited().length+placeStamps().length)+'</b><small>'+esc(t.statVisited)+'</small></div></div>'+
-   '<h3>'+esc(t.data)+'</h3><p class="muted small">'+esc(t.dataText)+'</p><button type="button" class="link-danger" data-clear>'+esc(t.clear)+'</button>';
+   '<h3>'+esc(t.data)+'</h3><p class="muted small">'+esc(t.dataText)+'</p><button type="button" class="link-danger" data-clear>'+esc(t.clear)+'</button>'+
+   '<p class="made-by">I Was Here — Places &amp; Memories · Made by Tomasz Kmiecik</p>';
  }
  if(tab==='plans'){const h=p.querySelector('.panel-head h2');if(h)h.textContent=t.plans;
   p.querySelector('.panel-head')?.insertAdjacentHTML('afterend','<div class="seg plan-switch" role="group" aria-label="'+esc(t.plans)+'"><button type="button" data-plan-view="trips" aria-pressed="'+(planView==='trips')+'">'+esc(t.planTrips)+'</button><button type="button" data-plan-view="day" aria-pressed="'+(planView==='day')+'">'+esc(t.planDays)+'</button></div>')}

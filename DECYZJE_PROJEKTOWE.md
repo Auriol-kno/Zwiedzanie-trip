@@ -14,6 +14,9 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Przed każdym PR uruchom wszystkie testy. W raporcie zawsze napisz, że nie testowano na fizycznym iPhonie, jeśli tak było.
 - Właściciel wybiera wygląd z **wariantów**: tablica 10 logo, tablica 5 stylów ilustracji. Przy dużych zmianach wizualnych najpierw zaproponuj warianty.
 
+## 1a. Podpis autora (8.6.2)
+- Aplikacja jest podpisana **„Made by Tomasz Kmiecik”** (prośba właściciela; w treści prośby „made in”, zapisane jako poprawne angielskie „made by”). Podpis jest w Profilu Atlasu, w stopkach przewodników regionów i Warszawy oraz w `<meta name="author">`. Nie usuwaj go.
+
 ## 2. Logo (stan 8.5 — ostateczny wybór właściciela)
 - **Lewy górny róg każdej strony:** pinezka z pejzażem (`assets/brand-pin-landscape.svg`: słońce, ośnieżone góry, las, rzeka) **po lewej stronie** napisu „PLACES & MEMORIES / I WAS HERE”.
   - Napis jest tekstem HTML: małe kapitaliki u góry, pochylone szeryfowe „I WAS HERE” pod spodem.
@@ -87,12 +90,14 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Przy każdej atrakcji jest link „Więcej informacji o miejscu — Wikipedia”: potwierdzony artykuł (tag `wikidata` w OSM + Wikidata) albo uczciwe wyszukiwanie. Artykułów nie zgadujemy. Złe dopasowania są na liście `REJECT` w `tools/wiki_links.py`.
 - Ocena 1–5 jest **redakcyjna**, a nie z Google. Nie ma kluczy API.
 
-- **Historia miejsca** (decyzja z 8.6): min. **10 zdań** w PL i EN dla każdego miejsca, tylko utrwalone fakty, legendy oznaczone jako legendy. Pliki `data/historia/<region>.json`, wczytywane dynamicznie; walidacja w `sync_database.py`. Uzupełniamy partiami po województwach.
+- **Historia miejsca** (decyzja z 8.6): min. **10 zdań** w PL i EN dla każdego miejsca, tylko utrwalone fakty, legendy oznaczone jako legendy. Pliki `data/historia/<region>.json`, wczytywane dynamicznie; walidacja w `sync_database.py`. Uzupełniamy partiami po województwach; kolejność zaakceptowana 2026-11-08: Pomorskie, Dolnośląskie, Świętokrzyskie, potem pozostałe.
+- **Właściciel zaakceptował (2026-11-08):** motywy i ilustracje Odkrywaj oraz etap 1 bazy danych z `BAZA_DANYCH.md`.
 - **Baza danych:** propozycja w `BAZA_DANYCH.md` — etap 1 (pliki w repozytorium dzielone i ładowane na żądanie) wdrażany od 8.6; etap 2 (PostgreSQL/PostGIS w Supabase z panelem i nocnym eksportem) wymaga zgody właściciela.
 
 ## 10. Odkrywaj — szlaki tematyczne (8.6)
 - Właściciel poprosił o zwiedzanie z podziałem na motywy: historia, baśnie, legendy, II wojna światowa, nauka, Jura i Szlak Orlich Gniazd, czarownice i legendy — oraz o kolejne propozycje i ładne ilustracje.
 - 14 motywów z wektorowymi kafelkami w stylu logo (kolor motywu, złota ramka, kremowy rysunek, bursztynowe akcenty; bez filtrów SVG). Dane w `data/szlaki.json`.
+- **Plany województw** (8.6.2, prośba właściciela „plan i punkty dla wszystkich województw”): motyw na początku listy, jeden plan na każde z 16 województw z linkiem do przewodnika regionu.
 - Szlak = wstęp PL/EN, przystanki (miejsca regionów lub miasto), notatki przy przystankach, dystans i czas jako szacunek, zapis jako podróż lub plan dnia.
 
 ## 11. Planowane (uzgodnione kierunki, jeszcze niezrobione)

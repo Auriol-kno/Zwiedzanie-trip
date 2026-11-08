@@ -22,7 +22,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
- footer:'I Was Here 8.3 • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
+ footer:'I Was Here 8.6 • Made by Tomasz Kmiecik • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
  title:'Przewodnik regionu',atlas:'Cała mapa Polski',back:'Pokaż całą mapę Polski',langLabel:'Język: polski. Przełącz na angielski',min:'min',h:'godz.'},
 en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly available',lead:n=>'Pick a town or a theme, save places and build a day plan. '+n+' carefully selected places to visit.',
  sights:'Sights',towns:'Towns',stamps:'Your stamps',saved:'Saved',map:'Map',fit:'⌖ Whole region',all:'All',search:'Search this region',searchPh:'e.g. castle, cave, Sandomierz…',
@@ -34,7 +34,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
- footer:'I Was Here 8.3 • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
+ footer:'I Was Here 8.6 • Made by Tomasz Kmiecik • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
  title:'Regional guide',atlas:'Whole map of Poland',back:'Show the whole map of Poland',langLabel:'Language: English. Switch to Polish',min:'min',h:'h'}
 };
 const CITY={warsaw:{pl:'Warszawa',en:'Warsaw',url:'./index.html',icon:'🏛️',pl2:'184 atrakcje · 18 dzielnic',en2:'184 sights · 18 districts'}};
