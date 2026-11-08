@@ -76,6 +76,20 @@ function check(ok, message) {
     return Number(/scale\(([\d.]+)\)/.exec(document.querySelector('#world').getAttribute('transform'))[1]);
   })) / homeZoom;
   check(pinched > 1.5, 'Atlas: gest pinch powiększa mapę (×' + pinched.toFixed(2) + ')');
+  // 8.6.4 — płynna mapa: w trakcie przesuwania warstwa mapy przesuwa się transformacją CSS (bez przerysowania),
+  // a po puszczeniu palca rysunek jest odświeżany jednorazowo w tym samym miejscu.
+  const live = await page.evaluate(() => new Promise(done => {
+    const svg = document.querySelector('#polandSvg'), wrap = svg.parentNode, r = svg.getBoundingClientRect();
+    const cx = r.left + r.width / 2, cy = r.top + r.height / 2, before = document.querySelector('#world').getAttribute('transform');
+    const ev = (type, x, y) => svg.dispatchEvent(new PointerEvent(type, { pointerId: 7, clientX: x, clientY: y, bubbles: true, pointerType: 'touch', isPrimary: true }));
+    ev('pointerdown', cx, cy); ev('pointermove', cx + 60, cy + 30);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const during = { css: wrap.style.transform, g: document.querySelector('#world').getAttribute('transform') };
+      ev('pointerup', cx + 60, cy + 30);
+      done({ moved: /translate3d\(60/.test(during.css) && during.g === before, cleared: wrap.style.transform === '' && document.querySelector('#world').getAttribute('transform') !== before });
+    }));
+  }));
+  check(live.moved && live.cleared, 'Atlas: płynne przesuwanie (podgląd na GPU w trakcie gestu, jeden rysunek po puszczeniu)');
 
   // --- Warszawa z Atlasu EN
   await page.click('#atlasFloat');
