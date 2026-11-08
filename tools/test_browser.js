@@ -90,6 +90,18 @@ function check(ok, message) {
     }));
   }));
   check(live.moved && live.cleared, 'Atlas: płynne przesuwanie (podgląd na GPU w trakcie gestu, jeden rysunek po puszczeniu)');
+  // 8.6.5 — pinezki nie odjeżdżają od miast: czubek pinezki leży na współrzędnych miasta przy każdym powiększeniu.
+  const pinDrift = async () => page.evaluate(() => {
+    const m = document.querySelector('#world').getScreenCTM();
+    return Math.max(...[...document.querySelectorAll('.city-dot')].map(d => {
+      const x = +d.dataset.x, y = +d.dataset.y, p = d.querySelector('.pin').getScreenCTM();
+      return Math.hypot(p.e - (m.a * x + m.c * y + m.e), p.f - (m.b * x + m.d * y + m.f));
+    }));
+  });
+  const driftHome = await pinDrift();
+  await page.click('#zoomIn'); await page.click('#zoomIn'); await page.click('#zoomIn');
+  const driftZoom = await pinDrift();
+  check(driftHome < 0.5 && driftZoom < 0.5, 'Atlas: pinezki miast trzymają się mapy przy przybliżaniu (odchyłka ' + driftHome.toFixed(1) + ' / ' + driftZoom.toFixed(1) + ' px)');
 
   // --- Warszawa z Atlasu EN
   await page.click('#atlasFloat');
