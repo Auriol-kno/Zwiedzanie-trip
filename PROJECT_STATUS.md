@@ -34,8 +34,8 @@
   - #18: 8.6.1–8.6.3 (historie wszystkich miejsc i atrakcji Warszawy, plany województw, indeks, podpis autora) — `b503643`;
   - #19: 8.6.4 (płynna mapa Atlasu) — `e00884e`;
   - #20: dokumentacja przekazania po 8.6.4;
-  - #22: 8.7.0 (Moje dane — Excel, e-mail, kopia, import; mapa regionu offline; podział bazy; wydajność, porządki);
-  - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`.
+  - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`;
+  - #22: 8.7.0 (Moje dane — Excel, e-mail, kopia, import; mapa regionu offline; podział bazy; wydajność, porządki).
 - **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone (także `claude/i-was-here-analysis-augprr` z raportem technicznym, PR #21).
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
