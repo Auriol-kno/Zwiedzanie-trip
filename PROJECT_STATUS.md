@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.6.4 (gałąź) / 8.6.3 (`main`) · **`main`:** `b503643` („Scal #18: 8.6.1–8.6.3 — historie wszystkich miejsc i atrakcji Warszawy, plany 16 województw, indeks bazy, podpis autora”)
-**Cache PWA:** `i-was-here-v8-6-4-20261108` (na gałęzi 8.6.4) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.6.5 (gałąź `claude/i-was-here-analysis-augprr`) / 8.6.4 (`main`, `e00884e`) · **`main`:** `b503643` („Scal #18: 8.6.1–8.6.3 — historie wszystkich miejsc i atrakcji Warszawy, plany 16 województw, indeks bazy, podpis autora”)
+**Cache PWA:** `i-was-here-v8-6-5-20261108` (na gałęzi 8.6.5) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
 > - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
@@ -123,8 +123,10 @@
 - **Mapka nie pływała w Warszawie:** nagłówek z `backdrop-filter` tworzy własny kontekst dla `position:fixed`, więc mapkę przeniesiono poza nagłówek (8.5).
 - **Wyższy nagłówek Atlasu zmniejszał przybliżenie województwa:** pinezka w Atlasie dostała wysokość kafelka (8.5).
 - **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
+- **Pinezki miast odjeżdżały od mapy przy przybliżaniu:** skala pinezki liczona wokół środka grupy zamiast czubka (`transform-origin` w `.city-dot`) — naprawione w 8.6.5.
 
 ## 4. Ostatnio wykonane prace
+- **8.6.5 (gałąź `claude/i-was-here-analysis-augprr`):** naprawa pinezek miast, które odjeżdżały od mapy przy przybliżaniu (`transform-origin` w `.city-dot`); test regresji w przeglądarce.
 - **8.6.4 (gałąź `claude/plynna-mapa`):** płynne przesuwanie i przybliżanie mapy Atlasu (podgląd na GPU, jeden rysunek po geście).
 - **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
 - **8.6.2 (PR #18):** historie dla wszystkich województw (213/213), plany zwiedzania 16 województw, podpis „Made by Tomasz Kmiecik”.
