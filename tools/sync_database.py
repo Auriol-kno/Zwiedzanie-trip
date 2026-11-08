@@ -77,3 +77,44 @@ for p in region_places:
 write("regiony.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
 guided = sum(r["status"] != "planned" for r in regions)
 print(f"OK: 16 województw ({guided} z atrakcjami), {len(region_places)} miejsc regionalnych; data/regiony.js zsynchronizowane.")
+
+# I Was Here 8.6 — rozszerzone historie miejsc (data/historia/<region>.json) i szlaki tematyczne (data/szlaki.json).
+# Pliki są wczytywane przez aplikację dynamicznie (fetch), dlatego nie generujemy dla nich kopii .js.
+place_ids = {p["id"]: p for p in region_places}
+ABBR = re.compile(r"\b(?:w|ok|r|św|m\.in|tzw|np|n\.p\.m|ul|pl|im|gen|ks|abp|bp|dr|prof|ss|St|Dr|Mt|ca|approx)\.$")
+def sentences(paras):
+    """Liczba zdań (z pominięciem skrótów typu „w.”, „ok.”, „św.”)."""
+    n = 0
+    for para in paras:
+        for m in re.finditer(r"[.!?…](?=[”\"»]?(\s|$))", para):
+            if not ABBR.search(para[: m.end()]):
+                n += 1
+    return n
+hist_dir = DATA / "historia"
+hist_total = 0
+for path in sorted(hist_dir.glob("*.json")):
+    h = json.loads(path.read_text(encoding="utf-8"))
+    assert h["region"] == path.stem and h["region"] in region_ids, path.name
+    assert h["note"]["pl"] and h["note"]["en"], "Brak noty o źródłach: " + path.name
+    for pid, e in h["places"].items():
+        assert pid in place_ids and place_ids[pid]["region"] == h["region"], "Nieznane miejsce w historii: " + pid
+        for lang in ("pl", "en"):
+            assert isinstance(e[lang], list) and all(isinstance(x, str) and x.strip() for x in e[lang]), pid
+            assert sentences(e[lang]) >= 10, f"Historia {pid} [{lang}] ma mniej niż 10 zdań ({sentences(e[lang])})"
+        hist_total += 1
+routes_db = load("szlaki.json")
+theme_ids = {t["id"] for t in routes_db["themes"]}
+assert len(theme_ids) == len(routes_db["themes"]) >= 10, "Motywy szlaków"
+assert all(t["pl"]["name"] and t["en"]["name"] and t["pl"]["desc"] and t["en"]["desc"] for t in routes_db["themes"])
+route_ids = [r["id"] for r in routes_db["routes"]]
+assert len(route_ids) == len(set(route_ids)), "Powtórzone ID szlaku"
+city_ids = {"warsaw", "krakow", "gdansk", "wroclaw", "poznan", "lodz", "szczecin", "lublin", "bialystok", "rzeszow", "olsztyn", "torun", "katowice", "kielce"}
+for r in routes_db["routes"]:
+    assert r["theme"] in theme_ids, r["id"]
+    assert r["pl"]["name"] and r["en"]["name"] and r["pl"]["intro"] and r["en"]["intro"], "Brak PL/EN szlaku: " + r["id"]
+    assert len(r["stops"]) >= 3, "Za mało przystanków: " + r["id"]
+    for st in r["stops"]:
+        kind, ref = st["ref"].split(":", 1)
+        assert (kind == "place" and ref in place_ids) or (kind == "city" and ref in city_ids), "Nieznany przystanek " + st["ref"] + " w " + r["id"]
+        assert ("pl" in st) == ("en" in st), "Notatka przystanku tylko w jednym języku: " + r["id"]
+print(f"OK: {hist_total} rozszerzonych historii (≥10 zdań PL i EN), {len(theme_ids)} motywów, {len(route_ids)} szlaków tematycznych.")

@@ -18,7 +18,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  planNote:'Czasy przejazdu są szacowane z odległości (bez korków i rozkładów). Godziny otwarcia i ceny sprawdź na stronie obiektu przed wyjazdem.',
  planEmpty:'Brak miejsc pasujących do filtrów. Zmień kategorię lub wydłuż czas.',places:'Miejsca do zwiedzania',count:(n)=>n+' '+(n===1?'miejsce':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'miejsca':'miejsc'),
  empty:'Brak miejsc dla wybranych filtrów.',visit:'wizyta',drive:'dojazd',walk:'spacer',value:'Warto odwiedzić',valueNote:'ocena redakcyjna, nie Google',time:'Czas na miejscu',town:'Miejscowość',
- save:'♡ Zapisz',unsave:'♥ Zapisane',stamp:'✣ Zdobądź pieczątkę',unstamp:'✓ Pieczątka zdobyta',route:'🧭 Prowadź',site:'🌐 Strona obiektu',google:'🔎 Szukaj w Google Maps',listen:'🔊 Posłuchaj',
+ save:'♡ Zapisz',unsave:'♥ Zapisane',stamp:'✣ Zdobądź pieczątkę',unstamp:'✓ Pieczątka zdobyta',history:'📜 Historia miejsca',onRoutes:'Na szlakach tematycznych',route:'🧭 Prowadź',site:'🌐 Strona obiektu',google:'🔎 Szukaj w Google Maps',listen:'🔊 Posłuchaj',
  approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
@@ -30,7 +30,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  planNote:'Travel times are estimated from distance (no traffic or timetables). Check opening hours and prices on the venue’s website before you go.',
  planEmpty:'No places match the filters. Change the category or allow more time.',places:'Places to visit',count:n=>n+' '+(n===1?'place':'places'),
  empty:'No places match the selected filters.',visit:'visit',drive:'drive',walk:'walk',value:'Worth visiting',valueNote:'editorial rating, not Google',time:'Time on site',town:'Town',
- save:'♡ Save',unsave:'♥ Saved',stamp:'✣ Collect the stamp',unstamp:'✓ Stamp collected',route:'🧭 Directions',site:'🌐 Official website',google:'🔎 Search in Google Maps',listen:'🔊 Listen',
+ save:'♡ Save',unsave:'♥ Saved',stamp:'✣ Collect the stamp',unstamp:'✓ Stamp collected',history:'📜 History of the place',onRoutes:'On themed routes',route:'🧭 Directions',site:'🌐 Official website',google:'🔎 Search in Google Maps',listen:'🔊 Listen',
  approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
@@ -169,7 +169,7 @@ function openDetail(id){
  const dir='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(p.lat+','+p.lon);
  const search='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.name.pl+', '+p.town);
  $('#dBody').innerHTML='<div class="big" aria-hidden="true">'+p.icon+'</div><div class="eyebrow" style="color:var(--accent)">'+esc(p.town)+' · '+esc(p.cats.map(catLabel).join(' · '))+'</div><h2 id="dTitle">'+esc(name(p))+'</h2>'+
-  (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+(window.IWH_EXTRAS?IWH_EXTRAS.wikiHTML(p,lang):'')+
+  (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+'<div id="dHist"></div>'+(window.IWH_EXTRAS?IWH_EXTRAS.wikiHTML(p,lang):'')+'<div id="dRoutes"></div>'+
   '<div class="facts"><div><small>'+esc(x.time)+'</small><b>'+fmtDur(p.time)+'</b></div><div><small>'+esc(x.value)+'</small><b>'+p.visitValue+'/5</b> <small style="display:inline">('+esc(x.valueNote)+')</small></div></div>'+
   '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn '+(seen?'secondary':'accent')+'" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
   '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
@@ -179,6 +179,18 @@ function openDetail(id){
   (seen&&window.IWH_EXTRAS?IWH_EXTRAS.journal.button('reg:'+id,name(p)+' · '+p.town,p.icon,lang):'')+'</div>'+
   '<div class="warn">'+esc(p.coordinateStatus==='osm'?x.osm:x.approx)+'</div>';
  $('#detail').classList.add('show');document.body.style.overflow='hidden';$('#dClose').focus();window.IWH_EXTRAS?.journal.counts($('#dBody'));
+ detailExtras(p);
+}
+// 8.6 — rozszerzona historia miejsca (data/historia/<region>.json, wczytywana dynamicznie) i szlaki tematyczne z Odkrywaj
+const HIST={},HDATA={};
+function loadHistory(rid){if(!HIST[rid])HIST[rid]=fetch('./data/historia/'+encodeURIComponent(rid)+'.json').then(r=>r.ok?r.json():null).catch(()=>{delete HIST[rid];return null}).then(j=>{if(j)HDATA[rid]=j;return j});return HIST[rid]}
+function historyOf(p){const h=HDATA[p.region];return h&&h.places?h.places[p.id]:null}
+function detailExtras(p){
+ const x=t();
+ loadHistory(p.region).then(h=>{const box=$('#dHist');const e=h&&h.places&&h.places[p.id];if(!box||!e||$('#dTitle')?.textContent!==name(p))return;
+  const paras=e[lang]||e.pl;box.innerHTML='<section class="place-history" aria-labelledby="dHistT"><h3 id="dHistT">'+esc(x.history)+'</h3>'+paras.map(q=>'<p>'+esc(q)+'</p>').join('')+'<small>'+esc((h.note&&(h.note[lang]||h.note.pl))||'')+'</small></section>'});
+ if(window.IWH_EXPLORE)IWH_EXPLORE.routesFor(p.id).then(rs=>{const box=$('#dRoutes');if(!box||!rs.length||$('#dTitle')?.textContent!==name(p))return;
+  box.innerHTML='<div class="place-routes"><span class="place-routes-label">'+esc(x.onRoutes)+'</span>'+rs.map(r=>{const th=IWH_EXPLORE.themeOf(r.theme)||{};return '<a href="./atlas.html?tab=explore&route='+encodeURIComponent(r.id)+'&lang='+lang+'">'+IWH_EXPLORE.art(r.art||th.art,th.color,30)+esc((r[lang]||r.pl).name.split(' — ')[0])+'</a>'}).join('')+'</div>'}).catch(()=>{});
 }
 // 8.5 — dodanie punktu do planu dnia / podróży Atlasu (iwh_days / iwh_trips, ten sam format co atlas-plans.js)
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
@@ -203,7 +215,7 @@ document.addEventListener('click',e=>{
  const f=e.target.closest('[data-fav]');if(f){toggle('fav',f.dataset.fav);return}
  const s=e.target.closest('[data-stamp]');if(s){toggle('stamp',s.dataset.stamp);return}
  const ap=e.target.closest('[data-addplan]');if(ap){addToPlan(ap.dataset.addplan,ap.dataset.id);ap.textContent=planLabel(ap.dataset.addplan,ap.dataset.id);return}
- const sp=e.target.closest('[data-speak]');if(sp&&window.speechSynthesis){const p=all.find(x=>x.id===sp.dataset.speak);speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(name(p)+'. '+desc(p));u.lang=lang==='en'?'en-GB':'pl-PL';u.rate=.95;speechSynthesis.speak(u);return}
+ const sp=e.target.closest('[data-speak]');if(sp&&window.speechSynthesis){const p=all.find(x=>x.id===sp.dataset.speak);speechSynthesis.cancel();const hi=historyOf(p);const u=new SpeechSynthesisUtterance(name(p)+'. '+desc(p)+(hi?' '+(hi[lang]||hi.pl).join(' '):''));u.lang=lang==='en'?'en-GB':'pl-PL';u.rate=.95;speechSynthesis.speak(u);return}
  const tn=e.target.closest('[data-town]');if(tn){state.town=tn.dataset.town;if(state.town!=='all')state.start=state.town;renderChips();renderList();renderPlanStart();renderPlan();renderMap();return}
  const c=e.target.closest('[data-cat]');if(c){const k=c.dataset.cat;state.cats=state.cats.includes(k)?state.cats.filter(x=>x!==k):[...state.cats,k];renderChips();renderList();renderPlan();renderMap();return}
  const j=e.target.closest('[data-jump]');if(j){document.getElementById(j.dataset.jump).scrollIntoView({behavior:'smooth',block:'start'});$$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b===j));if(j.dataset.jump==='mapSection'&&map)setTimeout(()=>map.invalidateSize(),350)}

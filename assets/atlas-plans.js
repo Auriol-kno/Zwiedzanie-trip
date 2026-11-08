@@ -74,10 +74,15 @@ const API={
   A.changed();if(tab!=='map')render();
  },
  pick(kind,item){openPicker(kind,item)},
- open(name){if(name==='explore'){API.open('map');document.querySelectorAll('.tabbar [data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab==='explore'));if(!document.getElementById('searchBox')?.classList.contains('open'))document.getElementById('searchButton')?.click();setTimeout(()=>document.getElementById('searchInput')?.focus(),60);return}
+ // 8.6: Odkrywaj = szlaki tematyczne (assets/explore-themes.js). Wyszukiwarka miast zostaje pod ⌕ w nagłówku mapy.
+ open(name){if(name==='explore'&&!window.IWH_EXPLORE){API.open('map');if(!document.getElementById('searchBox')?.classList.contains('open'))document.getElementById('searchButton')?.click();return}
+  if(name==='explore'&&tab==='explore')window.IWH_EXPLORE.reset();
   tab=name;document.querySelectorAll('.tabbar [data-tab]').forEach(b=>{const on=b.dataset.tab===name;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
-  document.body.dataset.tab=name;render();if(name!=='map')$('#tabPanel').querySelector('h2')?.focus()},
+  document.body.dataset.tab=name;render();if(name!=='map'&&name!=='explore')$('#tabPanel').querySelector('h2')?.focus()},
  close(){if(tab!=='map')API.open('map')},
+ // Nowy plan podróży lub dnia z gotową listą pozycji (np. szlak z Odkrywaj). Zwraca plan albo null przy błędzie zapisu.
+ addPlan(kind,name,items,mode){const all=kind==='trip'?trips():days(),plan={id:uid(),name:String(name||'').slice(0,60)||(kind==='trip'?x().defTrip:x().defDay),created:new Date().toISOString(),items:items.map(i=>Object.assign({},i))};
+  if(kind==='day'){plan.date=today();plan.start='09:00';if(mode==='walking')plan.mode='walking'}all.unshift(plan);if(!save(kind==='trip'?'iwh_trips':'iwh_days',all))return null;planView=kind==='trip'?'trips':'day';A.changed();return plan},
  refresh(){const te=$('#toast');if(te){te.classList.remove('show');te.textContent=''}render();const d=$('#planPicker');if(d.open&&d.dataset.kind)openPicker(d.dataset.kind,JSON.parse(d.dataset.item))}
 };
 
@@ -176,6 +181,8 @@ function render(){
    (!v.length&&!ps.length?'<p class="empty">'+esc(t.noMemories)+'</p>':'')+
    (window.IWH_EXTRAS?'<h3>📔 '+esc(t.journal)+'</h3><p class="muted small">'+esc(t.journalIntro)+'</p><ul class="plan-items journal-list" id="memJournal"></ul>':'');
   if(window.IWH_EXTRAS){IWH_EXTRAS.journal.counts(p);renderJournal()}
+ }else if(view==='explore'&&window.IWH_EXPLORE){
+  IWH_EXPLORE.render(p,{A,lang:lang(),head,toast,addPlan:API.addPlan,alive:()=>tab==='explore'});return;
  }else if(view==='explore'){
   const REGS=(window.IWH_REGIONS&&window.IWH_REGIONS.regions)||[];
   const crow=c=>{const r=A.resolve({t:'city',id:c.id});return r?'<li class="plan-item"><span class="pi-icon" aria-hidden="true">📍</span><span class="pi-text"><b>'+esc(r.name)+'</b><small>'+esc(r.sub||'')+'</small></span><span class="pi-actions"><button type="button" data-show-item=\''+esc(JSON.stringify({t:'city',id:c.id}))+'\'>'+esc(t.show)+'</button></span></li>':''};

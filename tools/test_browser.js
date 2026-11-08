@@ -290,6 +290,28 @@ function check(ok, message) {
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
   check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && !!document.querySelector('.atlas-top #atlasFloat')), 'Atlas: logo z pinezką, mapka Polski w jednej linii z logo');
 
+  // 8.6 — Odkrywaj: motywy i szlaki tematyczne (EN), zapis szlaku jako podróży
+  await page.click('.tabbar [data-tab="explore"]');
+  await page.waitForSelector('#tabPanel .ex-theme');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel .ex-theme').length >= 10 && document.querySelectorAll('#tabPanel .ex-route.big').length >= 8
+    && document.querySelectorAll('#tabPanel .ex-theme svg.ex-art').length === document.querySelectorAll('#tabPanel .ex-theme').length), 'Odkrywaj: motywy z ilustracjami i polecane szlaki');
+  check(await page.evaluate(() => !/[ąćęłńóśźż]|Szlak|zamki|Pokaż|Przewodnik/.test(document.querySelector('#tabPanel').innerText.replace(/Łysa Góra|Łęczyca|Kraków|Częstochowa|Toruń|Gdańsk|Wrocław|Poznań|Łódź|Białowieża/g, ''))), 'Odkrywaj: wersja EN bez polskich fragmentów interfejsu');
+  await page.click('#tabPanel [data-ex-theme="zamki"]');
+  await page.click('#tabPanel [data-ex-route="orle-gniazda"]');
+  await page.waitForSelector('#tabPanel .ex-stops');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel .ex-stop').length === 10 && /Eagles' Nests/.test(document.querySelector('#tabPanel h2').textContent)), 'Odkrywaj: Szlak Orlich Gniazd ma 10 przystanków');
+  await page.click('#tabPanel [data-ex-save="trip"]');
+  check(await page.evaluate(() => { const t = JSON.parse(localStorage.getItem('iwh_trips') || '[]'); return t[0] && t[0].items.length === 10 && t[0].items[0].t === 'place'; }), 'Odkrywaj: szlak zapisany jako podróż (10 pozycji)');
+  await page.goto(base + 'atlas.html?tab=explore&route=lysa-gora&lang=pl');
+  await page.waitForSelector('#tabPanel .ex-stops');
+  check(await page.evaluate(() => /Łysa Góra/.test(document.querySelector('#tabPanel h2').textContent) && document.querySelectorAll('#tabPanel .ex-stop').length === 3), 'Odkrywaj: głęboki link do szlaku (atlas.html?tab=explore&route=…)');
+  // 8.6 — rozszerzona historia (≥10 zdań) i szlaki w szczegółach miejsca regionu
+  await page.goto(base + 'region.html?region=slaskie&place=og-zamek&lang=pl');
+  await page.waitForSelector('#dHist .place-history');
+  await page.waitForSelector('#dRoutes .place-routes a');
+  check(await page.evaluate(() => { const t = document.querySelector('#dHist').innerText; return (t.match(/[.!?](\s|$)/g) || []).length >= 10 && /Bonerów|Boner/.test(t); }), 'Przewodnik regionu: historia miejsca ma co najmniej 10 zdań');
+  check(await page.evaluate(() => [...document.querySelectorAll('#dRoutes a')].some(a => /route=orle-gniazda/.test(a.href))), 'Przewodnik regionu: link do szlaku, na którym leży miejsce');
+
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();
   server.close();
