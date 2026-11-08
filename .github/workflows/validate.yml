@@ -29,7 +29,7 @@ jobs:
           node --check assets/poland-geography.js
           node --check assets/brand-v5.js
           node --check assets/i18n4.js
-          node --check assets/poland-explorer.js
+          node --check assets/trips-ics.js
           node --check assets/region.js
           node --check assets/atlas-plans.js
           node --check assets/place-extras.js

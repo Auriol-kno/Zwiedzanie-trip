@@ -162,7 +162,7 @@ function pointCity(city){
  return b;
 }
 function renderMarkers(){
- dots.textContent='';CITIES.forEach(c=>dots.appendChild(pointCity(c)));
+ dots.textContent='';DOTS=null;CITIES.forEach(c=>dots.appendChild(pointCity(c)));
  if(mode!=='city'&&region)dots.querySelectorAll('.city-dot').forEach(d=>d.classList.toggle('outside',!region.cities.includes(d.dataset.city)));
  labelLayer.textContent='';
  REG.regions.forEach(r=>{const geo=geoOf(r);if(!geo)return;const c=project(...(geo.label||geo.coords[0]));
@@ -191,8 +191,17 @@ function preview(){
 }
 function commit(){if(pv){cancelAnimationFrame(pv);pv=0}clearTimeout(commitT);setTransform()}
 function commitSoon(ms){clearTimeout(commitT);commitT=setTimeout(commit,ms)}
+// 8.7 — wydajność: najpierw wszystkie odczyty układu (measure + frame), potem same zapisy. Wcześniej układ strony
+// liczył się 3 razy na jedno przerysowanie (measure, podpisy miast, podpisy miejscowości).
+function readFrame(){
+ const m=svg.getScreenCTM(),obs=['.map-controls','#resetView'].map(q=>$(q)).filter(Boolean).map(e=>e.getBoundingClientRect()).map(r=>({x0:r.left,x1:r.right,y0:r.top,y1:r.bottom}));
+ return{m,W:innerWidth,top:$('.atlas-top').getBoundingClientRect().bottom-8,bottom:$('.atlas-bottom').getBoundingClientRect().top,obstacles:obs};
+}
+let DOTS=null,LMS=null,RNAMES=null,TPINS=null,lastLm='';
+const nodes=()=>{if(!DOTS){DOTS=[...dots.querySelectorAll('.city-dot')];LMS=[...dots.querySelectorAll('.city-landmark')];RNAMES=[...labelLayer.querySelectorAll('.region-name')];TPINS=[...townLayer.querySelectorAll('.town-pin')];lastLm=''}};
 function setTransform(){
- if(pv){cancelAnimationFrame(pv);pv=0}wrap.style.transform='';wrap.classList.remove('moving');svg.classList.remove('moving');measure();cz=zoom;ctx=tx;cty=ty;
+ if(pv){cancelAnimationFrame(pv);pv=0}if(wrap.style.transform)wrap.style.transform='';wrap.classList.remove('moving');svg.classList.remove('moving');measure();cz=zoom;ctx=tx;cty=ty;
+ const fr=readFrame();nodes();
  g.setAttribute('transform','translate('+tx.toFixed(2)+' '+ty.toFixed(2)+') scale('+zoom.toFixed(4)+')');
  const u=unitPx(),k=1/(zoom*u),z=zoom;
  // Granice: delikatne w widoku kraju, wyraźniejsze przy zbliżeniu (płynna interpolacja).
@@ -203,23 +212,24 @@ function setTransform(){
  const nameO=Math.min(1,Math.max(0,(z-1.3)/.45));svg.style.setProperty('--names-o',nameO.toFixed(2));
  const townO=mode!=='city'?1:Math.min(1,Math.max(0,(z-2.3)/.5));svg.style.setProperty('--towns-o',townO.toFixed(2));
  townLayer.style.pointerEvents=townO>.4?'':'none';
- const ks=k.toFixed(4);
- dots.querySelectorAll('.city-dot').forEach(d=>d.setAttribute('transform','translate('+d.dataset.x+' '+d.dataset.y+') scale('+(mode==='city'?ks:(k*.85).toFixed(4))+')'));
- dots.querySelectorAll('.city-landmark').forEach(l=>l.setAttribute('transform','translate(-37,-86) scale('+Math.min(1.35,.62+.18*z).toFixed(3)+') translate(0,0)'));
- labelLayer.querySelectorAll('.region-name').forEach(l=>l.setAttribute('transform','translate('+l.dataset.x+' '+l.dataset.y+') scale('+ks+')'));
- townLayer.querySelectorAll('.town-pin').forEach(p=>p.setAttribute('transform','translate('+p.dataset.x+' '+p.dataset.y+') scale('+ks+')'));
- layoutTownLabels(u,layoutCityLabels());
+ const ks=k.toFixed(4),dk=mode==='city'?ks:(k*.85).toFixed(4);
+ DOTS.forEach(d=>d.setAttribute('transform','translate('+d.dataset.x+' '+d.dataset.y+') scale('+dk+')'));
+ // Znaczki miast zależą tylko od powiększenia — przepisujemy je, gdy skala faktycznie się zmieniła.
+ const lm='translate(-37,-86) scale('+Math.min(1.35,.62+.18*z).toFixed(3)+') translate(0,0)';
+ if(lm!==lastLm){LMS.forEach(l=>l.setAttribute('transform',lm));lastLm=lm}
+ RNAMES.forEach(l=>l.setAttribute('transform','translate('+l.dataset.x+' '+l.dataset.y+') scale('+ks+')'));
+ TPINS.forEach(p=>p.setAttribute('transform','translate('+p.dataset.x+' '+p.dataset.y+') scale('+ks+')'));
+ layoutTownLabels(u,layoutCityLabels(fr),fr);
  // Ilustracje miast: na telefonie dopiero po przybliżeniu (czytelność widoku całego kraju).
  svg.style.setProperty('--lm-o',(box.W>=640?1:Math.min(1,Math.max(0,(z-1.45)/.35))).toFixed(2));
  updateScale(u);
 }
 // Podpisy miast bez nakładania: wybrane i miasta z przewodnikiem mają pierwszeństwo. Podpis przechodzi na drugą
 // stronę pinezki, gdy wychodzi poza ekran albo trafia na przyciski; jeśli nigdzie się nie mieści — chowa się.
-function layoutCityLabels(){
- const m=svg.getScreenCTM();if(!m)return [];
+function layoutCityLabels(fr){
+ if(!fr||!fr.m)fr=readFrame();const m=fr.m;if(!m)return [];
  const sc=(x,y)=>({x:m.e+(x*zoom+tx)*m.a,y:m.f+(y*zoom+ty)*m.d});
- const W=innerWidth,top=$('.atlas-top').getBoundingClientRect().bottom-8,bottom=$('.atlas-bottom').getBoundingClientRect().top;
- const obstacles=['.map-controls','#resetView'].map(q=>$(q)).filter(Boolean).map(e=>e.getBoundingClientRect()).map(r=>({x0:r.left,x1:r.right,y0:r.top,y1:r.bottom}));
+ const W=fr.W,top=fr.top,bottom=fr.bottom,obstacles=fr.obstacles;
  const ds=[...dots.querySelectorAll('.city-dot')].sort((a,b)=>(b.classList.contains('selected')-a.classList.contains('selected'))||(a.classList.contains('upcoming')-b.classList.contains('upcoming')));
  const pins=ds.map(d=>{const c=sc(+d.dataset.x,+d.dataset.y);return{x0:c.x-10,x1:c.x+10,y0:c.y-27,y1:c.y+2,id:d.dataset.city}});
  const placed=[],over=(a,b)=>a.x0<b.x1&&a.x1>b.x0&&a.y0<b.y1&&a.y1>b.y0;
@@ -252,26 +262,30 @@ function animateTo(z,x,y){
  requestAnimationFrame(step);
 }
 // Widoczny fragment mapy (pod nagłówkiem, nad dolnym panelem) w jednostkach viewBox.
-function viewWindow(){
- const top=$('.atlas-top').getBoundingClientRect().bottom,bottom=$('.atlas-bottom').getBoundingClientRect().top,b0=box||measure(),r={left:b0.left,top:b0.top,right:b0.left+b0.W,bottom:b0.top+b0.H,width:b0.W};
+// 8.7: na telefonie kadr zaczyna się pod przyciskami mapy (warstwy, +, −) i zostawia miejsce na wysokość pinezki
+// (pinezka rysuje się nad punktem miasta) — Gdańsk i Olsztyn nie chowają się pod nagłówkiem ani przyciskami.
+// Tylko dla widoku całej Polski (clear): widok województwa z otwartą kartą potrzebuje każdego piksela.
+function viewWindow(clear){
+ const ctr=$('.map-controls'),cr=clear&&ctr&&ctr.offsetParent?ctr.getBoundingClientRect():null,narrow=innerWidth<600;
+ const top=Math.max($('.atlas-top').getBoundingClientRect().bottom,narrow&&cr&&cr.height?cr.bottom-14:0)+(narrow&&cr?8:0),bottom=$('.atlas-bottom').getBoundingClientRect().top,b0=box||measure(),r={left:b0.left,top:b0.top,right:b0.left+b0.W,bottom:b0.top+b0.H,width:b0.W};
  const a=svgPoint(r.left+10,Math.max(r.top,top)+4),b=svgPoint(r.right-(r.width<600?10:64),Math.min(r.bottom,bottom)-30);
  return{x0:a.x,y0:a.y,x1:b.x,y1:b.y};
 }
-function fitBox(bx0,by0,bx1,by1,maxZ,fill){
- const w=viewWindow(),vw=Math.max(80,w.x1-w.x0),vh=Math.max(80,w.y1-w.y0);
+function fitBox(bx0,by0,bx1,by1,maxZ,fill,clear){
+ const w=viewWindow(clear),vw=Math.max(80,w.x1-w.x0),vh=Math.max(80,w.y1-w.y0);
  const z=Math.min(maxZ||MAXZ,Math.max(MINZ,(fill||.9)*Math.min(vw/(bx1-bx0),vh/(by1-by0))));
  animateTo(z,(w.x0+w.x1)/2-z*(bx0+bx1)/2,(w.y0+w.y1)/2-z*(by0+by1)/2);
 }
 const COUNTRY_BOX=(()=>{const pts=BORDER.map(p=>project(p[0],p[1]));return[Math.min(...pts.map(p=>p.x)),Math.min(...pts.map(p=>p.y)),Math.max(...pts.map(p=>p.x)),Math.max(...pts.map(p=>p.y))]})();
 // Powrót do całej Polski: animowany, niezależnie od otwartego regionu, miasta czy zakładki.
-function home(){closeSheet({keepView:true});if(PLANS)PLANS.close();fitBox(...COUNTRY_BOX,1.6,.97)}
+function home(){closeSheet({keepView:true});if(PLANS)PLANS.close();fitBox(...COUNTRY_BOX,1.6,.97,true)}
 function focusRegionView(r){
  const geo=geoOf(r);if(!geo)return;
  const pts=geo.coords.map(p=>project(p[0],p[1])),xs=pts.map(p=>p.x),ys=pts.map(p=>p.y);
  fitBox(Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys));
 }
 function renderFocus(){
- focusLayer.textContent='';townLayer.textContent='';
+ focusLayer.textContent='';townLayer.textContent='';DOTS=null;
  document.body.dataset.focus=mode==='city'?'':'region';
  dots.querySelectorAll('.city-dot').forEach(d=>d.classList.toggle('outside',mode!=='city'&&!!region&&!region.cities.includes(d.dataset.city)));
  regionLayer.querySelectorAll('.region-hit').forEach(p=>p.classList.toggle('active',!!region&&mode!=='city'&&p.dataset.region===region.id));
@@ -307,9 +321,9 @@ function renderFocus(){
  setTransform();
 }
 // Podpisy miejscowości bez nakładania: pierwszeństwo mają wybrana i te z większą liczbą atrakcji.
-function layoutTownLabels(u,taken){
+function layoutTownLabels(u,taken,fr){
  // Współrzędne ekranu (jak w podpisach miast); podpisy miast mają pierwszeństwo przed miejscowościami.
- const m=svg.getScreenCTM();if(!m)return;
+ const m=fr&&fr.m?fr.m:svg.getScreenCTM();if(!m)return;
  const boxes=[...(taken||[])];
  [...townLayer.querySelectorAll('.town-pin')].reverse().forEach(pin=>{
   const label=pin.querySelector('.town-label');if(!label)return;
@@ -536,9 +550,9 @@ $('#atlasFloat').addEventListener('click',e=>{e.preventDefault();if(mode!=='city
 
 applyLayers();localize();reset();
 // Kontrolki mapy zawsze nad dolnym panelem (jego wysokość zależy od karty i języka).
-const bottomPanel=$('.atlas-bottom'),syncBottom=()=>{$('#atlasApp').style.setProperty('--bottom-h',bottomPanel.offsetHeight+'px');requestAnimationFrame(layoutCityLabels)};
+const bottomPanel=$('.atlas-bottom'),syncBottom=()=>{$('#atlasApp').style.setProperty('--bottom-h',bottomPanel.offsetHeight+'px');requestAnimationFrame(()=>layoutCityLabels())};
 syncBottom();if(window.ResizeObserver)new ResizeObserver(syncBottom).observe(bottomPanel);addEventListener('resize',()=>{syncBottom();setTransform()});
-requestAnimationFrame(()=>{syncBottom();if(!qs.get('region'))fitBox(...COUNTRY_BOX,1.6,.97)});
+requestAnimationFrame(()=>{syncBottom();if(!qs.get('region'))fitBox(...COUNTRY_BOX,1.6,.97,true)});
 // Głębokie linki: atlas.html?region=swietokrzyskie (np. powrót z przewodnika regionu).
 if(qs.get('region')&&REG.regions.some(r=>r.id===qs.get('region')))requestAnimationFrame(()=>selectRegion(qs.get('region')));
 // Tryb offline działa także dla osób, które otwierają tylko Atlas (start_url PWA).

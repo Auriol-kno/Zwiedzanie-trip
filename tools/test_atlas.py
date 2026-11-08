@@ -74,7 +74,7 @@ assert "tubylem_map_style','atlas'" in (ROOT/"assets/brand-v5.js").read_text(enc
 for extra in ["assets/atlas-light-v5.css","assets/atlas-illustrated.js","assets/poland-geography.js","assets/brand-v5.js","assets/brand-v5.css"]:
     assert extra in sw, "New asset absent from offline cache: "+extra
 # 5.1: jeden przełącznik języka i brak zdublowanej mapy Polski w Warszawie
-explorer = (ROOT / "assets/poland-explorer.js").read_text(encoding="utf-8")
+explorer = (ROOT / "assets/trips-ics.js").read_text(encoding="utf-8")
 assert "tbLanguage" not in explorer and "tb_lang" not in explorer, "Drugi przełącznik języka w Warszawie"
 explorer_code = re.sub(r"/\*.*?\*/", "", explorer, flags=re.S)
 assert "polandHome" not in explorer_code, "Zdublowana mapa Polski w przewodniku Warszawy"
@@ -87,14 +87,14 @@ assert "przewodnik 4.0" not in home and "Wersja demonstracyjna" not in home
 assert "tubylem_lang" in explorer, "Moduł wycieczek musi używać wspólnego języka"
 assert home.count('id="langWarsaw"') == 1
 assert home.index('id="atlasFloat"') < home.index('assets/i18n4.js'), "#atlasFloat musi istnieć przed i18n4.js"
-assert "./assets/poland-explorer.js" in sw, "PWA nie buforuje modułu wycieczek"
+assert "./assets/trips-ics.js" in sw, "PWA nie buforuje modułu wycieczek"
 # 5.3: każdy lokalny plik ładowany przez strony musi być w cache offline; Atlas rejestruje SW
 core = set(re.findall(r"'\./([^']+)'", sw.split("CORE=", 1)[1].split("];", 1)[0]))
 region_page = (ROOT / "region.html").read_text(encoding="utf-8")
 for page in (atlas, home, region_page):
     for ref in re.findall(r'(?:src|href)="(?:\./)?((?:assets|data)/[^"?#]+)"', page):
         assert ref in core, "PWA nie buforuje: " + ref
-assert "assets/poland-explorer.js" in core
+assert "assets/trips-ics.js" in core
 assert "serviceWorker.register" in atlas_js, "Atlas (start_url) musi rejestrować Service Workera"
 assert "ignoreSearch" in sw and "navigate" in sw, "Offline: nawigacja z ?lang musi trafiać w cache"
 assert all(i["purpose"] == "any" for i in manifest["icons"]), "Ikona any nie może być jednocześnie maskable"

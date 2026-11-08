@@ -262,7 +262,7 @@ function check(ok, message) {
     focus: document.body.dataset.focus
   }));
   check(reg.name === 'Świętokrzyskie' && reg.outline && reg.focus === 'region', 'Atlas: wybór województwa pokazuje jego obrys');
-  check(reg.pins >= 15 && reg.zoom > homeZoom * 1.6, 'Atlas: przybliżenie do województwa i pinezki miejscowości (' + reg.pins + ')');
+  check(reg.pins >= 15 && reg.zoom > homeZoom * 1.6, 'Atlas: przybliżenie do województwa i pinezki miejscowości (' + reg.pins + ', ×' + (reg.zoom / homeZoom).toFixed(2) + ')');
   await page.click('[data-card-town="Sandomierz"]');
   check(await page.evaluate(() => document.querySelector('#cityAction').textContent.includes('Sandomierz')), 'Atlas: wybór miejscowości w województwie');
   await page.click('#cityAction');

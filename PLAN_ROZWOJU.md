@@ -1,3 +1,6 @@
+> **ARCHIWALNE (pierwsza koncepcja „Odkryj Warszawę”, oznaczone w 8.7).** Aktualny plan rozwoju jest w `ROADMAP.md`,
+> stan projektu w `PROJECT_STATUS.md`, a decyzje właściciela w `DECYZJE_PROJEKTOWE.md`. Nie realizuj tego planu wprost.
+
 # ODKRYJ WARSZAWĘ — koncepcja produktu
 
 ## Wizja

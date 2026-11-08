@@ -4,7 +4,7 @@
  *   iwh_days    — plany dnia    [{id,name,date,start,items:[item]}]
  *   iwh_visited — odwiedzone miasta / województwa / miejscowości (klucze item)
  * Odwiedzone atrakcje regionów: iwh_region_visited (region.js), pieczątki Warszawy: odkryjWarszawe_1.visited,
- * zapisane wycieczki po Warszawie: tb_saved_trips (poland-explorer.js) — tylko odczyt, bez nadpisywania.
+ * zapisane wycieczki po Warszawie: tb_saved_trips (trips-ics.js) — tylko odczyt, bez nadpisywania.
  * item = {t:'city',id} | {t:'region',id} | {t:'town',region,name} | {t:'place',id}. Nazw użytkownika nie tłumaczymy. */
 (function(){
 'use strict';
