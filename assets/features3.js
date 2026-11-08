@@ -116,4 +116,4 @@ showPrefs();foodList();renderAll();
 })();
 
 /* Tu Byłem: load Poland explorer after Warsaw features */
-(function(){const script=document.createElement('script');script.src='assets/poland-explorer.js';script.defer=true;document.body.appendChild(script)})();
+(function(){const script=document.createElement('script');script.src='assets/trips-ics.js';script.defer=true;document.body.appendChild(script)})();

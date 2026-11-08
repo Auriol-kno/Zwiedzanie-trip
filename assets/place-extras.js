@@ -253,5 +253,5 @@ function passportOpen(){
  pbox.hidden=false;document.documentElement.classList.add('ij-open');xb.focus();
 }
 
-window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,count,counts,button,MAX_PHOTOS},passport:{open:passportOpen,mount,stats}};
+window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,save:put,count,counts,button,MAX_PHOTOS},passport:{open:passportOpen,mount,stats}};
 })();

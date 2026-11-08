@@ -19,7 +19,7 @@ pl:{eyebrow:'Województwo · przewodnik regionu',eyebrowPartial:'Województwo ·
  planEmpty:'Brak miejsc pasujących do filtrów. Zmień kategorię lub wydłuż czas.',places:'Miejsca do zwiedzania',count:(n)=>n+' '+(n===1?'miejsce':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?'miejsca':'miejsc'),
  empty:'Brak miejsc dla wybranych filtrów.',visit:'wizyta',drive:'dojazd',walk:'spacer',value:'Warto odwiedzić',valueNote:'ocena redakcyjna, nie Google',time:'Czas na miejscu',town:'Miejscowość',
  save:'♡ Zapisz',unsave:'♥ Zapisane',stamp:'✣ Zdobądź pieczątkę',unstamp:'✓ Pieczątka zdobyta',history:'📜 Historia miejsca',onRoutes:'Na szlakach tematycznych',route:'🧭 Prowadź',site:'🌐 Strona obiektu',google:'🔎 Szukaj w Google Maps',listen:'🔊 Posłuchaj',
- approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',
+ approx:'Położenie na mapie jest orientacyjne. Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',osm:'Położenie według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL). Godziny otwarcia, ceny i dostępność potwierdź u organizatora.',close:'Zamknij',mapOffline:'Mapa wymaga połączenia z internetem. Lista miejsc i plan dnia działają dalej.',tilesOffline:'Brak podkładu mapy (offline). Pinezki, lista i plan dnia działają dalej.',
  notFound:'Nie znaleziono przewodnika dla tego regionu.',backAtlas:'Wróć do Atlasu Polski',noGuide:'Przewodnik po tym województwie jest w przygotowaniu.',
  cityGuide:'pełny przewodnik miejski',cityOpen:'Otwórz przewodnik',navMap:'Mapa',navPlan:'Plan dnia',navPlaces:'Miejsca',
  footer:'I Was Here 8.6 • Made by Tomasz Kmiecik • redakcyjna selekcja miejsc, stan: listopad 2026. Ocena 1–5 jest redakcyjna, nie pochodzi z Google. Położenie większości miejsc według OpenStreetMap (© współtwórcy OpenStreetMap, ODbL), pozostałe orientacyjne. Granice: Natural Earth · Mapa © OpenStreetMap.',
@@ -31,7 +31,7 @@ en:{eyebrow:'Province · regional guide',eyebrowPartial:'Province · partly avai
  planEmpty:'No places match the filters. Change the category or allow more time.',places:'Places to visit',count:n=>n+' '+(n===1?'place':'places'),
  empty:'No places match the selected filters.',visit:'visit',drive:'drive',walk:'walk',value:'Worth visiting',valueNote:'editorial rating, not Google',time:'Time on site',town:'Town',
  save:'♡ Save',unsave:'♥ Saved',stamp:'✣ Collect the stamp',unstamp:'✓ Stamp collected',history:'📜 History of the place',onRoutes:'On themed routes',route:'🧭 Directions',site:'🌐 Official website',google:'🔎 Search in Google Maps',listen:'🔊 Listen',
- approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',
+ approx:'The map position is approximate. Please confirm opening hours, prices and access with the venue.',osm:'Position from OpenStreetMap (© OpenStreetMap contributors, ODbL). Please confirm opening hours, prices and access with the venue.',close:'Close',mapOffline:'The map needs an internet connection. The list and the day plan still work.',tilesOffline:'No map tiles (offline). Pins, the list and the day plan still work.',
  notFound:'No guide was found for this region.',backAtlas:'Back to the Poland Atlas',noGuide:'A guide to this province is being prepared.',
  cityGuide:'full city guide',cityOpen:'Open the guide',navMap:'Map',navPlan:'Day plan',navPlaces:'Places',
  footer:'I Was Here 8.6 • Made by Tomasz Kmiecik • editorial selection of places, as of November 2026. The 1–5 rating is editorial, not from Google. Most positions come from OpenStreetMap (© OpenStreetMap contributors, ODbL); the rest are approximate. Borders: Natural Earth · Map © OpenStreetMap.',
@@ -70,7 +70,10 @@ let map=null,layer=null;
 function initMap(){
  if(typeof L==='undefined'){$('#rMap').innerHTML='<div class="map-offline">'+esc(t().mapOffline)+'</div>';return}
  map=L.map('rMap',{zoomControl:true,scrollWheelZoom:false});
- L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
+ const tiles=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
+ // 8.7: bez sieci Leaflet działa (plik lokalny), ale kafelków OSM brak — czytelny komunikat zamiast pustej mapy.
+ let tileErr=0;const note=()=>{let n=$('#rMap .tiles-offline');if(!n){n=document.createElement('div');n.className='tiles-offline';n.setAttribute('role','status');$('#rMap').appendChild(n)}n.textContent=t().tilesOffline};
+ tiles.on('tileerror',()=>{if(++tileErr>=2)note()});tiles.on('tileload',()=>{tileErr=0;const n=$('#rMap .tiles-offline');if(n)n.remove()});
  const geo=window.POLAND_GEO&&window.POLAND_GEO.regions.find(g=>g.name===region.geo);
  if(geo)L.polygon(geo.coords.map(c=>[c[1],c[0]]),{color:'#244f40',weight:2.5,fillColor:'#244f40',fillOpacity:.04,dashArray:'6 5',interactive:false}).addTo(map);
  layer=L.layerGroup().addTo(map);

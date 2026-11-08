@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.6.5 (`main`) · **`main`:** `9e028c5` („Scal #21: 8.6.5 — pinezki miast nie odjeżdżają od mapy przy przybliżaniu”)
-**Cache PWA:** `i-was-here-v8-6-5-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#21 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (`main`, scalone PR #22 „Scal #22: 8.7.0 — Moje dane w Excelu…”)
+**Cache PWA:** `i-was-here-v8-7-0-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
@@ -11,11 +11,11 @@
 ---
 
 ## Szybkie wznowienie pracy (nowa sesja)
-1. `git fetch origin && git log origin/main -5` → oczekiwane `9e028c5` (8.6.5) lub nowsze; sprawdź otwarte PR.
+1. `git fetch origin && git log origin/main -5` → oczekiwane merge „Scal #22” (8.7.0) lub nowsze; sprawdź otwarte PR.
 2. Przeczytaj `CLAUDE.md` → ten plik → `DECYZJE_PROJEKTOWE.md` → `ROADMAP.md` → `CHANGELOG.md`.
 3. Komunikacja po polsku; każda zmiana na gałęzi `claude/<temat>` + PR z polskim opisem; scalaj tylko po „Scal”, potem potwierdź „pages build and deployment” i „Sprawdź aplikację Warszawa”.
-4. Testy: `python tools/sync_database.py` (bez diffu w `data/*.js`), `python tools/test_bundle.py && python tools/test_atlas.py`, `node --check`, `NODE_PATH=$(npm root -g) node tools/test_browser.js` (83/83).
-5. Przy zmianie plików w cache podbij `KEY` w `service-worker.js` (dziś `v8-6-5`).
+4. Testy: `python tools/sync_database.py` (bez diffu w `data/*.js`), `python tools/test_bundle.py && python tools/test_atlas.py`, `node --check`, `NODE_PATH=$(npm root -g) node tools/test_browser.js` (94/94).
+5. Przy zmianie plików w cache podbij `KEY` w `service-worker.js` (dziś `v8-7-0`).
 6. Najbliższe zadanie: §6 poniżej.
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-08)
@@ -34,7 +34,8 @@
   - #18: 8.6.1–8.6.3 (historie wszystkich miejsc i atrakcji Warszawy, plany województw, indeks, podpis autora) — `b503643`;
   - #19: 8.6.4 (płynna mapa Atlasu) — `e00884e`;
   - #20: dokumentacja przekazania po 8.6.4;
-  - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`.
+  - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`;
+  - #22: 8.7.0 (Moje dane — Excel, e-mail, kopia, import; mapa regionu offline; podział bazy; wydajność, porządki).
 - **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone (także `claude/i-was-here-analysis-augprr` z raportem technicznym, PR #21).
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
@@ -60,6 +61,8 @@
 
 ### Atlas Polski — `atlas.html` (ekran startowy)
 - Mapa SVG 900×680 w rzucie równoodległościowym (52°), oparta na Natural Earth 1:10m i reliefie Terrain Tiles.
+- Dane miejsc z lekkiego `data/regiony-lite.js` (8.7, bez opisów); pełne dane województwa pobiera dopiero przewodnik regionu (`data/regiony/<id>.json`).
+- Widok całej Polski na telefonie zaczyna się pod przyciskami mapy (8.7); końcowe przerysowanie ok. 39 ms przy CPU ×4.
 - **Płynny ruch (8.6.4):** w trakcie gestu/animacji `preview()` przesuwa kontener `.atlas-map` transformacją CSS (GPU), a `commit()`→`setTransform()` rysuje mapę raz po zakończeniu ruchu (po puszczeniu palca, po ~0,25 s pauzy palców albo przy bardzo dużej zmianie skali).
 - 4 style: Atlas (domyślny), Jasny, Noc i Teren. Styl wybiera się w panelu Warstwy (`tubylem_map_style`, `iwh_layers`).
 - 14 miast i 16 województw: wybór przybliża, obrysowuje i pokazuje miejscowości. Działa wyszukiwarka, zoom, pinch-zoom i przesuwanie.
@@ -69,7 +72,7 @@
   - **Odkrywaj** (8.6): 15 ilustrowanych motywów (w tym „Plany województw” dla wszystkich 16 regionów) i 46 szlaków (`data/szlaki.json`) z zapisem jako podróż / plan dnia; wyszukiwarka miast jest pod ⌕ w nagłówku;
   - **Plany** pokazują podróże i plany dnia z przełącznikiem; z podróży można zrobić plan dnia; plan dnia ma tryb pieszo/samochód;
   - **Pieczątki**;
-  - **Profil**: karta Pieczątek, statystyki, dane i licencje.
+  - **Profil**: karta Pieczątek, statystyki, **Moje dane** (8.7: Excel z planami, pieczątkami, odznakami, dziennikiem i mapą; wysyłka e-mailem przez arkusz Udostępnij; pełna kopia `.json` ze zdjęciami; wczytanie `.xlsx`/`.json` ze scalaniem), dane i licencje.
 - Adres `atlas.html?tab=explore|plans|passport|profile` otwiera wskazaną zakładkę, a `?region=<id>` otwiera województwo.
 
 ### Przewodniki regionów — `region.html?region=…&town=…`
@@ -99,9 +102,9 @@
 ### Jakość i CI
 - Testy:
   - `tools/test_bundle.py` i `tools/test_atlas.py` (statyczne);
-  - `tools/test_browser.js` (Playwright, **83 kontrole**: PL/EN bez polskich resztek, menu, Pieczątki, dziennik z 5 zdjęciami, plany, logo i mapka, Wikipedia, Odkrywaj i plany województw, historie regionów i Warszawy, podpis autora, płynny podgląd ruchu mapy);
+  - `tools/test_browser.js` (Playwright, **94 kontrole**: Excel PL/EN, kopia JSON i import, pliki województw, Leaflet lokalny, komunikat offline; PL/EN bez polskich resztek, menu, Pieczątki, dziennik z 5 zdjęciami, plany, logo i mapka, Wikipedia, Odkrywaj i plany województw, historie regionów i Warszawy, podpis autora, płynny podgląd ruchu mapy);
   - `node --check`;
-  - `tools/sync_database.py` (walidacja danych, pola `wiki`, historii ≥10 zdań dla 213 miejsc i 184 atrakcji, szlaków; generuje `data/*.js`, `data/index/places.json`, `data/warszawa-historia/index.json`).
+  - `tools/sync_database.py` (walidacja danych, pola `wiki`, historii ≥10 zdań dla 213 miejsc i 184 atrakcji, szlaków; generuje `data/*.js`, `data/regiony-lite.js`, `data/regiony/*.json`, `data/index/places.json`, `data/warszawa-historia/index.json`).
 - CI (`.github/workflows/validate.yml`) uruchamia całość przy każdym push i PR na `main`.
 
 ## 2. Funkcje niedokończone / częściowe
@@ -111,22 +114,21 @@
 - **Rozszerzona historia (≥10 zdań):** wszystkie 213 miejsc regionalnych i wszystkie 184 atrakcje Warszawy. Teksty mniej znanych parków Warszawy są ogólniejsze (historia dzielnicy) — warto je kiedyś uzupełnić o lokalne źródła.
 - **Wikipedia EN** dla 5 nowych zamków do uzupełnienia, gdy Wikidata przestanie zwracać 429 (`tools/wiki_links.py`).
 - **Współrzędne:** 41 z 213 miejsc regionalnych i ok. 158 atrakcji Warszawy jest orientacyjnych.
-- **Brak kopii zapasowej** danych użytkownika. Wyczyszczenie danych Safari usuwa plany, pieczątki i dziennik.
+- **Kopia zapasowa jest ręczna** (8.7): Excel lub `.json` w Profilu. Bez pobranej kopii wyczyszczenie danych Safari nadal usuwa plany, pieczątki i dziennik. Aplikacja nie wysyła e-maili sama (brak serwera) — plik trafia do Poczty przez arkusz Udostępnij.
+- **Excel — ograniczenia:** etykiety numerów na mapie pokazuje Excel 2013+ (LibreOffice i Numbers pokazują same punkty); zdjęcia dziennika są tylko w kopii `.json`; plik z Excela odczytujemy po nazwach arkuszy i kolejności kolumn.
 - **Pieczątki poza „swoją” stroną** (rozwiązane w 8.6.1): listy korzystają z indeksu `data/index/places.json`; bez sieci przy pierwszym otwarciu zostaje link do drugiej strony.
-- Plany dnia Atlasu nie przyjmują atrakcji Warszawy, bo Warszawa ma własny planer.
+- Atrakcje Warszawy można dodać do planów Atlasu przez Excel (8.7, `{t:'waw'}`); w samym Atlasie nie ma jeszcze przycisku „Do planu” dla atrakcji Warszawy.
 - Trasy to szacunki i linki do Google Maps. Nie ma routingu WTP na żywo ani ocen Google.
 
 ## 3. Znane błędy i ryzyka
 | # | Problem | Gdzie | Waga |
 |---|---------|-------|------|
-| 1 | Leaflet (CDN unpkg) i kafelki OSM nie są w cache: mapa regionu offline jest pusta, ale lista i plan działają | `region.html`, `service-worker.js` | średnia |
+| 1 | Kafelki OSM nie są w cache: bez sieci mapa regionu ma tylko pinezki i komunikat (Leaflet jest lokalny od 8.7) | `region.html`, `index.html` | niska |
 | 2 | Na ekranach ≤370 px napis logo jest ukryty (zostaje pinezka), żeby mapka zmieściła się w linii | `app-nav.css` | niska |
 | 3 | Przy otwartej karcie miejsca paski miast i województw są ukryte (świadomy kompromis wysokości) | `atlas.js`/CSS | niska |
 | 4 | i18n Warszawy (`i18n4.js`) to słownik zdań: każdy nowy tekst w `index.html` trzeba dopisać | `assets/i18n4.js` | średnia |
-| 5 | Plik `assets/poland-explorer.js` ma mylącą nazwę; zostały w nim tylko biblioteka tras i eksport .ics | Warszawa | niska |
 | 6 | Workflow `sync-icons.yml` pushuje bezpośrednio na `main` | CI | niska |
 | 7 | **Brak testu na fizycznym iPhonie/Safari** (wybór zdjęć z biblioteki, PWA, safe-area) | — | średnia |
-| 8 | `data/SCHEMA.md` i `PLAN_ROZWOJU.md` są historyczne i nieaktualne | docs | niska |
 | 9 | `*.github.io` i `*.wikipedia.org` są niedostępne z sandboxa Claude; wdrożenie sprawdza się w GitHub Actions | środowisko | info |
 
 ### Rozwiązane problemy (dla kontekstu)
@@ -144,6 +146,7 @@
 - **Pinezki miast odjeżdżały od mapy przy przybliżaniu** (8.6.5): skala pinezki liczona wokół środka grupy zamiast czubka (`transform-origin` w `.city-dot`); teraz `transform-origin: 0 0` w układzie viewBox, odchyłka 0 px.
 
 ## 4. Ostatnio wykonane prace
+- **8.7.0 (PR #22):** Moje dane — Excel z mapą, kopia `.json`, import scalający, e-mail; Leaflet lokalnie i komunikat offline; lekki plik regionów dla Atlasu i pliki województw; widok Polski pod przyciskami; szybsze przerysowanie; porządki.
 - **8.6.5 (PR #21, `9e028c5`):** pinezki miast trzymają się mapy przy przybliżaniu; test regresji w przeglądarce (83 kontrole).
 - **8.6.4 (PR #19, `e00884e`):** płynne przesuwanie i przybliżanie mapy Atlasu (podgląd na GPU, jeden rysunek po geście).
 - **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
@@ -177,13 +180,13 @@
 - **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
 ## 6. Najbliższe zadanie
-1. **Ręczny test na iPhonie** (właściciel) po 8.6.5:
-   - płynność przesuwania i pinch-zoomu na mapie Atlasu;
-   - Odkrywaj (motywy, plany województw), historia w szczegółach miejsca (regiony i Warszawa);
-   - pływająca mapka i logo;
-   - Pieczątki i „Byłem tu”;
-   - dziennik ze zdjęciami z biblioteki;
-   - nowa ikona: usuń skrót z ekranu początkowego i dodaj go ponownie.
-2. **Dalszy etap 1 bazy danych**: Atlas na indeksie zamiast pełnego `regiony.js`, pliki województw dla przewodników (`BAZA_DANYCH.md` §4).
-3. **Kopia zapasowa danych** (ROADMAP A1): eksport/import planów, pieczątek i dziennika do pliku.
-4. **Mapa regionu offline** (ROADMAP A2): Leaflet lokalnie w `assets/vendor/leaflet/` i komunikat PL/EN, gdy kafelków brak.
+1. **Ręczny test na iPhonie** (właściciel) po 8.7.0:
+   - Profil → „Pobierz Excel”, otwarcie pliku w Excelu/Numbers na iPhonie (listy rozwijane, mapa);
+   - „Wyślij Excel e-mailem” → Poczta z załącznikiem;
+   - dopisanie planu w Excelu i „Wczytaj dane z pliku” (Scal / Zaktualizuj);
+   - pełna kopia `.json` ze zdjęciami i odtworzenie na drugim urządzeniu;
+   - przewodnik regionu w trybie samolotowym (komunikat o braku podkładu, lista i plan działają);
+   - widok całej Polski na małym ekranie (Gdańsk, Olsztyn) i płynność mapy.
+2. **Pieczątki i plany 2.0** (ROADMAP etap B): znaczki województw jako odznaki w aplikacji (dziś liczone w Excelu), data zdobycia pieczątki, przycisk „Do planu” dla atrakcji Warszawy.
+3. **Baza danych:** Warszawa w formacie plików regionów (`BAZA_DANYCH.md` §4, 8.7 — reszta), potem zdjęcia z Wikimedia Commons (8.8).
+4. **Jakość treści** (ROADMAP etap C): Wikipedia, opisy EN Warszawy, współrzędne.

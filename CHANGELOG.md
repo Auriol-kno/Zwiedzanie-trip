@@ -5,9 +5,25 @@ Najnowsze na górze. Daty w formacie RRRR-MM-DD. Numery wersji są zgodne z plik
 dokumentacji (`ATLAS_*.md`, `REGIONY_*.md`) i kluczem cache w `service-worker.js`.
 
 Zasada: każda zmiana scalana do `main` dopisuje tu wpis (wersja, data, PR, co się zmieniło,
-znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-5-20261108`.
+znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-7-0-20261108`.
 
 ---
+
+## 8.7.0 — 2026-11-08 — PR #22 (scalone)
+- **Moje dane — Excel** (Profil w Atlasie, `assets/user-data.js`, `window.IWH_DATA`), prośba właściciela:
+  - plik `.xlsx` powstaje w przeglądarce, bez bibliotek i bez serwera (własny ZIP, kompresja `CompressionStream`; ok. 120 KB);
+  - arkusze: **Start** (instrukcja, podsumowanie), **Plany** (podróże i plany dnia: wiersz = miejsce; listy rozwijane z miejscami, rodzajem planu i trybem; formuły uzupełniają typ, województwo i współrzędne), **Pieczątki**, **Odznaki** (postęp miast, Warszawy i 16 województw z formuł), **Dziennik** (notatki), **Mapa** (wykres-mapa: granica Polski i województw z Natural Earth, 14 miast, zaplanowane miejsca z numerami i pieczątki — odświeża się po dopisaniu wierszy w Excelu), **Miejsca** (katalog 580 pozycji dla list) i ukryty `_mapa`;
+  - PL i EN (nazwy arkuszy, nagłówki, typy); import rozpoznaje oba języki;
+  - **Wyślij Excel e-mailem:** arkusz Udostępnij z plikiem (iPhone: Poczta z załącznikiem), zapasowo pobranie + `mailto:`; opcjonalny e-mail użytkownika zapisany tylko lokalnie (`iwh_profile`). Aplikacja nie wysyła poczty sama — nie ma serwera;
+  - **Pełna kopia `.json`** z plikami zdjęć dziennika (base64);
+  - **Wczytaj dane z pliku** (`.xlsx` lub `.json`) z podglądem: „Scal” (domyślnie: dodaje nowe plany, brakujące miejsca, pieczątki, notatki i zdjęcia do limitu 5) albo „Zaktualizuj plany z pliku” (plany o tych samych nazwach przyjmują wersję z pliku). Nic nie jest usuwane; nieznane miejsca są wypisane jako pominięte wiersze;
+  - plany przyjmują atrakcje Warszawy (`{t:'waw',id,name,lat,lon}`, ROADMAP B3 w wersji podstawowej).
+- **Mapa regionu offline:** Leaflet 1.9.4 lokalnie w `assets/vendor/leaflet/` (licencja BSD-2) zamiast unpkg — także w przewodniku Warszawy; komunikat PL/EN „Brak podkładu mapy (offline)”, gdy brak kafelków OSM.
+- **Baza danych, etap 1 (BAZA_DANYCH.md §4):** `sync_database.py` generuje lekkie `data/regiony-lite.js` (Atlas, 69 KB zamiast 134 KB, bez opisów) i `data/regiony/<województwo>.json` (pełne dane); `assets/region-loader.js` pobiera plik otwartego województwa (zapasowo pełny `data/regiony.js`). Wszystkie pliki w cache PWA i w kontroli CI.
+- **Widok całej Polski na telefonie** zaczyna się pod przyciskami mapy (warstwy, +, −): Gdańsk i Olsztyn nie są zasłonięte; widok województwa bez zmian.
+- **Wydajność:** `setTransform` najpierw czyta układ (jedno przeliczenie zamiast trzech), trzyma listy węzłów i przepisuje znaczki tylko przy zmianie skali: ok. 75 → 39 ms na przerysowanie (iPhone 13, CPU ×4).
+- **Porządki:** `assets/poland-explorer.js` → `assets/trips-ics.js`; `data/SCHEMA.md` i `PLAN_ROZWOJU.md` oznaczone jako archiwalne.
+- Testy przeglądarkowe: 94 kontrole (+11: Excel PL/EN, kopia JSON, import scal/aktualizuj, pliki województw, Leaflet lokalny, komunikat offline). Cache `i-was-here-v8-7-0-20261108`.
 
 ## 8.6.5 — 2026-11-08 — PR #21 (scalone 9e028c5)
 - **Naprawa: pinezki miast odjeżdżały od mapy przy przybliżaniu.** `.city-dot` miał w `assets/atlas.css` `transform-box: fill-box; transform-origin: center`, więc skala pinezki (stały rozmiar na ekranie, `scale(1/zoom)`) była liczona wokół środka całej grupy (pinezka + znaczek + podpis), a nie wokół czubka pinezki. Czubek był ok. 19 px od miasta w widoku kraju i ok. 72 px po przybliżeniu (emulacja iPhone 13). Teraz `transform-box: view-box; transform-origin: 0 0` — odchyłka 0 px przy każdym powiększeniu, także w widoku województwa.

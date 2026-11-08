@@ -1,6 +1,6 @@
 # ROADMAP — I Was Here / Places & Memories
 
-Plan dalszego rozwoju po wersji **8.6.4** (stan 2026-11-08). Priorytety może zmieniać wyłącznie właściciel.
+Plan dalszego rozwoju po wersji **8.7.0** (stan 2026-11-08). Priorytety może zmieniać wyłącznie właściciel.
 Każdy punkt realizujemy jako osobny, mały PR z opisem po polsku. Scalenie do `main` następuje dopiero na polecenie właściciela („Scal”).
 Wiążące ustalenia wyglądu i nawigacji są w `DECYZJE_PROJEKTOWE.md`.
 
@@ -30,32 +30,24 @@ Zasady nadrzędne, ważne na każdym etapie:
 - 8.6: Odkrywaj ze szlakami tematycznymi, historie ≥10 zdań, propozycja bazy danych `BAZA_DANYCH.md`.
 - 8.6.1–8.6.3: historie wszystkich 213 miejsc i 184 atrakcji Warszawy, plany zwiedzania 16 województw (15 motywów, 46 szlaków), indeks `data/index/places.json` (baza etap 1, krok 1), podpis „Made by Tomasz Kmiecik”.
 - 8.6.4: płynna mapa Atlasu (podgląd gestów na GPU).
+- 8.6.5: pinezki miast trzymają się mapy przy przybliżaniu.
+- 8.7.0 (etap A): Moje dane — Excel z planami, pieczątkami, odznakami, dziennikiem i mapą, e-mail, pełna kopia `.json`, import scalający; Leaflet lokalnie i komunikat offline; lekki plik regionów dla Atlasu i pliki województw; widok Polski pod przyciskami mapy; szybsze przerysowanie; porządki (`trips-ics.js`, dokumenty archiwalne).
 
 Szczegóły są w `CHANGELOG.md`.
 
-## Etap A — dane użytkownika i offline (najbliższe, 8.6)
-1. **Kopia zapasowa:** „Eksportuj / Importuj moje dane” w Profilu.
-   - Zakres: plik JSON z planami (`iwh_trips`, `iwh_days`), pieczątkami (`iwh_visited`, `iwh_region_visited`, `odkryjWarszawe_1.visited`) i dziennikiem; zdjęcia zakodowane w base64 albo w pliku .zip.
-   - Import scala dane, niczego nie kasuje.
-   - Na iPhonie eksport idzie przez arkusz „Udostępnij” lub pobieranie pliku.
-2. **Offline mapy regionu:**
-   - Leaflet lokalnie w `assets/vendor/leaflet/` i w cache SW;
-   - bez kafelków OSM czytelny komunikat PL/EN, a lista i plan działają dalej.
-3. **Wydajność dalej:** przyspieszyć sam końcowy rysunek mapy (`setTransform` ~kilkadziesiąt ms na słabszym telefonie): mniej `querySelectorAll`, cache transformacji znaczków, rozważyć zastąpienie filtra `blurShadow` gotowym obrazem; sprawdzić na fizycznym iPhonie.
-4. **Pływająca mapka na małych ekranach:** nie może zasłaniać etykiet u góry mapy Atlasu (np. Gdańsk). Rozwiązania do rozważenia: mniejsza mapka na mapie Atlasu albo automatyczne przesunięcie widoku.
-5. **Porządki:** zmienić nazwę `assets/poland-explorer.js` na `trips-ics.js` (z odwołaniami, testami i cache); zaktualizować `data/SCHEMA.md` albo oznaczyć go jako archiwalny razem z `PLAN_ROZWOJU.md`.
-6. **Ręczny test na iPhonie** (właściciel):
-   - instalacja PWA i nowa ikona;
-   - pływająca mapka;
-   - Pieczątki;
-   - dziennik ze zdjęciami z biblioteki;
-   - offline;
-   - safe-area.
+## Etap A — dane użytkownika i offline (zrobione w 8.7.0)
+1. ~~Kopia zapasowa~~ — zrobione: Excel (plany, pieczątki, odznaki, dziennik, mapa) i pełna kopia `.json` ze zdjęciami; import scala i niczego nie kasuje; wysyłka e-mailem przez arkusz Udostępnij.
+2. ~~Offline mapy regionu~~ — zrobione: Leaflet w `assets/vendor/leaflet/`, komunikat PL/EN bez kafelków.
+3. ~~Wydajność dalej~~ — zrobione w części: jeden przelicz układu na przerysowanie (75 → 39 ms przy CPU ×4). Do rozważenia: zastąpienie filtra `blurShadow` gotowym obrazem — po teście na fizycznym iPhonie.
+4. ~~Mapka a etykiety na małych ekranach~~ — zrobione: widok całej Polski zaczyna się pod przyciskami mapy.
+5. ~~Porządki~~ — zrobione: `trips-ics.js`, `data/SCHEMA.md` i `PLAN_ROZWOJU.md` archiwalne.
+6. **Ręczny test na iPhonie** (właściciel): Excel w Excelu/Numbers, e-mail z załącznikiem, import, PWA i ikona, Pieczątki, dziennik ze zdjęciami, offline, safe-area.
+7. **Następne w tym obszarze:** przypomnienie o kopii (np. raz w miesiącu) i import z Excela z wyborem, które arkusze wczytać.
 
 ## Etap B — Pieczątki i plany 2.0 (8.7)
 1. Pieczątki regionów i Warszawy jako **znaczki** w siatce, a nie tylko lista. Znaczek województwa za komplet miejsc w regionie, jak odznaki.
 2. Data zdobycia pieczątki („Byłem tu: 12.08.2027”) oraz podpis i data przy zdjęciach w dzienniku.
-3. Atrakcje Warszawy w planach dnia Atlasu (nowy typ pozycji `{t:'waw',id}` obsługiwany przez `A.resolve`).
+3. Atrakcje Warszawy w planach dnia Atlasu: typ `{t:'waw',id,name,lat,lon}` działa od 8.7 (przez Excel); brakuje przycisku „Do planu” w przewodniku Warszawy.
 4. Wspólne dane regionów i Warszawy w Pieczątkach na każdej stronie (lekki indeks nazw zamiast pełnego `regiony.js`).
 
 ## Etap C — jakość treści (8.8–8.9)

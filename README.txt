@@ -27,6 +27,14 @@ WARSAW FUNCTIONS
 - Saved places, digital stamps, spoken descriptions, GPS starting point.
 - Real travel times and Google ratings still require external integrations.
 
+MY DATA — EXCEL, BACKUP, EMAIL (8.7)
+- Atlas → Profile → "My data": download an Excel file with your trip plans, day plans, stamps, badges (progress per province), journal notes and a map of Poland with your planned places (orange) and stamps (green).
+- Plan in Excel: each row of "Plans" is one place; pick it from the drop-down list. Type, province, coordinates and the map update automatically.
+- "Load data from a file" reads the Excel file (or the full .json backup) back into the app. It merges and never deletes; "Update plans from the file" replaces plans with the same names.
+- "Email the Excel file": on iPhone choose Mail in the share sheet — the file is attached. The app has no server and never sends anything by itself.
+- "Full backup with photos" (.json) also contains journal photos.
+- Regional maps work offline (Leaflet is bundled); without map tiles a short notice appears and the list and plan keep working.
+
 ATLAS 7.0 — NEW MAP
 - Default style "Atlas": navy Baltic, olive land with real terrain relief, cream province borders, amber pins.
 - Real geography: Natural Earth 1:10m borders of Poland and all 16 provinces, rivers and lakes; relief from Terrain Tiles.
