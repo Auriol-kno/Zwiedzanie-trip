@@ -24,7 +24,7 @@ body[data-style=night] #atlasApp{background:radial-gradient(circle at 50% 30%,#2
 .atlas-wash{fill:url(#landGradient);opacity:.3}
 .map-label{fill:var(--tone);font-size:11px;letter-spacing:.24em;text-anchor:middle;font-weight:800;opacity:.78}
 .map-regional{fill:var(--tone);font-size:12px;text-anchor:middle;opacity:.52;letter-spacing:.1em}
-.city-dot{cursor:pointer;transform-box:fill-box;transform-origin:center}
+.city-dot{cursor:pointer;transform-box:view-box;transform-origin:0 0}
 .city-ring{fill:#ffffff;stroke:var(--edge);stroke-width:2.2;opacity:.93}
 .city-core{fill:#c47149;stroke:#fff;stroke-width:1.9}
 .city-hit{fill:transparent}

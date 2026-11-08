@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.6.4 (`main`) · **`main`:** `e00884e` („Scal #19: 8.6.4 — płynna mapa Atlasu (podgląd gestów na GPU)”)
-**Cache PWA:** `i-was-here-v8-6-4-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#19 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.6.5 (`main`) · **`main`:** `9e028c5` („Scal #21: 8.6.5 — pinezki miast nie odjeżdżają od mapy przy przybliżaniu”)
+**Cache PWA:** `i-was-here-v8-6-5-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#21 potwierdzone w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
@@ -11,15 +11,15 @@
 ---
 
 ## Szybkie wznowienie pracy (nowa sesja)
-1. `git fetch origin && git log origin/main -5` → oczekiwane `e00884e` (8.6.4) lub nowsze; sprawdź otwarte PR (#20 = dokumentacja przekazania).
+1. `git fetch origin && git log origin/main -5` → oczekiwane `9e028c5` (8.6.5) lub nowsze; sprawdź otwarte PR.
 2. Przeczytaj `CLAUDE.md` → ten plik → `DECYZJE_PROJEKTOWE.md` → `ROADMAP.md` → `CHANGELOG.md`.
 3. Komunikacja po polsku; każda zmiana na gałęzi `claude/<temat>` + PR z polskim opisem; scalaj tylko po „Scal”, potem potwierdź „pages build and deployment” i „Sprawdź aplikację Warszawa”.
-4. Testy: `python tools/sync_database.py` (bez diffu w `data/*.js`), `python tools/test_bundle.py && python tools/test_atlas.py`, `node --check`, `NODE_PATH=$(npm root -g) node tools/test_browser.js` (82/82).
-5. Przy zmianie plików w cache podbij `KEY` w `service-worker.js` (dziś `v8-6-4`).
+4. Testy: `python tools/sync_database.py` (bez diffu w `data/*.js`), `python tools/test_bundle.py && python tools/test_atlas.py`, `node --check`, `NODE_PATH=$(npm root -g) node tools/test_browser.js` (83/83).
+5. Przy zmianie plików w cache podbij `KEY` w `service-worker.js` (dziś `v8-6-5`).
 6. Najbliższe zadanie: §6 poniżej.
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-08)
-- **Otwarte PR:** #20 — dokumentacja przekazania po 8.6.4 (gałąź `claude/handoff-docs-8-6`, tylko dokumentacja). Czeka na „Scal”.
+- **Otwarte PR:** brak.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -32,8 +32,10 @@
   - #15–#16: dokumentacja przekazania i 8.5.3;
   - #17: 8.6 (Odkrywaj, historie, propozycja bazy danych);
   - #18: 8.6.1–8.6.3 (historie wszystkich miejsc i atrakcji Warszawy, plany województw, indeks, podpis autora) — `b503643`;
-  - #19: 8.6.4 (płynna mapa Atlasu) — `e00884e`.
-- **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone, z jednym wyjątkiem: `claude/i-was-here-analysis-augprr` ma 3 niescalone commity, w tym `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`. To pierwszy raport techniczny; jego zalecenia wdrożono w PR #2–#4. Gałęzi nie usuwamy.
+  - #19: 8.6.4 (płynna mapa Atlasu) — `e00884e`;
+  - #20: dokumentacja przekazania po 8.6.4;
+  - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`.
+- **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone (także `claude/i-was-here-analysis-augprr` z raportem technicznym, PR #21).
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
 
 ## 1. Działające funkcje (zweryfikowane testami 2026-11-07, emulacja iPhone 13 w Chromium)
@@ -97,7 +99,7 @@
 ### Jakość i CI
 - Testy:
   - `tools/test_bundle.py` i `tools/test_atlas.py` (statyczne);
-  - `tools/test_browser.js` (Playwright, **82 kontrole**: PL/EN bez polskich resztek, menu, Pieczątki, dziennik z 5 zdjęciami, plany, logo i mapka, Wikipedia, Odkrywaj i plany województw, historie regionów i Warszawy, podpis autora, płynny podgląd ruchu mapy);
+  - `tools/test_browser.js` (Playwright, **83 kontrole**: PL/EN bez polskich resztek, menu, Pieczątki, dziennik z 5 zdjęciami, plany, logo i mapka, Wikipedia, Odkrywaj i plany województw, historie regionów i Warszawy, podpis autora, płynny podgląd ruchu mapy);
   - `node --check`;
   - `tools/sync_database.py` (walidacja danych, pola `wiki`, historii ≥10 zdań dla 213 miejsc i 184 atrakcji, szlaków; generuje `data/*.js`, `data/index/places.json`, `data/warszawa-historia/index.json`).
 - CI (`.github/workflows/validate.yml`) uruchamia całość przy każdym push i PR na `main`.
@@ -139,8 +141,10 @@
 - **Przycinanie mapy Atlasu przy przesuwaniu i przybliżaniu** (8.6.4): pełne przerysowanie SVG w każdym `pointermove`, a `vector-effect: non-scaling-stroke` wymuszał przerysowanie granic przy każdej transformacji `<svg>`. Rozwiązanie: transformacja CSS na kontenerze `.atlas-map` w trakcie gestu + jeden rysunek na końcu (83 → 17 ms/klatkę przy CPU ×4).
 - **Wikidata 429** (zbyt wiele zapytań przy `wiki_links.py`): dla 5 nowych zamków wzięto tytuły PL z tagów OSM `wikipedia`; EN do uzupełnienia później.
 - **Licznik zdań** w walidacji historii pomija skróty (w., ok., św., m.in.…); brakujące 10. zdanie w tekstach Warszawy uzupełniono danymi z bazy (dzielnica, szacowany czas pobytu).
+- **Pinezki miast odjeżdżały od mapy przy przybliżaniu** (8.6.5): skala pinezki liczona wokół środka grupy zamiast czubka (`transform-origin` w `.city-dot`); teraz `transform-origin: 0 0` w układzie viewBox, odchyłka 0 px.
 
 ## 4. Ostatnio wykonane prace
+- **8.6.5 (PR #21, `9e028c5`):** pinezki miast trzymają się mapy przy przybliżaniu; test regresji w przeglądarce (83 kontrole).
 - **8.6.4 (PR #19, `e00884e`):** płynne przesuwanie i przybliżanie mapy Atlasu (podgląd na GPU, jeden rysunek po geście).
 - **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
 - **8.6.2 (PR #18):** historie dla wszystkich województw (213/213), plany zwiedzania 16 województw, podpis „Made by Tomasz Kmiecik”.
@@ -173,7 +177,7 @@
 - **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
 ## 6. Najbliższe zadanie
-1. **Ręczny test na iPhonie** (właściciel) po 8.6.4:
+1. **Ręczny test na iPhonie** (właściciel) po 8.6.5:
    - płynność przesuwania i pinch-zoomu na mapie Atlasu;
    - Odkrywaj (motywy, plany województw), historia w szczegółach miejsca (regiony i Warszawa);
    - pływająca mapka i logo;
