@@ -121,6 +121,23 @@ for r in routes_db["routes"]:
 assert hist_total == len(region_places), f"Każde miejsce regionalne musi mieć historię ≥10 zdań: {hist_total}/{len(region_places)}"
 print(f"OK: {hist_total} rozszerzonych historii (≥10 zdań PL i EN), {len(theme_ids)} motywów, {len(route_ids)} szlaków tematycznych.")
 
+# 8.6.3 — historie atrakcji Warszawy (data/warszawa-historia/*.json), ≥10 zdań PL i EN dla każdej z 184 atrakcji.
+waw_dir = DATA / "warszawa-historia"
+waw_ids = {a["id"] for a in attractions}
+waw_map = {}
+for path in sorted(waw_dir.glob("*.json")):
+    if path.name == "index.json":
+        continue
+    h = json.loads(path.read_text(encoding="utf-8"))
+    for pid, e in h["places"].items():
+        assert pid in waw_ids and pid not in waw_map, "Nieznana lub powtórzona atrakcja Warszawy w historii: " + pid
+        for lang in ("pl", "en"):
+            assert isinstance(e[lang], list) and sentences(e[lang]) >= 10, f"Historia Warszawy {pid} [{lang}] ma mniej niż 10 zdań"
+        waw_map[pid] = path.name
+assert set(waw_map) == waw_ids, f"Brak historii dla atrakcji Warszawy: {sorted(waw_ids - set(waw_map))[:5]}"
+write("warszawa-historia/index.json", json.dumps(waw_map, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n")
+print(f"OK: historie Warszawy — {len(waw_map)}/{len(waw_ids)} atrakcji (≥10 zdań PL i EN), indeks data/warszawa-historia/index.json.")
+
 # 8.6.1 — BAZA_DANYCH.md, etap 1: lekki indeks wszystkich obiektów (regiony + Warszawa), pobierany na żądanie (fetch).
 # Pola skrócone, żeby plik był mały: k = rodzaj (place = miejsce w regionie, waw = atrakcja Warszawy), r = województwo,
 # t = miejscowość lub dzielnica, n = nazwa {pl,en}, i = ikona, la/lo = współrzędne, c = kategorie, h = jest długa historia.
@@ -130,7 +147,7 @@ for path in sorted(hist_dir.glob("*.json")):
 index_items = [{"id": p["id"], "k": "place", "r": p["region"], "t": p["town"], "n": p["name"], "i": p["icon"],
                 "la": p["lat"], "lo": p["lon"], "c": p["cats"], **({"h": 1} if p["id"] in hist_ids else {})} for p in region_places]
 index_items += [{"id": a["id"], "k": "waw", "r": "mazowieckie", "t": a["district"], "n": {"pl": a["name"], "en": None}, "i": a.get("icon") or "📍",
-                 "la": a["lat"], "lo": a["lon"], "c": a["cats"]} for a in attractions]
+                 "la": a["lat"], "lo": a["lon"], "c": a["cats"], **({"h": 1} if a["id"] in waw_map else {})} for a in attractions]
 assert len({(i["k"], i["id"]) for i in index_items}) == len(index_items), "Powtórzone ID w indeksie"
 (DATA / "index").mkdir(exist_ok=True)
 write("index/places.json", json.dumps({"version": "8.6.1", "note": "Wygenerowano przez tools/sync_database.py — nie edytuj ręcznie.", "items": index_items}, ensure_ascii=False, separators=(",", ":")) + "\n")

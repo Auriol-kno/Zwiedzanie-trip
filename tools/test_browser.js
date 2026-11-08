@@ -119,6 +119,9 @@ function check(ok, message) {
     return !!a && a.offsetParent !== null && /^https:\/\/(en|pl)\.wikipedia\.org\//.test(a.href) && !document.querySelector('#detailContent .iwh-wiki[data-l="pl"] a').offsetParent; }),
     'Warszawa EN: „More information — Wikipedia” przy opisie');
   check(await page.evaluate(() => !document.querySelector('#detailContent [data-journal]') && /Collect|Zdobądź/.test(document.querySelector('#detailContent [data-visit]').textContent)), 'Warszawa: w szczegółach „Zdobądź pieczątkę” zamiast notatek');
+  await page.waitForSelector('#wawHist [data-l="en"] p');
+  check(await page.evaluate(() => { const en = document.querySelector('#wawHist [data-l="en"]'), pl = document.querySelector('#wawHist [data-l="pl"]');
+    return en.offsetParent !== null && !pl.offsetParent && (en.innerText.match(/[.!?](\s|$)/g) || []).length >= 10 && /Constitution of 3 May/.test(en.innerText); }), 'Warszawa EN: pełna historia atrakcji (≥10 zdań)');
   await page.evaluate(() => closeOverlay('detailOverlay'));
   check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Stamps,profile:Profile'
     && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');

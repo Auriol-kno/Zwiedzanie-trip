@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
 **Stan na:** 2026-11-08 · **Wersja:** 8.6.1 (gałąź) / 8.6 (`main`) · **`main`:** `71aeaed` („Scal #17: 8.6 — Odkrywaj ze szlakami tematycznymi, historie miejsc ≥10 zdań, propozycja bazy danych”)
-**Cache PWA:** `i-was-here-v8-6-2-20261108` (na gałęzi 8.6.2) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
+**Cache PWA:** `i-was-here-v8-6-3-20261108` (na gałęzi 8.6.3) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenie 8.5 potwierdzone w GitHub Actions)
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
 > - Ustalenia właściciela (logo, kolory, nawigacja, PL/EN) są w `DECYZJE_PROJEKTOWE.md`.
@@ -10,7 +10,7 @@
 ---
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-07)
-- **Otwarte PR:** #18 — 8.6.1–8.6.2: historie ≥10 zdań dla wszystkich 213 miejsc, plany 16 województw, indeks bazy danych, podpis autora (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
+- **Otwarte PR:** #18 — 8.6.1–8.6.3: historie ≥10 zdań dla wszystkich 213 miejsc i 184 atrakcji Warszawy, plany 16 województw, indeks bazy danych, podpis autora (gałąź `claude/historie-pomorze-dolny-slask`). Czeka na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -92,7 +92,7 @@
 - Pełny przewodnik miejski ma **tylko Warszawa**. Pozostałe 13 miast ma atrakcje w przewodnikach regionów.
 - **Opisy EN Warszawy:** ok. 158 atrakcji ma uczciwy komunikat zamiast tłumaczenia.
 - **Wikipedia:** 97 miejsc regionalnych i 115 atrakcji Warszawy ma tylko link do wyszukiwania.
-- **Rozszerzona historia (≥10 zdań):** wszystkie 213 miejsc regionalnych; brakuje jeszcze historii ≥10 zdań dla 184 atrakcji Warszawy (dziś krótkie pole `story`).
+- **Rozszerzona historia (≥10 zdań):** wszystkie 213 miejsc regionalnych i wszystkie 184 atrakcje Warszawy. Teksty mniej znanych parków Warszawy są ogólniejsze (historia dzielnicy) — warto je kiedyś uzupełnić o lokalne źródła.
 - **Wikipedia EN** dla 5 nowych zamków do uzupełnienia, gdy Wikidata przestanie zwracać 429 (`tools/wiki_links.py`).
 - **Współrzędne:** 41 z 213 miejsc regionalnych i ok. 158 atrakcji Warszawy jest orientacyjnych.
 - **Brak kopii zapasowej** danych użytkownika. Wyczyszczenie danych Safari usuwa plany, pieczątki i dziennik.
@@ -124,6 +124,7 @@
 - **Polski komunikat (toast) zostawał po przełączeniu na EN:** czyszczenie przy zmianie języka (8.5).
 
 ## 4. Ostatnio wykonane prace
+- **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).
 - **8.6.2 (PR #18):** historie dla wszystkich województw (213/213), plany zwiedzania 16 województw, podpis „Made by Tomasz Kmiecik”.
 - **8.6.1 (PR #18):** historie ≥10 zdań dla Pomorskiego, Dolnośląskiego i Świętokrzyskiego (65 miejsc); indeks bazy danych `data/index/places.json` używany przez Pieczątki.
 - **8.6 (PR #17):** Odkrywaj ze szlakami tematycznymi i ilustracjami, historie ≥10 zdań (30 miejsc), 6 zamków Jury, propozycja bazy danych `BAZA_DANYCH.md`.
@@ -154,7 +155,7 @@
 - **Uruchomienie lokalne:** `python3 -m http.server 8000`, potem http://localhost:8000/atlas.html.
 
 ## 6. Najbliższe zadanie
-1. **Historie ≥10 zdań dla atrakcji Warszawy** (184, partiami po dzielnicach) i **dalszy etap 1 bazy danych**: Atlas na indeksie zamiast pełnego `regiony.js`, pliki województw dla przewodników (`BAZA_DANYCH.md` §4).
+1. **Dalszy etap 1 bazy danych**: Atlas na indeksie zamiast pełnego `regiony.js`, pliki województw dla przewodników (`BAZA_DANYCH.md` §4).
 2. **Ręczny test na iPhonie** (właściciel):
    - pływająca mapka i logo;
    - Pieczątki i „Byłem tu”;
