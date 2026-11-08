@@ -15,7 +15,7 @@ jobs:
       - name: Zweryfikuj bazy danych
         run: |
           python tools/sync_database.py
-          git diff --exit-code -- data/atrakcje.js data/restauracje.js
+          git diff --exit-code -- data/atrakcje.js data/restauracje.js data/regiony.js
       - name: Test interfejsu i schematów
         run: python tools/test_bundle.py
       - name: Test Atlasu Polski i PL/EN
@@ -28,6 +28,21 @@ jobs:
           node --check assets/poland-geography.js
           node --check assets/brand-v5.js
           node --check assets/i18n4.js
+          node --check assets/poland-explorer.js
+          node --check assets/region.js
+          node --check assets/atlas-plans.js
+          node --check assets/place-extras.js
+          node --check data/regiony.js
           node --check data/atrakcje.js
           node --check data/restauracje.js
           node --check service-worker.js
+          node --check tools/test_browser.js
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test w przeglądarce (Chromium, iPhone 13)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.63.0
+          npx playwright install --with-deps chromium
+          node tools/test_browser.js

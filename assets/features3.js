@@ -104,7 +104,7 @@ $3('#waw3FoodList').onclick=e=>{
  else{favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];store()}
  foodList();
 };
-$3('#waw3NavFood').onclick=()=>{$3('#foodSection').scrollIntoView({behavior:'smooth'});document.querySelectorAll('.bottom-nav button').forEach(x=>x.classList.remove('active'));$3('#waw3NavFood').classList.add('active')};
+$3('#waw3NavFood').onclick=()=>{$3('#foodSection').scrollIntoView({behavior:'smooth'});};
 $3('#waw3TransitMap').onclick=()=>{const t=state.route[0];if(t)window.open(googleDir(state.start,[t.lat,t.lon],'transit'),'_blank','noopener')};
 $3('#waw3SavePlan').onclick=()=>{
  const r=food.find(x=>x.id===pref.foodId);

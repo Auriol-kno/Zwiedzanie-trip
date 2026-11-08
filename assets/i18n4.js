@@ -11,10 +11,10 @@ const PAIRS=[
 ['Miejsca i Wspomnienia','Places & Memories'],['Tu Byłem — Miejsca i Wspomnienia','Tu Byłem — Places & Memories'],
 ['TU BYŁEM','I WAS HERE'],
 ['Warszawa · 18 dzielnic · przewodnik 2.0','Warsaw · 18 districts · city guide'],
-['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik 4.0','Warsaw · 18 districts · city guide 4.0'],
+['Warszawa · 18 dzielnic · przewodnik 3.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik 4.0','Warsaw · 18 districts · city guide'],['Warszawa · 18 dzielnic · przewodnik miejski','Warsaw · 18 districts · city guide'],['Wygląd','Theme'],['Zmień wygląd','Change appearance'],['I Was Here — Atlas Polski','I Was Here — Poland Atlas'],['Wróć do mapy Polski','Back to the Poland Atlas'],['I Was Here — wróć do Atlasu Polski','I Was Here — back to the Poland Atlas'],
 ['Twoje miasto.','Your city.'],['Twoja trasa.','Your journey.'],
 ['Zaznacz obszar lub wybierz dzielnicę. Odkryj ponad sto miejsc i ułóż własną trasę.','Choose an area or district. Discover local sights and design your own route.'],['Zaznacz obszar lub wybierz dzielnicę. Odkryj 184 miejsca i ułóż własną trasę.','Choose an area or district. Explore 184 sights and plan your own route.'],
-['W twoim obszarze','In your area'],['atrakcji do wyboru','places to explore'],['Czas wycieczki','Trip duration'],['z szacowanymi dojazdami','including estimated travel'],['Twój paszport','Your passport'],['zdobytych pieczątek','collected stamps'],
+['W twoim obszarze','In your area'],['atrakcji do wyboru','places to explore'],['Czas wycieczki','Trip duration'],['z szacowanymi dojazdami','including estimated travel'],['Twoje pieczątki','Your stamps'],['zdobytych pieczątek','collected stamps'],
 ['✨ Inteligentny przewodnik','✨ Smart city guide'],['Dopasuj tempo, kategorię i czas zwiedzania. Ocena 1–5 to redakcyjna wartość odwiedzenia — nie ocena Google.','Set your pace, preferences and visiting time. Our 1–5 rating is editorial, not a Google score.'],
 ['Minimalna wartość miejsca','Minimum visit rating'],['Tempo zwiedzania','Sightseeing pace'],['Szybkie (80%)','Quick (80%)'],['Standardowe','Standard'],['Spokojne (125%)','Relaxed (125%)'],['📸 Tryb fotografa','📸 Photo mode'],['👨‍👩‍👧‍👦 Tryb rodzinny','👨‍👩‍👧‍👦 Family mode'],['Wiek dziecka','Child age'],['6–9 lat','6–9 years'],['10–13 lat','10–13 years'],['14+ lat','14+ years'],['Czas na odpoczynek','Break time'],['Bez przerwy','No break'],['20 min','20 min'],['30 min','30 min'],['45 min','45 min'],['60 min','60 min'],['90 min','90 min'],
 ['Godziny światła fotograficznego…','Photography light times…'],['📍 Start z GPS','📍 Start from GPS'],['↓ Zapisz plan offline','↓ Save offline itinerary'],['🚋 Rozkłady WTP','🚋 Public transport timetables'],['Lokalizacja jest pobierana tylko za zgodą użytkownika.','Location is accessed only with your permission.'],['Sprawdzanie połączenia…','Checking connection…'],
@@ -23,12 +23,12 @@ const PAIRS=[
 ['Odkryj dzielnicę','Discover a district'],['18 dzielnic','18 districts'],['Wybierz obszar administracyjny','Choose an administrative district'],['Obszar z mapy (okrąg lub wielokąt)','Area drawn on the map'],['Cała Warszawa — 18 dzielnic','All Warsaw — 18 districts'],['📍 Start tutaj','📍 Start here'],['Dzielnice filtrują atrakcje. Granice administracyjne nie są tu rysowane; piny nowych miejsc są orientacyjne.','District filters show matching sights. Administrative borders are not shown; some new map pins are approximate.'],
 ['📍 Punkt początkowy','📍 Starting point'],['Stare Miasto','Old Town'],['Centrum / PKiN','City Centre / Palace of Culture'],['Łazienki Królewskie','Royal Łazienki Park'],['Pałac w Wilanowie','Wilanów Palace'],['Centrum Nauki Kopernik','Copernicus Science Centre'],['Dworzec Centralny','Central Station'],['Własny punkt z mapy','Custom point on the map'],
 ['📅 Data zwiedzania','📅 Visit date'],['🕘 Godzina rozpoczęcia','🕘 Start time'],['🧭 Priorytet','🧭 Priority'],['Najciekawsze miejsca','Top sights'],['Krótkie dojazdy','Short travel legs'],['Darmowe atrakcje','Free attractions'],['Odkrywanie mniej znanych','Hidden gems'],['Jak długo chcesz zwiedzać?','How long would you like to explore?'],['Jak się przemieszczasz?','How will you travel?'],['Pieszo','Walk'],['Transport','Public transport'],['Rower','Bike'],['Samochód','Car'],
-['Co Cię interesuje?','What interests you?'],['Wybierz jeden lub kilka tematów','Choose one or more interests'],['Wszystkie','All'],['Plan Twojego dnia','Your day itinerary'],['Trasa dopasowana do Twojego czasu','A route tailored to your time'],['✦ Plan wycieczki','✦ Trip itinerary'],['⟳ Przelicz','⟳ Recalculate'],['Najlepsze z Warszawy','Warsaw highlights'],['Dojazdy sprawdzisz w nawigacji.','Check travel directions in Maps.'],['🚋 Do pierwszego punktu komunikacją','🚋 Transit to first stop'],['🧭 Nawiguj trasą','🧭 Open navigation'],['⇧ Udostępnij','⇧ Share'],
+['Co Cię interesuje?','What interests you?'],['Pokaż całą mapę Polski','Show the whole map of Poland'],['Cała mapa Polski','Whole map of Poland'],['Jedzenie i kawiarnie','Food & cafés'],['Wybierz rodzaje atrakcji widoczne na mapie i w planie','Choose which kinds of sights appear on the map and in the plan'],['Notatki i zdjęcia','Notes and photos'],['Wybierz jeden lub kilka tematów','Choose one or more interests'],['Wszystkie','All'],['Plan Twojego dnia','Your day itinerary'],['Trasa dopasowana do Twojego czasu','A route tailored to your time'],['✦ Plan wycieczki','✦ Trip itinerary'],['⟳ Przelicz','⟳ Recalculate'],['Najlepsze z Warszawy','Warsaw highlights'],['Dojazdy sprawdzisz w nawigacji.','Check travel directions in Maps.'],['🚋 Do pierwszego punktu komunikacją','🚋 Transit to first stop'],['🧭 Nawiguj trasą','🧭 Open navigation'],['⇧ Udostępnij','⇧ Share'],
 ['Miejsca warte uwagi','Places worth exploring'],['Odkryj atrakcje w wybranym obszarze','Discover sights in your selected area'],['♡ Zapisane','♡ Saved'],['♥ Pokaż wszystkie','♥ Show all'],['🔎 Szukaj atrakcji w wybranym obszarze','🔎 Search sights in this area'],
 ['🍽️ Jedzenie i kawiarnie','🍽️ Food & cafés'],['Odkrywaj restauracje według kuchni, rodzaju lokalu, dzielnicy i budżetu. Oceny i dostępność sprawdzisz w Google Maps.','Find food by cuisine, venue type, district and budget. Check current reviews and opening status in Google Maps.'],['Wyszukaj lokal','Search places to eat'],['Dzielnica','District'],['Kuchnia','Cuisine'],['Typ lokalu','Venue type'],['Budżet','Budget'],['Niedrogo','Low budget'],['Do umiarkowanego','Moderate'],['Do wyższego','Higher budget'],['Wszystkie ceny','All budgets'],['Sortuj','Sort by'],['Wybór redakcji','Editorial picks'],['Nazwa A–Z','Name A–Z'],['Najpierw budżet','Lowest budget first'],
 ['✦ Polecenie redakcji i „Warto odwiedzić” 1–5 to niezależne oceny kuratorskie. Nie są ocenami Google. Nie zapisujemy historycznych gwiazdek Google ani nie zgadujemy aktualnych ocen.','✦ Editorial food picks and 1–5 visit ratings are our independent scores, not Google reviews. We do not store or invent Google star ratings.'],
-['Wersja demonstracyjna 3.0 • redakcyjna baza 184 miejsc + 36 lokali gastronomicznych we wszystkich dzielnicach, stan: listopad 2026. Czas zwiedzania i transportu to szacunki, a nowe współrzędne mogą być orientacyjne. Godziny i ceny należy potwierdzić.','Preview version 4.0 • 184 curated sights and 36 food venues across Warsaw. Travel and visiting times are estimates; some map coordinates are approximate. Check current hours and prices.'],['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
-['Kolekcja wspomnień','Memories collection'],['Paszport odkrywcy','Explorer passport'],['Zbieraj wirtualne pieczątki po odwiedzeniu atrakcji. Są zapisywane na tym urządzeniu.','Collect digital stamps after visiting sights. They are saved on this device.'],
+['I Was Here 5.1 • redakcyjna baza 184 miejsc + 36 lokali gastronomicznych we wszystkich dzielnicach, stan: listopad 2026. Czas zwiedzania i transportu to szacunki, a nowe współrzędne mogą być orientacyjne. Godziny i ceny należy potwierdzić.','I Was Here 5.1 • 184 curated sights and 36 food venues across Warsaw. Travel and visiting times are estimates; some map coordinates are approximate. Check current hours and prices.'],['WTP Warszawa','Warsaw public transport'],['Taryfa biletowa','Ticket prices'],['Mapa','Map'],['Plan dnia','Day plan'],['Atrakcje','Sights'],['Jedzenie','Food'],['Paszport','Passport'],
+['Kolekcja wspomnień','Memories collection'],['Pieczątki Warszawy','Warsaw stamps'],['Zbieraj wirtualne pieczątki po odwiedzeniu atrakcji. Są zapisywane na tym urządzeniu.','Collect digital stamps after visiting sights. They are saved on this device.'],
 ['Personalizacja','Personalisation'],['Styl aplikacji','App theme'],['Wybierz wygląd najbardziej odpowiadający sposobowi, w jaki lubisz odkrywać miasto.','Choose the look that best suits the way you explore.'],
 ['W przyszłości: fotografie wysokiej jakości, tryb offline, inteligentny asystent i integracja z transportem publicznym.','Coming next: richer photography, fuller offline maps, AI assistant and public transport integration.'],
 ['ODKRYJ WARSZAWĘ / TWOJA PODRÓŻ','EXPLORE WARSAW / YOUR ADVENTURE'],['Od czego dziś','Where shall we'],['zaczniemy?','begin today?'],['Stworzymy trasę skrojoną pod Ciebie. Na początek wybierz, ile czasu możesz poświęcić.','We will create a route for you. First choose how much time you have.'],['ILE MASZ CZASU?','HOW MUCH TIME?'],['GDZIE ROZPOCZYNASZ?','WHERE WILL YOU START?'],['Zobacz Warszawę →','Explore Warsaw →'],['Bez logowania • bez konta • na Twoim iPhonie','No login • no account • on your iPhone'],
@@ -46,7 +46,7 @@ const PAIRS=[
 ['Dopasuj','Customise'],['Pokaż wszystkie','Show all'],['Zapisano','Saved'],['Zapisz miejsce','Save place'],['Zdobądź pieczątkę','Collect stamp'],
 ['Miasto','City'],['Miejsce','Place'],['Śródmieście','City Centre'],['Praga-Północ','Praga North'],['Praga-Południe','Praga South'],
 ['Wszystkie dzielnice','All districts'],['Wszystkie kuchnie','All cuisines'],['Wszystkie typy lokali','All venue types'],['niedrogo','low budget'],['umiarkowanie','moderate'],['wyższy budżet','higher budget'],['premium','premium'],
-['Polska','Poland'],['Atlas Polski','Poland Atlas'],['13 miast','13 cities'],['Mapa Polski','Map of Poland'],['Kuchnia koreańska, kawa, ostre, mięso…','Korean food, coffee, spicy, meat…'],['Odkryj atrakcje...','Explore sights...']
+['Polska','Poland'],['Atlas Polski','Poland Atlas'],['13 miast','13 cities'],['14 miast','14 cities'],['Mapa Polski','Map of Poland'],['Kuchnia koreańska, kawa, ostre, mięso…','Korean food, coffee, spicy, meat…'],['Odkryj atrakcje...','Explore sights...']
 ];
 PAIRS.push(...[["◷ Typowy pobyt (szacunek)","◷ Typical visit (estimate)"],["🎫 Cena wstępu","🎫 Admission"],["🕘 Godziny otwarcia","🕘 Opening hours"],["✓ Odkryte","✓ Visited"],["punkt startowy","starting point"],["Start tutaj","Start here"],["🌐 Cała Warszawa","🌐 All Warsaw"],["Cała Warszawa","All Warsaw"],["obszar z mapy","area selected on map"],["Obszar z mapy (okrąg / wielokąt)","Area drawn on map (circle / polygon)"],["Cała Warszawa — wszystkie 18 dzielnic","All Warsaw — all 18 districts"],["Dotknij mapy, aby ustawić środek. Zmień promień.","Tap the map to set the centre. Adjust the radius."],["Dotknij mapy, aby ustawić dokładny punkt startowy.","Tap the map to choose the exact starting point."],["Dotykaj mapy, dodając wierzchołki obszaru. Na końcu kliknij Gotowe.","Tap the map to add polygon corners. Then tap Done."],["Otwórz","Open"],["Zapisz","Save"],["miejsce","place"],["miejsca","places"],["miejsc","places"],["atrakcja","sight"],["atrakcje","sights"],["atrakcji","sights"],["wizyta","visit"],["zobacz cennik","check prices"],["Sprawdź ceny","Check prices"],["Zmień czas lub obszar","Change the time or area"],["Wypróbuj np. 4 godz., start Stare Miasto, promień 2,5 km.","Try 4 hours, start at the Old Town, radius 2.5 km."],["Koszty wejść:","Admission costs:"],["Ważne:","Important:"],["brak potwierdzonych płatnych wejść","no confirmed paid entries"],[" + ceny do sprawdzenia w obiektach"," + prices to check at venues"],["Nie uwzględniono parkingów i opłat za paliwo. Samochód może być niepraktyczny przy zwiedzaniu centrum.","Parking fees and fuel costs are not included. Driving may be inconvenient in the city centre."],["Cena ewentualnego wypożyczenia roweru nie jest uwzględniona.","Bicycle rental costs are not included."],["lin ie WTP","WTP lines"],["Sprawdź konkretne linie i przesiadki dla swojego punktu startowego w nawigacji miejskiej. Planer pokazuje szacunkowe czasy i odległości, nie rozkład jazdy na żywo.","Find up-to-date transit lines and connections in Maps. This planner uses estimated distances and times, not live timetables."],["Planer pokazuje szacunkowe czasy i odległości, nie rozkład jazdy na żywo.","The planner shows estimated journeys and distances, not live departure times."],["Podany czas pobytu jest szacunkiem redakcyjnym, nie średnią z danych podróżnych. Godziny i ceny mogą się zmieniać: zawsze potwierdź je u organizatora.","Visit duration is an editorial estimate, not a statistical average. Opening hours and prices may change; verify them with the venue."],["Lokalizacja nowo dodanego miejsca na mapie jest orientacyjna i wymaga weryfikacji przed podróżą.","The map pin for this new place is approximate; verify its location before travelling."],["Planer układa trasę według dostępnego czasu i lokalizacji.","The planner fits the route to your available time and location."],["Wybierz dzielnicę lub zaznacz własny obszar na mapie. Położenia niektórych nowych punktów są orientacyjne.","Choose a district or draw a custom area. Some newly added map pins are approximate."],["Rezerwa czasu na przerwę:","Time reserved for a break:"],["Wybrano","Selected"],["w bazie","in the database"],["Najciekawsze","Top rated"],["Zapisane","Saved"],["14+ lat","14+ years"],["◷","◷"],["Informacje o miejscu","Information about this place"],["ⓘ Informacje o miejscu","ⓘ Place information"],["➤ Jak dojechać","➤ Directions"],["Przerwa gastronomiczna","Meal break"],["rezerwa","reserved"],["Sprawdź dojazd ↗","Check directions ↗"],["Usuń wybrany lokal","Remove selected venue"],["Wpisz nazwę miejsca","Enter place name"],["📸 Podpowiedź fotograficzna:","📸 Photography tip:"],["Spróbuj kadru z niskiej perspektywy i z szerszym kontekstem otoczenia.","Try a low-angle view and another framing the monument in its setting."],["Zrób zdjęcie przy miękkim porannym lub wieczornym świetle.","Take a photo in soft morning or evening light."],["Szukaj symetrii, linii prowadzących i ciekawego pierwszego planu.","Look for symmetry, leading lines and a strong foreground."],["Przedział budżetu jest orientacyjny","Budget band is an estimate"],["Pokaż na mapie","Show on map"],["Plan bez przerwy","No planned break"]]);
 const DICT=new Map(PAIRS);
@@ -80,21 +80,16 @@ royalroute:['Krakowskie Przedmieście','A ceremonial section of the Royal Route,
 };
 const cuisineNames={polska:'Polish',koreańska:'Korean',chińska:'Chinese',tajska:'Thai',japońska:'Japanese',włoska:'Italian',roślinna:'plant-based',indyjska:'Indian',śniadania:'breakfast',kawa:'specialty coffee',koktajle:'cocktails'};
 const kindLabel={monument:'monument and memorial',park:'park or green space',museum:'museum',history:'historical site',architecture:'architectural landmark',view:'viewpoint',science:'science attraction',family:'family attraction',hidden:'local hidden gem'};
-function properEnglish(name){
- if(special[name])return special[name][0];
- if(name==='Kolumna Zygmunta III Wazy')return 'Sigismund’s Column';
- if(name==='Pomnik Tadeusza Kościuszki')return 'Tadeusz Kościuszko Monument';
- if(name.startsWith('Pomnik '))return name.replace(/^Pomnik /,'Monument to ');
- if(name.startsWith('Muzeum '))return name.replace(/^Muzeum /,'Museum of ');
- if(name.startsWith('Park '))return name.replace(/^Park /,'Park ');
- if(name.startsWith('Ogród '))return name.replace(/^Ogród /,'Garden ');
- if(name.startsWith('Las '))return name.replace(/^Las /,'Forest ');
- return name;
-}
+// Nazwy własne bez redakcyjnego przekładu zostają po polsku (np. „Pomnik Małego Powstańca”).
+// Mechaniczne zamiany typu „Monument to Małego Powstańca” dawały błędną angielszczyznę.
+const nameEN={'Kolumna Zygmunta III Wazy':'Sigismund’s Column','Pomnik Tadeusza Kościuszki':'Tadeusz Kościuszko Monument'};
+function properEnglish(name){return nameEN[name]||name}
 function fallback(p){
- const kind=(p.cats||[]).map(c=>kindLabel[c]).find(Boolean)||'interesting place';
+ const kinds=(p.cats||[]).map(c=>kindLabel[c]).filter(Boolean);
+ const kind=kinds[0]||'place of interest';
  const area=p.district||'Warsaw';
- return ['Explore '+kind+' in '+area+'. '+p.name+' offers a worthwhile stop while discovering the city.','This place is part of the local character of '+area+'. Consider it for a thematic walk or a sightseeing route, and check current access conditions before your visit.'];
+ const article=/^[aeiou]/i.test(kind)?'An ':'A ';
+ return [article+kind+' in '+area+', Warsaw. An editorial English description is not available yet.','Switch to PL for the full curated description, or open the official website for current visitor information.'];
 }
 const placeFields=['name','desc','story','hours','priceText','range','metro'];
 const foodFields=['name','description'];
@@ -175,7 +170,6 @@ function words(s){
  if(trim.startsWith('✦ Mniej znane'))return '✦ Hidden gems';
  if(trim.startsWith('✦ Oszczędna'))return '✦ Budget-friendly route';
  if(trim.startsWith('Brak potwierdzonych'))return 'No confirmed paid entries';
- if(trim.startsWith('Wersja demonstracyjna'))return 'Version 4.0 preview • 184 curated sights and 36 food places in Warsaw. Opening hours, prices and some coordinates need checking. Times and travel are estimates.';
  return s;
 }
 const originalNodes=new WeakMap();
@@ -191,7 +185,7 @@ function translateNode(n){
  if(n.nodeValue!==converted)n.nodeValue=converted;
 }
 function translateAttrs(el){
- if(el.nodeType!==1)return;
+ if(el.nodeType!==1||el.hasAttribute('data-i18n-skip'))return;
  for(const a of attrs){
  if(!el.hasAttribute(a))continue;
  const v=el.getAttribute(a);
@@ -204,7 +198,7 @@ function translateAttrs(el){
 function repaint(){
  if(painting)return;painting=true;observer?.disconnect();
  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(n){
- const p=n.parentElement;if(!p||p.closest('script,style,svg,noscript'))return NodeFilter.FILTER_REJECT;
+ const p=n.parentElement;if(!p||p.closest('script,style,svg,noscript,[data-i18n-skip]'))return NodeFilter.FILTER_REJECT;
  return NodeFilter.FILTER_ACCEPT;
  }});
  while(w.nextNode())translateNode(w.currentNode);
@@ -217,17 +211,18 @@ observer=new MutationObserver(schedule);
 function refresh(){
  document.documentElement.lang=lang;
  localStorage.setItem(PREFIX,lang);
- $('#langWarsaw').textContent=lang.toUpperCase();
- $('#langWarsaw').setAttribute('aria-label',lang==='pl'?'Zmień język na angielski':'Switch to Polish');
- $('#atlasTop').href='./atlas.html?lang='+lang;
- $('#atlasFloat').href='./atlas.html?lang='+lang;
+ // Przełącznik PL | EN pokazuje oba języki; aktywny jest wyróżniony.
+ const sw=$('#langWarsaw');sw.querySelectorAll('[data-lang]').forEach(x=>{x.classList.toggle('on',x.dataset.lang===lang)});
+ sw.setAttribute('aria-label',lang==='pl'?'Język: polski. Przełącz na angielski':'Language: English. Switch to Polish');
+ // Linki powrotu do Atlasu przekazują język; brak elementu nie może zatrzymać tłumaczenia.
+ for(const id of ['#atlasTop','#atlasFloat']){const link=$(id);if(link)link.href='./atlas.html?lang='+lang}
  translateData(lang);
  try{renderAll()}catch(err){console.warn('UI refresh',err)}
  const select=document.querySelector('#waw3FoodSort');if(select)select.dispatchEvent(new Event('change',{bubbles:true}));
  document.title=lang==='en'?'I Was Here — Warsaw City Guide':'I Was Here — Warszawa';
  repaint();
 }
-$('#langWarsaw').addEventListener('click',()=>{lang=lang==='pl'?'en':'pl';refresh()});
+$('#langWarsaw').addEventListener('click',e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;refresh()});
 window.addEventListener('storage',e=>{if(e.key===PREFIX&&['pl','en'].includes(e.newValue)&&e.newValue!==lang){lang=e.newValue;refresh()}});
 refresh();
 })();

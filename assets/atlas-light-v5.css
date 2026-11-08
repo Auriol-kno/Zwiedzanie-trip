@@ -1,7 +1,7 @@
 
 /* I Was Here — Illustrated Light Atlas 5.0 (the selected concept 1). */
 :root{--cream:#faf5e7;--sea:#bfe5f1;--country:#dfebbf;--edge:#49735b;--paper:rgba(255,252,238,.95);--chip:#fffdf5;--tone:#627c6a;--accent:#bd6f40;--ink:#25453d}
-body[data-style=atlas]{--cream:#fbf5e6;--sea:#c2eaf5;--country:#dfe9b9;--edge:#4a805e;--paper:rgba(255,252,239,.95);--chip:rgba(255,255,247,.97);--tone:#617b69;--accent:#c77742;--ink:#23413a}
+body[data-style=light]{--cream:#fbf5e6;--sea:#c2eaf5;--country:#dfe9b9;--edge:#4a805e;--paper:rgba(255,252,239,.95);--chip:rgba(255,255,247,.97);--tone:#617b69;--accent:#c77742;--ink:#23413a}
 body[data-style=terrain]{--country:#c6dea9;--edge:#487955;--paper:rgba(250,252,229,.97);--chip:#f9fbe9}
 #atlasApp{background:radial-gradient(ellipse at 48% 39%,#fdf6df 4%,#d7f0eb 56%,#9edcf1 112%)}
 body[data-style=night] #atlasApp{background:radial-gradient(ellipse at 55% 42%,#234959 0%,#101e2e 88%)}
@@ -77,3 +77,61 @@ body[data-style=night] .attribution{background:rgba(17,37,52,.68)}
  .atlas-hero h1{font-size:27px}
  .style-panel{top:calc(142px + env(safe-area-inset-top,0px))}
 }
+
+/* I Was Here 5.1 — przełącznik PL | EN z wyróżnionym aktywnym językiem */
+.pill.lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px}
+.pill.lang-switch span{min-width:28px;padding:9px 6px;border-radius:10px;line-height:1;text-align:center;opacity:.6}
+.pill.lang-switch span.on{background:var(--ink,#23483e);color:var(--paper,#fffdf2);opacity:1}
+
+/* I Was Here 6.0 — województwa: pasek pod miastami, obrys regionu, pinezki miejscowości */
+.region-strip{padding-top:0;align-items:center}
+.region-strip .strip-label{flex:none;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#637b62;padding:0 4px 0 5px}
+.region-chip{padding:8px 11px;font-size:11px}
+.city-card{flex-wrap:wrap}
+.card-towns{flex:1 0 100%;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:2px -3px -3px;padding:2px 3px 3px}
+.card-towns::-webkit-scrollbar{display:none}
+.card-towns[hidden]{display:none}
+.town-chip{flex:none;border:1px solid #d7dabc;background:#fffef6;color:#244f40;border-radius:11px;padding:7px 10px;font:inherit;font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer}
+.town-chip small{opacity:.6;font-weight:800}
+.town-chip.active{background:#244f40;color:#fffdf0;border-color:#244f40}
+.town-chip.city{border-style:dashed}
+.region-hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer;transition:fill .2s}
+@media(hover:hover){.region-hit:hover{fill:rgba(36,79,64,.07)}}
+.region-hit.active{fill:transparent}
+.region-dim{fill:rgba(253,249,234,.76);pointer-events:none}
+body[data-focus=region] .attribution{opacity:0}
+.region-glow{fill:none;stroke:#fff8d8;stroke-width:7;stroke-linejoin:round;opacity:.9;vector-effect:non-scaling-stroke;pointer-events:none}
+.region-outline{fill:rgba(36,79,64,.05);stroke:#244f40;stroke-width:2.6;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+#regions,#cities .city-label{transition:opacity .25s}
+body[data-focus=region] #regions{opacity:0}
+body[data-focus=region] .atlas-hero{opacity:0;pointer-events:none}
+.atlas-hero,.style-panel{transition:opacity .25s}
+.town-pin{cursor:pointer;outline:none}
+.town-hit{fill:transparent}
+.town-ring{fill:#c8553a;stroke:#fffaf0;stroke-width:2.2;filter:drop-shadow(0 2px 2px #23483e55)}
+.town-pin.selected .town-ring{fill:#244f40;stroke:#ffe9a8;stroke-width:2.8}
+.town-pin:focus-visible .town-ring{stroke:#1d6fd6;stroke-width:3}
+.town-count{fill:#fff;font:900 9.5px/1 system-ui,-apple-system,sans-serif;pointer-events:none}
+.town-label{fill:#22392f;font:800 12.5px/1 Georgia,serif;paint-order:stroke;stroke:#fffbea;stroke-width:3.4px;stroke-linejoin:round;pointer-events:none}
+body[data-style=night] .region-dim{fill:rgba(9,22,34,.62)}
+body[data-style=night] .region-outline{stroke:#d8f0c9;fill:rgba(216,240,201,.05)}
+body[data-style=night] .region-glow{stroke:#0e2533}
+body[data-style=night] .town-label{fill:#eef7e8;stroke:#0e2533}
+body[data-style=night] .town-chip{background:var(--paper);color:var(--ink);border-color:#38556a}
+body[data-style=night] .region-strip .strip-label{color:#a9c4b5}
+/* Kontrolki mapy i atrybucja zawsze tuż nad dolnym panelem (--bottom-h ustawia atlas.js). */
+.map-controls{bottom:calc(var(--bottom-h,240px) + 10px)}
+.attribution{bottom:calc(var(--bottom-h,240px) + 8px)}
+.city-card{padding:12px 14px;gap:9px 10px}
+.city-card .city-title{flex:1 1 118px;min-width:0}
+/* Niski ekran (iPhone SE/mini): w widoku województwa więcej miejsca na mapę — pasek 13 miast wraca po ⌖. */
+@media(max-height:740px){body[data-focus=region] #cityStrip{display:none}.city-card .city-action{padding-inline:14px}}
+.city-card #cityDescription{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.city-card .city-action{flex:none}
+.atlas-bottom .browse-title{padding-bottom:9px}
+.city-strip{padding-bottom:9px}
+body[data-focus=region] .style-panel{opacity:0;pointer-events:none}
+body[data-focus=region] .city-spotlight{display:none}
+.city-dot.outside{opacity:.45}
+.city-dot.outside .city-label{display:none}
+@media(prefers-reduced-motion:reduce){.region-hit,#regions,.atlas-hero{transition:none}}

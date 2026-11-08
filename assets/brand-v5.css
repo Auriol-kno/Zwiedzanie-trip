@@ -3,7 +3,18 @@
 .brand .mark img{width:43px;height:52px;object-fit:contain;filter:drop-shadow(0 3px 4px #09262e22)}
 .brand small{font-size:9px;letter-spacing:.16em;font-weight:850}
 .brand b{font-family:Georgia,Palatino,serif;font-size:20px;font-style:italic;font-weight:800;letter-spacing:-.05em;white-space:nowrap}
-.atlas-floating img{padding:3px;background:linear-gradient(145deg,#244f4b,#356e55);box-shadow:inset 0 0 0 1px #ffffff55}
-.atlas-floating b{letter-spacing:0}
+
 .atlas-top-link{font-size:19px}
 @media(max-width:420px){.brand .mark{width:36px;height:42px}.brand .mark img{width:36px;height:44px}.brand small{font-size:7px;letter-spacing:.06em}.brand b{font-size:16px}.top-actions{gap:3px}}
+
+/* 8.3.1 — logo właściciela (Polska biało-czerwona + pinezka z pejzażem, assets/brand-mark.svg); 8.3 — jeden znak: pinezka I Was Here wbita w mapę Polski (logo = powrót do Atlasu) */
+.brand .mark.mark-atlas{width:56px;height:56px}
+.brand .mark.mark-atlas img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 5px #09262e33)}
+.atlas-home:hover .mark-atlas img,.atlas-home:focus-visible .mark-atlas img{transform:translateY(-1px)}
+@media(max-width:420px){.brand .mark.mark-atlas{width:48px;height:48px}.brand .mark.mark-atlas img{width:48px;height:48px}}
+
+
+/* 8.5 — logo: pinezka z pejzażem po lewej stronie napisu (mapka Polski to osobny pływający przycisk) */
+.brand .mark.mark-pin{width:41px;height:56px;background:none;box-shadow:none}
+.brand .mark.mark-pin img{width:41px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 4px #09262e40)}
+@media(max-width:420px){.brand .mark.mark-pin{width:35px;height:48px}.brand .mark.mark-pin img{width:35px;height:48px}}
