@@ -296,3 +296,24 @@ body[data-focus=region] .city-landmark{opacity:1}
 #atlasApp .atlas-map{transform-origin:0 0}
 #atlasApp .atlas-map.moving{will-change:transform}
 #polandSvg.moving .city-spotlight{transition:none}
+/* 8.7 — Profil: „Moje dane” (Excel, kopia zapasowa, import, e-mail) */
+.ud-box{border:1px solid var(--ui-line);background:var(--ui-chip);border-radius:18px;padding:12px 12px 6px;margin:6px 0 14px}
+.ud-box h3{margin:2px 0 6px}
+.ud-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.ud-btn{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-height:64px;padding:10px 12px;border-radius:14px;border:1px solid var(--ui-line);background:var(--ui-panel);color:var(--ui-fg);text-align:left;font:800 13px/1.2 Inter,-apple-system,sans-serif;cursor:pointer;position:relative}
+.ud-btn small{font-weight:600;font-size:11px;color:var(--ui-sub);line-height:1.25}
+.ud-btn:disabled{opacity:.55;cursor:progress}
+.ud-btn[data-ud=xlsx]{border-color:rgba(244,124,40,.65)}
+.ud-file input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}
+.ud-file:focus-within{outline:2px solid var(--ui-accent);outline-offset:2px}
+.ud-email{display:grid;gap:5px;font-size:12px;color:var(--ui-sub);margin:4px 0 8px}
+.ud-email input{min-height:44px;border-radius:12px;border:1px solid var(--ui-line);background:var(--ui-panel);color:var(--ui-fg);padding:8px 12px;font:600 15px Inter,-apple-system,sans-serif}
+.ud-status{min-height:1.2em;font-size:12px;font-weight:700;color:var(--ui-accent);margin:4px 0 8px}
+.ud-preview{border-top:1px solid var(--ui-line);padding:8px 0 4px}
+.ud-preview h4{margin:4px 0 8px;font-size:14px}
+.ud-preview ul{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:4px}
+.ud-preview li{display:flex;justify-content:space-between;gap:10px;font-size:13px}
+.ud-preview .ud-skip li{font-size:11px;color:var(--ui-sub);justify-content:flex-start}
+.ud-preview details{margin:0 0 8px;font-size:12px}
+.ud-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+@media(max-width:360px){.ud-actions{grid-template-columns:1fr}}

@@ -513,15 +513,19 @@ window.IWH_ATLAS={
   if(item.t==='region'){const r=REG.regions.find(x=>x.id===item.id);if(!r)return null;const geo=geoOf(r);return{name:regionName(r),sub:t().province,icon:'🗺️',lat:geo&&geo.label?geo.label[1]:52,lon:geo&&geo.label?geo.label[0]:19,minutes:240}}
   if(item.t==='town'){const tw=townsOf(item.region).find(x=>x.name===item.name);const r=REG.regions.find(x=>x.id===item.region);if(!tw)return null;return{name:tw.name,sub:(r?regionName(r)+' · ':'')+t().count(tw.places.length),icon:'🏘️',lat:tw.lat,lon:tw.lon,minutes:120}}
   if(item.t==='place'){const p=REG.places.find(x=>x.id===item.id);if(!p)return null;return{name:p.name[lang],sub:p.town,icon:p.icon,lat:p.lat,lon:p.lon,minutes:p.time,href:regionUrlFor(p)}}
+  // 8.7: atrakcja Warszawy w planie (np. z Excela) — nazwa i współrzędne zapisane w pozycji planu.
+  if(item.t==='waw'){if(!(item.lat&&item.lon))return null;return{name:item.name||item.id,sub:lang==='en'?'Warsaw':'Warszawa',icon:'🏛️',lat:item.lat,lon:item.lon,minutes:60,href:'./index.html?lang='+lang}}
   return null;
  },
  show(item){
   if(item.t==='city')select(item.id);
   else if(item.t==='region')selectRegion(item.id);
   else if(item.t==='town')selectTown(item.name,item.region);
+  else if(item.t==='waw')select('warsaw');
   else if(item.t==='place'){const p=REG.places.find(x=>x.id===item.id);if(p){selectTown(p.town,p.region);const c=project(p.lon,p.lat);fitBox(c.x-25,c.y-18,c.x+25,c.y+18,4.5)}}
  },
  cities:()=>CITIES.map(c=>({id:c.id,name:cityText(c)})),
+ cityList:()=>CITIES.map(c=>({id:c.id,pl:c.pl,en:c.en,lat:c.lat,lon:c.lon})),
  changed(){renderMarkers();renderStrip();if(sheetOpen)renderCard()},
  home
 };
