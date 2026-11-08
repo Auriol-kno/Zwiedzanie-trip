@@ -1,6 +1,6 @@
 # ROADMAP — I Was Here / Places & Memories
 
-Plan dalszego rozwoju po wersji **8.6** (stan 2026-11-08). Priorytety może zmieniać wyłącznie właściciel.
+Plan dalszego rozwoju po wersji **8.6.4** (stan 2026-11-08). Priorytety może zmieniać wyłącznie właściciel.
 Każdy punkt realizujemy jako osobny, mały PR z opisem po polsku. Scalenie do `main` następuje dopiero na polecenie właściciela („Scal”).
 Wiążące ustalenia wyglądu i nawigacji są w `DECYZJE_PROJEKTOWE.md`.
 
@@ -27,7 +27,9 @@ Zasady nadrzędne, ważne na każdym etapie:
   - plany z mapy i podróż → plan dnia;
   - logo z pinezką i pływająca mapka Polski;
   - porządki.
-- 8.6: Odkrywaj ze szlakami tematycznymi (14 motywów, 30 szlaków), historie ≥10 zdań (Małopolskie, Śląskie), propozycja bazy danych `BAZA_DANYCH.md`.
+- 8.6: Odkrywaj ze szlakami tematycznymi, historie ≥10 zdań, propozycja bazy danych `BAZA_DANYCH.md`.
+- 8.6.1–8.6.3: historie wszystkich 213 miejsc i 184 atrakcji Warszawy, plany zwiedzania 16 województw (15 motywów, 46 szlaków), indeks `data/index/places.json` (baza etap 1, krok 1), podpis „Made by Tomasz Kmiecik”.
+- 8.6.4: płynna mapa Atlasu (podgląd gestów na GPU).
 
 Szczegóły są w `CHANGELOG.md`.
 
@@ -39,9 +41,10 @@ Szczegóły są w `CHANGELOG.md`.
 2. **Offline mapy regionu:**
    - Leaflet lokalnie w `assets/vendor/leaflet/` i w cache SW;
    - bez kafelków OSM czytelny komunikat PL/EN, a lista i plan działają dalej.
-3. **Pływająca mapka na małych ekranach:** nie może zasłaniać etykiet u góry mapy Atlasu (np. Gdańsk). Rozwiązania do rozważenia: mniejsza mapka na mapie Atlasu albo automatyczne przesunięcie widoku.
-4. **Porządki:** zmienić nazwę `assets/poland-explorer.js` na `trips-ics.js` (z odwołaniami, testami i cache); zaktualizować `data/SCHEMA.md` albo oznaczyć go jako archiwalny razem z `PLAN_ROZWOJU.md`.
-5. **Ręczny test na iPhonie** (właściciel):
+3. **Wydajność dalej:** przyspieszyć sam końcowy rysunek mapy (`setTransform` ~kilkadziesiąt ms na słabszym telefonie): mniej `querySelectorAll`, cache transformacji znaczków, rozważyć zastąpienie filtra `blurShadow` gotowym obrazem; sprawdzić na fizycznym iPhonie.
+4. **Pływająca mapka na małych ekranach:** nie może zasłaniać etykiet u góry mapy Atlasu (np. Gdańsk). Rozwiązania do rozważenia: mniejsza mapka na mapie Atlasu albo automatyczne przesunięcie widoku.
+5. **Porządki:** zmienić nazwę `assets/poland-explorer.js` na `trips-ics.js` (z odwołaniami, testami i cache); zaktualizować `data/SCHEMA.md` albo oznaczyć go jako archiwalny razem z `PLAN_ROZWOJU.md`.
+6. **Ręczny test na iPhonie** (właściciel):
    - instalacja PWA i nowa ikona;
    - pływająca mapka;
    - Pieczątki;

@@ -9,12 +9,12 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-6-5-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.6.5 — 2026-11-08 — gałąź `claude/i-was-here-analysis-augprr`
+## 8.6.5 — 2026-11-08 — PR #21 (scalone 9e028c5)
 - **Naprawa: pinezki miast odjeżdżały od mapy przy przybliżaniu.** `.city-dot` miał w `assets/atlas.css` `transform-box: fill-box; transform-origin: center`, więc skala pinezki (stały rozmiar na ekranie, `scale(1/zoom)`) była liczona wokół środka całej grupy (pinezka + znaczek + podpis), a nie wokół czubka pinezki. Czubek był ok. 19 px od miasta w widoku kraju i ok. 72 px po przybliżeniu (emulacja iPhone 13). Teraz `transform-box: view-box; transform-origin: 0 0` — odchyłka 0 px przy każdym powiększeniu, także w widoku województwa.
 - Nowa kontrola w teście przeglądarkowym (83): czubek każdej pinezki leży na współrzędnych miasta przed i po przybliżeniu (bez poprawki test pokazuje 5,5 / 65,5 px).
 - Cache `i-was-here-v8-6-5-20261108`.
 
-## [Nieopublikowane] 8.6.4 — 2026-11-08 — gałąź `claude/plynna-mapa`
+## 8.6.4 — 2026-11-08 — PR #19 (scalone e00884e)
 - **Płynna mapa Atlasu** przy przesuwaniu, pinch-zoomie, kółku myszy i animacji przelotu do województwa:
   - w trakcie gestu przesuwana i skalowana jest gotowa warstwa (`.atlas-map`, transformacja CSS na GPU), bez przerysowania tysięcy ścieżek, filtrów, znaczków i podpisów;
   - pełny rysunek powstaje raz — po puszczeniu palca, po zatrzymaniu palców na ok. 0,25 s albo przy bardzo dużej zmianie skali;
