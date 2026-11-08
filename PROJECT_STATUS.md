@@ -1,6 +1,6 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (gałąź `claude/dane-excel-offline`, PR czeka na „Scal”) / 8.6.5 (`main`, `dcd7bdb`)
+**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (PR #22, gałąź `claude/dane-excel-offline`, czeka na „Scal”) / 8.6.5 (`main`, `dcd7bdb`)
 **Cache PWA:** `i-was-here-v8-7-0-20261108` (na gałęzi 8.7.0) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#21 potwierdzone w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
@@ -19,7 +19,7 @@
 6. Najbliższe zadanie: §6 poniżej.
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-08)
-- **Otwarte PR:** 8.7.0 — Moje dane (Excel, kopia, import, e-mail), mapa regionu offline, podział bazy regionów, wydajność i porządki (gałąź `claude/dane-excel-offline`). Czeka na „Scal”.
+- **Otwarte PR:** #22 — 8.7.0: Moje dane (Excel, kopia, import, e-mail), mapa regionu offline, podział bazy regionów, wydajność i porządki (gałąź `claude/dane-excel-offline`). Czeka na „Scal”.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
