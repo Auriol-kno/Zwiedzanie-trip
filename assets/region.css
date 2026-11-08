@@ -36,7 +36,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .textbtn{background:none;border:0;color:var(--primary);font-weight:800;font-size:12px;padding:8px 2px}
 .map-wrap{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#dfe9e0}
 #rMap{height:340px;z-index:1}
-.tiles-offline{position:absolute;left:10px;right:10px;top:10px;z-index:500;background:rgba(11,52,70,.92);color:#fff;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.35;pointer-events:none}
+.tiles-offline{position:absolute;left:10px;right:10px;bottom:28px;z-index:500;background:rgba(11,52,70,.92);color:#fff;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.35;pointer-events:none}
 .map-offline{padding:90px 20px;text-align:center;font-size:13px;color:var(--sub)}
 .r-pin{display:grid;place-items:center;width:30px;height:30px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:var(--primary);border:3px solid #fff;box-shadow:0 4px 12px #0f1f2d44}
 .r-pin span{transform:rotate(45deg);font-size:13px}

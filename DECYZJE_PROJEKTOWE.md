@@ -80,7 +80,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Klucze zapisu: `iwh_visited` (`city:<id>`, `region:<id>`, `town:<region>:<nazwa>`), `iwh_region_visited` (id miejsc), `odkryjWarszawe_1.visited` (Warszawa).
 
 ## 8. Plany i zwiedzanie
-- Plany podróży (`iwh_trips`) i plany dnia (`iwh_days`): pozycje `{t:'city'|'region'|'town'|'place', …}`.
+- Plany podróży (`iwh_trips`) i plany dnia (`iwh_days`): pozycje `{t:'city'|'region'|'town'|'place', …}`; od 8.7 także `{t:'waw',id,name,lat,lon}` (atrakcja Warszawy, np. z Excela).
 - **Podróż → plan dnia:** przycisk „🗓️ Dodaj do planu dnia” przy podróży.
 - **Punkt z mapy regionu → plan:** „🗓️ Do planu dnia” i „🧳 Do podróży” w szczegółach miejsca.
 - **Wycieczka piesza** jest w Warszawie, w przewodniku regionu (domyślna przy wejściu z miejscowości) i w planie dnia Atlasu.
@@ -101,9 +101,14 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - **Plany województw** (8.6.2, prośba właściciela „plan i punkty dla wszystkich województw”): motyw na początku listy, jeden plan na każde z 16 województw z linkiem do przewodnika regionu.
 - Szlak = wstęp PL/EN, przystanki (miejsca regionów lub miasto), notatki przy przystankach, dystans i czas jako szacunek, zapis jako podróż lub plan dnia.
 
+## 10a. Moje dane — Excel, kopia, e-mail (8.7, prośba właściciela 2026-11-08)
+- Właściciel poprosił o: wysłanie pliku na e-mail użytkownika, zapis danych **w Excelu** jako logicznego formularza, do którego można dopisywać dane, pobranie i **wczytanie danych z powrotem do profilu** (plany podróży, odznaki), **planowanie podróży przez edycję pliku Excel** oraz **mapę z zaznaczonymi planowanymi miejscami** w pliku.
+- Realizacja: Profil Atlasu → „Moje dane”. Excel ma arkusze Start, Plany, Pieczątki, Odznaki, Dziennik, Mapa i Miejsca; listy rozwijane z katalogu miejsc, formuły uzupełniają resztę, mapa to wykres z prawdziwymi granicami (Natural Earth) w projekcji Atlasu.
+- **E-mail:** aplikacja nie ma serwera, więc nie wysyła poczty sama. Na iPhonie plik idzie przez arkusz Udostępnij do Poczty (załącznik); na innych urządzeniach plik się pobiera i otwiera się `mailto:`. E-mail użytkownika jest opcjonalny i zostaje tylko na urządzeniu (`iwh_profile`).
+- **Import nie kasuje danych:** domyślnie „Scal”; „Zaktualizuj plany z pliku” zastępuje tylko plany o tych samych nazwach. Zdjęcia dziennika są tylko w pełnej kopii `.json`.
+- Dane nie opuszczają urządzenia bez działania użytkownika (pobranie lub udostępnienie pliku).
+
 ## 11. Planowane (uzgodnione kierunki, jeszcze niezrobione)
-- Kopia zapasowa danych użytkownika (eksport/import planów, pieczątek i dziennika ze zdjęciami).
-- Mapa przewodnika regionu offline (Leaflet lokalnie).
 - Kolejne pełne przewodniki miast, np. Kraków albo Gdańsk; wybór należy do właściciela.
 - Więcej potwierdzonych artykułów Wikipedii i opisów EN dla Warszawy.
 - Szczegóły w `ROADMAP.md`.

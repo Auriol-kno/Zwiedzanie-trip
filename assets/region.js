@@ -73,7 +73,7 @@ function initMap(){
  const tiles=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
  // 8.7: bez sieci Leaflet działa (plik lokalny), ale kafelków OSM brak — czytelny komunikat zamiast pustej mapy.
  let tileErr=0;const note=()=>{let n=$('#rMap .tiles-offline');if(!n){n=document.createElement('div');n.className='tiles-offline';n.setAttribute('role','status');$('#rMap').appendChild(n)}n.textContent=t().tilesOffline};
- tiles.on('tileerror',()=>{if(++tileErr>=2)note()});tiles.on('load',()=>{tileErr=0;const n=$('#rMap .tiles-offline');if(n)n.remove()});
+ tiles.on('tileerror',()=>{if(++tileErr>=2)note()});tiles.on('tileload',()=>{tileErr=0;const n=$('#rMap .tiles-offline');if(n)n.remove()});
  const geo=window.POLAND_GEO&&window.POLAND_GEO.regions.find(g=>g.name===region.geo);
  if(geo)L.polygon(geo.coords.map(c=>[c[1],c[0]]),{color:'#244f40',weight:2.5,fillColor:'#244f40',fillOpacity:.04,dashArray:'6 5',interactive:false}).addTo(map);
  layer=L.layerGroup().addTo(map);

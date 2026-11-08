@@ -358,6 +358,63 @@ function check(ok, message) {
   await page.waitForSelector('#dHist .place-history');
   check(await page.evaluate(() => /Tatars/.test(document.querySelector('#dHist').innerText) && !/[ąęłśżź]/.test(document.querySelector('#dHist p').innerText.replace(/Kruszyniany|Bohoniki|pierekaczewnik/g,''))), 'Przewodnik regionu: historia w EN dla kolejnych województw');
 
+  // 8.7 — baza etap 1: przewodnik regionu pobiera pełne dane swojego województwa; Leaflet lokalnie, komunikat bez kafelków
+  await page.goto(base + 'region.html?region=swietokrzyskie&lang=pl');
+  await page.waitForSelector('#placeList .place, #placeList li, #placeList article', { timeout: 5000 }).catch(() => {});
+  await page.waitForSelector('#rMap .tiles-offline', { timeout: 6000 }).catch(() => {});
+  const rd = await page.evaluate(() => ({ full: window.IWH_REGIONS && window.IWH_REGIONS.fullRegion, lite: !!(window.IWH_REGIONS && window.IWH_REGIONS.lite),
+    desc: (window.IWH_REGIONS.places.find(p => p.region === 'swietokrzyskie') || {}).desc, leaflet: typeof L !== 'undefined',
+    cdn: [...document.scripts, ...document.querySelectorAll('link[rel=stylesheet]')].some(e => /unpkg/.test(e.src || e.href || '')),
+    tiles: (document.querySelector('#rMap .tiles-offline') || {}).textContent || '' }));
+  check(rd.lite && rd.full === 'swietokrzyskie' && rd.desc && rd.desc.pl && rd.desc.en, 'Przewodnik regionu: pełne dane z data/regiony/swietokrzyskie.json (lekki indeks w Atlasie)');
+  check(rd.leaflet && !rd.cdn, 'Przewodnik regionu: Leaflet z pliku lokalnego (działa offline)');
+  check(/offline/.test(rd.tiles), 'Przewodnik regionu: komunikat, gdy brak kafelków mapy');
+  check(await page.evaluate(() => !document.querySelector('script[src*="data/regiony.js"]')), 'Atlas i przewodnik nie ładują pełnego data/regiony.js');
+
+  // 8.7 — Moje dane: Excel (plany, pieczątki, odznaki, dziennik, mapa), pełna kopia JSON, import scalający
+  await page.goto(base + 'atlas.html?lang=pl');
+  await page.evaluate(() => {
+    localStorage.setItem('iwh_trips', JSON.stringify([{ id: 'tx1', name: 'Test Excel', created: '2026-01-01', items: [{ t: 'city', id: 'krakow' }, { t: 'place', id: 'ki-katedra' }] }]));
+    localStorage.setItem('iwh_days', JSON.stringify([{ id: 'dx1', name: 'Dzień testowy', date: '2026-05-02', start: '09:30', mode: 'walking', items: [{ t: 'place', id: 'ki-palac-biskupow' }] }]));
+    localStorage.setItem('iwh_visited', JSON.stringify(['city:gdansk'])); localStorage.setItem('iwh_region_visited', JSON.stringify(['ki-katedra']));
+  });
+  await page.goto(base + 'atlas.html?lang=pl&tab=profile');
+  await page.waitForSelector('#tabPanel .ud-box');
+  check(await page.evaluate(() => document.querySelectorAll('#tabPanel [data-ud]').length >= 5), 'Profil: „Moje dane” — Excel, e-mail, kopia, import');
+  const xl = await page.evaluate(async () => {
+    const blob = await IWH_DATA.buildXLSX({ lang: 'pl' }), buf = await blob.arrayBuffer();
+    const book = await IWH_DATA.readXLSX(buf), z = await IWH_DATA._unzip(buf);
+    const parsed = await IWH_DATA.parseXLSX(buf), chart = await z.text('xl/charts/chart1.xml');
+    return { size: blob.size, sheets: Object.keys(book), chart: /scatterChart/.test(chart) && (chart.match(/<c:ser>/g) || []).length,
+      trips: parsed.trips.map(t => t.name + ':' + t.keys.join(',')), days: parsed.days.map(d => d.date + ' ' + d.start + ' ' + d.mode), stamps: parsed.visited.concat(parsed.placeStamps), skipped: parsed.skipped.length };
+  });
+  check(xl.sheets.join('|') === 'Start|Plany|Pieczątki|Odznaki|Dziennik|Mapa|Miejsca|_mapa' && xl.chart === 5 && xl.size < 400000, 'Excel: 8 arkuszy i mapa (wykres z 5 seriami), ' + Math.round(xl.size / 1024) + ' KB');
+  check(xl.trips[0] === 'Test Excel:city:krakow,place:ki-katedra' && xl.days[0] === '2026-05-02 09:30 walking' && xl.stamps.join() === 'city:gdansk,ki-katedra' && !xl.skipped, 'Excel: zapis i odczyt planów, planów dnia i pieczątek bez strat');
+  const xen = await page.evaluate(async () => Object.keys(await IWH_DATA.readXLSX(await (await IWH_DATA.buildXLSX({ lang: 'en' })).arrayBuffer())).join('|'));
+  check(xen === 'Start|Plans|Stamps|Badges|Journal|Map|Places|_map', 'Excel: wersja angielska (nazwy arkuszy EN)');
+  const back = await page.evaluate(async () => {
+    const json = await (await IWH_DATA.buildJSON()).text();
+    ['iwh_trips', 'iwh_days', 'iwh_visited', 'iwh_region_visited'].forEach(k => localStorage.removeItem(k));
+    const first = await IWH_DATA.apply(IWH_DATA.parseJSON(json), 'merge'), again = await IWH_DATA.apply(IWH_DATA.parseJSON(json), 'merge');
+    const trips = JSON.parse(localStorage.getItem('iwh_trips')), days = JSON.parse(localStorage.getItem('iwh_days'));
+    return { first, again, trip: trips[0] && trips[0].name + ':' + trips[0].items.length, day: days[0] && days[0].date, visited: localStorage.getItem('iwh_visited') };
+  });
+  check(back.trip === 'Test Excel:2' && back.day === '2026-05-02' && back.visited === '["city:gdansk"]' && back.first.newPlans === 2 && back.again.newPlans + back.again.stamps + back.again.updPlans === 0,
+    'Kopia JSON: odtworzenie danych, ponowny import niczego nie dubluje');
+  const upd = await page.evaluate(async () => {
+    const p = await IWH_DATA.parseXLSX(await (await IWH_DATA.buildXLSX({ lang: 'pl' })).arrayBuffer());
+    p.trips[0].keys = ['town:swietokrzyskie:Chęciny', 'waw:castle']; p.trips.push({ name: 'Nowy plan z Excela', keys: ['region:pomorskie'] });
+    const st = await IWH_DATA.apply(p, 'update'), trips = JSON.parse(localStorage.getItem('iwh_trips'));
+    const t = trips.find(x => x.name === 'Test Excel'), w = t.items.find(i => i.t === 'waw');
+    return { st, items: t.items.map(i => i.t).join(','), waw: w && IWH_ATLAS.resolve(w), added: trips.some(x => x.name === 'Nowy plan z Excela') };
+  });
+  check(upd.items === 'town,waw' && upd.added && upd.waw && upd.waw.lat > 52 && upd.st.newPlans === 1 && upd.st.updPlans === 1, 'Import „Zaktualizuj plany”: plan z Excela zastępuje stary, atrakcja Warszawy w planie');
+  await page.click('.tabbar [data-tab="profile"]').catch(() => {});
+  await page.evaluate(() => IWH_ATLAS.setLang('en'));
+  await page.goto(base + 'atlas.html?lang=en&tab=profile');
+  await page.waitForSelector('#tabPanel .ud-box');
+  check(await page.evaluate(() => !/[ąęłśżźćń]|Pobierz|Wczytaj|Wyślij/.test(document.querySelector('#tabPanel .ud-box').innerText)), 'Profil EN: „My data” bez polskich fragmentów');
+
   check(errors.length === 0, 'Brak błędów JavaScript' + (errors.length ? ': ' + errors.join(' | ') : ''));
   await browser.close();
   server.close();

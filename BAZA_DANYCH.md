@@ -100,10 +100,10 @@ Dzięki polu `kind` restauracje, noclegi i atrakcje dzielą jedną mapę, wyszuk
    - walidacja w `sync_database.py`;
    - cache w service workerze.
 2. **8.6.1 (zrobione):** lekki indeks `data/index/places.json` (397 obiektów, regiony + Warszawa, pole rodzaju) generowany przez `sync_database.py`; korzystają z niego Pieczątki na każdej stronie.
-3. **8.7:**
-   - Atlas korzysta z indeksu `data/index/places.json` zamiast pełnego `regiony.js`;
-   - podział `regiony.json` na pliki województw;
-   - Warszawa w tym samym formacie, `kind: atrakcja`.
+3. **8.7 (zrobione w części):**
+   - Atlas ładuje lekkie `data/regiony-lite.js` (bez opisów, adresów i danych OSM) zamiast pełnego `regiony.js` — zrobione;
+   - podział na pliki województw `data/regiony/<id>.json`, generowane z `regiony.json` przez `sync_database.py`; przewodnik regionu pobiera tylko swój plik (`assets/region-loader.js`) — zrobione. Źródłem prawdy do edycji zostaje `data/regiony.json`;
+   - Warszawa w tym samym formacie, `kind: atrakcja` — do zrobienia.
 4. **8.8:**
    - `media/` i pierwsze zdjęcia z Wikimedia Commons (automatycznie przez Wikidata, z licencją);
    - galeria w szczegółach miejsca.
