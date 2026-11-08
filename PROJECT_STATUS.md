@@ -1,7 +1,7 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (PR #22, gałąź `claude/dane-excel-offline`, czeka na „Scal”) / 8.6.5 (`main`, `dcd7bdb`)
-**Cache PWA:** `i-was-here-v8-7-0-20261108` (na gałęzi 8.7.0) · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#21 potwierdzone w GitHub Actions)
+**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (`main`, scalone PR #22 „Scal #22: 8.7.0 — Moje dane w Excelu…”)
+**Cache PWA:** `i-was-here-v8-7-0-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
@@ -11,7 +11,7 @@
 ---
 
 ## Szybkie wznowienie pracy (nowa sesja)
-1. `git fetch origin && git log origin/main -5` → oczekiwane `dcd7bdb` (8.6.5) lub nowsze, a po scaleniu 8.7.0 — merge tego PR; sprawdź otwarte PR.
+1. `git fetch origin && git log origin/main -5` → oczekiwane merge „Scal #22” (8.7.0) lub nowsze; sprawdź otwarte PR.
 2. Przeczytaj `CLAUDE.md` → ten plik → `DECYZJE_PROJEKTOWE.md` → `ROADMAP.md` → `CHANGELOG.md`.
 3. Komunikacja po polsku; każda zmiana na gałęzi `claude/<temat>` + PR z polskim opisem; scalaj tylko po „Scal”, potem potwierdź „pages build and deployment” i „Sprawdź aplikację Warszawa”.
 4. Testy: `python tools/sync_database.py` (bez diffu w `data/*.js`), `python tools/test_bundle.py && python tools/test_atlas.py`, `node --check`, `NODE_PATH=$(npm root -g) node tools/test_browser.js` (94/94).
@@ -19,7 +19,7 @@
 6. Najbliższe zadanie: §6 poniżej.
 
 ## 0. Repozytorium, gałęzie i Pull Requesty (stan 2026-11-08)
-- **Otwarte PR:** #22 — 8.7.0: Moje dane (Excel, kopia, import, e-mail), mapa regionu offline, podział bazy regionów, wydajność i porządki (gałąź `claude/dane-excel-offline`). Czeka na „Scal”.
+- **Otwarte PR:** brak.
 - **Scalone do `main`:**
   - #1–#4: UX 5.1b–5.3;
   - #5–#6: Atlas 6.0/7.0;
@@ -34,6 +34,7 @@
   - #18: 8.6.1–8.6.3 (historie wszystkich miejsc i atrakcji Warszawy, plany województw, indeks, podpis autora) — `b503643`;
   - #19: 8.6.4 (płynna mapa Atlasu) — `e00884e`;
   - #20: dokumentacja przekazania po 8.6.4;
+  - #22: 8.7.0 (Moje dane — Excel, e-mail, kopia, import; mapa regionu offline; podział bazy; wydajność, porządki);
   - #21: 8.6.5 (pinezki miast trzymają się mapy przy przybliżaniu; gałąź `claude/i-was-here-analysis-augprr` z raportem `RAPORT_TECHNICZNY_CLAUDE_2026-11-07.md`) — `9e028c5`.
 - **Gałęzie zdalne:** wszystkie `claude/*` są w pełni scalone (także `claude/i-was-here-analysis-augprr` z raportem technicznym, PR #21).
 - Workflow `sync-icons.yml` może sam dopisać commit z ikonami PNG na `main` po zmianie `icon.svg`. To znany wyjątek od zasady PR.
@@ -145,7 +146,7 @@
 - **Pinezki miast odjeżdżały od mapy przy przybliżaniu** (8.6.5): skala pinezki liczona wokół środka grupy zamiast czubka (`transform-origin` w `.city-dot`); teraz `transform-origin: 0 0` w układzie viewBox, odchyłka 0 px.
 
 ## 4. Ostatnio wykonane prace
-- **8.7.0 (gałąź `claude/dane-excel-offline`):** Moje dane — Excel z mapą, kopia `.json`, import scalający, e-mail; Leaflet lokalnie i komunikat offline; lekki plik regionów dla Atlasu i pliki województw; widok Polski pod przyciskami; szybsze przerysowanie; porządki.
+- **8.7.0 (PR #22):** Moje dane — Excel z mapą, kopia `.json`, import scalający, e-mail; Leaflet lokalnie i komunikat offline; lekki plik regionów dla Atlasu i pliki województw; widok Polski pod przyciskami; szybsze przerysowanie; porządki.
 - **8.6.5 (PR #21, `9e028c5`):** pinezki miast trzymają się mapy przy przybliżaniu; test regresji w przeglądarce (83 kontrole).
 - **8.6.4 (PR #19, `e00884e`):** płynne przesuwanie i przybliżanie mapy Atlasu (podgląd na GPU, jeden rysunek po geście).
 - **8.6.3 (PR #18):** historie wszystkich 184 atrakcji Warszawy (PL/EN, ≥10 zdań).

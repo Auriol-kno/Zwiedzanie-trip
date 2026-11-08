@@ -15,7 +15,7 @@
 7. Talk to the owner in **Polish**. Always say whether you could test on a real iPhone; normally you can't, only Chromium iPhone 13 emulation.
 
 ## Project and source of truth
-This repository is the **single shared source of truth** for the travel web app **I Was Here — Places & Memories** (Polish working name: "Tu Byłem — Miejsca i Wspomnienia"). Current version: **8.7.0** (branch `claude/dane-excel-offline`) / 8.6.5 (`main`, `dcd7bdb`). The app is signed **„Made by Tomasz Kmiecik”** (owner's request) — keep the credit in the Atlas Profile, the regional and Warsaw footers and `<meta name="author">`.
+This repository is the **single shared source of truth** for the travel web app **I Was Here — Places & Memories** (Polish working name: "Tu Byłem — Miejsca i Wspomnienia"). Current version: **8.7.0** (`main`, PR #22). The app is signed **„Made by Tomasz Kmiecik”** (owner's request) — keep the credit in the Atlas Profile, the regional and Warsaw footers and `<meta name="author">`.
 - Repo: https://github.com/Auriol-kno/Zwiedzanie-trip (owner merges, `main` deploys to GitHub Pages).
 - Published PWA: https://auriol-kno.github.io/Zwiedzanie-trip/. The start page is `atlas.html`.
 - Pages: `atlas.html` (Poland Atlas), `region.html?region=…&town=…` (regional guides), `index.html` (Warsaw guide, the only full city guide).

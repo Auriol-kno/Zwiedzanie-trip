@@ -9,7 +9,7 @@ znane ograniczenia). Aktualny klucz cache PWA: `i-was-here-v8-7-0-20261108`.
 
 ---
 
-## [Nieopublikowane] 8.7.0 — 2026-11-08 — PR #22 (gałąź `claude/dane-excel-offline`)
+## 8.7.0 — 2026-11-08 — PR #22 (scalone)
 - **Moje dane — Excel** (Profil w Atlasie, `assets/user-data.js`, `window.IWH_DATA`), prośba właściciela:
   - plik `.xlsx` powstaje w przeglądarce, bez bibliotek i bez serwera (własny ZIP, kompresja `CompressionStream`; ok. 120 KB);
   - arkusze: **Start** (instrukcja, podsumowanie), **Plany** (podróże i plany dnia: wiersz = miejsce; listy rozwijane z miejscami, rodzajem planu i trybem; formuły uzupełniają typ, województwo i współrzędne), **Pieczątki**, **Odznaki** (postęp miast, Warszawy i 16 województw z formuł), **Dziennik** (notatki), **Mapa** (wykres-mapa: granica Polski i województw z Natural Earth, 14 miast, zaplanowane miejsca z numerami i pieczątki — odświeża się po dopisaniu wierszy w Excelu), **Miejsca** (katalog 580 pozycji dla list) i ukryty `_mapa`;
