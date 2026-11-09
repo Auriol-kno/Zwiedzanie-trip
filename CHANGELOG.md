@@ -1,6 +1,18 @@
 # CHANGELOG — I Was Here / Places & Memories
 
-## 8.7.1 — 2026-11-09 — linki do Atlasu (do przeglądu)
+## 8.8.0 — Wrocław: krasnale (2026-11-09, PR #23, przygotowano do scalenia po zgodzie właściciela)
+
+- 769 lokalizacji OSM z miejskiej mapy `https://mobile.wroclaw.pl/krasnale.geojson`, stan danych 2026-08-11, pobrano 2026-11-09. Licencja ODbL; to nie jest pełny ani zweryfikowany na miejscu rejestr.
+- Osobny katalog `data/wroclaw-krasnale.json`, dołączany przez `tools/sync_database.py` do plików regionu, lekkiej bazy Atlasu i indeksu. 213 dotychczasowych atrakcji z długimi historiami pozostaje oddzielną redakcyjną kolekcją; krasnale mają krótkie opisy PL/EN oparte wyłącznie na tagach OSM, z autorem/datą, gdy dostępne, i ostrzeżeniami o dostępie. Razem 982 punkty regionalne.
+- Wrocław: włączana warstwa krasnali, filtr kategorii, ukrywanie znalezionych, piny Canvas (zielone po zdobyciu), lista po 60 wpisów, szczegóły, dojazd, ulubione, dziennik i dodawanie do planów. Miejsca z ograniczonym dostępem nie trafiają do automatycznego planu.
+- Pieczątki każdego krasnala oraz progi 1/5/10/25/50/100/250/769, PL/EN; wspólny zapis `iwh_region_visited`, odznaki wyliczane bez osobnego stanu. Odznaki są też w Excelu; pieczątki i plany przechodzą przez istniejący eksport/import Excel i JSON.
+- Walidacja: synchronizacja danych, test_bundle.py, test_atlas.py, kontrola składni JS, pełny test_browser.js i test_dwarfs.js przeszły w Chromium (emulacja iPhone 13).
+- Cache PWA `i-was-here-v8-8-0-20261109`; nowe testy `tools/test_dwarfs.js` w CI. Nie testowano na fizycznym iPhonie.
+- Aktualizacja danych: pobierz GeoJSON z powyższego adresu, uruchom `python tools/import_wroclaw_dwarfs.py <plik.geojson>`, potem `python tools/sync_database.py`. Importer nie pobiera zdjęć ani nie kopiuje cudzych opisów.
+- Nie wdrożono jeszcze pełnego przewodnika miejskiego Wrocławia na wzór Warszawy ani dodatkowych zwykłych atrakcji — ten PR obejmuje zamówioną kolekcję krasnali.
+
+
+## 8.7.1 — 2026-11-09 — linki do Atlasu (PR #24, scalone)
 - Na polecenie właściciela mała mapka Polski jest pierwszym elementem nagłówka, skrajnie po lewej; logo stoi obok niej. Oba są linkami do całej mapy Atlasu, z zachowaniem języka. W samym Atlasie oba zamykają zakładki i wracają do widoku całej Polski bez przeładowania.
 - Na wąskich ekranach nazwa przy logo przewodnika jest ukryta, aby mapka, logo i przyciski nie zachodziły na siebie. Logo pozostaje dostępne z klawiatury i ma etykietę PL/EN.
 - Testy: synchronizacja bazy, test_bundle.py, test_atlas.py, kontrola składni i pełny test_browser.js przeszły w Chromium (emulacja iPhone 13). Sprawdzono kliknięcie logo z zakładki Pieczątek oraz mapkę po lewej w Warszawie.

@@ -72,5 +72,9 @@ Szczegóły są w `CHANGELOG.md`.
 - Live oceny Google, klucz Places API i routing WTP w czasie rzeczywistym.
 - Automatycznie generowane opisy historyczne bez weryfikacji.
 
+## Wrocław — priorytet właściciela 2026-11-09
+- 8.8.0 (PR do przeglądu): 769 krasnali OSM, opisy PL/EN, warstwa mapy, pieczątki i odznaki za kolekcję, eksport/import.
+- Następny osobny etap: więcej pozostałych atrakcji i wspólny silnik pełnego przewodnika miejskiego z funkcjami Warszawy. Nie oznaczamy obecnego modułu jako pełnego przewodnika.
+
 ## Poprawka nagłówka 2026-11-09
-- 8.7.1 do przeglądu: mapka skrajnie po lewej oraz oba elementy (mapka i logo) jako powrót do głównego Atlasu.
+- 8.7.1 (PR #24, scalone): mapka skrajnie po lewej oraz oba elementy (mapka i logo) jako powrót do głównego Atlasu.

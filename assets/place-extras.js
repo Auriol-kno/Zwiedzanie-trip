@@ -193,6 +193,16 @@ function citiesHTML(){
  return cityIds().map(id=>{const v=on.includes(id),name=A?A.cityName(id):id;
   return '<li class="pp-stamp'+(v?' on':'')+'"><span class="pp-art" role="img" aria-label="'+esc((v?t.unlockedA:t.lockedA)+name)+'">'+(A?'<svg viewBox="0 -6 80 62">'+A.landmark(id,{visited:v})+'</svg>':'')+'</span><span class="pp-stamp-act"><button type="button" class="pp-toggle" data-pp-city="'+id+'" aria-pressed="'+v+'">'+esc(v?t.unlocked:t.unlock)+'</button>'+(v?jBtn('city',id,name,'🏙️'):'')+'</span></li>'}).join('');
 }
+// Dwarf milestones use the existing place stamps: backup, journal and undo stay shared.
+function dwarfsHTML(showLink=true){
+ const en=lang()==='en',places=(REG()?.places||[]).filter(p=>p.id.startsWith('wr-dwarf-'));
+ const ids=new Set(places.map(p=>p.id));
+ const found=new Set(readLS('iwh_region_visited',[]).filter(id=>ids.has(id))).size;
+ const total=places.length;
+ const milestones=[[1,'Pierwszy krasnal','First dwarf'],[5,'Tropiciel krasnali','Dwarf tracker'],[10,'Łowca krasnali','Dwarf hunter'],[25,'Przyjaciel krasnali','Dwarf friend'],[50,'Znawca krasnali','Dwarf expert'],[100,'Mistrz krasnali','Dwarf master'],[250,'Strażnik krasnali','Dwarf guardian']];
+ if(total)milestones.push([total,'Komplet katalogu','Catalogue complete']);
+ return '<section class="dwarf-collection"><h3>🧙 '+(en?'Dwarf stamps':'Krasnalowe pieczątki')+'</h3><p>'+found+' / '+total+' '+(en?'found in this catalogue':'znalezionych z tego katalogu')+'</p><div class="dwarf-badges">'+milestones.map(([n,pl,eng])=>'<div class="dwarf-badge'+(found>=n?' earned':'')+'" data-dwarf-goal="'+n+'"><span aria-hidden="true">'+(found>=n?'✣':'◇')+'</span><b>'+esc(en?eng:pl)+'</b><small>'+Math.min(found,n)+' / '+n+'</small></div>').join('')+'</div>'+(showLink?'<a class="pp-action" href="./region.html?region=dolnoslaskie&amp;town=Wroc%C5%82aw&amp;dwarfs=1&amp;lang='+lang()+'">'+(en?'Find dwarfs on the map':'Szukaj krasnali na mapie')+' →</a>':'')+'</section>';
+}
 function passportHTML(){
  const t=x(),st=stats(),L=lang(),q=s=>'./'+s+'?lang='+L;
  return '<div class="pp-head"><img src="./assets/brand-pin-landscape.svg" alt="" width="54" height="73"><div><small class="ij-kicker">I Was Here</small><h2 class="pp-title">'+esc(t.passport)+'</h2><p>'+esc(t.passportLead)+'</p></div></div>'+
@@ -204,7 +214,7 @@ function passportHTML(){
   '<h3 class="pp-sub" id="ppCities">'+esc(t.secCities)+'</h3><ul class="pp-stamps" data-pp-cities>'+citiesHTML()+'</ul>'+
   '<h3 class="pp-sub" id="ppPlaces">'+esc(t.secPlaces)+'</h3>'+(REG()?'<input type="search" class="pp-search" data-pp-search="place" placeholder="'+esc(t.searchPlaces)+'" aria-label="'+esc(t.searchPlaces)+'"><ul class="pp-list" data-pp-list-place>'+listHTML('place','')+'</ul>':'<a class="pp-action" href="'+q('atlas.html')+'&tab=passport">'+esc(t.openRegions)+' →</a>')+
   '<h3 class="pp-sub" id="ppWarsaw">'+esc(t.secWarsaw)+'</h3>'+(WAW()?'<input type="search" class="pp-search" data-pp-search="waw" placeholder="'+esc(t.searchWarsaw)+'" aria-label="'+esc(t.searchWarsaw)+'"><ul class="pp-list" data-pp-list-waw>'+listHTML('waw','')+'</ul>':'<a class="pp-action" href="'+q('index.html')+'">'+esc(t.openWarsaw)+' →</a>')+
-  '<h3 class="pp-sub" id="ppJournal">'+esc(t.entries)+'</h3><ul class="pp-list" data-pp-list></ul>';
+  dwarfsHTML()+'<h3 class="pp-sub" id="ppJournal">'+esc(t.entries)+'</h3><ul class="pp-list" data-pp-list></ul>';
 }
 let pthumbs=[];
 function fillEntries(root){
@@ -253,5 +263,5 @@ function passportOpen(){
  pbox.hidden=false;document.documentElement.classList.add('ij-open');xb.focus();
 }
 
-window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,save:put,count,counts,button,MAX_PHOTOS},passport:{open:passportOpen,mount,stats}};
+window.IWH_EXTRAS={lang,wiki,wikiHTML,journal:{open,close,get,all,save:put,count,counts,button,MAX_PHOTOS},passport:{open:passportOpen,mount,stats,dwarfsHTML}};
 })();

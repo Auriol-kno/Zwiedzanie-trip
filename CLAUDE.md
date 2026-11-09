@@ -1,5 +1,7 @@
 # CLAUDE.md — I Was Here / Places & Memories
 
+Aktualizacja gałęzi 2026-11-09: 8.8.0, kolekcja 769 krasnali OSM (`data/wroclaw-krasnale.json`, importer `tools/import_wroclaw_dwarfs.py`), 982 punkty regionalne łącznie; historie ≥10 zdań nadal dotyczą 213 atrakcji redakcyjnych. Nowy test: `CHROMIUM_PATH=/usr/bin/chromium node tools/test_dwarfs.js` (zmienna opcjonalna). Cache `i-was-here-v8-8-0-20261109`. Poniższy opis 8.7 to punkt wyjścia; bieżący zakres w PROJECT_STATUS.md.
+
 ## Start of every session (read first)
 1. `git fetch origin` and inspect `git log origin/main -10`; other agents or the owner may have pushed.
 2. Read, in this order:

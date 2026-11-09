@@ -56,6 +56,13 @@ print(f"OK: {len(attractions)} atrakcji, {len(districts)} dzielnic, {len(restaur
 
 # I Was Here 6.0 — województwa i atrakcje regionalne (Atlas → region → miejscowość)
 regions_db = load("regiony.json")
+# Separate ODbL catalogue: short factual descriptions, not editorial place histories.
+dwarfs_db = load("wroclaw-krasnale.json")
+dwarfs = dwarfs_db["places"]
+assert dwarfs_db["license"] == "ODbL-1.0" and dwarfs_db["source"].startswith("https://")
+assert len(dwarfs) > 0 and all(p.get("dwarf") and p["cats"] == ["dwarfs"] and p["id"].startswith("wr-dwarf-") for p in dwarfs)
+regions_db["places"] += dwarfs
+regions_db["categories"]["dwarfs"] = ["🧙", "Krasnale", "Dwarfs"]
 regions = regions_db["regions"]
 region_ids = {r["id"] for r in regions}
 assert len(regions) == 16 and len(region_ids) == 16, "Atlas ma 16 województw"
@@ -74,20 +81,20 @@ for p in region_places:
     assert p["coordinateStatus"] in ("orientacyjne", "redakcyjne", "zweryfikowane", "osm"), p["id"]
     assert p["coordinateStatus"] != "osm" or (p.get("osm", {}).get("type") and p["osm"].get("id")), "Brak identyfikatora OSM: " + p["id"]
     assert p["url"] is None or p["url"].startswith("https://"), p["id"]
-write("regiony.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
+write("regiony.js", "// Wygenerowano z data/regiony.json + data/wroclaw-krasnale.json przez tools/sync_database.py.\nwindow.IWH_REGIONS=" + compact(regions_db) + ";\n")
 # 8.7 — BAZA_DANYCH.md, etap 1: Atlas ładuje lekki plik (bez opisów, adresów i danych OSM), a przewodnik
 # regionu — pełne dane tylko swojego województwa (data/regiony/<id>.json, fetch). data/regiony.js zostaje jako zapas.
-LITE_KEYS = ("id", "region", "town", "name", "cats", "time", "visitValue", "lat", "lon", "icon", "coordinateStatus", "wiki")
+LITE_KEYS = ("id", "region", "town", "name", "cats", "time", "visitValue", "lat", "lon", "icon", "coordinateStatus", "wiki", "dwarf", "restricted", "indoor", "updated")
 lite = {k: regions_db[k] for k in ("version", "updated", "note", "categories", "regions")}
 lite["lite"] = True
 lite["places"] = [{k: p[k] for k in LITE_KEYS if k in p} for p in region_places]
-write("regiony-lite.js", "// Wygenerowano z data/regiony.json przez tools/sync_database.py — lekka wersja dla Atlasu (bez opisów).\nwindow.IWH_REGIONS=" + compact(lite) + ";\n")
+write("regiony-lite.js", "// Wygenerowano z data/regiony.json + data/wroclaw-krasnale.json przez tools/sync_database.py — lekka wersja dla Atlasu (bez opisów).\nwindow.IWH_REGIONS=" + compact(lite) + ";\n")
 (DATA / "regiony").mkdir(exist_ok=True)
 for r in regions:
     own = [p for p in region_places if p["region"] == r["id"]]
     target = DATA / "regiony" / (r["id"] + ".json")
     if own:
-        write("regiony/" + r["id"] + ".json", json.dumps({"region": r["id"], "note": "Wygenerowano z data/regiony.json przez tools/sync_database.py — nie edytuj ręcznie.", "places": own}, ensure_ascii=False, separators=(",", ":")) + "\n")
+        write("regiony/" + r["id"] + ".json", json.dumps({"region": r["id"], "note": "Wygenerowano z data/regiony.json" + (" + data/wroclaw-krasnale.json" if r["id"] == "dolnoslaskie" else "") + " przez tools/sync_database.py — nie edytuj ręcznie.", "places": own}, ensure_ascii=False, separators=(",", ":")) + "\n")
     elif target.exists():
         target.unlink()
 guided = sum(r["status"] != "planned" for r in regions)
@@ -133,7 +140,7 @@ for r in routes_db["routes"]:
         kind, ref = st["ref"].split(":", 1)
         assert (kind == "place" and ref in place_ids) or (kind == "city" and ref in city_ids), "Nieznany przystanek " + st["ref"] + " w " + r["id"]
         assert ("pl" in st) == ("en" in st), "Notatka przystanku tylko w jednym języku: " + r["id"]
-assert hist_total == len(region_places), f"Każde miejsce regionalne musi mieć historię ≥10 zdań: {hist_total}/{len(region_places)}"
+assert hist_total == len([p for p in region_places if not p.get("dwarf")]), f"Każde redakcyjne miejsce regionalne musi mieć historię ≥10 zdań: {hist_total}/{len(region_places)}"
 print(f"OK: {hist_total} rozszerzonych historii (≥10 zdań PL i EN), {len(theme_ids)} motywów, {len(route_ids)} szlaków tematycznych.")
 
 # 8.6.3 — historie atrakcji Warszawy (data/warszawa-historia/*.json), ≥10 zdań PL i EN dla każdej z 184 atrakcji.
