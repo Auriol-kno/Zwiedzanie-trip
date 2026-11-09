@@ -112,3 +112,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Kolejne pełne przewodniki miast, np. Kraków albo Gdańsk; wybór należy do właściciela.
 - Więcej potwierdzonych artykułów Wikipedii i opisów EN dla Warszawy.
 - Szczegóły w `ROADMAP.md`.
+
+## 12. Aktualizacja nagłówka — 2026-11-09 (nowsza decyzja właściciela)
+- Mała mapka ma być maksymalnie po lewej, przed logo. Logo obok mapki również odsyła do głównej mapy Atlasu. Ta decyzja zastępuje starsze zapisy o logo bez linku i mapce pośrodku nagłówka.
+- Oba linki zachowują język; w Atlasie wracają do widoku całej Polski.

@@ -9,8 +9,8 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 @media(min-width:700px){.app-nav:not(.tabbar){left:50%;right:auto;transform:translateX(-50%);width:min(640px,100%);border-radius:22px 22px 0 0;border:1px solid rgba(236,220,181,.22)}.app-nav:not(.tabbar) button{font-size:11px}}
 @media(max-width:360px){.app-nav:not(.tabbar) button{font-size:9px}.app-nav:not(.tabbar) svg{width:19px;height:19px}}
 
-/* 8.5 — mapka Polski w jednej linii z logo: środkowy element nagłówka (nagłówek jest zawsze widoczny), prowadzi do całej mapy Polski */
-.poland-fab{position:relative;z-index:2;flex:none;width:48px;height:48px;margin:0 auto;display:grid;place-items:center;border-radius:14px;pointer-events:auto;box-shadow:0 6px 16px rgba(6,22,32,.4);transition:transform .15s ease}
+/* 8.5 — mapka Polski w jednej linii z logo: pierwszy element nagłówka po lewej (nagłówek jest zawsze widoczny), prowadzi do całej mapy Polski */
+.poland-fab{position:relative;z-index:2;flex:none;width:48px;height:48px;margin:0;display:grid;place-items:center;border-radius:14px;pointer-events:auto;box-shadow:0 6px 16px rgba(6,22,32,.4);transition:transform .15s ease}
 .poland-fab img{width:48px;height:48px;display:block}
 .poland-fab:active{transform:scale(.94)}
 .poland-fab:focus-visible{outline:3px solid #F47C28;outline-offset:3px}
@@ -19,3 +19,8 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 @media(max-width:370px){.top .brand .wordmark,.atlas-top .brand-name{display:none}.poland-fab,.poland-fab img{width:44px;height:44px}}
 .atlas-top .poland-fab,.atlas-top .poland-fab img{width:44px;height:44px}
 .made-by{font-style:italic;font-weight:700;font-family:Georgia,Palatino,serif}
+
+/* Map and brand share the same Atlas destination, in DOM and keyboard order. */
+.top>.brand,.atlas-top>.brand{margin-right:auto;min-width:0;color:inherit;text-decoration:none;border-radius:12px}
+.top>.brand:focus-visible,.atlas-top>.brand:focus-visible{outline:3px solid #F47C28;outline-offset:3px}
+@media(max-width:420px){.top .brand .wordmark{display:none}}

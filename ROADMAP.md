@@ -71,3 +71,6 @@ Szczegóły są w `CHANGELOG.md`.
 - Migracja do React, Vite, MapLibre lub backendu (dawny `PLAN_ROZWOJU.md`).
 - Live oceny Google, klucz Places API i routing WTP w czasie rzeczywistym.
 - Automatycznie generowane opisy historyczne bez weryfikacji.
+
+## Poprawka nagłówka 2026-11-09
+- 8.7.1 do przeglądu: mapka skrajnie po lewej oraz oba elementy (mapka i logo) jako powrót do głównego Atlasu.

@@ -19,6 +19,10 @@ const L={map:['Mapa','Map'],explore:['Odkrywaj','Explore'],plans:['Plany','Plans
 const ORDER=['map','explore','plans','passport','profile'];
 nav.setAttribute('aria-label','Menu');
 nav.innerHTML=ORDER.map(k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>').join('');
+const logo=document.getElementById('atlasLogo');
+function logoLink(){if(!logo)return;const en=document.documentElement.lang==='en';logo.href='./atlas.html?lang='+(en?'en':'pl');logo.setAttribute('aria-label','I Was Here — '+(en?'Show the whole Atlas map':'Pokaż główną mapę Atlasu'))}
+logoLink();new MutationObserver(logoLink).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+if(logo&&page==='atlas')logo.addEventListener('click',e=>{if(e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();document.getElementById('atlasFloat').click()});
 if(page==='atlas')return; // zakładkami Atlasu steruje atlas-plans.js
 
 const lang=()=>document.documentElement.lang==='en'?'en':'pl';
