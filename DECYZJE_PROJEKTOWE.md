@@ -112,3 +112,8 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Kolejne pełne przewodniki miast, np. Kraków albo Gdańsk; wybór należy do właściciela.
 - Więcej potwierdzonych artykułów Wikipedii i opisów EN dla Warszawy.
 - Szczegóły w `ROADMAP.md`.
+
+## 12. Krasnale Wrocławia (polecenie właściciela 2026-11-09)
+- Dodać rzeczywiste lokalizacje, opisy i pieczątki związane ze zbieraniem krasnali do istniejącej mapy.
+- Krótkie opisy katalogowe na podstawie OSM są odrębne od długich historii 213 redakcyjnych atrakcji; nie dopisujemy zmyślonych historii figurek.
+- Znalezienie potwierdza użytkownik ręcznie, tak jak inne pieczątki. Brak automatycznego śledzenia GPS. Postęp jest lokalny, odwracalny i uwzględniany w kopiach danych.

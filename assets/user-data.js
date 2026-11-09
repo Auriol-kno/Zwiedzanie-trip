@@ -8,7 +8,7 @@
  * Bez zewnętrznych bibliotek: własny zapis/odczyt ZIP (deflate przez DecompressionStream) i XML arkusza. */
 (function(){
 'use strict';
-const FORMAT='iwh-backup',FORMAT_VERSION=1,APP_VERSION='8.7.0';
+const FORMAT='iwh-backup',FORMAT_VERSION=1,APP_VERSION='8.8.0';
 const read=(k,f)=>{try{const v=JSON.parse(localStorage.getItem(k)||'null');return v==null?f:v}catch(e){return f}};
 const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -134,7 +134,7 @@ async function catalogue(l){
  const towns=new Map();
  REG.places.forEach(p=>{const k=p.region+':'+p.town;const x=towns.get(k)||{region:p.region,name:p.town,lat:0,lon:0,n:0};x.lat+=p.lat;x.lon+=p.lon;x.n++;towns.set(k,x)});
  towns.forEach(x=>out.push({key:'town:'+x.region+':'+x.name,label:x.name+' — '+t.tTown.toLowerCase()+' ('+regName(x.region)+')',name:x.name,type:t.tTown,region:regName(x.region),town:x.name,lat:x.lat/x.n,lon:x.lon/x.n,ord:2}));
- REG.places.forEach(p=>{const nm=(p.name&&(p.name[l]||p.name.pl))||p.id;out.push({key:'place:'+p.id,label:nm+' · '+p.town,name:nm,type:t.tPlace,region:regName(p.region),town:p.town,lat:p.lat,lon:p.lon,ord:3})});
+ REG.places.forEach(p=>{const nm=(p.name&&(p.name[l]||p.name.pl))||p.id;out.push({key:'place:'+p.id,label:(p.dwarf?'🧙 ':'')+nm+' · '+p.town,name:nm,type:t.tPlace,region:regName(p.region),town:p.town,lat:p.lat,lon:p.lon,ord:3})});
  idx.items.filter(i=>i.k==='waw').forEach(i=>{const nm=(i.n&&(i.n[l]||i.n.pl))||i.id;out.push({key:'waw:'+i.id,label:nm+' · '+t.wawSub+' ('+i.t+')',name:nm,type:t.tWaw,region:regName('mazowieckie'),town:t.wawSub+' — '+i.t,lat:i.la,lon:i.lo,ord:4})});
  // Etykiety muszą być unikalne (listy rozwijane i odczyt importu po nazwie).
  const seen=new Map();out.forEach(o=>{let lab=o.label,n=2;while(seen.has(lab))lab=o.label+' ('+(n++)+')';o.label=lab;seen.set(lab,o)});
@@ -335,6 +335,9 @@ async function buildXLSX(opts){
   rows:[[{v:t.shBadges,s:S.title}],[{v:t.badgesHint,s:S.hint}],null,[t.hBadge,t.hTotal,t.hGot,t.hProgress,''].map(v=>({v,s:S.head}))],merges:['A2:E2'],heights:[28,30]};
  const stampTypes=stampKeys.map(k=>byKey.get(k)).filter(Boolean);
  const addBadge=(label,totalF,totalV,gotF,gotV)=>{const r=badges.rows.length+1;badges.rows.push([{v:label,s:S.bold},{f:totalF,v:totalV,s:S.calc},{f:gotF,v:gotV,s:S.calc},{f:'IF(B'+r+'=0,"",MIN(1,C'+r+'/B'+r+'))',v:totalV?Math.min(1,gotV/totalV):'',s:S.pct},{f:'IF(AND(B'+r+'>0,C'+r+'>=B'+r+'),"'+t.full+'",IF(C'+r+'>0,"'+t.onWay+'",""))',v:totalV&&gotV>=totalV?t.full:gotV>0?t.onWay:'',s:S.sect}])};
+ const dwarfTotal=cat.filter(c=>c.key.startsWith('place:wr-dwarf-')).length;
+ const dwarfFound=new Set(stampTypes.filter(c=>c.key.startsWith('place:wr-dwarf-')).map(c=>c.key)).size;
+ if(dwarfTotal)[1,5,10,25,50,100,250,dwarfTotal].forEach(n=>addBadge('🧙 '+(l==='en'?'Dwarfs':'Krasnale')+' · '+n,String(n),n,'MIN('+n+',COUNTIF('+stRange('A')+',"🧙 *"))',Math.min(n,dwarfFound)));
  const nCities=cat.filter(c=>c.ord===0).length,gotCities=stampTypes.filter(c=>c.ord===0).length;
  addBadge(t.citiesBadge,'COUNTIF('+rng('B')+',"'+t.tCity+'")',nCities,'COUNTIF('+stRange('B')+',"'+t.tCity+'")',gotCities);
  const nWaw=cat.filter(c=>c.ord===4).length,gotWaw=stampTypes.filter(c=>c.ord===4).length;

@@ -34,7 +34,7 @@ function check(ok, message) {
 (async () => {
   const server = await serve();
   const base = 'http://127.0.0.1:' + server.address().port + '/';
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}: {});
   const context = await browser.newContext({ ...devices['iPhone 13'] });
   // Zewnętrzne zasoby (Leaflet z CDN, kafelki OSM) blokujemy: test ma działać offline i deterministycznie.
   await context.route(url => !url.href.startsWith(base), route => route.abort());

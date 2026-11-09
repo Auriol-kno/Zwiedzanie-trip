@@ -71,3 +71,7 @@ Szczegóły są w `CHANGELOG.md`.
 - Migracja do React, Vite, MapLibre lub backendu (dawny `PLAN_ROZWOJU.md`).
 - Live oceny Google, klucz Places API i routing WTP w czasie rzeczywistym.
 - Automatycznie generowane opisy historyczne bez weryfikacji.
+
+## Wrocław — priorytet właściciela 2026-11-09
+- 8.8.0 (PR do przeglądu): 769 krasnali OSM, opisy PL/EN, warstwa mapy, pieczątki i odznaki za kolekcję, eksport/import.
+- Następny osobny etap: więcej pozostałych atrakcji i wspólny silnik pełnego przewodnika miejskiego z funkcjami Warszawy. Nie oznaczamy obecnego modułu jako pełnego przewodnika.

@@ -43,7 +43,7 @@ const region=DB&&DB.regions.find(r=>r.id===(qs.get('region')||'swietokrzyskie'))
 const all=region?DB.places.filter(p=>p.region===region.id):[];
 const CATS=DB?DB.categories:{};
 const towns=[...new Set(all.map(p=>p.town))].sort((a,b)=>all.filter(p=>p.town===b).length-all.filter(p=>p.town===a).length||a.localeCompare(b,'pl'));
-const state={town:towns.includes(qs.get('town'))?qs.get('town'):'all',cats:[],search:'',onlyFav:false,mode:qs.get('town')?'walking':'driving',hours:6,clock:'10:00',start:null};
+const state={dwarfs:qs.get('dwarfs')==='1'||(qs.get('place')||'').startsWith('wr-dwarf-'),hideFound:false,shown:60,town:towns.includes(qs.get('town'))?qs.get('town'):'all',cats:[],search:'',onlyFav:false,mode:qs.get('town')?'walking':'driving',hours:6,clock:'10:00',start:null};
 let favs=readStore('iwh_region_favs',[]),visited=readStore('iwh_region_visited',[]);
 const t=()=>T[lang];
 const name=p=>p.name[lang]||p.name.pl;
@@ -54,19 +54,19 @@ const km=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*
 // Szacunek: droga ≈ 1,3 × odległość w linii prostej; krótkie odcinki pieszo.
 function leg(a,b){const d=km(a,b)*1.3;if(d<1.6||state.mode==='walking')return{mins:Math.max(3,Math.round(d/4.5*60)),kind:'walk',km:d};
  return state.mode==='transit'?{mins:Math.round(d/35*60+12),kind:'drive',km:d}:{mins:Math.round(d/55*60+6),kind:'drive',km:d}}
-const townCenter=tn=>{const ps=all.filter(p=>p.town===tn);return{lat:ps.reduce((a,p)=>a+p.lat,0)/ps.length,lon:ps.reduce((a,p)=>a+p.lon,0)/ps.length}};
+const townCenter=tn=>{const base=all.filter(p=>p.town===tn),ps=base.filter(p=>!p.dwarf).length?base.filter(p=>!p.dwarf):base;return{lat:ps.reduce((a,p)=>a+p.lat,0)/ps.length,lon:ps.reduce((a,p)=>a+p.lon,0)/ps.length}};
 const fmtClock=m=>String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(Math.round(m%60)).padStart(2,'0');
 const fmtDur=m=>m>=60?Math.floor(m/60)+' '+t().h+(m%60?' '+(m%60)+' '+t().min:''):m+' '+t().min;
 const norm=s=>String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 
 function filtered(){
  const q=norm(state.search);
- return all.filter(p=>(state.town==='all'||p.town===state.town)&&(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id))&&
+ return all.filter(p=>(!p.dwarf||state.dwarfs)&&(!state.hideFound||!p.dwarf||!visited.includes(p.id))&&(state.town==='all'||p.town===state.town)&&(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id))&&
   (!q||norm([p.name.pl,p.name.en,p.town,p.desc[lang]].join(' ')).includes(q))).sort((a,b)=>b.visitValue-a.visitValue||a.town.localeCompare(b.town,'pl'));
 }
 
 // ---------- mapa (Leaflet; bez sieci zostaje lista)
-let map=null,layer=null;
+let map=null,layer=null,dwarfRenderer=null;
 function initMap(){
  if(typeof L==='undefined'){$('#rMap').innerHTML='<div class="map-offline">'+esc(t().mapOffline)+'</div>';return}
  map=L.map('rMap',{zoomControl:true,scrollWheelZoom:false});
@@ -76,12 +76,12 @@ function initMap(){
  tiles.on('tileerror',()=>{if(++tileErr>=2)note()});tiles.on('tileload',()=>{tileErr=0;const n=$('#rMap .tiles-offline');if(n)n.remove()});
  const geo=window.POLAND_GEO&&window.POLAND_GEO.regions.find(g=>g.name===region.geo);
  if(geo)L.polygon(geo.coords.map(c=>[c[1],c[0]]),{color:'#244f40',weight:2.5,fillColor:'#244f40',fillOpacity:.04,dashArray:'6 5',interactive:false}).addTo(map);
- layer=L.layerGroup().addTo(map);
+ layer=L.layerGroup().addTo(map);dwarfRenderer=L.canvas({padding:.5});
 }
 function renderMap(){
  if(!map)return;layer.clearLayers();
  const list=filtered();
- list.forEach(p=>{const m=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',html:'<div class="r-pin'+(favs.includes(p.id)?' saved':'')+'"><span>'+p.icon+'</span></div>',iconSize:[30,30],iconAnchor:[15,30]}),title:name(p)});
+ list.forEach(p=>{if(p.dwarf){const m=L.circleMarker([p.lat,p.lon],{renderer:dwarfRenderer,radius:7,color:visited.includes(p.id)?'#3f8e73':'#0b3446',fillColor:visited.includes(p.id)?'#3f8e73':'#ffb24a',fillOpacity:.95,weight:2}).addTo(layer);m.bindTooltip(esc(name(p)));m.on('click',()=>openDetail(p.id));return}const m=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',html:'<div class="r-pin'+(favs.includes(p.id)?' saved':'')+'"><span>'+p.icon+'</span></div>',iconSize:[30,30],iconAnchor:[15,30]}),title:name(p)});
   m.on('click',()=>openDetail(p.id));m.bindTooltip(name(p)+' · '+p.town,{direction:'top',offset:[0,-26]});layer.addLayer(m)});
  fit(list);
 }
@@ -115,6 +115,12 @@ function renderCityLinks(){
  const box=$('#cityLinks');
  box.innerHTML=(region.cities||[]).filter(c=>CITY[c]).map(c=>{const k=CITY[c];return '<a class="city-link" href="'+k.url+'?lang='+lang+'&from=region"><span>'+k.icon+'</span><div><b>'+esc(k[lang])+' — '+esc(t().cityGuide)+' ✦</b><small>'+esc(lang==='en'?k.en2:k.pl2)+' · '+esc(t().cityOpen)+' →</small></div></a>'}).join('');
 }
+function renderDwarfs(){
+ const box=$('#dwarfSection');if(!box)return;
+ box.hidden=region.id!=='dolnoslaskie';if(box.hidden)return;
+ const en=lang==='en',count=all.filter(p=>p.dwarf).length,snapshot=all.find(p=>p.dwarf)?.updated||'—';
+ box.innerHTML='<h2>🧙 '+(en?'Wrocław dwarf hunt':'Wrocław — szlakiem krasnali')+'</h2><p>'+(en?count+' locations from OpenStreetMap, snapshot: '+snapshot+'. Not a complete register. Collect stamps when you find the figures; you can undo them.':count+' lokalizacji z OpenStreetMap, stan na '+snapshot+'. To nie jest pełny rejestr. Zdobywaj pieczątki po znalezieniu figurek; możesz je odznaczyć.')+'</p><div class="chips"><button class="chip'+(state.dwarfs?' selected':'')+'" type="button" id="showDwarfs" aria-pressed="'+state.dwarfs+'">'+(en?'Show dwarfs on the map':'Pokaż krasnale na mapie')+'</button><button class="chip'+(state.hideFound?' selected':'')+'" type="button" id="hideFoundDwarfs" aria-pressed="'+state.hideFound+'">'+(en?'Hide collected dwarfs':'Ukryj znalezione krasnale')+'</button></div>'+IWH_EXTRAS.passport.dwarfsHTML(false)+'<p class="note"><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL</a> · <a href="./data/wroclaw-krasnale.json">'+(en?'Data and sources':'Dane i źródła')+'</a></p>';
+}
 function renderChips(){
  $('#townChips').innerHTML=['all',...towns].map(tn=>'<button type="button" class="chip'+(state.town===tn?' selected':'')+'" data-town="'+esc(tn)+'" aria-pressed="'+(state.town===tn)+'">'+(tn==='all'?'📍 '+esc(t().all):esc(tn)+' <small>'+all.filter(p=>p.town===tn).length+'</small>')+'</button>').join('');
  const used=Object.keys(CATS).filter(c=>all.some(p=>p.cats.includes(c)));
@@ -130,7 +136,7 @@ function card(p){
 function renderList(){
  const list=filtered();
  $('#placesCount').textContent=t().count(list.length)+(state.town!=='all'?' · '+state.town:'');
- $('#placeList').innerHTML=list.length?list.map(card).join(''):'<div class="empty">'+esc(t().empty)+'</div>';
+ $('#placeList').innerHTML=list.length?list.slice(0,state.shown).map(card).join('')+(list.length>state.shown?'<button class="btn secondary" type="button" id="morePlaces">'+(lang==='en'?'Show more places':'Pokaż kolejne miejsca')+'</button>':''):'<div class="empty">'+esc(t().empty)+'</div>';
  $('#savedBtn').setAttribute('aria-pressed',String(state.onlyFav));
 }
 function renderPlanStart(){
@@ -141,7 +147,7 @@ function renderPlanStart(){
 // Zachłanny plan: najbliższe ciekawe miejsce, dopóki mieści się w czasie. Wybór premiuje ocenę redakcyjną.
 function buildPlan(){
  const c0=townCenter(state.start);
- const cand=all.filter(p=>(state.mode!=='walking'||km(c0,p)<=6)&&(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id)));
+ const cand=all.filter(p=>(!p.dwarf||(state.dwarfs&&!p.restricted))&&(!state.hideFound||!p.dwarf||!visited.includes(p.id))&&(state.town==='all'||p.town===state.town)&&(state.mode!=='walking'||km(c0,p)<=6)&&(!state.cats.length||state.cats.some(c=>p.cats.includes(c)))&&(!state.onlyFav||favs.includes(p.id)));
  const limit=state.hours*60,[hh,mm]=state.clock.split(':').map(Number);let clock=hh*60+mm,used=0,at=townCenter(state.start),out=[];const left=new Set(cand.map(p=>p.id));
  while(left.size&&out.length<10){
   let best=null;
@@ -163,7 +169,7 @@ function renderPlan(){
   a.href='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o.lat.toFixed(5)+','+o.lon.toFixed(5))+'&destination='+encodeURIComponent(dest)+(pts.length?'&waypoints='+encodeURIComponent(pts.join('|')):'')+'&travelmode='+(state.mode==='transit'?'transit':state.mode==='walking'?'walking':'driving');
   a.removeAttribute('aria-disabled');a.textContent='🧭 Google Maps · '+fmtDur(used)}else{a.href='#';a.setAttribute('aria-disabled','true');a.textContent='🧭 Google Maps'}
 }
-function renderAll(){renderTexts();renderStats();renderCityLinks();renderChips();renderList();renderPlanStart();renderPlan();renderMap()}
+function renderAll(){renderTexts();renderDwarfs();renderStats();renderCityLinks();renderChips();renderList();renderPlanStart();renderPlan();renderMap()}
 
 // ---------- szczegóły
 let lastFocus=null;
@@ -175,7 +181,7 @@ function openDetail(id){
   (lang==='en'&&p.name.en!==p.name.pl?'<div class="subheading">'+esc(p.name.pl)+'</div>':'')+'<p>'+esc(desc(p))+'</p>'+'<div id="dHist"></div>'+(window.IWH_EXTRAS?IWH_EXTRAS.wikiHTML(p,lang):'')+'<div id="dRoutes"></div>'+
   '<div class="facts"><div><small>'+esc(x.time)+'</small><b>'+fmtDur(p.time)+'</b></div><div><small>'+esc(x.value)+'</small><b>'+p.visitValue+'/5</b> <small style="display:inline">('+esc(x.valueNote)+')</small></div></div>'+
   '<div class="actions"><button type="button" class="btn secondary" data-fav="'+id+'" aria-pressed="'+fav+'">'+esc(fav?x.unsave:x.save)+'</button><button type="button" class="btn '+(seen?'secondary':'accent')+'" data-stamp="'+id+'" aria-pressed="'+seen+'">'+esc(seen?x.unstamp:x.stamp)+'</button>'+
-  '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
+  '<a class="btn" href="'+dir+'" target="_blank" rel="noopener">'+esc(x.route)+'</a>'+(p.url?'<a class="btn secondary" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(p.dwarf?'OpenStreetMap':x.site)+'</a>':'<a class="btn secondary" href="'+search+'" target="_blank" rel="noopener">'+esc(x.google)+'</a>')+
   ('speechSynthesis' in window?'<button type="button" class="btn secondary" data-speak="'+id+'">'+esc(x.listen)+'</button>':'')+
   '<button type="button" class="btn secondary" data-addplan="day" data-id="'+id+'">'+esc(planLabel('day',id))+'</button><button type="button" class="btn secondary" data-addplan="trip" data-id="'+id+'">'+esc(planLabel('trip',id))+'</button>'+
   // 8.5: notatki i zdjęcia dopiero po zdobyciu pieczątki (jak w Warszawie)
@@ -209,18 +215,22 @@ function closeDetail(){$('#detail').classList.remove('show');document.body.style
 function toggle(listName,id){
  const list=listName==='fav'?favs:visited,next=list.includes(id)?list.filter(x=>x!==id):[...list,id];
  if(listName==='fav'){favs=next;writeStore('iwh_region_favs',favs)}else{visited=next;writeStore('iwh_region_visited',visited)}
- renderStats();renderList();renderMap();renderPlan();if($('#detail').classList.contains('show'))openDetail(id);
+ document.dispatchEvent(new CustomEvent('iwh-stamps-change'));if($('#detail').classList.contains('show'))openDetail(id);
 }
 
 // ---------- zdarzenia
 document.addEventListener('click',e=>{
+ if(e.target.closest('#morePlaces')){state.shown+=60;renderList();return}
+ if(e.target.closest('#showDwarfs')){state.dwarfs=!state.dwarfs;state.shown=60;if(state.dwarfs){state.town='Wrocław';state.start='Wrocław';state.mode='walking'}else state.cats=state.cats.filter(c=>c!=='dwarfs');renderAll();return}
+ if(e.target.closest('#hideFoundDwarfs')){state.hideFound=!state.hideFound;renderAll();return}
+
  const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return}
  const f=e.target.closest('[data-fav]');if(f){toggle('fav',f.dataset.fav);return}
  const s=e.target.closest('[data-stamp]');if(s){toggle('stamp',s.dataset.stamp);return}
  const ap=e.target.closest('[data-addplan]');if(ap){addToPlan(ap.dataset.addplan,ap.dataset.id);ap.textContent=planLabel(ap.dataset.addplan,ap.dataset.id);return}
  const sp=e.target.closest('[data-speak]');if(sp&&window.speechSynthesis){const p=all.find(x=>x.id===sp.dataset.speak);speechSynthesis.cancel();const hi=historyOf(p);const u=new SpeechSynthesisUtterance(name(p)+'. '+desc(p)+(hi?' '+(hi[lang]||hi.pl).join(' '):''));u.lang=lang==='en'?'en-GB':'pl-PL';u.rate=.95;speechSynthesis.speak(u);return}
  const tn=e.target.closest('[data-town]');if(tn){state.town=tn.dataset.town;if(state.town!=='all')state.start=state.town;renderChips();renderList();renderPlanStart();renderPlan();renderMap();return}
- const c=e.target.closest('[data-cat]');if(c){const k=c.dataset.cat;state.cats=state.cats.includes(k)?state.cats.filter(x=>x!==k):[...state.cats,k];renderChips();renderList();renderPlan();renderMap();return}
+ const c=e.target.closest('[data-cat]');if(c){const k=c.dataset.cat;if(k==='dwarfs')state.dwarfs=true;state.shown=60;state.cats=state.cats.includes(k)?state.cats.filter(x=>x!==k):[...state.cats,k];renderDwarfs();renderChips();renderList();renderPlan();renderMap();return}
  const j=e.target.closest('[data-jump]');if(j){document.getElementById(j.dataset.jump).scrollIntoView({behavior:'smooth',block:'start'});$$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b===j));if(j.dataset.jump==='mapSection'&&map)setTimeout(()=>map.invalidateSize(),350)}
 });
 $('#detail').addEventListener('click',e=>{if(e.target.id==='detail')closeDetail()});
@@ -228,14 +238,14 @@ $('#dClose').onclick=closeDetail;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#detail').classList.contains('show'))closeDetail()});
 $('#savedBtn').onclick=()=>{state.onlyFav=!state.onlyFav;renderList();renderPlan();renderMap()};
 $('#fitMap').onclick=()=>fit(filtered());
-$('#rSearch').oninput=e=>{state.search=e.target.value.trim();renderList();renderMap()};
+$('#rSearch').oninput=e=>{state.search=e.target.value.trim();state.shown=60;renderList();renderMap()};
 $('#planStart').onchange=e=>{state.start=e.target.value;renderPlan()};
 $('#planClock').onchange=e=>{state.clock=e.target.value||'10:00';renderPlan()};
 $('#planHours').oninput=e=>{state.hours=+e.target.value;renderPlan()};
 $('#planMode').onclick=e=>{const b=e.target.closest('[data-mode]');if(b){state.mode=b.dataset.mode;renderPlan()}};
 $('#langRegion').onclick=e=>{const pick=e.target.closest('[data-lang]')?.dataset.lang;const next=pick||(lang==='pl'?'en':'pl');if(next===lang&&pick)return;lang=next;try{localStorage.setItem('tubylem_lang',lang)}catch(_){}renderAll()};
-document.addEventListener('iwh-stamps-change',()=>{visited=readStore('iwh_region_visited',[]);renderStats();renderList();renderMap();renderPlan()});
-window.addEventListener('storage',e=>{if(e.key==='tubylem_lang'&&(e.newValue==='pl'||e.newValue==='en')&&e.newValue!==lang){lang=e.newValue;renderAll()}});
+document.addEventListener('iwh-stamps-change',()=>{visited=readStore('iwh_region_visited',[]);renderDwarfs();renderStats();renderList();renderMap();renderPlan()});
+window.addEventListener('storage',e=>{if(e.key==='iwh_region_visited'){visited=readStore('iwh_region_visited',[]);renderAll()}if(e.key==='tubylem_lang'&&(e.newValue==='pl'||e.newValue==='en')&&e.newValue!==lang){lang=e.newValue;renderAll()}});
 
 // ---------- start
 try{localStorage.setItem('tubylem_lang',lang)}catch(_){}

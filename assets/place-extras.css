@@ -104,3 +104,6 @@ html.ij-open,html.ij-open body{overflow:hidden}
 .pp-note{flex:none;width:36px;height:36px;border:1px solid #d6dfdc;border-radius:12px;background:#fff;font-size:16px;cursor:pointer}
 .pp-note:focus-visible{outline:3px solid #F47C28;outline-offset:2px}
 .pp-stamp-act{display:flex;gap:6px;align-items:center;justify-content:center}
+
+/* Wrocław collection: the same perforated stamp motif as the city collection. */
+.dwarf-collection{margin:20px 0;color:inherit}.dwarf-badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:12px;margin:16px 0}.dwarf-badge{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;padding:16px 8px;border:3px dotted #8d9287;background:#f6f1e4;color:#52616a;border-radius:6px;opacity:.7}.dwarf-badge span{font-size:30px}.dwarf-badge.earned{border-color:#b87429;color:#0b3446;background:#ffedbc;opacity:1}.dwarf-badge small{font-variant-numeric:tabular-nums}#dwarfSection[hidden]{display:none}#dwarfSection>p{line-height:1.6}
