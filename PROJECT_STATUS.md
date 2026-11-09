@@ -1,6 +1,6 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-## 8.8.0 — Wrocław: krasnale (2026-11-09, gałąź do przeglądu)
+## 8.8.0 — Wrocław: krasnale (2026-11-09, PR #23, przygotowano do scalenia po zgodzie właściciela)
 
 - 769 lokalizacji OSM z miejskiej mapy `https://mobile.wroclaw.pl/krasnale.geojson`, stan danych 2026-08-11, pobrano 2026-11-09. Licencja ODbL; to nie jest pełny ani zweryfikowany na miejscu rejestr.
 - Osobny katalog `data/wroclaw-krasnale.json`, dołączany przez `tools/sync_database.py` do plików regionu, lekkiej bazy Atlasu i indeksu. 213 dotychczasowych atrakcji z długimi historiami pozostaje oddzielną redakcyjną kolekcją; krasnale mają krótkie opisy PL/EN oparte wyłącznie na tagach OSM, z autorem/datą, gdy dostępne, i ostrzeżeniami o dostępie. Razem 982 punkty regionalne.
@@ -12,8 +12,14 @@
 - Nie wdrożono jeszcze pełnego przewodnika miejskiego Wrocławia na wzór Warszawy ani dodatkowych zwykłych atrakcji — ten PR obejmuje zamówioną kolekcję krasnali.
 
 
-**Stan na:** 2026-11-08 · **Wersja:** 8.7.0 (`main`, scalone PR #22 „Scal #22: 8.7.0 — Moje dane w Excelu…”)
-**Cache PWA:** `i-was-here-v8-7-0-20261108` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
+## 8.7.1 — 2026-11-09 — linki do Atlasu (PR #24, scalone)
+- Na polecenie właściciela mała mapka Polski jest pierwszym elementem nagłówka, skrajnie po lewej; logo stoi obok niej. Oba są linkami do całej mapy Atlasu, z zachowaniem języka. W samym Atlasie oba zamykają zakładki i wracają do widoku całej Polski bez przeładowania.
+- Na wąskich ekranach nazwa przy logo przewodnika jest ukryta, aby mapka, logo i przyciski nie zachodziły na siebie. Logo pozostaje dostępne z klawiatury i ma etykietę PL/EN.
+- Testy: synchronizacja bazy, test_bundle.py, test_atlas.py, kontrola składni i pełny test_browser.js przeszły w Chromium (emulacja iPhone 13). Sprawdzono kliknięcie logo z zakładki Pieczątek oraz mapkę po lewej w Warszawie.
+- Cache: `i-was-here-v8-7-1-20261109`. Poprawka oparta na main 8.7.0; niezależna od oczekującego PR #23 z krasnalami. Nie testowano na fizycznym iPhonie.
+
+**Stan na:** 2026-11-09 · **Wersja:** 8.8.0 (PR #23 — krasnale, zawiera opublikowany nagłówek z PR #24)
+**Cache PWA:** `i-was-here-v8-8-0-20261109` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.

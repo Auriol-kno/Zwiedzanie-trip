@@ -117,3 +117,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Dodać rzeczywiste lokalizacje, opisy i pieczątki związane ze zbieraniem krasnali do istniejącej mapy.
 - Krótkie opisy katalogowe na podstawie OSM są odrębne od długich historii 213 redakcyjnych atrakcji; nie dopisujemy zmyślonych historii figurek.
 - Znalezienie potwierdza użytkownik ręcznie, tak jak inne pieczątki. Brak automatycznego śledzenia GPS. Postęp jest lokalny, odwracalny i uwzględniany w kopiach danych.
+
+## 13. Aktualizacja nagłówka — 2026-11-09 (nowsza decyzja właściciela)
+- Mała mapka ma być maksymalnie po lewej, przed logo. Logo obok mapki również odsyła do głównej mapy Atlasu. Ta decyzja zastępuje starsze zapisy o logo bez linku i mapce pośrodku nagłówka.
+- Oba linki zachowują język; w Atlasie wracają do widoku całej Polski.

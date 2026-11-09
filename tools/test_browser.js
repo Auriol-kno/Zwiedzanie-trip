@@ -115,6 +115,7 @@ function check(ok, message) {
     toggles: document.querySelectorAll('#langWarsaw, #tbLanguage').length,
     legacyMap: !!document.querySelector('#polandHome'),
     home: document.querySelector('#atlasFloat')?.getAttribute('href'),
+    logo: document.querySelector('#atlasLogo')?.getAttribute('href'),
     // Szablon „offers a worthwhile stop” albo mechanicznie zmieniona nazwa bez redakcyjnego przekładu.
     generic: window.WARSAW_DB.attractions.filter(p => /offers a worthwhile stop/.test(p.desc) ||
       (/not available yet/.test(p.desc) && p.name !== p.__originalI18n.name && !/Sigismund|Kościuszko/.test(p.name))).length,
@@ -124,7 +125,7 @@ function check(ok, message) {
   check(w.lang === 'en' && w.hero.startsWith('Your city'), 'Warszawa: wejście z Atlasu EN otwiera wersję angielską');
   check(w.toggles === 1, 'Warszawa: dokładnie jeden przełącznik języka');
   check(!w.legacyMap, 'Warszawa: brak zdublowanej mapy Polski');
-  check(w.home === './atlas.html?lang=en', 'Warszawa: logo z mapą wraca do Atlasu w tym samym języku');
+  check(w.home === './atlas.html?lang=en' && w.logo === w.home, 'Warszawa: logo z mapą wraca do Atlasu w tym samym języku');
   check(w.generic === 0, 'Warszawa EN: brak szablonowych opisów i błędnie odmienionych nazw (' + w.honest + ' miejsc czeka na przekład)');
   check(w.overflow === 0, 'Warszawa: brak poziomego przewijania na iPhonie');
 
@@ -133,7 +134,7 @@ function check(ok, message) {
   check(await page.evaluate(() => {
     const c = document.querySelector('#atlasFloat').getBoundingClientRect();
     const b = document.querySelector('.brand').getBoundingClientRect(), a = document.querySelector('.top-actions').getBoundingClientRect();
-    return c.top >= 0 && c.top < 60 && Math.abs((c.top + c.bottom) / 2 - (b.top + b.bottom) / 2) < 6 && c.left > b.right && c.right < a.left && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+    return c.top >= 0 && c.top < 60 && Math.abs((c.top + c.bottom) / 2 - (b.top + b.bottom) / 2) < 6 && c.right <= b.left && b.right <= a.left && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
   }), 'Warszawa: mapka Polski w jednej linii z logo, widoczna i klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
@@ -318,7 +319,7 @@ function check(ok, message) {
   await page.waitForSelector('#tabPanel [data-pp-list] .pp-row');
   check(await page.evaluate(() => document.querySelectorAll('#tabPanel [data-pp-list] .pp-row').length === 1 && /5 photos/.test(document.querySelector('#tabPanel [data-pp-list]').textContent)
     && !!document.querySelector('#tabPanel [data-pp-list] .pp-thumb img')), 'Atlas → Pieczątki: dziennik podróży z miniaturą i licznikiem zdjęć');
-  await page.click('#atlasFloat');
+  await page.click('#atlasLogo');
   await page.waitForTimeout(700);
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
   check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && !!document.querySelector('.atlas-top #atlasFloat')), 'Atlas: logo z pinezką, mapka Polski w jednej linii z logo');
