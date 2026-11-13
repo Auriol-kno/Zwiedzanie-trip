@@ -1,5 +1,11 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.10.2 — Duże przyciski krasnali (2026-11-13, PR do scalenia po „Scal”)
+
+- Sekcja „Wrocław — szlakiem krasnali”: przyciski „Pokaż / Schowaj krasnale na mapie” i „Ukryj / Pokaż znalezione krasnale” zamiast małych pigułek (11 px) są dużymi przyciskami (min. 56 px, 16 px tekst, ikona, pełna szerokość na telefonie, dwie kolumny od 560 px). Włączony stan jest błękitny z granatową ramką, a etykieta zmienia się na przeciwną akcję (np. „Schowaj krasnale z mapy”). Identyfikatory `#showDwarfs` i `#hideFoundDwarfs` bez zmian.
+- Cache: `i-was-here-v8-10-2-20261113`; `APP_VERSION` kopii JSON 8.10.2. Sprawdzone w Chromium iPhone 13; nie testowane na prawdziwym iPhonie.
+- Zebrano listę ok. 336 atrakcji w 17 miastach wojewódzkich (bez Warszawy) jako materiał do importu (dokument w claude.ai, bez współrzędnych). Import wymaga weryfikacji współrzędnych w OSM i historii ≥10 zdań; nie jest częścią tej wersji.
+
 ## 8.10.1 — Styl Noc: czytelne napisy (2026-11-13, PR do scalenia po „Scal”)
 
 - Naprawiony stary błąd stylu **Noc** (z wersji sprzed 8.9.0): etykiety miast były czarnymi plamami, a „I WAS HERE” granatowe na granatowym. Przyczyny: w stylu Noc zmienna `--cream` to ciemne tło `#0e1533`, z którego brały kolor napisy, oraz reguła obrysu 5 px (wyższa specyficzność niż pigułka etykiety) przykrywająca tekst.

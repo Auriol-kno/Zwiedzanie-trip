@@ -8,7 +8,7 @@
  * Bez zewnętrznych bibliotek: własny zapis/odczyt ZIP (deflate przez DecompressionStream) i XML arkusza. */
 (function(){
 'use strict';
-const FORMAT='iwh-backup',FORMAT_VERSION=1,APP_VERSION='8.10.1';
+const FORMAT='iwh-backup',FORMAT_VERSION=1,APP_VERSION='8.10.2';
 const read=(k,f)=>{try{const v=JSON.parse(localStorage.getItem(k)||'null');return v==null?f:v}catch(e){return f}};
 const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
