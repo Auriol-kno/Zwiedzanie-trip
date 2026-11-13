@@ -7576,6 +7576,448 @@
    "coordinateStatus": "orientacyjne",
    "sourceKind": "redakcyjna_selekcja",
    "updated": "2026-11"
+  },
+  {
+   "id": "wr-aula-leopoldina",
+   "region": "dolnoslaskie",
+   "town": "Wrocław",
+   "name": {
+    "pl": "Aula Leopoldina",
+    "en": "Leopoldina Hall"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 40,
+   "visitValue": 5,
+   "lat": 51.11388,
+   "lon": 17.03466,
+   "icon": "🎓",
+   "url": null,
+   "desc": {
+    "pl": "Barokowa sala uniwersytecka z freskami i bogatą dekoracją rzeźbiarską.",
+    "en": "A Baroque university hall with frescoes and rich sculptural decoration."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "wr-ogrod-japonski",
+   "region": "dolnoslaskie",
+   "town": "Wrocław",
+   "name": {
+    "pl": "Ogród Japoński",
+    "en": "Japanese Garden"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 51.10735,
+   "lon": 17.07632,
+   "icon": "🌸",
+   "url": null,
+   "desc": {
+    "pl": "Ogród założony w 1913 roku przy Hali Stulecia z mostkami, stawami i japońską roślinnością.",
+    "en": "A garden founded in 1913 next to the Centennial Hall with bridges, ponds and Japanese plants."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "wr-ogrod-botaniczny",
+   "region": "dolnoslaskie",
+   "town": "Wrocław",
+   "name": {
+    "pl": "Ogród Botaniczny Uniwersytetu Wrocławskiego",
+    "en": "Botanical Garden of the University of Wrocław"
+   },
+   "cats": [
+    "park",
+    "science"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 51.11655,
+   "lon": 17.04571,
+   "icon": "🌿",
+   "url": null,
+   "desc": {
+    "pl": "Jeden z najstarszych ogrodów botanicznych w Polsce, założony w 1811 roku na Ostrowie Tumskim.",
+    "en": "One of the oldest botanical gardens in Poland, founded in 1811 on Ostrów Tumski."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lo-kinematografii",
+   "region": "lodzkie",
+   "town": "Łódź",
+   "name": {
+    "pl": "Muzeum Kinematografii",
+    "en": "Cinematography Museum"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 51.77062,
+   "lon": 19.45792,
+   "icon": "🎬",
+   "url": null,
+   "desc": {
+    "pl": "Muzeum w pałacu Scheiblera poświęcone historii kina i łódzkiej szkole filmowej.",
+    "en": "A museum in the Scheibler Palace devoted to the history of cinema and the Łódź film school."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lo-palmiarnia",
+   "region": "lodzkie",
+   "town": "Łódź",
+   "name": {
+    "pl": "Park Źródliska i Palmiarnia",
+    "en": "Źródliska Park and Palm House"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 51.75905,
+   "lon": 19.42447,
+   "icon": "🌴",
+   "url": null,
+   "desc": {
+    "pl": "Park z początku XX wieku i palmiarnia z roślinami z różnych stref klimatycznych.",
+    "en": "A park from the early twentieth century and a palm house with plants from various climate zones."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lo-biala-fabryka",
+   "region": "lodzkie",
+   "town": "Łódź",
+   "name": {
+    "pl": "Centralne Muzeum Włókiennictwa — Biała Fabryka",
+    "en": "Central Museum of Textiles — White Factory"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 51.76397,
+   "lon": 19.45652,
+   "icon": "🧵",
+   "url": null,
+   "desc": {
+    "pl": "Muzeum w dawnej fabryce Ludwika Geyera z kolekcją maszyn włókienniczych i wystawami.",
+    "en": "A museum in the former factory of Ludwik Geyer with a collection of textile machines and exhibitions."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lu-katedra",
+   "region": "lubelskie",
+   "town": "Lublin",
+   "name": {
+    "pl": "Archikatedra i Wieża Trynitarska",
+    "en": "Archcathedral and Trinitarian Tower"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 5,
+   "lat": 51.24792,
+   "lon": 22.56809,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Barokowa archikatedra z przyległą Wieżą Trynitarską, z której widać panoramę miasta.",
+    "en": "A Baroque archcathedral with the adjoining Trinitarian Tower offering a city panorama."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lu-trybunal",
+   "region": "lubelskie",
+   "town": "Lublin",
+   "name": {
+    "pl": "Trybunał Koronny i Rynek",
+    "en": "Crown Tribunal and Market Square"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 51.24671,
+   "lon": 22.56795,
+   "icon": "⚖️",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowy ratusz na Rynku, dawna siedziba najwyższego sądu Małopolski.",
+    "en": "The Renaissance town hall on the Market Square, once seat of the highest court of Lesser Poland."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lu-muzeum-wsi",
+   "region": "lubelskie",
+   "town": "Lublin",
+   "name": {
+    "pl": "Muzeum Wsi Lubelskiej",
+    "en": "Open-air Museum of the Lublin Countryside"
+   },
+   "cats": [
+    "museum",
+    "family"
+   ],
+   "time": 120,
+   "visitValue": 4,
+   "lat": 51.2255,
+   "lon": 22.5105,
+   "icon": "🏡",
+   "url": null,
+   "desc": {
+    "pl": "Skansen z zabudową wsi, dworem i wiatrakami, w którym pokazuje się dawne rzemiosło.",
+    "en": "An open-air museum with village buildings, a manor and windmills, showing old crafts."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ka-katedra-chrystusa-krola",
+   "region": "slaskie",
+   "town": "Katowice",
+   "name": {
+    "pl": "Katedra Chrystusa Króla",
+    "en": "Christ the King Cathedral"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.25224,
+   "lon": 19.02103,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Największa katedra w Polsce, zbudowana w latach 1927–1955 w stylu modernistycznym.",
+    "en": "The largest cathedral in Poland, built in 1927–1955 in a modernist style."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ka-giszowiec",
+   "region": "slaskie",
+   "town": "Katowice",
+   "name": {
+    "pl": "Giszowiec",
+    "en": "Giszowiec"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.22402,
+   "lon": 19.08474,
+   "icon": "🏘️",
+   "url": null,
+   "desc": {
+    "pl": "Historyczne osiedle górnicze z początku XX wieku, zaprojektowane jako miasto-ogród.",
+    "en": "A historic miners' estate from the early twentieth century, designed as a garden city."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ka-szyb-wilson",
+   "region": "slaskie",
+   "town": "Katowice",
+   "name": {
+    "pl": "Szyb Wilson",
+    "en": "Wilson Shaft"
+   },
+   "cats": [
+    "history",
+    "hidden"
+   ],
+   "time": 45,
+   "visitValue": 3,
+   "lat": 50.24432,
+   "lon": 19.08935,
+   "icon": "⛏️",
+   "url": null,
+   "desc": {
+    "pl": "Zabytkowy szyb kopalni „Giesche” w Janowie, element dawnego krajobrazu przemysłowego.",
+    "en": "A historic shaft of the \"Giesche\" mine in Janów, part of the former industrial landscape."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "sz-katedra",
+   "region": "zachodniopomorskie",
+   "town": "Szczecin",
+   "name": {
+    "pl": "Bazylika Archikatedralna św. Jakuba",
+    "en": "St. James's Archcathedral Basilica"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 53.42396,
+   "lon": 14.55324,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka bazylika z XIV wieku, odbudowana po wojnie, z wysoką wieżą widokową.",
+    "en": "A Gothic basilica from the fourteenth century, rebuilt after the war, with a tall viewing tower."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "sz-brama-portowa",
+   "region": "zachodniopomorskie",
+   "town": "Szczecin",
+   "name": {
+    "pl": "Brama Portowa",
+    "en": "Harbour Gate"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 20,
+   "visitValue": 3,
+   "lat": 53.42654,
+   "lon": 14.56254,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Barokowa brama miejska z XVIII wieku, ozdobiona rzeźbami i herbami.",
+    "en": "A Baroque city gate from the eighteenth century, decorated with sculptures and coats of arms."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "to-ratusz",
+   "region": "kujawsko-pomorskie",
+   "town": "Toruń",
+   "name": {
+    "pl": "Ratusz Staromiejski",
+    "en": "Old Town Hall"
+   },
+   "cats": [
+    "history",
+    "museum"
+   ],
+   "time": 60,
+   "visitValue": 5,
+   "lat": 53.01058,
+   "lon": 18.60458,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Gotycki ratusz z wieżą widokową i Muzeum Okręgowym w środku Rynku Staromiejskiego.",
+    "en": "A Gothic town hall with a viewing tower and the Regional Museum in the middle of the Old Town Market Square."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "to-katedra",
+   "region": "kujawsko-pomorskie",
+   "town": "Toruń",
+   "name": {
+    "pl": "Katedra św. Janów",
+    "en": "Cathedral of SS. John"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 53.00958,
+   "lon": 18.60623,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka katedra z dzwonem Tuba Dei i chrzcielnicą, w której ochrzczono Kopernika.",
+    "en": "A Gothic cathedral with the Tuba Dei bell and the font in which Copernicus is said to have been baptised."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "to-zamek",
+   "region": "kujawsko-pomorskie",
+   "town": "Toruń",
+   "name": {
+    "pl": "Ruiny Zamku Krzyżackiego",
+    "en": "Ruins of the Teutonic Castle"
+   },
+   "cats": [
+    "history",
+    "hidden"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 53.00828,
+   "lon": 18.60737,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Ruiny dawnej krzyżackiej warowni z gdańskiem i fragmentami murów, zniszczonej w 1454 roku.",
+    "en": "Ruins of the former Teutonic stronghold with a latrine tower and fragments of walls, destroyed in 1454."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
   }
  ],
  "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",

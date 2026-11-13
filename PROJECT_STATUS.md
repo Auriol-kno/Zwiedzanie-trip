@@ -1,5 +1,9 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.13.0 — Atrakcje miast, partia 2 (2026-11-13)
+- Dodano 17 atrakcji w 6 miastach (razem 244 historie redakcyjne). Współrzędne orientacyjne.
+- **Następne zadanie:** partia 3 (Białystok, Rzeszów, Olsztyn, Kielce, Opole, Zielona Góra/Gorzów, Bydgoszcz, Gdynia/Sopot) oraz weryfikacja współrzędnych i Wikipedii; kolekcje tematyczne (murale).
+
 ## 8.12.0 — Atrakcje miast, partia 1 (2026-11-13)
 - Dodano 14 atrakcji w Gdańsku, Krakowie i Poznaniu z historiami ≥10 zdań PL/EN (razem 227 historii redakcyjnych). Współrzędne orientacyjne, do weryfikacji w OSM.
 - **Następne zadanie:** partia 2 (Wrocław poza krasnalami, Łódź, Lublin, Katowice, Szczecin, Toruń…) z tą samą jakością opisów; weryfikacja współrzędnych i Wikipedii tam, gdzie jest sieć.
