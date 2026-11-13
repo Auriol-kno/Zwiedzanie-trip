@@ -77,7 +77,7 @@ const API={
  // 8.6: Odkrywaj = szlaki tematyczne (assets/explore-themes.js). Wyszukiwarka miast zostaje pod ⌕ w nagłówku mapy.
  open(name){if(name==='explore'&&!window.IWH_EXPLORE){API.open('map');if(!document.getElementById('searchBox')?.classList.contains('open'))document.getElementById('searchButton')?.click();return}
   if(name==='explore'&&tab==='explore')window.IWH_EXPLORE.reset();
-  tab=name;document.querySelectorAll('.tabbar [data-tab]').forEach(b=>{const on=b.dataset.tab===name;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+  tab=name;document.querySelectorAll('.tabbar [data-tab]').forEach(b=>{const on=b.dataset.tab===(name==='passport'?'profile':name);b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
   document.body.dataset.tab=name;render();if(name!=='map'&&name!=='explore')$('#tabPanel').querySelector('h2')?.focus()},
  close(){if(tab!=='map')API.open('map')},
  // Nowy plan podróży lub dnia z gotową listą pozycji (np. szlak z Odkrywaj). Zwraca plan albo null przy błędzie zapisu.

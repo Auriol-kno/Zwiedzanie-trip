@@ -1,5 +1,13 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.11.0 — Pływająca mapa Polski w dolnym menu (2026-11-13, scalenie po „Scal”)
+
+- Decyzja właściciela: mapa Polski (`#atlasFloat.poland-fab`) przeniesiona z nagłówka do **środka dolnego menu**, w miejsce dawnych Planów. Jest większa od ikon menu (76 px, 66 px na ≤360 px) i wystaje ok. 50 % nad menu (żółta obwódka, cień). Zawsze prowadzi do całej mapy Polski; w Atlasie wywołuje `home()` bez przeładowania.
+- Menu: **Mapa · Odkrywaj · [mapa Polski] · Plany · Profil**. Pieczątki wyszły z menu i otwierają się z Profilu (karta „Pieczątki”, `?tab=passport` nadal działa; w menu świeci wtedy Profil).
+- Zmienione: `atlas.html`, `index.html`, `region.html` (FAB w `<nav id="appNav">`), `assets/app-nav.js` (`ORDER`), `assets/app-nav.css`, `assets/atlas-plans.js`; testy `tools/test_atlas.py`, `tools/test_browser.js`.
+- Cache `i-was-here-v8-11-0-20261113`, `APP_VERSION` 8.11.0. Sprawdzone w Chromium iPhone 13; nie testowane na prawdziwym iPhonie.
+- Nadal do zrobienia: import atrakcji miast wojewódzkich z obszernymi opisami (≥10 zdań PL i EN).
+
 ## 8.10.2 — Duże przyciski krasnali (2026-11-13, PR do scalenia po „Scal”)
 
 - Sekcja „Wrocław — szlakiem krasnali”: przyciski „Pokaż / Schowaj krasnale na mapie” i „Ukryj / Pokaż znalezione krasnale” zamiast małych pigułek (11 px) są dużymi przyciskami (min. 56 px, 16 px tekst, ikona, pełna szerokość na telefonie, dwie kolumny od 560 px). Włączony stan jest błękitny z granatową ramką, a etykieta zmienia się na przeciwną akcję (np. „Schowaj krasnale z mapy”). Identyfikatory `#showDwarfs` i `#hideFoundDwarfs` bez zmian.

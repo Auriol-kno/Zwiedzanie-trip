@@ -1,5 +1,5 @@
 /* I Was Here 8.4 — jedno dolne menu na każdym etapie: Atlas, przewodnik regionu i przewodnik Warszawy.
- * Zawsze te same pozycje w tej samej kolejności: Mapa · Odkrywaj · Plany · Paszport · Profil.
+ * Zawsze te same pozycje w tej samej kolejności: Mapa · Odkrywaj · [pływająca mapa Polski] · Plany · Profil (8.11: Pieczątki są w Profilu).
  *  - Atlas (data-page="atlas"): zakładki obsługuje assets/atlas-plans.js (data-tab).
  *  - Region / Warszawa: Mapa → Atlas (to samo województwo), Odkrywaj → lista atrakcji, Plany → plan dnia,
  *    Paszport → Paszport odkrywcy (place-extras.js), Profil → profil w Atlasie.
@@ -16,9 +16,12 @@ const I={
  profile:'<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/>'
 };
 const L={map:['Mapa','Map'],explore:['Odkrywaj','Explore'],plans:['Plany','Plans'],passport:['Pieczątki','Stamps'],profile:['Profil','Profile']};
-const ORDER=['map','explore','plans','passport','profile'];
+const ORDER=['map','explore','plans','profile'];
 nav.setAttribute('aria-label','Menu');
-nav.innerHTML=ORDER.map(k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>').join('');
+const btn=k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>';
+// Pływająca mapa Polski (#atlasFloat) jest w HTML w środku menu; przyciski wstawiamy po obu jej stronach.
+const fab=nav.querySelector('#atlasFloat'),first=ORDER.slice(0,2).map(btn).join(''),last=ORDER.slice(2).map(btn).join('');
+if(fab){fab.insertAdjacentHTML('beforebegin',first);fab.insertAdjacentHTML('afterend',last)}else nav.innerHTML=first+last;
 const logo=document.getElementById('atlasLogo');
 function logoLink(){if(!logo)return;const en=document.documentElement.lang==='en';logo.href='./atlas.html?lang='+(en?'en':'pl');logo.setAttribute('aria-label','I Was Here — '+(en?'Show the whole Atlas map':'Pokaż główną mapę Atlasu'))}
 logoLink();new MutationObserver(logoLink).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
@@ -33,7 +36,6 @@ nav.addEventListener('click',e=>{
  const b=e.target.closest('[data-tab]');if(!b)return;const k=b.dataset.tab;
  if(k==='map'){location.href='./atlas.html?lang='+lang()+(region?'&region='+encodeURIComponent(region):'');return}
  if(k==='profile'){location.href='./atlas.html?lang='+lang()+'&tab=profile';return}
- if(k==='passport'){if(window.IWH_EXTRAS)IWH_EXTRAS.passport.open();return}
  const el=document.getElementById(TARGET[k]);if(el){el.scrollIntoView({behavior:'smooth',block:'start'});mark(k)}
 });
 window.IWH_NAV={mark};

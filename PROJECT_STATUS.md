@@ -1,5 +1,10 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.11.0 — Mapa Polski w dolnym menu (2026-11-13)
+- Pływająca mapa Polski jest w środku dolnego menu (większa, wystaje ok. 50 %); Pieczątki przeniesione do Profilu. Szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §14.
+- **Następne zadanie:** import atrakcji miast wojewódzkich z obszernymi opisami (≥10 zdań PL/EN, źródła, współrzędne OSM) partiami, np. Gdańsk, Kraków, Poznań. Lista ok. 336 pozycji w dokumencie claude.ai.
+- Do sprawdzenia przez właściciela: wygląd i dotyk menu na prawdziwym iPhonie (safe area, wystająca mapa).
+
 ## 8.10.0 — Mapa „Pergamin” (2026-11-13, PR czeka na „Scal”)
 - Styl Atlas ma ciepłą mapę (krem, turkus, terakota, zielone lasy, pomarańczowe pinezki); szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3. Relief `poland-relief.webp` przekolorowany (przy ponownym generowaniu `build_geography.py` trzeba go przekolorować tak samo: niziny hue 43° s .26 v .99, góry hue 14° s .68 v .88).
 - **Następne zadanie (propozycja):** import atrakcji miast wojewódzkich (lista ok. 336 pozycji z 17 miast, zebrana 2026-11-13; do zrobienia: weryfikacja współrzędnych `verify_coordinates.py`, opisy PL/EN, historie ≥10 zdań, pieczątki). Kolekcje tematyczne jak krasnale: murale w Łodzi, Rzeszowie i Białymstoku.
