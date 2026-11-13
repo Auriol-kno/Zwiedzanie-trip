@@ -9,7 +9,7 @@
   {
    "id": "wojewodztwa",
    "art": "region",
-   "color": "#2B5D74",
+   "color": "#294876",
    "pl": {
     "name": "Plany województw",
     "tagline": "Najciekawsze miejsca każdego regionu",
@@ -39,7 +39,7 @@
   {
    "id": "zamki",
    "art": "castle",
-   "color": "#6A4E36",
+   "color": "#36496A",
    "pl": {
     "name": "Zamki i rycerze",
     "tagline": "Orle Gniazda, krzyżackie twierdze, ruiny",
@@ -54,7 +54,7 @@
   {
    "id": "legendy",
    "art": "dragon",
-   "color": "#2C6A8C",
+   "color": "#2A4E8E",
    "pl": {
     "name": "Baśnie i legendy",
     "tagline": "Smok, hejnał, koziołki i pierścień Kingi",
@@ -84,7 +84,7 @@
   {
    "id": "ww2",
    "art": "candle",
-   "color": "#3F4B3E",
+   "color": "#3E434B",
    "pl": {
     "name": "II wojna światowa i pamięć",
     "tagline": "Wrzesień 1939, bunkry, miejsca pamięci",
@@ -99,7 +99,7 @@
   {
    "id": "nauka",
    "art": "orbit",
-   "color": "#1F4F7B",
+   "color": "#1D347D",
    "pl": {
     "name": "Nauka i Kopernik",
     "tagline": "Astronomia, eksperymenty, zegary",
@@ -114,7 +114,7 @@
   {
    "id": "technika",
    "art": "gear",
-   "color": "#7A5B22",
+   "color": "#7A6722",
    "pl": {
     "name": "Technika i przemysł",
     "tagline": "Kopalnie, kanały, ropa i para",
@@ -144,7 +144,7 @@
   {
    "id": "przyroda",
    "art": "bison",
-   "color": "#2F6A3E",
+   "color": "#2C4F6D",
    "pl": {
     "name": "Dzika przyroda",
     "tagline": "Żubry, bagna, góry i parki narodowe",
@@ -159,7 +159,7 @@
   {
    "id": "kultury",
    "art": "domes",
-   "color": "#8A5326",
+   "color": "#8A2656",
    "pl": {
     "name": "Wiele kultur i wyznań",
     "tagline": "Tatarzy, prawosławie, synagogi",
@@ -174,7 +174,7 @@
   {
    "id": "unesco",
    "art": "globe",
-   "color": "#1E5F74",
+   "color": "#1D4A7C",
    "pl": {
     "name": "Skarby UNESCO",
     "tagline": "Światowe dziedzictwo w Polsce",
@@ -204,7 +204,7 @@
   {
    "id": "morze",
    "art": "lighthouse",
-   "color": "#1C5D8C",
+   "color": "#193C8F",
    "pl": {
     "name": "Morze i latarnie",
     "tagline": "Wydmy, mola, klify i latarnie",
@@ -219,7 +219,7 @@
   {
    "id": "dzieci",
    "art": "dino",
-   "color": "#4F7A2A",
+   "color": "#2A7A6F",
    "pl": {
     "name": "Dinozaury i rodzinne przygody",
     "tagline": "Parki jurajskie, pierniki, zabawki",

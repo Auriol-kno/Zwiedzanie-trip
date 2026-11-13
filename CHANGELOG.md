@@ -1,5 +1,13 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.9.0 — Motyw „kulki na torze” (2026-11-13, PR do scalenia po „Scal”)
+
+- Na polecenie właściciela cała aplikacja (Atlas, przewodniki regionów, Warszawa) zmienia kolorystykę z granatu/bursztynu/oliwki/kremu na niebieski motyw z makiety „kulki na torze”: głęboki granat `#0C2C59`, niebieski ląd, różowe akcenty `#F4288B`, żółte `#FFD84A`, morski `#3FA396` dla sukcesu, jasnoniebieskie tła zamiast kremu.
+- Kolory przeliczono skryptem we wszystkich plikach CSS/JS/SVG, `index.html`, `atlas.html`, `region.html`, `manifest.webmanifest`, `data/szlaki.json` i `tools/build_logo.py`; jasność każdego koloru została zachowana, więc kontrasty są takie jak wcześniej. Raster `assets/poland-relief.webp` przekolorowano na niebieski (geometria i cieniowanie bez zmian).
+- Nowy arkusz `assets/theme-marbles.css` (ładowany jako ostatni): aktywne przyciski menu jako różowe „kulki” z połyskiem, różowo-żółta szyna nad dolnym menu, żółta obwódka mapki Polski w nagłówku, `--accent` Warszawy na różowy.
+- Bez zmian: logo (pinezka i znaczek mapy mają teraz niebieskie barwy), układ, funkcje, dane. Eksport Excel zachowuje dotychczasowe kolory arkuszy.
+- Cache: `i-was-here-v8-9-0-20261113`. `APP_VERSION` kopii JSON: 8.9.0. Testy: sync_database (bez diffu), test_bundle, test_atlas, `node --check`, pełny test_browser.js i test_dwarfs.js przeszły w Chromium (emulacja iPhone 13). Nie testowano na fizycznym iPhonie.
+
 ## 8.8.0 — Wrocław: krasnale (2026-11-09, PR #23, przygotowano do scalenia po zgodzie właściciela)
 
 - 769 lokalizacji OSM z miejskiej mapy `https://mobile.wroclaw.pl/krasnale.geojson`, stan danych 2026-08-11, pobrano 2026-11-09. Licencja ODbL; to nie jest pełny ani zweryfikowany na miejscu rejestr.

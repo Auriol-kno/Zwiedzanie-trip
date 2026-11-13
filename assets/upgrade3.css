@@ -28,7 +28,7 @@
 .waw3-rating b{color:var(--accent)}
 .waw3-food-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
 .waw3-food-actions a,.waw3-food-actions button{border:1px solid var(--line);padding:8px 9px;border-radius:11px;font-size:11px;font-weight:800;background:var(--bg);color:var(--ink)}
-.waw3-food-actions button.selected{background:var(--primary);color:#fff}
+.waw3-food-actions button.selected{background:var(--primary);color:#ffffff}
 .waw3-break{border:1px dashed var(--accent);border-radius:15px;padding:13px;background:var(--panel);margin-top:12px;font-size:12px;line-height:1.5}
 .waw3-break b{display:block;margin-bottom:6px}
 .waw3-break a{color:var(--accent);text-decoration:underline}
