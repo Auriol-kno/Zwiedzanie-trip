@@ -1,5 +1,10 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.13.1 — Mapa Polski wycentrowana w menu (2026-11-14)
+
+- Decyzja właściciela: ikona mapy Polski w dolnym menu jest obniżona i wycentrowana w pionie z ikonami menu; nadal większa od nich, rozmiar bez zmian (76 px; 66 px na ≤360 px). Wysokość menu na stronach regionu i Warszawy taka sama jak w Atlasie. Zastępuje „wystaje ok. 50 %” z 8.11.0.
+- Test przeglądarkowy sprawdza wycentrowanie (±4 px). Cache `i-was-here-v8-13-1-20261114`.
+
 ## 8.13.0 — Atrakcje miast, partia 2 (2026-11-13)
 
 - 17 nowych atrakcji redakcyjnych z historiami ≥10 zdań PL i EN: Wrocław (Aula Leopoldina, Ogród Japoński, Ogród Botaniczny), Łódź (Muzeum Kinematografii, Park Źródliska i Palmiarnia, Biała Fabryka), Lublin (Archikatedra i Wieża Trynitarska, Trybunał Koronny i Rynek, Muzeum Wsi Lubelskiej), Katowice (Katedra Chrystusa Króla, Giszowiec, Szyb Wilson), Szczecin (Bazylika św. Jakuba, Brama Portowa), Toruń (Ratusz Staromiejski, Katedra św. Janów, Ruiny Zamku Krzyżackiego). Legenda o diable w Lublinie oznaczona jako legenda.

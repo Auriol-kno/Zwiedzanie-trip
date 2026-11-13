@@ -129,3 +129,6 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Pływająca mapa Polski jest w środku dolnego menu (tam, gdzie były Plany), większa od ikon i wystaje nad menu o ok. 50 %. Zastępuje zapisy z §13 o mapce w nagłówku.
 - Menu: Mapa · Odkrywaj · [mapa Polski] · Plany · Profil. Pieczątki są w Profilu użytkownika.
 - Atrakcje miast muszą mieć obszerne opisy (≥10 zdań PL i EN), jak dotychczasowe 213.
+
+## 15. Mapa Polski wycentrowana w menu — 2026-11-14 (nowsza decyzja właściciela)
+- Mapa Polski w dolnym menu nie wystaje już nad menu: jest wycentrowana w pionie z ikonami, większa od nich, rozmiar bez zmian. Zastępuje zapis o wystawaniu ok. 50 % z §14.
