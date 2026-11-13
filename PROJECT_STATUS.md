@@ -1,5 +1,9 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.12.0 — Atrakcje miast, partia 1 (2026-11-13)
+- Dodano 14 atrakcji w Gdańsku, Krakowie i Poznaniu z historiami ≥10 zdań PL/EN (razem 227 historii redakcyjnych). Współrzędne orientacyjne, do weryfikacji w OSM.
+- **Następne zadanie:** partia 2 (Wrocław poza krasnalami, Łódź, Lublin, Katowice, Szczecin, Toruń…) z tą samą jakością opisów; weryfikacja współrzędnych i Wikipedii tam, gdzie jest sieć.
+
 ## 8.11.0 — Mapa Polski w dolnym menu (2026-11-13)
 - Pływająca mapa Polski jest w środku dolnego menu (większa, wystaje ok. 50 %); Pieczątki przeniesione do Profilu. Szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §14.
 - **Następne zadanie:** import atrakcji miast wojewódzkich z obszernymi opisami (≥10 zdań PL/EN, źródła, współrzędne OSM) partiami, np. Gdańsk, Kraków, Poznań. Lista ok. 336 pozycji w dokumencie claude.ai.

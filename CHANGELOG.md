@@ -1,5 +1,12 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.12.0 — Atrakcje miast, partia 1: Gdańsk, Kraków, Poznań (2026-11-13)
+
+- 14 nowych atrakcji redakcyjnych, każda z historią ≥10 zdań PL i EN (`data/historia/`): Gdańsk (Bazylika Mariacka, Wielka Zbrojownia, Wielki Młyn, Kościół św. Katarzyny, Twierdza Wisłoujście), Kraków (Sukiennice, Barbakan i Brama Floriańska, Collegium Maius, Kopiec Kościuszki, Smocza Jama; legenda oznaczona jako legenda), Poznań (Ratusz, Fara, Zamek Cesarski, Cytadela).
+- **Współrzędne są orientacyjne** (`coordinateStatus: orientacyjne`): z tego środowiska nie ma dostępu do OSM/Nominatim. Do weryfikacji `tools/verify_coordinates.py --apply` tam, gdzie sieć jest dostępna. Linki do Wikipedii nie zostały jeszcze sprawdzone.
+- Historie napisane redakcyjnie z ogólnie znanych faktów; przed publikacją warto je przejrzeć. Pozostałe miasta (lista ok. 336 pozycji) w kolejnych partiach.
+- Cache `i-was-here-v8-12-0-20261113`, `APP_VERSION` 8.12.0.
+
 ## 8.11.0 — Pływająca mapa Polski w dolnym menu (2026-11-13, scalenie po „Scal”)
 
 - Decyzja właściciela: mapa Polski (`#atlasFloat.poland-fab`) przeniesiona z nagłówka do **środka dolnego menu**, w miejsce dawnych Planów. Jest większa od ikon menu (76 px, 66 px na ≤360 px) i wystaje ok. 50 % nad menu (żółta obwódka, cień). Zawsze prowadzi do całej mapy Polski; w Atlasie wywołuje `home()` bez przeładowania.

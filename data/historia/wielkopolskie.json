@@ -175,6 +175,70 @@
     "The sanctuary is run by the Marian Fathers. The construction of the basilica was funded by pilgrims' donations. Around it lies a large complex with chapels, gardens and a Golgotha.",
     "Hundreds of thousands of pilgrims and tourists visit Licheń every year. The basilica's architecture divides opinion, but its scale is impressive. The terrace on the tower overlooks the surrounding lakes and plains."
    ]
+  },
+  "po-ratusz": {
+   "pl": [
+    "Ratusz stoi na środku Starego Rynku w Poznaniu i jest jednym z najwspanialszych renesansowych ratuszów Europy. Pierwszą, gotycką budowlę wzniesiono w XIII wieku. Obecną formę nadał jej na początku drugiej połowy XVI wieku włoski architekt Giovanni Battista di Quadro.",
+    "Charakterystyczna jest loggia z trzema kondygnacjami arkad i bogatą dekoracją. Wieża ma około sześćdziesięciu metrów wysokości. Sala Renesansowa na piętrze zachwyca sklepieniem z rzeźbionymi i malowanymi ozdobami.",
+    "W południe z wieży wychodzą dwa mechaniczne koziołki, które trykają się dwanaście razy. Według legendy zrodziły się z pomyłki kucharza, który spalił pieczeń przygotowaną na ucztę. Kozy uciekły z łąki i zaczęły się bić na wieży, czym rozbawiły gości.",
+    "Ratusz ucierpiał w pożarach i wojnach, między innymi w czasie II wojny światowej. Odbudowano go po zniszczeniach, a dziś mieści Muzeum Historii Miasta Poznania. Można tu obejrzeć wnętrza, dawne sale sądowe i ekspozycje poświęcone historii miasta.",
+    "Warto przyjść na rynek kilka minut przed dwunastą, bo ludzie ustawiają się wcześniej. Wokół ratusza stoją kolorowe kamienice kupców, odbudowane po wojnie. Na rynku znajdują się także kawiarnie i restauracje z ogródkami."
+   ],
+   "en": [
+    "The Town Hall stands in the middle of the Old Market Square in Poznań and is one of the most splendid Renaissance town halls in Europe. The first, Gothic building was erected in the thirteenth century. Its present form was given to it at the beginning of the second half of the sixteenth century by the Italian architect Giovanni Battista di Quadro.",
+    "The loggia with three storeys of arcades and rich decoration is characteristic. The tower is about sixty metres tall. The Renaissance Hall upstairs is striking for its vault with carved and painted ornaments.",
+    "At noon two mechanical goats come out of the tower and butt heads twelve times. According to legend, they came from a cook's mistake, when he burned the roast prepared for a feast. The goats escaped from a meadow and started to fight on the tower, which amused the guests.",
+    "The town hall suffered in fires and wars, among others during the Second World War. It was rebuilt after the destruction, and today it houses the Museum of the History of the City of Poznań. You can see the interiors, old courtrooms and exhibitions devoted to the city's history.",
+    "It is worth coming to the square a few minutes before twelve, because people line up earlier. Around the town hall stand colourful merchants' houses, reconstructed after the war. The square also has cafés and restaurants with outdoor tables."
+   ]
+  },
+  "po-fara": {
+   "pl": [
+    "Fara Poznańska, czyli kościół św. Stanisława Biskupa Męczennika, to jedna z najpiękniejszych barokowych świątyń w Polsce. Zbudowano ją dla jezuitów w latach 1649–1701. Jej fasada wychodzi na plac Kolegiacki.",
+    "Wnętrze zdobią freski, złocenia i rzeźbione ołtarze. Największe wrażenie robi sklepienie pokryte malowidłami, które sprawiają, że przestrzeń wydaje się jeszcze większa. Organy kościelne są jednymi z najcenniejszych w mieście.",
+    "Do budowy kościoła przyczyniło się wielu włoskich architektów i rzemieślników, którzy pracowali w Polsce. Pracami kierowali między innymi Bartłomiej Nataniel Wąsowski i Pompeo Ferrari. Kościół jest przykładem baroku, który w Wielkopolsce wchodził w kontakt z tradycjami lokalnymi.",
+    "Po kasacie zakonu jezuitów w XVIII wieku świątynia stała się kościołem parafialnym. Po II wojnie światowej wnętrze odnowiono i przywrócono jego dawny blask.",
+    "Obok kościoła stoi dawne kolegium jezuickie, w którym dziś mieści się urząd miasta. Latem odbywają się tu koncerty organowe. Warto wejść do środka, by spojrzeć na sklepienie i ołtarze."
+   ],
+   "en": [
+    "The Poznań Parish Church, or the Church of St. Stanislaus Bishop and Martyr, is one of the most beautiful Baroque churches in Poland. It was built for the Jesuits in 1649–1701. Its façade faces Kolegiacki Square.",
+    "The interior is decorated with frescoes, gilding and carved altars. The most striking is the vault covered with paintings that make the space seem even larger. The church organ is one of the most valuable in the city.",
+    "Many Italian architects and craftsmen working in Poland contributed to building the church. The works were led by, among others, Bartłomiej Nataniel Wąsowski and Pompeo Ferrari. The church is an example of Baroque that in Greater Poland came into contact with local traditions.",
+    "After the dissolution of the Jesuit order in the eighteenth century the church became a parish church. After the Second World War the interior was renovated and its former splendour restored.",
+    "Next to the church stands the former Jesuit college, which today houses the city office. In summer, organ concerts are held here. It is worth stepping inside to look at the vault and the altars."
+   ]
+  },
+  "po-zamek-cesarski": {
+   "pl": [
+    "Zamek Cesarski w Poznaniu zbudowano w latach 1905–1910 dla cesarza Wilhelma II. Projekt przygotował Franz Schwechten, architekt znany z berlińskiego kościoła Pamięci. Zamek miał umacniać niemiecką obecność w zaborze pruskim.",
+    "Budowla jest neoromańska, z kilkoma wieżami i bogatą dekoracją. Wnętrza urządzono wystawnie, z kaplicą i salami reprezentacyjnymi. Była to jedna z ostatnich rezydencji cesarskich zbudowanych w Europie.",
+    "Po I wojnie światowej i odzyskaniu niepodległości w 1918 roku zamek przeznaczono na cele polskie. Mieściły się w nim między innymi uniwersytet i muzeum. W czasie II wojny światowej Niemcy przebudowali go dla Adolfa Hitlera, który odwiedził miasto w 1939 roku.",
+    "Po wojnie zamek stał się centrum kultury. Dziś mieszczą się w nim Centrum Kultury ZAMEK, kino, galerie i sale koncertowe. Prowadzone są też wystawy poświęcone historii miejsca.",
+    "Zamek otacza park, w którym warto spacerować. Wnętrza zwiedza się często z przewodnikiem lub według ustalonej trasy. Warto zerknąć na program wydarzeń, bo odbywają się tu koncerty i festiwale."
+   ],
+   "en": [
+    "The Imperial Castle in Poznań was built in 1905–1910 for Emperor Wilhelm II. The design was prepared by Franz Schwechten, an architect known for the Kaiser Wilhelm Memorial Church in Berlin. The castle was meant to strengthen the German presence in the Prussian partition.",
+    "The building is neo-Romanesque, with several towers and rich decoration. The interiors were furnished lavishly, with a chapel and state rooms. It was one of the last imperial residences built in Europe.",
+    "After the First World War and the regaining of independence in 1918 the castle was put to Polish uses. It housed, among others, a university and a museum. During the Second World War the Germans rebuilt it for Adolf Hitler, who visited the city in 1939.",
+    "After the war the castle became a cultural centre. Today it houses the ZAMEK Culture Centre, a cinema, galleries and concert halls. Exhibitions on the history of the place are also held.",
+    "A park surrounds the castle and is worth a walk. The interiors are often visited with a guide or along a set route. It is worth looking at the events programme, because concerts and festivals take place here."
+   ]
+  },
+  "po-cytadela": {
+   "pl": [
+    "Cytadela Poznańska to dawna pruska twierdza, zbudowana w latach 1828–1839. Jej budowa miała umocnić obronę miasta i jego okolic. Była częścią systemu fortyfikacji Twierdzy Poznań.",
+    "Fort wzniesiono na wzgórzu Winiary, na północ od Starego Miasta. Mury i bastiony były wykonane z cegły i ziemi, a otaczała je fosa. W miarę rozwoju artylerii potrzebna była modernizacja.",
+    "W 1945 roku Cytadela była miejscem ciężkich walk, kiedy Armia Czerwona zdobywała Poznań. Twierdza padła pod koniec lutego, po kilku tygodniach walk o miasto. Po wojnie zaczęto stopniowo przekształcać obszar w park.",
+    "Dziś Cytadela to jeden z największych parków w mieście. Znajdują się tu Muzeum Uzbrojenia, Muzeum Armii Poznań oraz cmentarze wojenne. Są też rzeźby Magdaleny Abakanowicz, zatytułowane „Nierozpoznani”.",
+    "Zwiedzanie warto zaplanować na kilka godzin, bo teren jest rozległy. Wiosną i latem park jest pełen spacerowiczów i rowerzystów."
+   ],
+   "en": [
+    "The Poznań Citadel is a former Prussian fortress built in 1828–1839. Its construction was meant to strengthen the defence of the city and its surroundings. It was part of the Poznań Fortress system.",
+    "The fort was erected on Winiary Hill, north of the Old Town. The walls and bastions were made of brick and earth and surrounded by a moat. As artillery developed, modernisation became necessary.",
+    "In 1945 the Citadel was the site of heavy fighting when the Red Army captured Poznań. The fortress fell at the end of February, after several weeks of fighting for the city. After the war the area was gradually turned into a park.",
+    "Today the Citadel is one of the largest parks in the city. It contains the Armaments Museum, the Poznań Army Museum and war cemeteries. There are also sculptures by Magdalena Abakanowicz, titled \"Unrecognised Ones\".",
+    "It is worth planning several hours for a visit, because the area is extensive. In spring and summer the park is full of walkers and cyclists."
+   ]
   }
  }
 }
