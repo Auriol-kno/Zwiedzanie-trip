@@ -124,3 +124,8 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 ## 13. Aktualizacja nagłówka — 2026-11-09 (nowsza decyzja właściciela)
 - Mała mapka ma być maksymalnie po lewej, przed logo. Logo obok mapki również odsyła do głównej mapy Atlasu. Ta decyzja zastępuje starsze zapisy o logo bez linku i mapce pośrodku nagłówka.
 - Oba linki zachowują język; w Atlasie wracają do widoku całej Polski.
+
+## 14. Mapa Polski w dolnym menu — 2026-11-13 (nowsza decyzja właściciela)
+- Pływająca mapa Polski jest w środku dolnego menu (tam, gdzie były Plany), większa od ikon i wystaje nad menu o ok. 50 %. Zastępuje zapisy z §13 o mapce w nagłówku.
+- Menu: Mapa · Odkrywaj · [mapa Polski] · Plany · Profil. Pieczątki są w Profilu użytkownika.
+- Atrakcje miast muszą mieć obszerne opisy (≥10 zdań PL i EN), jak dotychczasowe 213.

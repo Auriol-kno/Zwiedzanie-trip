@@ -132,10 +132,10 @@ function check(ok, message) {
   await page.evaluate(() => { document.scrollingElement.scrollTop = 3000; });
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
-    const c = document.querySelector('#atlasFloat').getBoundingClientRect();
-    const b = document.querySelector('.brand').getBoundingClientRect(), a = document.querySelector('.top-actions').getBoundingClientRect();
-    return c.top >= 0 && c.top < 60 && Math.abs((c.top + c.bottom) / 2 - (b.top + b.bottom) / 2) < 6 && c.right <= b.left && b.right <= a.left && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
-  }), 'Warszawa: mapka Polski w jednej linii z logo, widoczna i klikalna po przewinięciu');
+    const nav = document.querySelector('#appNav'), c = document.querySelector('#appNav #atlasFloat').getBoundingClientRect(), n = nav.getBoundingClientRect(), ic = nav.querySelector('svg').getBoundingClientRect();
+    const ids = [...nav.children].map(e => e.id || e.dataset.tab).join(','), up = (n.top - c.top) / c.height;
+    return ids === 'map,explore,atlasFloat,plans,profile' && c.width >= ic.width * 3 && up > 0.4 && up < 0.6 && !document.querySelector('header #atlasFloat') && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+  }), 'Warszawa: pływająca mapa Polski w środku dolnego menu, większa od ikon, wystaje ok. 50 % nad menu, klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
   check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)
@@ -150,10 +150,10 @@ function check(ok, message) {
   check(await page.evaluate(() => { const en = document.querySelector('#wawHist [data-l="en"]'), pl = document.querySelector('#wawHist [data-l="pl"]');
     return en.offsetParent !== null && !pl.offsetParent && (en.innerText.match(/[.!?](\s|$)/g) || []).length >= 10 && /Constitution of 3 May/.test(en.innerText); }), 'Warszawa EN: pełna historia atrakcji (≥10 zdań)');
   await page.evaluate(() => closeOverlay('detailOverlay'));
-  check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,passport:Stamps,profile:Profile'
+  check(await page.evaluate(() => [...document.querySelectorAll('#appNav [data-tab]')].map(b => b.dataset.tab + ':' + b.innerText.trim()).join(',') === 'map:Map,explore:Explore,plans:Plans,profile:Profile'
     && !!document.querySelector('header #waw3NavFood')), 'Warszawa: jednolite dolne menu (EN) i „Jedzenie” w nagłówku');
-  await page.click('#appNav [data-tab="passport"]');
-  check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Stamps/.test(b.textContent) && !!b.querySelector('[data-pp-list-waw]') && b.querySelectorAll('.pp-stamp').length === 14; }), 'Warszawa: Pieczątki (14 znaczków miast + lista Warszawy) z dolnego menu (z pieczątkami Warszawy)');
+  await page.evaluate(() => IWH_EXTRAS.passport.open());
+  check(await page.evaluate(() => { const b = document.querySelector('.iwh-passport'); return b && !b.hidden && /Stamps/.test(b.textContent) && !!b.querySelector('[data-pp-list-waw]') && b.querySelectorAll('.pp-stamp').length === 14; }), 'Warszawa: Pieczątki (14 znaczków miast + lista Warszawy) (z pieczątkami Warszawy; w menu nie ma już osobnej pozycji)');
   await page.waitForSelector('.iwh-passport [data-pp-search="place"]', { timeout: 5000 }).catch(() => {});
   await page.fill('.iwh-passport [data-pp-search="place"]', 'Ogrodzieniec').catch(() => {});
   check(await page.evaluate(() => /Ogrodzieniec/.test((document.querySelector('.iwh-passport [data-pp-list-place]') || {}).textContent || '')), 'Warszawa: Pieczątki szukają miejsc z regionów (indeks data/index/places.json)');
@@ -213,7 +213,10 @@ function check(ok, message) {
   await page.click('#tabPanel [data-mode="walking"]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_days'))[0].mode === 'walking' && document.querySelector('#tabPanel [data-mode="walking"]').getAttribute('aria-pressed') === 'true'
     && /travelmode=walking/.test(document.querySelector('#tabPanel .ghost-action')?.href || 'travelmode=walking')), 'Mój plan dnia: wycieczka piesza zapisana (Google Maps pieszo)');
-  await page.click('.tabbar [data-tab="passport"]');
+  check(await page.evaluate(() => !document.querySelector('.tabbar [data-tab="passport"]')), 'Menu: brak osobnej pozycji Pieczątki (są w Profilu)');
+  await page.click('.tabbar [data-tab="profile"]');
+  await page.click('#tabPanel [data-open-tab="passport"]');
+  check(await page.evaluate(() => document.querySelector('.tabbar [data-tab="profile"]').classList.contains('active')), 'Pieczątki otwarte z Profilu: w menu świeci Profil');
   check(await page.evaluate(() => document.querySelector('#tabPanel [data-pp-city="gdansk"]').getAttribute('aria-pressed') === 'true' && document.querySelectorAll('#tabPanel .pp-stamp').length === 14), 'Pieczątki: znaczek Gdańska odblokowany');
   await page.click('#tabPanel [data-pp-city="krakow"]');
   check(await page.evaluate(() => JSON.parse(localStorage.getItem('iwh_visited')).includes('city:krakow') && document.querySelector('#tabPanel [data-pp-city="krakow"]').getAttribute('aria-pressed') === 'true'), 'Pieczątki: „Byłem tu” odblokowuje pieczątkę miasta');
@@ -307,22 +310,23 @@ function check(ok, message) {
   await page.click('#dClose');
   await page.click('#langRegion [data-lang="en"]');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#planTitle').textContent === 'Day plan'), 'Przewodnik regionu: przełącznik EN');
-  check(await page.evaluate(() => document.querySelector('#atlasFloat').getAttribute('href') === './atlas.html?lang=en' && document.querySelectorAll('#appNav [data-tab]').length === 5), 'Przewodnik regionu: logo prowadzi do całej Polski, jednolite menu');
-  await page.click('#appNav [data-tab="passport"]');
+  check(await page.evaluate(() => document.querySelector('#atlasFloat').getAttribute('href') === './atlas.html?lang=en' && document.querySelectorAll('#appNav [data-tab]').length === 4 && document.querySelector('#appNav #atlasFloat')), 'Przewodnik regionu: mapa Polski w menu prowadzi do całej Polski, jednolite menu');
+  await page.evaluate(() => IWH_EXTRAS.passport.open());
   await page.waitForFunction(() => document.querySelectorAll('.iwh-passport [data-pp-list] li [data-journal]').length === 1);
-  check(true, 'Przewodnik regionu: Paszport odkrywcy z dolnego menu pokazuje wpis z dziennika');
+  check(true, 'Przewodnik regionu: Pieczątki (z Profilu) pokazują wpis z dziennika');
   await page.click('.iwh-passport .ij-done');
   await page.click('#appNav [data-tab="map"]');
   await page.waitForSelector('#provinceFocus .region-outline');
   check(await page.evaluate(() => document.documentElement.lang === 'en' && document.querySelector('#cityName').textContent.startsWith('Świętokrzyskie')), 'Powrót z regionu do Atlasu: to samo województwo i język');
-  await page.click('.tabbar [data-tab="passport"]');
+  await page.click('.tabbar [data-tab="profile"]');
+  await page.click('#tabPanel [data-open-tab="passport"]');
   await page.waitForSelector('#tabPanel [data-pp-list] .pp-row');
   check(await page.evaluate(() => document.querySelectorAll('#tabPanel [data-pp-list] .pp-row').length === 1 && /5 photos/.test(document.querySelector('#tabPanel [data-pp-list]').textContent)
     && !!document.querySelector('#tabPanel [data-pp-list] .pp-thumb img')), 'Atlas → Pieczątki: dziennik podróży z miniaturą i licznikiem zdjęć');
   await page.click('#atlasLogo');
   await page.waitForTimeout(700);
   check(await page.evaluate(() => document.body.dataset.tab === 'map' && document.querySelector('#tabPanel').hidden && document.querySelector('#placeSheet').hidden), 'Atlas: logo pokazuje całą Polskę (zamyka zakładki i kartę)');
-  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && !!document.querySelector('.atlas-top #atlasFloat')), 'Atlas: logo z pinezką, mapka Polski w jednej linii z logo');
+  check(await page.evaluate(() => !!document.querySelector('#atlasApp .brand-logo img[src*="brand-pin-landscape"]') && !!document.querySelector('#appNav #atlasFloat')), 'Atlas: logo z pinezką, mapka Polski w menu');
 
   // 8.6 — Odkrywaj: motywy i szlaki tematyczne (EN), zapis szlaku jako podróży
   await page.click('.tabbar [data-tab="explore"]');

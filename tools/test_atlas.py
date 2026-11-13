@@ -163,9 +163,14 @@ for token in ["layersButton", "layersPanel", "placeSheet", "addTrip", "addDay", 
 plans = (ROOT / "assets/atlas-plans.js").read_text(encoding="utf-8")
 assert all(k in plans for k in ("iwh_trips", "iwh_days", "iwh_visited", "tb_saved_trips")), "Plany: klucze zapisu"
 appnav = (ROOT / "assets/app-nav.js").read_text(encoding="utf-8")
-assert "ORDER=['map','explore','plans','passport','profile']" in appnav, "Jednolite dolne menu"
+assert "ORDER=['map','explore','plans','profile']" in appnav, "Jednolite dolne menu (Pieczątki w Profilu)"
 for page in ("atlas.html", "index.html", "region.html"):
     assert 'id="appNav"' in (ROOT / page).read_text(encoding="utf-8") and "app-nav.js" in (ROOT / page).read_text(encoding="utf-8"), page
+import re as _re
+for page in ("atlas.html", "index.html", "region.html"):
+    h = (ROOT / page).read_text(encoding="utf-8")
+    assert _re.search(r'<nav[^>]*id="appNav"[^>]*><a class="poland-fab" id="atlasFloat"', h), page + ": mapa Polski musi być w środku dolnego menu"
+    assert 'id="atlasFloat"' not in h.split('</header>')[0], page + ": mapa Polski nie może zostać w nagłówku"
 assert '<nav class="bottom-nav"' not in home, "Warszawa: stare dolne menu zastąpione wspólnym"
 # 8.0: przewodniki wszystkich województw; każde z 14 miast ma atrakcje w przewodniku swojego regionu
 for r in regdb["regions"]:
