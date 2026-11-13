@@ -2,6 +2,7 @@
 
 ## 8.10.0 — Mapa „Pergamin” (2026-11-13, PR czeka na „Scal”)
 - Styl Atlas ma ciepłą mapę (krem, turkus, terakota, zielone lasy, pomarańczowe pinezki); szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3. Relief `poland-relief.webp` przekolorowany (przy ponownym generowaniu `build_geography.py` trzeba go przekolorować tak samo: niziny hue 43° s .26 v .99, góry hue 14° s .68 v .88).
+- **Następne zadanie (propozycja):** import atrakcji miast wojewódzkich (lista ok. 336 pozycji z 17 miast, zebrana 2026-11-13; do zrobienia: weryfikacja współrzędnych `verify_coordinates.py`, opisy PL/EN, historie ≥10 zdań, pieczątki). Kolekcje tematyczne jak krasnale: murale w Łodzi, Rzeszowie i Białymstoku.
 - Styl Noc: nieczytelne napisy miast i ciemne „I WAS HERE” naprawione w 8.10.1.
 - Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie; styl Noc/Teren z jasnym reliefem.
 
