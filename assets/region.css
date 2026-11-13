@@ -1,5 +1,5 @@
 /* I Was Here 6.0 — przewodnik regionu (region.html). Kolory i rytm zgodne z przewodnikiem Warszawy. */
-:root{--bg:#edf3fa;--panel:#f8fbff;--ink:#1c2444;--sub:#6c7585;--line:#d1e0f4;--primary:#0C2C59;--accent:#F4288B;--glass:#eceff2;--shadow:0 10px 35px rgba(28,36,68,.08);--safe:env(safe-area-inset-bottom,0px)}
+:root{--bg:#edf3fa;--panel:#f8fbff;--ink:#1c2444;--sub:#6c7585;--line:#d1e0f4;--primary:#0C2C59;--accent:#28A6F4;--glass:#eceff2;--shadow:0 10px 35px rgba(28,36,68,.08);--safe:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 html{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);margin:0;min-height:100vh}
@@ -116,4 +116,4 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .hero h1,.hero p,.hero .eyebrow{position:relative;z-index:1}
 .hero p{max-width:58%}
 @media(max-width:420px){.hero-art{width:44%}.hero p{max-width:60%}}
-.btn.accent{background:#F4288B;color:#ffffff}
+.btn.accent{background:#28A6F4;color:#061938}

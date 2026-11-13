@@ -34,10 +34,10 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 ## 3. Kolorystyka i typografia
 - **Od 8.9.0 (decyzja właściciela 2026-11-13): motyw „kulki na torze” na wszystkich ekranach** (zastępuje paletę Atlasu 7.0 granat/bursztyn/oliwka/krem):
   - granat morza: `#0C2C59`, `#0A254F`, `#061938`;
-  - różowy akcent: `#F4288B` (gradient `#FF459F` → `#D91A76`), żółty: `#FFD84A`;
+  - **błękitny akcent (od 8.9.1, decyzja właściciela 2026-11-13): `#28A6F4`** (gradient `#45B8FF` → `#1A90D9`), tekst na nim ciemnogranatowy `#061938`; żółty: `#FFD84A`. Różowy `#F4288B` z 8.9.0 jest wycofany;
   - niebieski ląd (relief przekolorowany), jasnoniebieskie tła zamiast kremu `#E2ECF8`;
   - morski `#3FA396` dla stanów „zdobyte/sukces”;
-  - aktywne przyciski to różowe kulki z połyskiem, nad dolnym menu różowo-żółta szyna (`assets/theme-marbles.css`).
+  - aktywne przyciski to błękitne kulki z połyskiem, nad dolnym menu błękitno-żółta szyna (`assets/theme-marbles.css`).
 - Jasne przewodniki (Warszawa, regiony) stoją na jasnoniebieskim tle z granatowymi kartami „hero”.
 - Logo i znaczek mapy: kształty bez zmian, barwy przeliczone na niebieskie (`tools/build_logo.py`). Złota ramka `#F1D88E` → `#9E7A2E` zostaje.
 - Dawna paleta (do porównania): granat `#0B3446`, bursztyn `#F47C28`/`#FFB24A`, oliwka `#68824B`/`#9EAF65`, krem `#F6F1E4`.

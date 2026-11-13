@@ -126,7 +126,7 @@ def tile_inner():
 <circle cx="44" cy="{.87 * h:.1f}" r="4.6" fill="#FFFFFF"/><circle cx="96" cy="{.63 * h:.1f}" r="4.6" fill="#FFFFFF"/>
 </g>
 <path d="{d}" fill="none" stroke="#FFFFFF" stroke-width="5.2" stroke-linejoin="round"/>
-<g transform="translate(130 {.43 * h:.1f}) scale(1.25)"><path d="{PIN}" fill="#F02E8C" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="0" cy="-22" r="5" fill="#FFFFFF"/></g>
+<g transform="translate(130 {.43 * h:.1f}) scale(1.25)"><path d="{PIN}" fill="#2EA6F0" stroke="#FFFFFF" stroke-width="2.2"/><circle cx="0" cy="-22" r="5" fill="#FFFFFF"/></g>
 </g>'''
 
 

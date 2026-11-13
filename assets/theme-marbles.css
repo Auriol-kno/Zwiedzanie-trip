@@ -1,27 +1,28 @@
-/* I Was Here 8.9 — motyw „kulki na torze”: niebieskie tło, różowo-żółte tory, szklane kulki.
+/* I Was Here 8.9 — motyw „kulki na torze”: niebieskie tło, błękitno-żółte tory, szklane kulki.
    Ładowany jako ostatni arkusz na atlas.html, region.html i index.html. Paleta bazowa została przeliczona w plikach CSS/JS;
    tutaj tylko akcenty motywu. */
 :root{
   --iwh-navy:#0C2C59;--iwh-navy-deep:#061938;--iwh-blue:#2a74b8;--iwh-sky:#5c8fd5;
-  --iwh-pink:#F4288B;--iwh-pink-hi:#ff62b4;--iwh-yellow:#FFD84A;--iwh-teal:#3fa396;
-  --iwh-marble-hi:inset 0 2px 2px rgba(255,255,255,.6),inset 0 -4px 8px rgba(110,0,60,.32);
+  --iwh-accent:#28A6F4;--iwh-accent-hi:#62c3ff;--iwh-yellow:#FFD84A;--iwh-teal:#3fa396;
+  --iwh-marble-hi:inset 0 2px 2px rgba(255,255,255,.6),inset 0 -4px 8px rgba(0,68,110,.32);
 }
-/* Warszawa używa zmiennej --accent (dawny koral) */
-:root{--accent:#F4288B}
+/* Warszawa używa zmiennej --accent (dawny koral); od 8.9.1 błękitny */
+:root{--accent:#28A6F4}
 
-/* Aktywne przyciski dolnego menu = różowa kulka z połyskiem */
+/* Aktywne przyciski dolnego menu = błękitna kulka z połyskiem (ciemny tekst dla kontrastu) */
 .tabbar button.active,.app-nav:not(.tabbar) button.active{
-  box-shadow:0 6px 16px rgba(244,40,139,.38),var(--iwh-marble-hi);
-  background:radial-gradient(120% 90% at 30% 18%,#ffb3dc 0%,#ff459f 30%,#F4288B 62%,#b10f5d 100%);
+  box-shadow:0 6px 16px rgba(40,166,244,.38),var(--iwh-marble-hi);
+  background:radial-gradient(120% 90% at 30% 18%,#b3e2ff 0%,#45b8ff 30%,#28A6F4 62%,#0f73b1 100%);
+  color:#061938;
 }
-/* Szyna nad dolnym menu: tor różowo→żółty */
+/* Szyna nad dolnym menu: tor błękitny→żółty */
 .tabbar::before,.app-nav:not(.tabbar)::before{
   content:"";position:absolute;left:14px;right:14px;top:-2px;height:3px;border-radius:3px;pointer-events:none;
-  background:linear-gradient(90deg,var(--iwh-pink),var(--iwh-yellow));opacity:.95;
+  background:linear-gradient(90deg,var(--iwh-accent),var(--iwh-accent-hi) 55%,var(--iwh-yellow));opacity:.95;
 }
 /* Pigułki filtrów i przyciski główne: zaokrąglone jak kapsuły toru */
 .chip.active,.chip.chosen,button.primary,.btn-primary{
-  box-shadow:0 4px 12px rgba(244,40,139,.3),var(--iwh-marble-hi);
+  box-shadow:0 4px 12px rgba(40,166,244,.3),var(--iwh-marble-hi);
 }
 /* Mapka Polski w nagłówku: ramka w kolorze żółtej kulki */
 .poland-fab{box-shadow:0 6px 16px rgba(6,25,56,.45),0 0 0 2px rgba(255,216,74,.75)}

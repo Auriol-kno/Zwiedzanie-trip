@@ -3,7 +3,7 @@
 .ex-featured{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;margin:0 -2px;-webkit-overflow-scrolling:touch}
 .ex-route{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px;border-radius:16px;border:1px solid var(--ui-line);background:rgba(0,0,0,.14);color:var(--ui-fg);width:100%}
 .ex-route.big{flex:none;width:min(80%,300px);scroll-snap-align:start;background:linear-gradient(150deg,color-mix(in srgb,var(--ex) 55%,transparent),rgba(0,0,0,.2));border-color:color-mix(in srgb,var(--ex) 70%,#F1DC8E)}
-.ex-route:focus-visible,.ex-theme:focus-visible,.ex-back:focus-visible{outline:3px solid #F4288B;outline-offset:2px}
+.ex-route:focus-visible,.ex-theme:focus-visible,.ex-back:focus-visible{outline:3px solid #28A6F4;outline-offset:2px}
 .ex-rt{display:flex;flex-direction:column;gap:2px;min-width:0}
 .ex-rt small{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-2,#FFD84A)}
 .ex-rt b{font-size:14px;line-height:1.25;overflow-wrap:anywhere}
@@ -28,7 +28,7 @@
 .ex-note{margin-top:14px}
 body[data-style=light] .ex-route,body[data-style=light] .ex-theme{background:#ffffff}
 body[data-style=light] .ex-route.big,body[data-style=light] .ex-hero{background:linear-gradient(150deg,color-mix(in srgb,var(--ex) 22%,#ffffff),#ffffff)}
-body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[data-style=light] .ex-back,body[data-style=light] .ex-kicker{color:#b42a6d}
+body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[data-style=light] .ex-back,body[data-style=light] .ex-kicker{color:#2a7fb4}
 @supports not (background:color-mix(in srgb,red,blue)){.ex-route.big,.ex-hero,.ex-theme{background:rgba(0,0,0,.18)}}
 /* Przewodnik regionu: rozszerzona historia miejsca i szlaki, na których leży punkt */
 .place-history{margin:14px 0 4px;padding:14px;border-radius:16px;background:#E2ECF8;color:#132743}
@@ -38,5 +38,5 @@ body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[dat
 .place-routes{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
 .place-routes a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 12px 4px 4px;border-radius:14px;background:#0C2C59;color:#ffffff!important;font-size:12px;font-weight:800;text-decoration:none!important}
 .place-routes a .ex-art{filter:none}
-.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a80f59}
+.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0f6da8}
 .made-by{margin:18px 0 4px;text-align:center;font:italic 700 12px/1.4 Georgia,Palatino,serif;letter-spacing:.02em;opacity:.8}
