@@ -1,5 +1,11 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.13.0 — Atrakcje miast, partia 2 (2026-11-13)
+
+- 17 nowych atrakcji redakcyjnych z historiami ≥10 zdań PL i EN: Wrocław (Aula Leopoldina, Ogród Japoński, Ogród Botaniczny), Łódź (Muzeum Kinematografii, Park Źródliska i Palmiarnia, Biała Fabryka), Lublin (Archikatedra i Wieża Trynitarska, Trybunał Koronny i Rynek, Muzeum Wsi Lubelskiej), Katowice (Katedra Chrystusa Króla, Giszowiec, Szyb Wilson), Szczecin (Bazylika św. Jakuba, Brama Portowa), Toruń (Ratusz Staromiejski, Katedra św. Janów, Ruiny Zamku Krzyżackiego). Legenda o diable w Lublinie oznaczona jako legenda.
+- Współrzędne orientacyjne (`coordinateStatus: orientacyjne`) i niezweryfikowane linki Wikipedii, jak w 8.12.0; do sprawdzenia tam, gdzie jest sieć (`verify_coordinates.py --apply`). Historie redakcyjne, do przeglądu.
+- Razem 244 historie redakcyjne. Cache `i-was-here-v8-13-0-20261113`, `APP_VERSION` 8.13.0.
+
 ## 8.12.0 — Atrakcje miast, partia 1: Gdańsk, Kraków, Poznań (2026-11-13)
 
 - 14 nowych atrakcji redakcyjnych, każda z historią ≥10 zdań PL i EN (`data/historia/`): Gdańsk (Bazylika Mariacka, Wielka Zbrojownia, Wielki Młyn, Kościół św. Katarzyny, Twierdza Wisłoujście), Kraków (Sukiennice, Barbakan i Brama Floriańska, Collegium Maius, Kopiec Kościuszki, Smocza Jama; legenda oznaczona jako legenda), Poznań (Ratusz, Fara, Zamek Cesarski, Cytadela).
