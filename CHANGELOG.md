@@ -1,5 +1,14 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.10.0 — Mapa „Pergamin”: ciepła, przyjazna kolorystyka Atlasu (2026-11-13, PR do scalenia po „Scal”)
+
+- Na polecenie właściciela (wzór: załączona grafika mapy, „troszeczkę cieplejsza”) styl **Atlas** ma nową kolorystykę mapy: kremowy ląd, turkusowe morze `#5EAEB9`, terakotowe góry, zielone lasy, pomarańczowe pinezki `#E5541B` i granica `#E5571C`, papierowe kraje sąsiednie `#F6EAD0`, ciepłe rzeki i jeziora `#4AA0B5`. Wybrany spośród pięciu wariantów (A „Pergamin”; B–E: Leśna, Miętowa, Lawenda, Lodowy błękit).
+- `assets/poland-relief.webp` przekolorowany z oryginalnego reliefu (nizina → krem, góry → terakota; geometria i cieniowanie bez zmian). Relief jest wspólny, więc widać go też w stylach Jasny, Noc i Teren; ich własne kolory zostają.
+- `assets/theme-marbles.css`: reguły ograniczone do stylu Atlas (`body:not([data-style=light]):not([data-style=night]):not([data-style=terrain])`): tło morza (`#atlasApp`), sąsiedzi, granice, rzeki, ciemne napisy skali/kompasu/źródła na jasnym lądzie, zielone drzewa (`.atlas-forest`). `assets/atlas-premium.css`: pinezki miast czytają `--pin`, `--pin-edge`, `--pin-dot` (domyślnie jak dotąd `--amber`/`--cream`), stany odwiedzone/zaplanowane/wybrane bez zmian.
+- UI (menu, przyciski, błękitny akcent `#28A6F4`) bez zmian.
+- Cache: `i-was-here-v8-10-0-20261113`; `APP_VERSION` kopii JSON 8.10.0. Testy: sync_database (bez diffu), test_bundle, test_atlas, `node --check`, test_browser.js, test_dwarfs.js przeszły w Chromium (iPhone 13). Nie testowano na fizycznym iPhonie.
+- Znany, wcześniejszy błąd (nie dotyczy tej zmiany, jest też w wersji sprzed 8.9.0): w stylu **Noc** napisy miast to czarne plamy (obrys 5 px przykrywa tekst), a napis „I WAS HERE” jest ciemny na ciemnym tle.
+
 ## 8.9.1 — Główny akcent błękitny (2026-11-13, PR do scalenia po „Scal”)
 
 - Na polecenie właściciela główny kolor akcentu zmienia się z różowego `#F4288B` na błękitny `#28A6F4` (gradient `#45B8FF` → `#1A90D9`): aktywne przyciski menu, przełącznik języka, pinezki mapy, ramki i cienie, `--accent` Warszawy, `--amber` Atlasu, logo i ikona (`icon.svg`, `tools/build_logo.py`).

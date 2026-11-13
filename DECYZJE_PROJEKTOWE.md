@@ -38,6 +38,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
   - niebieski ląd (relief przekolorowany), jasnoniebieskie tła zamiast kremu `#E2ECF8`;
   - morski `#3FA396` dla stanów „zdobyte/sukces”;
   - aktywne przyciski to błękitne kulki z połyskiem, nad dolnym menu błękitno-żółta szyna (`assets/theme-marbles.css`).
+- **Mapa Atlasu (od 8.10.0, decyzja właściciela 2026-11-13): „Pergamin”**: kremowy ląd, turkusowe morze `#5EAEB9`, terakotowe góry, zielone lasy, pomarańczowe pinezki `#E5541B`; tylko styl Atlas, style Jasny/Noc/Teren zachowują własne kolory. Pozostałe warianty do ewentualnego powrotu: B Leśna, C Miętowa, D Lawenda, E Lodowy błękit (plansza w Design, parametry reliefu: odcień/nasycenie/jasność nizin i gór).
 - Jasne przewodniki (Warszawa, regiony) stoją na jasnoniebieskim tle z granatowymi kartami „hero”.
 - Logo i znaczek mapy: kształty bez zmian, barwy przeliczone na niebieskie (`tools/build_logo.py`). Złota ramka `#F1D88E` → `#9E7A2E` zostaje.
 - Dawna paleta (do porównania): granat `#0B3446`, bursztyn `#F47C28`/`#FFB24A`, oliwka `#68824B`/`#9EAF65`, krem `#F6F1E4`.

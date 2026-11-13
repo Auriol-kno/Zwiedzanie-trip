@@ -1,6 +1,6 @@
 # CLAUDE.md — I Was Here / Places & Memories
 
-Aktualizacja 2026-11-13: wersja 8.9.1 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) na wszystkich ekranach, cache `i-was-here-v8-9-1-20261113`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
+Aktualizacja 2026-11-13: wersja 8.10.0 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) z ciepłą mapą „Pergamin” w stylu Atlas, cache `i-was-here-v8-10-0-20261113`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
 
 Aktualizacja gałęzi 2026-11-09: 8.8.0, kolekcja 769 krasnali OSM (`data/wroclaw-krasnale.json`, importer `tools/import_wroclaw_dwarfs.py`), 982 punkty regionalne łącznie; historie ≥10 zdań nadal dotyczą 213 atrakcji redakcyjnych. Nowy test: `CHROMIUM_PATH=/usr/bin/chromium node tools/test_dwarfs.js` (zmienna opcjonalna). Cache `i-was-here-v8-8-0-20261109`. Poniższy opis 8.7 to punkt wyjścia; bieżący zakres w PROJECT_STATUS.md.
 
@@ -61,6 +61,7 @@ IndexedDB: `iwh_journal` (keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<it
 - **Logo:** landscape pin **left of** the wordmark „PLACES & MEMORIES / I WAS HERE”, top-left; the logo is not a link.
 - **Poland map button:** the green tile **in the same row as the logo**, the middle item of the header between the logo and the buttons (`#atlasFloat.poland-fab`, 48 px; 44 px in the Atlas). The header is always visible, so the button is too. It always leads to the whole map of Poland; in the Atlas it calls `home()` without a reload. On screens ≤370 px the wordmark hides and only the pin stays. No white halo.
 - **Palette (8.9.0, „marbles on a track” theme):** navy `#0C2C59`, light-blue accent `#28A6F4` (dark text `#061938` on it), yellow `#FFD84A`, blue land, pale-blue backgrounds `#E2ECF8`, teal `#3FA396` for success; `assets/theme-marbles.css` loads last. Serif italic brand wordmark. (Older 7.0 palette navy/amber/olive/cream is in `DECYZJE_PROJEKTOWE.md`.)
+- **Atlas map (8.10.0, style Atlas only):** „Pergamin” — cream land, turquoise sea `#5EAEB9`, terracotta mountains (recoloured `poland-relief.webp`), green forests, orange pins `#E5541B`; styles Light/Night/Terrain keep their own colours.
 - **City motifs:** postage stamps (owner's choice, style 5), with a „✓” postmark when the city is visited.
 - **One bottom menu**, identical everywhere. **No duplicate controls on one screen:** the language switch lives in the header, the map style in the Layers panel, and there is no corner „Polska” button.
 - **Pieczątki / Stamps:** the former „Paszport”. Clickable counters, „Byłem tu” toggles that can be undone, journal with up to 5 photos. In attraction details the main action is **„✣ Zdobądź pieczątkę”**; „📝 Notatki i zdjęcia” appears only after the stamp is collected (also as 📝 next to collected stamps).

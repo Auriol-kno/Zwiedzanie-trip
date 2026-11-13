@@ -1,5 +1,10 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.10.0 — Mapa „Pergamin” (2026-11-13, PR czeka na „Scal”)
+- Styl Atlas ma ciepłą mapę (krem, turkus, terakota, zielone lasy, pomarańczowe pinezki); szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3. Relief `poland-relief.webp` przekolorowany (przy ponownym generowaniu `build_geography.py` trzeba go przekolorować tak samo: niziny hue 43° s .26 v .99, góry hue 14° s .68 v .88).
+- Znany stary błąd: styl Noc ma nieczytelne napisy miast i ciemne „I WAS HERE” (poprawka czeka na decyzję właściciela).
+- Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie; styl Noc/Teren z jasnym reliefem.
+
 ## 8.9.1 — Główny akcent błękitny (2026-11-13)
 - Różowy akcent z 8.9.0 zastąpiony błękitnym `#28A6F4` w całej aplikacji (CHANGELOG.md, DECYZJE_PROJEKTOWE.md §3). Ciemny tekst na błękitnych przyciskach dla kontrastu.
 - Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie; ciemny/leśny motyw Warszawy; PNG ikon (przerenderuje `sync-icons.yml`).
@@ -27,8 +32,8 @@
 - Testy: synchronizacja bazy, test_bundle.py, test_atlas.py, kontrola składni i pełny test_browser.js przeszły w Chromium (emulacja iPhone 13). Sprawdzono kliknięcie logo z zakładki Pieczątek oraz mapkę po lewej w Warszawie.
 - Cache: `i-was-here-v8-7-1-20261109`. Poprawka oparta na main 8.7.0; niezależna od oczekującego PR #23 z krasnalami. Nie testowano na fizycznym iPhonie.
 
-**Stan na:** 2026-11-13 · **Wersja:** 8.9.1 (motyw „kulki na torze”, błękitny akcent)
-**Cache PWA:** `i-was-here-v8-9-1-20261113` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
+**Stan na:** 2026-11-13 · **Wersja:** 8.10.0 (mapa „Pergamin”, motyw „kulki na torze”)
+**Cache PWA:** `i-was-here-v8-10-0-20261113` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
