@@ -4,7 +4,7 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 .app-nav:not(.tabbar) button{flex:1;min-width:0;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;border-radius:15px;background:none;color:#c3ccd4;font:700 10px/1.1 Inter,-apple-system,sans-serif;padding:4px 2px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .app-nav:not(.tabbar) button b{font-weight:700;max-width:100%;text-align:center;overflow-wrap:anywhere}
 .app-nav:not(.tabbar) svg{width:21px;height:21px;fill:currentColor}
-.app-nav:not(.tabbar) button.active{background:linear-gradient(160deg,#ff459f,#F4288B 55%,#d91a76);color:#ffffff;box-shadow:0 6px 16px rgba(244,40,139,.35)}
+.app-nav:not(.tabbar) button.active{background:linear-gradient(160deg,#45b8ff,#28A6F4 55%,#1a90d9);color:#061938;box-shadow:0 6px 16px rgba(40,166,244,.35)}
 .app-nav:not(.tabbar) button:focus-visible{outline:3px solid #FFD84A;outline-offset:2px}
 @media(min-width:700px){.app-nav:not(.tabbar){left:50%;right:auto;transform:translateX(-50%);width:min(640px,100%);border-radius:22px 22px 0 0;border:1px solid rgba(236,224,181,.22)}.app-nav:not(.tabbar) button{font-size:11px}}
 @media(max-width:360px){.app-nav:not(.tabbar) button{font-size:9px}.app-nav:not(.tabbar) svg{width:19px;height:19px}}
@@ -13,7 +13,7 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 .poland-fab{position:relative;z-index:2;flex:none;width:48px;height:48px;margin:0;display:grid;place-items:center;border-radius:14px;pointer-events:auto;box-shadow:0 6px 16px rgba(7,18,41,.4);transition:transform .15s ease}
 .poland-fab img{width:48px;height:48px;display:block}
 .poland-fab:active{transform:scale(.94)}
-.poland-fab:focus-visible{outline:3px solid #F4288B;outline-offset:3px}
+.poland-fab:focus-visible{outline:3px solid #28A6F4;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.poland-fab{transition:none}}
 /* Wąskie ekrany (iPhone SE/mini): sama pinezka bez napisu, żeby mapka zmieściła się w jednej linii */
 @media(max-width:370px){.top .brand .wordmark,.atlas-top .brand-name{display:none}.poland-fab,.poland-fab img{width:44px;height:44px}}
@@ -22,5 +22,5 @@ html[lang=en] .app-nav [data-l=pl],html:not([lang=en]) .app-nav [data-l=en]{disp
 
 /* Map and brand share the same Atlas destination, in DOM and keyboard order. */
 .top>.brand,.atlas-top>.brand{margin-right:auto;min-width:0;color:inherit;text-decoration:none;border-radius:12px}
-.top>.brand:focus-visible,.atlas-top>.brand:focus-visible{outline:3px solid #F4288B;outline-offset:3px}
+.top>.brand:focus-visible,.atlas-top>.brand:focus-visible{outline:3px solid #28A6F4;outline-offset:3px}
 @media(max-width:420px){.top .brand .wordmark{display:none}}

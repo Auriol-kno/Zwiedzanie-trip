@@ -1,5 +1,9 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.9.1 — Główny akcent błękitny (2026-11-13)
+- Różowy akcent z 8.9.0 zastąpiony błękitnym `#28A6F4` w całej aplikacji (CHANGELOG.md, DECYZJE_PROJEKTOWE.md §3). Ciemny tekst na błękitnych przyciskach dla kontrastu.
+- Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie; ciemny/leśny motyw Warszawy; PNG ikon (przerenderuje `sync-icons.yml`).
+
 ## 8.9.0 — Motyw „kulki na torze” (2026-11-13, PR czeka na „Scal”)
 - Cała aplikacja ma nową kolorystykę (niebieski, różowy, żółty) wg makiety „kulki na torze”; szczegóły i lista zmienionych plików w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3.
 - Nowy `assets/theme-marbles.css` ładowany jako ostatni arkusz; relief `poland-relief.webp` przekolorowany (poza `tools/build_geography.py`: przy ponownym generowaniu relief trzeba przekolorować tak samo, odcień 208°).
@@ -23,8 +27,8 @@
 - Testy: synchronizacja bazy, test_bundle.py, test_atlas.py, kontrola składni i pełny test_browser.js przeszły w Chromium (emulacja iPhone 13). Sprawdzono kliknięcie logo z zakładki Pieczątek oraz mapkę po lewej w Warszawie.
 - Cache: `i-was-here-v8-7-1-20261109`. Poprawka oparta na main 8.7.0; niezależna od oczekującego PR #23 z krasnalami. Nie testowano na fizycznym iPhonie.
 
-**Stan na:** 2026-11-13 · **Wersja:** 8.9.0 (motyw „kulki na torze”, na bazie 8.8.0 z PR #23)
-**Cache PWA:** `i-was-here-v8-9-0-20261113` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
+**Stan na:** 2026-11-13 · **Wersja:** 8.9.1 (motyw „kulki na torze”, błękitny akcent)
+**Cache PWA:** `i-was-here-v8-9-1-20261113` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.

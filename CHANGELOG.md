@@ -1,5 +1,11 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.9.1 — Główny akcent błękitny (2026-11-13, PR do scalenia po „Scal”)
+
+- Na polecenie właściciela główny kolor akcentu zmienia się z różowego `#F4288B` na błękitny `#28A6F4` (gradient `#45B8FF` → `#1A90D9`): aktywne przyciski menu, przełącznik języka, pinezki mapy, ramki i cienie, `--accent` Warszawy, `--amber` Atlasu, logo i ikona (`icon.svg`, `tools/build_logo.py`).
+- Tekst na błękitnych przyciskach (aktywne menu, `.btn.accent`) jest teraz ciemnogranatowy `#061938` zamiast białego, żeby zachować kontrast. Szyna nad dolnym menu: błękitny → jasny błękit → żółty.
+- Cache: `i-was-here-v8-9-1-20261113`; `APP_VERSION` kopii JSON 8.9.1. Testy jak w 8.9.0 (sync_database bez diffu, test_bundle, test_atlas, `node --check`, test_browser.js, test_dwarfs.js) przeszły w Chromium (iPhone 13). Nie testowano na fizycznym iPhonie; PNG ikon przerenderuje workflow `sync-icons.yml`.
+
 ## 8.9.0 — Motyw „kulki na torze” (2026-11-13, PR do scalenia po „Scal”)
 
 - Na polecenie właściciela cała aplikacja (Atlas, przewodniki regionów, Warszawa) zmienia kolorystykę z granatu/bursztynu/oliwki/kremu na niebieski motyw z makiety „kulki na torze”: głęboki granat `#0C2C59`, niebieski ląd, różowe akcenty `#F4288B`, żółte `#FFD84A`, morski `#3FA396` dla sukcesu, jasnoniebieskie tła zamiast kremu.

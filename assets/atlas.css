@@ -1,9 +1,9 @@
 
-:root{--ink:#1d3c54;--cream:#e3ecf8;--sea:#d5e8e7;--map:#b6c7d6;--country:#b5cbde;--edge:#58738b;--paper:rgba(247,251,255,.94);--chip:#f6f9fe;--tone:#536d6c;--accent:#cb4c89;--glow:#f8e7a9}
+:root{--ink:#1d3c54;--cream:#e3ecf8;--sea:#d5e8e7;--map:#b6c7d6;--country:#b5cbde;--edge:#58738b;--paper:rgba(247,251,255,.94);--chip:#f6f9fe;--tone:#536d6c;--accent:#4c9acb;--glow:#f8e7a9}
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;height:100%;overscroll-behavior:none;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream)}
-body[data-style=night]{--ink:#e9eef4;--cream:#0e1533;--sea:#142647;--map:#163d38;--country:#21534f;--edge:#80c3ba;--paper:rgba(18,29,57,.92);--chip:#1d315b;--tone:#b1cacb;--accent:#ef78b2;--glow:#87adcf}
-body[data-style=terrain]{--ink:#2f3744;--cream:#e7ecf1;--sea:#c5e6e9;--map:#96b3cc;--country:#9cb9d2;--edge:#577d9f;--paper:rgba(239,244,250,.94);--chip:#eef6fe;--tone:#5e6b77;--accent:#cc568f;--glow:#ead68e}
+body[data-style=night]{--ink:#e9eef4;--cream:#0e1533;--sea:#142647;--map:#163d38;--country:#21534f;--edge:#80c3ba;--paper:rgba(18,29,57,.92);--chip:#1d315b;--tone:#b1cacb;--accent:#78c1ef;--glow:#87adcf}
+body[data-style=terrain]{--ink:#2f3744;--cream:#e7ecf1;--sea:#c5e6e9;--map:#96b3cc;--country:#9cb9d2;--edge:#577d9f;--paper:rgba(239,244,250,.94);--chip:#eef6fe;--tone:#5e6b77;--accent:#569fcc;--glow:#ead68e}
 button,input{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 #atlasApp{position:relative;width:100%;height:100dvh;min-height:570px;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 50% 27%,#e0e8f1 0%,var(--sea) 85%);color:var(--ink)}
 body[data-style=night] #atlasApp{background:radial-gradient(circle at 50% 30%,#27405e 0%,#0a1332 100%)}
@@ -26,7 +26,7 @@ body[data-style=night] #atlasApp{background:radial-gradient(circle at 50% 30%,#2
 .map-regional{fill:var(--tone);font-size:12px;text-anchor:middle;opacity:.52;letter-spacing:.1em}
 .city-dot{cursor:pointer;transform-box:view-box;transform-origin:0 0}
 .city-ring{fill:#ffffff;stroke:var(--edge);stroke-width:2.2;opacity:.93}
-.city-core{fill:#c44984;stroke:#ffffff;stroke-width:1.9}
+.city-core{fill:#4995c4;stroke:#ffffff;stroke-width:1.9}
 .city-hit{fill:transparent}
 .city-spotlight{fill:#ffe99a;opacity:0;filter:url(#cityGlow);transition:opacity .2s}
 .city-dot.selected .city-spotlight,.city-dot:hover .city-spotlight{opacity:.65}

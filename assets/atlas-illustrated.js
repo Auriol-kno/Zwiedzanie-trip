@@ -11,8 +11,8 @@ const farmland=(x,y,theta,i)=>'<g transform="translate('+x.toFixed(1)+' '+y.toFi
 // Bez filtrów SVG (płynny zoom na iPhonie). Gradienty: wspólne <defs> (paintDefs), wstrzykiwane raz na stronę.
 const PAINT_DEFS='<linearGradient id="lmWall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3EFFE"/><stop offset="1" stop-color="#E9D796"/></linearGradient>'+
  '<linearGradient id="lmShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EBDA9C"/><stop offset="1" stop-color="#C7B163"/></linearGradient>'+
- '<linearGradient id="lmRoof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EE66A8"/><stop offset="1" stop-color="#A9472C"/></linearGradient>'+
- '<linearGradient id="lmBrick" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E56EA8"/><stop offset="1" stop-color="#A2523A"/></linearGradient>'+
+ '<linearGradient id="lmRoof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#66BAEE"/><stop offset="1" stop-color="#A9472C"/></linearGradient>'+
+ '<linearGradient id="lmBrick" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6EB7E5"/><stop offset="1" stop-color="#A2523A"/></linearGradient>'+
  '<linearGradient id="lmCopper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B4E2DC"/><stop offset="1" stop-color="#467095"/></linearGradient>'+
  '<linearGradient id="lmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFEAA0"/><stop offset="1" stop-color="#D4AF2A"/></linearGradient>'+
  '<linearGradient id="lmStone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5EEF9"/><stop offset="1" stop-color="#A0ABBD"/></linearGradient>'+
@@ -75,7 +75,7 @@ const LM={
 };
 // 8.5 — styl 5 „znaczek pocztowy”: ząbkowany znaczek, jednobarwny rytowany rysunek (kreskowanie), nazwa miasta.
 // Ten sam rysunek co w 8.4, przemalowany na tusz danego miasta; odwiedzone miasto dostaje stempel „✓”.
-const STAMP_INK=['#8E2F25','#1F3C7A','#2F415B','#5B3A78','#8A124C','#1E5B5B'];
+const STAMP_INK=['#8E2F25','#1F3C7A','#2F415B','#5B3A78','#125C8A','#1E5B5B'];
 const CITY_ORDER=['warsaw','krakow','gdansk','wroclaw','poznan','lodz','szczecin','torun','lublin','bialystok','katowice','rzeszow','kielce','olsztyn'];
 const CITY_NAME={warsaw:'Warszawa',krakow:'Kraków',gdansk:'Gdańsk',wroclaw:'Wrocław',poznan:'Poznań',lodz:'Łódź',szczecin:'Szczecin',torun:'Toruń',lublin:'Lublin',bialystok:'Białystok',katowice:'Katowice',rzeszow:'Rzeszów',kielce:'Kielce',olsztyn:'Olsztyn'};
 const STAMP_PAPER='#D7E6F9';
