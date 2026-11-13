@@ -1,5 +1,11 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.14.0 — Atrakcje miast, partia 3 (2026-11-14)
+
+- 12 nowych atrakcji z historiami ≥10 zdań PL i EN: Białystok (Centrum Zamenhofa), Rzeszów (Zamek Lubomirskich), Olsztyn (Wysoka Brama, Konkatedra św. Jakuba), Opole (Katedra, Amfiteatr), Bydgoszcz („Przechodzący przez rzekę”, Katedra), Gdynia (Dar Pomorza, Klif Orłowski), Sopot (Krzywy Domek, Grand Hotel). Zielona Góra i Gorzów bez nowych pozycji (Kielce miały już 14).
+- Współrzędne orientacyjne, linki Wikipedii niesprawdzone, historie redakcyjne do przeglądu; ta partia ma zwykle mniej pozycji na miasto, bo nie ryzykowałem nieznanych faktów. Razem 256 historii redakcyjnych.
+- Cache `i-was-here-v8-14-0-20261114`, `APP_VERSION` 8.14.0.
+
 ## 8.13.1 — Mapa Polski wycentrowana w menu (2026-11-14)
 
 - Decyzja właściciela: ikona mapy Polski w dolnym menu jest obniżona i wycentrowana w pionie z ikonami menu; nadal większa od nich, rozmiar bez zmian (76 px; 66 px na ≤360 px). Wysokość menu na stronach regionu i Warszawy taka sama jak w Atlasie. Zastępuje „wystaje ok. 50 %” z 8.11.0.

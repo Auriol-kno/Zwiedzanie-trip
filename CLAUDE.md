@@ -1,6 +1,6 @@
 # CLAUDE.md — I Was Here / Places & Memories
 
-Aktualizacja 2026-11-13: wersja 8.10.2 (duże przyciski krasnali), 8.10.1 (poprawka napisów w stylu Noc), wersja 8.10.0 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) z ciepłą mapą „Pergamin” w stylu Atlas, cache `i-was-here-v8-13-1-20261114`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
+Aktualizacja 2026-11-13: wersja 8.10.2 (duże przyciski krasnali), 8.10.1 (poprawka napisów w stylu Noc), wersja 8.10.0 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) z ciepłą mapą „Pergamin” w stylu Atlas, cache `i-was-here-v8-14-0-20261114`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
 
 Aktualizacja gałęzi 2026-11-09: 8.8.0, kolekcja 769 krasnali OSM (`data/wroclaw-krasnale.json`, importer `tools/import_wroclaw_dwarfs.py`), 982 punkty regionalne łącznie; historie ≥10 zdań nadal dotyczą 213 atrakcji redakcyjnych. Nowy test: `CHROMIUM_PATH=/usr/bin/chromium node tools/test_dwarfs.js` (zmienna opcjonalna). Cache `i-was-here-v8-8-0-20261109`. Poniższy opis 8.7 to punkt wyjścia; bieżący zakres w PROJECT_STATUS.md.
 

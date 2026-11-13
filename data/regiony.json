@@ -8018,6 +8018,318 @@
    "coordinateStatus": "orientacyjne",
    "sourceKind": "redakcyjna_selekcja",
    "updated": "2026-11"
+  },
+  {
+   "id": "bi-zamenhof",
+   "region": "podlaskie",
+   "town": "Białystok",
+   "name": {
+    "pl": "Centrum Ludwika Zamenhofa",
+    "en": "Ludwik Zamenhof Centre"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 53.13067,
+   "lon": 23.15826,
+   "icon": "🌍",
+   "url": null,
+   "desc": {
+    "pl": "Centrum poświęcone twórcy esperanta i wielokulturowej historii Białegostoku.",
+    "en": "A centre devoted to the creator of Esperanto and to the multicultural history of Białystok."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "rz-zamek",
+   "region": "podkarpackie",
+   "town": "Rzeszów",
+   "name": {
+    "pl": "Zamek Lubomirskich",
+    "en": "Lubomirski Castle"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.04132,
+   "lon": 22.01295,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Barokowa rezydencja magnacka z bastionami, dziś siedziba sądu, otoczona skwerami.",
+    "en": "A Baroque magnate residence with bastions, today the seat of a court, surrounded by green squares."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ol-wysoka-brama",
+   "region": "warminsko-mazurskie",
+   "town": "Olsztyn",
+   "name": {
+    "pl": "Wysoka Brama",
+    "en": "High Gate"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 20,
+   "visitValue": 4,
+   "lat": 53.77714,
+   "lon": 20.47734,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka brama z XIV wieku, ostatni zachowany fragment średniowiecznych murów miejskich.",
+    "en": "A Gothic gate from the fourteenth century, the last surviving remnant of the medieval city walls."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "ol-konkatedra",
+   "region": "warminsko-mazurskie",
+   "town": "Olsztyn",
+   "name": {
+    "pl": "Bazylika konkatedralna św. Jakuba",
+    "en": "Co-cathedral Basilica of St. James"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 53.77637,
+   "lon": 20.47845,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka halowa świątynia z XIV–XV wieku z wysoką wieżą nad Starym Miastem.",
+    "en": "A Gothic hall church from the fourteenth and fifteenth centuries with a tall tower above the Old Town."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "op-katedra",
+   "region": "opolskie",
+   "town": "Opole",
+   "name": {
+    "pl": "Katedra Podwyższenia Krzyża Świętego",
+    "en": "Cathedral of the Exaltation of the Holy Cross"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 50.67444,
+   "lon": 17.92646,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka katedra z wysoką wieżą, od 1972 roku główna świątynia diecezji opolskiej.",
+    "en": "A Gothic cathedral with a tall tower, since 1972 the main church of the Opole diocese."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "op-amfiteatr",
+   "region": "opolskie",
+   "town": "Opole",
+   "name": {
+    "pl": "Amfiteatr Opole i Festiwal Piosenki Polskiej",
+    "en": "Opole Amphitheatre and the Polish Song Festival"
+   },
+   "cats": [
+    "history",
+    "family"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.67045,
+   "lon": 17.93385,
+   "icon": "🎤",
+   "url": null,
+   "desc": {
+    "pl": "Amfiteatr nad Młynówką, gdzie od 1963 roku odbywa się Krajowy Festiwal Piosenki Polskiej.",
+    "en": "An amphitheatre by the Młynówka canal where the National Festival of Polish Song has been held since 1963."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "by-przechodzacy",
+   "region": "kujawsko-pomorskie",
+   "town": "Bydgoszcz",
+   "name": {
+    "pl": "Przechodzący przez rzekę",
+    "en": "Man Crossing the River"
+   },
+   "cats": [
+    "monument",
+    "hidden"
+   ],
+   "time": 15,
+   "visitValue": 4,
+   "lat": 53.12361,
+   "lon": 17.99834,
+   "icon": "🎭",
+   "url": null,
+   "desc": {
+    "pl": "Rzeźba człowieka idącego po linie nad Brdą, jeden z symboli współczesnej Bydgoszczy.",
+    "en": "A sculpture of a man walking on a rope over the Brda, one of the symbols of modern Bydgoszcz."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "by-katedra",
+   "region": "kujawsko-pomorskie",
+   "town": "Bydgoszcz",
+   "name": {
+    "pl": "Katedra św. Marcina i Mikołaja",
+    "en": "Cathedral of St. Martin and St. Nicholas"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 53.12358,
+   "lon": 18.00538,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Gotycka świątynia z cegły z XV wieku, jeden z najstarszych zabytków Bydgoszczy.",
+    "en": "A Gothic brick church from the fifteenth century, one of the oldest monuments in Bydgoszcz."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gy-dar-pomorza",
+   "region": "pomorskie",
+   "town": "Gdynia",
+   "name": {
+    "pl": "Dar Pomorza",
+    "en": "Dar Pomorza"
+   },
+   "cats": [
+    "history",
+    "museum"
+   ],
+   "time": 45,
+   "visitValue": 5,
+   "lat": 54.51934,
+   "lon": 18.55442,
+   "icon": "⛵",
+   "url": null,
+   "desc": {
+    "pl": "Żaglowiec szkolny z 1909 roku, który opłynął świat, dziś statek-muzeum na Skwerze Kościuszki.",
+    "en": "A training sailing ship from 1909 that sailed round the world, today a museum ship on Kościuszko Square."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gy-klif-orlowski",
+   "region": "pomorskie",
+   "town": "Gdynia",
+   "name": {
+    "pl": "Klif Orłowski i molo w Orłowie",
+    "en": "Orłowo Cliff and Pier"
+   },
+   "cats": [
+    "park",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 54.47958,
+   "lon": 18.56693,
+   "icon": "🌊",
+   "url": null,
+   "desc": {
+    "pl": "Wysoki klif nad Zatoką Gdańską z plażą, molem i spacerem po Kępie Redłowskiej.",
+    "en": "A high cliff above the Gulf of Gdańsk with a beach, a pier and a walk in the Redłowo Headland reserve."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "so-krzywy-domek",
+   "region": "pomorskie",
+   "town": "Sopot",
+   "name": {
+    "pl": "Krzywy Domek",
+    "en": "Crooked House"
+   },
+   "cats": [
+    "architecture",
+    "family"
+   ],
+   "time": 20,
+   "visitValue": 4,
+   "lat": 54.44532,
+   "lon": 18.56552,
+   "icon": "🏠",
+   "url": null,
+   "desc": {
+    "pl": "Zaskakujący budynek z 2004 roku, inspirowany ilustracjami Jana Marcina Szancera.",
+    "en": "A surprising building from 2004 inspired by the illustrations of Jan Marcin Szancer."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "so-grand-hotel",
+   "region": "pomorskie",
+   "town": "Sopot",
+   "name": {
+    "pl": "Grand Hotel Sopot",
+    "en": "Sopot Grand Hotel"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 54.44319,
+   "lon": 18.56745,
+   "icon": "🏨",
+   "url": null,
+   "desc": {
+    "pl": "Zabytkowy hotel z lat 20. XX wieku nad plażą, symbol kurortu i dawnego kasyna.",
+    "en": "A historic hotel from the 1920s on the beach, a symbol of the resort and the old casino."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
   }
  ],
  "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",
