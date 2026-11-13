@@ -6,7 +6,7 @@
 (function(){
 'use strict';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const C='#FFF9E8',A='#FFB24A';
+const C='#E9F2FE',A='#FFD84A';
 // Rysunki 64×64 (kremowa kreska + bursztynowe akcenty). {c} = kolor motywu (do „wycięć”).
 const ART={
  region:'<path d="M9 19l15-6 16 6 15-6v33l-15 6-16-6-15 6Z" fill="'+C+'"/><path d="M24 13v33M40 19v33" stroke="{c}" stroke-width="1.6" opacity=".55"/><path d="M14 40c5-3 9 2 14-1s8-6 13-3 7 3 10 1" fill="none" stroke="{c}" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/><path d="M38 34c-5-6-8-9-8-13a8 8 0 0 1 16 0c0 4-3 7-8 13Z" fill="'+A+'"/><circle cx="38" cy="21" r="3" fill="{c}"/>',
@@ -27,9 +27,9 @@ const ART={
 };
 let seq=0;
 function art(key,color,size){
- const id='exg'+(++seq),c=color||'#0B3446',draw=(ART[key]||ART.castle).split('{c}').join(c);
- return '<svg class="ex-art" viewBox="0 0 64 64" width="'+(size||56)+'" height="'+(size||56)+'" aria-hidden="true" focusable="false"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c+'" stop-opacity=".88"/><stop offset="1" stop-color="'+c+'"/></linearGradient><linearGradient id="'+id+'f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1D88E"/><stop offset="1" stop-color="#9E7A2E"/></linearGradient></defs>'+
-  '<rect x="1.5" y="1.5" width="61" height="61" rx="15" fill="url(#'+id+')" stroke="url(#'+id+'f)" stroke-width="3"/><rect x="5.5" y="5.5" width="53" height="53" rx="11.5" fill="none" stroke="#F1D88E" stroke-opacity=".35" stroke-width="1"/>'+draw+'</svg>';
+ const id='exg'+(++seq),c=color||'#0C2C59',draw=(ART[key]||ART.castle).split('{c}').join(c);
+ return '<svg class="ex-art" viewBox="0 0 64 64" width="'+(size||56)+'" height="'+(size||56)+'" aria-hidden="true" focusable="false"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c+'" stop-opacity=".88"/><stop offset="1" stop-color="'+c+'"/></linearGradient><linearGradient id="'+id+'f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1DC8E"/><stop offset="1" stop-color="#9E862E"/></linearGradient></defs>'+
+  '<rect x="1.5" y="1.5" width="61" height="61" rx="15" fill="url(#'+id+')" stroke="url(#'+id+'f)" stroke-width="3"/><rect x="5.5" y="5.5" width="53" height="53" rx="11.5" fill="none" stroke="#F1DC8E" stroke-opacity=".35" stroke-width="1"/>'+draw+'</svg>';
 }
 
 const T={

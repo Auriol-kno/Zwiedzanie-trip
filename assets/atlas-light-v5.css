@@ -1,66 +1,66 @@
 
 /* I Was Here — Illustrated Light Atlas 5.0 (the selected concept 1). */
-:root{--cream:#faf5e7;--sea:#bfe5f1;--country:#dfebbf;--edge:#49735b;--paper:rgba(255,252,238,.95);--chip:#fffdf5;--tone:#627c6a;--accent:#bd6f40;--ink:#25453d}
-body[data-style=light]{--cream:#fbf5e6;--sea:#c2eaf5;--country:#dfe9b9;--edge:#4a805e;--paper:rgba(255,252,239,.95);--chip:rgba(255,255,247,.97);--tone:#617b69;--accent:#c77742;--ink:#23413a}
-body[data-style=terrain]{--country:#c6dea9;--edge:#487955;--paper:rgba(250,252,229,.97);--chip:#f9fbe9}
-#atlasApp{background:radial-gradient(ellipse at 48% 39%,#fdf6df 4%,#d7f0eb 56%,#9edcf1 112%)}
-body[data-style=night] #atlasApp{background:radial-gradient(ellipse at 55% 42%,#234959 0%,#101e2e 88%)}
-#atlasApp:before{content:"";position:absolute;pointer-events:none;inset:0;opacity:.3;z-index:0;background-image:repeating-linear-gradient(23deg,rgba(255,255,255,.1) 0px,rgba(255,255,255,.1) 1px,transparent 1px,transparent 28px),repeating-linear-gradient(113deg,rgba(67,106,94,.025) 0,rgba(67,106,94,.025) 2px,transparent 2px,transparent 17px)}
+:root{--cream:#e5effc;--sea:#bed7f2;--country:#c1d5e9;--edge:#476075;--paper:rgba(239,245,254,.95);--chip:#f6f9fe;--tone:#61707d;--accent:#bd407c;--ink:#25453d}
+body[data-style=light]{--cream:#e4effd;--sea:#c1dcf6;--country:#bbd1e7;--edge:#476783;--paper:rgba(240,246,254,.95);--chip:rgba(247,251,255,.97);--tone:#606f7c;--accent:#c74282;--ink:#23413a}
+body[data-style=terrain]{--country:#a9ded7;--edge:#46627b;--paper:rgba(230,240,251,.97);--chip:#eaf2fa}
+#atlasApp{background:radial-gradient(ellipse at 48% 39%,#dfecfd 4%,#d7f0eb 56%,#9cc4f3 112%)}
+body[data-style=night] #atlasApp{background:radial-gradient(ellipse at 55% 42%,#2a476f 0%,#131a3a 88%)}
+#atlasApp:before{content:"";position:absolute;pointer-events:none;inset:0;opacity:.3;z-index:0;background-image:repeating-linear-gradient(23deg,rgba(255,255,255,.1) 0px,rgba(255,255,255,.1) 1px,transparent 1px,transparent 28px),repeating-linear-gradient(113deg,rgba(65,88,108,.025) 0,rgba(65,88,108,.025) 2px,transparent 2px,transparent 17px)}
 #atlasApp:after{opacity:.14}
 #polandSvg{overflow:visible}
-.country-shadow{fill:#375b48;opacity:.22;filter:url(#blurShadow)}
-.country-base{fill:#e5edcb;stroke:#416c52;stroke-width:2.7}
-.country-border{stroke:#477b54;stroke-width:3;opacity:.95;filter:drop-shadow(0 1px .4px #fff9e7)}
-body[data-style=night] .country-border{stroke:#f4d492;filter:none}
+.country-shadow{fill:#37455b;opacity:.22;filter:url(#blurShadow)}
+.country-base{fill:#cddceb;stroke:#3f586e;stroke-width:2.7}
+.country-border{stroke:#44637e;stroke-width:3;opacity:.95;filter:drop-shadow(0 1px .4px #e8f2fe)}
+body[data-style=night] .country-border{stroke:#f4df92;filter:none}
 .country-base,.country-border{stroke-linecap:round;stroke-linejoin:round}
-.atlas-province{stroke:#fff8e7;stroke-width:2.3;stroke-linejoin:round;stroke-linecap:round;opacity:.89}
+.atlas-province{stroke:#e8f2fe;stroke-width:2.3;stroke-linejoin:round;stroke-linecap:round;opacity:.89}
 body[data-style=night] .atlas-province{filter:brightness(.43) saturate(1.18)}
 body[data-style=terrain] .atlas-province{filter:saturate(1.3) brightness(.94)}
 .atlas-farmland{mix-blend-mode:multiply}
 body[data-style=night] .atlas-farmland{opacity:.15;mix-blend-mode:screen}
-.atlas-forest{filter:drop-shadow(0 2px 1px #26492332)}
+.atlas-forest{filter:drop-shadow(0 2px 1px #23324932)}
 .atlas-hills{filter:drop-shadow(0 3px 1px #3e5c5544)}
 body[data-style=night] .atlas-forest{filter:brightness(.6)}
 body[data-style=night] .atlas-hills{filter:brightness(.75)}
-.atlas-geo-river{fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 0 #fff9f0);opacity:.97}
-.atlas-geo-lake{fill:#8fd0df;stroke:#c7e7df;stroke-width:1;opacity:.94}
+.atlas-geo-river{fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 0 #f1f7fe);opacity:.97}
+.atlas-geo-lake{fill:#8db9e1;stroke:#c7e7df;stroke-width:1;opacity:.94}
 body[data-style=night] .atlas-geo-river{filter:none;opacity:.6}
-.map-regional{opacity:.29;fill:#547454;font-weight:900;letter-spacing:.17em}
-body[data-style=night] .map-regional{fill:#b2caba;opacity:.33}
-.city-landmark{pointer-events:none;opacity:.97;filter:drop-shadow(0 3px 1px #5674513a)}
-body[data-style=night] .city-landmark{filter:brightness(.92) drop-shadow(0 3px 5px #f2bc5955)}
-.city-label{fill:#204d3b;paint-order:stroke;stroke:#fffcef;stroke-width:6.5px;font-size:19px;font-family:Georgia,Palatino,serif;font-weight:800;letter-spacing:-.025em}
-body[data-style=night] .city-label{stroke:#132a33;stroke-width:5px;fill:#f2e7cb}
-.city-ring{stroke:#497b58;stroke-width:2.9;fill:#fffdf4;opacity:1}
-.city-core{fill:#d27a47;stroke:#fffbea;stroke-width:1.4}
-.city-dot.selected .city-ring{stroke:#cd7143;stroke-width:4;fill:#ffecba}
-.city-spotlight{fill:#e9b36a;filter:url(#cityGlow)}
+.map-regional{opacity:.29;fill:#526576;font-weight:900;letter-spacing:.17em}
+body[data-style=night] .map-regional{fill:#b1bfcb;opacity:.33}
+.city-landmark{pointer-events:none;opacity:.97;filter:drop-shadow(0 3px 1px #4f64763a)}
+body[data-style=night] .city-landmark{filter:brightness(.92) drop-shadow(0 3px 5px #f2d15955)}
+.city-label{fill:#20324d;paint-order:stroke;stroke:#f0f6fe;stroke-width:6.5px;font-size:19px;font-family:Georgia,Palatino,serif;font-weight:800;letter-spacing:-.025em}
+body[data-style=night] .city-label{stroke:#172941;stroke-width:5px;fill:#c7dbf6}
+.city-ring{stroke:#46647e;stroke-width:2.9;fill:#f5f9fe;opacity:1}
+.city-core{fill:#d2478a;stroke:#ebf3fe;stroke-width:1.4}
+.city-dot.selected .city-ring{stroke:#cd4386;stroke-width:4;fill:#bdd8fc}
+.city-spotlight{fill:#e9cd6a;filter:url(#cityGlow)}
 .city-hit{cursor:pointer}
-.atlas-top{background:linear-gradient(180deg,rgba(253,249,234,.97),rgba(253,249,234,.83) 65%,transparent);padding-top:calc(9px + env(safe-area-inset-top,0px))}
-body[data-style=night] .atlas-top{background:linear-gradient(180deg,rgba(10,25,39,.92),transparent)}
+.atlas-top{background:linear-gradient(180deg,rgba(233,242,254,.97),rgba(233,242,254,.83) 65%,transparent);padding-top:calc(9px + env(safe-area-inset-top,0px))}
+body[data-style=night] .atlas-top{background:linear-gradient(180deg,rgba(12,20,50,.92),transparent)}
 .brand-logo{background:none!important;box-shadow:none!important;width:53px;height:57px;border-radius:0}
 .brand-logo img{display:block;height:100%;width:100%;object-fit:contain}
 .brand-name strong{font-family:Georgia,Palatino,serif;font-size:29px;font-weight:750;font-style:italic;letter-spacing:-.06em}
 .brand-name small{font-family:Arial,sans-serif;letter-spacing:.20em;font-weight:800;font-size:9px}
 .atlas-hero{top:calc(119px + env(safe-area-inset-top,0px))}
-.atlas-hero h1{font-family:Georgia,Palatino,serif;color:#284d3b;font-weight:500;letter-spacing:-.05em;text-shadow:0 2px 14px #fffcef}
-body[data-style=night] .atlas-hero h1{color:#e8f7e8;text-shadow:none}
-.atlas-hero .eyebrow{letter-spacing:.18em;color:#ac6544}
-.atlas-hero p{color:#577061}
-.atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(255,253,241,.94) 18%,rgba(255,253,241,.98));box-shadow:0 -13px 45px #88b19c20}
-body[data-style=night] .atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(12,27,43,.94) 18%,rgba(12,27,43,.97))}
-.city-card{background:rgba(255,251,235,.98);border:1px solid #d6d7b4;box-shadow:0 8px 25px #406b4a22}
+.atlas-hero h1{font-family:Georgia,Palatino,serif;color:#28374d;font-weight:500;letter-spacing:-.05em;text-shadow:0 2px 14px #f0f6fe}
+body[data-style=night] .atlas-hero h1{color:#e9f0f6;text-shadow:none}
+.atlas-hero .eyebrow{letter-spacing:.18em;color:#ac4476}
+.atlas-hero p{color:#566471}
+.atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(242,247,254,.94) 18%,rgba(242,247,254,.98));box-shadow:0 -13px 45px #869eb320}
+body[data-style=night] .atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(14,22,55,.94) 18%,rgba(14,22,55,.97))}
+.city-card{background:rgba(236,244,254,.98);border:1px solid #b2c7d9;box-shadow:0 8px 25px #3e576d22}
 body[data-style=night] .city-card{background:var(--paper)}
-.city-chip{background:rgba(255,255,249,.94);border-color:#d7dabc}
-.city-chip.active{background:#244f40;color:#fffdf0;border-color:#244f40}
-.city-action{background:#245941;color:#fff8e7;box-shadow:0 4px 14px #24594135}
-.city-action:hover:not(:disabled){background:#357250}
-.atlas-bottom .browse-title{color:#637b62}
-.pill{background:rgba(255,253,242,.94);border-color:#d7dcc4}
-.style-panel{background:rgba(255,252,240,.97);border-color:#d5d9bd}
-.style-panel button.active{background:#2c5948;color:#fff9ec}
-.attribution{border-radius:10px;padding:5px 7px;background:rgba(255,252,239,.72)}
-body[data-style=night] .attribution{background:rgba(17,37,52,.68)}
+.city-chip{background:rgba(249,252,255,.94);border-color:#bbccdc}
+.city-chip.active{background:#24354f;color:#f1f7fe;border-color:#24354f}
+.city-action{background:#243959;color:#e8f2fe;box-shadow:0 4px 14px #24395935}
+.city-action:hover:not(:disabled){background:#325675}
+.atlas-bottom .browse-title{color:#616f7c}
+.pill{background:rgba(243,248,254,.94);border-color:#c5d0db}
+.style-panel{background:rgba(241,247,254,.97);border-color:#bcccda}
+.style-panel button.active{background:#2c3e59;color:#edf4fe}
+.attribution{border-radius:10px;padding:5px 7px;background:rgba(240,246,254,.72)}
+body[data-style=night] .attribution{background:rgba(20,33,66,.68)}
 @media(max-width:650px){
  .brand-logo{width:40px;height:45px}
  .brand-name strong{font-size:21px}
@@ -81,44 +81,44 @@ body[data-style=night] .attribution{background:rgba(17,37,52,.68)}
 /* I Was Here 5.1 — przełącznik PL | EN z wyróżnionym aktywnym językiem */
 .pill.lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px}
 .pill.lang-switch span{min-width:28px;padding:9px 6px;border-radius:10px;line-height:1;text-align:center;opacity:.6}
-.pill.lang-switch span.on{background:var(--ink,#23483e);color:var(--paper,#fffdf2);opacity:1}
+.pill.lang-switch span.on{background:var(--ink,#233248);color:var(--paper,#f3f8fe);opacity:1}
 
 /* I Was Here 6.0 — województwa: pasek pod miastami, obrys regionu, pinezki miejscowości */
 .region-strip{padding-top:0;align-items:center}
-.region-strip .strip-label{flex:none;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#637b62;padding:0 4px 0 5px}
+.region-strip .strip-label{flex:none;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#616f7c;padding:0 4px 0 5px}
 .region-chip{padding:8px 11px;font-size:11px}
 .city-card{flex-wrap:wrap}
 .card-towns{flex:1 0 100%;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:2px -3px -3px;padding:2px 3px 3px}
 .card-towns::-webkit-scrollbar{display:none}
 .card-towns[hidden]{display:none}
-.town-chip{flex:none;border:1px solid #d7dabc;background:#fffef6;color:#244f40;border-radius:11px;padding:7px 10px;font:inherit;font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer}
+.town-chip{flex:none;border:1px solid #bbccdc;background:#f6faff;color:#24354f;border-radius:11px;padding:7px 10px;font:inherit;font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer}
 .town-chip small{opacity:.6;font-weight:800}
-.town-chip.active{background:#244f40;color:#fffdf0;border-color:#244f40}
+.town-chip.active{background:#24354f;color:#f1f7fe;border-color:#24354f}
 .town-chip.city{border-style:dashed}
 .region-hit{fill:transparent;stroke:none;pointer-events:all;cursor:pointer;transition:fill .2s}
-@media(hover:hover){.region-hit:hover{fill:rgba(36,79,64,.07)}}
+@media(hover:hover){.region-hit:hover{fill:rgba(36,53,79,.07)}}
 .region-hit.active{fill:transparent}
-.region-dim{fill:rgba(253,249,234,.76);pointer-events:none}
+.region-dim{fill:rgba(233,242,254,.76);pointer-events:none}
 body[data-focus=region] .attribution{opacity:0}
-.region-glow{fill:none;stroke:#fff8d8;stroke-width:7;stroke-linejoin:round;opacity:.9;vector-effect:non-scaling-stroke;pointer-events:none}
-.region-outline{fill:rgba(36,79,64,.05);stroke:#244f40;stroke-width:2.6;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.region-glow{fill:none;stroke:#dae9fd;stroke-width:7;stroke-linejoin:round;opacity:.9;vector-effect:non-scaling-stroke;pointer-events:none}
+.region-outline{fill:rgba(36,53,79,.05);stroke:#24354f;stroke-width:2.6;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 #regions,#cities .city-label{transition:opacity .25s}
 body[data-focus=region] #regions{opacity:0}
 body[data-focus=region] .atlas-hero{opacity:0;pointer-events:none}
 .atlas-hero,.style-panel{transition:opacity .25s}
 .town-pin{cursor:pointer;outline:none}
 .town-hit{fill:transparent}
-.town-ring{fill:#c8553a;stroke:#fffaf0;stroke-width:2.2;filter:drop-shadow(0 2px 2px #23483e55)}
-.town-pin.selected .town-ring{fill:#244f40;stroke:#ffe9a8;stroke-width:2.8}
-.town-pin:focus-visible .town-ring{stroke:#1d6fd6;stroke-width:3}
-.town-count{fill:#fff;font:900 9.5px/1 system-ui,-apple-system,sans-serif;pointer-events:none}
-.town-label{fill:#22392f;font:800 12.5px/1 Georgia,serif;paint-order:stroke;stroke:#fffbea;stroke-width:3.4px;stroke-linejoin:round;pointer-events:none}
-body[data-style=night] .region-dim{fill:rgba(9,22,34,.62)}
-body[data-style=night] .region-outline{stroke:#d8f0c9;fill:rgba(216,240,201,.05)}
-body[data-style=night] .region-glow{stroke:#0e2533}
-body[data-style=night] .town-label{fill:#eef7e8;stroke:#0e2533}
-body[data-style=night] .town-chip{background:var(--paper);color:var(--ink);border-color:#38556a}
-body[data-style=night] .region-strip .strip-label{color:#a9c4b5}
+.town-ring{fill:#c8553a;stroke:#f1f7fe;stroke-width:2.2;filter:drop-shadow(0 2px 2px #23324855)}
+.town-pin.selected .town-ring{fill:#24354f;stroke:#ffeca8;stroke-width:2.8}
+.town-pin:focus-visible .town-ring{stroke:#1837db;stroke-width:3}
+.town-count{fill:#ffffff;font:900 9.5px/1 system-ui,-apple-system,sans-serif;pointer-events:none}
+.town-label{fill:#222b39;font:800 12.5px/1 Georgia,serif;paint-order:stroke;stroke:#ebf3fe;stroke-width:3.4px;stroke-linejoin:round;pointer-events:none}
+body[data-style=night] .region-dim{fill:rgba(10,18,43,.62)}
+body[data-style=night] .region-outline{stroke:#cbdcee;fill:rgba(203,220,238,.05)}
+body[data-style=night] .region-glow{stroke:#102141}
+body[data-style=night] .town-label{fill:#e9f0f6;stroke:#102141}
+body[data-style=night] .town-chip{background:var(--paper);color:var(--ink);border-color:#37466b}
+body[data-style=night] .region-strip .strip-label{color:#a8b7c5}
 /* Kontrolki mapy i atrybucja zawsze tuż nad dolnym panelem (--bottom-h ustawia atlas.js). */
 .map-controls{bottom:calc(var(--bottom-h,240px) + 10px)}
 .attribution{bottom:calc(var(--bottom-h,240px) + 8px)}

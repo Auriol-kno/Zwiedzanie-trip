@@ -32,13 +32,15 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Historia: 5.0 pinezka-ilustracja → 5.2 logo z miniaturą mapy → 8.3 pinezka w sylwetce Polski → 8.3.1 biało-czerwona Polska z pinezką (z JPG, potem wektor) → 8.4 kafelek → 8.5 pinezka + napis + pływająca mapka.
 
 ## 3. Kolorystyka i typografia
-- Paleta Atlasu 7.0 na wszystkich ekranach:
-  - granat Bałtyku: `#0B3446`, `#092D3E`, `#061F2C`;
-  - bursztyn akcentów: `#F47C28`, `#FFB24A`;
-  - oliwkowy ląd: `#68824B`, `#9EAF65`;
-  - krem: `#FFF9E8`, `#F6F1E4`.
-- Aktywne przyciski mają pomarańczowy gradient. Jasne przewodniki (Warszawa, regiony) stoją na kremowym tle z granatowymi kartami „hero”.
-- Kolory logo-kafelka: zieleń `#3F8E73` → `#1B5243` i złota ramka `#F1D88E` → `#9E7A2E`.
+- **Od 8.9.0 (decyzja właściciela 2026-11-13): motyw „kulki na torze” na wszystkich ekranach** (zastępuje paletę Atlasu 7.0 granat/bursztyn/oliwka/krem):
+  - granat morza: `#0C2C59`, `#0A254F`, `#061938`;
+  - różowy akcent: `#F4288B` (gradient `#FF459F` → `#D91A76`), żółty: `#FFD84A`;
+  - niebieski ląd (relief przekolorowany), jasnoniebieskie tła zamiast kremu `#E2ECF8`;
+  - morski `#3FA396` dla stanów „zdobyte/sukces”;
+  - aktywne przyciski to różowe kulki z połyskiem, nad dolnym menu różowo-żółta szyna (`assets/theme-marbles.css`).
+- Jasne przewodniki (Warszawa, regiony) stoją na jasnoniebieskim tle z granatowymi kartami „hero”.
+- Logo i znaczek mapy: kształty bez zmian, barwy przeliczone na niebieskie (`tools/build_logo.py`). Złota ramka `#F1D88E` → `#9E7A2E` zostaje.
+- Dawna paleta (do porównania): granat `#0B3446`, bursztyn `#F47C28`/`#FFB24A`, oliwka `#68824B`/`#9EAF65`, krem `#F6F1E4`.
 - Napisy marki: szeryfowe, pochylone („I WAS HERE”, Georgia/Palatino). Interfejs: Inter / systemowy sans.
 
 ## 4. Mapa Polski (Atlas)

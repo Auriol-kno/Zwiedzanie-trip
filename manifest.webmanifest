@@ -5,8 +5,8 @@
   "start_url": "./atlas.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#fbf5e6",
-  "theme_color": "#23483e",
+  "background_color": "#e4effd",
+  "theme_color": "#233248",
   "icons": [
     {
       "src": "icon.svg",

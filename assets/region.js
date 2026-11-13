@@ -75,13 +75,13 @@ function initMap(){
  let tileErr=0;const note=()=>{let n=$('#rMap .tiles-offline');if(!n){n=document.createElement('div');n.className='tiles-offline';n.setAttribute('role','status');$('#rMap').appendChild(n)}n.textContent=t().tilesOffline};
  tiles.on('tileerror',()=>{if(++tileErr>=2)note()});tiles.on('tileload',()=>{tileErr=0;const n=$('#rMap .tiles-offline');if(n)n.remove()});
  const geo=window.POLAND_GEO&&window.POLAND_GEO.regions.find(g=>g.name===region.geo);
- if(geo)L.polygon(geo.coords.map(c=>[c[1],c[0]]),{color:'#244f40',weight:2.5,fillColor:'#244f40',fillOpacity:.04,dashArray:'6 5',interactive:false}).addTo(map);
+ if(geo)L.polygon(geo.coords.map(c=>[c[1],c[0]]),{color:'#24354f',weight:2.5,fillColor:'#24354f',fillOpacity:.04,dashArray:'6 5',interactive:false}).addTo(map);
  layer=L.layerGroup().addTo(map);dwarfRenderer=L.canvas({padding:.5});
 }
 function renderMap(){
  if(!map)return;layer.clearLayers();
  const list=filtered();
- list.forEach(p=>{if(p.dwarf){const m=L.circleMarker([p.lat,p.lon],{renderer:dwarfRenderer,radius:7,color:visited.includes(p.id)?'#3f8e73':'#0b3446',fillColor:visited.includes(p.id)?'#3f8e73':'#ffb24a',fillOpacity:.95,weight:2}).addTo(layer);m.bindTooltip(esc(name(p)));m.on('click',()=>openDetail(p.id));return}const m=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',html:'<div class="r-pin'+(favs.includes(p.id)?' saved':'')+'"><span>'+p.icon+'</span></div>',iconSize:[30,30],iconAnchor:[15,30]}),title:name(p)});
+ list.forEach(p=>{if(p.dwarf){const m=L.circleMarker([p.lat,p.lon],{renderer:dwarfRenderer,radius:7,color:visited.includes(p.id)?'#3b6992':'#0c2c59',fillColor:visited.includes(p.id)?'#3b6992':'#ffd84a',fillOpacity:.95,weight:2}).addTo(layer);m.bindTooltip(esc(name(p)));m.on('click',()=>openDetail(p.id));return}const m=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',html:'<div class="r-pin'+(favs.includes(p.id)?' saved':'')+'"><span>'+p.icon+'</span></div>',iconSize:[30,30],iconAnchor:[15,30]}),title:name(p)});
   m.on('click',()=>openDetail(p.id));m.bindTooltip(name(p)+' · '+p.town,{direction:'top',offset:[0,-26]});layer.addLayer(m)});
  fit(list);
 }

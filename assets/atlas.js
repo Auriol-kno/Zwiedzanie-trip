@@ -88,9 +88,9 @@ const t=()=>T[lang];
 
 // ---------- budowa mapy (warstwy od dołu)
 const svg=$('#polandSvg'),g=el('g',{id:'world'});
-svg.innerHTML='<defs><linearGradient id="landGradient" x1="0" y1="0" x2=".9" y2="1"><stop offset="0%" stop-color="#fff9d5"/><stop offset="52%" stop-color="#9acaa3"/><stop offset="100%" stop-color="#758c52"/></linearGradient>'+
- '<linearGradient id="slabEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9893f"/><stop offset="1" stop-color="#6b3a1c"/></linearGradient>'+
- '<radialGradient id="softLight" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#fff6d8" stop-opacity=".22"/><stop offset=".55" stop-color="#fff6d8" stop-opacity="0"/><stop offset="1" stop-color="#061f2c" stop-opacity=".28"/></radialGradient>'+
+svg.innerHTML='<defs><linearGradient id="landGradient" x1="0" y1="0" x2=".9" y2="1"><stop offset="0%" stop-color="#d7e7fd"/><stop offset="52%" stop-color="#98b4cc"/><stop offset="100%" stop-color="#4f718f"/></linearGradient>'+
+ '<linearGradient id="slabEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d93f89"/><stop offset="1" stop-color="#1c396b"/></linearGradient>'+
+ '<radialGradient id="softLight" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#dae9fd" stop-opacity=".22"/><stop offset=".55" stop-color="#dae9fd" stop-opacity="0"/><stop offset="1" stop-color="#061938" stop-opacity=".28"/></radialGradient>'+
  '<filter id="blurShadow"><feGaussianBlur stdDeviation="11"/></filter><filter id="cityGlow"><feGaussianBlur stdDeviation="13"/></filter>'+
  '<clipPath id="polandClip"><path d="'+path(BORDER)+'"/></clipPath><pattern id="mapDots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".65" fill="#476b62" opacity=".12"/></pattern></defs>';
 svg.appendChild(g);

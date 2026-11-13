@@ -1,5 +1,10 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.9.0 — Motyw „kulki na torze” (2026-11-13, PR czeka na „Scal”)
+- Cała aplikacja ma nową kolorystykę (niebieski, różowy, żółty) wg makiety „kulki na torze”; szczegóły i lista zmienionych plików w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3.
+- Nowy `assets/theme-marbles.css` ładowany jako ostatni arkusz; relief `poland-relief.webp` przekolorowany (poza `tools/build_geography.py`: przy ponownym generowaniu relief trzeba przekolorować tak samo, odcień 208°).
+- Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie, ciemny/leśny motyw Warszawy (przyciski „Theme”), PNG ikon (workflow `sync-icons.yml` może dopisać nowe ikony po zmianie `icon.svg`), kolory arkuszy Excel (bez zmian).
+
 ## 8.8.0 — Wrocław: krasnale (2026-11-09, PR #23, przygotowano do scalenia po zgodzie właściciela)
 
 - 769 lokalizacji OSM z miejskiej mapy `https://mobile.wroclaw.pl/krasnale.geojson`, stan danych 2026-08-11, pobrano 2026-11-09. Licencja ODbL; to nie jest pełny ani zweryfikowany na miejscu rejestr.
@@ -18,8 +23,8 @@
 - Testy: synchronizacja bazy, test_bundle.py, test_atlas.py, kontrola składni i pełny test_browser.js przeszły w Chromium (emulacja iPhone 13). Sprawdzono kliknięcie logo z zakładki Pieczątek oraz mapkę po lewej w Warszawie.
 - Cache: `i-was-here-v8-7-1-20261109`. Poprawka oparta na main 8.7.0; niezależna od oczekującego PR #23 z krasnalami. Nie testowano na fizycznym iPhonie.
 
-**Stan na:** 2026-11-09 · **Wersja:** 8.8.0 (PR #23 — krasnale, zawiera opublikowany nagłówek z PR #24)
-**Cache PWA:** `i-was-here-v8-8-0-20261109` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
+**Stan na:** 2026-11-13 · **Wersja:** 8.9.0 (motyw „kulki na torze”, na bazie 8.8.0 z PR #23)
+**Cache PWA:** `i-was-here-v8-9-0-20261113` · **Publikacja:** https://auriol-kno.github.io/Zwiedzanie-trip/atlas.html (wdrożenia #17–#22 sprawdzane w GitHub Actions)
 **Autor aplikacji:** podpis „Made by Tomasz Kmiecik” (Profil Atlasu, stopki, `meta author`) — nie usuwać.
 
 > Ten plik opisuje **bieżący** stan projektu. Aktualizuj go w każdym PR, który zmienia funkcje, dane, znane błędy albo następne zadanie.
