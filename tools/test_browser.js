@@ -133,9 +133,9 @@ function check(ok, message) {
   await page.waitForTimeout(200);
   check(await page.evaluate(() => {
     const nav = document.querySelector('#appNav'), c = document.querySelector('#appNav #atlasFloat').getBoundingClientRect(), n = nav.getBoundingClientRect(), ic = nav.querySelector('svg').getBoundingClientRect();
-    const ids = [...nav.children].map(e => e.id || e.dataset.tab).join(','), up = (n.top - c.top) / c.height;
-    return ids === 'map,explore,atlasFloat,plans,profile' && c.width >= ic.width * 3 && up > 0.4 && up < 0.6 && !document.querySelector('header #atlasFloat') && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
-  }), 'Warszawa: pływająca mapa Polski w środku dolnego menu, większa od ikon, wystaje ok. 50 % nad menu, klikalna po przewinięciu');
+    const ids = [...nav.children].map(e => e.id || e.dataset.tab).join(','), bt = nav.querySelector('button').getBoundingClientRect(), dy = Math.abs((c.top + c.height / 2) - (bt.top + bt.height / 2));
+    return ids === 'map,explore,atlasFloat,plans,profile' && c.width >= ic.width * 3 && dy <= 4 && !document.querySelector('header #atlasFloat') && !!document.elementFromPoint(c.left + c.width / 2, c.top + c.height / 2)?.closest('#atlasFloat');
+  }), 'Warszawa: pływająca mapa Polski w środku dolnego menu, większa od ikon, wycentrowana w pionie z ikonami menu, klikalna po przewinięciu');
 
   // 8.3: wybór rodzajów atrakcji przed mapą; Wikipedia i dziennik w szczegółach atrakcji
   check(await page.evaluate(() => !!(document.querySelector('#interestSection').compareDocumentPosition(document.querySelector('#mapSection')) & Node.DOCUMENT_POSITION_FOLLOWING)

@@ -1,6 +1,6 @@
 # CLAUDE.md — I Was Here / Places & Memories
 
-Aktualizacja 2026-11-13: wersja 8.10.2 (duże przyciski krasnali), 8.10.1 (poprawka napisów w stylu Noc), wersja 8.10.0 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) z ciepłą mapą „Pergamin” w stylu Atlas, cache `i-was-here-v8-13-0-20261113`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
+Aktualizacja 2026-11-13: wersja 8.10.2 (duże przyciski krasnali), 8.10.1 (poprawka napisów w stylu Noc), wersja 8.10.0 — motyw „kulki na torze” (niebieski, błękitny akcent `#28A6F4`, żółty) z ciepłą mapą „Pergamin” w stylu Atlas, cache `i-was-here-v8-13-1-20261114`; paleta poniżej w sekcji *Binding UI decisions* jest już nowa.
 
 Aktualizacja gałęzi 2026-11-09: 8.8.0, kolekcja 769 krasnali OSM (`data/wroclaw-krasnale.json`, importer `tools/import_wroclaw_dwarfs.py`), 982 punkty regionalne łącznie; historie ≥10 zdań nadal dotyczą 213 atrakcji redakcyjnych. Nowy test: `CHROMIUM_PATH=/usr/bin/chromium node tools/test_dwarfs.js` (zmienna opcjonalna). Cache `i-was-here-v8-8-0-20261109`. Poniższy opis 8.7 to punkt wyjścia; bieżący zakres w PROJECT_STATUS.md.
 
@@ -59,7 +59,7 @@ IndexedDB: `iwh_journal` (keys `reg:<placeId>`, `waw:<attractionId>`, `atlas:<it
 
 ## Binding UI decisions (details in `DECYZJE_PROJEKTOWE.md`)
 - **Logo:** landscape pin **left of** the wordmark „PLACES & MEMORIES / I WAS HERE”, top-left; the logo is not a link.
-- **Poland map button (8.11.0):** the green tile is the **centre item of the bottom menu** (`#atlasFloat.poland-fab` inside `#appNav`), larger than the icons (76 px; 66 px ≤360 px) and protruding ~50 % above the menu. It always leads to the whole map of Poland; in the Atlas it calls `home()` without a reload. Stamps are no longer in the menu; they open from the Profile.
+- **Poland map button (8.11.0):** the green tile is the **centre item of the bottom menu** (`#atlasFloat.poland-fab` inside `#appNav`), larger than the icons (76 px; 66 px ≤360 px) and vertically centred with the menu icons (8.13.1; it no longer protrudes). It always leads to the whole map of Poland; in the Atlas it calls `home()` without a reload. Stamps are no longer in the menu; they open from the Profile.
 - **Palette (8.9.0, „marbles on a track” theme):** navy `#0C2C59`, light-blue accent `#28A6F4` (dark text `#061938` on it), yellow `#FFD84A`, blue land, pale-blue backgrounds `#E2ECF8`, teal `#3FA396` for success; `assets/theme-marbles.css` loads last. Serif italic brand wordmark. (Older 7.0 palette navy/amber/olive/cream is in `DECYZJE_PROJEKTOWE.md`.)
 - **Atlas map (8.10.0, style Atlas only):** „Pergamin” — cream land, turquoise sea `#5EAEB9`, terracotta mountains (recoloured `poland-relief.webp`), green forests, orange pins `#E5541B`; styles Light/Night/Terrain keep their own colours.
 - **City motifs:** postage stamps (owner's choice, style 5), with a „✓” postmark when the city is visited.
