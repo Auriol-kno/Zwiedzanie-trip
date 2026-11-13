@@ -57,3 +57,11 @@ body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .
 body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#53738f"]{fill:#55823f}
 body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#6786a2"]{fill:#6f9a4d}
 body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [stroke="#a0b9cf"]{stroke:#b6d08c}
+
+/* ===== 8.10.1 — styl Noc: czytelne napisy =====
+   W stylu Noc zmienna --cream oznacza ciemne tło (#0e1533), a napisy na mapie i znak „I WAS HERE” brały z niej kolor,
+   więc były granatowe na granatowym; dodatkowo regułę stylu Noc z obrysem 5 px (specyficzność wyższa niż w pigułce) przykrywał tekst. Jawne jasne kolory tylko dla stylu Noc. */
+body[data-style=night] .city-label-pill .city-label{fill:#e9f2fe;stroke:none;paint-order:normal}
+body[data-style=night] .brand-name strong{color:#e9f2fe}
+body[data-style=night] .brand-name small{color:#ece0b5}
+body[data-style=night]{--pin-edge:#e9f2fe;--pin-dot:#0e1533}

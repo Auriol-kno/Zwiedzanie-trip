@@ -1,5 +1,11 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.10.1 — Styl Noc: czytelne napisy (2026-11-13, PR do scalenia po „Scal”)
+
+- Naprawiony stary błąd stylu **Noc** (z wersji sprzed 8.9.0): etykiety miast były czarnymi plamami, a „I WAS HERE” granatowe na granatowym. Przyczyny: w stylu Noc zmienna `--cream` to ciemne tło `#0e1533`, z którego brały kolor napisy, oraz reguła obrysu 5 px (wyższa specyficzność niż pigułka etykiety) przykrywająca tekst.
+- `assets/theme-marbles.css`: blok „8.10.1” tylko dla `body[data-style=night]`: jasny tekst etykiet (bez obrysu), jasny napis „I WAS HERE” i „PLACES & MEMORIES”, jasne obrzeże pinezek. Style Atlas, Jasny i Teren bez zmian.
+- Cache: `i-was-here-v8-10-1-20261113`; `APP_VERSION` kopii JSON 8.10.1. Sprawdzone w Chromium iPhone 13 (zrzuty przed/po); nie testowane na prawdziwym iPhonie.
+
 ## 8.10.0 — Mapa „Pergamin”: ciepła, przyjazna kolorystyka Atlasu (2026-11-13, PR do scalenia po „Scal”)
 
 - Na polecenie właściciela (wzór: załączona grafika mapy, „troszeczkę cieplejsza”) styl **Atlas** ma nową kolorystykę mapy: kremowy ląd, turkusowe morze `#5EAEB9`, terakotowe góry, zielone lasy, pomarańczowe pinezki `#E5541B` i granica `#E5571C`, papierowe kraje sąsiednie `#F6EAD0`, ciepłe rzeki i jeziora `#4AA0B5`. Wybrany spośród pięciu wariantów (A „Pergamin”; B–E: Leśna, Miętowa, Lawenda, Lodowy błękit).
@@ -7,7 +13,7 @@
 - `assets/theme-marbles.css`: reguły ograniczone do stylu Atlas (`body:not([data-style=light]):not([data-style=night]):not([data-style=terrain])`): tło morza (`#atlasApp`), sąsiedzi, granice, rzeki, ciemne napisy skali/kompasu/źródła na jasnym lądzie, zielone drzewa (`.atlas-forest`). `assets/atlas-premium.css`: pinezki miast czytają `--pin`, `--pin-edge`, `--pin-dot` (domyślnie jak dotąd `--amber`/`--cream`), stany odwiedzone/zaplanowane/wybrane bez zmian.
 - UI (menu, przyciski, błękitny akcent `#28A6F4`) bez zmian.
 - Cache: `i-was-here-v8-10-0-20261113`; `APP_VERSION` kopii JSON 8.10.0. Testy: sync_database (bez diffu), test_bundle, test_atlas, `node --check`, test_browser.js, test_dwarfs.js przeszły w Chromium (iPhone 13). Nie testowano na fizycznym iPhonie.
-- Znany, wcześniejszy błąd (nie dotyczy tej zmiany, jest też w wersji sprzed 8.9.0): w stylu **Noc** napisy miast to czarne plamy (obrys 5 px przykrywa tekst), a napis „I WAS HERE” jest ciemny na ciemnym tle.
+- Znany, wcześniejszy błąd stylu **Noc** (czarne plamy zamiast napisów miast, ciemne „I WAS HERE”) naprawiony w 8.10.1 na ciemnym tle.
 
 ## 8.9.1 — Główny akcent błękitny (2026-11-13, PR do scalenia po „Scal”)
 
