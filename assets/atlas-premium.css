@@ -64,8 +64,8 @@ body:not([data-style=light]) .region-outline{stroke:var(--amber-2);fill:rgba(255
 
 /* ---------- pinezki miast: stały rozmiar na ekranie, status odwiedzin */
 .city-dot{cursor:pointer;outline:none}
-.city-dot .pin{fill:var(--amber);stroke:var(--cream);stroke-width:1.6;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
-.city-dot .pin-dot{fill:var(--cream)}
+.city-dot .pin{fill:var(--pin,var(--amber));stroke:var(--pin-edge,var(--cream));stroke-width:1.6;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}
+.city-dot .pin-dot{fill:var(--pin-dot,var(--cream))}
 .city-dot .pin-shadow{fill:rgba(0,0,0,.35)}
 .city-dot .pin-mark{font:900 8px/1 system-ui,-apple-system,sans-serif;fill:#17253b;pointer-events:none}
 .city-dot.st-visited .pin{fill:#3fa396}

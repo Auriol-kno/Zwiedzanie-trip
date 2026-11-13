@@ -29,3 +29,31 @@
 @media(prefers-reduced-motion:no-preference){
   .tabbar button.active,.app-nav:not(.tabbar) button.active{transition:box-shadow .2s ease}
 }
+
+/* ===== 8.10.0 — mapa „Pergamin”: ciepła, przyjazna kolorystyka stylu Atlas =====
+   Dotyczy tylko stylu domyślnego (Atlas); Jasny, Noc i Teren zachowują własne kolory.
+   Kremowy ląd, turkusowe morze, terakotowe góry (relief w assets/poland-relief.webp), pomarańczowe pinezki. */
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]){
+  --olive:#fdefc3;--water:#4aa0b5;
+  --pin:#e5541b;--pin-edge:#fff4e0;--pin-dot:#fff4e0;
+}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) #atlasApp{background:radial-gradient(ellipse at 52% 18%,#6dbac4 0%,#5eaeb9 55%,#4f9fb0 100%)}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .neighbour{fill:#f6ead0;stroke:#e0cc9f}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .relief{opacity:.95}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .country-shadow{opacity:.18}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .country-border{stroke:#e5571c;opacity:1;stroke-width:1.6px;filter:none}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .prov-line{stroke:#b4803f;opacity:.75}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .prov-halo{stroke:#ffffff;opacity:.35}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-geo-river{stroke:#4aa0b5}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-geo-lake{fill:#4aa0b5;stroke:#4aa0b5}
+/* napisy skali, kompas i źródło na jasnym lądzie: granat */
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .compass,
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .scale-text,
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .attribution{color:#12306a;fill:#12306a;text-shadow:none}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .scale{color:#12306a;border-color:#12306a}
+/* lasy: zieleń zamiast niebiesko-szarego */
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#45536a"]{fill:#5b4630}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#365d80"]{fill:#3f6b3a}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#53738f"]{fill:#55823f}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#6786a2"]{fill:#6f9a4d}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [stroke="#a0b9cf"]{stroke:#b6d08c}
