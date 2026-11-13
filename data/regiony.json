@@ -7212,6 +7212,370 @@
     "pl": "Zamek w Smoleniu",
     "en": null
    }
+  },
+  {
+   "id": "gd-mariacka",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Bazylika Mariacka",
+    "en": "St. Mary's Basilica"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 60,
+   "visitValue": 5,
+   "lat": 54.34953,
+   "lon": 18.65296,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Jeden z największych ceglanych kościołów świata, z widokiem z wieży na całe Główne Miasto.",
+    "en": "One of the largest brick churches in the world, with a tower view over the whole Main Town."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-zbrojownia",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Wielka Zbrojownia",
+    "en": "Great Armoury"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 54.34978,
+   "lon": 18.64882,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Manierystyczny arsenał z 1605 roku z bogatą fasadą od strony ulicy Piwnej.",
+    "en": "A Mannerist arsenal from 1605 with a richly decorated façade facing Piwna Street."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-wielki-mlyn",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Wielki Młyn",
+    "en": "Great Mill"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 54.35452,
+   "lon": 18.64893,
+   "icon": "⚙️",
+   "url": null,
+   "desc": {
+    "pl": "Gotycki młyn Zakonu Krzyżackiego z XIV wieku, dziś miejsce spotkań i handlu.",
+    "en": "A Gothic mill of the Teutonic Order from the fourteenth century, today a place for meetings and shopping."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-sw-katarzyny",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Kościół św. Katarzyny",
+    "en": "St. Catherine's Church"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 54.35418,
+   "lon": 18.64397,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Najstarsza gdańska świątynia parafialna z wieżą i zabytkowym carillonem.",
+    "en": "The oldest parish church in Gdańsk, with a tower and a historic carillon."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-wisloujscie",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Twierdza Wisłoujście",
+    "en": "Wisłoujście Fortress"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 54.39556,
+   "lon": 18.78119,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Ceglana twierdza strzegła wejścia do portu w ujściu Wisły od XVI wieku.",
+    "en": "A brick fortress guarding the port entrance at the Vistula mouth since the sixteenth century."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-sukiennice",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Sukiennice",
+    "en": "Cloth Hall"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 60,
+   "visitValue": 5,
+   "lat": 50.06179,
+   "lon": 19.93732,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowa hala handlowa w środku Rynku z galerią sztuki polskiej na piętrze.",
+    "en": "A Renaissance trading hall in the middle of the Market Square with a gallery of Polish art upstairs."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-barbakan",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Barbakan i Brama Floriańska",
+    "en": "Barbican and St. Florian's Gate"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 5,
+   "lat": 50.06542,
+   "lon": 19.94148,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Gotycki barbakan z 1498 roku i fragment średniowiecznych murów miejskich.",
+    "en": "A Gothic barbican from 1498 and a stretch of the medieval city walls."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-collegium-maius",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Collegium Maius",
+    "en": "Collegium Maius"
+   },
+   "cats": [
+    "history",
+    "museum"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.06142,
+   "lon": 19.93358,
+   "icon": "🎓",
+   "url": null,
+   "desc": {
+    "pl": "Najstarszy budynek Uniwersytetu Jagiellońskiego z muzeum i arkadowym dziedzińcem.",
+    "en": "The oldest building of the Jagiellonian University with a museum and an arcaded courtyard."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-kopiec-kosciuszki",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Kopiec Kościuszki",
+    "en": "Kościuszko Mound"
+   },
+   "cats": [
+    "history",
+    "view"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 50.05508,
+   "lon": 19.89304,
+   "icon": "⛰️",
+   "url": null,
+   "desc": {
+    "pl": "Usypany w 1820–1823 roku kopiec z widokiem na miasto i Tatry w pogodne dni.",
+    "en": "A mound raised in 1820–1823 with views over the city and, on clear days, the Tatra Mountains."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-smocza-jama",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Smocza Jama i Wzgórze Wawelskie",
+    "en": "Dragon's Den and Wawel Hill"
+   },
+   "cats": [
+    "history",
+    "hidden"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 50.05373,
+   "lon": 19.93412,
+   "icon": "🐉",
+   "url": null,
+   "desc": {
+    "pl": "Jaskinia pod Wawelem związana z legendą o smoku i szewcu Skubie.",
+    "en": "A cave under Wawel linked to the legend of the dragon and the shoemaker Skuba."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-ratusz",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Ratusz w Poznaniu",
+    "en": "Poznań Town Hall"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 45,
+   "visitValue": 5,
+   "lat": 52.40818,
+   "lon": 16.93358,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowy ratusz z słynnymi koziołkami, które trykają się w południe.",
+    "en": "A Renaissance town hall famous for its goats that butt heads at noon."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-fara",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Fara Poznańska",
+    "en": "Poznań Parish Church of St. Stanislaus"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 52.40443,
+   "lon": 16.93666,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Barokowy kościół z bogato zdobionym wnętrzem w stylu poznańskim.",
+    "en": "A Baroque church with a richly decorated interior in the Poznań style."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-zamek-cesarski",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Zamek Cesarski",
+    "en": "Imperial Castle"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 52.40176,
+   "lon": 16.91425,
+   "icon": "🏰",
+   "url": null,
+   "desc": {
+    "pl": "Neoromański zamek zbudowany dla cesarza Wilhelma II w latach 1905–1910.",
+    "en": "A neo-Romanesque castle built for Emperor Wilhelm II in 1905–1910."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-cytadela",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Cytadela Poznańska",
+    "en": "Poznań Citadel"
+   },
+   "cats": [
+    "history",
+    "park"
+   ],
+   "time": 90,
+   "visitValue": 4,
+   "lat": 52.41667,
+   "lon": 16.93833,
+   "icon": "🌳",
+   "url": null,
+   "desc": {
+    "pl": "Dawna twierdza pruska zamieniona w park z muzeami i cmentarzami wojennymi.",
+    "en": "A former Prussian fortress turned into a park with museums and war cemeteries."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
   }
  ],
  "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",
