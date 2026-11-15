@@ -24,7 +24,7 @@ city_block = atlas_js.split('const CITIES=[',1)[1].split('];',1)[0]
 cities = re.findall(r"\bid:'([^']+)'",city_block)
 assert len(cities) == 14 and len(set(cities)) == 14 and "kielce" in cities, "Atlas ma mieć 14 unikalnych miast (z Kielcami)."
 assert "id:'warsaw'" in city_block and 'ready:true' in city_block, "Warszawa musi być aktywna."
-assert ".top{position:sticky;top:0" in nav and "brand-mark.svg" in home, "Logo z mapą Polski musi być zawsze widoczne u góry."
+assert ".top{position:sticky;top:0" in nav and "brand-mark-nav.svg" in home, "Logo z mapą Polski musi być zawsze widoczne u góry."
 assert "atlas-chip" not in home, "Mapa jest częścią logo (jeden znak), bez osobnej ikonki."
 for f in ("atlas.html","assets/atlas.css","assets/atlas.js","assets/i18n4.js","assets/nav4.css","assets/poland-mark.svg","assets/brand-mark.svg","assets/brand-pin-landscape.svg","assets/app-nav.js","assets/app-nav.css"):
     assert f in sw, "PWA nie buforuje: " + f
@@ -190,7 +190,7 @@ print("OK: I Was Here 5.0 branding, illustrated atlas, 16 provinces, 14 accurate
 extras = (ROOT / "assets/place-extras.js").read_text(encoding="utf-8")
 for page in ("atlas.html", "index.html", "region.html"):
     src = (ROOT / page).read_text(encoding="utf-8")
-    assert "place-extras.js" in src and "place-extras.css" in src and "brand-mark.svg" in src, page
+    assert "place-extras.js" in src and "place-extras.css" in src and ("brand-mark.svg" in src or "brand-mark-nav.svg" in src), page
 for f in ("./assets/place-extras.js", "./assets/place-extras.css", "./assets/brand-mark.svg"):
     assert f in sw, "Brak w cache offline: " + f
 assert "MAX_PHOTOS=5" in extras and "indexedDB" in extras and 'accept="image/*" multiple' in extras, "Dziennik: do 5 zdjęć z biblioteki"

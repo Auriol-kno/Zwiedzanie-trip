@@ -1,5 +1,13 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.15.0 — Dłoń „kliknij”, pojedyncza ramka, zwarty układ, atrakcje partia 4 (2026-11-15)
+
+- **Mapa Polski w menu:** pojedyncza ramka (usunięty żółty pierścień CSS; zostaje złota ramka kafelka), zaokrąglenie dopasowane do kafelka, a zamiast niebieskiej pinezki w kafelku jest dłoń „kliknij” (`assets/brand-mark-nav.svg`, generowany przez `tools/build_nav_mark.py` z `brand-mark.svg`; ikona touch_app, Material Icons, Apache-2.0; delikatny ruch dotknięcia, wyłączany przy `prefers-reduced-motion`). Logo `brand-mark.svg` bez zmian.
+- **Zwarty układ:** mniejsze odstępy w menu (wysokość 56 px, przyciski 48 px, FAB nadal 76 px i wycentrowany), w dolnym panelu Atlasu (chipy miast i województw) oraz w przewodniku regionu (hero, kafelki, tytuły sekcji, chipy, wyszukiwarka, karta planu dnia).
+- **Atrakcje, partia 4:** 14 nowych miejsc z historiami ≥10 zdań PL i EN: Kraków (Muzeum Czartoryskich, Kościół św. Piotra i Pawła, Planty), Gdańsk (Złota Brama, Zielona Brama), Poznań (Jezioro Maltańskie, Brama Poznania, Stary Browar), Wrocław (Hala Targowa, Dworzec Główny), Łódź (Cmentarz Żydowski, Pasaż Róży), Lublin (Plac Litewski), Bydgoszcz (Kanał Bydgoski). Współrzędne orientacyjne, linki Wikipedii niesprawdzone. Razem 270 historii redakcyjnych.
+- Cache `i-was-here-v8-15-0-20261115`, `APP_VERSION` 8.15.0.
+
+
 ## 8.14.0 — Atrakcje miast, partia 3 (2026-11-14)
 
 - 12 nowych atrakcji z historiami ≥10 zdań PL i EN: Białystok (Centrum Zamenhofa), Rzeszów (Zamek Lubomirskich), Olsztyn (Wysoka Brama, Konkatedra św. Jakuba), Opole (Katedra, Amfiteatr), Bydgoszcz („Przechodzący przez rzekę”, Katedra), Gdynia (Dar Pomorza, Klif Orłowski), Sopot (Krzywy Domek, Grand Hotel). Zielona Góra i Gorzów bez nowych pozycji (Kielce miały już 14).

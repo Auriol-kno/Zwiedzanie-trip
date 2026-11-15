@@ -239,6 +239,54 @@
     "Today the Citadel is one of the largest parks in the city. It contains the Armaments Museum, the Poznań Army Museum and war cemeteries. There are also sculptures by Magdalena Abakanowicz, titled \"Unrecognised Ones\".",
     "It is worth planning several hours for a visit, because the area is extensive. In spring and summer the park is full of walkers and cyclists."
    ]
+  },
+  "po-malta": {
+   "pl": [
+    "Jezioro Maltańskie w Poznaniu to sztuczny zbiornik wodny, który powstał w 1952 roku. Zbudowano je przez przegrodzenie rzeki Cybiny zaporą. Pierwotnie miało służyć jako tor regatowy.",
+    "Akwen ma około dwóch kilometrów długości i jest ważnym ośrodkiem sportów wodnych. Odbywają się tu zawody wioślarskie i kajakowe, w tym zawody rangi światowej. W pobliżu działa tor kajakowy i obiekty sportowe.",
+    "Wokół jeziora biegną ścieżki spacerowe i rowerowe. W okolicy znajdują się place zabaw, restauracje i tereny zielone. Wielu poznaniaków spędza tu wolny czas.",
+    "Nad jeziorem działa także całoroczny ośrodek sportowy z narciarskim stokiem i parkiem wodnym. Co roku odbywa się tu festiwal teatralny Malta Festival Poznań, który nawiązuje do nazwy miejsca. Festiwal przyciąga artystów z całego świata.",
+    "W pobliżu leży Nowe Zoo, jeden z ogrodów zoologicznych w mieście. Wokół jeziora najlepiej przejść pieszo albo przejechać rowerem. Pełna pętla zajmuje około dwóch godzin."
+   ],
+   "en": [
+    "Lake Malta in Poznań is an artificial reservoir created in 1952. It was formed by damming the Cybina river. Originally it was meant to serve as a regatta course.",
+    "The body of water is about two kilometres long and is an important centre of water sports. Rowing and canoeing competitions are held here, including world-class events. A canoe course and sports facilities operate nearby.",
+    "Walking and cycling paths run around the lake. In the area there are playgrounds, restaurants and green spaces. Many people from Poznań spend their free time here.",
+    "By the lake there is also a year-round sports centre with a ski slope and a water park. Every year the Malta Festival Poznań, a theatre festival named after the place, is held here. The festival attracts artists from all over the world.",
+    "Nearby lies the New Zoo, one of the zoos in the city. Around the lake it is best to walk or cycle. A full loop takes about two hours."
+   ]
+  },
+  "po-brama-poznania": {
+   "pl": [
+    "Brama Poznania to Interaktywne Centrum Historii Ostrowa Tumskiego, otwarte w 2014 roku. Stoi przy rzece Cybinie, naprzeciw katedry na Ostrowie Tumskim. Jest nowoczesnym budynkiem o charakterystycznej, geometrycznej bryle.",
+    "Centrum opowiada o początkach państwa polskiego, które według historyków zrodziło się w X wieku na terenie Wielkopolski. Ostrów Tumski był jednym z głównych ośrodków władzy pierwszych Piastów. W Poznaniu miał siedzibę pierwszy biskup Polski, Jordan.",
+    "Ekspozycja ma charakter interaktywny i multimedialny. Zwiedzający wędrują przez kolejne sale, w których mogą dotykać ekranów i oglądać filmy. Wystawa łączy historię z nowoczesną technologią.",
+    "Obiekt nawiązuje do dawnej bramy, która prowadziła do grodu na wyspie. Z okien i z otoczenia widać katedrę na Ostrowie Tumskim.",
+    "Warto połączyć wizytę z obejrzeniem katedry i Ostrowa Tumskiego. Zwiedzanie zajmuje około półtorej godziny. W pobliżu wzdłuż rzeki prowadzi malownicza ścieżka spacerowa."
+   ],
+   "en": [
+    "The Gate of Poznań is the Interactive Centre of the History of Ostrów Tumski, opened in 2014. It stands by the Cybina river, opposite the cathedral on Ostrów Tumski. It is a modern building with a distinctive geometric body.",
+    "The centre tells about the beginnings of the Polish state, which according to historians arose in the tenth century in Greater Poland. Ostrów Tumski was one of the main centres of power of the first Piasts. The first bishop of Poland, Jordan, had his seat in Poznań.",
+    "The exhibition is interactive and multimedia. Visitors move through successive rooms where they can touch screens and watch films. The exhibition combines history with modern technology.",
+    "The building refers to the former gate that led to the stronghold on the island. The cathedral on Ostrów Tumski can be seen from the windows and the surroundings.",
+    "It is worth combining the visit with seeing the cathedral and Ostrów Tumski. The visit takes about an hour and a half. Nearby a picturesque walking path runs along the river."
+   ]
+  },
+  "po-stary-browar": {
+   "pl": [
+    "Stary Browar w Poznaniu to dawny browar założony w XIX wieku przez Ludwika Huggera. Budynki z czerwonej cegły stoją przy ulicy Półwiejskiej. Produkcja piwa trwała tu do lat 80. XX wieku.",
+    "Po zamknięciu browaru obiekt długo niszczał. Na przełomie wieków postanowiono przekształcić go w centrum handlowe i kulturalne. Prace ukończono w 2003 roku, a inwestorką była Grażyna Kulczyk.",
+    "Projekt nowego wnętrza zachował dawną architekturę przemysłową. Budowniczowie odnowili ceglane elewacje i stalową konstrukcję. W środku powstały pasaże, sklepy i galerie sztuki.",
+    "Stary Browar jest znany nie tylko z handlu, ale i z działalności artystycznej. Działa tu Stary Browar Nowy Taniec i organizowane są wystawy sztuki współczesnej. Wiele wydarzeń odbywa się w przestrzeni wspólnej.",
+    "Obiekt wyróżniono licznymi nagrodami architektonicznymi. Dobrze pokazuje, jak można dać nowe życie dawnej fabryce. Do centrum łatwo dojść pieszo ze Starego Rynku."
+   ],
+   "en": [
+    "Stary Browar in Poznań is a former brewery founded in the nineteenth century by Ludwik Hugger. The red-brick buildings stand on Półwiejska Street. Beer was produced here until the 1980s.",
+    "After the brewery closed the site decayed for a long time. At the turn of the century it was decided to turn it into a shopping and cultural centre. The work was completed in 2003, and the investor was Grażyna Kulczyk.",
+    "The design of the new interior preserved the former industrial architecture. The builders restored the brick façades and the steel structure. Inside, arcades, shops and art galleries were created.",
+    "Stary Browar is known not only for trade but also for artistic activity. The Stary Browar Nowy Taniec operates here, and exhibitions of contemporary art are organised. Many events are held in the common spaces.",
+    "The complex has received numerous architectural awards. It shows well how a former factory can be given new life. The centre is easy to reach on foot from the Old Market Square."
+   ]
   }
  }
 }

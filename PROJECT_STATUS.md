@@ -1,5 +1,11 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.15.0 — Dłoń w menu, zwarty układ, atrakcje partia 4 (2026-11-15)
+- Pojedyncza ramka i dłoń „kliknij” w kafelku mapy Polski w menu; zwarty układ menu, panelu Atlasu i przewodnika regionu (CHANGELOG.md, DECYZJE_PROJEKTOWE.md §16). Po zmianie `brand-mark.svg` uruchomić `tools/build_nav_mark.py`.
+- 14 nowych atrakcji (razem 270 historii redakcyjnych), współrzędne orientacyjne.
+- **Następne zadanie:** weryfikacja współrzędnych i Wikipedii tam, gdzie jest sieć; kolejne atrakcje (Rzeszów, Białystok, Zielona Góra, Gorzów wciąż mają mało pozycji, bo brak pewnych faktów); kolekcje tematyczne (murale).
+- Do sprawdzenia przez właściciela: wygląd zwartego układu i dłoni na prawdziwym iPhonie.
+
 ## 8.14.0 — Atrakcje miast, partia 3 (2026-11-14)
 - Dodano 12 atrakcji (razem 256 historii redakcyjnych). Współrzędne orientacyjne.
 - **Następne zadanie:** weryfikacja współrzędnych i Wikipedii (`verify_coordinates.py`, `wiki_links.py`) tam, gdzie jest sieć; dalsze atrakcje (Rzeszów, Białystok, Zielona Góra, Gorzów mają mało pozycji); kolekcje tematyczne (murale).

@@ -132,3 +132,8 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 
 ## 15. Mapa Polski wycentrowana w menu — 2026-11-14 (nowsza decyzja właściciela)
 - Mapa Polski w dolnym menu nie wystaje już nad menu: jest wycentrowana w pionie z ikonami, większa od nich, rozmiar bez zmian. Zastępuje zapis o wystawaniu ok. 50 % z §14.
+
+## 16. Mapa Polski w menu: pojedyncza ramka i dłoń; zwarty układ — 2026-11-15 (decyzja właściciela)
+- Kafelek mapy Polski w dolnym menu ma jedną ramkę, a zamiast punktu (pinezki) pokazuje dłoń sugerującą kliknięcie. Rozmiar i wycentrowanie bez zmian (§15).
+- Cały interfejs ma być bardziej zwarty (mniej „rozstrzelony”): mniejsze odstępy, niższe menu.
+- Atrakcje dopisujemy dalej w miastach z listy, z obszernymi opisami (≥10 zdań PL i EN).

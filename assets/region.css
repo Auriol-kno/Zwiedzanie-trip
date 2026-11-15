@@ -126,3 +126,31 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .dwarf-btn:active{transform:scale(.98)}
 .dwarf-btn:focus-visible{outline:3px solid #FFD84A;outline-offset:2px}
 @media(min-width:560px){.dwarf-actions{grid-template-columns:1fr 1fr}}
+
+/* 8.15.0 — bardziej zwarty układ (decyzja właściciela: „wszystko za bardzo rozstrzelone”) */
+.hero{padding:16px 18px 18px;border-radius:22px;margin-top:2px}
+.hero h1{margin:6px 0 5px}
+.hero p{font-size:12.5px;line-height:1.45}
+.stats{gap:8px;margin:10px 0 2px}
+.stat{padding:9px 11px;border-radius:15px}
+.stat small{margin-bottom:3px}
+.stat strong{font-size:18px}
+.section-title{margin:16px 0 8px}
+.section-title h2{font-size:19px}
+.filters{margin-top:8px}
+.filters .section-title{margin-top:12px}
+.chips{gap:6px;padding:2px 0 4px}
+.chip{padding:7px 11px}
+.search{padding:8px 10px;border-radius:14px}
+.search span{margin-bottom:4px}
+.search input{min-height:36px;padding:7px 10px}
+.card{padding:2px 14px 12px;margin-top:12px;border-radius:20px}
+.card .section-title{margin-top:10px}
+.plan-grid{gap:8px}
+.field span{margin-bottom:4px}
+.field select,.field input{min-height:40px;padding:8px 10px}
+.modes{gap:6px;margin-top:8px}
+.modes button{min-height:42px}
+.plan-list{margin:8px 0 0}
+.plan-list li{padding:8px 0;gap:10px}
+.plan-actions{margin-top:8px}

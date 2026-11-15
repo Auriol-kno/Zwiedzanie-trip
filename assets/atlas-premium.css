@@ -3,7 +3,7 @@
  * mają spójną kolorystykę. Style: atlas (domyślny), light (dawny jasny atlas), night, terrain. */
 body{--navy:#0A254F;--navy-2:#061938;--olive:#486985;--olive-2:#618DB3;--water:#2A6FC8;--sand:#ECE0B5;--amber:#28A6F4;--amber-2:#FFD84A;--cream:#E9F2FE;
  --ui-bg:rgba(6,25,56,.92);--ui-panel:#0C2C59;--ui-fg:#E9F2FE;--ui-sub:#c3ccd4;--ui-line:rgba(236,224,181,.22);--ui-chip:rgba(233,242,254,.07);--ui-accent:#28A6F4;--ui-accent-fg:#070e1a;
- --tabbar-h:calc(62px + env(safe-area-inset-bottom,0px))}
+ --tabbar-h:calc(56px + env(safe-area-inset-bottom,0px))}
 body[data-style=light]{--ui-bg:rgba(240,246,254,.96);--ui-panel:#f4f8fe;--ui-fg:#23413a;--ui-sub:#5d6a75;--ui-line:#c3cfdb;--ui-chip:#f6faff;--ui-accent:#2498e0;--ui-accent-fg:#ffffff;--water:#5c8fd5}
 body[data-style=night]{--ui-bg:rgba(4,13,31,.94);--ui-panel:#091a38;--ui-sub:#a8b9b9}
 body[data-style=terrain]{--ui-panel:#16352f;--ui-bg:rgba(10,33,28,.93)}
@@ -317,3 +317,10 @@ body[data-focus=region] .city-landmark{opacity:1}
 .ud-preview details{margin:0 0 8px;font-size:12px}
 .ud-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
 @media(max-width:360px){.ud-actions{grid-template-columns:1fr}}
+
+/* 8.15.0 — bardziej zwarty dolny panel Atlasu i menu */
+.atlas-bottom{padding:10px 10px 6px!important}
+.atlas-bottom .browse-title{padding:0 4px 5px}
+.city-strip{gap:6px;padding:0 1px 8px}
+.city-chip{min-height:34px;padding:5px 10px}
+.tabbar{padding:4px 8px calc(4px + env(safe-area-inset-bottom,0px))}
