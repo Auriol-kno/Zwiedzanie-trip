@@ -8330,6 +8330,370 @@
    "coordinateStatus": "orientacyjne",
    "sourceKind": "redakcyjna_selekcja",
    "updated": "2026-11"
+  },
+  {
+   "id": "kr-czartoryski",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Muzeum Książąt Czartoryskich",
+    "en": "Czartoryski Museum"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 90,
+   "visitValue": 5,
+   "lat": 50.06525,
+   "lon": 19.94094,
+   "icon": "🖼️",
+   "url": null,
+   "desc": {
+    "pl": "Jedno z najstarszych muzeów w Polsce z „Damą z gronostajem” Leonarda da Vinci.",
+    "en": "One of the oldest museums in Poland, home to Leonardo da Vinci's \"Lady with an Ermine\"."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-piotra-pawla",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Kościół św. Piotra i Pawła",
+    "en": "Church of SS. Peter and Paul"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 50.05772,
+   "lon": 19.93903,
+   "icon": "⛪",
+   "url": null,
+   "desc": {
+    "pl": "Pierwszy barokowy kościół Krakowa z rzędem figur apostołów przed wejściem.",
+    "en": "The first Baroque church in Kraków, with a row of apostle statues before the entrance."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "kr-planty",
+   "region": "malopolskie",
+   "town": "Kraków",
+   "name": {
+    "pl": "Planty Krakowskie",
+    "en": "Planty Park"
+   },
+   "cats": [
+    "park",
+    "history"
+   ],
+   "time": 45,
+   "visitValue": 4,
+   "lat": 50.06292,
+   "lon": 19.93756,
+   "icon": "🌳",
+   "url": null,
+   "desc": {
+    "pl": "Zielony pierścień parku wokół Starego Miasta, założony na miejscu dawnych murów obronnych.",
+    "en": "A green ring of parkland around the Old Town, laid out on the site of the former defensive walls."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-zlota-brama",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Złota Brama",
+    "en": "Golden Gate"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 15,
+   "visitValue": 4,
+   "lat": 54.34926,
+   "lon": 18.64707,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowa brama z 1614 roku zamykająca zachodni koniec Drogi Królewskiej.",
+    "en": "A Renaissance gate from 1614 closing the western end of the Royal Way."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "gd-zielona-brama",
+   "region": "pomorskie",
+   "town": "Gdańsk",
+   "name": {
+    "pl": "Zielona Brama",
+    "en": "Green Gate"
+   },
+   "cats": [
+    "history",
+    "architecture"
+   ],
+   "time": 15,
+   "visitValue": 4,
+   "lat": 54.34954,
+   "lon": 18.65681,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Renesansowa brama nad Motławą z lat 1564–1568, dawna rezydencja królewska.",
+    "en": "A Renaissance gate on the Motława from 1564–1568, formerly a royal residence."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-malta",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Jezioro Maltańskie",
+    "en": "Lake Malta"
+   },
+   "cats": [
+    "park",
+    "family"
+   ],
+   "time": 90,
+   "visitValue": 4,
+   "lat": 52.40203,
+   "lon": 16.97745,
+   "icon": "🏞️",
+   "url": null,
+   "desc": {
+    "pl": "Sztuczne jezioro z 1952 roku, tor regatowy i największy teren rekreacyjny Poznania.",
+    "en": "An artificial lake from 1952, a regatta course and Poznań's biggest recreation area."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-brama-poznania",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Brama Poznania ICHOT",
+    "en": "Gate of Poznań (ICHOT)"
+   },
+   "cats": [
+    "museum",
+    "history"
+   ],
+   "time": 75,
+   "visitValue": 4,
+   "lat": 52.41286,
+   "lon": 16.95005,
+   "icon": "🏛️",
+   "url": null,
+   "desc": {
+    "pl": "Nowoczesne interaktywne centrum o początkach państwa polskiego na Ostrowie Tumskim.",
+    "en": "A modern interactive centre about the beginnings of the Polish state on Ostrów Tumski."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "po-stary-browar",
+   "region": "wielkopolskie",
+   "town": "Poznań",
+   "name": {
+    "pl": "Stary Browar",
+    "en": "Stary Browar"
+   },
+   "cats": [
+    "architecture",
+    "hidden"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 52.40332,
+   "lon": 16.92684,
+   "icon": "🏭",
+   "url": null,
+   "desc": {
+    "pl": "Dawny browar Huggera zamieniony w centrum handlu i sztuki, nagradzany za architekturę.",
+    "en": "The former Hugger brewery turned into a centre of shopping and art, praised for its architecture."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "wr-hala-targowa",
+   "region": "dolnoslaskie",
+   "town": "Wrocław",
+   "name": {
+    "pl": "Hala Targowa",
+    "en": "Market Hall"
+   },
+   "cats": [
+    "architecture",
+    "hidden"
+   ],
+   "time": 40,
+   "visitValue": 4,
+   "lat": 51.10985,
+   "lon": 17.03693,
+   "icon": "🛒",
+   "url": null,
+   "desc": {
+    "pl": "Żelbetowa hala z początku XX wieku, wciąż pełna straganów i lokalnych smaków.",
+    "en": "A reinforced concrete hall from the early twentieth century, still full of stalls and local flavours."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "wr-dworzec",
+   "region": "dolnoslaskie",
+   "town": "Wrocław",
+   "name": {
+    "pl": "Dworzec Główny",
+    "en": "Wrocław Główny Railway Station"
+   },
+   "cats": [
+    "architecture",
+    "history"
+   ],
+   "time": 25,
+   "visitValue": 4,
+   "lat": 51.09878,
+   "lon": 17.03626,
+   "icon": "🚉",
+   "url": null,
+   "desc": {
+    "pl": "Neogotycki dworzec z XIX wieku w stylu angielskiego Tudor Revival, wciąż w pełnym ruchu.",
+    "en": "A neo-Gothic nineteenth-century station in the English Tudor Revival style, still in full use."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lo-cmentarz-zydowski",
+   "region": "lodzkie",
+   "town": "Łódź",
+   "name": {
+    "pl": "Cmentarz Żydowski w Łodzi",
+    "en": "Jewish Cemetery in Łódź"
+   },
+   "cats": [
+    "monument",
+    "history"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 51.78078,
+   "lon": 19.47254,
+   "icon": "🕯️",
+   "url": null,
+   "desc": {
+    "pl": "Jedna z największych w Europie nekropolii żydowskich, założona w 1892 roku.",
+    "en": "One of the largest Jewish necropolises in Europe, founded in 1892."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lo-pasaz-rozy",
+   "region": "lodzkie",
+   "town": "Łódź",
+   "name": {
+    "pl": "Pasaż Róży",
+    "en": "Rose Passage"
+   },
+   "cats": [
+    "monument",
+    "hidden"
+   ],
+   "time": 15,
+   "visitValue": 4,
+   "lat": 51.77935,
+   "lon": 19.45568,
+   "icon": "🌹",
+   "url": null,
+   "desc": {
+    "pl": "Podwórko z mozaiką ze 50 tysięcy kawałków luster, dzieło Joanny Rajkowskiej.",
+    "en": "A courtyard with a mosaic of about 50,000 pieces of mirror, a work by Joanna Rajkowska."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "lu-plac-litewski",
+   "region": "lubelskie",
+   "town": "Lublin",
+   "name": {
+    "pl": "Plac Litewski i Unia Lubelska",
+    "en": "Lithuanian Square and the Union of Lublin"
+   },
+   "cats": [
+    "history",
+    "monument"
+   ],
+   "time": 30,
+   "visitValue": 4,
+   "lat": 51.24895,
+   "lon": 22.55318,
+   "icon": "🗿",
+   "url": null,
+   "desc": {
+    "pl": "Plac w centrum Lublina upamiętniający unię polsko-litewską z 1569 roku.",
+    "en": "A square in the centre of Lublin commemorating the Polish–Lithuanian union of 1569."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
+  },
+  {
+   "id": "by-kanal",
+   "region": "kujawsko-pomorskie",
+   "town": "Bydgoszcz",
+   "name": {
+    "pl": "Kanał Bydgoski i Bydgoski Węzeł Wodny",
+    "en": "Bydgoszcz Canal and Water Junction"
+   },
+   "cats": [
+    "history",
+    "park"
+   ],
+   "time": 60,
+   "visitValue": 4,
+   "lat": 53.12378,
+   "lon": 18.01145,
+   "icon": "🚤",
+   "url": null,
+   "desc": {
+    "pl": "Kanał z 1774 roku łączący dorzecza Wisły i Odry, dziś miejsce spacerów i rejsów.",
+    "en": "A canal from 1774 linking the Vistula and Oder basins, today a place for walks and cruises."
+   },
+   "coordinateStatus": "orientacyjne",
+   "sourceKind": "redakcyjna_selekcja",
+   "updated": "2026-11"
   }
  ],
  "coordinateSource": "OpenStreetMap Nominatim (© OpenStreetMap contributors, ODbL 1.0) — sprawdzone 2026-11-07",
