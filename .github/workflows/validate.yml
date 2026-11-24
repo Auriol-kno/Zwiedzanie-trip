@@ -40,6 +40,10 @@ jobs:
           node --check data/restauracje.js
           node --check service-worker.js
           node --check tools/test_browser.js
+          node --check assets/planer.js
+          node --check assets/app-nav.js
+          python tools/build_planner_data.py --check
+          node tools/test_planner.js
       - name: Node
         uses: actions/setup-node@v4
         with:
@@ -50,3 +54,4 @@ jobs:
           npx playwright install --with-deps chromium
           node tools/test_browser.js
           node tools/test_dwarfs.js
+          node tools/test_planner.js --browser

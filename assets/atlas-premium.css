@@ -324,3 +324,7 @@ body[data-focus=region] .city-landmark{opacity:1}
 .city-strip{gap:6px;padding:0 1px 8px}
 .city-chip{min-height:34px;padding:5px 10px}
 .tabbar{padding:4px 8px calc(4px + env(safe-area-inset-bottom,0px))}
+
+/* 8.16.0 — wejście do planera „dzień po dniu” w zakładce Plany */
+.city-action.auto-plan{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-decoration:none;text-align:left;margin-bottom:8px;background:radial-gradient(120% 90% at 30% 18%,#b3e2ff 0%,#45b8ff 30%,#28A6F4 62%,#0f73b1 100%);color:#061938;box-shadow:0 6px 16px rgba(40,166,244,.35),inset 0 2px 2px rgba(255,255,255,.6)}
+.city-action.auto-plan small{font-weight:600;opacity:.85;font-size:12px}

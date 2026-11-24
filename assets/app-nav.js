@@ -18,7 +18,7 @@ const I={
 const L={map:['Mapa','Map'],explore:['Odkrywaj','Explore'],plans:['Plany','Plans'],passport:['Pieczątki','Stamps'],profile:['Profil','Profile']};
 const ORDER=['map','explore','plans','profile'];
 nav.setAttribute('aria-label','Menu');
-const btn=k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>';
+const btn=k=>'<button type="button" data-tab="'+k+'"'+(k===(page==='atlas'?'map':page==='planner'?'plans':'explore')?' class="active" aria-current="page"':'')+' data-i18n-skip><svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg><b><span data-l="pl">'+L[k][0]+'</span><span data-l="en">'+L[k][1]+'</span></b></button>';
 // Pływająca mapa Polski (#atlasFloat) jest w HTML w środku menu; przyciski wstawiamy po obu jej stronach.
 const fab=nav.querySelector('#atlasFloat'),first=ORDER.slice(0,2).map(btn).join(''),last=ORDER.slice(2).map(btn).join('');
 if(fab){fab.insertAdjacentHTML('beforebegin',first);fab.insertAdjacentHTML('afterend',last)}else nav.innerHTML=first+last;
@@ -36,6 +36,7 @@ nav.addEventListener('click',e=>{
  const b=e.target.closest('[data-tab]');if(!b)return;const k=b.dataset.tab;
  if(k==='map'){location.href='./atlas.html?lang='+lang()+(region?'&region='+encodeURIComponent(region):'');return}
  if(k==='profile'){location.href='./atlas.html?lang='+lang()+'&tab=profile';return}
+ if(page==='planner'){location.href='./atlas.html?lang='+lang()+'&tab='+k;return} // 8.16: planer nie ma własnych sekcji — zakładki Atlasu
  const el=document.getElementById(TARGET[k]);if(el){el.scrollIntoView({behavior:'smooth',block:'start'});mark(k)}
 });
 window.IWH_NAV={mark};

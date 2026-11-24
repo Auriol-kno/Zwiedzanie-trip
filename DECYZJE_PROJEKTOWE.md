@@ -137,3 +137,9 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Kafelek mapy Polski w dolnym menu ma jedną ramkę, a zamiast punktu (pinezki) pokazuje dłoń sugerującą kliknięcie. Rozmiar i wycentrowanie bez zmian (§15).
 - Cały interfejs ma być bardziej zwarty (mniej „rozstrzelony”): mniejsze odstępy, niższe menu.
 - Atrakcje dopisujemy dalej w miastach z listy, z obszernymi opisami (≥10 zdań PL i EN).
+
+## 17. Planer „dzień po dniu” (8.16.0, prośba właściciela 2026-11-24)
+- Właściciel wskazał rolkę z aplikacją itinio jako wzór („te rozwiązania są bardzo dobre”). Przyjęte elementy: kreator miasto → liczba dni/daty → zainteresowania w strefach ★/polecaj/✕, pytanie „Chcesz plan dzień po dniu?”, ekran postępu, mapa z trasami w kolorach dni, „Pokaż wszystkie”, „Optymalizuj trasę”, karty z czasami przejść, „Otwórz w Mapach Google”.
+- Bez AI i bez kluczy API: planowanie liczy się w przeglądarce na naszych danych. Nie pokazujemy ocen gwiazdkowych ani zdjęć z Google — zostaje redakcyjna wartość wizyty 1–5 i uczciwe etykiety (szacunkowe czasy, współrzędne orientacyjne).
+- Kolory dni: morski, pomarańczowy, błękitny, żółty, malinowy, zielony, granatowy (paleta „kulki na torze”). Wejście z zakładki Plany Atlasu; dolne menu bez zmian.
+
