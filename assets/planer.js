@@ -365,7 +365,7 @@ let rt;root.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{i
 const lb=doc.getElementById('plLang');if(lb)lb.addEventListener('click',()=>setLang(lang==='pl'?'en':'pl'));
 
 function start(d){DATA=d;if(st.city&&!DATA.cities.some(c=>c.name===st.city))st.city=null;
- const q=new URLSearchParams(location.search).get('city');if(q&&DATA.cities.some(c=>c.name===q)){st.city=q;st.step='dur'}
+ const q=new URLSearchParams(location.search).get('city');if(q&&DATA.cities.some(c=>c.name===q)){st.city=q;st.step='dur'}else if(q){st.q=q}
  setLang(lang)}
 if(root.IWH_PLANNER_DATA)start(root.IWH_PLANNER_DATA);
 else fetch('./data/planer.json').then(r=>r.json()).then(start).catch(()=>{main.innerHTML='<p class="pl-empty">⚠ data/planer.json</p>'});

@@ -13,7 +13,7 @@ import json, math, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'data' / 'planer.json'
-MIN_PLACES = 5  # miasta z mniejszą liczbą miejsc nie trafiają na listę (za mało na plan dnia)
+MIN_PLACES = 2  # 8.20: także mniejsze miasta (np. Olsztyn, Białystok, Rzeszów) — plan uzupełniają miejsca w promieniu 40 km
 
 
 def km(a, b):

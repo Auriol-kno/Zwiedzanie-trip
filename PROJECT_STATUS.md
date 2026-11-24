@@ -1,5 +1,8 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.20.0 — „Zaplanuj za mnie” w miastach, „Nowy plan” z dodawaniem miejsc (2026-11-24)
+- Szczegóły w CHANGELOG.md. Planer: 27 miast.
+
 ## 8.19.0 — Czytelność i ustawienia domyślne (2026-11-24)
 - 0 napisów poniżej progu kontrastu (`tools/test_contrast.js`, w CI); domyślnie PL, warstwy: tylko „Miejscowości i atrakcje”, styl Atlas. Szczegóły w CHANGELOG.md.
 - **Zasada:** przy każdej zmianie kolorów uruchom `node tools/test_contrast.js`; nowe ekrany dopisz do listy `SCREENS`.

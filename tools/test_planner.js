@@ -61,6 +61,16 @@ if(process.argv.includes('--browser'))(async()=>{
  await pg.click('[data-save]');const saved=await pg.evaluate(()=>JSON.parse(localStorage.getItem('iwh_days')||'[]'));ck(saved.length===3&&saved[0].items.length>0,'zapis do iwh_days');
  const href=await pg.getAttribute('.pl-actions a.pl-btn','href');ck(href.startsWith('https://www.google.com/maps/dir/'),'przycisk Google Maps');
  await pg.click('#plLang');ck((await pg.textContent('.pl-dayhead b')).startsWith('Day'),'przełączenie na EN');
+ // 8.20: „Zaplanuj za mnie” w karcie miasta Atlasu i działający „Nowy plan podróży” z dodawaniem miejsc
+ await pg.goto('http://localhost:'+port+'/atlas.html?lang=pl');await pg.waitForSelector('.city-dot');
+ await pg.locator('[data-city-chip="krakow"]').click();await pg.waitForTimeout(400);
+ const ph=await pg.getAttribute('#cityPlanner','href');ck(!(await pg.locator('#cityPlanner').isHidden())&&/planer\.html\?.*city=Krak/.test(decodeURIComponent(ph)),'Atlas: „Zaplanuj za mnie” w karcie miasta');
+ await pg.goto('http://localhost:'+port+'/atlas.html?lang=pl&tab=plans');await pg.waitForSelector('[data-new="trip"]');
+ const tripsBefore=(await pg.evaluate(()=>JSON.parse(localStorage.getItem('iwh_trips')||'[]'))).length;
+ await pg.click('[data-new="trip"]');const id=await pg.evaluate(()=>JSON.parse(localStorage.getItem('iwh_trips'))[0].id);
+ await pg.fill('[data-add-search="'+id+'"]','Krak');await pg.waitForSelector('[data-add-to="'+id+'"]');await pg.locator('[data-add-to="'+id+'"]').first().click();
+ const tr=await pg.evaluate(()=>JSON.parse(localStorage.getItem('iwh_trips')));ck(tr.length===tripsBefore+1&&tr[0].items.length===1,'Nowy plan podróży: dodanie miejsca z wyszukiwarki');
+ await pg.goto('http://localhost:'+port+'/planer.html?city='+encodeURIComponent('Olsztyn'));await pg.waitForSelector('#plWheel');ck(true,'Planer: Olsztyn z karty miasta');
  ck(!errs.length,'brak błędów JS: '+errs.join(' | '));
  await br.close();srv.close();console.log('przeglądarka: '+b+' sprawdzeń OK');
 })().catch(e=>{console.error(e);process.exit(1)});
