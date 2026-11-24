@@ -1,6 +1,11 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-## 8.16.0 — Planer „dzień po dniu” (2026-11-24, PR czeka na „Scal”)
+## 8.17.0 — Motyw „Safari” (2026-11-24)
+- Cała aplikacja w kolorystyce makiety „Safari” (krem, oliwka, piasek, złoto); szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3.
+- **Następne zadanie (propozycja):** jasna wersja przewodnika Warszawy (dziś ciemna oliwka); ikony menu w kafelkach jak w makiecie; weryfikacja na iPhonie.
+- Do sprawdzenia przez właściciela: wygląd na prawdziwym iPhonie i ikona PWA na ekranie głównym (po ponownej instalacji).
+
+## 8.16.0 — Planer „dzień po dniu” (2026-11-24, PR #36 scalony)
 - Nowa strona `planer.html` (+ `assets/planer.js/.css`, `data/planer.json`): kreator miasto → dni → zainteresowania → automatyczne trasy dzień po dniu na mapie, z edycją, Google Maps i zapisem do Planów. Szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §17.
 - Po każdej zmianie `data/atrakcje.json` lub `data/regiony.json` uruchom `python tools/build_planner_data.py` (CI sprawdza `--check`).
 - **Następne zadanie (propozycja):** weryfikacja planera na iPhonie; restauracje/kawiarnie w planie (potrzebne współrzędne w `restauracje.json`); daty → godziny otwarcia także dla miast regionalnych; dalsze atrakcje miast.

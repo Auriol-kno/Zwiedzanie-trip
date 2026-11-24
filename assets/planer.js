@@ -127,7 +127,7 @@ root.IWH_PLANNER=ENGINE;
 
 /* ================= INTERFEJS ================= */
 const doc=document,main=doc.getElementById('planner');if(!main)return;
-const COLORS=['#3FA396','#E5541B','#28A6F4','#D99A00','#C2185B','#5B8C3A','#0C2C59'];
+const COLORS=['#6B7A3A','#D9692A','#2F8FA8','#C99A1E','#A8475B','#8A6A3B','#3E5C4A']; // 8.17 Safari: oliwka, pomarańcz, turkus, złoto, wrzos, brąz, butelkowa zieleń
 const T={
  pl:{title:'Nowa podróż',city:'Wybierz miasto',search:'Szukaj miasta',full:'Pełny przewodnik',others:'Miasta z przewodników województw',places:n=>n+' '+(n===1?'miejsce':n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?'miejsca':'miejsc'),noCity:'Nie mamy jeszcze tego miasta w planerze.',
   howLong:'Ile dni?',tabDays:'Liczba dni',tabDates:'Daty',from:'Od',to:'Do',daysN:n=>n+' '+(n===1?'dzień':'dni'),confirmDur:'Potwierdź długość',
@@ -215,7 +215,7 @@ function vPrefs(){
   '<h2 class="pl-h">'+esc(t().mode)+'</h2>'+seg('mode',[['walking','🚶 '+t().walk],['driving','🚗 '+t().car],['transit','🚌 '+t().transit]])+
   '<div class="pl-cta sticky"><button type="button" class="pl-btn" data-go="ask">'+esc(t().create)+'</button></div>';
 }
-function loopArt(){const c=COLORS;return'<svg class="pl-art" viewBox="0 0 260 150" aria-hidden="true"><rect width="260" height="150" rx="22" fill="#E2ECF8"/><path d="M0 98 C60 80 90 120 150 100 S230 70 260 84" stroke="#bfd6ef" stroke-width="14" fill="none"/>'+
+function loopArt(){const c=COLORS;return'<svg class="pl-art" viewBox="0 0 260 150" aria-hidden="true"><rect width="260" height="150" rx="22" fill="#F4EDDE"/><path d="M0 98 C60 80 90 120 150 100 S230 70 260 84" stroke="#E4D6B8" stroke-width="14" fill="none"/>'+
  [[70,62,c[0]],[132,46,c[1]],[190,92,c[2]]].map(([x,y,col],i)=>'<path d="M'+x+' '+y+' q28 -30 52 0 q-6 34 -40 30 q-28 -4 -12 -30" fill="none" stroke="'+col+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 7"/>'+[0,1,2].map(j=>'<circle cx="'+(x+[0,52,12][j])+'" cy="'+(y+[0,0,30][j])+'" r="7" fill="'+col+'" stroke="#fff" stroke-width="2"/>').join('')).join('')+'</svg>'}
 function vAsk(){return'<div class="pl-modal" role="dialog" aria-modal="true" aria-labelledby="plAskT"><div class="pl-modal-in">'+loopArt()+'<h2 id="plAskT">'+esc(t().askT)+'</h2><p>'+esc(t().askL)+'</p><button type="button" class="pl-btn" data-go="make">✨ '+esc(t().yes)+'</button><button type="button" class="pl-link" data-go="later">'+esc(t().later)+'</button></div></div>'}
 function vMake(n){const s=[[t().s1,t().s1d],[t().s2,t().s2d(n)],[t().s3,t().s3d],[t().s4,t().s4d],[t().s5,t().s5d]];
