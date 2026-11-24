@@ -45,8 +45,8 @@ body[data-style=night] .atlas-top{background:linear-gradient(180deg,rgba(12,20,5
 .atlas-hero{top:calc(119px + env(safe-area-inset-top,0px))}
 .atlas-hero h1{font-family:Georgia,Palatino,serif;color:#4b6260;font-weight:500;letter-spacing:-.05em;text-shadow:0 2px 14px #f2f4f3}
 body[data-style=night] .atlas-hero h1{color:#e9f0f6;text-shadow:none}
-.atlas-hero .eyebrow{letter-spacing:.18em;color:#cf804b}
-.atlas-hero p{color:#CC763E}
+.atlas-hero .eyebrow{letter-spacing:.18em;color:#925227}
+.atlas-hero p{color:#925127}
 .atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(243,245,244,.94) 18%,rgba(243,245,244,.98));box-shadow:0 -13px 45px #869eb320}
 body[data-style=night] .atlas-bottom{background:linear-gradient(to bottom,transparent,rgba(14,22,55,.94) 18%,rgba(14,22,55,.97))}
 .city-card{background:rgba(240,243,241,.98);border:1px solid #b9c8c3;box-shadow:0 8px 25px #3e576d22}
@@ -55,7 +55,7 @@ body[data-style=night] .city-card{background:var(--paper)}
 .city-chip.active{background:#4a615f;color:#f3f5f4;border-color:#4a615f}
 .city-action{background:#4C6563;color:#eef1ef;box-shadow:0 4px 14px #24395935}
 .city-action:hover:not(:disabled){background:#577371}
-.atlas-bottom .browse-title{color:#cd7b45}
+.atlas-bottom .browse-title{color:#905027}
 .pill{background:rgba(244,246,245,.94);border-color:#c5d1cd}
 .style-panel{background:rgba(243,245,244,.97);border-color:#bfcdc8}
 .style-panel button.active{background:#4f6765;color:#f0f3f2}
@@ -85,7 +85,7 @@ body[data-style=night] .attribution{background:rgba(20,33,66,.68)}
 
 /* I Was Here 6.0 — województwa: pasek pod miastami, obrys regionu, pinezki miejscowości */
 .region-strip{padding-top:0;align-items:center}
-.region-strip .strip-label{flex:none;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#cd7b45;padding:0 4px 0 5px}
+.region-strip .strip-label{flex:none;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#905027;padding:0 4px 0 5px}
 .region-chip{padding:8px 11px;font-size:11px}
 .city-card{flex-wrap:wrap}
 .card-towns{flex:1 0 100%;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:2px -3px -3px;padding:2px 3px 3px}

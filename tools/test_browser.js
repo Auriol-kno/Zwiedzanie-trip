@@ -46,7 +46,7 @@ function check(ok, message) {
   // --- Atlas
   await page.goto(base + 'atlas.html');
   await page.waitForSelector('.city-dot');
-  check(await page.evaluate(() => document.documentElement.lang) === 'en', 'Atlas: pierwsze uruchomienie po angielsku');
+  check(await page.evaluate(() => document.documentElement.lang) === 'pl', 'Atlas: pierwsze uruchomienie po polsku (8.19)');
   check(await page.locator('.city-dot').count() === 14, 'Atlas: 14 miast (z Kielcami)');
   await page.click('#langButton [data-lang="pl"]');
   check(await page.evaluate(() => document.documentElement.lang === 'pl' && document.querySelector('#cityAction').textContent === 'Odkryj Warszawę'), 'Atlas: przełącznik PL');
@@ -177,13 +177,17 @@ function check(ok, message) {
   check(near.w > far.w + 0.5 && near.names > far.names && near.names > 0.5, 'Atlas: przy zbliżeniu granice grubsze (' + far.w + '→' + near.w + ' px), pojawiają się nazwy województw');
   check(await page.evaluate(() => document.querySelectorAll('#provinceLines .prov-line').length === 16 && document.querySelectorAll('#regions .region-name').length === 16), 'Atlas: 16 granic i 16 nazw województw');
   await page.click('#layersButton');
+  check(await page.evaluate(() => { const l = JSON.parse(localStorage.getItem('iwh_layers')); return l.borders === false && l.names === false && l.relief === false && l.towns === true && l.landmarks === false && getComputedStyle(document.querySelector('#provinceLines')).display === 'none'; }), 'Warstwy: domyślnie tylko „Miejscowości i atrakcje” (8.19)');
+  await page.click('[data-layer="borders"]');
+  check(await page.evaluate(() => getComputedStyle(document.querySelector('#provinceLines')).display !== 'none' && JSON.parse(localStorage.getItem('iwh_layers')).borders === true), 'Warstwy: włączenie granic działa i jest zapamiętane');
   await page.click('[data-layer="borders"]');
   check(await page.evaluate(() => getComputedStyle(document.querySelector('#provinceLines')).display === 'none' && JSON.parse(localStorage.getItem('iwh_layers')).borders === false), 'Warstwy: wyłączenie granic działa i jest zapamiętane');
-  await page.click('[data-layer="borders"]');
+  await page.click('[data-layer="relief"]');
   await page.click('#styleLight');
   check(await page.evaluate(() => document.body.dataset.style === 'light' && getComputedStyle(document.querySelector('.relief')).display === 'none' && localStorage.getItem('tubylem_map_style') === 'light'), 'Styl „Jasny”: dawny atlas ilustracyjny, zapamiętany');
   await page.click('#styleAtlas');
-  check(await page.evaluate(() => document.body.dataset.style === 'atlas' && getComputedStyle(document.querySelector('.relief')).display !== 'none'), 'Styl „Atlas”: mapa z reliefem terenu');
+  check(await page.evaluate(() => document.body.dataset.style === 'atlas' && getComputedStyle(document.querySelector('.relief')).display !== 'none'), 'Styl „Atlas”: mapa z reliefem terenu (po włączeniu warstwy)');
+  await page.click('[data-layer="relief"]');
   await page.keyboard.press('Escape');
   await page.click('#atlasFloat'); await page.waitForTimeout(600);
   await page.click('#cityStrip [data-city-chip="gdansk"]');

@@ -34,9 +34,9 @@ body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[dat
 .place-history{margin:14px 0 4px;padding:14px;border-radius:16px;background:#E7EBE9;color:#425856}
 .place-history h3{margin:0 0 8px;font-size:15px}
 .place-history p{margin:0 0 10px;font-size:14px;line-height:1.62}
-.place-history small{display:block;font-size:11px;line-height:1.45;color:#cd7a42}
+.place-history small{display:block;font-size:11px;line-height:1.45;color:#925227}
 .place-routes{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
 .place-routes a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 12px 4px 4px;border-radius:14px;background:#455E5B;color:#ffffff!important;font-size:12px;font-weight:800;text-decoration:none!important}
 .place-routes a .ex-art{filter:none}
-.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#ca7339}
+.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#905127}
 .made-by{margin:18px 0 4px;text-align:center;font:italic 700 12px/1.4 Georgia,Palatino,serif;letter-spacing:.02em;opacity:.8}

@@ -1,6 +1,10 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
-## 8.18.0 — Wariant „Szałwia” (2026-11-24, PR czeka na decyzję i „Scal”)
+## 8.19.0 — Czytelność i ustawienia domyślne (2026-11-24)
+- 0 napisów poniżej progu kontrastu (`tools/test_contrast.js`, w CI); domyślnie PL, warstwy: tylko „Miejscowości i atrakcje”, styl Atlas. Szczegóły w CHANGELOG.md.
+- **Zasada:** przy każdej zmianie kolorów uruchom `node tools/test_contrast.js`; nowe ekrany dopisz do listy `SCREENS`.
+
+## 8.18.0 — Motyw „Szałwia” (2026-11-24, PR #38 scalony)
 - Wariant kolorystyki szałwia/terakota, wklęsłe wybrane przyciski, pionowe Warstwy/+/− po prawej, jedna ramka mapy w menu, kryjące tła. Szczegóły w CHANGELOG.md. Na `main` nadal motyw „Safari” (8.17.0) do czasu decyzji.
 
 ## 8.17.0 — Motyw „Safari” (2026-11-24)
