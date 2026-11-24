@@ -3,7 +3,7 @@
 .ex-featured{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;margin:0 -2px;-webkit-overflow-scrolling:touch}
 .ex-route{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px;border-radius:16px;border:1px solid var(--ui-line);background:rgba(0,0,0,.14);color:var(--ui-fg);width:100%}
 .ex-route.big{flex:none;width:min(80%,300px);scroll-snap-align:start;background:linear-gradient(150deg,color-mix(in srgb,var(--ex) 55%,transparent),rgba(0,0,0,.2));border-color:color-mix(in srgb,var(--ex) 70%,#F1DC8E)}
-.ex-route:focus-visible,.ex-theme:focus-visible,.ex-back:focus-visible{outline:3px solid #7A8940;outline-offset:2px}
+.ex-route:focus-visible,.ex-theme:focus-visible,.ex-back:focus-visible{outline:3px solid #D38958;outline-offset:2px}
 .ex-rt{display:flex;flex-direction:column;gap:2px;min-width:0}
 .ex-rt small{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-2,#FFD84A)}
 .ex-rt b{font-size:14px;line-height:1.25;overflow-wrap:anywhere}
@@ -23,7 +23,7 @@
 .ex-intro{font-size:14px;line-height:1.6;margin:0 0 12px}
 .ex-actions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
 .ex-stops{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:8px}
-.ex-num{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:900;color:#F8F2E7;background:var(--ex);border:2px solid #F1DC8E}
+.ex-num{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:900;color:#EEF1F0;background:var(--ex);border:2px solid #F1DC8E}
 .ex-stop-note{color:var(--ui-fg)!important;opacity:.85;margin-top:2px}
 .ex-note{margin-top:14px}
 body[data-style=light] .ex-route,body[data-style=light] .ex-theme{background:#ffffff}
@@ -31,12 +31,12 @@ body[data-style=light] .ex-route.big,body[data-style=light] .ex-hero{background:
 body[data-style=light] .ex-rt small,body[data-style=light] .ex-theme em,body[data-style=light] .ex-back,body[data-style=light] .ex-kicker{color:#2a7fb4}
 @supports not (background:color-mix(in srgb,red,blue)){.ex-route.big,.ex-hero,.ex-theme{background:rgba(0,0,0,.18)}}
 /* Przewodnik regionu: rozszerzona historia miejsca i szlaki, na których leży punkt */
-.place-history{margin:14px 0 4px;padding:14px;border-radius:16px;background:#F4EDDE;color:#474B29}
+.place-history{margin:14px 0 4px;padding:14px;border-radius:16px;background:#E7EBE9;color:#425856}
 .place-history h3{margin:0 0 8px;font-size:15px}
 .place-history p{margin:0 0 10px;font-size:14px;line-height:1.62}
-.place-history small{display:block;font-size:11px;line-height:1.45;color:#606b32}
+.place-history small{display:block;font-size:11px;line-height:1.45;color:#cd7a42}
 .place-routes{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
-.place-routes a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 12px 4px 4px;border-radius:14px;background:#4F532C;color:#ffffff!important;font-size:12px;font-weight:800;text-decoration:none!important}
+.place-routes a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 12px 4px 4px;border-radius:14px;background:#455E5B;color:#ffffff!important;font-size:12px;font-weight:800;text-decoration:none!important}
 .place-routes a .ex-art{filter:none}
-.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#545e2c}
+.place-routes-label{display:block;width:100%;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#ca7339}
 .made-by{margin:18px 0 4px;text-align:center;font:italic 700 12px/1.4 Georgia,Palatino,serif;letter-spacing:.02em;opacity:.8}
