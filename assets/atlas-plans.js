@@ -20,7 +20,7 @@ const L={
 pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'Profil',close:'Wróć do mapy',
  tripIntro:'Zbieraj miasta, województwa i miejsca, które chcesz odwiedzić. Plany zapisują się na tym urządzeniu.',newTrip:'＋ Nowy plan podróży',newDay:'＋ Nowy plan dnia',autoPlan:'✨ Zaplanuj za mnie — dzień po dniu',autoPlanSub:'Miasto, liczba dni i zainteresowania → gotowe trasy na mapie',
  emptyTrips:'Nie masz jeszcze planów podróży. Wybierz miasto lub województwo na mapie i dotknij „＋ Plan podróży”.',
- emptyDays:'Nie masz jeszcze planu dnia. Wybierz miejsce na mapie i dotknij „＋ Plan dnia”.',emptyPlan:'Ten plan jest pusty.',
+ emptyDays:'Nie masz jeszcze planu dnia. Wybierz miejsce na mapie i dotknij „＋ Plan dnia”.',emptyPlan:'Ten plan jest pusty — wpisz poniżej miasto, województwo lub miejsce i dotknij, aby dodać. Możesz też wybrać punkt na mapie i dotknąć „Podróż”.',addPh:'Dodaj miasto, województwo lub miejsce…',addNone:'Brak wyników',added:n=>'Dodano: '+n,kCity:'miasto',kRegion:'województwo',kTown:'miejscowość',kPlace:'miejsce',
  show:'Pokaż',remove:'Usuń',up:'W górę',down:'W dół',rename:'Nazwa planu',delPlan:'Usuń plan',confirmDel:'Usunąć ten plan? Tej operacji nie można cofnąć.',
  items:n=>plural(n,['pozycja','pozycje','pozycji']),date:'Data',start:'Start',maps:'🧭 Trasa w Google Maps',
  dayNote:'Godziny są szacunkowe: przejazd z odległości (ok. 55 km/h, pieszo ok. 4,5 km/h), czas zwiedzania z bazy. Sprawdź godziny otwarcia.',mode:'Jak się przemieszczasz?',walk:'🚶 Pieszo',car:'🚗 Samochód',
@@ -39,7 +39,7 @@ pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'
 en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',close:'Back to the map',
  tripIntro:'Collect the cities, provinces and places you want to visit. Plans are saved on this device.',newTrip:'＋ New trip plan',newDay:'＋ New day plan',autoPlan:'✨ Plan it for me — day by day',autoPlanSub:'City, number of days and interests → ready routes on the map',
  emptyTrips:'You have no trip plans yet. Pick a city or province on the map and tap “＋ Trip plan”.',
- emptyDays:'You have no day plan yet. Pick a place on the map and tap “＋ Day plan”.',emptyPlan:'This plan is empty.',
+ emptyDays:'You have no day plan yet. Pick a place on the map and tap “＋ Day plan”.',emptyPlan:'This plan is empty — type a city, province or place below and tap to add it. You can also pick a point on the map and tap “Trip”.',addPh:'Add a city, province or place…',addNone:'No results',added:n=>'Added: '+n,kCity:'city',kRegion:'province',kTown:'town',kPlace:'place',
  show:'Show',remove:'Remove',up:'Move up',down:'Move down',rename:'Plan name',delPlan:'Delete plan',confirmDel:'Delete this plan? This cannot be undone.',
  items:n=>n+' '+(n===1?'item':'items'),date:'Date',start:'Start',maps:'🧭 Route in Google Maps',
  dayNote:'Times are estimates: travel from distance (about 55 km/h, on foot about 4.5 km/h), visit length from our data. Check opening hours.',mode:'How do you get around?',walk:'🚶 Walk',car:'🚗 Car',
@@ -114,6 +114,18 @@ function openPicker(kind,item){
 function closeDialog(d){if(typeof d.close==='function'&&d.open)d.close();else d.removeAttribute('open');delete d.dataset.kind}
 
 // ---------- panele zakładek
+// 8.20: wyszukiwarka „Dodaj do planu” — nowy plan nie zostaje pusty bez wskazówki
+function addBox(id,kind){const t=x();return'<div class="plan-add"><label class="sr-only" for="add-'+id+'">'+esc(t.addPh)+'</label><input type="search" id="add-'+id+'" data-add-search="'+id+'" data-kind="'+kind+'" placeholder="'+esc(t.addPh)+'" autocomplete="off"><div class="plan-add-results" data-add-results="'+id+'"></div></div>'}
+function addCandidates(q){
+ const R=window.IWH_REGIONS||{regions:[],places:[]},L=lang(),t=x(),norm=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(),term=norm(q).trim();if(term.length<2)return[];
+ const out=[],has=v=>norm(v).includes(term);
+ (A&&A.cityList?A.cityList():[]).forEach(c=>{if(has(c.pl)||has(c.en))out.push({item:{t:'city',id:c.id},label:L==='en'?c.en:c.pl,kind:t.kCity,rank:0})});
+ (R.regions||[]).forEach(r=>{if(has(r.pl)||has(r.en))out.push({item:{t:'region',id:r.id},label:L==='en'?r.en:r.pl,kind:t.kRegion,rank:1})});
+ const towns=new Map();(R.places||[]).forEach(p=>{if(!p.dwarf&&!towns.has(p.region+'|'+p.town))towns.set(p.region+'|'+p.town,p)});
+ towns.forEach(p=>{if(has(p.town)&&!out.some(o=>o.label===p.town))out.push({item:{t:'town',region:p.region,name:p.town},label:p.town,kind:t.kTown,rank:2})});
+ (R.places||[]).forEach(p=>{if(!p.dwarf&&p.name&&(has(p.name.pl)||has(p.name.en)))out.push({item:{t:'place',id:p.id},label:(p.name[L]||p.name.pl),kind:t.kPlace+' · '+p.town,rank:3})});
+ return out.sort((a,b)=>a.rank-b.rank||a.label.localeCompare(b.label,'pl')).slice(0,8);
+}
 function itemRow(it,i,n,planId,kind){
  const r=A.resolve(it);if(!r)return '';
  return '<li class="plan-item"><span class="pi-icon" aria-hidden="true">'+r.icon+'</span><span class="pi-text"><b>'+esc(r.name)+'</b><small>'+esc(r.sub||'')+'</small></span>'+
@@ -155,7 +167,7 @@ function render(){
   p.innerHTML=head(t.trips)+'<p class="panel-intro">'+esc(t.tripIntro)+'</p>'+'<a class="city-action wide auto-plan" href="./planer.html?lang='+lang()+'"><b>'+esc(t.autoPlan)+'</b><small>'+esc(t.autoPlanSub)+'</small></a>'+'<button type="button" class="city-action wide" data-new="trip">'+esc(t.newTrip)+'</button>'+
    (list.length?list.map(pl=>'<article class="plan-card"><div class="plan-top"><label class="plan-name"><span class="sr-only">'+esc(t.rename)+'</span><input data-rename="'+pl.id+'" data-kind="trip" value="'+esc(pl.name)+'" maxlength="60"></label><small>'+esc(t.items(pl.items.length))+'</small></div>'+
     (pl.items.length?'<ul class="plan-items">'+pl.items.map((it,i)=>itemRow(it,i,pl.items.length,pl.id,'trip')).join('')+'</ul><button type="button" class="ghost-action" data-trip-to-day="'+pl.id+'">'+esc(t.tripToDay)+'</button>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
-    '<button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="trip">'+esc(t.delPlan)+'</button></article>').join(''):'<p class="empty">'+esc(t.emptyTrips)+'</p>')+
+    addBox(pl.id,'trip')+'<button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="trip">'+esc(t.delPlan)+'</button></article>').join(''):'<p class="empty">'+esc(t.emptyTrips)+'</p>')+
    (Array.isArray(legacy)&&legacy.length?'<h3>'+esc(t.warsawTrips)+'</h3><ul class="plan-items">'+legacy.map(tr=>'<li class="plan-item"><span class="pi-icon" aria-hidden="true">🏛️</span><span class="pi-text"><b>'+esc(tr.name||'')+'</b><small>'+esc((tr.date||'')+' · '+(tr.clock||'')+' · '+t.items((tr.stops||[]).length))+'</small></span><span class="pi-actions"><a href="./index.html?lang='+lang()+'#tbTrips">'+esc(t.openWarsaw)+'</a></span></li>').join('')+'</ul>':'');
  }else if(view==='day'){
   const list=days().sort((a,b)=>(a.date||'').localeCompare(b.date||''));
@@ -167,7 +179,7 @@ function render(){
     '<div class="seg plan-mode" role="group" aria-label="'+esc(t.mode)+'"><button type="button" data-mode-plan="'+pl.id+'" data-mode="walking" aria-pressed="'+(pl.mode==='walking')+'">'+esc(t.walk)+'</button><button type="button" data-mode-plan="'+pl.id+'" data-mode="driving" aria-pressed="'+(pl.mode!=='walking')+'">'+esc(t.car)+'</button></div>'+
     (pl.items.length?'<ol class="plan-items day">'+pl.items.map((it,i)=>{const s=sc[i];return itemRow(it,i,pl.items.length,pl.id,'day').replace('<small>','<small>'+(s?hhmm(s.from)+'–'+hhmm(s.to)+(s.dist?' · ~'+Math.round(s.dist)+' km':'')+' · ':''))}).join('')+'</ol>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
     (maps?'<a class="ghost-action" href="'+maps+'" target="_blank" rel="noopener">'+esc(t.maps)+'</a>':'')+
-    '<p class="muted small">'+esc(t.dayNote)+'</p><button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="day">'+esc(t.delPlan)+'</button></article>'}).join(''):'<p class="empty">'+esc(t.emptyDays)+'</p>');
+    addBox(pl.id,'day')+'<p class="muted small">'+esc(t.dayNote)+'</p><button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="day">'+esc(t.delPlan)+'</button></article>'}).join(''):'<p class="empty">'+esc(t.emptyDays)+'</p>');
  }else if(view==='memories'){
   const v=visited().map(k=>{const [ty,a,b]=k.split(':');return ty==='town'?{t:'town',region:a,name:b}:{t:ty,id:a}}).map(it=>({it,r:A.resolve(it)})).filter(o=>o.r);
   const ps=placeStamps().map(id=>({it:{t:'place',id},r:A.resolve({t:'place',id})})).filter(o=>o.r);
@@ -207,6 +219,8 @@ document.addEventListener('click',e=>{
  const q=s=>e.target.closest(s);let b;
  if(q('[data-close-panel]')){API.open('map');return}
  if((b=q('[data-new]'))){const kind=b.dataset.new,t=x(),all=kind==='trip'?trips():days();const plan={id:uid(),name:kind==='trip'?t.defTrip:t.defDay,created:new Date().toISOString(),items:[]};if(kind==='day'){plan.date=today();plan.start='09:00'}all.unshift(plan);save(kind==='trip'?'iwh_trips':'iwh_days',all);render();pnl.querySelector('[data-rename="'+plan.id+'"]')?.select();return}
+ if((b=q('[data-add-item]'))){const k=b.dataset.addKind==='trip'?'iwh_trips':'iwh_days',all=read(k,[]),pl=all.find(p=>p.id===b.dataset.addTo);let item=null;try{item=JSON.parse(b.dataset.addItem)}catch(err){}
+  if(pl&&item){const same=it=>it.t===item.t&&it.id===item.id&&it.name===item.name&&it.region===item.region;if(!pl.items.some(same))pl.items.push(item);save(k,all);A.changed();toast(x().added(b.querySelector('b').textContent));render();const inp=document.querySelector('[data-add-search="'+pl.id+'"]');if(inp)inp.focus()}return}
  const findPlan=id=>{let all=trips(),k='iwh_trips',pl=all.find(p=>p.id===id);if(!pl){all=days();k='iwh_days';pl=all.find(p=>p.id===id)}return{all,k,pl}};
  if((b=q('[data-remove]'))){const {all,k,pl}=findPlan(b.dataset.remove);if(pl){pl.items.splice(+b.dataset.i,1);save(k,all);A.changed();render()}return}
  if((b=q('[data-move]'))){const {all,k,pl}=findPlan(b.dataset.plan);if(pl){const i=+b.dataset.i,j=i+ +b.dataset.move;if(j>=0&&j<pl.items.length){[pl.items[i],pl.items[j]]=[pl.items[j],pl.items[i]];save(k,all);render()}}return}
@@ -221,6 +235,8 @@ document.addEventListener('click',e=>{
  if((b=q('[data-set-style]'))){A.setStyle(b.dataset.setStyle);render();return}
  if(q('[data-clear]')){if(confirm(x().confirmClear)){save('iwh_trips',[]);save('iwh_days',[]);A.changed();render()}return}
 });
+document.addEventListener('input',e=>{const i=e.target;if(!i.dataset||!i.dataset.addSearch)return;const box=document.querySelector('[data-add-results="'+i.dataset.addSearch+'"]');if(!box)return;
+ const list=addCandidates(i.value),t=x();box.innerHTML=i.value.trim().length<2?'':(list.length?list.map(c=>'<button type="button" class="plan-add-item" data-add-to="'+i.dataset.addSearch+'" data-add-kind="'+i.dataset.kind+'" data-add-item="'+esc(JSON.stringify(c.item))+'"><b>'+esc(c.label)+'</b><small>'+esc(c.kind)+'</small></button>').join(''):'<p class="muted small">'+esc(t.addNone)+'</p>')});
 document.addEventListener('change',e=>{
  if(!e.target.closest('#tabPanel'))return;const i=e.target;
  const edit=(k,id,fn)=>{const all=read(k,[]),pl=all.find(p=>p.id===id);if(pl){fn(pl);save(k,all)}};

@@ -101,3 +101,21 @@ body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .
 /* 8.19.1 — pas miast i województw: cień kafelków nie jest już przycinany (jasny prostokąt i ucięta prawa krawędź);
    pas sięga krawędzi ekranu, a w środku ma miejsce na miękki cień */
 .atlas-bottom .city-strip{margin:-12px -10px -4px!important;padding:12px 10px 14px!important;scroll-padding-inline:10px}
+
+/* 8.20 — „Zaplanuj za mnie” w przewodnikach (Warszawa, regiony) i w karcie miasta Atlasu */
+html[lang=en] .auto-plan-link [data-l=pl],html:not([lang=en]) .auto-plan-link [data-l=en]{display:none}
+.auto-plan-link{display:flex;flex-direction:column;gap:2px;margin:10px 0 12px;padding:12px 16px;border-radius:16px;text-decoration:none;background:var(--sg-terra);color:var(--sg-on)!important;box-shadow:var(--sg-up);font-size:15px}
+.auto-plan-link b{font-weight:800}.auto-plan-link small{font-size:12.5px;font-weight:600;color:var(--sg-on)}
+.auto-plan-link:active{box-shadow:inset 3px 3px 7px #7E3F18,inset -3px -3px 7px #C46A35}
+.hero .hero-plan{position:relative;z-index:2;display:inline-flex;margin-top:14px}
+#cityPlanner{margin-top:10px}#cityPlanner[hidden]{display:none!important}
+#cityPlanner small{font-size:12px;font-weight:600}
+/* 8.20 — „Dodaj do planu” w kartach planów */
+.plan-add{margin:10px 0 6px}
+.plan-add input{width:100%;font-size:16px;padding:11px 14px;border-radius:14px;border:0;background:var(--sg-sunk);color:var(--sg-slate);box-shadow:var(--sg-in)}
+.plan-add input::placeholder{color:#5F6966}
+.plan-add-results{display:grid;gap:6px;margin-top:8px}
+.plan-add-item{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;border:0;border-radius:12px;padding:10px 12px;min-height:44px;background:var(--sg-card);color:var(--sg-slate);box-shadow:var(--sg-up-s);font:inherit;cursor:pointer}
+.plan-add-item b{font-weight:700}.plan-add-item small{color:var(--sg-mut);font-size:12px;white-space:nowrap}
+.plan-add-item:active{box-shadow:var(--sg-in)}
+#cityPlanner,#cityPlanner b,#cityPlanner small{color:var(--sg-on)!important}

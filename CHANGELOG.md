@@ -1,5 +1,12 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.20.0 — „Zaplanuj za mnie” w miastach i działający „Nowy plan podróży” (2026-11-24)
+
+- **„✨ Zaplanuj za mnie — dzień po dniu”** także: w karcie miasta i miejscowości w Atlasie, w przewodniku regionu (sekcja Plan dnia, dla wybranej lub największej miejscowości) i w przewodniku Warszawy (hero). Link otwiera planer z wybranym miastem (`planer.html?city=…`); nieznane miasto wpisuje się w wyszukiwarkę planera.
+- Planer obejmuje teraz 27 miast (próg 2 miejsca zamiast 5; plan uzupełniają miejsca do 40 km) — wszystkie 14 miast z mapy Atlasu.
+- **„＋ Nowy plan podróży” / „＋ Nowy plan dnia”:** każdy plan ma wyszukiwarkę „Dodaj miasto, województwo lub miejsce…” (miasta, województwa, miejscowości i atrakcje z bazy; jedno dotknięcie dodaje pozycję, bez duplikatów); pusty plan podpowiada, jak dodać miejsca.
+- Testy: `test_planner.js --browser` sprawdza przycisk w karcie miasta, dodawanie do nowego planu i planer dla Olsztyna. Cache `i-was-here-v8-20-0-20261124`, `APP_VERSION` 8.20.0.
+
 ## 8.19.0 — Czytelność i ustawienia domyślne (2026-11-24)
 
 - **Czytelność (prośba właściciela: „nieczytelne żółte napisy”):** nowy test `tools/test_contrast.js` mierzy w Chromium kontrast każdego widocznego napisu z jego rzeczywistym tłem (WCAG: 4,5 : 1, duży tekst 3 : 1) na 21 ekranach i stanach (Atlas z zakładkami, warstwy, karta miasta, Odkrywaj, przewodnik regionu, Warszawa, planer) w PL i EN; przed zmianą 549 napisów poniżej progu, po zmianie 0. Test jest w CI.

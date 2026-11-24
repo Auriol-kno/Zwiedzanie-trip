@@ -395,6 +395,10 @@ function renderPlaces(list,max){
  ul.innerHTML=list.slice(0,max).map(p=>'<li><a href="'+regionUrlFor(p)+'"><span aria-hidden="true">'+p.icon+'</span><span><b>'+esc(p.name[lang])+'</b><small>'+esc(p.town)+' · ✦ '+p.visitValue+'/5</small></span></a><button type="button" class="mini-add" data-add-place="'+p.id+'" aria-label="'+esc(t().addPlace+': '+p.name[lang])+'">＋</button></li>').join('')+(list.length>max?'<li class="more">'+esc(t().morePlaces(list.length-max))+'</li>':'');
 }
 const regionUrlFor=p=>'./region.html?region='+encodeURIComponent(p.region)+'&lang='+lang+'&town='+encodeURIComponent(p.town)+'&place='+encodeURIComponent(p.id);
+// 8.20: „Zaplanuj za mnie” w karcie miasta i miejscowości — planer dzień po dniu z wybranym miastem
+function setPlanner(name){const a=$('#cityPlanner');if(!a)return;if(!name){a.hidden=true;return}a.hidden=false;a.href='./planer.html?lang='+lang+'&city='+encodeURIComponent(name);
+ $('#cityPlannerLabel').textContent=lang==='en'?'✨ Plan it for me — day by day':'✨ Zaplanuj za mnie — dzień po dniu';
+ $('#cityPlannerSub').textContent=lang==='en'?'Ready routes in '+name+' by your interests':'Gotowe trasy po '+name+' według zainteresowań'}
 function renderCard(){
  const x=t();
  $('#citiesTitle').textContent=mode==='city'?x.choose:x.province;
@@ -416,6 +420,7 @@ function renderCard(){
    $('#cityAction').textContent=places.length?x.exploreRegion:x.soon;$('#cityAction').disabled=!places.length;
    renderPlaces([...places].sort((a,b)=>b.visitValue-a.visitValue),3);
   }
+  setPlanner(mode==='town'?town:null);
   box.hidden=false;
   box.innerHTML=cities.filter(c=>!towns.some(q=>q.name===c.pl)).map(c=>'<button type="button" class="town-chip city" data-card-city="'+c.id+'">'+esc(cityText(c))+(c.ready?' ✦':'')+'</button>').join('')+
    towns.map(q=>'<button type="button" class="town-chip'+(q.name===town?' active':'')+'" data-card-town="'+esc(q.name)+'">'+esc(q.name)+' <small>'+q.places.length+'</small></button>').join('');
@@ -424,7 +429,7 @@ function renderCard(){
  }
  box.hidden=true;box.textContent='';renderPlaces(null);
  thumb.innerHTML=window.IWH_ATLAS_ART?'<svg viewBox="0 -6 80 62" aria-hidden="true">'+window.IWH_ATLAS_ART.landmark(current.id,{name:cityText(current),visited:!!(PLANS&&PLANS.isVisited({t:'city',id:current.id}))})+'</svg>':'';
- $('#cityName').textContent=cityText(current);
+ $('#cityName').textContent=cityText(current);setPlanner(current.pl);
  const info=CITY_INFO[current.id];
  $('#cityDescription').textContent=(info?info[lang==='en'?1:0]:'')+(current.ready?' '+x.pilotMessage+'.':'');
  const reg=regionOfCity(current.id);

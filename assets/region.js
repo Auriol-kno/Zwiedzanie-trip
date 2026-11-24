@@ -169,7 +169,10 @@ function renderPlan(){
   a.href='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o.lat.toFixed(5)+','+o.lon.toFixed(5))+'&destination='+encodeURIComponent(dest)+(pts.length?'&waypoints='+encodeURIComponent(pts.join('|')):'')+'&travelmode='+(state.mode==='transit'?'transit':state.mode==='walking'?'walking':'driving');
   a.removeAttribute('aria-disabled');a.textContent='🧭 Google Maps · '+fmtDur(used)}else{a.href='#';a.setAttribute('aria-disabled','true');a.textContent='🧭 Google Maps'}
 }
-function renderAll(){renderTexts();renderDwarfs();renderStats();renderCityLinks();renderChips();renderList();renderPlanStart();renderPlan();renderMap()}
+// 8.20: „Zaplanuj za mnie” — planer dzień po dniu dla wybranej (albo największej) miejscowości regionu
+function renderAutoPlan(){const a=document.getElementById('autoPlan');if(!a)return;const tn=state.town!=='all'?state.town:towns[0];if(!tn){a.hidden=true;return}
+ a.href='./planer.html?lang='+lang+'&city='+encodeURIComponent(tn);const s=document.getElementById('autoPlanSub');if(s)s.textContent=lang==='en'?'Ready routes in '+tn+' by your interests':'Gotowe trasy: '+tn+' według Twoich zainteresowań'}
+function renderAll(){renderAutoPlan();renderTexts();renderDwarfs();renderStats();renderCityLinks();renderChips();renderList();renderPlanStart();renderPlan();renderMap()}
 
 // ---------- szczegóły
 let lastFocus=null;
@@ -229,7 +232,7 @@ document.addEventListener('click',e=>{
  const s=e.target.closest('[data-stamp]');if(s){toggle('stamp',s.dataset.stamp);return}
  const ap=e.target.closest('[data-addplan]');if(ap){addToPlan(ap.dataset.addplan,ap.dataset.id);ap.textContent=planLabel(ap.dataset.addplan,ap.dataset.id);return}
  const sp=e.target.closest('[data-speak]');if(sp&&window.speechSynthesis){const p=all.find(x=>x.id===sp.dataset.speak);speechSynthesis.cancel();const hi=historyOf(p);const u=new SpeechSynthesisUtterance(name(p)+'. '+desc(p)+(hi?' '+(hi[lang]||hi.pl).join(' '):''));u.lang=lang==='en'?'en-GB':'pl-PL';u.rate=.95;speechSynthesis.speak(u);return}
- const tn=e.target.closest('[data-town]');if(tn){state.town=tn.dataset.town;if(state.town!=='all')state.start=state.town;renderChips();renderList();renderPlanStart();renderPlan();renderMap();return}
+ const tn=e.target.closest('[data-town]');if(tn){state.town=tn.dataset.town;if(state.town!=='all')state.start=state.town;renderAutoPlan();renderChips();renderList();renderPlanStart();renderPlan();renderMap();return}
  const c=e.target.closest('[data-cat]');if(c){const k=c.dataset.cat;if(k==='dwarfs')state.dwarfs=true;state.shown=60;state.cats=state.cats.includes(k)?state.cats.filter(x=>x!==k):[...state.cats,k];renderDwarfs();renderChips();renderList();renderPlan();renderMap();return}
  const j=e.target.closest('[data-jump]');if(j){document.getElementById(j.dataset.jump).scrollIntoView({behavior:'smooth',block:'start'});$$('.bottom-nav button').forEach(b=>b.classList.toggle('active',b===j));if(j.dataset.jump==='mapSection'&&map)setTimeout(()=>map.invalidateSize(),350)}
 });
