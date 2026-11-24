@@ -1,5 +1,15 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.16.0 — Planer „dzień po dniu” (2026-11-24)
+
+- **Nowa strona `planer.html`** (wzorowana na rozwiązaniach aplikacji itinio z rolki Instagram wskazanej przez właściciela): kreator w 3 krokach — miasto (wyszukiwarka; „Pełny przewodnik” Warszawa i miasta z przewodników województw), długość (koło z liczbą dni 1–7 albo daty), zainteresowania w trzech strefach: ★ „Bardzo interesuje” (max 3), „Polecaj mi”, ✕ „Nie polecaj”; do tego tempo (~4/6/8 h) i transport (pieszo/auto/komunikacja).
+- Pytanie „Chcesz plan dzień po dniu?” → „✨ Tak, zaplanuj za mnie” (animowana lista kroków z prawdziwą liczbą miejsc) albo „Zrobię to później” (zapis jako podróż w Planach).
+- **Wynik:** mapa z trasami w kolorach dni i numerowanymi punktami (Leaflet + OSM; offline/bez Leaflet — mapa schematyczna SVG), „Pokaż wszystkie”, przełącznik dni ‹ Dzień N ›, „Optymalizuj trasę” (najbliższy sąsiad + 2-opt), karty miejsc z godziną przyjścia, czasem zwiedzania, redakcyjną wartością wizyty 1–5, godzinami otwarcia (Warszawa; ostrzeżenie „w tym dniu zamknięte” przy wybranych datach), czasy przejść między punktami, edycja (↑↓, przenieś do dnia, usuń, „+ Dodaj miejsce” z najbliższych propozycji), „Otwórz w Mapach Google” (wiele przystanków), „Zapisz w Planach” (każdy dzień jako plan dnia `iwh_days`), „Kopiuj plan”.
+- Liczone lokalnie, bez AI i kluczy API: wybór według wartości wizyty i zainteresowań, grupowanie w dni (k-średnich), dopasowanie dnia do tempa (za długi dzień traci najsłabsze punkty, krótki dobiera bliskie). Czasy przejść to szacunek (odległość × 1,3). Małe miasta: plan uzupełniają miejsca do 40 km („w okolicy”) albo uczciwie mniej dni.
+- Dane: `data/planer.json` generowany przez `tools/build_planner_data.py` (454 miejsca, 14 miast z ≥5 miejscami). Wejście: przycisk „✨ Zaplanuj za mnie” w zakładce Plany Atlasu. Dolne menu na planerze prowadzi do zakładek Atlasu.
+- Testy: `tools/test_planner.js` (silnik: 26 sprawdzeń; `--browser`: przejście kreatora w Chromium, emulacja iPhone 13) w CI; `build_planner_data.py --check`. Podgląd jednoplikowy: `tools/build_planner_preview.py`.
+- Cache `i-was-here-v8-16-0-20261124`, `APP_VERSION` 8.16.0.
+
 ## 8.15.0 — Dłoń „kliknij”, pojedyncza ramka, zwarty układ, atrakcje partia 4 (2026-11-15)
 
 - **Mapa Polski w menu:** pojedyncza ramka (usunięty żółty pierścień CSS; zostaje złota ramka kafelka), zaokrąglenie dopasowane do kafelka, a zamiast niebieskiej pinezki w kafelku jest dłoń „kliknij” (`assets/brand-mark-nav.svg`, generowany przez `tools/build_nav_mark.py` z `brand-mark.svg`; ikona touch_app, Material Icons, Apache-2.0; delikatny ruch dotknięcia, wyłączany przy `prefers-reduced-motion`). Logo `brand-mark.svg` bez zmian.

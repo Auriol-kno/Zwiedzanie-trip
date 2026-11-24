@@ -18,7 +18,7 @@ const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth
 const plural=(n,f)=>n+' '+(n===1?f[0]:(n%10>=2&&n%10<=4&&(n%100<12||n%100>14))?f[1]:f[2]);
 const L={
 pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'Profil',close:'Wróć do mapy',
- tripIntro:'Zbieraj miasta, województwa i miejsca, które chcesz odwiedzić. Plany zapisują się na tym urządzeniu.',newTrip:'＋ Nowy plan podróży',newDay:'＋ Nowy plan dnia',
+ tripIntro:'Zbieraj miasta, województwa i miejsca, które chcesz odwiedzić. Plany zapisują się na tym urządzeniu.',newTrip:'＋ Nowy plan podróży',newDay:'＋ Nowy plan dnia',autoPlan:'✨ Zaplanuj za mnie — dzień po dniu',autoPlanSub:'Miasto, liczba dni i zainteresowania → gotowe trasy na mapie',
  emptyTrips:'Nie masz jeszcze planów podróży. Wybierz miasto lub województwo na mapie i dotknij „＋ Plan podróży”.',
  emptyDays:'Nie masz jeszcze planu dnia. Wybierz miejsce na mapie i dotknij „＋ Plan dnia”.',emptyPlan:'Ten plan jest pusty.',
  show:'Pokaż',remove:'Usuń',up:'W górę',down:'W dół',rename:'Nazwa planu',delPlan:'Usuń plan',confirmDel:'Usunąć ten plan? Tej operacji nie można cofnąć.',
@@ -37,7 +37,7 @@ pl:{trips:'Plan podróży',day:'Mój plan dnia',memories:'Wspomnienia',profile:'
  journal:'Dziennik podróży',journalIntro:'Notatki i do 5 zdjęć z każdego miejsca (także z biblioteki zdjęć). Zapisane tylko na tym urządzeniu.',journalEmpty:'Brak wpisów. Dotknij 📝 przy odwiedzonym miejscu albo w paszporcie Warszawy, aby dodać notatki i zdjęcia.',notesPhotos:'Notatki i zdjęcia',openEntry:'Otwórz',photosN:n=>plural(n,['zdjęcie','zdjęcia','zdjęć']),withNotes:'notatki',
  visitedOn:'Oznaczono jako odwiedzone',visitedOff:'Usunięto z odwiedzonych',saveErr:'Nie udało się zapisać — pamięć przeglądarki jest pełna lub zablokowana.'},
 en:{trips:'Trip plan',day:'My day plan',memories:'Memories',profile:'Profile',close:'Back to the map',
- tripIntro:'Collect the cities, provinces and places you want to visit. Plans are saved on this device.',newTrip:'＋ New trip plan',newDay:'＋ New day plan',
+ tripIntro:'Collect the cities, provinces and places you want to visit. Plans are saved on this device.',newTrip:'＋ New trip plan',newDay:'＋ New day plan',autoPlan:'✨ Plan it for me — day by day',autoPlanSub:'City, number of days and interests → ready routes on the map',
  emptyTrips:'You have no trip plans yet. Pick a city or province on the map and tap “＋ Trip plan”.',
  emptyDays:'You have no day plan yet. Pick a place on the map and tap “＋ Day plan”.',emptyPlan:'This plan is empty.',
  show:'Show',remove:'Remove',up:'Move up',down:'Move down',rename:'Plan name',delPlan:'Delete plan',confirmDel:'Delete this plan? This cannot be undone.',
@@ -152,14 +152,14 @@ function render(){
  const view=tab==='plans'?planView:tab==='passport'?'memories':tab;
  if(view==='trips'){
   const list=trips(),legacy=read('tb_saved_trips',[]);
-  p.innerHTML=head(t.trips)+'<p class="panel-intro">'+esc(t.tripIntro)+'</p><button type="button" class="city-action wide" data-new="trip">'+esc(t.newTrip)+'</button>'+
+  p.innerHTML=head(t.trips)+'<p class="panel-intro">'+esc(t.tripIntro)+'</p>'+'<a class="city-action wide auto-plan" href="./planer.html?lang='+lang()+'"><b>'+esc(t.autoPlan)+'</b><small>'+esc(t.autoPlanSub)+'</small></a>'+'<button type="button" class="city-action wide" data-new="trip">'+esc(t.newTrip)+'</button>'+
    (list.length?list.map(pl=>'<article class="plan-card"><div class="plan-top"><label class="plan-name"><span class="sr-only">'+esc(t.rename)+'</span><input data-rename="'+pl.id+'" data-kind="trip" value="'+esc(pl.name)+'" maxlength="60"></label><small>'+esc(t.items(pl.items.length))+'</small></div>'+
     (pl.items.length?'<ul class="plan-items">'+pl.items.map((it,i)=>itemRow(it,i,pl.items.length,pl.id,'trip')).join('')+'</ul><button type="button" class="ghost-action" data-trip-to-day="'+pl.id+'">'+esc(t.tripToDay)+'</button>':'<p class="muted">'+esc(t.emptyPlan)+'</p>')+
     '<button type="button" class="link-danger" data-delete="'+pl.id+'" data-kind="trip">'+esc(t.delPlan)+'</button></article>').join(''):'<p class="empty">'+esc(t.emptyTrips)+'</p>')+
    (Array.isArray(legacy)&&legacy.length?'<h3>'+esc(t.warsawTrips)+'</h3><ul class="plan-items">'+legacy.map(tr=>'<li class="plan-item"><span class="pi-icon" aria-hidden="true">🏛️</span><span class="pi-text"><b>'+esc(tr.name||'')+'</b><small>'+esc((tr.date||'')+' · '+(tr.clock||'')+' · '+t.items((tr.stops||[]).length))+'</small></span><span class="pi-actions"><a href="./index.html?lang='+lang()+'#tbTrips">'+esc(t.openWarsaw)+'</a></span></li>').join('')+'</ul>':'');
  }else if(view==='day'){
   const list=days().sort((a,b)=>(a.date||'').localeCompare(b.date||''));
-  p.innerHTML=head(t.day)+'<button type="button" class="city-action wide" data-new="day">'+esc(t.newDay)+'</button>'+
+  p.innerHTML=head(t.day)+'<a class="city-action wide auto-plan" href="./planer.html?lang='+lang()+'"><b>'+esc(t.autoPlan)+'</b><small>'+esc(t.autoPlanSub)+'</small></a>'+'<button type="button" class="city-action wide" data-new="day">'+esc(t.newDay)+'</button>'+
    (list.length?list.map(pl=>{const sc=schedule(pl);const pts=pl.items.map(i=>A.resolve(i)).filter(Boolean);
     const maps=pts.length?'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(pts[0].lat.toFixed(5)+','+pts[0].lon.toFixed(5))+'&destination='+encodeURIComponent(pts[pts.length-1].lat.toFixed(5)+','+pts[pts.length-1].lon.toFixed(5))+(pts.length>2?'&waypoints='+encodeURIComponent(pts.slice(1,-1).map(r=>r.lat.toFixed(5)+','+r.lon.toFixed(5)).join('|')):'')+'&travelmode='+(pl.mode==='walking'?'walking':'driving'):'';
     return '<article class="plan-card"><div class="plan-top"><label class="plan-name"><span class="sr-only">'+esc(t.rename)+'</span><input data-rename="'+pl.id+'" data-kind="day" value="'+esc(pl.name)+'" maxlength="60"></label></div>'+

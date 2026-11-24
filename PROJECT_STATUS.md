@@ -1,5 +1,11 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.16.0 — Planer „dzień po dniu” (2026-11-24, PR czeka na „Scal”)
+- Nowa strona `planer.html` (+ `assets/planer.js/.css`, `data/planer.json`): kreator miasto → dni → zainteresowania → automatyczne trasy dzień po dniu na mapie, z edycją, Google Maps i zapisem do Planów. Szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §17.
+- Po każdej zmianie `data/atrakcje.json` lub `data/regiony.json` uruchom `python tools/build_planner_data.py` (CI sprawdza `--check`).
+- **Następne zadanie (propozycja):** weryfikacja planera na iPhonie; restauracje/kawiarnie w planie (potrzebne współrzędne w `restauracje.json`); daty → godziny otwarcia także dla miast regionalnych; dalsze atrakcje miast.
+- Do sprawdzenia przez właściciela: koło wyboru dni i mapa na prawdziwym iPhonie (testowano tylko emulację iPhone 13 w Chromium).
+
 ## 8.15.0 — Dłoń w menu, zwarty układ, atrakcje partia 4 (2026-11-15)
 - Pojedyncza ramka i dłoń „kliknij” w kafelku mapy Polski w menu; zwarty układ menu, panelu Atlasu i przewodnika regionu (CHANGELOG.md, DECYZJE_PROJEKTOWE.md §16). Po zmianie `brand-mark.svg` uruchomić `tools/build_nav_mark.py`.
 - 14 nowych atrakcji (razem 270 historii redakcyjnych), współrzędne orientacyjne.
