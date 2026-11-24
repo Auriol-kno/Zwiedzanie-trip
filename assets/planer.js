@@ -127,7 +127,7 @@ root.IWH_PLANNER=ENGINE;
 
 /* ================= INTERFEJS ================= */
 const doc=document,main=doc.getElementById('planner');if(!main)return;
-const COLORS=['#C9773F','#5F8580','#8C5A3A','#D9A35F','#3E5250','#B5614B','#8FA9A2']; // 8.18 Szałwia: terakota, szałwia, brąz, brzoskwinia, łupek, ceglany, jasna szałwia
+const COLORS=['#93481C','#3F6E68','#7A4E31','#8C6119','#33403F','#9C4A37','#4F6F68']; // 8.19: ciemniejsze barwy dni — czytelny tekst „Dzień N” (kontrast ≥ 4,5)
 const T={
  pl:{title:'Nowa podróż',city:'Wybierz miasto',search:'Szukaj miasta',full:'Pełny przewodnik',others:'Miasta z przewodników województw',places:n=>n+' '+(n===1?'miejsce':n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?'miejsca':'miejsc'),noCity:'Nie mamy jeszcze tego miasta w planerze.',
   howLong:'Ile dni?',tabDays:'Liczba dni',tabDates:'Daty',from:'Od',to:'Do',daysN:n=>n+' '+(n===1?'dzień':'dni'),confirmDur:'Potwierdź długość',

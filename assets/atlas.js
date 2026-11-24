@@ -73,7 +73,8 @@ const store={get(k,f){try{const v=JSON.parse(localStorage.getItem(k)||'null');re
 let lang=(()=>{try{return localStorage.getItem('tubylem_lang')==='en'?'en':'pl'}catch(e){return 'pl'}})();
 let style=(()=>{try{const v=localStorage.getItem('tubylem_map_style');return STYLES.includes(v)?v:'atlas'}catch(e){return 'atlas'}})();
 const qs=new URLSearchParams(location.search);if(qs.get('lang')==='en'||qs.get('lang')==='pl')lang=qs.get('lang');
-const layers=Object.assign({borders:true,names:true,relief:true,towns:true,landmarks:true},store.get('iwh_layers',{}));
+// 8.19 (decyzja właściciela 2026-11-24): domyślnie tylko „Miejscowości i atrakcje”; granice, nazwy, relief i ilustracje wyłączone
+const layers=Object.assign({borders:false,names:false,relief:false,towns:true,landmarks:false},store.get('iwh_layers',{}));
 let current=CITIES[0],zoom=1,tx=0,ty=0,drag=null,moved=false,sheetOpen=false;
 // mode: 'city' (14 miast), 'region' (województwo) lub 'town' (miejscowość z atrakcjami w województwie)
 let mode='city',region=null,town=null;

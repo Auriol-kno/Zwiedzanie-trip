@@ -37,5 +37,5 @@ body:has(.overlay.show) .top{z-index:2250}
 /* I Was Here 7.0 — spójna paleta z Atlasem: granat Bałtyku i bursztynowe akcenty (motyw jasny; Midnight i Explorer bez zmian). */
 :root{--primary:#455E5B;--accent:#D38958}
 body:not(.theme-dark):not(.theme-forest) .hero{background:linear-gradient(140deg,#455E5B 0%,#4f6b69 60%,#1d5a4f 100%)}
-body:not(.theme-dark):not(.theme-forest) .eyebrow{color:#FFD84A}
+body:not(.theme-dark):not(.theme-forest) .eyebrow{color:#8E4A1F}
 .atlas-chip{background:linear-gradient(145deg,#455E5B,#1d5a4f);box-shadow:inset 0 0 0 1px rgba(255,216,74,.45),0 3px 10px #0c1f4d26}

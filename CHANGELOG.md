@@ -1,5 +1,13 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.19.0 — Czytelność i ustawienia domyślne (2026-11-24)
+
+- **Czytelność (prośba właściciela: „nieczytelne żółte napisy”):** nowy test `tools/test_contrast.js` mierzy w Chromium kontrast każdego widocznego napisu z jego rzeczywistym tłem (WCAG: 4,5 : 1, duży tekst 3 : 1) na 21 ekranach i stanach (Atlas z zakładkami, warstwy, karta miasta, Odkrywaj, przewodnik regionu, Warszawa, planer) w PL i EN; przed zmianą 549 napisów poniżej progu, po zmianie 0. Test jest w CI.
+- Żółte napisy na jasnych panelach (Odkrywaj: „← Wszystkie motywy”, nadtytuły motywów, liczba szlaków) → ciemna terakota `#8E4A1F`; jasne karty motywów, miast i miejsc w Atlasie; przyciski terakota `#A9592A` z kremowym tekstem; szare podpisy przyciemnione (`--sub`, `--sg-mut` `#4F5A57`); nieaktywne PL/EN i liczniki w chipach bez przyciemnienia przezroczystością; ciemniejsze barwy dni w planerze. Narzędzie `tools/fix_contrast.py` przyciemnia średnio jasne kolory tekstu (pomija ciemne motywy i style mapy Noc/Jasny/Teren).
+- **Ustawienia domyślne (decyzja właściciela):** pierwsze uruchomienie po **polsku** (`brand-v5.js`, `<html lang="pl">`); warstwy mapy domyślnie: tylko **„Miejscowości i atrakcje”** (granice, nazwy województw, relief i ilustracje miast wyłączone); styl mapy **Atlas**. Zapisane wcześniej ustawienia użytkownika zostają.
+- Pas „Wybierz miasto / Województwa”: usunięty artefakt (przycięty jasny cień kafelków tworzył prostokąt z uciętą prawą krawędzią) — pas sięga krawędzi ekranu i ma miejsce na cień.
+- Cache `i-was-here-v8-19-0-20261124`, `APP_VERSION` 8.19.0.
+
 ## 8.18.0 — Wariant „Szałwia” (2026-11-24, do akceptacji)
 
 - Wariant kolorystyki wg drugiej makiety właściciela: szałwiowo-szare tło `#E4E9E6`, kremowe karty `#F1F2EE`, akcent terakota `#C9773F` i brzoskwinia `#E9B48A`, łupkowy tekst `#33403F`, szałwia `#5F8580`. Przeliczenie z palety 8.16 narzędziem `tools/recolor_theme.py --theme sage` (dawniej `recolor_safari.py`); `assets/theme-sage.css` zastępuje `theme-safari.css`.

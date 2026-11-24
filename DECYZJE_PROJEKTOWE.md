@@ -148,3 +148,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Kafelek mapy Polski: **płaskie pomarańczowe tło** `#D9813F` ze stylizowanym słońcem i wzgórzami, **jedna płaska złota ramka** `#C9A24A` — bez gradientu tła i bez dodatkowego pierścienia CSS.
 - **Ikona aplikacji (PWA) = ten sam kafelek z dłonią „kliknij”** na jasnym tle `#E4E9E6`, bez ciemnego kwadratu (`tools/build_nav_mark.py` zapisuje `icon.svg`).
 
+## 19. Czytelność i ustawienia domyślne (8.19.0, decyzja właściciela 2026-11-24)
+- **Każdy napis musi być czytelny:** kontrast co najmniej 4,5 : 1 (duży tekst 3 : 1) z rzeczywistym tłem, sprawdzany automatycznie przez `tools/test_contrast.js`. Żółty tekst tylko na ciemnym tle.
+- **Domyślny język: polski.** Domyślne warstwy mapy: tylko „Miejscowości i atrakcje”; granice województw, nazwy województw, relief terenu i ilustracje miast wyłączone; styl mapy „Atlas”.
+

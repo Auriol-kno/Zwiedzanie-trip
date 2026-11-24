@@ -138,7 +138,7 @@ body[data-style=light] .atlas-bottom .browse-title{color:#616f7c!important}
 body:not([data-style=light]) .city-chip{background:var(--ui-chip)!important;color:var(--ui-fg)!important;border-color:var(--ui-line)!important}
 body:not([data-style=light]) .city-chip.active{background:var(--ui-accent)!important;color:var(--ui-accent-fg)!important;border-color:transparent!important}
 .city-chip{min-height:40px;padding:8px 12px}
-.city-chip.st-visited .city-state{color:#55c4b5;opacity:1}
+.city-chip.st-visited .city-state{color:#266E64;opacity:1}
 .city-chip.st-planned .city-state{color:var(--amber-2);opacity:1}
 body:not([data-style=light]) .region-strip .strip-label{color:var(--sand)}
 body[data-sheet=open] .atlas-bottom .browse-title,body[data-sheet=open] #cityStrip,body[data-sheet=open] #regionStrip{display:none}
@@ -159,7 +159,7 @@ body:not([data-style=light]) .place-sheet .city-title span{color:var(--ui-sub)}
 .status-badge{display:inline-block!important;margin-top:5px!important;padding:3px 8px;border-radius:20px;font-size:10px!important;font-weight:800;letter-spacing:.04em}
 .status-badge.st-none{background:rgba(238,241,240,.1);color:var(--ui-sub)!important}
 .status-badge.st-planned{background:rgba(255,216,74,.18);color:var(--amber-2)!important}
-.status-badge.st-visited{background:rgba(63,163,150,.22);color:#6fd8ca!important}
+.status-badge.st-visited{background:rgba(63,163,150,.22);color:#1D6D62!important}
 body[data-style=light] .status-badge.st-none{background:#e4eaef}
 .card-towns{margin:10px 0 0!important}
 body:not([data-style=light]) .town-chip{background:var(--ui-chip);color:var(--ui-fg);border-color:var(--ui-line)}

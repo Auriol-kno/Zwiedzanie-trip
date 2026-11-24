@@ -4,12 +4,12 @@
    Bazowe barwy niebieskie przeliczył tools/recolor_theme.py --theme sage. Ładowany jako ostatni arkusz. */
 :root{
   --sg-bg:#E4E9E6;--sg-card:#F1F2EE;--sg-sunk:#DCE3E0;--sg-line:#D0DAD6;
-  --sg-sage:#A9BEB8;--sg-teal:#5F8580;--sg-slate:#33403F;--sg-mut:#66716E;
-  --sg-terra:#C9773F;--sg-terra-d:#A85E2E;--sg-peach:#E9B48A;--sg-cream:#F3E6D4;--sg-on:#FFF7EF;
+  --sg-sage:#A9BEB8;--sg-teal:#3F6560;--sg-slate:#33403F;--sg-mut:#4F5A57;
+  --sg-terra:#A9592A;--sg-terra-d:#8E4A1F;--sg-peach:#E9B48A;--sg-cream:#F3E6D4;--sg-on:#FFF7EF;
   --sg-up:5px 5px 12px #BAC6C2,-5px -5px 12px #FFFFFF;
   --sg-up-s:3px 3px 7px #BAC6C2,-3px -3px 7px #FFFFFF;
   --sg-in:inset 4px 4px 9px #B4C1BC,inset -4px -4px 9px #FFFFFF;
-  --accent:#C9773F;--iwh-accent:#C9773F;--iwh-yellow:#E9B48A;
+  --accent:#A9592A;--iwh-accent:#A9592A;--iwh-yellow:#E9B48A;
 }
 
 /* ---------- Dolne menu: kryjące tło, wybrana pozycja wklęsła ---------- */
@@ -23,8 +23,8 @@
 
 /* ---------- Atlas ---------- */
 body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]){
-  --ui-bg:#E8ECE9;--ui-panel:#EDF0EE;--ui-fg:#2F3B3A;--ui-sub:#66716E;--ui-line:#D0DAD6;
-  --ui-chip:#F3F4F1;--ui-accent:#C9773F;--ui-accent-fg:#FFF7EF;
+  --ui-bg:#E8ECE9;--ui-panel:#EDF0EE;--ui-fg:#2F3B3A;--ui-sub:#4F5A57;--ui-line:#D0DAD6;
+  --ui-chip:#F3F4F1;--ui-accent:#A9592A;--ui-accent-fg:#FFF7EF;
 }
 /* nagłówek i pas miast: pełne tło zamiast przejścia w przezroczystość */
 body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-top{background:var(--sg-bg)!important;box-shadow:0 3px 10px #C8D2CE}
@@ -57,7 +57,7 @@ body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .
 .lang-switch span.on,.pl-lang span.on{background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
 
 /* ---------- Planer ---------- */
-.pl-page{--bg:#E4E9E6;--card:#F1F2EE;--line:#D0DAD6;--ink:#2F3B3A;--mut:#66716E;--navy:#33403F;--acc:#C9773F;--yel:#E9B48A;--teal:#5F8580;--deep:#2F3B3A}
+.pl-page{--bg:#E4E9E6;--card:#F1F2EE;--line:#D0DAD6;--ink:#2F3B3A;--mut:#4F5A57;--navy:#33403F;--acc:#8E4A1F;--yel:#E9B48A;--teal:#3F6560;--deep:#2F3B3A}
 .pl-top{background:var(--sg-bg)!important;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;box-shadow:0 3px 10px #C8D2CE}
 .pl-list,.pl-card,.pl-zone,.pl-stop,.pl-sum button,.pl-make li,.pl-spare button,.pl-search input,.pl-chipbtn,.pl-icon,.pl-all,.pl-lang{box-shadow:var(--sg-up-s)!important;border:0!important}
 .pl-seg{background:var(--sg-bg)}
@@ -67,7 +67,7 @@ body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .
 .pl-chip button{box-shadow:var(--sg-up-s)!important}
 .pl-flag{background:var(--sg-teal);color:var(--sg-cream)}
 .pl-steps i.on{background:var(--sg-terra)}
-.pl-switch input:checked+span{background:var(--sg-teal)}
+.pl-switch input:checked+span{background:#5F8580}
 .pl-cta.sticky{background:var(--sg-bg)!important}
 .pl-sheet{background:var(--sg-bg)}
 .pl-all.on,.pl-chipbtn.on{background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
@@ -76,3 +76,28 @@ body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .
 .pl-modal{background:#9AAAA5}
 .pl-brand{color:var(--sg-slate)}
 body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .region-strip .strip-label{color:var(--sg-teal)!important}
+
+/* ---------- 8.19 czytelność: wszystkie napisy z kontrastem ≥ 4,5 : 1 (tools/test_contrast.js) ---------- */
+.pl-pin span,.pl-num{color:#fff}
+/* Atlas (styl domyślny): akcenty tekstu zamiast żółci; karty miast i miejsc jasne */
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]){--amber-2:#8E4A1F;--amber:#8E4A1F}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .place-sheet,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .city-card{background:var(--sg-card)!important;border:0!important;color:var(--sg-slate)!important;box-shadow:var(--sg-up)!important}
+.ex-rt small,.ex-theme em,.ex-back,.ex-kicker{color:#8E4A1F!important}
+.city-action.auto-plan small{opacity:1!important}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .city-card :is(strong,h2,h3,b),
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .place-sheet :is(strong,h2,h3,b){color:var(--sg-slate)!important}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .ex-theme,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .ex-route,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .ex-hero,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .ex-featured{background:var(--sg-card)!important;border:0!important;box-shadow:var(--sg-up-s)!important;color:var(--sg-slate)}
+.hero .eyebrow{color:#FFE9AE!important}
+.lang-switch span:not(.on){color:var(--sg-mut)!important}
+.hero p{color:#FFFFFF!important}
+.lang-switch,.pill.language{background:var(--sg-card)!important}
+.lang-switch span:not(.on){background:transparent!important}
+.chip small,.chips small{color:inherit!important;opacity:1!important}
+.lang-switch span,.pill.language span{opacity:1!important}
+/* 8.19.1 — pas miast i województw: cień kafelków nie jest już przycinany (jasny prostokąt i ucięta prawa krawędź);
+   pas sięga krawędzi ekranu, a w środku ma miejsce na miękki cień */
+.atlas-bottom .city-strip{margin:-12px -10px -4px!important;padding:12px 10px 14px!important;scroll-padding-inline:10px}
