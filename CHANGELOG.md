@@ -5,7 +5,7 @@
 - Wariant kolorystyki wg drugiej makiety właściciela: szałwiowo-szare tło `#E4E9E6`, kremowe karty `#F1F2EE`, akcent terakota `#C9773F` i brzoskwinia `#E9B48A`, łupkowy tekst `#33403F`, szałwia `#5F8580`. Przeliczenie z palety 8.16 narzędziem `tools/recolor_theme.py --theme sage` (dawniej `recolor_safari.py`); `assets/theme-sage.css` zastępuje `theme-safari.css`.
 - „Soft UI”: przyciski wypukłe, **wybrany przycisk wklęsły** (wewnętrzny cień) — dolne menu, zakładki, chipy, tryby, PL/EN, przycisk Warstw po otwarciu.
 - **Warstwy, +, − w pionowej kolumnie po prawej**; kadr całej Polski zostawia miejsce na kolumnę (`viewWindow` w `atlas.js`).
-- Mapa Polski w menu: **jedna ramka** (złota ramka kafelka), bez dodatkowego pierścienia CSS.
+- Mapa Polski w menu: **jedna ramka** (płaska złota ramka kafelka), bez dodatkowego pierścienia CSS; tło kafelka **płaskie pomarańczowe ze stylizowanym słońcem i wzgórzami** zamiast gradientu (`build_logo.py`).
 - Pełne, kryjące tła nagłówka, pasa miast, menu i planera — bez gradientów przejścia w przezroczystość i bez rozmycia tła.
 - Logo, kafelek mapy i ikona PWA przegenerowane. Cache `i-was-here-v8-18-0-20261124`, `APP_VERSION` 8.18.0.
 

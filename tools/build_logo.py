@@ -107,12 +107,15 @@ def tile_inner():
                                                         (150, .74, 1), (158, .76, 1.2), (166, .755, .8), (112, .86, .9)])
     return f'''<defs>
 <linearGradient id="tGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1DC8E"/><stop offset=".45" stop-color="#C0A440"/><stop offset=".7" stop-color="#E8D079"/><stop offset="1" stop-color="#9E862E"/></linearGradient>
+<clipPath id="tClip"><rect x="8" y="8" width="184" height="184" rx="39"/></clipPath>
 <linearGradient id="tGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CC7840"/><stop offset="1" stop-color="#485F5D"/></linearGradient>
 <linearGradient id="tLand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D1DBD8"/><stop offset=".5" stop-color="#8ED8CE"/><stop offset="1" stop-color="#62BEB2"/></linearGradient>
 <clipPath id="tPl"><path d="{d}"/></clipPath>
 </defs>
-<rect x="2" y="2" width="196" height="196" rx="44" fill="url(#tGold)"/>
-<rect x="8" y="8" width="184" height="184" rx="39" fill="url(#tGreen)"/>
+<rect x="2" y="2" width="196" height="196" rx="44" fill="#C9A24A"/>
+<rect x="8" y="8" width="184" height="184" rx="39" fill="#D9813F"/>
+<g clip-path="url(#tClip)"><circle cx="150" cy="52" r="30" fill="#E89A5C"/><circle cx="150" cy="52" r="19" fill="#F2B57E"/>
+<path d="M8 150Q60 128 110 146T192 140V192H8Z" fill="#C86F33"/><path d="M8 170Q70 154 120 168T192 164V192H8Z" fill="#B9622B"/></g>
 <g transform="translate({ox:.1f} {oy:.1f}) scale({f})">
 <path d="{d}" fill="#0F3A30" opacity=".45" transform="translate(3 5)"/>
 <g clip-path="url(#tPl)">
