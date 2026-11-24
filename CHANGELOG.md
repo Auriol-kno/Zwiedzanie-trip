@@ -7,6 +7,7 @@
 - **Warstwy, +, − w pionowej kolumnie po prawej**; kadr całej Polski zostawia miejsce na kolumnę (`viewWindow` w `atlas.js`).
 - Mapa Polski w menu: **jedna ramka** (płaska złota ramka kafelka), bez dodatkowego pierścienia CSS; tło kafelka **płaskie pomarańczowe ze stylizowanym słońcem i wzgórzami** zamiast gradientu (`build_logo.py`).
 - Pełne, kryjące tła nagłówka, pasa miast, menu i planera — bez gradientów przejścia w przezroczystość i bez rozmycia tła.
+- **Ikona aplikacji = kafelek z dłonią z menu** (decyzja właściciela 2026-11-24) na jasnym tle szałwii `#E4E9E6`, bez ciemnego kwadratu; generuje ją `tools/build_nav_mark.py` (uruchamiać po `build_logo.py`).
 - Logo, kafelek mapy i ikona PWA przegenerowane. Cache `i-was-here-v8-18-0-20261124`, `APP_VERSION` 8.18.0.
 
 ## 8.17.0 — Motyw „Safari” (2026-11-24)

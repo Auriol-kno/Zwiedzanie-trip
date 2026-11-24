@@ -18,3 +18,12 @@ out = s[:a] + hand + s[b:]
 out = out.replace("</svg>", style + "</svg>", 1)
 (ROOT / "assets/brand-mark-nav.svg").write_text(out, encoding="utf-8")
 print("OK: assets/brand-mark-nav.svg (dłoń zamiast pinezki)")
+
+# 8.18.0 (decyzja właściciela 2026-11-24): ikona PWA = ten sam kafelek z dłonią na jasnym tle szałwii,
+# bez ciemnego kwadratu i bez animacji (statyczna grafika ekranu głównego; iOS sam zaokrągla rogi).
+inner = out[out.index(">", out.index("<svg")) + 1: out.rindex("</svg>")]
+inner = inner[:inner.index("<style>")] if "<style>" in inner else inner
+icon = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="I Was Here app icon">\n'
+        '<rect width="512" height="512" fill="#E4E9E6"/><g transform="translate(16 16) scale(2.4)">' + inner + '</g>\n</svg>\n')
+(ROOT / "icon.svg").write_text(icon, encoding="utf-8")
+print("OK: icon.svg (kafelek z dłonią na jasnym tle)")
