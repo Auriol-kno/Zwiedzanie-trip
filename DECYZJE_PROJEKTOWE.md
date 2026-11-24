@@ -144,3 +144,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Bez AI i bez kluczy API: planowanie liczy się w przeglądarce na naszych danych. Nie pokazujemy ocen gwiazdkowych ani zdjęć z Google — zostaje redakcyjna wartość wizyty 1–5 i uczciwe etykiety (szacunkowe czasy, współrzędne orientacyjne).
 - Kolory dni: morski, pomarańczowy, błękitny, żółty, malinowy, zielony, granatowy (paleta „kulki na torze”). Wejście z zakładki Plany Atlasu; dolne menu bez zmian.
 
+## 18. Ikona aplikacji i kafelek mapy w menu (8.18.0, decyzja właściciela 2026-11-24)
+- Kafelek mapy Polski: **płaskie pomarańczowe tło** `#D9813F` ze stylizowanym słońcem i wzgórzami, **jedna płaska złota ramka** `#C9A24A` — bez gradientu tła i bez dodatkowego pierścienia CSS.
+- **Ikona aplikacji (PWA) = ten sam kafelek z dłonią „kliknij”** na jasnym tle `#E4E9E6`, bez ciemnego kwadratu (`tools/build_nav_mark.py` zapisuje `icon.svg`).
+

@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""I Was Here 8.17 — przeliczenie palety „kulki na torze” (granat/błękit) na motyw „Safari”
-(krem, piasek, oliwka, ciepły pomarańcz) według makiety właściciela z 2026-11-24.
+"""I Was Here — przeliczenie palety „kulki na torze” (granat/błękit) na inny motyw.
+Motywy: `safari` (8.17: krem, piasek, oliwka) i `sage` (8.18 „Szałwia”: szałwiowa zieleń, krem,
+brzoskwinia, terakota, łupek — makieta właściciela 2026-11-24). Źródłem są zawsze pliki w palecie 8.16.
 
 Zmienia tylko barwy niebieskie (odcień 198–250°, bez turkusu morza mapy, nasycenie ≥ 0,12); zielenie, czerwienie, złoto i szarości zostają.
 - CSS: pomija reguły stylów mapy Noc/Jasny/Teren (selektory z `data-style=`), żeby te style zachowały własne kolory.
 - HTML: tylko bloki <style> i <meta name="theme-color">.
 - Pliki .py/.svg: wszystkie kolory (generatory logo i ikon).
 
-    python tools/recolor_safari.py plik [plik …]
+    python tools/recolor_theme.py [--theme sage|safari] plik [plik …]
 Narzędzie jednorazowe; zachowane, żeby dało się powtórzyć przeliczenie albo dodać nowy plik.
 """
 import colorsys, re, sys, pathlib
@@ -16,20 +17,31 @@ HEX = re.compile(r'#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b')
 RGB = re.compile(r'rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*[\d.]+\s*)?\)')
 
 
+THEMES = {
+    # (odcień, nasycenie, funkcja jasności) dla: jasnych teł, pasteli, akcentu, granatu
+    'safari': {'light': (40, None), 'pastel': (42, .34), 'accent': (72, .36, lambda l: .26 + (l - .34) * .62),
+               'dark': (66, None, lambda l, s: (.26 + s * .06, .1 + l * .75))},
+    'sage': {'light': (150, .1), 'pastel': (160, .12), 'accent': (24, .58, lambda l: .5 + (l - .34) * .4),
+             'dark': (175, None, lambda l, s: (.12 + s * .04, .2 + l * .6))},
+}
+THEME = 'sage'
+
+
 def remap(r, g, b):
     """Kolor 0–255 → nowy kolor albo None, jeśli nie jest niebieski."""
     h, l, s = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
     deg = h * 360
     if not (198 <= deg <= 250) or s < 0.12:
         return None
-    if l >= 0.86:                      # jasne tła → krem
-        nh, ns, nl = 40, min(.55, s * .6 + .15), max(l - .015, .86)
-    elif l >= 0.66 and s < 0.75:       # pastelowe → piasek / szałwia
-        nh, ns, nl = 42, .34, l - .02
-    elif l >= 0.34:                    # akcent błękitny → oliwka (jaśniejsze tony → oliwkowa zieleń z połyskiem)
-        nh, ns, nl = 72, .36, .26 + (l - .34) * .62
-    else:                              # granat → głęboka oliwka / brąz
-        nh, ns, nl = 66, .26 + s * .06, .1 + l * .75
+    T = THEMES[THEME]
+    if l >= 0.86:                      # jasne tła
+        nh, ns, nl = T['light'][0], (T['light'][1] if T['light'][1] is not None else min(.55, s * .6 + .15)), max(l - .015, .86)
+    elif l >= 0.66 and s < 0.75:       # pastele
+        nh, ns, nl = T['pastel'][0], T['pastel'][1], l - .02
+    elif l >= 0.34:                    # akcent
+        nh, ns, nl = T['accent'][0], T['accent'][1], T['accent'][2](l)
+    else:                              # granat
+        nh = T['dark'][0]; ns, nl = T['dark'][2](l, s)
     nr, ng, nb = colorsys.hls_to_rgb(nh / 360, nl, ns)
     return round(nr * 255), round(ng * 255), round(nb * 255)
 
@@ -78,7 +90,10 @@ def html(text):
 
 
 if __name__ == '__main__':
-    for f in sys.argv[1:]:
+    args = sys.argv[1:]
+    if args[:1] == ['--theme']:
+        THEME = args[1]; args = args[2:]
+    for f in args:
         p = pathlib.Path(f)
         t = p.read_text(encoding='utf-8')
         n = {'.css': css, '.html': html}.get(p.suffix, recolor)(t)

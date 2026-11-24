@@ -1,5 +1,15 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.18.0 — Wariant „Szałwia” (2026-11-24, do akceptacji)
+
+- Wariant kolorystyki wg drugiej makiety właściciela: szałwiowo-szare tło `#E4E9E6`, kremowe karty `#F1F2EE`, akcent terakota `#C9773F` i brzoskwinia `#E9B48A`, łupkowy tekst `#33403F`, szałwia `#5F8580`. Przeliczenie z palety 8.16 narzędziem `tools/recolor_theme.py --theme sage` (dawniej `recolor_safari.py`); `assets/theme-sage.css` zastępuje `theme-safari.css`.
+- „Soft UI”: przyciski wypukłe, **wybrany przycisk wklęsły** (wewnętrzny cień) — dolne menu, zakładki, chipy, tryby, PL/EN, przycisk Warstw po otwarciu.
+- **Warstwy, +, − w pionowej kolumnie po prawej**; kadr całej Polski zostawia miejsce na kolumnę (`viewWindow` w `atlas.js`).
+- Mapa Polski w menu: **jedna ramka** (płaska złota ramka kafelka), bez dodatkowego pierścienia CSS; tło kafelka **płaskie pomarańczowe ze stylizowanym słońcem i wzgórzami** zamiast gradientu (`build_logo.py`).
+- Pełne, kryjące tła nagłówka, pasa miast, menu i planera — bez gradientów przejścia w przezroczystość i bez rozmycia tła.
+- **Ikona aplikacji = kafelek z dłonią z menu** (decyzja właściciela 2026-11-24) na jasnym tle szałwii `#E4E9E6`, bez ciemnego kwadratu; generuje ją `tools/build_nav_mark.py` (uruchamiać po `build_logo.py`).
+- Logo, kafelek mapy i ikona PWA przegenerowane. Cache `i-was-here-v8-18-0-20261124`, `APP_VERSION` 8.18.0.
+
 ## 8.17.0 — Motyw „Safari” (2026-11-24)
 
 - **Decyzja właściciela:** kolorystyka i styl ikon według makiety „Safari” (załącznik 2026-11-24): kremowe tła `#F3ECDF` i karty `#FBF7EF`, oliwkowy akcent `#6B7A3A` (gradient `#8A9A4E` → `#4E5A2B`) z kremowym tekstem `#FFF8EA`, ciemnobrązowy tekst `#2B2A22`, złoto `#E6B34A`, pomarańcz słońca `#E08A3C`, miękkie ciepłe cienie. Zastępuje paletę „kulki na torze” (8.9).

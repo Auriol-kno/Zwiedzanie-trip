@@ -88,9 +88,9 @@ const t=()=>T[lang];
 
 // ---------- budowa mapy (warstwy od dołu)
 const svg=$('#polandSvg'),g=el('g',{id:'world'});
-svg.innerHTML='<defs><linearGradient id="landGradient" x1="0" y1="0" x2=".9" y2="1"><stop offset="0%" stop-color="#f4ebd9"/><stop offset="52%" stop-color="#c9b891"/><stop offset="100%" stop-color="#636f34"/></linearGradient>'+
- '<linearGradient id="slabEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#798740"/><stop offset="1" stop-color="#5e6336"/></linearGradient>'+
- '<radialGradient id="softLight" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#f5ecdb" stop-opacity=".22"/><stop offset=".55" stop-color="#f5ecdb" stop-opacity="0"/><stop offset="1" stop-color="#3D4022" stop-opacity=".28"/></radialGradient>'+
+svg.innerHTML='<defs><linearGradient id="landGradient" x1="0" y1="0" x2=".9" y2="1"><stop offset="0%" stop-color="#e4e9e6"/><stop offset="52%" stop-color="#a3b7b0"/><stop offset="100%" stop-color="#ce7c45"/></linearGradient>'+
+ '<linearGradient id="slabEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d28957"/><stop offset="1" stop-color="#4e6966"/></linearGradient>'+
+ '<radialGradient id="softLight" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#e5eae8" stop-opacity=".22"/><stop offset=".55" stop-color="#e5eae8" stop-opacity="0"/><stop offset="1" stop-color="#3B504E" stop-opacity=".28"/></radialGradient>'+
  '<filter id="blurShadow"><feGaussianBlur stdDeviation="11"/></filter><filter id="cityGlow"><feGaussianBlur stdDeviation="13"/></filter>'+
  '<clipPath id="polandClip"><path d="'+path(BORDER)+'"/></clipPath><pattern id="mapDots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".65" fill="#476b62" opacity=".12"/></pattern></defs>';
 svg.appendChild(g);
@@ -266,9 +266,11 @@ function animateTo(z,x,y){
 // (pinezka rysuje się nad punktem miasta) — Gdańsk i Olsztyn nie chowają się pod nagłówkiem ani przyciskami.
 // Tylko dla widoku całej Polski (clear): widok województwa z otwartą kartą potrzebuje każdego piksela.
 function viewWindow(clear){
- const ctr=$('.map-controls'),cr=clear&&ctr&&ctr.offsetParent?ctr.getBoundingClientRect():null,narrow=innerWidth<600;
+ const ctr=$('.map-controls'),cr0=clear&&ctr&&ctr.offsetParent?ctr.getBoundingClientRect():null,narrow=innerWidth<600;
+ // 8.18: przyciski w pionowej kolumnie po prawej leżą nad morzem/Litwą — kadr zaczyna się tuż pod nagłówkiem
+ const cr=cr0&&cr0.height>cr0.width?null:cr0;
  const top=Math.max($('.atlas-top').getBoundingClientRect().bottom,narrow&&cr&&cr.height?cr.bottom-14:0)+(narrow&&cr?8:0),bottom=$('.atlas-bottom').getBoundingClientRect().top,b0=box||measure(),r={left:b0.left,top:b0.top,right:b0.left+b0.W,bottom:b0.top+b0.H,width:b0.W};
- const a=svgPoint(r.left+10,Math.max(r.top,top)+4),b=svgPoint(r.right-(r.width<600?10:64),Math.min(r.bottom,bottom)-30);
+ const a=svgPoint(r.left+10,Math.max(r.top,top)+4),b=svgPoint(cr0&&!cr?Math.min(r.right-10,cr0.left-4):r.right-(r.width<600?10:64),Math.min(r.bottom,bottom)-30);
  return{x0:a.x,y0:a.y,x1:b.x,y1:b.y};
 }
 function fitBox(bx0,by0,bx1,by1,maxZ,fill,clear){

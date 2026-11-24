@@ -1,0 +1,78 @@
+/* I Was Here 8.18 — motyw „Szałwia” (makieta właściciela 2026-11-24): szałwiowo-szare tło, kremowe karty,
+   brzoskwinia i terakota jako akcent, łupkowy tekst. Miękki „soft UI”: przyciski wypukłe, a WYBRANY przycisk jest
+   WKLĘSŁY (wewnętrzny cień). Pełne, kryjące tła — bez gradientów przejścia w przezroczystość i bez rozmycia.
+   Bazowe barwy niebieskie przeliczył tools/recolor_theme.py --theme sage. Ładowany jako ostatni arkusz. */
+:root{
+  --sg-bg:#E4E9E6;--sg-card:#F1F2EE;--sg-sunk:#DCE3E0;--sg-line:#D0DAD6;
+  --sg-sage:#A9BEB8;--sg-teal:#5F8580;--sg-slate:#33403F;--sg-mut:#66716E;
+  --sg-terra:#C9773F;--sg-terra-d:#A85E2E;--sg-peach:#E9B48A;--sg-cream:#F3E6D4;--sg-on:#FFF7EF;
+  --sg-up:5px 5px 12px #BAC6C2,-5px -5px 12px #FFFFFF;
+  --sg-up-s:3px 3px 7px #BAC6C2,-3px -3px 7px #FFFFFF;
+  --sg-in:inset 4px 4px 9px #B4C1BC,inset -4px -4px 9px #FFFFFF;
+  --accent:#C9773F;--iwh-accent:#C9773F;--iwh-yellow:#E9B48A;
+}
+
+/* ---------- Dolne menu: kryjące tło, wybrana pozycja wklęsła ---------- */
+.app-nav:not(.tabbar),.tabbar{background:var(--sg-bg)!important;border:0!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 -3px 10px #C8D2CE!important}
+.tabbar::before,.app-nav:not(.tabbar)::before{display:none!important}
+.app-nav:not(.tabbar) button,.tabbar button{color:var(--sg-mut)!important;background:none!important;box-shadow:none!important}
+.tabbar button.active,.app-nav:not(.tabbar) button.active,.app-nav button[aria-current=page]{
+  background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
+/* Mapa Polski w menu: jedna ramka (złota ramka samego kafelka), bez dodatkowego pierścienia */
+.poland-fab,.app-nav .poland-fab,.atlas-top .poland-fab{box-shadow:var(--sg-up-s)!important;outline:0}
+
+/* ---------- Atlas ---------- */
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]){
+  --ui-bg:#E8ECE9;--ui-panel:#EDF0EE;--ui-fg:#2F3B3A;--ui-sub:#66716E;--ui-line:#D0DAD6;
+  --ui-chip:#F3F4F1;--ui-accent:#C9773F;--ui-accent-fg:#FFF7EF;
+}
+/* nagłówek i pas miast: pełne tło zamiast przejścia w przezroczystość */
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-top{background:var(--sg-bg)!important;box-shadow:0 3px 10px #C8D2CE}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .brand-name strong{color:var(--sg-slate)}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .brand-name small{color:var(--sg-teal)}
+body:not([data-style=light]) .atlas-bottom{background:var(--sg-bg)!important;box-shadow:0 -3px 10px #C8D2CE!important}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .browse-title,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .browse-title *,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .tab-panel h3,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-bottom [class*=title],
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-bottom h2,
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-bottom small{color:var(--sg-teal)!important}
+.city-strip button,.city-strip [role=listitem]{box-shadow:var(--sg-up-s)!important;border-color:transparent!important}
+/* Warstwy, +, − w pionowej kolumnie po prawej */
+.map-controls{flex-direction:column!important;top:calc(84px + env(safe-area-inset-top,0px))!important;right:10px!important;bottom:auto!important;gap:9px!important}
+.map-controls .round{width:40px!important;height:40px!important}
+.map-controls .round,.round{background:var(--sg-card)!important;color:var(--sg-slate)!important;border:0!important;box-shadow:var(--sg-up)!important}
+.map-controls .round[aria-expanded=true],.round:active{background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
+.layers-panel{top:calc(84px + env(safe-area-inset-top,0px))!important;right:66px!important}
+
+/* ---------- Przyciski: wypukłe; wybrane — wklęsłe ---------- */
+.pl-btn,button.primary,.btn-primary,.city-action,.city-action.auto-plan{
+  background:var(--sg-terra)!important;color:var(--sg-on)!important;border:0!important;box-shadow:var(--sg-up)!important}
+.pl-btn:active,.city-action:active{box-shadow:inset 3px 3px 7px #9A5426,inset -3px -3px 7px #E0955F!important}
+.pl-btn.alt{background:var(--sg-slate)!important;color:var(--sg-card)!important}
+.city-action.auto-plan small{color:var(--sg-on)}
+.pl-seg button[aria-selected=true],.pl-seg button[aria-pressed=true],.chip.active,.chip.chosen,.modes button.active,
+.seg button[aria-pressed=true],.plan-tabs button[aria-selected=true],[role=tab][aria-selected=true]{
+  background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important;border-color:transparent!important}
+.lang-switch span.on,.pl-lang span.on{background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
+
+/* ---------- Planer ---------- */
+.pl-page{--bg:#E4E9E6;--card:#F1F2EE;--line:#D0DAD6;--ink:#2F3B3A;--mut:#66716E;--navy:#33403F;--acc:#C9773F;--yel:#E9B48A;--teal:#5F8580;--deep:#2F3B3A}
+.pl-top{background:var(--sg-bg)!important;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;box-shadow:0 3px 10px #C8D2CE}
+.pl-list,.pl-card,.pl-zone,.pl-stop,.pl-sum button,.pl-make li,.pl-spare button,.pl-search input,.pl-chipbtn,.pl-icon,.pl-all,.pl-lang{box-shadow:var(--sg-up-s)!important;border:0!important}
+.pl-seg{background:var(--sg-bg)}
+.zone-top{background:#F6EBDD!important;box-shadow:var(--sg-up-s)!important}
+.zone-no{background:#EFE3DE!important;box-shadow:var(--sg-up-s)!important}
+.pl-chip{background:var(--sg-sunk)}.pl-chip.z-top{background:var(--sg-peach)}.pl-chip.z-no{background:#E3C9BF}
+.pl-chip button{box-shadow:var(--sg-up-s)!important}
+.pl-flag{background:var(--sg-teal);color:var(--sg-cream)}
+.pl-steps i.on{background:var(--sg-terra)}
+.pl-switch input:checked+span{background:var(--sg-teal)}
+.pl-cta.sticky{background:var(--sg-bg)!important}
+.pl-sheet{background:var(--sg-bg)}
+.pl-all.on,.pl-chipbtn.on{background:var(--sg-sunk)!important;color:var(--sg-terra-d)!important;box-shadow:var(--sg-in)!important}
+.pl-days button[aria-selected=true]{box-shadow:var(--sg-in)!important;background:var(--sg-sunk)!important;color:var(--c)!important}
+.pl-map .bg{fill:#EEF0EB}.pl-map .grid line{stroke:#D5DED9}
+.pl-modal{background:#9AAAA5}
+.pl-brand{color:var(--sg-slate)}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .region-strip .strip-label{color:var(--sg-teal)!important}

@@ -1,5 +1,8 @@
 # PROJECT_STATUS — I Was Here / Places & Memories
 
+## 8.18.0 — Wariant „Szałwia” (2026-11-24, PR czeka na decyzję i „Scal”)
+- Wariant kolorystyki szałwia/terakota, wklęsłe wybrane przyciski, pionowe Warstwy/+/− po prawej, jedna ramka mapy w menu, kryjące tła. Szczegóły w CHANGELOG.md. Na `main` nadal motyw „Safari” (8.17.0) do czasu decyzji.
+
 ## 8.17.0 — Motyw „Safari” (2026-11-24)
 - Cała aplikacja w kolorystyce makiety „Safari” (krem, oliwka, piasek, złoto); szczegóły w CHANGELOG.md, decyzja w DECYZJE_PROJEKTOWE.md §3.
 - **Następne zadanie (propozycja):** jasna wersja przewodnika Warszawy (dziś ciemna oliwka); ikony menu w kafelkach jak w makiecie; weryfikacja na iPhonie.
