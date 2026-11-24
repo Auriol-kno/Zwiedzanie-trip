@@ -1,5 +1,14 @@
 # CHANGELOG — I Was Here / Places & Memories
 
+## 8.17.0 — Motyw „Safari” (2026-11-24)
+
+- **Decyzja właściciela:** kolorystyka i styl ikon według makiety „Safari” (załącznik 2026-11-24): kremowe tła `#F3ECDF` i karty `#FBF7EF`, oliwkowy akcent `#6B7A3A` (gradient `#8A9A4E` → `#4E5A2B`) z kremowym tekstem `#FFF8EA`, ciemnobrązowy tekst `#2B2A22`, złoto `#E6B34A`, pomarańcz słońca `#E08A3C`, miękkie ciepłe cienie. Zastępuje paletę „kulki na torze” (8.9).
+- `tools/recolor_safari.py` przeliczył niebieskie barwy (odcień 198–250°) w arkuszach CSS, blokach `<style>` stron, `atlas.js` (krawędź mapy), `region.js`, `explore-themes.js` i w generatorach logo; style mapy Noc/Jasny/Teren, turkusowe morze „Pergamin” i znaczki miast bez zmian.
+- Nowy `assets/theme-safari.css` (ładowany ostatni): kremowe dolne menu z oliwkową kapsułą aktywnej pozycji, jasne panele i nagłówek Atlasu, oliwkowe przyciski z kremowym tekstem, kremowy planer. Kolory dni w planerze: oliwka, pomarańcz, turkus, złoto, wrzos, brąz, butelkowa zieleń.
+- Logo, kafelek mapy Polski w menu i ikona PWA przegenerowane (`build_logo.py`, `build_nav_mark.py`; PNG wyrenderowane w Chromium).
+- Przewodnik Warszawy ma ciemne oliwkowe tło (dawniej granatowe) — pełne rozjaśnienie wymaga przebudowy tej strony.
+- Cache `i-was-here-v8-17-0-20261124`, `APP_VERSION` 8.17.0.
+
 ## 8.16.0 — Planer „dzień po dniu” (2026-11-24)
 
 - **Nowa strona `planer.html`** (wzorowana na rozwiązaniach aplikacji itinio z rolki Instagram wskazanej przez właściciela): kreator w 3 krokach — miasto (wyszukiwarka; „Pełny przewodnik” Warszawa i miasta z przewodników województw), długość (koło z liczbą dni 1–7 albo daty), zainteresowania w trzech strefach: ★ „Bardzo interesuje” (max 3), „Polecaj mi”, ✕ „Nie polecaj”; do tego tempo (~4/6/8 h) i transport (pieszo/auto/komunikacja).

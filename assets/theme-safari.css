@@ -1,0 +1,52 @@
+/* I Was Here 8.17 — motyw „Safari” (makieta właściciela 2026-11-24): kremowe tła i karty, oliwkowy akcent,
+   ciemnobrązowy tekst, ciepły pomarańcz słońca, miękkie cienie i zaokrąglone kafelki.
+   Bazowe barwy niebieskie przeliczył tools/recolor_safari.py; tutaj elementy, które w makiecie są jasne.
+   Ładowany jako ostatni arkusz (po theme-marbles.css) na atlas.html, region.html, index.html i planer.html. */
+:root{
+  --sf-bg:#F3ECDF;--sf-card:#FBF7EF;--sf-sand:#E8DCC4;--sf-line:#E2D5BD;
+  --sf-olive:#6B7A3A;--sf-olive-hi:#8A9A4E;--sf-olive-deep:#4E5A2B;
+  --sf-ink:#2B2A22;--sf-mut:#6F675A;--sf-sun:#E08A3C;--sf-gold:#E6B34A;--sf-on-olive:#FFF8EA;
+  --sf-shadow:0 8px 22px rgba(92,74,40,.14),0 1px 2px rgba(92,74,40,.08);
+  --accent:#6B7A3A;--iwh-accent:#6B7A3A;--iwh-yellow:#E6B34A;
+}
+
+/* ---------- Dolne menu: kremowa pigułka, ikony konturowe, aktywny = oliwkowa kapsuła ---------- */
+.app-nav:not(.tabbar),.tabbar{background:rgba(251,247,239,.96)!important;border-color:var(--sf-line)!important;box-shadow:0 -6px 20px rgba(92,74,40,.12)}
+.app-nav:not(.tabbar) button,.tabbar button{color:var(--sf-mut)!important}
+.tabbar button.active,.app-nav:not(.tabbar) button.active,.app-nav button[aria-current=page]{
+  background:linear-gradient(160deg,var(--sf-olive-hi),var(--sf-olive) 60%,var(--sf-olive-deep))!important;color:var(--sf-on-olive)!important;
+  box-shadow:0 6px 14px rgba(78,90,43,.35),inset 0 1px 1px rgba(255,255,255,.35)!important}
+.tabbar::before,.app-nav:not(.tabbar)::before{background:linear-gradient(90deg,var(--sf-olive),var(--sf-gold) 60%,var(--sf-sun))!important;opacity:.7}
+.poland-fab,.app-nav .poland-fab{box-shadow:0 8px 18px rgba(78,90,43,.35),0 0 0 2px rgba(230,179,74,.8)!important}
+
+/* ---------- Atlas: jasne panele zakładek i arkusze (styl domyślny Atlas) ---------- */
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]){
+  --ui-bg:rgba(251,247,239,.96);--ui-panel:#F7F1E6;--ui-fg:#2B2A22;--ui-sub:#6F675A;--ui-line:#E2D5BD;
+  --ui-chip:#FFFDF8;--ui-accent:#6B7A3A;--ui-accent-fg:#FFF8EA;
+}
+
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .atlas-top{background:linear-gradient(180deg,rgba(243,236,223,.97),rgba(243,236,223,.7) 72%,transparent)}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .brand-name strong{color:var(--sf-ink)}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .brand-name small{color:var(--sf-olive-deep)}
+body:not([data-style=night]):not([data-style=terrain]):not([data-style=light]) .tab-panel h3{color:var(--sf-olive)}
+
+/* ---------- Przyciski główne: oliwka z kremowym tekstem ---------- */
+.pl-btn,button.primary,.btn-primary,.city-action,.city-action.auto-plan,.pl-seg button[aria-selected=true],.pl-seg button[aria-pressed=true],
+.chip.active,.chip.chosen,.modes button.active{
+  background:linear-gradient(160deg,var(--sf-olive-hi),var(--sf-olive) 60%,var(--sf-olive-deep))!important;color:var(--sf-on-olive)!important;
+  box-shadow:0 6px 14px rgba(78,90,43,.28),inset 0 1px 1px rgba(255,255,255,.3)!important;border-color:transparent!important}
+.pl-btn.alt{background:var(--sf-ink)!important;color:var(--sf-card)!important}
+.city-action.auto-plan small{color:var(--sf-on-olive)}
+
+/* ---------- Planer: kremowe tło jak w makiecie ---------- */
+.pl-page{--bg:#F3ECDF;--card:#FBF7EF;--line:#E2D5BD;--ink:#2B2A22;--mut:#6F675A;--navy:#3E4A22;--acc:#6B7A3A;--yel:#E6B34A;--teal:#6B7A3A;--deep:#2B2A22}
+.pl-top{background:rgba(243,236,223,.94)}
+.pl-list,.pl-card,.pl-zone,.pl-stop,.pl-sum button,.pl-make li,.pl-spare button{box-shadow:var(--sf-shadow)!important}
+.zone-top{background:linear-gradient(180deg,#FBEFCF,#FFFDF8)!important;box-shadow:inset 0 0 0 1.5px #E6C77A!important}
+.pl-chip.z-top{background:#F4D98E}
+.pl-flag{background:var(--sf-olive);color:#FFF1C9}
+.pl-steps i.on{background:linear-gradient(90deg,var(--sf-olive),var(--sf-gold))}
+.pl-switch input:checked+span{background:var(--sf-olive)}
+.pl-map .bg{fill:#F3EAD6}.pl-map .grid line{stroke:#E3D3AF}
+.pl-lang span.on{background:var(--sf-olive)}
+.pl-brand{color:var(--sf-ink)}

@@ -32,6 +32,7 @@ Jeśli nowe polecenie przeczy temu plikowi, wygrywa nowsze polecenie właścicie
 - Historia: 5.0 pinezka-ilustracja → 5.2 logo z miniaturą mapy → 8.3 pinezka w sylwetce Polski → 8.3.1 biało-czerwona Polska z pinezką (z JPG, potem wektor) → 8.4 kafelek → 8.5 pinezka + napis + pływająca mapka.
 
 ## 3. Kolorystyka i typografia
+- **Od 8.17.0 (decyzja właściciela 2026-11-24): motyw „Safari”** według makiety z załącznika — kremowe tła `#F3ECDF`, karty `#FBF7EF`, piasek `#E8DCC4`, oliwkowy akcent `#6B7A3A` (gradient `#8A9A4E` → `#4E5A2B`) z kremowym tekstem `#FFF8EA`, tekst `#2B2A22`/`#6F675A`, złoto `#E6B34A`, pomarańcz `#E08A3C`; miękkie ciepłe cienie, zaokrąglone kafelki, kremowe dolne menu z oliwkową kapsułą aktywnej pozycji (`assets/theme-safari.css`, przeliczenie `tools/recolor_safari.py`). Mapa „Pergamin” i znaczki miast bez zmian. Poniższa paleta „kulki na torze” jest historyczna.
 - **Od 8.9.0 (decyzja właściciela 2026-11-13): motyw „kulki na torze” na wszystkich ekranach** (zastępuje paletę Atlasu 7.0 granat/bursztyn/oliwka/krem):
   - granat morza: `#0C2C59`, `#0A254F`, `#061938`;
   - **błękitny akcent (od 8.9.1, decyzja właściciela 2026-11-13): `#28A6F4`** (gradient `#45B8FF` → `#1A90D9`), tekst na nim ciemnogranatowy `#061938`; żółty: `#FFD84A`. Różowy `#F4288B` z 8.9.0 jest wycofany;

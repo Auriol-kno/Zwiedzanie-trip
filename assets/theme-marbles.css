@@ -2,18 +2,18 @@
    Ładowany jako ostatni arkusz na atlas.html, region.html i index.html. Paleta bazowa została przeliczona w plikach CSS/JS;
    tutaj tylko akcenty motywu. */
 :root{
-  --iwh-navy:#0C2C59;--iwh-navy-deep:#061938;--iwh-blue:#2a74b8;--iwh-sky:#5c8fd5;
-  --iwh-accent:#28A6F4;--iwh-accent-hi:#62c3ff;--iwh-yellow:#FFD84A;--iwh-teal:#3fa396;
-  --iwh-marble-hi:inset 0 2px 2px rgba(255,255,255,.6),inset 0 -4px 8px rgba(0,68,110,.32);
+  --iwh-navy:#4F532C;--iwh-navy-deep:#3D4022;--iwh-blue:#647035;--iwh-sky:#829245;
+  --iwh-accent:#7A8940;--iwh-accent-hi:#94a64e;--iwh-yellow:#FFD84A;--iwh-teal:#3fa396;
+  --iwh-marble-hi:inset 0 2px 2px rgba(255,255,255,.6),inset 0 -4px 8px rgba(84,88,45,.32);
 }
 /* Warszawa używa zmiennej --accent (dawny koral); od 8.9.1 błękitny */
-:root{--accent:#28A6F4}
+:root{--accent:#7A8940}
 
 /* Aktywne przyciski dolnego menu = błękitna kulka z połyskiem (ciemny tekst dla kontrastu) */
 .tabbar button.active,.app-nav:not(.tabbar) button.active{
-  box-shadow:0 6px 16px rgba(40,166,244,.38),var(--iwh-marble-hi);
-  background:radial-gradient(120% 90% at 30% 18%,#b3e2ff 0%,#45b8ff 30%,#28A6F4 62%,#0f73b1 100%);
-  color:#061938;
+  box-shadow:0 6px 16px rgba(122,137,64,.38),var(--iwh-marble-hi);
+  background:radial-gradient(120% 90% at 30% 18%,#aaba6c 0%,#899a48 30%,#7A8940 62%,#58622e 100%);
+  color:#3D4022;
 }
 /* Szyna nad dolnym menu: tor błękitny→żółty */
 .tabbar::before,.app-nav:not(.tabbar)::before{
@@ -22,10 +22,10 @@
 }
 /* Pigułki filtrów i przyciski główne: zaokrąglone jak kapsuły toru */
 .chip.active,.chip.chosen,button.primary,.btn-primary{
-  box-shadow:0 4px 12px rgba(40,166,244,.3),var(--iwh-marble-hi);
+  box-shadow:0 4px 12px rgba(122,137,64,.3),var(--iwh-marble-hi);
 }
 /* Mapka Polski w nagłówku: ramka w kolorze żółtej kulki */
-.poland-fab{box-shadow:0 6px 16px rgba(6,25,56,.45),0 0 0 2px rgba(255,216,74,.75)}
+.poland-fab{box-shadow:0 6px 16px rgba(61,64,34,.45),0 0 0 2px rgba(255,216,74,.75)}
 @media(prefers-reduced-motion:no-preference){
   .tabbar button.active,.app-nav:not(.tabbar) button.active{transition:box-shadow .2s ease}
 }
@@ -49,14 +49,14 @@ body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .
 /* napisy skali, kompas i źródło na jasnym lądzie: granat */
 body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .compass,
 body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .scale-text,
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .attribution{color:#12306a;fill:#12306a;text-shadow:none}
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .scale{color:#12306a;border-color:#12306a}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .attribution{color:#595e32;fill:#595e32;text-shadow:none}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .scale{color:#595e32;border-color:#595e32}
 /* lasy: zieleń zamiast niebiesko-szarego */
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#45536a"]{fill:#5b4630}
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#365d80"]{fill:#3f6b3a}
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#53738f"]{fill:#55823f}
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#6786a2"]{fill:#6f9a4d}
-body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [stroke="#a0b9cf"]{stroke:#b6d08c}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#515b2b"]{fill:#5b4630}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#545e2c"]{fill:#3f6b3a}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#647035"]{fill:#55823f}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [fill="#73813d"]{fill:#6f9a4d}
+body:not([data-style=light]):not([data-style=night]):not([data-style=terrain]) .atlas-forest [stroke="#ccbd98"]{stroke:#b6d08c}
 
 /* ===== 8.10.1 — styl Noc: czytelne napisy =====
    W stylu Noc zmienna --cream oznacza ciemne tło (#0e1533), a napisy na mapie i znak „I WAS HERE” brały z niej kolor,
